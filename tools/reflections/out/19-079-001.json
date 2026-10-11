@@ -1,0 +1,66 @@
+{
+ "id": "19-079-001",
+ "title": "A Prayer for Deliverance",
+ "refs": [
+  "Psalms 79:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19079001,
+   "end": 19079013,
+   "ref": "Psalms 79:1-13",
+   "ranges": [
+    [
+     19079001,
+     19079013
+    ]
+   ],
+   "title": "Crying Out for God's Mercy",
+   "key_verse": [
+    19079009,
+    19079009
+   ],
+   "reflect": [
+    {
+     "text": "In this psalm, God's people face devastating ruin, deep sorrow, and shame from the surrounding nations. Their disobedience and spiritual compromise had led them into heavy suffering and judgment. When we find ourselves brought very low by our failures and trials, our only hope is to humble ourselves before God and ask for His mercy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The psalmist does not ask for rescue because the people deserve it. Instead, he asks God to save them for the glory and honor of His own name. He also asks God to forgive and cover their sins. In the Old Testament, this pointed to sacrifices that made atonement, which means paying the price to bring peace between God and people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Today, we know that Jesus Christ completely fulfilled that prayer on the cross. By shedding His own blood, Jesus cleanses our sins once and for all. Because of what Jesus did, we can come to God in our darkest moments, confident that He will hear us and show us mercy for His own glory.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face hard times because of past mistakes, how does looking to God's glory change the way you pray?",
+    "How does knowing that Jesus cleansed your sins once and for all bring you comfort when you feel brought low?"
+   ],
+   "prayer": "Lord God, we humble ourselves before You and ask for Your mercy when we fail. Forgive our sins and deliver us, not because we are worthy, but for the glory of Your name. Thank You for sending Jesus to shed His blood and cleanse us once and for all. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 07/08/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-07-or-08-or-2002-1141004.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,89 @@
+{
+ "id": "60-005-005",
+ "title": "Cast Your Cares on Him",
+ "refs": [
+  "1 Peter 5:5-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 60005005,
+   "end": 60005009,
+   "ref": "1 Peter 5:5-9",
+   "ranges": [
+    [
+     60005005,
+     60005009
+    ]
+   ],
+   "title": "Humbling Ourselves and Giving God Our Worries",
+   "key_verse": [
+    60005007,
+    60005007
+   ],
+   "reflect": [
+    {
+     "text": "Walking with God begins with humility, which means putting aside our pride and admitting we cannot manage our lives alone. Holding on to our worries often comes from wanting to stay in control. God invites us to bow before His mighty hand instead, trusting that He will lift us up at the right time.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Handing our cares over to God is a clear choice to trust Him. We do not need to hide our anxious feelings or solve them before we come into His presence. God invites us to bring our messy emotions directly to Him, and our faith grows stronger as we learn to let Jesus carry those burdens.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "A load that feels crushing to us is effortless for God. As Charles Spurgeon wrote, our heaviest burden is to God but \"as the small dust of the balance.\" Because the Lord truly cares for us and provides for our needs, we can set aside our anxious fears and rest quietly in His care.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What worry or burden are you trying to control by yourself today?",
+    "How does knowing that God deeply cares for you help you hand that burden over to Him?"
+   ],
+   "prayer": "Father, thank You that we do not have to carry our anxieties alone. Please forgive our pride when we try to stay in control, and give us humble hearts that trust Your timing. We place our heavy burdens into Your strong hands today, resting in Your peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 6",
+     "on": "1 Peter 5:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 28",
+     "on": "1 Peter 5:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Melissa Fisher",
+     "work": "The Relationship Between Faith and Anxiety",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-june-16-2026.html"
+    },
+    "D4": {
+     "author": "Alistair Begg",
+     "work": "Casting All Your Cares",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-may-24-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

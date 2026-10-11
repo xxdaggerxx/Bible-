@@ -1,0 +1,74 @@
+{
+ "id": "45-014-001",
+ "title": "The Law of Liberty",
+ "refs": [
+  "Romans 14:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45014001,
+   "end": 45014012,
+   "ref": "Romans 14:1-12",
+   "ranges": [
+    [
+     45014001,
+     45014012
+    ]
+   ],
+   "title": "Living Together for the Lord",
+   "key_verse": [
+    45014008,
+    45014008
+   ],
+   "reflect": [
+    {
+     "text": "Christians do not always agree on every practice. Scripture gives clear commands, but on matters where God's Word is silent, believers may hold different opinions. Things like what foods to eat or which days to honor are morally neutral, yet they can become points of tension. Mature believers are called to show patient love instead of looking down on others. We must not let personal opinions divide the church, nor should we use our freedom in ways that cause someone with a sensitive conscience to stumble.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead of judging one another, we are called to remember whose we are. God could have taken us straight to heaven when we first trusted in Jesus, but He chose to leave us on earth. We remain here so that we may \"live unto the Lord,\" as Charles Spurgeon writes. Our days on earth are meant for glorifying Christ, serving Him faithfully, and helping others discover His love.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because every believer belongs to Jesus, each person answers to Him as Master. He is the one who keeps His servants standing. When we focus on honoring Christ in our daily lives, we stop belittling or judging our brothers and sisters. Our shared purpose is to live holy, useful lives that bring praise to God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you show patience and love toward fellow believers who hold different opinions on non-essential matters?",
+    "In what practical ways can you live for the Lord rather than for yourself this week?"
+   ],
+   "prayer": "Lord, help us to welcome one another with patience and love, rather than judging our brothers and sisters over personal opinions. Teach us to use our freedom wisely so that we never cause anyone to stumble. Keep our hearts focused on serving you each day, knowing that we belong to you in life and in death. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 10",
+     "on": "Romans 14:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Weak in Faith",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/weak-faith"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,61 @@
+{
+ "id": "66-004-001",
+ "title": "The Throne in Heaven",
+ "refs": [
+  "Revelation 4:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66004001,
+   "end": 66004004,
+   "ref": "Revelation 4:1-4",
+   "ranges": [
+    [
+     66004001,
+     66004004
+    ]
+   ],
+   "title": "Near the Throne of Christ",
+   "key_verse": [
+    66004004,
+    66004004
+   ],
+   "reflect": [
+    {
+     "text": "John sees twenty-four elders sitting on thrones placed in a circle around God's throne. Charles Spurgeon explains that this circle points to \"an equality among the saints.\" Every elder sits equally close to the Lord. In heaven, all of God's people will share this same near fellowship with Christ. Whether someone was a well-known leader, a martyr who gave their life, or a quiet, obscure believer, all will be welcomed near the throne. Every saint will gaze upon the Lord and be satisfied with his love.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because this is our eternal home, we can begin living like the elders right now. We do not have to wait for heaven to seek close fellowship with Jesus. We can make him the center of our thoughts and choices every day. Instead of living far from our Lord, we can ask him to draw us nearer to himself. As we taste the comfort of his love, we become more humble, learning to depend less on ourselves and more on him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that every believer is equally near and loved by Christ encourage you today?",
+    "What is one practical way you can keep Christ at the center of your thoughts this week?"
+   ],
+   "prayer": "Lord Jesus, thank you that you welcome all your people into close fellowship with you. Draw our hearts nearer to you today so that you remain at the center of our lives. Teach us to trust less in ourselves and rest fully in your faithful love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 9",
+     "on": "Revelation 4:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

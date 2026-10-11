@@ -1,0 +1,65 @@
+{
+ "id": "19-135-001",
+ "title": "Give Praise, O Servants of the LORD",
+ "refs": [
+  "Psalms 135:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19135001,
+   "end": 19135021,
+   "ref": "Psalms 135:1-21",
+   "ranges": [
+    [
+     19135001,
+     19135021
+    ]
+   ],
+   "title": "Praise the Lord for His Goodness",
+   "key_verse": [
+    19135003,
+    19135003
+   ],
+   "reflect": [
+    {
+     "text": "Psalm 135 calls all of God's servants to come and worship Him. As D. A. Carson points out, this psalm is like a tapestry woven from earlier Bible passages. It invites us to praise the Lord for His goodness, His choosing love that made His people His treasured possession, and His complete rule over the skies, the land, and the seas.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Learning Scripture well enriches our devotion, both when we pray alone and when we gather as a church. Knowing God's Word deeply keeps our prayers from turning into shallow or empty phrases. When our minds are full of what God has said and done, our praise becomes fresh and real.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can learning more of the Bible keep your everyday prayers from feeling shallow?",
+    "What reminders in creation and history help you trust God instead of worthless things?"
+   ],
+   "prayer": "Lord God, thank You for Your goodness, Your power, and Your love in choosing us. Help us to know Your Word deeply so that our prayers and worship do not turn into empty words. Keep our hearts from trusting in lifeless idols, and help us bless Your name each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Psalms 135–136",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/joshua-6-psalms-135-136-isaiah-66-matthew-14/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "When we look back at how God rescued His people throughout history, we see how foolish human-made idols really are. People shape statues of silver and gold, but those objects cannot speak, see, or breathe. Carson notes that putting our faith in dead things leads to spiritual deadness, while worshiping the living Lord fills us with life.",
+     "problem": "Neither Psalm 135 nor the devotional mentions that worshiping the living Lord fills us with life, nor does Carson make this point in the provided text."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

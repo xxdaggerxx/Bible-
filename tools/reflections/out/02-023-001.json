@@ -1,0 +1,66 @@
+{
+ "id": "02-023-001",
+ "title": "Justice and Mercy",
+ "refs": [
+  "Exodus 23:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2023001,
+   "end": 2023009,
+   "ref": "Exodus 23:1-9",
+   "ranges": [
+    [
+     2023001,
+     2023009
+    ]
+   ],
+   "title": "Standing for Truth and Protecting Others",
+   "key_verse": [
+    2023002,
+    2023002
+   ],
+   "reflect": [
+    {
+     "text": "God calls us to stand for truth in what we say and hear. In daily life, gossip and false reports can spread easily, but God warns us not to join in. Scripture reminds us that listening to slander is just as harmful as repeating it. It takes courage to say no to peer pressure when people around us are eager to tear someone down. Speaking evil of others hurts their reputation and damages our own witness for the Lord.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God also calls us to show deep care and fairness to those who are vulnerable. The Lord gave Israel strict laws to protect foreigners, the poor, and anyone who could be easily mistreated. We care for underprivileged people because every person bears God's image and has real dignity. This compassion comes from biblical love rather than any political ideology. In our daily work and choices, we need to balance our own goals with generosity, honesty, and genuine kindness.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there times when you feel tempted to listen to gossip or follow the crowd into unfair talk?",
+    "How can you show biblical compassion and fairness to someone who is vulnerable this week?"
+   ],
+   "prayer": "Lord, help us speak the truth and refuse to spread or listen to harmful words. Give us courage to stand for what is right even when the crowd does wrong. Teach us to love and protect the vulnerable, honoring the dignity you have given to every person. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "Haves and Have-Nots",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/haves-and-have-nots-one-year-devotions-for-men-september-23.html"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways - Jan. 25, 2008",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-jan-25-2008-11565991.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

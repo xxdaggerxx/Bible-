@@ -1,0 +1,137 @@
+{
+ "id": "09-007-001",
+ "title": "Samuel Subdues the Philistines",
+ "refs": [
+  "1 Samuel 7:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 9007012,
+   "end": 9007012,
+   "ref": "1 Samuel 7:12",
+   "ranges": [
+    [
+     9007012,
+     9007012
+    ]
+   ],
+   "title": "\"Thus Far the LORD Has Helped Us\"",
+   "key_verse": [
+    9007012,
+    9007012
+   ],
+   "reflect": [
+    {
+     "text": "Samuel set up a stone monument called Ebenezer to remind the people that God had rescued them by His grace, which means His undeserved kindness. When we look back at our lives, the word \"thus far\" points to every year and every trial we have passed through. Whether in sickness or health, joy or sorrow, God has faithfully protected and preserved us from spiritual dangers that we could not face on our own.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "This marker does not mean our troubles are completely finished. As Charles Spurgeon noted, \"He who hath helped thee hitherto will help thee all thy journey through.\" We still face temptations and battles ahead, and our hearts are often prone to wander from God. Yet saying that the Lord has helped us up to this point gives us confidence for whatever tomorrow brings.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "For us today, the greatest stone of help is Jesus Christ giving His life on the cross. Because He died and rose for wandering sinners, we know that our final victory is secure. We can trust Him to keep us safe in every struggle and bring us safely home into His presence forever.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What past moments of God's help can you remember to strengthen your faith today?",
+    "How does knowing Jesus died for you help you trust Him with the battles you face tomorrow?"
+   ],
+   "prayer": "Heavenly Father, thank You for helping us through every season and trial up to this very day. When our hearts are tempted to wander, remind us of Your faithful mercy and the rescue Jesus won for us on the cross. Please guide our steps forward and bring us safely home to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 29",
+     "on": "1 Samuel 7:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Scotty Smith",
+     "work": "A Prayer for Raising Our Ebenezer’s of Memory and Thanks",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/scotty-smith/a-prayer-for-raising-our-ebenezers-of-memory-and-thanks/"
+    },
+    "D4": {
+     "author": "David Mathis",
+     "work": "Here I Raise My Ebenezer: The Inspiration for ‘Come Thou Fount’",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/here-i-raise-my-ebenezer"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 9007001,
+   "end": 9007017,
+   "ref": "1 Samuel 7:1-17",
+   "ranges": [
+    [
+     9007001,
+     9007017
+    ]
+   ],
+   "title": "Do Not Stop Crying Out",
+   "key_verse": [
+    9007008,
+    9007008
+   ],
+   "reflect": [
+    {
+     "text": "The people of Israel asked Samuel not to stop praying for them when their enemies approached. Samuel was known as a man whose prayers won battles. His deep communion with God, meaning his close and honest relationship in prayer, brought real rescue to the nation. Like Samuel, Jesus showed us the power of continual prayer by praying early, late into the night, and even while facing death.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We often fail or grow weak because we stop crying out to the Lord. Instead of handing our fears and burdens over to God, we try to carry them all by ourselves and let worry eat away at our hearts. Samuel showed us that we can tell God all our troubles and hurts. Speaking openly to the Lord relieves our minds and leaves our problems in His capable hands.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Spending time on our knees in prayer is never wasted time. When dangers threaten us, God calls us to keep calling on Him with expectant faith. As we make prayer our daily habit, we will discover that God hears our cries and fights for us in ways we could never manage alone.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy worry are you carrying today that you need to hand over to God in prayer?",
+    "How can you make time for honest, regular prayer throughout your day?"
+   ],
+   "prayer": "Lord, forgive us for trying to fight our battles without coming to You first. Teach us to pray with steady faith, telling You all our struggles and fears instead of worrying. Thank You for listening to our cries and caring for us every day. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 7:8",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

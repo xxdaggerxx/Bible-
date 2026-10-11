@@ -1,0 +1,77 @@
+{
+ "id": "40-004-012",
+ "title": "Jesus Begins His Ministry",
+ "refs": [
+  "Matthew 4:12-17",
+  "Luke 4:14-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40004012,
+   "end": 40004017,
+   "ref": "Matthew 4:12-17; Luke 4:14-15",
+   "ranges": [
+    [
+     40004012,
+     40004017
+    ],
+    [
+     42004014,
+     42004015
+    ]
+   ],
+   "title": "Light Dawning in the Darkness",
+   "key_verse": [
+    40004016,
+    40004016
+   ],
+   "reflect": [
+    {
+     "text": "Jesus began His ministry by bringing hope to places covered in darkness. Just as physical light travels vast distances to reach dark places, Christ entered our world as the true light for everyone. Many people still live in spiritual darkness because they turn away from the truth God offers them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Along with bringing light, Jesus called people to repent, which means turning away from wrong choices and turning back to God. Even mature and faithful believers can still be pulled toward sin by their fallen human nature. Giving in to temptation brings painful hurt to ourselves and the people around us. Wisdom means actively avoiding compromising places instead of relying on our own willpower. Jesus calls us to leave behind hidden compromises so He can wash us clean and restore us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "As we receive the light of Jesus, we also have the responsibility to reflect it to others. We are called to step outside our comfort zones and share His life-giving hope within our homes, our workplaces, and our towns. When we turn from sin and walk in His ways, we help a hurting world see God's goodness.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any hidden compromise or tempting situation you need to turn away from today?",
+    "Where can you step out of your comfort zone this week to share the hope of Christ with someone else?"
+   ],
+   "prayer": "Lord Jesus, thank You for stepping into our dark world to bring us true light and hope. Please forgive us for the times we have given in to temptation, and cleanse our hearts as we turn back to You. Give us wisdom to stay away from compromising situations every day. Help us step out of our comfort zones so we can reflect Your love to the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jennifer Waddle",
+     "work": "Light That Travels",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-october-21.html"
+    },
+    "D2": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Don’t Play with Fire",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/dont-play-with-fire"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

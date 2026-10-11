@@ -1,0 +1,66 @@
+{
+ "id": "66-022-018",
+ "title": "Nothing May Be Added or Removed",
+ "refs": [
+  "Revelation 22:18-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66022018,
+   "end": 66022021,
+   "ref": "Revelation 22:18-21",
+   "ranges": [
+    [
+     66022018,
+     66022021
+    ]
+   ],
+   "title": "Christ's Promise to Return Soon",
+   "key_verse": [
+    66022020,
+    66022020
+   ],
+   "reflect": [
+    {
+     "text": "The Bible ends with a comforting promise from Jesus. He assures His church that He is coming back soon. The early Christians who first received this letter were facing painful persecution and suffering. Jesus reminded them that their trials had a purpose. Staying faithful to Him through hard times brings eternal blessings that will never fade away.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even when God's people look weak and troubled today, our victory is already certain. Jesus has already conquered sin and Satan. Because He won that decisive victory, we can be confident that He will fulfill His promise to return. Our future home and eternal life are completely secure in His hands.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "While we wait, we are called to cling firmly to Jesus in faith. We rely on His grace, which is His undeserved kindness to us each day. We also have the privilege of inviting others to place their trust in Him, so they can share in this eternal hope.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus has already won the victory give you strength when life is hard?",
+    "Who is someone you can encourage by sharing the hope of Christ's return this week?"
+   ],
+   "prayer": "Lord Jesus, thank You for the comforting promise that You are coming soon. Help us to stand firm in faith and rely on Your grace during difficult times. Give us courage to invite others to trust in You so they may receive eternal life. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Come, Lord Jesus!",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/come-lord-jesus-december-2020"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

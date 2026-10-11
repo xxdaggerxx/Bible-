@@ -1,0 +1,153 @@
+{
+ "book": 9,
+ "chapter": 5,
+ "first": 1,
+ "last": 12,
+ "ref": "1 Samuel 5",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The Philistines carried the ark of God away from the battlefield at Ebenezer to their major city of Ashdod. Even though Israel had lost the battle, God kept the Philistines from destroying His sacred chest. Instead, they preserved it carefully and brought it home as a prize of war.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The Philistines placed the ark inside the temple of Dagon, their chief god, right next to his statue. They did this to honor Dagon, boasting that their god had triumphed over the God of Israel. By treating the ark as a war trophy, they openly insulted the true God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The next morning, the people were shocked to find their idol lying flat on its face before the ark. Falling face down was a posture of worship, showing that their false god had to bow down before the Lord. Instead of learning the lesson, the priests assumed it was an accident and lifted the helpless statue back onto its stand.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The following morning, the idol had fallen again, but this time its head and hands were broken off and lying on the doorway. Only the lower, fish-shaped trunk of the statue was left in place. Losing its head and hands proved that the idol had neither wisdom to think nor power to act against the God of Israel.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Because the broken pieces of Dagon landed on the doorway, the priests and worshippers made a rule never to step on that threshold. Instead of turning to the true God, they created a new superstition and stepped over the spot where the pieces had fallen. In God's providence, this strange custom only served to remind later generations of their false god's shameful defeat.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The Lord did not stop with breaking the idol, but brought severe punishment on the people of Ashdod and the surrounding area. He struck them with a painful and humiliating disease that caused painful swellings. This outbreak showed the Philistines that the true God rules over real people, not just statues.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The people of Ashdod quickly recognized that their suffering came directly from the God of Israel. They admitted that His heavy hand was crushing both them and their god Dagon. Yet instead of repenting and seeking God's mercy, their only desire was to drive His presence away.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Matthew Henry (Concise)"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The leaders of Ashdod called a council of all five Philistine rulers to decide what to do with the ark. They chose to move it to the city of Gath, hoping the sickness was only a local problem in Ashdod. By merely shifting the ark from one city to another, they tried in vain to escape God's reach.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Moving the ark brought no relief, because the Lord's hand struck Gath with great panic and the same painful swellings. The plague affected everyone in the city, young and old, whether strong or weak. No one could avoid God's judgment simply by changing locations.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "When the rulers tried to pass the ark along to the city of Ekron, the people there cried out in terror. Word had already reached them about the devastation suffered in Ashdod and Gath. The Ekronites knew the holy chest was not a harmless trophy, but brought death to anyone who opposed the Lord.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "The people of Ekron gathered the Philistine rulers together and pleaded with them to send the ark entirely out of their country. Deadly terror had filled the whole city as people died all around them under God's heavy hand. They finally confessed that the ark needed to be returned to its proper home among the Israelites.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "Those who survived the deadly plague were still tormented by the painful swellings, and the screams of agony from the city rose toward heaven. This terrible cry showed the deep misery of trying to resist the Almighty. The Philistines' early celebration over capturing the ark had now turned into total despair.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 7: removed sources ['Geneva Notes']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,72 @@
+{
+ "id": "01-018-001",
+ "title": "The Three Visitors",
+ "refs": [
+  "Genesis 18:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1018001,
+   "end": 1018008,
+   "ref": "Genesis 18:1-8",
+   "ranges": [
+    [
+     1018001,
+     1018008
+    ]
+   ],
+   "title": "The Lord Visits Abraham",
+   "key_verse": [
+    1018001,
+    1018001
+   ],
+   "reflect": [
+    {
+     "text": "God had made an extraordinary covenant promise to Abraham, but He did not give a set timeline. As decades passed by without a child, trusting God grew harder and harder for Abraham and Sarah. When three visitors suddenly appeared, Abraham recognized that one of them was a pre-incarnate appearance of Jesus. The Lord came in person to comfort the couple and encourage them to wait patiently on His perfect timing.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Abraham quickly prepared a lavish meal for his guests, offering fine bread, dairy, and tender, choice calf meat. Without knowing it, Abraham's high-quality meal foreshadowed the pure offerings that belong to the Lord. In the ancient world, eating together was a way to establish deep friendship and confirm covenant peace. By eating what Abraham provided, God showed the close communion and love He shared with His servant.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This special meal also points forward to our walk with God today. The fellowship Abraham experienced under the trees looks ahead to the communion that believers share with Christ in the Lord's Supper. When we find ourselves waiting, we can remember that the Lord still invites us into intimate peace with Himself.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When waiting on God's promises feels difficult, how can you remember to rest in His perfect timing?",
+    "How does taking the Lord's Supper help remind you of the close communion and peace you have with Christ?"
+   ],
+   "prayer": "Heavenly Father, thank You for drawing close to us even when we struggle to wait patiently. Help us to trust Your timing and rest in Your faithful promises. Thank You for the deep peace and communion we share with Christ our Lord. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "Abraham’s Visitor",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-march-6-2025.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "They Ate",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/they-ate"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

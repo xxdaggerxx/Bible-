@@ -1,0 +1,73 @@
+{
+ "id": "66-007-009",
+ "title": "Praise from the Great Multitude",
+ "refs": [
+  "Revelation 7:9-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66007009,
+   "end": 66007017,
+   "ref": "Revelation 7:9-17",
+   "ranges": [
+    [
+     66007009,
+     66007017
+    ]
+   ],
+   "title": "The Great Multitude Before the Lamb",
+   "key_verse": [
+    66007009,
+    66007009
+   ],
+   "reflect": [
+    {
+     "text": "Believers on earth often feel like a small and struggling minority facing opposition. Yet John is shown an uncountably vast multitude standing before God's throne. This vision offered strong encouragement to early Christians suffering under intense persecution, and it reminds us today that we are not alone.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This enormous crowd comes from every nation, tribe, people, and language. It proves that God's family is defined by faith rather than ethnic descent. Because God welcomes believers from all backgrounds, racism directly opposes the body of Christ. The gospel does not rely on worldly power or cultural dominance to accomplish God's saving work.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The sheer size of this heavenly host assures us that the gospel will never fail to save God's people. All our earthly troubles fade in comparison to life in God's presence. There, we will praise His supreme wisdom and saving love, while the Lamb Himself satisfies every longing and wipes every tear from our eyes.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel alone or discouraged, how does remembering this countless multitude bring you comfort?",
+    "How can we show love and welcome to believers from different ethnic backgrounds in our church and daily life?"
+   ],
+   "prayer": "Lord God, thank You for gathering a vast family from every nation and language through the gospel. Help us to reject all prejudice and welcome our brothers and sisters in Christ. When we face suffering, strengthen our hearts with the promise that the Lamb will lead us and wipe away every tear. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Great Multitude",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-great-multitude"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 12/25/2001",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-12-or-25-or-2001-1127344.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

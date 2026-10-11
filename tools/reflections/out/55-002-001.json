@@ -1,0 +1,97 @@
+{
+ "id": "55-002-001",
+ "title": "Grace and Perseverance",
+ "refs": [
+  "2 Timothy 2:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 55002001,
+   "end": 55002013,
+   "ref": "2 Timothy 2:1-13",
+   "ranges": [
+    [
+     55002001,
+     55002013
+    ]
+   ],
+   "title": "Strong in Grace and Faithful in Trials",
+   "key_verse": [
+    55002001,
+    55002001
+   ],
+   "reflect": [
+    {
+     "text": "Christ provides us with grace, which is God's undeserved kindness and help, like an overflowing fountain that never runs dry. We do not have to purchase this strength; we can come to Him daily and receive everything we need. Relying on His power, we are called to live like good soldiers. That means refusing to get caught up in worldly distractions so we can please the Lord who enlisted us. Growing as faithful servants takes steady obedience, regular Bible study, and humble prayer rather than looking for easy shortcuts.",
+     "sources": [
+      "D1",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Following Jesus also involves walking through seasons of suffering. The apostle Paul was locked in chains like a criminal, yet he took comfort knowing God's word can never be chained. When troubles come because of our faith, we must make sure we endure them with gentleness and love for God's glory, not for personal pride. As Charles Spurgeon reminds us, \"if we suffer, we shall also reign with him.\" Remembering the Lord's past faithfulness gives us strength to persevere, knowing He will never fail us.",
+     "sources": [
+      "D2",
+      "D3",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly distractions might be pulling your attention away from pleasing Christ?",
+    "How can drawing on Jesus' grace help you respond with patience during difficult times?"
+   ],
+   "prayer": "Lord Jesus, thank You for giving us Your grace freely every day to strengthen our weak hearts. Help us to serve You with single-minded devotion, keeping our eyes on what pleases You. Grant us patience and love when we face hardship for Your name. Keep us anchored in the truth of Your word, which can never be chained. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 15",
+     "on": "2 Timothy 2:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 3",
+     "on": "2 Timothy 2:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 27",
+     "on": "2 Timothy 2:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "A Good Soldier's Practice",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/good-soldiers-practice"
+    },
+    "D5": {
+     "author": "Jack Graham",
+     "work": "Power Point - January 9, 2006",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-january-9-2006-1371861.html"
+    },
+    "D6": {
+     "author": "Beth Moore",
+     "work": "Day 318: 2 Timothy 2:1–13",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-318-2-timothy-2-113.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

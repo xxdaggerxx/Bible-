@@ -1,0 +1,74 @@
+{
+ "id": "44-014-001",
+ "title": "Paul and Barnabas at Iconium",
+ "refs": [
+  "Acts 14:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44014001,
+   "end": 44014007,
+   "ref": "Acts 14:1-7",
+   "ranges": [
+    [
+     44014001,
+     44014007
+    ]
+   ],
+   "title": "Bold Witness and Practical Wisdom",
+   "key_verse": [
+    44014003,
+    44014003
+   ],
+   "reflect": [
+    {
+     "text": "When Paul and Barnabas preached the message of God's grace in Iconium, they were not laboring by themselves. As F. B. Meyer reminds us, believers are called into \"partnership with Him in His work.\" While we speak the gospel and sow the seed, the Holy Spirit works from within to change hearts. Even when our efforts face delays and test our patience, we can trust that God has His own seasons for bearing fruit.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even though God confirmed their words with signs and wonders, Paul and Barnabas faced serious opposition. When leaders and crowds plotted to mistreat and stone them, the missionaries did not try to confront the mob. Instead, they ran for safety. Leaving town was not a sign of fear or weak faith, but of practical wisdom. Jesus Himself often stepped back from hostile crowds when His appointed hour had not yet arrived.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God often protects His servants through ordinary, natural choices rather than spectacular rescues. Once Paul and Barnabas were safe in new towns, they went right back to sharing the good news. We can follow their example by combining bold trust in the Spirit with sensible care, knowing our lives are in God's keeping.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can knowing the Holy Spirit works alongside you give you patience when results take time?",
+    "Is there an area in your life where God is calling you to show practical wisdom rather than taking unnecessary risks?"
+   ],
+   "prayer": "Lord, thank You for partnering with us by Your Spirit as we share the message of Your grace. Grant us the boldness to speak Your truth and the wisdom to make careful, sensible decisions in times of danger. Keep our hearts faithful to Your work wherever You lead us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Acts 14:3",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 246: Acts 14:1–7",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-246-acts-14-17.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

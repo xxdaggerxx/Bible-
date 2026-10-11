@@ -1,0 +1,68 @@
+{
+ "id": "11-003-016",
+ "title": "Solomon Judges Wisely",
+ "refs": [
+  "1 Kings 3:16-28"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 11003028,
+   "end": 11003028,
+   "ref": "1 Kings 3:28",
+   "ranges": [
+    [
+     11003028,
+     11003028
+    ]
+   ],
+   "title": "\"The Wisdom of God Was in Him\"",
+   "key_verse": [
+    11003028,
+    11003028
+   ],
+   "reflect": [
+    {
+     "text": "Solomon became known throughout history for his wisdom, especially because of how he handled the dispute between the two mothers. When he became king, he knew he needed divine help to lead God's people fairly. Rather than asking for personal riches or honor, he unselfishly asked God for understanding. When this hard case arrived, Solomon did not rely on standard state procedures. Instead, he trusted God-given discernment and set up a surprising test of motherly love. The true mother revealed herself by offering to surrender her baby so his life would be spared.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When all Israel saw Solomon's ruling, they recognized that God's wisdom guided his justice. Solomon made foolish choices later in his life, but God remained faithful to his early prayer. God still desires to give this same wisdom to us whenever we face difficult decisions. When we ask Him in faith, He generously gives us the guidance we need to do what is right.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face a difficult choice, do you turn first to God for discernment or rely only on your own ideas?",
+    "How does knowing that God gives wisdom generously encourage you to pray?"
+   ],
+   "prayer": "Lord God, thank You for being faithful to give Your people understanding when we ask. Grant us Your wisdom so that we can make fair and loving choices each day. Help us to trust Your guidance in every hard situation we face. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Solomon’s Great Wisdom",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/solomons-great-wisdom"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - April 22",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-april-22-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

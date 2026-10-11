@@ -1,0 +1,66 @@
+{
+ "id": "07-003-012",
+ "title": "Ehud",
+ "refs": [
+  "Judges 3:12-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7003012,
+   "end": 7003030,
+   "ref": "Judges 3:12-30",
+   "ranges": [
+    [
+     7003012,
+     7003030
+    ]
+   ],
+   "title": "God Delivers His People Through Ehud",
+   "key_verse": [
+    7003030,
+    7003030
+   ],
+   "reflect": [
+    {
+     "text": "After their earlier leader died, the people of Israel turned away from God and fell into sin. Because of their unfaithfulness, the Lord strengthened King Eglon of Moab to discipline them. God showed that He has sovereign rule over both His covenant people and their enemies.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When Israel cried out for help, God raised up Ehud to rescue them. Ehud acted in a time of war as an instrument of God's justice. Using clever military strategy, he defeated the foreign king who was oppressing God's people and led Israel to victory.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "King Eglon suffered a humiliating defeat. This story reminds us that God laughs at the pride of His enemies and will bring to nothing anyone who sets themselves against Him. No oppressor can stand in the way of God's sovereign plan to save His people.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God rules over every nation and ruler bring you comfort today?",
+    "When you feel the weight of your mistakes, what encourages you to call out to the Lord for help?"
+   ],
+   "prayer": "Lord God, You rule over all nations and hold every earthly power in Your hands. Thank You for hearing Your people when we call to You and for bringing justice to the earth. Help us to trust Your power and stay faithful to You each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Ehud and Eglon",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/ehud-and-eglon"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,82 @@
+{
+ "id": "19-116-001",
+ "title": "The LORD Has Heard My Voice",
+ "refs": [
+  "Psalms 116:1-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19116001,
+   "end": 19116019,
+   "ref": "Psalms 116:1-19",
+   "ranges": [
+    [
+     19116001,
+     19116019
+    ]
+   ],
+   "title": "The God Who Hears Our Voice",
+   "key_verse": [
+    19116001,
+    19116001
+   ],
+   "reflect": [
+    {
+     "text": "Trouble and deep sorrow often bring us to the end of our own strength. When we face trials beyond any human remedy, we discover how completely we depend on God. As F. B. Meyer asks, \"What could we do without the resource of prayer?\" Instead of turning to worldly ways to rescue ourselves, we can take our wounds and tears straight to the Lord.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The Lord bends down to listen and answers our pleas for mercy. Experiencing His faithful rescue calms our fears and gives us clear reasons to love Him more. When we remember all the ways God has cared for us, our anxious souls can quiet down and return to rest.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Receiving such abundant kindness leads us to ask how we can show our gratitude. We cannot pay God back, but we can gladly thank Him in front of others. Lifting the cup of salvation means openly proclaiming God as our deliverer. Telling others of His goodness helps us rise above grief and honors our commitment to walk with Him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What past answers to prayer remind you that you can rest in God's care?",
+    "How can you openly share God's goodness and deliverance with others this week?"
+   ],
+   "prayer": "Lord, thank You for hearing our cries and delivering us when we cannot save ourselves. Help our souls find rest as we remember Your past faithfulness to us. Give us courage to openly share Your goodness and praise You before others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 116:4",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "An Answered Prayer",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/answered-prayer"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "A Song of Deliverance - Today's Insight - July 9, 2018",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/a-song-of-deliverance-today-s-insight-july-9-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

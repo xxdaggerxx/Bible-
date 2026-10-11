@@ -1,0 +1,82 @@
+{
+ "id": "01-006-008",
+ "title": "Noah’s Favor with God",
+ "refs": [
+  "Genesis 6:8-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1006008,
+   "end": 1006012,
+   "ref": "Genesis 6:8-12",
+   "ranges": [
+    [
+     1006008,
+     1006012
+    ]
+   ],
+   "title": "Finding God's Favor in Dark Days",
+   "key_verse": [
+    1006008,
+    1006008
+   ],
+   "reflect": [
+    {
+     "text": "Noah lived in a world filled with wickedness and violence, yet he stood out in God's eyes. Like all people, Noah was an ordinary, fallen human being who needed God's help. God intervened with grace, His undeserved kindness, rescuing Noah from the judgment coming on the corrupt earth. Long before the New Testament was written, God's grace was already reaching out to save people.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Receiving God's favor changed how Noah lived each day. As F. B. Meyer notes, he stayed loyal to God even when he had to \"stand alone.\" He walked with God in close fellowship, kept a clear conscience, and treated others with honesty and unselfish love. God took notice of Noah's faithful life in the middle of a world that had completely turned away.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "True grace does not make us proud. Instead, it humbles our hearts and leads us into willing obedience. Even when the culture around us drifts into deep darkness, God actively looks for those who seek Him. With the strength God provides, we can stand firm, act justly, and walk faithfully with Him today.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily life is it hardest to stand alone for God?",
+    "How does knowing God's grace is a free gift encourage you to obey Him more gladly?"
+   ],
+   "prayer": "Lord God, thank You for Your amazing grace that rescues us when we do not deserve it. Please help us to walk closely with You each day, even when the world around us turns away from Your truth. Give us pure hearts, honest lives, and the strength to remain faithful witnesses to Your love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 6:9",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "Finding Favor - Truth For Life - August 27",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-august-27-2024.html"
+    },
+    "D3": {
+     "author": "Lynette Kittle",
+     "work": "Finding God’s Favor in the Darkest of Times",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-november-28.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

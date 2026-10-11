@@ -1,0 +1,127 @@
+{
+ "id": "05-011-018",
+ "title": "Remember God’s Words",
+ "refs": [
+  "Deuteronomy 11:18-25"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 5011018,
+   "end": 5011019,
+   "ref": "Deuteronomy 11:18-19",
+   "ranges": [
+    [
+     5011018,
+     5011019
+    ]
+   ],
+   "title": "\"Teach Them to Your Children\"",
+   "key_verse": [
+    5011019,
+    5011019
+   ],
+   "reflect": [
+    {
+     "text": "God gives parents the duty to know His word deeply and share it with their children. When we keep Scripture in our hearts and minds each day, our thoughts and actions begin to line up with His will. Normal daily routines, like sitting together at meal times, walking during the day, or waking up and going to bed, provide natural moments to speak about God's truth.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Teaching our children is about more than giving lectures. It means taking time to answer their questions, clear up confusion, and help them flourish. It also means looking at our own hearts and being quick to apologize when we fail. When we show genuine kindness and grace in the home, our lives display the truth of what we teach.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "We must also be proactive in bringing our children into church community and guarding their spiritual lives. Most of all, we should pray continually for their salvation and not lose heart. Bringing our families before God in persistent prayer and fasting invites His work into their lives.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you use natural moments in your daily routine today to talk about God with those around you?",
+    "In what areas of your life can you show more patience and grace to help others see Christ?"
+   ],
+   "prayer": "Lord, help us to hide Your word in our hearts and share it faithfully with the next generation. Give us humble hearts to admit our faults and show consistent kindness in our homes. Teach us to pray faithfully for our families and trust You with their lives. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Lynette Kittle",
+     "work": "5 Ways to Lead Your Kids to Jesus (Deuteronomy 11:19)",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-september-13.html"
+    },
+    "D3": {
+     "author": "Stuart Briscoe",
+     "work": "Educating Children - One Year Devotions for Men",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/educating-children-one-year-devotions-for-men-july-5.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 5011018,
+   "end": 5011025,
+   "ref": "Deuteronomy 11:18-25",
+   "ranges": [
+    [
+     5011018,
+     5011025
+    ]
+   ],
+   "title": "Holding Fast to the Lord",
+   "key_verse": [
+    5011022,
+    5011022
+   ],
+   "reflect": [
+    {
+     "text": "We often wonder why we struggle with stubborn sins and why they seem to control us instead of us overcoming them. As F. B. Meyer explains, \"entire consecration must precede entire deliverance.\" Consecration means setting ourselves apart completely for God. If we hold back parts of our lives, God cannot deliver us, because He only saves us when we allow Him to be our ruler, judge, and King.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Just like a doctor cannot cure a patient who ignores the medicine, or a general cannot defend a city that will not surrender control, God requires our full obedience. We cannot expect His victory while still clinging to the ways of the world. Walking in His ways means following His clear instructions on what we should do and what we should avoid.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God calls us to hold fast to Him in a daily, close relationship. When we stay connected to Him and let the Holy Spirit teach us, His love is perfected in us. As we surrender ourselves completely and unreservedly to God, He provides the strength we need to overcome what stands against us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any part of your life that you are holding back from God instead of surrendering it to Him?",
+    "How can you practice holding fast to the Lord throughout your ordinary tasks today?"
+   ],
+   "prayer": "Heavenly Father, we give our whole lives to You today and yield completely to Your rule. Forgive us for the ways we compromise with the world and try to fight sin in our own strength. Teach us to walk closely with You each day and find our victory in Your power. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Deuteronomy 11:22-23",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,61 @@
+{
+ "id": "10-016-005",
+ "title": "Shimei Curses David",
+ "refs": [
+  "2 Samuel 16:5-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10016005,
+   "end": 10016014,
+   "ref": "2 Samuel 16:5-14",
+   "ranges": [
+    [
+     10016005,
+     10016014
+    ]
+   ],
+   "title": "Comfort in the Suffering King",
+   "key_verse": [
+    10016005,
+    10016005
+   ],
+   "reflect": [
+    {
+     "text": "As King David fled from his own son, Shimei came out yelling insults, pelting him with stones, and throwing dust into the air. Even though David was the king, he walked in deep sorrow and humiliation, refusing to take revenge on his enemy. This picture of a mocked and rejected king points us forward to the Lord Jesus. As Charles Spurgeon wrote, Jesus \"plunged deepest into the depths of woe\" for our sake, taking the burden of our sin, the painful crown of thorns, and the cruelty of the cross.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we walk through seasons of grief, mistreatment, or hardship, we often focus on our own pain. Spurgeon shows us that our greatest comfort is found in looking closely at Christ's unmatched suffering. When we sit near the cross and remember what our Savior willingly bore out of love for us, our doubts and complaints begin to quiet down. Gazing at his wounds brings peace and healing to our own troubled hearts.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering Jesus' patience on the cross help you when others treat you unfairly?",
+    "What sorrow or complaint can you bring to Jesus today so his love can comfort you?"
+   ],
+   "prayer": "Lord Jesus, thank you for enduring deep sorrow, mockery, and the pain of the cross for us. When hard days come and we feel hurt or tired, turn our eyes to your great love. Calm our troubled minds and heal our hearts with your peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 22",
+     "on": "2 Samuel 16:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

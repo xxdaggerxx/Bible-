@@ -1,0 +1,66 @@
+{
+ "id": "24-050-011",
+ "title": "Babylon’s Fall Is Certain",
+ "refs": [
+  "Jeremiah 50:11-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24050011,
+   "end": 24050016,
+   "ref": "Jeremiah 50:11-16",
+   "ranges": [
+    [
+     24050011,
+     24050016
+    ]
+   ],
+   "title": "God's Just Judgment on Babylon",
+   "key_verse": [
+    24050011,
+    24050011
+   ],
+   "reflect": [
+    {
+     "text": "Babylon cheered and celebrated when it conquered Judah. Yet the Babylonians did not attack God's people out of love or devotion to him. They did it simply to expand their own empire and boast in their own glory. Still, God was in complete control. He used human desires to fulfill his sovereign purposes, guiding history without forcing anyone against their will.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because Babylon acted with wicked intent and gloated over plundering God's heritage, the Lord brought just judgment upon them. The success and wealth of the wicked never mean that God is pleased with them. Their prosperity is only temporary, and their pride cannot protect them from his holy anger.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Hearing that Babylon would be humbled brought real comfort and hope to the Jewish exiles. It promised future restoration, while also warning them to remain faithful. We can have peace today knowing that no earthly power can outmatch God, and that his justice will always have the final word.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When harmful people seem to prosper, what helps you remember that their success is only temporary?",
+    "How does knowing that God rules over history give you hope when the world feels unjust?"
+   ],
+   "prayer": "Lord God, thank you that you rule over all nations and work out your good plans. Help us remember that worldly success is not a sign of your favor, and keep our hearts from envy. Give us quiet confidence in your justice and your promise to restore your people. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Fall of Babylon",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/fall-babylon"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "66-004-005",
+ "title": "Worship of the Creator",
+ "refs": [
+  "Revelation 4:5-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 66004011,
+   "end": 66004011,
+   "ref": "Revelation 4:11",
+   "ranges": [
+    [
+     66004011,
+     66004011
+    ]
+   ],
+   "title": "\"Worthy Are You, Our Lord and God\"",
+   "key_verse": [
+    66004011,
+    66004011
+   ],
+   "reflect": [
+    {
+     "text": "God made the whole universe out of nothing. Because He created everything and keeps all things alive by His will, He deserves our deepest honor. Giving glory to God means treating Him with the great weight and honor He is due. Our praise cannot make God any more perfect than He already is. Instead, worship simply speaks the truth about who He is. We depend entirely on Him, so we must never take our world for granted, but thank our Creator daily for our existence.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In heaven, the elders fall down and place their crowns before God's throne. These crowns represent victories and divine rewards that God gave them. By casting them down, the elders return every honor to the One who gave it. They remind us that God alone deserves all praise. As believers, we are invited to hold earthly gifts with an open hand. When we recognize that every blessing belongs to God, we can joyfully surrender everything back to Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you treat your life, talents, and blessings as your own, or as gifts belonging to God?",
+    "How can you show God thanks today for creating and sustaining your life?"
+   ],
+   "prayer": "Lord God, You made all things, and by Your will we exist. Help us remember that our lives and every good gift come from Your hand. Teach us to hold our blessings loosely and give You the honor and praise You deserve. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "God's Glory as Creator",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-glory-as-creator"
+    },
+    "D2": {
+     "author": "Laura MacCorkle",
+     "work": "Casting Down Our Golden Crowns",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/casting-down-our-golden-crowns-crosswalk-the-devotional-oct-18-2010-11639017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,129 @@
+{
+ "id": "01-021-001",
+ "title": "The Birth of Isaac",
+ "refs": [
+  "Genesis 21:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1021006,
+   "end": 1021006,
+   "ref": "Genesis 21:6",
+   "ranges": [
+    [
+     1021006,
+     1021006
+    ]
+   ],
+   "title": "\"God Has Made Me Laugh\"",
+   "key_verse": [
+    1021006,
+    1021006
+   ],
+   "reflect": [
+    {
+     "text": "At first, Abraham and Sarah laughed with doubt when God promised them a child in their old age. But when Isaac was born, God turned their skeptical disbelief into real joy. Having a baby at their age went completely against ordinary nature. Yet God gave Sarah a son, a gracious gift that brought warmth and laughter into their home.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Isaac's birth moved God's saving plan forward, looking ahead to Jesus Christ. Charles Spurgeon wrote, \"Well may my mouth be filled with joyous laughter,\" because of God's surprising grace. Just as God brought life to Sarah's barren home, He gives spiritual life and the gift of Jesus to sinners who could never save themselves.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Sarah invited everyone who heard the news to share her laughter. In the same way, the deep joy we receive in Jesus is meant to overflow to those around us. Our friends and families can see our peace and cheerfulness. Remembering these joyful family moments helps us cherish God's faithfulness and gentle sense of humor.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When has God turned a season of doubt or difficulty into unexpected joy for you?",
+    "How can you share the joy you have found in Jesus with someone close to you today?"
+   ],
+   "prayer": "Lord, thank you for turning our doubt into genuine joy through your kindness. You gave us new life in Jesus when we were helpless to save ourselves. Fill our hearts with praise, and help our daily joy bring encouragement to everyone we meet. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 15",
+     "on": "Genesis 21:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Robin Jones",
+     "work": "She Laughs",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/she-laughs-encouragement-caf-january-30-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1021001,
+   "end": 1021008,
+   "ref": "Genesis 21:1-8",
+   "ranges": [
+    [
+     1021001,
+     1021008
+    ]
+   ],
+   "title": "Just as Promised",
+   "key_verse": [
+    1021002,
+    1021002
+   ],
+   "reflect": [
+    {
+     "text": "Genesis 21 opens by reminding us that the Lord attended to Sarah and did exactly what He had promised. God showed that He is completely trustworthy. Abraham was one hundred years old, and having a baby was humanly impossible for him and Sarah. Yet God demonstrated that no obstacle can prevent Him from keeping His word.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Isaac was born at the very time God had appointed. Waiting on the Lord can often feel like an eternity to us, but His timing is always exact and full of purpose. By providing Isaac, God carried forward His covenant line—His special family agreement—which ultimately led to Jesus Christ.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Because God was faithful to Sarah, we can rest with steady confidence in Him today. He does not abandon what He starts. We can be sure that the Lord will reliably complete every good work He has begun in our lives.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what part of your life does waiting on God's timing feel hardest right now?",
+    "How does God's faithfulness to Abraham and Sarah help you trust Him to finish the work He began in you?"
+   ],
+   "prayer": "Father, thank you that your promises never fail and your timing is always right. When waiting feels long and difficult, help us to trust your quiet plan. We rest in your promise that you will complete the good work you have started in our lives. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Just as Promised",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/just-promised"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

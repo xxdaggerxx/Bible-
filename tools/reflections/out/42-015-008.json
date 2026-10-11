@@ -1,0 +1,73 @@
+{
+ "id": "42-015-008",
+ "title": "The Parable of the Lost Coin",
+ "refs": [
+  "Luke 15:8-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42015008,
+   "end": 42015010,
+   "ref": "Luke 15:8-10",
+   "ranges": [
+    [
+     42015008,
+     42015010
+    ]
+   ],
+   "title": "The Joy of Finding the Lost",
+   "key_verse": [
+    42015010,
+    42015010
+   ],
+   "reflect": [
+    {
+     "text": "In this story, a woman loses a single silver coin. She does not simply shrug and walk away. Instead, she lights a lamp, sweeps her house, and searches with great care until she finds it. Seeking people who are far from God takes real effort, time, and personal sacrifice. It requires patience and a steady refusal to give up, because every single soul is worth the cost.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus showed this same heart during his earthly life. He welcomed outcasts just as they were, rather than waiting for them to clean up their lives first. We are called to share that same love. It is easy to avoid or look down on people who think, act, or look different from us. Yet God treasures those whom society often overlooks.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When the woman finds her coin, she gathers her neighbors to celebrate. Jesus tells us that heaven responds in the exact same way. God and his angels rejoice with pure joy whenever even one sinner repents, turning away from sin and back to God. When someone turns to him, heaven celebrates, and our hearts should share that same delight.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there someone in your life you tend to overlook because they seem different from you?",
+    "How can you invest your time and energy to care for people who are far from God?"
+   ],
+   "prayer": "Lord, thank you for seeking us out when we were lost. Teach us to love others the way Jesus did, welcoming those who are overlooked or different from us. Give us patience and willing hearts to invest in others so they can know your grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Will Graham",
+     "work": "Are the Lost Worth the Cost?",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/lp/75-day-devotional-day-64"
+    },
+    "D2": {
+     "author": "Gwen Smith",
+     "work": "Loving Like Jesus",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-november-19-2020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

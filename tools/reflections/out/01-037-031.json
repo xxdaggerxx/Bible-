@@ -1,0 +1,60 @@
+{
+ "id": "01-037-031",
+ "title": "Jacob Mourns Joseph",
+ "refs": [
+  "Genesis 37:31-36"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1037031,
+   "end": 1037036,
+   "ref": "Genesis 37:31-36",
+   "ranges": [
+    [
+     1037031,
+     1037036
+    ]
+   ],
+   "title": "Hope in Deep Grief",
+   "key_verse": [
+    1037035,
+    1037035
+   ],
+   "reflect": [
+    {
+     "text": "Joseph's brothers tried to hide their crime by adding another lie. They dipped Joseph's robe in the blood of a slaughtered goat and brought it to their father. Jacob recognized the coat and was utterly shattered. He tore his clothes, wore rough sackcloth, and refused any comfort from his family. There is sad irony in this moment. Years earlier, Jacob had deceived his own father Isaac with a goat, and now his sons used a young goat to deceive him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jacob thought everything was ruined and that he would grieve until the grave. Yet Jacob could not see the hidden work of God. Even in this terrible family tragedy, God was steering events to Egypt to preserve life. God's ability to bring life out of what seemed like death points ahead to something even greater, the resurrection of Jesus Christ. Even in our deepest heartaches, God's good purpose is never defeated.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When sorrow feels overwhelming, what helps you trust that God is still quietly at work?",
+    "How does the resurrection of Jesus bring hope when a situation looks completely lost?"
+   ],
+   "prayer": "Lord God, thank you that our darkest moments cannot stop your good plans. When grief feels heavy and comfort is hard to find, help us to trust your quiet care. We anchor our hope in Jesus, who conquered death for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "An Inconsolable Father",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/inconsolable-father"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

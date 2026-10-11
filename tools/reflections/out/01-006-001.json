@@ -1,0 +1,74 @@
+{
+ "id": "01-006-001",
+ "title": "Corruption on the Earth",
+ "refs": [
+  "Genesis 6:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1006001,
+   "end": 1006007,
+   "ref": "Genesis 6:1-7",
+   "ranges": [
+    [
+     1006001,
+     1006007
+    ]
+   ],
+   "title": "Walking with God in an Evil World",
+   "key_verse": [
+    1006005,
+    1006005
+   ],
+   "reflect": [
+    {
+     "text": "In the days before the flood, human society fell into deep spiritual decay. People did not turn to evil just once in a while; every thought and desire of their hearts was corrupt all the time. This deep wickedness brought great grief to God's heart. Because God is completely holy and fair, He cannot turn a blind eye to lawbreaking and destruction. His coming judgment came straight from His righteous nature.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "People in those days chased power, fame, and their own unchecked desires. When we seek a great reputation, wealth, or the praise of others, we lose our calm. As F. B. Meyer observed, chasing applause makes us unsteady, while resting in God's will gives us true peace. We find quiet rest only when our main goal is pleasing Him, doing the simple work He gives us, and looking to Him rather than comparing ourselves to others.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even when the culture around us drifts far from God, we do not have to drift with it. Noah shows us that believers can live faithful and upright lives in the middle of an ungodly generation. When we look to the unseen, eternal things of God, hide in His care, and bring our worries to Him in prayer, He keeps our hearts at peace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there places in your life where the desire for popularity or success has stolen your peace?",
+    "What is one practical way you can stand firm in faith when the culture around you ignores God?"
+   ],
+   "prayer": "Lord God, keep our hearts from chasing empty praise and selfish desires. Help us to live faithfully and quietly before You, even when the world around us turns away from Your truth. Give us Your peace as we rest in Your will and seek only to please You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 6:5",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "When Earth Stunk to High Heaven",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-daily-devotion-october-10.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

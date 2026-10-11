@@ -1,0 +1,75 @@
+{
+ "id": "19-048-001",
+ "title": "Broken Bondage",
+ "refs": [
+  "Psalms 48:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19048001,
+   "end": 19048014,
+   "ref": "Psalms 48:1-14",
+   "ranges": [
+    [
+     19048001,
+     19048014
+    ]
+   ],
+   "title": "Our God and Guide Forever",
+   "key_verse": [
+    19048014,
+    19048014
+   ],
+   "reflect": [
+    {
+     "text": "In Psalm 48, the people of Israel walked around Jerusalem, admiring its strong towers and stone walls. For us today, we look at something even greater: the steady love and kindness of God. F. B. Meyer wrote that life is like walking through \"the successive rooms of the Palace of Love.\" As we pass through each season, God shows us His care, leading us from one blessing to something even better.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "In our daily walk, we often face hard choices and wonder which path to take. We long for clear direction. The wonderful truth is that God Himself steps in to be our guide. He knows the path completely and directs us toward peace. When we trust Him and lean on Him at every step, we do not have to worry about losing our way.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because the Lord is our God forever, He will never leave our side. He watches over us in youth, carries us in old age, and stays with us even through our final hour. Even when life feels dangerous or uncertain, our God is at the helm, turning our fears into quiet peace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life right now do you need to ask God to guide your steps?",
+    "How does knowing that God is your lifelong guide give you peace about the future?"
+   ],
+   "prayer": "Lord, thank You for being our faithful fortress and our gentle guide. When we do not know which way to turn, teach us to lean on You rather than trusting our own strength. Lead us safely through every season of life until we are home with You forever. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 3",
+     "on": "Psalms 48:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 48:13",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

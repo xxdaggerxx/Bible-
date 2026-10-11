@@ -1,0 +1,76 @@
+{
+ "id": "20-024-023",
+ "title": "Further Sayings of the Wise",
+ "refs": [
+  "Proverbs 24:23-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 20024023,
+   "end": 20024034,
+   "ref": "Proverbs 24:23-34",
+   "ranges": [
+    [
+     20024023,
+     20024034
+    ]
+   ],
+   "title": "Learning Wisdom from the Overgrown Field",
+   "key_verse": [
+    20024032,
+    20024032
+   ],
+   "reflect": [
+    {
+     "text": "The wise teacher walked past a field that was completely overgrown with weeds. The owner likely never planned to ruin his land or wake up to broken stone walls. Instead, destruction crept in through tiny steps. As Charles Spurgeon observed, people who waste their time often only ask for a little rest. Small delays and quiet excuses make us feel like we are only taking a short break, but they slowly steal our days away.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Doing nothing is never harmless. Inaction is not neutral, because neglecting our duties actively allows thorns and thistles to take over. In the same way, putting off what matters in our spiritual life brings deep loss. Deceitful desires promise us easy comfort, yet they quietly strip away our peace. Spurgeon warned that like a steady traveler on the road, poverty and ruin will surely overtake those who keep delaying what is right.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "True diligence is far more than mere human willpower. It begins with a heart that stays awake to the presence and rule of Christ. Faith and obedience are timely right now, before the chance to sow and work passes by. Rather than waiting for a more convenient tomorrow, we are called to seek the Lord and serve him with our whole heart today.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to make small excuses instead of doing what God has put in front of you?",
+    "What is one practical step you can take today to serve Christ with diligence rather than putting it off?"
+   ],
+   "prayer": "Lord Jesus, wake our hearts so that we do not drift into carelessness or waste our days. Protect us from making small excuses that keep us from doing what is right. Give us strength to honor you with our time and help us to walk in your joyful presence today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 24",
+     "on": "Proverbs 24:33-34",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Scott Hubbard",
+     "work": "Get Behind Me, Sluggard: Four Lessons Against Laziness",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/get-behind-me-sluggard"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

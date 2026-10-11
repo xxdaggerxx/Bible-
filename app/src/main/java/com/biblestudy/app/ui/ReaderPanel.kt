@@ -1,7 +1,6 @@
 package com.biblestudy.app.ui
 
 import android.content.Intent
-import androidx.activity.compose.BackHandler
 import androidx.compose.animation.core.AnimationState
 import androidx.compose.animation.core.animateDecay
 import androidx.compose.animation.splineBasedDecay
@@ -151,7 +150,13 @@ private const val MAX_LAYOUTS = 7
 @Composable
 fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifier: Modifier = Modifier) {
     val panel = vm.panels[index]
-    val ctl = remember(panel) { ReaderController(vm, panel) }
+    val ctl = remember(panel) {
+        ReaderController(vm, panel).also { c ->
+            // Shown again (another tab was in front): back to exactly where it was, unless it was sent somewhere.
+            val r = panel.resume
+            if (r != null && panel.pendingVerse == null && r.book == panel.book && r.chapter == panel.chapter) c.pendingFollow = r
+        }
+    }
     val resolver = LocalFontFamilyResolver.current
     val measurer = remember(resolver) { TextMeasurer(resolver, Density(1f, 1f), LayoutDirection.Ltr) }
     val density = LocalDensity.current.density
@@ -163,12 +168,21 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         val style = vm.styleKey()
         val headingsOn = vm.showHeadings
         val redOn = vm.redLetters
+        val aidsOn = vm.aidSwitches()
+        val christOn = vm.aidChrist
         val other = vm.diffVersionFor(panel)
-        val (data, paras, red) = withContext(Dispatchers.IO) {
+        val (data, paras, red) = background {
             val d = ChapterData(v, b, c, vm.text(v).chapter(b, c), if (headingsOn) vm.headings(b, c) else emptyList())
             Triple(d, if (style.paragraphs) vm.study.paragraphStarts(v, b, c) else null,
                 if (redOn) vm.study.redLetters(v, b, c, d.verses.associate { it.verse to it.text }) else emptyMap())
         }
+        // Hard words (STD-23) and Bible aids (AID-1 to AID-12): the first mention of each in the chapter.
+        val hard = if (!aidsOn.any) emptyMap() else background {
+            com.biblestudy.app.data.Aids.marks(vm.getApplication(), vm.study, v, b, c, data.verses.map { it.verse to it.text }, aidsOn)
+                .mapValues { (_, l) -> l.map { it.range } }
+        }
+        // Verses that point to Christ (AID-13), in the Old Testament.
+        val christ = if (!christOn || b >= 40) emptySet() else background { com.biblestudy.app.data.Christ.verses(vm.getApplication(), b, c) }
         // Side by side with another version of this book: mark where the wording differs (SPLIT-5).
         val diffs = if (other == null) emptyMap() else withContext(Dispatchers.Default) {
             val theirs = vm.text(other).chapter(b, c).associate { it.verse to it.text }
@@ -176,18 +190,19 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         }
         buildChapterLayout(
             measurer, style.font.family(), vm.bible.book(b).name, data, vm.lineSpacing,
-            paragraphs = paras, numbers = style.numbers, spacers = spacers, red = red, diffs = diffs,
+            paragraphs = paras, numbers = style.numbers, spacers = spacers, red = red, diffs = diffs, hard = hard,
+            christ = christ, scale = style.scale,
         ) { RefLinks.parseList(it, vm.bible.books) }
     }
 
     // Load the current chapter first, then its neighbours so scrolling past either end is seamless.
-    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.paragraphMode, vm.verseNumbers, vm.redLetters, vm.diffVersionFor(panel), vm.sketchOf(panel.book)?.name) {
+    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.textSize, vm.paragraphMode, vm.verseNumbers, vm.redLetters, vm.aidSwitches(), vm.aidChrist, vm.diffVersionFor(panel), vm.sketchOf(panel.book)?.name, vm.onlineArrivals) {
         val v = panel.version
         val spacing = vm.lineSpacing
         val headingsOn = vm.showHeadings
         val font = vm.textFont
         val style = vm.styleKey()
-        val spec = "$headingsOn|$spacing|${style.encode()}|${vm.redLetters}|${vm.diffVersionFor(panel)}"
+        val spec = "$headingsOn|$spacing|${style.encode()}|${vm.redLetters}|${vm.aidSwitches()}|${vm.aidChrist}|${vm.diffVersionFor(panel)}"
         if (ctl.layoutSpec != spec) {
             // Headings, spacing or font changed: re-lay out every chapter, staying on the same verse.
             if (ctl.layoutSpec != null) panel.pendingVerse = panel.topVerse
@@ -215,7 +230,9 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         for ((b, c) in wanted) {
             val key = ctl.layoutKey(v, b, c)
             val name = vm.bible.book(b).name
-            if (ctl.layouts[key] == null) {
+            // An online Bible's chapter shown empty while it downloaded (or offline) is laid out again (BIB-12).
+            val waiting = ctl.layouts[key]?.let { it.textLength == 0 && vm.isOnline(v) } == true
+            if (ctl.layouts[key] == null || waiting) {
                 ctl.layouts[key] = buildChapter(v, b, c, ctl.spacers[key] ?: emptyMap())
             }
             vm.ensureLoaded(v, b, c) { k ->
@@ -224,6 +241,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
                 buildChapterLayout(
                     measurer, k.font.family(), name, ChapterData(v, b, c, vm.text(v).chapter(b, c)),
                     paragraphs = if (k.paragraphs) vm.study.paragraphStarts(v, b, c) else null, numbers = k.numbers,
+                    scale = k.scale,
                 )
             }
         }
@@ -277,7 +295,10 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             jumped = true
         }
         ctl.clamp()
-        ctl.pendingFollow?.let { ctl.follow(it) }
+        // A follow still waiting for its chapter, unless a jump has since gone somewhere else.
+        ctl.pendingFollow?.let {
+            if (it.book == panel.book && it.chapter == panel.chapter) ctl.follow(it) else ctl.pendingFollow = null
+        }
         if (jumped) ctl.announceScroll() // a linked panel jumps along
     }
 
@@ -289,7 +310,11 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     // A linked commentary scrolled by hand (STD-18): the panel in use follows it.
     val commentaryPos = vm.commentaryPos
     LaunchedEffect(commentaryPos) {
-        if (commentaryPos != null && vm.activePanel.coerceIn(0, vm.panels.lastIndex) == index) ctl.follow(commentaryPos)
+        if (commentaryPos != null && vm.activePanel.coerceIn(0, vm.panels.lastIndex) == index) {
+            ctl.follow(commentaryPos)
+            // Followed once: a panel shown later (a new tab) mustn't jump back to it.
+            vm.commentaryFollowed(commentaryPos)
+        }
     }
     LaunchedEffect(vm.linkPanels, vm.panels.size) {
         if (vm.linked && vm.activePanel == index) ctl.announceScroll()
@@ -326,7 +351,6 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     }
 
     // The tablet's Back gesture steps back through this panel's history when it is the active one.
-    BackHandler(enabled = vm.activePanel == index && panel.back.isNotEmpty()) { vm.goBack(index) }
 
     val active = vm.activePanel == index && vm.panels.size > 1
     Column(
@@ -334,7 +358,9 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             if (active) Modifier.border(2.dp, MaterialTheme.colorScheme.primary) else Modifier
         )
     ) {
-        PanelHeader(vm, index, ctl, onOpenPicker)
+        PanelHeader(vm, index, onOpenPicker)
+        // What's happening in this chapter, folded to one line (STD-22).
+        GlanceBar(vm, index)
         Box(
             Modifier
                 .weight(1f)
@@ -470,9 +496,9 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
 }
 
 @Composable
-private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, onOpenPicker: () -> Unit) {
+private fun PanelHeader(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit) {
     val panel = vm.panels[index]
-    vm.sketchOf(panel.book)?.let { SketchHeader(vm, index, ctl, it); return }
+    vm.sketchOf(panel.book)?.let { SketchHeader(vm, index, it); return }
     val book = vm.bible.book(panel.book)
     BoxWithConstraints(Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceContainer)) {
         // Narrow panels (e.g. three side by side) move the less-used buttons into a menu.
@@ -480,15 +506,6 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
         Row(Modifier.fillMaxWidth().padding(horizontal = 4.dp), verticalAlignment = Alignment.CenterVertically) {
             // What this panel shows, the tab's arrangement, new tab and close (SPLIT-7).
             PanelViewButton(vm, Slot.Bible(index)) { vm.activePanel = index }
-            if (!compact) {
-                IconButton(onClick = { vm.activePanel = index; vm.goBack(index) }, enabled = panel.back.isNotEmpty()) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-                }
-                IconButton(onClick = { vm.activePanel = index; vm.goForward(index) }, enabled = panel.forward.isNotEmpty()) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowForward, contentDescription = "Forward")
-                }
-                VerticalDivider(Modifier.height(24.dp).padding(horizontal = 4.dp))
-            }
             IconButton(onClick = { vm.activePanel = index; vm.prevChapter(index) }) {
                 Icon(Icons.AutoMirrored.Filled.KeyboardArrowLeft, contentDescription = "Previous chapter")
             }
@@ -505,16 +522,14 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
             }
             VersionPicker(vm, index)
             Spacer(Modifier.weight(1f))
-            if (!compact) TextButton(onClick = { ctl.fitWidth() }) { Text("Fit width") }
-            if (vm.panels.size > 1 && !compact) {
+            // Link panels: with two or more Bible panels, one tap links or unlinks them (lit while linked).
+            if (vm.panels.size > 1) {
                 IconButton(onClick = { vm.activePanel = index; vm.linkPanels = !vm.linkPanels }) {
-                    Icon(
-                        if (vm.linkPanels) Icons.Filled.Link else Icons.Filled.LinkOff,
-                        contentDescription = if (vm.linkPanels) "Unlink panels" else "Link panels",
-                        tint = if (vm.linkPanels) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
-                    )
+                    if (vm.linkPanels) Icon(Icons.Filled.Link, contentDescription = "Unlink panels", tint = MaterialTheme.colorScheme.primary)
+                    else Icon(Icons.Filled.LinkOff, contentDescription = "Link panels")
                 }
             }
+            // Narrow panels: About this book moves into a menu so the header fits.
             if (compact) {
                 var menu by remember { mutableStateOf(false) }
                 Box {
@@ -522,16 +537,7 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
                         Icon(Icons.Filled.MoreVert, contentDescription = "Panel menu")
                     }
                     DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-                        DropdownMenuItem(text = { Text("Back") }, enabled = panel.back.isNotEmpty(), onClick = { menu = false; vm.goBack(index) })
-                        DropdownMenuItem(text = { Text("Forward") }, enabled = panel.forward.isNotEmpty(), onClick = { menu = false; vm.goForward(index) })
                         DropdownMenuItem(text = { Text("About this book") }, onClick = { menu = false; vm.introBook = panel.book })
-                        DropdownMenuItem(text = { Text("Fit width") }, onClick = { menu = false; ctl.fitWidth() })
-                        if (vm.panels.size > 1) {
-                            DropdownMenuItem(
-                                text = { Text(if (vm.linkPanels) "Unlink panels" else "Link panels") },
-                                onClick = { menu = false; vm.activePanel = index; vm.linkPanels = !vm.linkPanels },
-                            )
-                        }
                     }
                 }
             }
@@ -544,7 +550,7 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
  * and one menu for paper, more space, renaming and deleting.
  */
 @Composable
-private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, sk: com.biblestudy.app.model.Sketch) {
+private fun SketchHeader(vm: StudyViewModel, index: Int, sk: com.biblestudy.app.model.Sketch) {
     val panel = vm.panels[index]
     var menu by remember { mutableStateOf(false) }
     var renaming by remember { mutableStateOf(false) }
@@ -555,15 +561,11 @@ private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, 
         verticalAlignment = Alignment.CenterVertically,
     ) {
         PanelViewButton(vm, Slot.Bible(index)) { vm.activePanel = index }
-        IconButton(onClick = { vm.activePanel = index; vm.goBack(index) }, enabled = panel.back.isNotEmpty()) {
-            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-        }
         Text(sk.name, style = MaterialTheme.typography.titleMedium, maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(horizontal = 6.dp))
         if (sk.linked) TextButton(onClick = { vm.goTo(index, sk.linkBook, sk.linkChapter, sk.linkVerse) }) {
             Text("on " + vm.refLabel(com.biblestudy.app.model.VerseId.of(sk.linkBook, sk.linkChapter, sk.linkVerse)), maxLines = 1)
         }
         Spacer(Modifier.weight(1f))
-        TextButton(onClick = { ctl.fitWidth() }) { Text("Fit width") }
         Box {
             IconButton(onClick = { vm.activePanel = index; menu = true }) { Icon(Icons.Filled.MoreVert, contentDescription = "Sketch page menu") }
             DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
@@ -660,6 +662,40 @@ private fun VersionPicker(vm: StudyViewModel, index: Int) {
                     onClick = { open = false; vm.setVersion(index, v.code) },
                 )
             }
+            // The online Bibles not added yet (BIB-12): one tap adds it and switches to it.
+            LaunchedEffect(open) { if (open && vm.onlineBibles == null) vm.loadOnlineBibles() }
+            HorizontalDivider()
+            Text(
+                "Online Bibles \u00b7 tap to add",
+                style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
+            )
+            val more = vm.onlineBibles?.filter { o -> BibleRepository.ALL.none { it.online == o.id } }
+            when {
+                more != null -> for (info in more) {
+                    val source = when (info.id) { com.biblestudy.app.data.Esv.ID -> "Crossway"; com.biblestudy.app.data.Nlt.ID -> "Tyndale"; else -> "YouVersion" }
+                    DropdownMenuItem(
+                        text = {
+                            Column(Modifier.padding(vertical = 2.dp)) {
+                                Text("${info.code} \u2014 ${info.title}", style = MaterialTheme.typography.titleSmall)
+                                Text("Online, from $source", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+                            }
+                        },
+                        onClick = { open = false; vm.addOnlineBible(info, index) },
+                        modifier = Modifier.testTag("addOnline-${info.code}"),
+                    )
+                }
+                vm.onlineListError != null -> Text(
+                    "Online Bibles need the internet.",
+                    style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
+                )
+                else -> Text(
+                    "Looking up online Bibles\u2026",
+                    style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
+                )
+            }
             HorizontalDivider()
             DropdownMenuItem(text = { Text("About these versions\u2026") }, onClick = { open = false; about = true })
         }
@@ -712,6 +748,11 @@ private fun TextSelectionBar(vm: StudyViewModel, ctl: ReaderController, ts: Text
                 vm.openVerse(l.book, l.chapter, l.verseAtOffset(ts.start))
                 ctl.clearTextSelect()
             }) { Text("Note") }
+            // Send the words to the AI chat, to ask about them (AI-6).
+            if (vm.chat.enabled) TextButton(onClick = {
+                vm.sendToChat(ctl.selectionLabel(ts), ts.layout.textOf(ts.start, ts.end).replace('\u2009', ' '))
+                ctl.clearTextSelect()
+            }) { Text("Ask AI") }
             IconButton(onClick = ctl::clearTextSelect) { Icon(Icons.Filled.Close, contentDescription = "Clear selection") }
         }
     }
@@ -782,6 +823,49 @@ private fun SelectionBar(vm: StudyViewModel, ctl: ReaderController, modifier: Mo
 private fun DrawScope.drawUnderline(layout: ChapterLayout, start: Int, end: Int, color: Color) {
     for ((x0, x1, y) in layout.underlines(start, end)) {
         drawLine(color, Offset(x0, y), Offset(x1, y), strokeWidth = 3.5f, cap = StrokeCap.Round)
+    }
+}
+
+/** Laid-out copyright lines of online Bibles, by version code. */
+private val onlineCredits = HashMap<String, androidx.compose.ui.text.TextLayoutResult>()
+
+/** The copyright line shown under an online Bible's chapters (BIB-12), at most three lines; null for other versions. */
+private fun onlineCredit(version: String, measurer: TextMeasurer): androidx.compose.ui.text.TextLayoutResult? {
+    val v = BibleRepository.ALL.firstOrNull { it.code == version && it.online > 0 } ?: return null
+    if (v.copyright.isBlank()) return null
+    return onlineCredits.getOrPut(version + v.copyright) {
+        measurer.measure(
+            androidx.compose.ui.text.AnnotatedString(v.copyright.replace('\n', ' ') + " Text from YouVersion."),
+            androidx.compose.ui.text.TextStyle(fontSize = androidx.compose.ui.unit.TextUnit(15f, androidx.compose.ui.unit.TextUnitType.Sp)),
+            maxLines = 3, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
+            constraints = androidx.compose.ui.unit.Constraints(maxWidth = Page.TEXT_W.toInt()),
+            density = PAGE_DENSITY,
+        )
+    }
+}
+
+/** The soft gold of a verse that points to Christ (AID-13), on every page colour. */
+val CHRIST_LINE = Color(0xFFC9A23A)
+
+/**
+ * A faint dotted line under each hard word and Bible aid (STD-23, AID-8), and a dotted gold line
+ * under each verse that points to Christ (AID-13), a little lower so both show; tapping explains them.
+ */
+private fun DrawScope.drawHardWords(layout: ChapterLayout, theme: PageTheme) {
+    // Round gold dots, spaced wider than the hard words' grey dashes so the two can't be confused.
+    val christDots = PathEffect.dashPathEffect(floatArrayOf(0.1f, 9f))
+    for (r in layout.christVerses) {
+        for ((x0, x1, y) in layout.underlines(r.first, r.last + 1)) {
+            drawLine(CHRIST_LINE.copy(alpha = 0.85f), Offset(x0, y + 7f), Offset(x1, y + 7f), strokeWidth = 4f, cap = StrokeCap.Round, pathEffect = christDots)
+        }
+    }
+    if (layout.hardWords.isEmpty()) return
+    val dots = PathEffect.dashPathEffect(floatArrayOf(2f, 6f))
+    val color = theme.text.copy(alpha = 0.45f)
+    for (r in layout.hardWords) {
+        for ((x0, x1, y) in layout.underlines(r.first, r.last + 1)) {
+            drawLine(color, Offset(x0, y + 1f), Offset(x1, y + 1f), strokeWidth = 2.5f, cap = StrokeCap.Round, pathEffect = dots)
+        }
     }
 }
 
@@ -868,6 +952,9 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
     // Faint line between chapters in the continuous strip
     drawLine(theme.rule, Offset(0f, g.height), Offset(g.width, g.height), strokeWidth = 3f)
 
+    // Hard words (STD-23): a faint dotted line under them, beneath everything else.
+    if (vm.drawOnlyLayer == null) translate(g.textLeft, Page.TEXT_TOP) { drawHardWords(layout, theme) }
+
     // Highlights sit beneath the text.
     for (layerId in order) withOpacity(fade[layerId], pageRect) {
         translate(g.textLeft, Page.TEXT_TOP) {
@@ -892,6 +979,10 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
 
     // Scripture text, drawn in runs between section headings
     drawText(layout.title, color = theme.text, topLeft = Offset(g.textLeft, Page.TITLE_TOP))
+    // An online Bible's copyright, under its text as YouVersion asks (BIB-12).
+    if (sketch == null && layout.textLength > 0) onlineCredit(layout.version, measurer)?.let { credit ->
+        drawText(credit, color = theme.text.copy(alpha = 0.55f), topLeft = Offset(g.textLeft, Page.TEXT_TOP + layout.displayHeight + 48f))
+    }
     // Sketch pages linked to this chapter: a badge beside the verse (SKT-2).
     if (sketch == null) {
         for (sk in vm.sketchesIn(layout.book, layout.chapter)) {
@@ -906,6 +997,15 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
             drawLine(Color.White, c + Offset(-8f, 6f), c + Offset(8f, -6f), strokeWidth = 3f)
             drawCircle(Color.White, 3f, c + Offset(-8f, 6f))
         }
+    }
+    // A ribbon beside each bookmarked verse (NOTE-3).
+    if (sketch == null) for (v in vm.bookmarkedVerses(layout.book, layout.chapter)) {
+        val y = layout.verseTop(v.coerceAtLeast(1)) + 4f
+        val x = g.textLeft - 26f
+        val ribbon = androidx.compose.ui.graphics.Path().apply {
+            moveTo(x, y); lineTo(x + 16f, y); lineTo(x + 16f, y + 30f); lineTo(x + 8f, y + 23f); lineTo(x, y + 30f); close()
+        }
+        drawPath(ribbon, BOOKMARK_RIBBON)
     }
     if (sketch == null) for ((first, last, dy) in layout.segments) {
         val (clipTop, clipBottom) = layout.segmentClip(first, last)
@@ -998,7 +1098,7 @@ private fun DrawScope.drawStrokes(
         val oy = Page.TEXT_TOP + d.y
         val r = g.layout.render(s)
         if (!ReaderController.overlaps(r.bounds.translate(ox, oy), view)) continue
-        drawStrokeRender(r, strokeColor(s.color, highlighter), ox, oy)
+        drawStrokeRender(r, strokeColor(vm.theme, s.color, highlighter), ox, oy)
     }
     for (s in marginStrokes) {
         if (s.layerId != layerId || s.highlighter != highlighter || !g.visible(s.region)) continue
@@ -1007,12 +1107,13 @@ private fun DrawScope.drawStrokes(
         val oy = g.originY(s.region, s.verse) + d.y
         val r = vm.render(s)
         if (!ReaderController.overlaps(r.bounds.translate(ox, oy), view)) continue
-        drawStrokeRender(r, strokeColor(s.color, highlighter), ox, oy)
+        drawStrokeRender(r, strokeColor(vm.theme, s.color, highlighter), ox, oy)
     }
 }
 
-private fun strokeColor(c: Int, highlighter: Boolean) =
-    Color(c).let { if (highlighter) it.copy(alpha = HIGHLIGHT_ALPHA) else it }
+/** A stroke's colour on the page: pen ink made to show on it (INK-17); highlighters see-through. */
+private fun strokeColor(theme: PageTheme, c: Int, highlighter: Boolean) =
+    if (highlighter) Color(c).copy(alpha = HIGHLIGHT_ALPHA) else Color(inkOn(theme, c))
 
 private val SELECT_BLUE = Color(0xFF1E88E5)
 private val NOTE_COLOR = Color(0xFFA07B45)
@@ -1029,7 +1130,7 @@ private fun DrawScope.drawLiveLayer(vm: StudyViewModel, ctl: ReaderController, t
         ctl.live?.takeIf { !ctl.fastStroke }?.let { ink ->
             ink.tick // redraw on every new point
             val r = buildRender(ink.toArray(), ink.width, ink.highlighter)
-            val c = Color(ink.color).let { if (ink.highlighter) it.copy(alpha = HIGHLIGHT_ALPHA) else it }
+            val c = strokeColor(theme, ink.color, ink.highlighter)
             drawStrokeRender(r, c, ink.ox, ink.page.top + ink.oy)
         }
 
@@ -1133,19 +1234,34 @@ private suspend fun PointerInputScope.readerGestures(
             }
         }
         // In read mode (PEN-4) the pen scrolls and taps like a finger.
-        if (!readMode() && (down.isPen() || (down.type == PointerType.Touch && fingerDraw()))) {
+        if (!readMode() && down.isPen()) {
             trackPen(down, ctl)
             return@awaitEachGesture
         }
-        if (ctl.recentlyPenned()) {
-            consumeUntilUp() // palm resting while writing
+        // A finger draws too when drawing with a finger (a phone, PH-3), but two fingers still scroll and zoom.
+        var twoFingers = false
+        if (!readMode() && down.type == PointerType.Touch && fingerDraw()) {
+            val seen = ArrayList<Offset>()
+            when (fingerStart(down, viewConfiguration.touchSlop, seen)) {
+                FingerStart.DRAW -> { trackPen(down, ctl, seen); return@awaitEachGesture }
+                FingerStart.DOT -> {
+                    ctl.penStart(down.position, down.pressure, penToolOverride(down, ctl))
+                    ctl.penEnd()
+                    return@awaitEachGesture
+                }
+                FingerStart.SCROLL -> twoFingers = true
+            }
+        }
+        // A palm resting while writing with the pen; not when fingers are what draw.
+        if (ctl.recentlyPenned() && !(fingerDraw() && !readMode())) {
+            consumeUntilUp()
             return@awaitEachGesture
         }
         var travelled = 0f
-        var multiTouch = false
+        var multiTouch = twoFingers
         var penDown: PointerInputChange? = null
         var lastTime = down.uptimeMillis
-        var waitingForLongPress = true
+        var waitingForLongPress = !twoFingers
         val velocity = VelocityTracker()
         velocity.addPosition(down.uptimeMillis, down.position)
         while (true) {
@@ -1254,10 +1370,38 @@ private fun penToolOverride(first: PointerInputChange, ctl: ReaderController): T
 /** How long the pen is held still to snap a stroke to a shape (INK-12). */
 private const val SHAPE_HOLD_MS = 600L
 
+/** How a finger that may draw begins (PH-3). */
+private enum class FingerStart { DRAW, DOT, SCROLL }
+
+/** How long a finger may rest before it starts drawing, waiting for a second finger to scroll. */
+private const val FINGER_WAIT_MS = 150L
+
+/**
+ * A finger that may draw: it draws once it moves or rests; a second finger landing first means
+ * the two scroll and zoom; lifted without moving, it makes a dot, as the pen does.
+ */
 @OptIn(ExperimentalComposeUiApi::class)
-private suspend fun AwaitPointerEventScope.trackPen(first: PointerInputChange, ctl: ReaderController) {
+private suspend fun AwaitPointerEventScope.fingerStart(down: PointerInputChange, slop: Float, seen: MutableList<Offset>): FingerStart {
+    while (true) {
+        val e = withTimeoutOrNull(FINGER_WAIT_MS) { awaitPointerEvent() } ?: return FingerStart.DRAW
+        if (e.changes.count { it.pressed } > 1) return FingerStart.SCROLL
+        val c = e.changes.firstOrNull { it.id == down.id } ?: return FingerStart.DRAW
+        if (!c.pressed) return FingerStart.DOT
+        for (h in c.historical) seen += h.position
+        seen += c.position
+        c.consume()
+        if ((c.position - down.position).getDistance() > slop) return FingerStart.DRAW
+    }
+}
+
+@OptIn(ExperimentalComposeUiApi::class)
+private suspend fun AwaitPointerEventScope.trackPen(
+    first: PointerInputChange, ctl: ReaderController, already: List<Offset> = emptyList(),
+) {
     ctl.penStart(first.position, first.pressure, penToolOverride(first, ctl))
     first.consume()
+    // The moves a finger made while it was still deciding to draw (PH-3).
+    for (o in already) ctl.penMove(o, first.pressure)
     // Holding the pen still at the end of a stroke snaps it to a shape (INK-12). A resting pen still
     // jitters, so "still" means within a few pixels since the last real movement.
     var stillAt = first.position
@@ -1317,7 +1461,7 @@ private fun androidx.compose.ui.graphics.drawscope.DrawScope.drawHover(vm: Study
     when (tool) {
         Tool.PEN -> {
             val r = (vm.currentWidth(false) * z / 2f).coerceAtLeast(2.5f)
-            drawCircle(Color(vm.penColor).copy(alpha = 0.55f), r, at)
+            drawCircle(Color(inkOn(vm.theme, vm.penColor)).copy(alpha = 0.55f), r, at)
             drawCircle(Color.White.copy(alpha = 0.8f), r + 1.5f, at, style = androidx.compose.ui.graphics.drawscope.Stroke(1.5f))
         }
         Tool.HIGHLIGHTER -> {
@@ -1351,7 +1495,7 @@ private fun DrawScope.drawNotePreview(vm: StudyViewModel, measurer: TextMeasurer
                         for (i in 3 until p.size step 3) lineTo(p[i], p[i + 1])
                     }
                     drawPath(
-                        path, Color(st.color).copy(alpha = if (st.highlighter) HIGHLIGHT_ALPHA else 1f),
+                        path, strokeColor(vm.theme, st.color, st.highlighter),
                         style = androidx.compose.ui.graphics.drawscope.Stroke(st.width, cap = androidx.compose.ui.graphics.StrokeCap.Round, join = androidx.compose.ui.graphics.StrokeJoin.Round),
                     )
                 }
@@ -1363,3 +1507,6 @@ private fun DrawScope.drawNotePreview(vm: StudyViewModel, measurer: TextMeasurer
     drawRoundRect(SKETCH_BADGE, topLeft = Offset(r.right - 28f, r.top + 4f), size = Size(24f, 20f), cornerRadius = androidx.compose.ui.geometry.CornerRadius(5f))
     drawLine(Color.White, Offset(r.right - 22f, r.top + 19f), Offset(r.right - 10f, r.top + 9f), strokeWidth = 2.5f)
 }
+
+/** The bookmark ribbon's colour (NOTE-3). */
+private val BOOKMARK_RIBBON = Color(0xFFC0392B)

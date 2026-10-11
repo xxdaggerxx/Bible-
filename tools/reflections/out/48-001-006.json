@@ -1,0 +1,74 @@
+{
+ "id": "48-001-006",
+ "title": "No Other Gospel",
+ "refs": [
+  "Galatians 1:6-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 48001006,
+   "end": 48001009,
+   "ref": "Galatians 1:6-9",
+   "ranges": [
+    [
+     48001006,
+     48001009
+    ]
+   ],
+   "title": "Holding Fast to the True Gospel",
+   "key_verse": [
+    48001007,
+    48001007
+   ],
+   "reflect": [
+    {
+     "text": "The Apostle Paul writes with great urgency because there is only one true message of salvation. Jesus Christ and His gift of grace—God's kindness that we do not deserve—are the central theme of the entire Bible. When anyone teaches that we must add good deeds or ceremonies to be saved, they undermine what Jesus did on the cross. Trusting in our own effort ignores how serious our sin is and compromises the holiness of God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Distorting the gospel carries eternal consequences and leads people away to destruction. Paul reminds us that no one, not even an apostle or an angel from heaven, has the right to change the message of grace. The written Word of God is our highest guide, standing firm above every human leader and tradition.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because counterfeit messages are so harmful, we cannot follow any teacher blindly. Believers need to practice discernment, which means learning how to tell true teaching apart from false ideas. We must test every message we hear to ensure it centers on Jesus and His free gift of grace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you use the Bible to test the teachings and messages you hear?",
+    "Are you ever tempted to rely on your own good deeds instead of resting completely in Jesus?"
+   ],
+   "prayer": "Lord God, thank You for the complete salvation we have in Jesus Christ. Give us discernment to recognize false ideas and protect us from turning away from Your grace. Help us to place our full trust in Your written Word and in Christ alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "Do You Follow Blindly?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-october-7-2024.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "False Teachers Accursed",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/false-teachers-accursed"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

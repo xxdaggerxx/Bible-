@@ -1,0 +1,72 @@
+{
+ "id": "61-001-001",
+ "title": "A Greeting from Peter",
+ "refs": [
+  "2 Peter 1:1-2"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 61001001,
+   "end": 61001002,
+   "ref": "2 Peter 1:1-2",
+   "ranges": [
+    [
+     61001001,
+     61001002
+    ]
+   ],
+   "title": "Precious Faith and Multiplying Grace",
+   "key_verse": [
+    61001002,
+    61001002
+   ],
+   "reflect": [
+    {
+     "text": "Peter wrote this letter near the end of his life to warn believers about false teachers who twisted the truth. He reminded them that every Christian has received a faith just as precious as his own. Our standing before God does not depend on our own goodness. Instead, it comes entirely through the righteousness of Jesus Christ, putting all believers on equal ground. While we must guard the truth carefully, we are also called to show love toward others when discussing smaller differences.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Peter also prayed for grace and peace to be multiplied to his readers. Grace is God's kindness that we do not deserve, and peace is His deep rest in our souls. These gifts are not just things we received once in the past. They are living realities for each day. Because our feelings of peace often rise and fall, we always need fresh measures of God's help.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God multiplies these blessings as we grow in the true knowledge of God and of Jesus our Lord. God works through ordinary means like reading the Bible, praying, and walking in humility. As we come to know our Savior more closely, His grace and peace steadily increase in our daily walk.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that your standing rests on Christ's righteousness, rather than your own merit, give you peace today?",
+    "What is one practical way you can seek a fresh measure of God's grace through prayer or Scripture this week?"
+   ],
+   "prayer": "Lord Jesus, thank you for giving us an equally precious faith through your righteousness and not our own. When our sense of peace rises and falls, please grant us a fresh measure of your grace. Help us grow in our knowledge of you through your Word, prayer, and humble hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Peter, Servant of Jesus",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/peter-servant-jesus"
+    },
+    "D2": {
+     "author": "John Piper",
+     "work": "May Grace and Peace Be Multiplied to You",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/may-grace-and-peace-be-multiplied-to-you"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

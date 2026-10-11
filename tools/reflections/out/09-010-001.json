@@ -1,0 +1,82 @@
+{
+ "id": "09-010-001",
+ "title": "Samuel Anoints Saul",
+ "refs": [
+  "1 Samuel 10:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9010001,
+   "end": 9010008,
+   "ref": "1 Samuel 10:1-8",
+   "ranges": [
+    [
+     9010001,
+     9010008
+    ]
+   ],
+   "title": "Equipped and Guided by God",
+   "key_verse": [
+    9010007,
+    9010007
+   ],
+   "reflect": [
+    {
+     "text": "Samuel poured oil on Saul's head to show that God had chosen him to lead Israel. Even though the people had mixed motives when they asked for a king, God established the throne. The oil was a sign that true leadership relies on the Holy Spirit rather than human strength. God had a clear and good purpose for Saul's life, and He assured Saul that he would not walk alone.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God gave Saul specific signs to prove that His word would come to pass, including a promise that the Spirit would transform his character. Yet, Samuel also told Saul to act as the situation required once those signs appeared. As F. B. Meyer noted, God expects us to use our \"sanctified common-sense.\" We do not need a miraculous sign for every choice we face. When we clear away selfish desires and ask God for wisdom, we can use our sound judgment to step forward in faith.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Saul's authority was not unlimited; he was required to submit to God's law and wait for the prophet's instruction. Jesus Christ later fulfilled this role perfectly by living in complete obedience to the Father. Through Christ, we receive the Holy Spirit to guide and empower us each day. As we serve God, we are called to stay faithful to His Word, trusting that His presence is always with us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you use both prayer and wise thinking when making decisions this week?",
+    "In what area of your life do you need to remember that God's Spirit is with you to help you?"
+   ],
+   "prayer": "Lord God, thank You for guiding our lives and giving us Your Holy Spirit. Help us to obey Your Word and use wise judgment in every choice we make. Give us confidence to act in faith, knowing that You are always with us through Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 10:7",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Anointing of Saul",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/anointing-of-saul"
+    },
+    "D3": {
+     "author": "Whitney Hopler",
+     "work": "3 Faith-Strengthening Lessons from Samuel Anointing Saul",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/lessons-from-samuel-anointing-saul.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

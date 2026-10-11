@@ -1,0 +1,87 @@
+{
+ "id": "45-007-013",
+ "title": "Struggling with Sin",
+ "refs": [
+  "Romans 7:13-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45007013,
+   "end": 45007025,
+   "ref": "Romans 7:13-25",
+   "ranges": [
+    [
+     45007013,
+     45007025
+    ]
+   ],
+   "title": "Rescued from the Power of Sin",
+   "key_verse": [
+    45007024,
+    45007024
+   ],
+   "reflect": [
+    {
+     "text": "When we want to obey God, we often find ourselves doing the very things we hate. This painful battle can make us feel discouraged, but it helps to remember who we are. As believers, our true identity is found in Christ. We are not evil at our core, but saints wrestling with lingering sin that lurks close by and tries to pull us back into old habits that no longer fit us.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Because sin is an active enemy, we must never treat it lightly. Spurgeon warns against having \"light thoughts of sin.\" Small compromises can slowly harden our hearts until we make excuses for our wrongdoing. Sin is deadly poison, and it is what nailed our Saviour to the cross. We must recognize its danger rather than brushing it aside.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Trying to defeat sin through our own willpower only leaves us feeling helpless and exhausted. We can no more make ourselves holy by our own strength than we could forgive our own past. Real victory begins when we stop relying on ourselves and turn to Jesus. Deliverance from sin is a gift of God's grace, found only when we depend on our living Saviour.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you started to treat any small sins lightly instead of seeing how dangerous they are?",
+    "Are you trying to overcome your struggles in your own strength, or are you depending on Christ to help you?"
+   ],
+   "prayer": "Lord Jesus, thank you that our true identity is secure in you. Please forgive us for the times we treat sin lightly or try to live rightly in our own strength. Teach us to rest in your grace and depend on your power to deliver us each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 11",
+     "on": "Romans 7:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Romans 7:24",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Neil T. Anderson",
+     "work": "A Struggling Saint",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/dailyinchrist/daily-in-christ-2-or-17-544368.html"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Evil Lurking Close at Hand",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/evil-lurking-close-hand"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "23-063-007",
+ "title": "God’s Mercies Recalled",
+ "refs": [
+  "Isaiah 63:7-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23063007,
+   "end": 23063014,
+   "ref": "Isaiah 63:7-14",
+   "ranges": [
+    [
+     23063007,
+     23063014
+    ]
+   ],
+   "title": "Remembering God's Mercies and Finding Rest",
+   "key_verse": [
+    23063007,
+    23063007
+   ],
+   "reflect": [
+    {
+     "text": "When days feel gloomy, we can easily forget how good God has been to us. Yet we are invited to stop and recount His loving kindness. Think back to when the Lord first set you free, or how He provided when you were sick, poor, or afraid. As Charles Spurgeon wrote, we can \"light up the lamps of the past\" to help us trust God through the dark.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The passage also pictures God guiding His weary people to rest, just as cattle leave the scorching heat of the hills to lie down in a cool, shaded valley. The world around us is often full of noisy demands, worries about money, and fierce temptations. But God offers a safe, sheltered place near Himself, where His Spirit gives deep peace to our souls.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Remembering God's past help gives us confidence that He will not fail us now. He brought His flock through deep waters before, and His tender care remains the same. When we fix our minds on His past goodness, we can quietly lean into the rest He freely gives.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What past help or deliverance from God can you recall to brighten a difficult day?",
+    "What worries or noisy pressures do you need to leave behind so you can rest in God's presence?"
+   ],
+   "prayer": "Lord, thank You for every kindness You have shown us over the years. When our current path feels dark or wearying, remind us of how You have carried us before. Lead us out of the heat of worry and into the quiet rest that Your Holy Spirit gives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 25",
+     "on": "Isaiah 63:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 63:14",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "24-025-015",
+ "title": "The Cup of God’s Wrath",
+ "refs": [
+  "Jeremiah 25:15-33"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24025015,
+   "end": 24025033,
+   "ref": "Jeremiah 25:15-33",
+   "ranges": [
+    [
+     24025015,
+     24025033
+    ]
+   ],
+   "title": "Judgment Begins with God's House",
+   "key_verse": [
+    24025029,
+    24025029
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God pictures His coming judgment as a cup of wine handed to each nation. Surprisingly, this cup is given first to Jerusalem, the city that bears God's name. As F. B. Meyer observes, God begins with His own people so that no one can accuse Him of favoritism, and because our sins bring dishonor to His name. God loves His children too dearly to leave them trapped in the destructive power of evil.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we wander into wrong paths, God will work patiently and firmly to bring us back to Himself. Leaving our sins behind can be painful, but it is necessary for our spiritual health. We cannot grow in our life with God unless we are willing to deal with the sins His Spirit reveals to us through the Bible.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a wrong habit or attitude in your life that God's Word is asking you to give up?",
+    "How does knowing that God corrects us out of love help you respond when you are convicted of sin?"
+   ],
+   "prayer": "Lord God, thank You for loving us enough to correct us when we stray. Help us listen willingly when Your Word reveals our sins, and grant us grace to turn away from them. Keep our hearts pure so our lives bring honor to Your holy name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 25:29",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "If God does not spare His own chosen people from discipline, the rest of the world will certainly face His justice as well. Even mighty Babylon, which God used to discipline Judah, could not escape punishment for its own wickedness. God sees the heart of every nation and person, and He calls everyone to turn from evil before it is too late.",
+     "problem": "Neither the passage nor the devotional teaches that God sees the heart of every nation and person."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "23-027-001",
+ "title": "The LORD’s Vineyard",
+ "refs": [
+  "Isaiah 27:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23027001,
+   "end": 23027013,
+   "ref": "Isaiah 27:1-13",
+   "ranges": [
+    [
+     23027001,
+     23027013
+    ]
+   ],
+   "title": "Kept in Peace by God's Hand",
+   "key_verse": [
+    23027003,
+    23027003
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God invites us to make peace with Him rather than fight against Him. Trying to resist God is like dry thorns trying to fight against fire. He does not want to destroy anyone, but desires that we turn to Him and live. As F. B. Meyer points out, God shows His true strength where Jesus gave His life on the cross. When we take hold of Christ, accepting God's offer of forgiveness, we find true peace.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Once we are reconciled to God, He brings us into His vineyard and becomes our personal protector. He does not leave our care to anyone else. Instead, He watches over us night and day so that nothing can harm us. His protecting strength stands between our souls and every danger or temptation.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The Lord also promises to water His people every moment. Because He tends to us so constantly, our lives can grow fresh and bear fruit. When God gives His firm promise to guard us, we have no reason to doubt or live in fear. Since He faithfully keeps us, we can answer Him with praise.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas where you have been resisting God instead of taking hold of His peace?",
+    "How does knowing that the Lord watches over you every moment help you when you feel afraid?"
+   ],
+   "prayer": "Lord, thank You for offering us peace through Christ instead of judgment. Help us to take hold of Your hand and rest under Your protection. Thank You for watering our souls every moment and guarding us both night and day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 13",
+     "on": "Isaiah 27:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 27:5",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

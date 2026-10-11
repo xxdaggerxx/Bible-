@@ -1,0 +1,60 @@
+{
+ "id": "32-003-001",
+ "title": "The Ninevites Repent",
+ "refs": [
+  "Jonah 3:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 32003001,
+   "end": 32003010,
+   "ref": "Jonah 3:1-10",
+   "ranges": [
+    [
+     32003001,
+     32003010
+    ]
+   ],
+   "title": "God's Mercy to Those Who Repent",
+   "key_verse": [
+    32003010,
+    32003010
+   ],
+   "reflect": [
+    {
+     "text": "Even after Jonah ran away, the Lord gave him a second chance. God graciously sent Jonah back to work so he could deliver a serious warning of coming destruction to the great city of Nineveh. When Jonah preached, the people did not ignore what they heard. Instead, the Ninevites and their king took God's warning to heart. They showed their deep sorrow by fasting, wearing rough sackcloth, and choosing to turn away from their evil deeds and violence.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The king showed true sorrow for sin by throwing himself entirely on God's mercy. When God gives a warning about judgment, it is not meant to make us give up in passive despair. Instead, biblical warnings should move us to repent, which means turning away from our sin and turning to God. When the Lord saw that the people truly changed their actions, He freely chose to relent and show mercy, holding back the disaster He had announced.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When God's word exposes wrong attitudes or actions in your life, do you take the warning to heart and turn from them?",
+    "How does knowing that God freely shows mercy to the humble encourage you to come to Him when you fail?"
+   ],
+   "prayer": "Lord, thank you for your patience with us and for giving us warnings instead of leaving us in our sin. Give us humble hearts that turn away from wrongdoing rather than giving up in despair. Help us to cast ourselves completely on your mercy each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "God Relented",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-relented"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

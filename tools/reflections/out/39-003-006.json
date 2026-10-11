@@ -1,0 +1,80 @@
+{
+ "id": "39-003-006",
+ "title": "Robbing God",
+ "refs": [
+  "Malachi 3:6-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 39003006,
+   "end": 39003012,
+   "ref": "Malachi 3:6-12",
+   "ranges": [
+    [
+     39003006,
+     39003012
+    ]
+   ],
+   "title": "Returning to an Unchanging God",
+   "key_verse": [
+    39003007,
+    39003007
+   ],
+   "reflect": [
+    {
+     "text": "God reminds His people that He does not change. While everything around us fades or grows old, His character, justice, and mercy remain steady. As Charles Spurgeon wrote, \"amidst all the changes of this troublous life,\" our faith can rest securely in Him. Because the Lord does not change, He patiently calls us to return to Him when we wander.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In Malachi's day, the people had grown careless toward God's Word and kept back their tithes and offerings. God directly called this robbery. Holding back our resources shows a cold heart toward Him. When we give back to God, we practice faithful stewardship, confessing that everything we have belongs to Him in the first place.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God also gave a wonderful promise, but it came with a condition. We cannot expect God to pour out His spiritual blessings while we hold back support from His work, His servants, and the poor. When we faithfully bring our gifts to support God's house, He invites us to test His generosity and see how abundantly He provides.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways might our attitude toward money and giving reflect the state of our hearts toward God?",
+    "How does knowing that God never changes give you confidence to trust Him with what you have?"
+   ],
+   "prayer": "Lord, thank You that Your love and faithfulness never change, even when we drift away. Forgive us for the times we hold back what belongs to You or neglect Your work. Help us to manage our resources faithfully and give generously, trusting that You will provide for every need. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 2",
+     "on": "Malachi 3:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 24",
+     "on": "Malachi 3:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Sept. 30, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-sept-30-2010-11638856.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

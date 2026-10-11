@@ -1,0 +1,67 @@
+{
+ "id": "12-012-001",
+ "title": "Joash Repairs the Temple",
+ "refs": [
+  "2 Kings 12:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12012001,
+   "end": 12012016,
+   "ref": "2 Kings 12:1-16",
+   "ranges": [
+    [
+     12012001,
+     12012016
+    ]
+   ],
+   "title": "Caring for the House of the Lord",
+   "key_verse": [
+    12012002,
+    12012002
+   ],
+   "reflect": [
+    {
+     "text": "Young King Joash started his rule well because he listened to the wise instruction of Jehoiada the priest. Jehoiada guided him in doing what was right in the eyes of the Lord. This shows us the lasting value of faithful mentors, pastors, and family members who teach us God's word. Their patient guidance helps ground our faith. Beginning well under godly teachers is a wonderful gift, but continuing faithfully in obedience to the end is just as necessary.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Under the king's direction, funds were collected to restore the neglected house of the Lord. The people brought both required gifts and voluntary offerings. F. B. Meyer explains that gifts given freely from the heart are especially precious to God. When we feel prompted to give and support God's work, we should welcome that thought rather than push it aside. Meyer reminds us that our money is held only \"as a stewardship\" from our Master. We honor our heavenly Father when we hold our belongings loosely and give freely.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Who has God placed in your life to guide you in following Him faithfully?",
+    "How can you respond generously the next time God prompts your heart to give?"
+   ],
+   "prayer": "Lord, thank you for the godly teachers and mentors who guide us in your truth. Help us not only to begin well, but to persevere faithfully in following you each day. Teach us to view all we have as a trust from you, and give us willing hearts that share generously with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 12:4",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Starting Out Well",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/starting-out-well"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

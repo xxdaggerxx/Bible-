@@ -1,0 +1,66 @@
+{
+ "id": "01-008-020",
+ "title": "Noah Builds an Altar",
+ "refs": [
+  "Genesis 8:20-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1008020,
+   "end": 1008022,
+   "ref": "Genesis 8:20-22",
+   "ranges": [
+    [
+     1008020,
+     1008022
+    ]
+   ],
+   "title": "God's Promise and the Pleasing Aroma",
+   "key_verse": [
+    1008021,
+    1008021
+   ],
+   "reflect": [
+    {
+     "text": "When Noah stepped onto dry land after the flood, his first response was worship. He built an altar and offered clean animals to thank God for saving his family. Even though the flood had washed over the earth, human hearts remained fallen and inclined toward sin from youth. God in His holiness still had to deal with human sin, but He chose to meet it with gracious covenant promises.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord smelled the pleasing aroma of Noah's offering. Moved by mercy, He promised never again to curse the ground or destroy every living creature as He had done. He pledged that as long as the earth endures, the rhythm of day and night, heat and cold, and seedtime and harvest will not stop.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Noah's animal sacrifice was only temporary, but it pointed forward to Jesus Christ. Jesus gave Himself as the final sacrifice that permanently turns away God's anger for His people. Knowing the great price of our rescue, we are called to worship our Savior with sincere gratitude rather than taking His grace for granted.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways can you show genuine gratitude to God today for saving you through Jesus?",
+    "Are there areas in your life where you have begun to take God's patience and daily blessings for granted?"
+   ],
+   "prayer": "Lord God, thank You for Your faithful promise to sustain our world and provide its seasons. Thank You most of all for Jesus, whose sacrifice turns away Your wrath and brings us peace. Guard our hearts from taking Your mercy for granted, and help us to worship You with thankful lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Pleasing Aroma",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/pleasing-aroma"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

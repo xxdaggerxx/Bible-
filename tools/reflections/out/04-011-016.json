@@ -1,0 +1,136 @@
+{
+ "id": "04-011-016",
+ "title": "Seventy Elders Anointed",
+ "refs": [
+  "Numbers 11:16-30"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 4011023,
+   "end": 4011023,
+   "ref": "Numbers 11:23",
+   "ranges": [
+    [
+     4011023,
+     4011023
+    ]
+   ],
+   "title": "\"Is the LORD's Arm Too Short?\"",
+   "key_verse": [
+    4011023,
+    4011023
+   ],
+   "reflect": [
+    {
+     "text": "Moses looked at the massive crowd in the wilderness and could not see how God would feed them meat for a whole month. He began counting their herds, flocks, and the fish in the sea. Like Moses, we often look to visible, human means when we face large problems. When we see how weak created things are, we easily fall into doubt.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "God does not rely on our limited power to carry out His promises. As Charles Spurgeon noted, the Lord does not depend on the \"puny strength of man\" to do what He says. Looking to human help to accomplish a divine promise is like searching the frozen north pole for fruit ripened by the sun.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "When doubts arise, the Lord asks whether His arm has grown short. Faith does not depend on what we can see or accomplish with our own hands. True faith rests entirely on our invisible God, who always has the power to do everything He has promised.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life are you looking to human strength instead of trusting God to provide?",
+    "How does remembering that God's arm is never short help you rest in His promises?"
+   ],
+   "prayer": "Lord, forgive us when we look only at visible resources and doubt Your word. Teach us to stop relying on our own weak efforts and trust in Your mighty power. Help us to rest peacefully, knowing that You will fulfill everything You have spoken. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 8",
+     "on": "Numbers 11:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Alistair Begg (Truth For Life)",
+     "work": "Look to the Creator - Truth for Life - June 8",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-june-8.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 4011016,
+   "end": 4011030,
+   "ref": "Numbers 11:16-30",
+   "ranges": [
+    [
+     4011016,
+     4011030
+    ]
+   ],
+   "title": "A Heart for God's Spirit",
+   "key_verse": [
+    4011029,
+    4011029
+   ],
+   "reflect": [
+    {
+     "text": "God surrounded the elders and camp of Israel with His presence, placing His Spirit on leaders to help Moses carry the people's burden. In our lives as well, God is all around us like a protecting wall. We can put God between ourselves and all our worries, trusting that whatever reaches us passes through His watchful care.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When Eldad and Medad prophesied inside the camp, Joshua became defensive on Moses's behalf and wanted to stop them. But Moses showed no jealousy or desire to guard his own status. Instead, he openly wished that every one of the Lord's people could be a prophet with the Spirit resting on them.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Moses understood that rules on the outside could never truly transform the heart. His deep longing pointed forward to Jesus Christ and Pentecost, when God poured out His Holy Spirit on all believers. Because we now share that same Spirit, we can support one another and serve the Lord gladly without any jealousy or rivalry.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you ever tempted to feel jealous or competitive when God uses other people?",
+    "How can you encourage someone else in their service for the Lord this week?"
+   ],
+   "prayer": "Father, thank You for placing Your Holy Spirit within all who follow Jesus. Keep our hearts humble and free from selfish ambition or jealousy. Help us to rejoice when others serve You, and surround us each day with Your peace. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 11:24",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "Matt Foreman",
+     "work": "When Moses’s Wish Came True",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/moses-wish-came-true/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

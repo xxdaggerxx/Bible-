@@ -1,0 +1,71 @@
+{
+ "id": "40-026-069",
+ "title": "Peter Denies Jesus",
+ "refs": [
+  "Matthew 26:69-75",
+  "Mark 14:66-72",
+  "Luke 22:54-62"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40026069,
+   "end": 40026075,
+   "ref": "Matthew 26:69-75; Mark 14:66-72; Luke 22:54-62",
+   "ranges": [
+    [
+     40026069,
+     40026075
+    ],
+    [
+     41014066,
+     41014072
+    ],
+    [
+     42022054,
+     42022062
+    ]
+   ],
+   "title": "Peter's Tears of Repentance",
+   "key_verse": [
+    41014072,
+    41014072
+   ],
+   "reflect": [
+    {
+     "text": "Peter had boldly promised that he would never leave Jesus. Yet when questioned by servant girls and bystanders, fear overtook him. He denied knowing Jesus three times, even swearing with an oath. When the rooster crowed, Peter remembered what Jesus had told him and wept bitterly. Like Peter, we often break our promises to God. When the Holy Spirit softens our hearts, we realize how easily we fail and we feel true sorrow for our unfaithfulness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Peter was not only thinking about his guilt. As Jesus was being led away, the Lord turned and looked right at him. Charles Spurgeon describes this as a \"look of sorrow, pity, and love.\" That look reminded Peter of how good and kind his Master truly was. When we see our sin, we should never stay cold or stubborn. We are drawn to repentance because our wrongdoing grieves a Savior who loves us and offers us full forgiveness.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you realize you have failed Jesus, do you turn back to Him or try to ignore your sin?",
+    "How does knowing Christ's gentle love and forgiveness help you face your weaknesses honestly?"
+   ],
+   "prayer": "Lord Jesus, forgive us for the times we fail You and break our promises. Soften our hearts so we can see our sin clearly and turn back to You in repentance. Thank You for looking on us with mercy, pity, and unfailing love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 30",
+     "on": "Mark 14:72",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

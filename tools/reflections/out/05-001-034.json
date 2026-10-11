@@ -1,0 +1,67 @@
+{
+ "id": "05-001-034",
+ "title": "Israel’s Penalty",
+ "refs": [
+  "Deuteronomy 1:34-40"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5001034,
+   "end": 5001040,
+   "ref": "Deuteronomy 1:34-40",
+   "ranges": [
+    [
+     5001034,
+     5001040
+    ]
+   ],
+   "title": "God Calls Us to Encourage Others",
+   "key_verse": [
+    5001038,
+    5001038
+   ],
+   "reflect": [
+    {
+     "text": "In Deuteronomy 1, God said the older generation would not enter the land because of their unbelief. Yet God chose Joshua to lead the children into their inheritance. Instead of sending an angel from heaven to prepare Joshua for this heavy task, God told Moses to encourage him. Moses had walked the hard desert road himself. He knew the struggles of the people, which made his support far more helpful than a message from an angel.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God often chooses to work through people rather than miracles. As Charles Spurgeon wrote, \"A brother's sympathy is more precious than an angel's embassy.\" When we support each other, God knits us together as one caring family. We are called to cheer on those who are new to faith, help clear away their doubts, and fan small sparks of grace into a steady flame.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God Himself encourages us through His promises, Christ points us to heaven, and the Holy Spirit works within our hearts. Because God treats us with such patience, we should follow His example. We can speak gentle words to those who feel weary, pointing them to the sure strength that is found in God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Who around you needs a cheering word or a reminder of God's promises today?",
+    "How has the kindness and sympathy of another believer helped you through a difficult time?"
+   ],
+   "prayer": "Lord, thank you for binding us together as a family and encouraging us through your promises. Help us to notice those who are weary, fearful, or young in faith. Give us loving words to lift their hearts and point them to your strength. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 17",
+     "on": "Deuteronomy 1:38",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

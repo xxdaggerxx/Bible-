@@ -1,0 +1,75 @@
+{
+ "id": "13-005-011",
+ "title": "The Descendants of Gad",
+ "refs": [
+  "1 Chronicles 5:11-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13005011,
+   "end": 13005022,
+   "ref": "1 Chronicles 5:11-22",
+   "ranges": [
+    [
+     13005011,
+     13005022
+    ]
+   ],
+   "title": "Trusting God in the Battle",
+   "key_verse": [
+    13005020,
+    13005020
+   ],
+   "reflect": [
+    {
+     "text": "The tribes of Gad, Reuben, and Manasseh faced a dangerous fight against strong enemies. They were trained soldiers carrying shields, swords, and bows, but they knew their weapons could not save them on their own. In the heat of the fight, they cried out to God, and He answered them because they placed their whole trust in Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "F. B. Meyer observed that people who pray in the middle of a conflict almost certainly started seeking God before the struggle began. If we do not look to the Lord at the start of our day, we easily forget Him once trouble strikes. Yet when we find our footing slipping, God hears even our simplest cry for help.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Our daily battles are not fought with swords, but against temptation, evil, and inner sin. Spurgeon reminds us that when we fight under the Lord, \"the victory is sure.\" We must faithfully do our part and use the means God provides, but our final confidence must remain in our God who fights for us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When unexpected difficulties arise during your day, is turning to God in prayer your first reaction?",
+    "How can setting aside time with God each morning prepare you for the spiritual battles you face later?"
+   ],
+   "prayer": "Lord God, thank You that every battle belongs to You and that You always hear our prayers. Teach us to seek Your face early each day so that we remain close to You. When temptations press hard against us, remind us to call out to You in faith. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 8",
+     "on": "1 Chronicles 5:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 5:20",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

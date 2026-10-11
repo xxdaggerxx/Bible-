@@ -1,0 +1,88 @@
+{
+ "id": "04-027-001",
+ "title": "The Daughters of Zelophehad",
+ "refs": [
+  "Numbers 27:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4027001,
+   "end": 4027011,
+   "ref": "Numbers 27:1-11",
+   "ranges": [
+    [
+     4027001,
+     4027011
+    ]
+   ],
+   "title": "A Secure Portion for God's Children",
+   "key_verse": [
+    4027007,
+    4027007
+   ],
+   "reflect": [
+    {
+     "text": "Under standard customs, the daughters of Zelophehad faced losing their family land and name. Instead of quietly giving up, they boldly spoke up, and Moses took their case straight to the Lord. God heard them and affirmed that their plea was right. Earthly rules and human systems do not always treat people fairly, but we can bring every worry, struggle, and unfair situation directly to God, trusting Him to decide what is right.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "This passage shows early on that God values women as heirs in their own right. He meets our deep needs with tender care, offering hope for our despair and strength when we feel weak. Just as these sisters were given their full portion to bless their community, we are invited to receive from Christ and share His goodness with those around us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The law of the family redeemer points directly to Jesus Christ. He became our nearest relative by taking on our human nature, paying with His own blood to free us from slavery to sin. While we still face earthly death, no child of God will ever lose their promised share. In Jesus, what was lost has been restored into an eternal inheritance of peace and joy that will never fade.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What unfair situation or personal burden do you need to bring before the Lord today?",
+    "How does knowing that Jesus has secured your eternal inheritance give you peace?"
+   ],
+   "prayer": "Lord, thank you for hearing us whenever we bring our needs and hurts to you. We praise you for Jesus, our Redeemer, who became one with us to restore what we had lost. Help us to trust your perfect justice and walk in the freedom you have given us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 27:11",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 27:7",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "Mark Ross",
+     "work": "A Secure Inheritance",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/secure-inheritance"
+    },
+    "D4": {
+     "author": "Daily Disciples Ministries",
+     "work": "Let the Lord Decide",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-devotional-mar-3-2009-11600203.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

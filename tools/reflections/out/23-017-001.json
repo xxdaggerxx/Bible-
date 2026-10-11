@@ -1,0 +1,76 @@
+{
+ "id": "23-017-001",
+ "title": "The Burden against Damascus",
+ "refs": [
+  "Isaiah 17:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23017001,
+   "end": 23017014,
+   "ref": "Isaiah 17:1-14",
+   "ranges": [
+    [
+     23017001,
+     23017014
+    ]
+   ],
+   "title": "Remembering the Rock of Our Refuge",
+   "key_verse": [
+    23017010,
+    23017010
+   ],
+   "reflect": [
+    {
+     "text": "Many people spend their lives busy with plans for the future. We often work hard to gain wealth, achieve personal success, or start new projects. Yet all our careful preparations mean very little if we forget the God of our salvation. In the days of Isaiah, God's people drifted into worldly pursuits. Their material success gave them a false sense of safety that blinded them to God's will.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Chasing after wealth and trusting in what our own hands make copies the ancient idolatry that brought ruin to strong cities. As F. B. Meyer observed, a day of grief can easily sweep away the results of all our toil if we leave God out. We cannot gather a lasting harvest without His blessing sought through prayer.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead of leaning on fleeting riches, we are called to place our security in God alone. When we remember the Rock of our strength, our daily efforts are guided toward eternal purposes and bring true honor to our Maker.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where might you be relying on your own hard work or possessions instead of trusting in God?",
+    "How can you dedicate your daily plans and resources to God in prayer today?"
+   ],
+   "prayer": "Lord God, forgive us for the times we chase after worldly success and forget You. Teach us to place our security in You rather than in our own possessions or achievements. Guide our daily labors so that our work honors You and serves Your eternal purpose. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 17:11",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 08/04/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-08-or-04-or-2002-1147168.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "43-010-001",
+ "title": "Jesus the Good Shepherd",
+ "refs": [
+  "John 10:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43010001,
+   "end": 43010021,
+   "ref": "John 10:1-21",
+   "ranges": [
+    [
+     43010001,
+     43010021
+    ]
+   ],
+   "title": "Entering Through the Door",
+   "key_verse": [
+    43010001,
+    43010001
+   ],
+   "reflect": [
+    {
+     "text": "Jesus tells us that he is the gate for the sheep. When we come to God through him, he gives us true safety. Charles Spurgeon calls Jesus \"the only door, an open door, a wide door, a safe door.\" Just as Noah was preserved inside the ark, everyone who trusts in Jesus is kept secure from harm and is promised a home in heaven.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Entering through Jesus brings us directly into God's family. We are welcomed to come in and enjoy close friendship with the Lord, sharing in all his gifts and promises. We do not stand outside as strangers. Instead, we sit down with God's children and feast on his love and kindness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus also blesses us as we go out. He sends us into the world to work, to tell others the truth, and to comfort people who are hurting. We do not go alone or in our own power, but in his strength. Walking with him, we find rich pasture and our souls are fully satisfied.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you need to remember the safety and peace Jesus gives you?",
+    "How can you go out in the strength of Jesus today to encourage someone around you?"
+   ],
+   "prayer": "Lord Jesus, thank you for being the open door of safety and welcoming us into God's family. Thank you for feeding our souls and giving us everything we need. Please lead us as we go out today, and help us share your comfort and truth in your strength. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 17",
+     "on": "John 10:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

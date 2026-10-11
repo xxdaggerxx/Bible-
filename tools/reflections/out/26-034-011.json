@@ -1,0 +1,150 @@
+{
+ "id": "26-034-011",
+ "title": "The Good Shepherd",
+ "refs": [
+  "Ezekiel 34:11-24"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 26034015,
+   "end": 26034017,
+   "ref": "Ezekiel 34:15-17",
+   "ranges": [
+    [
+     26034015,
+     26034017
+    ]
+   ],
+   "title": "\"I Will Tend My Flock\"",
+   "key_verse": [
+    26034015,
+    26034015
+   ],
+   "reflect": [
+    {
+     "text": "God promises to care for His people Himself when leaders fail to look after them. He feeds our souls with the truth of His Word and gives us deep rest. As the true Shepherd, the Lord binds up our wounds, strengthens us when we feel frail, and gives us peace so we no longer have to live in fear.",
+     "sources": [
+      "D2",
+      "D6"
+     ]
+    },
+    {
+     "text": "The Lord also pays close attention to how people treat one another. He notices when aggressive people push others around, taking the best for themselves and leaving behind what is trampled and ruined. God will not ignore bullies or leave their mistreatment unchecked, but promises to bring true justice for the weak.",
+     "sources": [
+      "D5",
+      "D6"
+     ]
+    },
+    {
+     "text": "Because God feeds us so richly with His grace, His undeserved kindness, we are called to deal fairly and gently with everyone around us. We do not need to fight or scramble for ourselves. When we trust Him to satisfy us, we can rest quietly in His care.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel spiritually drained or hurt by others, how does knowing God feeds and protects you bring comfort?",
+    "How can you show gentle fairness to those around you instead of pushing for your own way?"
+   ],
+   "prayer": "Lord God, thank You for feeding our souls with Your truth and giving us rest. Heal our hidden wounds and protect us when others treat us harshly. Teach us to treat our brothers and sisters with fairness and mercy, just as You have cared for us. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 25",
+     "on": "Ezekiel 34:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D5": {
+     "author": "Stuart Briscoe",
+     "work": "Sheep and Goats",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/sheep-and-goats-one-year-devotions-for-men-april-22.html"
+    },
+    "D6": {
+     "author": "Ligonier Ministries",
+     "work": "The Shepherd Rescues His Sheep",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/shepherd-rescues-his-sheep"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 26034011,
+   "end": 26034024,
+   "ref": "Ezekiel 34:11-24",
+   "ranges": [
+    [
+     26034011,
+     26034024
+    ]
+   ],
+   "title": "The Shepherd Who Searches and Saves",
+   "key_verse": [
+    26034011,
+    26034011
+   ],
+   "reflect": [
+    {
+     "text": "When sheep wander away, God does not leave them to perish in the dark. He searches for them Himself. As Charles Spurgeon wrote, Jesus makes it His aim \"to seek and to save all the flock, without a single exception.\" Whether someone has never known the Shepherd or has strayed into sin and sorrow, the Lord tracks down His people and brings them home.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Sometimes the very people who should care for us cause us pain. Human leaders can break our trust, and harsh companions may shove the weak aside. When others judge us unfairly, we must not push back in anger or try to get revenge. God is the righteous Judge who sees every wrong, and we can patiently leave our defense in His hands.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "God has appointed Jesus as our one true Shepherd. Human institutions may disappoint us, but Jesus knows our deepest needs and laid down His life for us. If your trust has been broken, you can safely rebuild your confidence by following Him, knowing He will never let you go.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "If you have felt distant from God or hurt by others, how does Jesus' search for you encourage your heart?",
+    "Why is it better to leave judgment with the Lord rather than pushing back against people who mistreat you?"
+   ],
+   "prayer": "Lord Jesus, thank You for seeking us out when we wander and pulling us back from despair. When people hurt us or let us down, keep us from lashing out, and remind us that You are our faithful Judge. Help us trust Your loving leadership every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 19",
+     "on": "Ezekiel 34:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 26",
+     "on": "Ezekiel 34:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Lysa TerKeurst",
+     "work": "Why We Can Trust Jesus To Lead Us",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-august-29-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

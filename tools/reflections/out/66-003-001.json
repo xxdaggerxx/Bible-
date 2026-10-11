@@ -1,0 +1,138 @@
+{
+ "id": "66-003-001",
+ "title": "To the Church in Sardis",
+ "refs": [
+  "Revelation 3:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 66003001,
+   "end": 66003003,
+   "ref": "Revelation 3:1-3",
+   "ranges": [
+    [
+     66003001,
+     66003003
+    ]
+   ],
+   "title": "\"Wake Up and Strengthen What Remains\"",
+   "key_verse": [
+    66003002,
+    66003002
+   ],
+   "reflect": [
+    {
+     "text": "It is easy for a church or an individual believer to look healthy on the outside while dying on the inside. Active programs and a good reputation can hide quiet spiritual decay. Christ sees through our outward appearance and commands us to wake up from our spiritual slumber and face the truth about our condition.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Jesus tells us to guard and build up whatever real faith and goodness still remain, before they disappear completely. The way back to spiritual life is to remember the truth of God's word that we first received, and to obey it carefully through the power of the Holy Spirit.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Spiritual renewal begins when we stop resting on past achievements and honestly confess our sins. If we refuse to turn back to God, we face his sudden judgment. But when we repent, turning away from our sins and back to the Lord, he revives our worship and our hearts.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you relying on past successes or church activities instead of staying watchful today?",
+    "What truth from God's word do you need to remember and put into practice right now?"
+   ],
+   "prayer": "Lord Jesus, wake us up from our comfort and spiritual laziness. Help us to hold tightly to your truth and confess our sins honestly. Please strengthen the faith that remains in us and revive our hearts to follow you. Amen.",
+   "sources": {
+    "D3": {
+     "author": "David Jeremiah",
+     "work": "The Slippery Slope of Comfort",
+     "site": "Turning Point",
+     "url": "https://www.davidjeremiah.org/forward-experience/the-slippery-slope-of-comfort?devdate=2021-01-29"
+    },
+    "D4": {
+     "author": "John MacArthur",
+     "work": "Spiritual Resuscitation",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/B230712/spiritual-resuscitation"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 66003001,
+   "end": 66003006,
+   "ref": "Revelation 3:1-6",
+   "ranges": [
+    [
+     66003001,
+     66003006
+    ]
+   ],
+   "title": "Walking with Christ in White",
+   "key_verse": [
+    66003004,
+    66003004
+   ],
+   "reflect": [
+    {
+     "text": "In Sardis, a small group remained faithful to the Lord. Jesus promised that they would walk with him dressed in white. As Charles Spurgeon pointed out, this white clothing reminds us of justification, which means God declares us righteous through faith. Christ washes away our sin and clothes us in his own goodness, making us clean in his sight.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "White robes were also worn during special celebrations and wedding feasts, picturing gladness and peace. When we keep our lives clean from sin and walk closely with Jesus, we enjoy sweet friendship with him and a joyful heart. Compromising with sin brings doubts and sadness, but following Christ brings quiet peace of conscience.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This promise also points forward to eternal glory. Those who fight on in faith will receive perfect purity and stand before God like priests offering joyful praise. We do not earn this wonderful reward by our own good deeds. It is a gift of grace, God's kindness we do not deserve, because Jesus himself has made us worthy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus clothes you in his own righteousness give you joy today?",
+    "What helps you keep your walk with Christ pure as you look forward to heaven?"
+   ],
+   "prayer": "Lord Jesus, thank you for washing our sins away and dressing us in your righteousness. Keep us faithful and pure as we walk with you each day. Fill our hearts with your joy until we praise you before your throne. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 8",
+     "on": "Revelation 3:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 24",
+     "on": "Revelation 3:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

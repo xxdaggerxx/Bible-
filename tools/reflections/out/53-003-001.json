@@ -1,0 +1,79 @@
+{
+ "id": "53-003-001",
+ "title": "Request for Prayer",
+ "refs": [
+  "2 Thessalonians 3:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 53003001,
+   "end": 53003005,
+   "ref": "2 Thessalonians 3:1-5",
+   "ranges": [
+    [
+     53003001,
+     53003005
+    ]
+   ],
+   "title": "The Lord Is Faithful to Protect",
+   "key_verse": [
+    53003003,
+    53003003
+   ],
+   "reflect": [
+    {
+     "text": "Knowing that God is in complete control does not mean we stop praying. Instead, God's plan fuels urgent prayer. Paul asked the church to pray that the message of the Lord would spread quickly, be received with honor, and lead people to faith. When he asked for rescue from hostile people, he was not looking for personal comfort. He wanted every barrier to the gospel's advance removed.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "In this world, we will meet people who oppose the truth and act unfairly. We do not need to wear ourselves out arguing with them or living in fear. As Charles Spurgeon reminds us, \"we need not allow a shadow of a fear to fall upon our spirits.\" We can simply turn to the Lord. He never breaks a promise, and He will strengthen and shelter us so that evil cannot ruin our lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Real safety never comes from our earthly circumstances. Sudden crises and loss can test our faith, but we should unite in prayer rather than give in to despair. God proves His faithfulness by meeting our real needs when we are most vulnerable. By leaning on His promises, we can overcome anxiety and find true stability in Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What worries or difficult situations can you turn over to the Lord today instead of trying to fight them on your own?",
+    "How can you pray more faithfully for the good news of Jesus to spread and touch new hearts?"
+   ],
+   "prayer": "Lord, thank You for Your unchanging faithfulness and Your promise to guard us from evil. When unexpected troubles shake our lives, help us to unite in prayer and rest in Your shelter. Direct our hearts into Your love, and give us courage as we pray for the gospel to spread quickly. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 24",
+     "on": "2 Thessalonians 3:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Shirley M. Dobson",
+     "work": "Our Source of Security",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-devotions-for-parents-by-dr-james-dobson/dr-dobsons-parenting-devotional-nov-12.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Paul Asks for Prayer",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/paul-asks-for-prayer"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

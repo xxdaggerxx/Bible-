@@ -1,0 +1,67 @@
+{
+ "id": "43-001-035",
+ "title": "The First Disciples",
+ "refs": [
+  "John 1:35-42"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43001035,
+   "end": 43001042,
+   "ref": "John 1:35-42",
+   "ranges": [
+    [
+     43001035,
+     43001042
+    ]
+   ],
+   "title": "Starting with Those Closest to Us",
+   "key_verse": [
+    43001035,
+    43001035
+   ],
+   "reflect": [
+    {
+     "text": "When Andrew followed Jesus and discovered who He was, the first thing he did was look for his brother Simon. That is always how living faith works. When we experience the good news of Jesus for ourselves, we cannot keep it to ourselves. As Charles Spurgeon wrote, \"true grace puts an end to all spiritual monopoly.\" We naturally want the people around us to share in the blessing we have found.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our relatives and friends have the first claim on our care. It can be tempting to think about serving God in places far away while overlooking the people right in our own household. God asks us to show His love at home first, speaking of Him to our family, our friends, and those we see each day.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Andrew seemed to have fewer gifts than his brother Simon Peter, who later became a great leader in the early church. Yet it was ordinary Andrew who brought Peter to Jesus. You might feel you do not have big talents or impressive words, but God can use your quiet, faithful words to reach someone who will do great things for Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Who in your family or circle of friends can you tell about the good things Jesus has done?",
+    "How can remembering that God uses ordinary people encourage you to speak about your faith?"
+   ],
+   "prayer": "Lord Jesus, thank You for welcoming us to come and know You. Help us not to keep Your good news to ourselves, but to share it with our family and friends. Use our simple words and small efforts to draw the people closest to us to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 19",
+     "on": "John 1:41",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

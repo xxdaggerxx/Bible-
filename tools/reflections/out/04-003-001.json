@@ -1,0 +1,66 @@
+{
+ "id": "04-003-001",
+ "title": "The Sons of Aaron",
+ "refs": [
+  "Numbers 3:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4003001,
+   "end": 4003004,
+   "ref": "Numbers 3:1-4",
+   "ranges": [
+    [
+     4003001,
+     4003004
+    ]
+   ],
+   "title": "Spiritual Privilege and Genuine Obedience",
+   "key_verse": [
+    4003004,
+    4003004
+   ],
+   "reflect": [
+    {
+     "text": "Aaron's sons held a place of great spiritual privilege. They were chosen, anointed, and given the sacred task of serving as priests before the Lord. Yet their recognized leadership and family background did not shield them from the consequences of disobeying God. When Nadab and Abihu brought unauthorized fire before Him, they showed a dangerous disregard for His direct instructions about holy worship.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This sobering moment reminds us that our position, popularity, or religious status will never excuse disobedience in God's eyes. Being active in church life or serving in ministry without sincere submission to Christ is hypocrisy, which means looking religious on the outside while refusing to follow God on the inside. Outward roles can never take the place of real faithfulness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As believers, we cannot treat obedience to God as optional. We must avoid rationalizing our choices or setting aside parts of God's Word that feel difficult or inconvenient. God calls us to honor Him completely, approaching His Word with a heart that is ready to listen and obey.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where you might be treating God's commands as optional?",
+    "How can you make sure your service in church comes from sincere submission to Christ rather than just outward habit?"
+   ],
+   "prayer": "Lord, help us to approach You with reverence and sincere hearts rather than just outward religious routine. Guard us from thinking that any position or privilege excuses us from obeying Your Word. Grant us humble spirits that gladly listen to You and follow all that You command. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 2/13/2004",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-2-or-13-or-2004-1243538.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

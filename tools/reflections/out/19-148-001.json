@@ -1,0 +1,140 @@
+{
+ "id": "19-148-001",
+ "title": "Praise the LORD from the Heavens",
+ "refs": [
+  "Psalms 148:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19148004,
+   "end": 19148006,
+   "ref": "Psalms 148:4-6",
+   "ranges": [
+    [
+     19148004,
+     19148006
+    ]
+   ],
+   "title": "\"He Gave the Command and They Were Created\"",
+   "key_verse": [
+    19148005,
+    19148005
+   ],
+   "reflect": [
+    {
+     "text": "God brought the sun, moon, and stars into being simply by speaking His command. We are not the result of blind chance or an accident. God designed every part of this world on purpose, including you and me. While God spoke the physical cosmos into life with a word, saving us required the cross of Jesus Christ. Through Christ's sacrifice, God makes everyone who trusts in Him into an entirely new creation.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "The skies and waters continue to run in an orderly way because God set them in place with a lasting decree. The natural laws that guide our world work faithfully each day because God commanded them to do so. True science and God's Word fit together cleanly because the same God is the author of both. The reliable order of the universe points us back to our dependable, unchanging Lord.",
+     "sources": [
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing God designed you on purpose change how you look at yourself today?",
+    "What does the cross show you about how much God cared to make you new?"
+   ],
+   "prayer": "Lord God, thank You for speaking the world into being and holding all things in steady order. Thank You even more for sending Jesus to the cross to give us new life. Help us to trust Your wisdom and care each day. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Adrian Rogers",
+     "work": "What Do You Believe about Creation?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-august-31-2019.html"
+    },
+    "D5": {
+     "author": "Rick Warren",
+     "work": "The Bible Is Always Ahead of Science",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-june-8-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19148001,
+   "end": 19148014,
+   "ref": "Psalms 148:1-14",
+   "ranges": [
+    [
+     19148001,
+     19148014
+    ]
+   ],
+   "title": "The Whole Creation Praises the Lord",
+   "key_verse": [
+    19148013,
+    19148013
+   ],
+   "reflect": [
+    {
+     "text": "Psalm 148 calls everything in heaven and on earth to praise God. Human beings easily get stuck in dull routines and stop noticing the wonders around them. Pausing to look at wild creatures, hills, and running water can wake up our sense of wonder and break our spiritual boredom. As creation points to its Maker, we are reminded that God's name alone is exalted. Idols made by human hands cannot rescue anyone, so true worship means clearing away anything in our hearts that competes with God.",
+     "sources": [
+      "D3",
+      "D6"
+     ]
+    },
+    {
+     "text": "Even fierce winds and hard weather obey God's voice. As writer F. B. Meyer noted, the storm is \"your Father's strong servant\" sent on a special task. Painful trials may blow across our paths, but they can never cut us off from God's love. When we yield our will to God, we can trust that even rough seasons are guiding us to the safe harbor He has planned for us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The psalm ends by celebrating that God keeps His people close to Himself. In the old days, God taught people about the seriousness of sin by keeping a distance between them and His holy presence. But the gospel brings us close through the blood of Jesus. Instead of warning us away, God invites us to come near and live safely in His fellowship.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What distracting things in your life might be taking your attention away from God?",
+    "How does knowing that God has brought you near through Jesus give you comfort in difficult times?"
+   ],
+   "prayer": "Father in heaven, Your name alone is worthy of our highest praise. Open our eyes to see Your greatness in the world around us, and help us yield to Your will when life feels like a storm. Thank You for welcoming us close to Your heart through Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 15",
+     "on": "Psalms 148:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 148:8",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "A Name Like No Other",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-august-29-2024.html"
+    },
+    "D6": {
+     "author": "Chuck Swindoll",
+     "work": "Cricket Places",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/cricket-places1"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

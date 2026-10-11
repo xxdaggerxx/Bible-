@@ -1,0 +1,74 @@
+{
+ "id": "27-008-015",
+ "title": "Gabriel Interprets Daniel’s Vision",
+ "refs": [
+  "Daniel 8:15-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 27008027,
+   "end": 27008027,
+   "ref": "Daniel 8:27",
+   "ranges": [
+    [
+     27008027,
+     27008027
+    ]
+   ],
+   "title": "\"I Went About the King's Business\"",
+   "key_verse": [
+    27008027,
+    27008027
+   ],
+   "reflect": [
+    {
+     "text": "Daniel was deeply shaken by what he saw. The vision of future rebellion and suffering left him exhausted and physically ill for days. Yet once he regained his feet, he returned to his regular duties in service to the king. He did not allow troubling news about the future to stop him from doing his daily work with care.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Like Daniel, we often face distressing news and hard realities in our world. It can feel tempting to freeze or withdraw from our responsibilities. However, believers draw strength from knowing they are deeply loved by God. Resting in that unchanging love takes away our fear and helps us stay productive even in difficult times.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Spending time with God should never become an excuse to neglect our earthly callings. Instead, understanding the Master's larger plan should make us more diligent and dependable servants. As F. B. Meyer noted, Daniel would have seen it as a slur if his spiritual experiences hindered his work. Our faith ought to send us back into daily life, eager to meet the needs of those around us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When painful news or heavy burdens weigh on you, what daily responsibilities is God still asking you to carry out?",
+    "How can remembering God's steady love give you strength to serve others today?"
+   ],
+   "prayer": "Father, thank you that our future rests securely in your hands. When troubling events around us cause fear or weariness, ground us in your love. Grant us the resolve to rise each morning and faithfully do the work you have placed before us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Daniel 8:27",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "John Piper",
+     "work": "Appalled but Productive",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/appalled-but-productive"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

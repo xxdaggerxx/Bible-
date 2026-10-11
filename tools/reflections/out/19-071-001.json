@@ -1,0 +1,66 @@
+{
+ "id": "19-071-001",
+ "title": "Be My Rock of Refuge",
+ "refs": [
+  "Psalms 71:1-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19071001,
+   "end": 19071024,
+   "ref": "Psalms 71:1-24",
+   "ranges": [
+    [
+     19071001,
+     19071024
+    ]
+   ],
+   "title": "Praising God and Telling the Next Generation",
+   "key_verse": [
+    19071018,
+    19071018
+   ],
+   "reflect": [
+    {
+     "text": "Psalm 71 looks back on a lifetime of trusting the Lord, from our youth into old age. When children enter our lives, it moves us to pray and rededicate ourselves to God. A parent's greatest desire is to see children place their faith in the Savior. There is no deeper joy than watching the young people we care for walk in God's truth. That is why we must actively proclaim His strength to the next generation and tell them about Jesus.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Alongside telling others, worshiping God in song is at the heart of our walk with Him. Singing praise unites believers whenever the church gathers. We often burst into song simply out of genuine joy and celebration for what God has done. Yet singing also serves as an essential habit of hope when we face difficult trials. When we sing hymns and songs of praise, we connect to a reality far bigger than our troubles and join with generations of worshipers who have praised God through the ages.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you share God's goodness with a younger person in your life this week?",
+    "How has singing praise helped you hold on to hope during difficult circumstances?"
+   ],
+   "prayer": "Lord God, thank You for being our refuge through every season of life. Help us to share Your power with the next generation so they may trust in Jesus. When we face trials, give us grace to sing of Your faithfulness and rest in Your truth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Dr. Jack Graham",
+     "work": "The Greatest Joy You Can Experience",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-june-6-2011.html"
+    },
+    "D2": {
+     "author": "Mike DeVries",
+     "work": "Why Sing?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-aug-29-2007-11552625.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

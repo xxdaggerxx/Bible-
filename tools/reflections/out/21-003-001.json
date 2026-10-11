@@ -1,0 +1,73 @@
+{
+ "id": "21-003-001",
+ "title": "To Everything There Is a Season",
+ "refs": [
+  "Ecclesiastes 3:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 21003001,
+   "end": 21003001,
+   "ref": "Ecclesiastes 3:1",
+   "ranges": [
+    [
+     21003001,
+     21003001
+    ]
+   ],
+   "title": "\"To Everything There Is a Season\"",
+   "key_verse": [
+    21003001,
+    21003001
+   ],
+   "reflect": [
+    {
+     "text": "Solomon divides human life into measurable events, showing us contrasting pairs of daily experiences. If we look at these opposing seasons only on a human level without God, they seem to cancel each other out into meaningless circles. Human wisdom and education can help us ask good questions about life, but on their own, they cannot explain where life is going.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Life moves steadily through changing stages. We often have to grieve what ends while learning to welcome new beginnings. Just as a farmer must wait through the hard work of planting before enjoying a harvest, we must endure difficult phases to grow. God uses our hard seasons with clear purpose to shape us more into the likeness of Christ.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Without God, our joyful and sorrowful days feel like an empty loop. But when we trust Him, we can walk through every season with patience. We can rest in the promise that painful times are not wasted and will eventually give way to new life.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Which season of life are you currently walking through, and how might God be using it to help you grow?",
+    "Are you trying to make sense of your circumstances on your own, or are you trusting God with them?"
+   ],
+   "prayer": "Lord, thank You that every season of our lives has a purpose in Your hands. Help us to be patient during difficult days and trust that You are shaping us to be more like Christ. Teach us to look to You rather than human wisdom to find meaning in our changing times. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Chuck Swindoll",
+     "work": "All-Pervading Opposites",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/all-pervading-opposites"
+    },
+    "D2": {
+     "author": "Michelle S. Lazurek",
+     "work": "To Everything There Is a Season",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/to-everything-there-is-a-season-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

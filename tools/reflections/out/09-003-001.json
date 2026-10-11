@@ -1,0 +1,88 @@
+{
+ "id": "09-003-001",
+ "title": "The LORD Calls Samuel",
+ "refs": [
+  "1 Samuel 3:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9003001,
+   "end": 9003014,
+   "ref": "1 Samuel 3:1-14",
+   "ranges": [
+    [
+     9003001,
+     9003014
+    ]
+   ],
+   "title": "Listening for God's Voice in the Quiet",
+   "key_verse": [
+    9003010,
+    9003010
+   ],
+   "reflect": [
+    {
+     "text": "When God called young Samuel, words from the Lord were rare. Waiting through times of spiritual silence can be hard, especially when we feel uncertain about the future. Yet Samuel kept serving the Lord faithfully each day. Being obedient during quiet seasons prepares our hearts to hear God when He speaks.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Hearing God's voice often takes practice and patience. At first, Samuel did not recognize who was speaking. Crowded schedules, distracted minds, and unconfessed sin can also drown out God's quiet voice. But the Lord was patient with Samuel's confusion, calling him again and again. God invites us to slow down, rest, and trust that He speaks to us personally.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Eli helped Samuel realize that God was calling him. Mature believers and trusted mentors can help us discern God's will when we are unsure. When Samuel finally answered, he offered a humble and willing heart. True listening means welcoming God's direction and responding with faithful obedience, even when His words bring correction.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What distractions or crowded parts of your schedule can you clear away to listen more closely to God?",
+    "Who is a mature Christian mentor you can turn to when you need help understanding God's guidance?"
+   ],
+   "prayer": "Lord, quiet our busy minds and help us make time to rest in Your presence. Give us humble hearts to hear Your guidance and the courage to obey what You say. Thank You for patiently speaking to us and for placing wise mentors in our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Laura MacCorkle",
+     "work": "Speak, for Your Servant is Listening",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-jan-29-2010-11625566.html"
+    },
+    "D2": {
+     "author": "Jana Kelley",
+     "work": "Waiting Well",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wholly-loved/waiting-well-wholly-loved-september-1.html"
+    },
+    "D3": {
+     "author": "Charles F. Stanley",
+     "work": "Hindrances to Hearing",
+     "site": "In Touch Ministries",
+     "url": "https://www.intouch.org/read/daily-devotions/hindrances-to-hearing"
+    },
+    "D4": {
+     "author": "Jennifer Heeren",
+     "work": "4 Things We Can Learn about Hearing God's Voice from Him Calling Samuel",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/4-things-we-can-learn-about-hearing-gods-voice-from-him-calling-samuel.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

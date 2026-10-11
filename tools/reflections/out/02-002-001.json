@@ -1,0 +1,74 @@
+{
+ "id": "02-002-001",
+ "title": "The Birth and Adoption of Moses",
+ "refs": [
+  "Exodus 2:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2002003,
+   "end": 2002003,
+   "ref": "Exodus 2:3",
+   "ranges": [
+    [
+     2002003,
+     2002003
+    ]
+   ],
+   "title": "\"She Placed the Child in the Basket\"",
+   "key_verse": [
+    2002003,
+    2002003
+   ],
+   "reflect": [
+    {
+     "text": "When Moses' mother could no longer keep him hidden, she had to release him into God's care. Placing her baby in the Nile was not a careless act. Instead, it was a careful, prayerful step. True faith brings together practical planning and complete dependence on the Lord. She did what she could with the basket, and then she placed her child in God's hands.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Giving up the people and treasures we cherish most requires great faith and surrender. Yet God guided every detail of that day. He directed the river's current to Pharaoh's daughter, brought the princess to bathe at the right time, and positioned Miriam to step in. God even used the baby's tears to stir her compassion. He honors and rewards the sacrifices we make when we trust Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Trusting God during hard moments does not just help us through the day. When we place our worries in God's keeping, our active trust provides a lasting spiritual example for our families. The next generation learns how to depend on the Lord by watching our faith.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What precious person or situation is God asking you to surrender into His hands today?",
+    "How can your quiet trust in the Lord serve as an example to your family and friends?"
+   ],
+   "prayer": "Lord, it can be very hard to release the people and things we love most. Help us to take thoughtful steps while placing our full trust in Your care. Please guide the details of our lives, and use our faith to encourage the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "The Basket in the Reeds",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-march-9-2023.html"
+    },
+    "D2": {
+     "author": "Michael Youssef",
+     "work": "Put It All in God’s Hands",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-week-of-january-11.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "14-022-010",
+ "title": "Athaliah and Joash",
+ "refs": [
+  "2 Chronicles 22:10-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14022010,
+   "end": 14022012,
+   "ref": "2 Chronicles 22:10-12",
+   "ranges": [
+    [
+     14022010,
+     14022012
+    ]
+   ],
+   "title": "Hidden and Rescued by Grace",
+   "key_verse": [
+    14022012,
+    14022012
+   ],
+   "reflect": [
+    {
+     "text": "When Queen Athaliah tried to murder every royal heir, Jehoshabeath took a brave risk. She snatched baby Joash away and hid him safely in the temple of God for six years. Within the courts of the Lord, the young child was sheltered from the deadly danger around him, safe under God's own care.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This safe hiding place points to our own life in Christ. When we belong to Jesus, our lives are hidden with Him, kept safe just like a chick under a hen's feathers. The enemy tries to lure us out into danger through worry, greed, or selfish cravings. Yet we are invited to stay in God's presence, where we find true joy and cleansing every day.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we read this story, we might want to see ourselves as the brave rescuer, but we are really like Joash. Later in life, Joash repaid this life-saving kindness with cold betrayal. We, too, are undeserving sinners who often turn away from the Lord. Yet God still rescues us, choosing to save us at the deliberate cost of His own Son.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What lures or worries tempt you to step away from resting in God's presence?",
+    "How does knowing that God rescued you at great cost help you appreciate His grace today?"
+   ],
+   "prayer": "Lord God, thank You for hiding our lives safely in Christ and guarding us from harm. Forgive us for the times we wander away from Your care and fail to return Your goodness. Please keep us close to Your presence today, thankful for the rescue Jesus gave His life to win for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 22:12",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Melissa Kruger",
+     "work": "Kindness & Treachery: The Gospel in 2 Chronicles",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/melissa-kruger/kindness-treachery-the-gospel-in-2-chronicles-2/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

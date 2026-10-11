@@ -1,0 +1,89 @@
+{
+ "id": "40-013-001",
+ "title": "The Parable of the Sower",
+ "refs": [
+  "Matthew 13:1-9",
+  "Mark 4:1-9",
+  "Luke 8:4-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40013001,
+   "end": 40013009,
+   "ref": "Matthew 13:1-9; Mark 4:1-9; Luke 8:4-15",
+   "ranges": [
+    [
+     40013001,
+     40013009
+    ],
+    [
+     41004001,
+     41004009
+    ],
+    [
+     42008004,
+     42008015
+    ]
+   ],
+   "title": "Hearing and Welcoming God's Word",
+   "key_verse": [
+    42008015,
+    42008015
+   ],
+   "reflect": [
+    {
+     "text": "Jesus sat in a boat on the water so the large crowd along the shore could hear Him clearly. He told a story about a farmer who scattered seed everywhere, across all kinds of ground. This picture shows how the good news of God's kingdom is offered freely to every person. We are called to share this message faithfully with others, trusting God alone to prepare human hearts to receive it.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Jesus warned that not every heart receives the word in the same way. As Charles Spurgeon noted, \"superficial feeling is often joined to inward hardness of heart.\" It is easy to feel quick joy when we hear God's truth, but feelings alone do not mean we have deep roots. When trials and trouble come, shallow faith withers away. We need God to soften our hearts by His grace so that our love for Jesus grows deep within us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus used these simple farm pictures to invite us into something deeper. The good soil describes those who welcome God's message and allow it to shape how they live. Instead of treating Scripture as bare information or head knowledge, we are called to let it hold and transform us. Real spiritual growth happens when we walk in an active, living relationship with God's word every day.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is God's word sinking deep into your heart, or are you relying mostly on surface feelings?",
+    "How can you let Scripture shape your daily life rather than treating it merely as facts in your head?"
+   ],
+   "prayer": "Lord, soften our hearts so that Your word can take deep root in us. Keep us from having a shallow faith that withers when hard times come. Help us to hold tightly to Your truth and bear fruit through a living relationship with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 11",
+     "on": "Luke 8:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Mike DeVries",
+     "work": "Seed Stories",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/seed-stories-homeword-june-27.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Parable of the Sower",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/parable-sower"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

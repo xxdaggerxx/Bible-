@@ -1,0 +1,111 @@
+{
+ "book": 13,
+ "chapter": 20,
+ "first": 1,
+ "last": 8,
+ "ref": "1 Chronicles 20",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "In the spring, when kings usually marched to battle after the winter rains, Joab led Israel's army to destroy the land of Ammon and surround its capital city, Rabbah. David chose to stay behind in Jerusalem while his troops were in the field. The writer leaves out David's great sin with Bathsheba during this time, focusing instead on the nation's victory and reminding us of the danger of lingering in comfort while neglecting our duties.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "David went to Rabbah and took the heavy gold crown from the Ammonite king or their royal idol. The crown weighed a talent of gold, which was around seventy-five pounds, and it was filled with precious jewels. Because of its great weight, it was held or suspended over David's head to display his complete victory, and he took vast amounts of plunder home for the future temple.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "https://www.preceptaustin.org/1-chronicles-20-commentary",
+    "https://enduringword.com/bible-commentary/1-chronicles-20/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "David brought out the captured people of the city and put them to work using iron saws, picks, and axes. He placed the inhabitants of all the Ammonite cities into this kind of hard labor to prepare materials for his kingdom. With the war completely finished, David and his entire army returned home to Jerusalem.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "https://biblehub.com/commentaries/1_chronicles/20-3.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "War broke out again with the Philistines at the town of Gezer. During the battle, an Israelite warrior named Sibbecai killed Sippai, who belonged to an ancient race of giants. God gave David's soldiers the strength to overcome these fearsome enemies and bring the Philistines under control.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "In yet another battle against the Philistines, an Israelite named Elhanan struck down Lahmi, the brother of Goliath. Lahmi was a huge warrior whose heavy spear had a shaft as thick as a weaver's beam. This record confirms that while David killed Goliath, another faithful soldier later brought down Goliath's brother.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://www.gotquestions.org/Goliath-David-Elhanan.html"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many critical scholars believe an earlier tradition credited Elhanan with killing Goliath himself, and that the Chronicler altered the wording to match the account of David in 1 Samuel.",
+     "sources": [
+      "https://classic.net.bible.org/dictionary.php?word=Elhanan"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Another battle took place at the Philistine city of Gath, where Israel faced an unusually tall warrior. This giant had six fingers on each hand and six toes on each foot, making twenty-four digits in all. He was also a descendant of the ancient race of giants known for their size and strength.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes",
+    "https://enduringword.com/bible-commentary/1-chronicles-20/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "This towering warrior mocked and defied the people of Israel, just as Goliath had done in earlier days. Jonathan, the son of David's brother Shimei, stood up to his threats and killed him. God brought sudden ruin to this proud man who dared to insult the armies of the Lord.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/1-chronicles-20/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "All of these Philistine giants from Gath fell under the leadership of David and through the hands of his soldiers. Even though David did not kill each giant personally, the victories came through the courageous men he had trained and inspired. These triumphs point forward to the way God's kingdom will gradually overcome every great enemy.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

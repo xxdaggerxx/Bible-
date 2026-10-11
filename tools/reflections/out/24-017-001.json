@@ -1,0 +1,72 @@
+{
+ "id": "24-017-001",
+ "title": "The Sin and Punishment of Judah",
+ "refs": [
+  "Jeremiah 17:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24017001,
+   "end": 24017011,
+   "ref": "Jeremiah 17:1-11",
+   "ranges": [
+    [
+     24017001,
+     24017011
+    ]
+   ],
+   "title": "Rooted Trust in a Deceitful World",
+   "key_verse": [
+    24017007,
+    24017007
+   ],
+   "reflect": [
+    {
+     "text": "Our hearts often play tricks on us. When God's Word challenges our actions, an inner voice easily makes excuses and rationalizes our wrong choices. Scripture works like sandpaper on our stubborn attitudes, smoothing away our selfish blind spots. Instead of listening to our own deceitful thoughts, we are called to bring honest confession and humble prayer to God, surrendering our hearts completely to him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When we turn from our own selfish strength and put our confidence in the Lord, our lives begin to change. Like a green tree planted near a stream, we find our strength by staying closely connected to God as our source of living water. Developing Christlike character and overcoming sinful desires takes time. We need daily commitment to spiritual habits, such as prayer and Scripture, to stay firmly rooted.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Do not lose heart if your spiritual progress seems small or slow. Deep, sturdy roots do not form overnight. Steady, quiet growth builds lasting strength that can weather hard seasons and continue producing good fruit.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to make excuses rather than listen to God's Word?",
+    "How can staying connected to God each day help you build resilient faith over time?"
+   ],
+   "prayer": "Lord, search our deceitful hearts and quiet our excuses with your truth. Help us to confess our sins honestly and stay close to you as our living water. Give us patience when our growth feels slow, and make our faith resilient and fruitful. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ashley Moore",
+     "work": "Slow Growth Is Strong Growth",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/slow-growth-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "John UpChurch",
+     "work": "My Two Voices",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-march-12-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

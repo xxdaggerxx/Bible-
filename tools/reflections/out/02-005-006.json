@@ -1,0 +1,66 @@
+{
+ "id": "02-005-006",
+ "title": "Bricks and Straw",
+ "refs": [
+  "Exodus 5:6-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2005006,
+   "end": 2005014,
+   "ref": "Exodus 5:6-14",
+   "ranges": [
+    [
+     2005006,
+     2005014
+    ]
+   ],
+   "title": "When Troubles Grow Worse",
+   "key_verse": [
+    2005008,
+    2005008
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, life became much harder for the Israelites. Pharaoh commanded them to gather their own straw to make bricks, but he still demanded the exact same daily number. When the workers could not meet this impossible standard, they were beaten. Such heavy suffering caused the people and Moses to wonder why God was letting their situation grow worse instead of better.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It can be confusing when trouble deepens right after we look to God for help. Yet behind these painful hardships, God was actively at work. He was quietly preparing to reveal His supreme rule and lordship over Pharaoh and Egypt.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even when evil seems to be winning and innocent people suffer, we do not need to lose hope. We can remain confident that God is still in control and that He will ultimately prevail over all our trials.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What helps you remember God is in control when a hard situation seems to get worse?",
+    "How can trusting God's supreme power give you peace when you face unfair trials?"
+   ],
+   "prayer": "Lord God, sometimes our burdens feel heavier and we do not understand what You are doing. Help us to trust You even when evil seems strong and life feels unfair. Remind our hearts that You are Lord over all things and will surely bring victory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "One Year Devotions for Men",
+     "work": "Bricks Without Straw",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/bricks-without-straw-one-year-devotions-for-men-may-17.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

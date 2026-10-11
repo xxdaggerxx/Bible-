@@ -1,0 +1,73 @@
+{
+ "id": "06-022-001",
+ "title": "The Eastern Tribes Return Home",
+ "refs": [
+  "Joshua 22:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 6022005,
+   "end": 6022005,
+   "ref": "Joshua 22:5",
+   "ranges": [
+    [
+     6022005,
+     6022005
+    ]
+   ],
+   "title": "\"Hold Fast to Him\"",
+   "key_verse": [
+    6022005,
+    6022005
+   ],
+   "reflect": [
+    {
+     "text": "Life often fills up with busy routines and competing duties. When we try to juggle everything, we can easily become anxious, distracted, and overwhelmed. In moments like these, Scripture calls us to step back and reorder what matters most. Joshua reminded the weary tribes that their main assignment in life was simple: to love God and cling to Him wholeheartedly.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we surrender our lives completely to Jesus, our daily priorities change. Instead of measuring success by frantic busyness, we learn to filter everything through loving and serving the Lord. This brings peace and clarity to our crowded days. Salvation awakens a fresh desire to make up for lost time and walk closely with God each day.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Holding fast to God means letting Him guide our daily steps. There is deep and unmatched joy in serving Him and taking part in His work to share the good news. Being invited into God's work is the highest privilege we could ever have.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What competing duties tend to make you feel anxious or distracted from God?",
+    "How can pausing to put loving and serving God first bring peace to your day?"
+   ],
+   "prayer": "Lord, quiet our hearts when our daily responsibilities start to feel overwhelming. Help us reorder our priorities so that loving and clinging to You comes before anything else. Guide our steps today, and fill us with joy as we serve You with all our heart. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Betsy de Cruz",
+     "work": "A Prayer for When Your Life Seems Overwhelming",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-when-your-life-seems-overwhelming.html"
+    },
+    "D2": {
+     "author": "Greg Laurie (Harvest Ministries)",
+     "work": "Used By God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/harvest-daily-may-2-2005-1326597.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

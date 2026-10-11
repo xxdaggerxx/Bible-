@@ -1,0 +1,165 @@
+{
+ "id": "25-003-019",
+ "title": "The Prophet’s Hope",
+ "refs": [
+  "Lamentations 3:19-36"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 25003022,
+   "end": 25003024,
+   "ref": "Lamentations 3:22-24",
+   "ranges": [
+    [
+     25003022,
+     25003024
+    ]
+   ],
+   "title": "\"Great Is Your Faithfulness\"",
+   "key_verse": [
+    25003023,
+    25003023
+   ],
+   "reflect": [
+    {
+     "text": "Morning can often bring a rush of worry. We look at our long list of tasks and try to handle everything in our own strength. But Scripture reminds us that God's faithful love never runs out. His compassions are fresh and new every single morning. He gives us just the right amount of mercy for today, rather than stocking up strength for tomorrow.",
+     "sources": [
+      "D5",
+      "D8"
+     ]
+    },
+    {
+     "text": "When we start the day by praising God and bringing our worries to Him in prayer, our hearts find steady peace. We do not have to let stress rule our minds. Taking time to seek Him before our busy routine begins gives us the wisdom and calm we need to face every duty.",
+     "sources": [
+      "D5",
+      "D8"
+     ]
+    },
+    {
+     "text": "Even better, our true joy does not depend on our circumstances. The Lord Himself is our portion, which means He is our greatest treasure and inheritance. As Charles Spurgeon noted, God is our \"all-sufficient portion.\" He satisfies every desire of our hearts, and in Him we have everything we could ever need.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What worries can you hand over to God this morning instead of trying to carry them alone?",
+    "How does knowing the Lord Himself is your portion change the way you look at your daily needs?"
+   ],
+   "prayer": "Lord, thank You for Your mercies that greet me brand-new every morning. Help me to rest in Your strength rather than relying on myself. Be my portion and my joy today as I walk with You. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 16",
+     "on": "Lamentations 3:24",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "Dave Zuleger",
+     "work": "New Mercies Every Morning",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/new-mercies-every-morning"
+    },
+    "D8": {
+     "author": "Dana Che",
+     "work": "4 Steps to Prepare Your Heart for the Demands of a New Day",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/4-steps-to-prepare-your-heart-for-the-demands-of-a-new-day.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 25003019,
+   "end": 25003036,
+   "ref": "Lamentations 3:19-36",
+   "ranges": [
+    [
+     25003019,
+     25003036
+    ]
+   ],
+   "title": "Hope Amid the Ruins",
+   "key_verse": [
+    25003021,
+    25003021
+   ],
+   "reflect": [
+    {
+     "text": "When hard times strike, our memory can easily drag us down into despair by dwelling only on grief and trouble. Yet we can train our minds to remember God's faithfulness instead. Recalling the Lord's true character and past mercies turns our bitter sorrow into living hope. Even when Jerusalem lay in ruins, a remnant survived because God had not completely destroyed them as their sins deserved.",
+     "sources": [
+      "D1",
+      "D6",
+      "D7"
+     ]
+    },
+    {
+     "text": "The Lord does not take pleasure in our suffering, nor does He grieve us willingly. Sometimes He allows us to carry heavy burdens or face painful discipline, especially early in life. Yet bearing this yoke teaches us our deep need for grace, building a sturdy and humble faith that honors God.",
+     "sources": [
+      "D4",
+      "D6"
+     ]
+    },
+    {
+     "text": "Best of all, we can rest in the promise that the Lord will never cast off His people forever. His faithful love actively pursues us to bring our wandering hearts back home. He chose us, and He will hold us secure to the very end.",
+     "sources": [
+      "D3",
+      "D7"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel discouraged, what past acts of God's kindness can you call to mind?",
+    "How can remembering that God never willingly grieves you bring comfort during painful trials?"
+   ],
+   "prayer": "Father, thank You that You never cast away those who belong to You. When sorrow clouds my thinking, help me recall Your unchanging goodness and care. Teach me to trust You through every trial, knowing Your love will never let me go. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 28",
+     "on": "Lamentations 3:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 12",
+     "on": "Lamentations 3:31",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 11",
+     "on": "Lamentations 3:27",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D6": {
+     "author": "Ligonier Ministries",
+     "work": "Hope Amid the Ruins",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/hope-amid-ruins"
+    },
+    "D7": {
+     "author": "Chuck Swindoll",
+     "work": "Remembering That God Is Faithful",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/remembering-that-god-is-faithful"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

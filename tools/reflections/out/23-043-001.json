@@ -1,0 +1,161 @@
+{
+ "id": "23-043-001",
+ "title": "Israel’s Only Savior",
+ "refs": [
+  "Isaiah 43:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23043001,
+   "end": 23043002,
+   "ref": "Isaiah 43:1-2",
+   "ranges": [
+    [
+     23043001,
+     23043002
+    ]
+   ],
+   "title": "\"Do Not Fear, for I Have Redeemed You\"",
+   "key_verse": [
+    23043001,
+    23043001
+   ],
+   "reflect": [
+    {
+     "text": "Life brings many sudden twists, difficult roads, and worries about the future. When hard times come, we can easily imagine the worst and feel overwhelmed by our own weaknesses. Yet God speaks directly to our fears. He reminds us that He made us, knows our names, and has redeemed us, which means He bought us back to belong to Him forever.",
+     "sources": [
+      "D3",
+      "D5",
+      "D6",
+      "D7"
+     ]
+    },
+    {
+     "text": "God does not promise that we will avoid painful trials. Troubles are certain, like deep rivers and hot fires. As Charles Spurgeon wrote, \"Bridge there is none: we must go through the waters.\" But the Lord promises that the floods will not drown us and the flames will not burn us up.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Even when we lose our way, God does not leave our side. His faithful presence is our protection. He stays right beside us to steady our steps and keep our heads above the water. Because we belong to Him, we can face every trial with quiet confidence, knowing He will bring us safely through.",
+     "sources": [
+      "D2",
+      "D3",
+      "D5",
+      "D6",
+      "D7"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or difficult trials are you facing right now?",
+    "How does knowing that God is with you change how you look at those troubles?"
+   ],
+   "prayer": "Lord, thank You for calling me by name and making me Your own. When troubles feel like rising waters or burning fire, please remind me that You are right beside me. Help me to rest in Your presence and trust You to guide me safely through.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Dec. 6",
+     "on": "Isaiah 43:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 43:1",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D5": {
+     "author": "Sean Michael Lucas",
+     "work": "Fear Not",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/fear-not"
+    },
+    "D6": {
+     "author": "Kristine Brown",
+     "work": "A Prayer for Our Journey Toward the Promise",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-our-journey-toward-the-promise.html"
+    },
+    "D7": {
+     "author": "Jeff Schreve",
+     "work": "What to Do in Tough Times",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-week-of-october-24.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 23043001,
+   "end": 23043013,
+   "ref": "Isaiah 43:1-13",
+   "ranges": [
+    [
+     23043001,
+     23043013
+    ]
+   ],
+   "title": "Precious in His Sight",
+   "key_verse": [
+    23043004,
+    23043004
+   ],
+   "reflect": [
+    {
+     "text": "Broken relationships and personal mistakes often make us feel like we are a burden to others and to God. We tend to measure our worth by how well we perform. But God tells His people that they are precious, honored, and loved in His sight. Our true value rests on His redeeming grace, not on our own perfection, and He stays with us even in messes of our own making.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Because God gathers His people and claims them as His own, we should never hold back from Him. We do not need to let guilt, fear, or timidity keep us away. God invites us to come to Jesus just as we are, to pour out our hearts in prayer, and to join together with other believers in church life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God also asks us to keep from holding back our time and abilities. We are called to use the gifts He gave us rather than letting them go to waste. Knowing that we are cherished by the only true Savior frees us to step forward in faith and encourage others to do the same.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you holding back from prayer, church life, or using your gifts because of fear or past failures?",
+    "How can remembering that God treasures you help you serve Him more boldly?"
+   ],
+   "prayer": "Heavenly Father, thank You that my worth comes from Your love and not my own performance. Forgive me for holding back out of fear or shame. Give me courage to draw near to You, to pray with confidence, and to use the gifts You have given me to serve others.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 20",
+     "on": "Isaiah 43:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Jennifer Slattery",
+     "work": "Declared, Precious, and Honored",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/declared-precious-and-honored-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

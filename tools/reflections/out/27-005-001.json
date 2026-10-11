@@ -1,0 +1,66 @@
+{
+ "id": "27-005-001",
+ "title": "Belshazzar’s Feast",
+ "refs": [
+  "Daniel 5:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 27005001,
+   "end": 27005004,
+   "ref": "Daniel 5:1-4",
+   "ranges": [
+    [
+     27005001,
+     27005004
+    ]
+   ],
+   "title": "Honoring the Living God",
+   "key_verse": [
+    27005004,
+    27005004
+   ],
+   "reflect": [
+    {
+     "text": "King Belshazzar threw a lavish party for a thousand of his leaders. While drinking wine, he ordered the sacred gold and silver cups taken from God's temple in Jerusalem to be brought out. In bold defiance, the king and his guests drank from these holy cups while praising lifeless idols made of metal, wood, and stone.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Belshazzar showed deep pride by dishonoring holy things and refusing to give glory to the Lord. God quickly stepped into the feast with mysterious handwriting on the wall, throwing the king into sudden terror. That very night, Belshazzar's pride met God's swift judgment, and his rule was brought to an end.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Belshazzar's downfall stands in strong contrast to Daniel's quiet faithfulness. While the king lived for pride and false gods, Daniel stayed steadfast in prayer to the living God. Daniel reminds us of the quiet strength that comes from trusting and honoring the true Lord above everything else.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there good things or achievements in your life that you are tempted to take pride in instead of honoring God?",
+    "How can Daniel's steady prayer life encourage you to stay faithful to the Lord today?"
+   ],
+   "prayer": "Lord, protect our hearts from pride and foolish confidence. Forgive us for the times we value created things more than you. Help us to follow Daniel's example of faithful prayer, honoring your holy name each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 09/16/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-09-or-16-or-2002-1147254.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

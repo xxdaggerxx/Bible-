@@ -1,0 +1,67 @@
+{
+ "id": "03-015-001",
+ "title": "The Uncleanness of Men",
+ "refs": [
+  "Leviticus 15:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3015001,
+   "end": 3015012,
+   "ref": "Leviticus 15:1-12",
+   "ranges": [
+    [
+     3015001,
+     3015012
+    ]
+   ],
+   "title": "Clean in Every Part of Life",
+   "key_verse": [
+    3015007,
+    3015007
+   ],
+   "reflect": [
+    {
+     "text": "God gave Israel careful rules about bodily discharges, dirty furniture, and daily washing. As F. B. Meyer pointed out, these laws guarded physical health, but they also taught a deeper lesson about how sin works. Just as an unclean discharge could make beds, saddles, and clothes unclean, sin easily spreads and defiles what it touches.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because uncleanness spreads so quickly, we are reminded to be careful about the company and influences we choose. When daily duties take us among ungodly influences, we need to seek God to wash away any pollution that clings to us. Nothing in our lives is outside God's sight, even our most private and natural routines.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "These laws point to our daily need for Jesus Christ to cleanse our hearts. Meyer reminded readers that God's cleansing is always ready for His children. At the end of each day's events, we can sit quietly before God, confess whatever needs forgiveness, and ask Him to keep our lives pure.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there influences or habits in your day that you need to guard against more carefully?",
+    "How can you make space each evening to pause before God and confess any wrong?"
+   ],
+   "prayer": "Lord, thank You that no part of our daily lives is hidden from Your sight or beyond Your care. Show us where ungodly influences may have affected our hearts, and wash us clean through Jesus Christ. Teach us to pause before You each day and walk in Your holiness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 15:7",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

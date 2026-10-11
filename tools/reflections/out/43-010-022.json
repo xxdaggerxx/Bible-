@@ -1,0 +1,76 @@
+{
+ "id": "43-010-022",
+ "title": "Jesus at the Feast of Dedication",
+ "refs": [
+  "John 10:22-39"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 43010028,
+   "end": 43010028,
+   "ref": "John 10:28",
+   "ranges": [
+    [
+     43010028,
+     43010028
+    ]
+   ],
+   "title": "\"They Shall Never Perish\"",
+   "key_verse": [
+    43010028,
+    43010028
+   ],
+   "reflect": [
+    {
+     "text": "Jesus makes a wonderful promise to His sheep. He gives them life that never ends. As Charles Spurgeon points out, if this life could ever die out, it would not truly be eternal life. Jesus bought His people with His own blood and received them from His Father. Because this life comes from the Lord Himself, it cannot run out. Believers are kept completely safe in the grasp of an almighty Saviour.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus also tells us that no enemy can ever snatch His people out of His hand. Even the powers of hell cannot pull a believer away from Him. Doubting this promise means doubting God's own truth, faithfulness, and love. If even one person who trusts in Christ could be forgotten or lost, God's honour and His word would fail. When we doubt His upholding grace, we dishonour Him with our fears.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because Jesus has spoken so clearly, we can throw away our unbelieving worries. We do not need to live in fear of being cast away. Instead, we can rest peacefully in our Redeemer's hand. Knowing that we will never perish allows us to put aside dread and live with steady, confident joy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears can you let go of today, knowing that Jesus holds you safely in His hand?",
+    "How does the promise of eternal life bring you peace when your faith feels weak?"
+   ],
+   "prayer": "Lord Jesus, thank You for giving us eternal life that can never be taken away. Forgive us for the times we doubt Your faithfulness and give in to fear. Help us to rest peacefully in Your strong hands, trusting that nothing can ever tear us from Your love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 16",
+     "on": "John 10:28",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 7",
+     "on": "John 10:28",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

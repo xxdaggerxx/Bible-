@@ -1,0 +1,66 @@
+{
+ "id": "44-024-010",
+ "title": "Paul’s Defense to Felix",
+ "refs": [
+  "Acts 24:10-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44024010,
+   "end": 44024021,
+   "ref": "Acts 24:10-21",
+   "ranges": [
+    [
+     44024010,
+     44024021
+    ]
+   ],
+   "title": "Keeping a Clear Conscience",
+   "key_verse": [
+    44024016,
+    44024016
+   ],
+   "reflect": [
+    {
+     "text": "When Paul stood on trial before Felix, he defended his life with quiet confidence. He explained that his true hope was in the resurrection of the dead. Because of that hope, Paul worked hard every day to keep a clean conscience before God and everyone else. He did not want anything wrong standing between his heart and the Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our conscience acts like an inner eye for the soul, holding us accountable to God's standard. What God asks of us can feel hard to human nature at first, but it gets clearer and lighter when we meet it with willing obedience. We are called to actively protect a sensitive conscience that gives no offense to God or people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Holy Spirit often directs us through a gentle whisper. To hear Him, we need a quiet spirit that is ready to receive what He says. When your conscience signals caution, stop your internal debating immediately. Listening and obeying right away keeps your conscience peaceful and pure.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a place where your conscience has signaled caution, but you have kept arguing inside yourself?",
+    "How can you quiet your heart today so you can hear the Holy Spirit's gentle whisper?"
+   ],
+   "prayer": "Lord, help us to keep a clear conscience before You and before those around us. Teach us to stop debating when Your Spirit gently cautions us. Give us willing hearts that choose to obey You quickly and joyfully. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Oswald Chambers",
+     "work": "The Habit of Keeping a Clear Conscience",
+     "site": "My Utmost for His Highest",
+     "url": "https://utmost.org/updated/the-habit-of-keeping-a-clear-conscience/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

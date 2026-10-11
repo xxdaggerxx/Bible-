@@ -1,0 +1,83 @@
+{
+ "id": "24-030-001",
+ "title": "The Restoration of Israel and Judah",
+ "refs": [
+  "Jeremiah 30:1-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24030001,
+   "end": 24030024,
+   "ref": "Jeremiah 30:1-24",
+   "ranges": [
+    [
+     24030001,
+     24030024
+    ]
+   ],
+   "title": "Restored by the God Who Heals Us",
+   "key_verse": [
+    24030017,
+    24030017
+   ],
+   "reflect": [
+    {
+     "text": "God's discipline for His children is very different from the destruction of the wicked. When God corrects us, it is not to wipe us out, but to prune and refine us in love. As Charles Spurgeon wrote, \"He gives us love without measure, but chastisement 'in measure.'\" God counts every stroke and knows exactly how much we can bear. He keeps His hand on our pulse and never allows our trials to destroy us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because God is our loving Father and Creator, His correction always leads toward renewal. Just as an inventor knows how to repair a machine he made, our Maker knows how to fix our broken lives. Human efforts to fix our deepest troubles often leave us stuck and helpless. Others may write us off as outcasts, but God notices when we feel discarded and unvalued.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Beyond the dark clouds of our painful seasons, God promises healing and joy. When we surrender our brokenness into His hands, He binds up our wounds and restores what was ruined. God's discipline is never the end of our story; it makes room for Him to comfort us and bring us home to peace.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face trials or discipline, how does knowing God measures your suffering give you peace?",
+    "What broken area of your life do you need to place into the Creator's hands for restoration?"
+   ],
+   "prayer": "Lord, thank You that Your discipline is guided by Your great wisdom and love, never to destroy us. When we feel broken, hurt, or cast aside, help us trust that You know how to repair our lives. Please heal our wounds and fill our hearts with Your promised joy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 19",
+     "on": "Jeremiah 30:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 30:10",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Jack Graham",
+     "work": "How You Can Be Restored from Brokenness - Powerpoint - March 9",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-march-5-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

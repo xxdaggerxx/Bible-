@@ -1,0 +1,67 @@
+{
+ "id": "23-032-009",
+ "title": "The Women of Jerusalem",
+ "refs": [
+  "Isaiah 32:9-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23032009,
+   "end": 23032020,
+   "ref": "Isaiah 32:9-20",
+   "ranges": [
+    [
+     23032009,
+     23032020
+    ]
+   ],
+   "title": "Resting in God's True Peace",
+   "key_verse": [
+    23032017,
+    23032017
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, Isaiah warns against false security and shows us where true comfort is found. Life often brings heavy worries about our health, our children, our work, and things that do not go as we hoped. When we strive to manage and control every hard outcome by ourselves, we only stir up deeper anxiety and frustration. True peace arrives when we choose to surrender every burdensome situation directly to God.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God promises that the work of righteousness is quiet confidence and peace that lasts forever. This rest belongs to the Lord's people when our hearts stay fixed on Him. Just as God safely kept Noah in the ark and sheltered Israel in the desert, He still shields us today. As Charles Spurgeon wrote, \"the person of Jesus is the quiet resting-place of his people.\" Whenever we draw near to Him through His Word and prayer, our troubled spirits return to peace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What burden or worry are you trying to control on your own today?",
+    "How can you turn to Jesus right now to receive His gift of quiet rest?"
+   ],
+   "prayer": "Lord, forgive us for clinging to our worries and trying to control what we cannot fix. We place every heavy care and uncertainty into Your hands. Draw us close to Jesus, and give our hearts Your quiet, lasting peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 9",
+     "on": "Isaiah 32:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Today's Insight - December 31, 2012: Leave It to God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-december-31-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

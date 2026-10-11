@@ -1,0 +1,125 @@
+{
+ "id": "19-109-001",
+ "title": "The Song of the Slandered",
+ "refs": [
+  "Psalms 109:1-31"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19109004,
+   "end": 19109004,
+   "ref": "Psalms 109:4",
+   "ranges": [
+    [
+     19109004,
+     19109004
+    ]
+   ],
+   "title": "\"I Give Myself unto Prayer\"",
+   "key_verse": [
+    19109004,
+    19109004
+   ],
+   "reflect": [
+    {
+     "text": "When people return evil for our love or speak against us, our first reaction is often to defend ourselves or turn bitter. Yet hurtful words and attacks often come from hidden wounds, personal insecurities, or misunderstandings. Instead of arguing back, David took his trouble straight to the highest court. Charles Spurgeon called prayer \"the safest method of replying to words of hatred.\"",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "David did not just utter a quick, distracted word; he gave his whole soul to prayer as his daily refuge. Rather than letting offense take root in our spirits, we can ask God to heal any bitterness in our own hearts. Choosing compassion over grievance means praying for those who wound us, recognizing their pain while we place our cause safely in God's hands.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When someone treats you unfairly, do you tend to defend yourself or bring your pain to God first?",
+    "How can praying for someone who has hurt you keep bitterness from growing in your heart?"
+   ],
+   "prayer": "Lord, help us when others repay our kindness with unkind words. Guard our hearts from bitterness, and teach us to pour out our hurt to You in earnest prayer. Give us compassion for those who act out of their own brokenness, and keep us resting safely in Your care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 15",
+     "on": "Psalms 109:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Noelle Dey",
+     "work": "Language Barrier",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/language-barrier-encouragement-caf-june-18-2014.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19109001,
+   "end": 19109031,
+   "ref": "Psalms 109:1-31",
+   "ranges": [
+    [
+     19109001,
+     19109031
+    ]
+   ],
+   "title": "Though They Curse, You Will Bless",
+   "key_verse": [
+    19109028,
+    19109028
+   ],
+   "reflect": [
+    {
+     "text": "Psalm 109 can be startling because it contains fierce cries for judgment against cruel enemies. Yet facing persistent slander and malice naturally stirs up real grief and an aching desire for justice. Instead of taking revenge into his own hands, David submitted his raw pain and pleas for justice entirely to the Lord. Jesus walked this very path when He suffered, entrusting Himself completely to God as the righteous Judge.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Facing false accusations is a reminder that we belong to Christ and share in His trials. Dying to our own reputation is difficult, but it is often when people reject us that we discover how tender and near God can be. Handing all retribution over to the Lord liberates us from rage, freeing our hands to love and serve our enemies while trusting that even if others curse us, God will surely bless.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What makes it hard to leave justice in God's hands instead of trying to get even?",
+    "How does knowing that God is near help you endure false accusations or unkind treatment?"
+   ],
+   "prayer": "Father, when we face unfair treatment and harsh words, keep us from taking vengeance into our own hands. We entrust our pain and our reputation to You, our righteous Judge. Thank You for standing near us in our weakness and giving us Your blessing even when others condemn us. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 109:28",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "Andrew Dunstan",
+     "work": "Raging Against the Machine? The Surprising Relevance of the Imprecatory Psalms for the Church in an Outrage Culture",
+     "site": "The Gospel Coalition",
+     "url": "https://au.thegospelcoalition.org/article/raging-against-the-machine-the-surprising-relevance-of-the-imprecatory-psalms-for-the-church-in-an-outrage-culture/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "19-035-001",
+ "title": "Contend with My Opponents, O LORD",
+ "refs": [
+  "Psalms 35:1-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19035001,
+   "end": 19035028,
+   "ref": "Psalms 35:1-28",
+   "ranges": [
+    [
+     19035001,
+     19035028
+    ]
+   ],
+   "title": "The Lord Fights for Us",
+   "key_verse": [
+    19035003,
+    19035003
+   ],
+   "reflect": [
+    {
+     "text": "When we face hard trials alone, our strength and resolve quickly drain away. God made us to need companions who support and encourage us along the way. Even more, the Lord Himself steps into our struggles to contend on our behalf. We can take great comfort in knowing that He never leaves us to fight our battles by ourselves.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even strong believers face deep struggles inside. Charles Spurgeon reminds us that David had his doubts, but he went straight to God in prayer for assurance. Doubting does not mean we are cut off from God, but we should not settle for living in fear. Like David, we can bring our fears directly to the Lord and ask Him to speak peace to our hearts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "True assurance must come straight from God to our own souls. We need regular time alone with Him in prayer to keep our faith clear and strong. In every trial, the Lord is ready to defend us and to reassure us personally that He is our salvation.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel worn down by troubles, do you try to carry them alone or take them to God?",
+    "What steps can you take this week to spend quiet time in prayer seeking God's assurance?"
+   ],
+   "prayer": "Lord, thank You for contending for us and never leaving us to fight alone. When doubts arise and my strength begins to fail, please draw near to me. Speak to my soul and reassure me that You are my salvation. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 5",
+     "on": "Psalms 35:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Crosswalk.com",
+     "work": "Wisdom from the Psalms 4/3",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-4-or-3-552244.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

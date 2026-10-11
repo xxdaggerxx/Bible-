@@ -1,0 +1,76 @@
+{
+ "id": "59-004-007",
+ "title": "Drawing Near to God",
+ "refs": [
+  "James 4:7-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 59004008,
+   "end": 59004008,
+   "ref": "James 4:8",
+   "ranges": [
+    [
+     59004008,
+     59004008
+    ]
+   ],
+   "title": "\"Draw Near to God\"",
+   "key_verse": [
+    59004008,
+    59004008
+   ],
+   "reflect": [
+    {
+     "text": "We rarely drift away from God all at once. Usually, daily worries, busy routines, and distractions slowly pull our attention away. Feeling distant does not mean God has left us, nor does He expect flawless words or perfect spiritual habits before we return. Instead, drawing near often begins when we admit our weakness and let go of relying entirely on ourselves. Even in painful trials or failures, God uses those hard moments to invite us back. Resisting the enemy's attempts to keep us away lets us turn toward the Lord with honest hearts.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Taking even a small step toward God can change everything. We might simply put down our phones, open the Bible, or speak a simple prayer. Whenever we reach out to Him in our need, God meets us with forgiveness, grace, and welcoming love. Charles Spurgeon wrote that \"the nearer we come to God, the more graciously will He reveal Himself to us.\" Other people may grow tired of us and walk away, but the Lord never tires of our fellowship. He is waiting to welcome us, ready to draw close the moment we turn toward Him.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What distractions or worries have quietly pulled your attention away from God lately?",
+    "What simple, honest step can you take today to turn back toward Him?"
+   ],
+   "prayer": "Lord, forgive us for letting daily busyness and distractions crowd You out. Thank You for not abandoning us when we feel distant, but waiting to welcome us with open arms. Help us let go of our self-reliance and draw near to You today in simple honesty. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 27",
+     "on": "James 4:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Jess Ward",
+     "work": "Reconnecting with God When You Feel Disconnected",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/reconnecting-with-god-when-you-feel-disconnected.html"
+    },
+    "D3": {
+     "author": "In Touch Ministries",
+     "work": "Draw Near to God",
+     "site": "In Touch Ministries",
+     "url": "https://www.intouch.org/read/daily-devotions/draw-near-to-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

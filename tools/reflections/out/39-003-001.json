@@ -1,0 +1,81 @@
+{
+ "id": "39-003-001",
+ "title": "I Will Send My Messenger",
+ "refs": [
+  "Malachi 3:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 39003001,
+   "end": 39003005,
+   "ref": "Malachi 3:1-5",
+   "ranges": [
+    [
+     39003001,
+     39003005
+    ]
+   ],
+   "title": "Refined to Reflect the Lord",
+   "key_verse": [
+    39003002,
+    39003002
+   ],
+   "reflect": [
+    {
+     "text": "When the Lord arrives, His holy presence tests everything. Charles Spurgeon noted that Christ's life on earth acted like a \"winnowing fan\" that tested empty religious claims. Those who oppose God cannot stand before His coming judgment. Yet those who belong to Him do not need to fear. Instead of dreading His arrival, we can search our hearts today and turn away from all pretense, asking Him to make our faith sincere.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God often uses difficult seasons to do this cleansing work in our lives. Rather than keeping us comfortable, He acts like a silversmith who heats metal to melt away impurities and selfish habits. God sits right beside the fire, watching over us with great care. He never forgets or abandons us in our trials, and He controls the timing with perfect care so that we are never left in the heat too long.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The goal behind every painful struggle is to shape our character and make us more like Jesus. As our sins are washed away, our lives begin to mirror the character of our Creator. The Refiner finishes His work when all the worthless dross is gone and He can see His own reflection in us. We can trust Him through hard times, knowing that no trial in His hands is ever wasted.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What selfish attitude or habit might God be purifying in you through your current struggles?",
+    "How does knowing that the Lord watches closely over your trials give you peace today?"
+   ],
+   "prayer": "Lord, search our hearts and gently clear away anything that does not honor You. Thank You for staying near us in difficult seasons and shaping our character for good. Help us to trust Your timing so that our lives may clearly reflect Your love to others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 15",
+     "on": "Malachi 3:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Lysa TerKeurst",
+     "work": "The Blessings Found in the Fire - Encouragement for Today - July 25, 2019",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-july-25-2019.html"
+    },
+    "D3": {
+     "author": "Pastor Jeff Schreve",
+     "work": "The Refiner's Fire - From His Heart - August 22",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-week-of-august-20-11636606.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

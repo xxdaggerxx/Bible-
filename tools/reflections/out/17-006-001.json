@@ -1,0 +1,74 @@
+{
+ "id": "17-006-001",
+ "title": "Mordecai Is Honored",
+ "refs": [
+  "Esther 6:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 17006001,
+   "end": 17006014,
+   "ref": "Esther 6:1-14",
+   "ranges": [
+    [
+     17006001,
+     17006014
+    ]
+   ],
+   "title": "God's Quiet Hand at Work",
+   "key_verse": [
+    17006010,
+    17006010
+   ],
+   "reflect": [
+    {
+     "text": "We often wish God would act quickly when people do evil things or treat us unfairly. Yet even when God seems silent or far away, He is never out of touch or unfaithful. He never overlooks proud motives or cruel schemes, and He never forgets His promises. Even when circumstances make Him seem absent, He is right there, drawing us to rely on Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "In this story, human pride unravels rapidly under God's quiet guidance. Haman walked into the palace court intending to destroy Mordecai, but he ended up dressing his enemy in royal robes and leading him through the city square. As F. B. Meyer noted, here was \"a turning of the tables.\" The very recognition Haman wanted for himself was given to the humble man he hated.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God's justice may sometimes seem slow, but His timing is always exact. We can keep trusting Him even when we face scorn, hate, or threats. God watches over His children and lifts up the humble. When our cause belongs to Him, we can be sure He will vindicate us and honor those who remain faithful to His name.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When has God seemed silent in your life, even though He was working behind the scenes?",
+    "How does knowing that God opposes pride help you stay humble and trust His timing?"
+   ],
+   "prayer": "Lord, thank You that You are never absent or unaware of what we go through. Help us to keep trusting You when life feels unfair and answers seem slow to come. Guard our hearts against pride, and give us grace to honor You in all we do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Esther 6:10",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "When God Seems Absent",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-sept-2-2008-11581174.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,68 @@
+{
+ "id": "04-011-001",
+ "title": "The Complaints of the People",
+ "refs": [
+  "Numbers 11:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4011001,
+   "end": 4011009,
+   "ref": "Numbers 11:1-9",
+   "ranges": [
+    [
+     4011001,
+     4011009
+    ]
+   ],
+   "title": "Choosing Gratitude Over Complaint",
+   "key_verse": [
+    4011001,
+    4011001
+   ],
+   "reflect": [
+    {
+     "text": "Even after seeing God save them with great power, the people of Israel quickly grew unhappy with what He gave them each day. It is easy for our human nature to overlook abundant daily blessings by focusing only on what is missing. In the wilderness, a craving for variety started with a small group and quickly spread discontent across the entire camp. Belittling what God provides dishonors Him, drains our spiritual strength, and discourages the people around us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Complaining has no place in the Christian life because it exposes an underlying lack of gratitude. When we let discontentment and unbelief take root, they inevitably bring harmful spiritual consequences into our journey. Believers who are redeemed—bought back and saved by the blood of Christ—are called to follow God's guidance with thankful hearts. Choosing active gratitude can be just as contagious as grumbling, and it redirects our eyes toward His goodness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to focus on what is missing rather than God's daily blessings?",
+    "How might choosing active thankfulness today encourage the people around you?"
+   ],
+   "prayer": "Heavenly Father, forgive us for the times we complain and overlook Your daily gifts. Teach us to be truly grateful for how You provide for us and guide our steps. Help our thankfulness to spread to others and turn our hearts toward Your goodness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg",
+     "work": "The Cost of Complaining",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/the-cost-of-complaining.html"
+    },
+    "D2": {
+     "author": "Deidre Braley",
+     "work": "When We Have Manna, but We Want Meat",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/when-we-have-manna-but-we-want-meat-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

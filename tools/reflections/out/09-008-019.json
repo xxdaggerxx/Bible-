@@ -1,0 +1,81 @@
+{
+ "id": "09-008-019",
+ "title": "God Grants the Request",
+ "refs": [
+  "1 Samuel 8:19-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9008019,
+   "end": 9008022,
+   "ref": "1 Samuel 8:19-22",
+   "ranges": [
+    [
+     9008019,
+     9008022
+    ]
+   ],
+   "title": "Wanting to Be Like Everyone Else",
+   "key_verse": [
+    9008019,
+    9008019
+   ],
+   "reflect": [
+    {
+     "text": "Israel insisted on having a human king so they could be just like the surrounding nations. They wanted a proud ruler to lead them and fight their battles, rather than trusting the Lord to protect them. God had called Israel to be set apart as his own special people. Yet, even after Samuel warned them of the trouble and hardship a king would bring, the people refused to listen and demanded to fit in with the world around them.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Sometimes divine judgment means God gives people what they stubbornly demand, leaving them to face the painful results of their choices. Instead of arguing, Samuel listened to the people and brought everything before the Lord. As F. B. Meyer observed, a fruitful life comes from being a \"yielded channel\" through which the Spirit works. Samuel remained faithful to God even when the nation turned away.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "We face the same pressure today. It is easy to adopt worldly habits and patterns of thought just to blend in with those around us. But God calls us to resist societal pressure and live distinct lives shaped by his Spirit.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you feel the strongest pressure to fit in with the world rather than follow God?",
+    "When you face difficult decisions, do you bring them patiently to the Lord or rush ahead with your own desires?"
+   ],
+   "prayer": "Lord, forgive us when we want to blend in with the world instead of trusting you to lead us. Make us yielded servants who listen to your guidance rather than our own stubborn desires. Help us to live distinct, faithful lives that honor you each day.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 8:21",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "Marked by Newness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-july-2-2025.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Israel Sinfully Demands a King",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/israel-sinfully-demands-a-king"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

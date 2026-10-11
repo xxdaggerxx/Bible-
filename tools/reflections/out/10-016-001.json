@@ -1,0 +1,66 @@
+{
+ "id": "10-016-001",
+ "title": "David and Ziba",
+ "refs": [
+  "2 Samuel 16:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10016001,
+   "end": 10016004,
+   "ref": "2 Samuel 16:1-4",
+   "ranges": [
+    [
+     10016001,
+     10016004
+    ]
+   ],
+   "title": "Guarding Our Hearts in Times of Pain",
+   "key_verse": [
+    10016004,
+    10016004
+   ],
+   "reflect": [
+    {
+     "text": "In seasons of deep heartbreak, we are often at our most vulnerable. When David was fleeing his home after being betrayed by his own son, Ziba arrived with gifts of food and a damaging story about Mephibosheth. Beth Moore notes that opportunists often seek to take advantage of believers when they are going through personal crises. Because David was already wounded by family betrayal, he was primed to believe the worst about his friend without checking if the claim was true.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Heavy stress and emotional anguish can easily cloud our spiritual discernment, which is our ability to see truth clearly through God. David reacted in haste. Instead of taking time to find out the facts, his pain caused him to jump to conclusions and make a quick ruling that handed everything over to Ziba. When our feelings are hurt, we often react swiftly rather than responding with patient wisdom.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This account shows us how important it is to slow down during painful trials. When we face difficult moments, we should not isolate ourselves or make sudden choices in anger or grief. Seeking wise, godly advice from trusted people helps protect us from making rash assumptions and damaging decisions that we might later regret.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel hurt or stressed, do you tend to make quick decisions based on your emotions rather than checking the truth?",
+    "Who are the wise, godly people you can turn to for advice before making important choices during hard times?"
+   ],
+   "prayer": "Lord, protect our hearts when we feel weary and vulnerable in difficult seasons. Please give us discernment so our pain does not lead us to make hasty assumptions or harmful choices. Guide us to seek wise, godly counsel whenever we feel overwhelmed. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 66: 2 Samuel 16:1–4",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-66-2-samuel-16-14.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

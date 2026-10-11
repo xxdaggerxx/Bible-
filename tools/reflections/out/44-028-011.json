@@ -1,0 +1,66 @@
+{
+ "id": "44-028-011",
+ "title": "Paul Arrives in Italy",
+ "refs": [
+  "Acts 28:11-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44028011,
+   "end": 44028015,
+   "ref": "Acts 28:11-15",
+   "ranges": [
+    [
+     44028011,
+     44028015
+    ]
+   ],
+   "title": "Encouraged by Brothers and Sisters",
+   "key_verse": [
+    44028015,
+    44028015
+   ],
+   "reflect": [
+    {
+     "text": "Paul was finally arriving in Rome, just as God had promised he would. God proved completely faithful to His word by keeping Paul safe through the entire journey. Walking toward such a huge and intimidating city could easily feel overwhelming. Rome was a vast place, filled with potential enemies, yet God guided Paul every step of the way.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Along the route, God knew what Paul needed most. He provided cheer and strength through fellow believers at each stage of the journey. When brothers and sisters in Christ welcomed Paul and even traveled out to meet him on the road, his spirit was lifted. Christian brotherhood creates a deep and lasting bond through our shared life in God and His love.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Every one of us has a deep need for belonging, especially when life feels scary or uncertain. God meets that need through the fellowship of His church. When we gather with other believers, God uses their care to remind us of His promises and give us the courage we need to keep going.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When has a fellow believer encouraged you when you felt overwhelmed?",
+    "How can you help meet someone else's need for belonging in your church community?"
+   ],
+   "prayer": "Lord God, thank You for being faithful to all Your promises and for keeping us safe. Thank You for our brothers and sisters in Christ who walk with us when life feels overwhelming. Help us to welcome others and encourage them through the fellowship of Your church. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 295: Acts 28:11–14",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-295-acts-28-1114.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

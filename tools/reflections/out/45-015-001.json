@@ -1,0 +1,66 @@
+{
+ "id": "45-015-001",
+ "title": "Accept One Another",
+ "refs": [
+  "Romans 15:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45015001,
+   "end": 45015006,
+   "ref": "Romans 15:1-6",
+   "ranges": [
+    [
+     45015001,
+     45015006
+    ]
+   ],
+   "title": "Building Up One Another",
+   "key_verse": [
+    45015002,
+    45015002
+   ],
+   "reflect": [
+    {
+     "text": "When we grow in faith, God gives us spiritual freedom, but we must be careful how we use it. Mature believers should avoid flaunting their freedom in ways that hurt the conscience of someone weaker in the faith. Rather than seeking our own selfish pleasure, we are called to yield to others on nonessential issues. Our real goal should always be to build up our neighbors and help them grow closer to God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Putting others first and choosing not to please ourselves requires real self-denial. Stepping back from our own preferences can bring discomfort. Yet any small sacrifice we make is nothing compared to what Christ endured on our behalf. Jesus did not live to satisfy Himself, but patiently carried insults and suffering for our sake.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of what Jesus did, we do not have to rely on our own willpower. When we keep our eyes on His selfless sacrifice on the cross, we find the endurance we need. His example teaches us to patiently bear with the weaknesses of others, gently encouraging them so the whole church can walk together in unity.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a freedom or preference you can set aside this week to help build up a fellow believer?",
+    "How does remembering what Jesus endured for you help you show patience to others?"
+   ],
+   "prayer": "Lord Jesus, thank You for not living to please Yourself, but enduring suffering for our sake. Please forgive us when we insist on our own way and hurt others. Give us patient hearts to lay aside our preferences and build up our brothers and sisters in love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Bearing with the Weak",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/bearing-weak"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

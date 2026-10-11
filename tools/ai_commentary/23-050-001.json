@@ -1,0 +1,159 @@
+{
+ "book": 23,
+ "chapter": 50,
+ "first": 1,
+ "last": 11,
+ "ref": "Isaiah 50",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The Lord asks His people to show proof that He ever divorced them or sold them to pay off a debt. He did not abandon them on a whim or because He was poor. Instead, their own sins and rebellion caused them to be sent away into exile.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "God came to His people through His messengers and His Servant, but almost no one was willing to answer or welcome Him. Their captivity did not happen because God lacked the power to redeem, or rescue, them. He is the almighty Lord who can dry up whole seas and rivers with a single spoken rebuke.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The Lord rules over the entire cosmos and can cover the skies in blackness whenever He chooses. This pitch-black darkness shows His unmatched power to bring judgment against enemies. It reassures His people that nothing in creation can stop Him from saving them.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "God's Servant explains that the Lord taught Him how to speak words that revive and comfort the weary. Every morning, God wakens His ear to listen and learn like a devoted pupil. Because He stays close to the Father, He knows just how to encourage troubled souls.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The Lord prepared the Servant to hear and carry out His commands with a willing heart. Even though this mission involved deep suffering and humiliation, the Servant did not rebel. He never tried to pull back from doing the Father's will.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The Servant willingly surrendered Himself to brutal treatment without fighting back or hiding His face. He offered His back to be beaten, allowed His beard to be pulled out, and endured people spitting on Him. He chose to bear this severe pain and public disgrace out of love for God's plan.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "Despite facing mockery and pain, the Servant refuses to be crushed by shame because the Lord helps Him. Setting His face like flint means having firm, rock-solid courage to carry on. He moves forward boldly, confident that God will not let Him be ruined.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The Servant knows that God is near to vindicate Him, which means clearing His name and proving Him righteous. With God standing beside Him, He challenges any accuser to step forward in court. No human opponent can win a case against the One whom God supports.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Since the Lord God defends the Servant, no one has the authority to condemn Him. All the enemies who speak against Him will gradually wear out and fall apart on their own. Like old clothing slowly eaten away by tiny moths, their opposition will vanish.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "A person who honors God and obeys His Servant may still go through seasons of deep darkness without any feeling of comfort. In those hard times, believers are urged to hold firmly to the Lord's name and lean completely on Him. Relying on God's unchanging care brings hope when the way ahead seems pitch black.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "This verse speaks of an awakened sinner mourning over guilt and seeking the light of salvation, rather than a faithful believer living without assurance.",
+     "sources": [
+      "Adam Clarke"
+     ]
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "A sincere and obedient child of God can genuinely experience seasons where felt spiritual comfort and assurance are absent.",
+     "sources": [
+      "Matthew Henry"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "A serious warning is spoken to people who refuse God's guidance and try to light their own path. Lighting their own fire represents trusting in human wisdom, good deeds, or earthly pleasures instead of God. Their sparks will quickly die out, leaving them to face God's judgment and lie down in lasting pain.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 3: removed sources ['Adam Clarke']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

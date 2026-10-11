@@ -1,0 +1,66 @@
+{
+ "id": "04-019-001",
+ "title": "The Red Heifer",
+ "refs": [
+  "Numbers 19:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4019001,
+   "end": 4019010,
+   "ref": "Numbers 19:1-10",
+   "ranges": [
+    [
+     4019001,
+     4019010
+    ]
+   ],
+   "title": "Cleansed to Live for God",
+   "key_verse": [
+    4019009,
+    4019009
+   ],
+   "reflect": [
+    {
+     "text": "During their journey through the wilderness, the Israelites were often confronted with death and impurity. To help them, God gave the law of the red heifer. A heifer without defect was sacrificed outside the camp and burned completely. Its ashes were stored and mixed with water to make a special cleansing water, allowing defiled individuals to be purified and restored to God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This ancient ceremony pointed forward to Jesus Christ. Just as the water of purification removed uncleanness on the outside, Jesus gave His life to cleanse our inner conscience from sin and give us true, renewed life. Because of what He has done, God calls us to personal holiness. This means we must be careful to guard our thoughts, words, and relationships against spiritual defilement.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We cannot live a pure life on our own. Instead, through prayer and faith, we welcome Christ to live inside us. As we trust Him each day, He works in our hearts and reproduces His own loving character in the way we live.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What thoughts, words, or daily habits do you need Jesus to cleanse today?",
+    "How can relying on Christ in daily prayer help you reflect His character to others?"
+   ],
+   "prayer": "Lord Jesus, thank You for giving Your life to wash away our sins and give us a fresh start. Please guard our minds and speech so we do not wander into spiritual uncleanness. Help us to trust You daily and show Your pure character in everything we do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Feb. 21, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-feb-21-2010-11626510.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

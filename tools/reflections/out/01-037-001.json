@@ -1,0 +1,66 @@
+{
+ "id": "01-037-001",
+ "title": "Joseph’s Dreams",
+ "refs": [
+  "Genesis 37:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1037001,
+   "end": 1037011,
+   "ref": "Genesis 37:1-11",
+   "ranges": [
+    [
+     1037001,
+     1037011
+    ]
+   ],
+   "title": "God's Purpose in a Broken Family",
+   "key_verse": [
+    1037011,
+    1037011
+   ],
+   "reflect": [
+    {
+     "text": "Jacob loved Joseph more than his other sons and gave him an ornate robe. Treating one child as superior brought deep anger and bitterness into the household. Jacob repeated the harmful mistakes of his own parents instead of learning from his family history. Showing favoritism always damages relationships. It tempts the favored person toward pride and stirs up hatred in everyone else. God calls us to reject partiality and treat others with equal love and kindness.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God was still at work in this broken home. Joseph began as a spoiled young man with big dreams about ruling his brothers. Yet God works through human choices and family troubles to fulfill His greater plans. Over many years, God would shape Joseph into a leader who could save many lives. God used difficult times to strengthen Joseph's faith, much like exercising a muscle, so he could rely on God's promises rather than what was happening around him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there relationships in your life where favoritism or jealousy causes division?",
+    "How can you practice trusting God's promises when your daily circumstances are difficult?"
+   ],
+   "prayer": "Dear God, please help us treat everyone around us with fair and equal love. Teach us not to show favoritism or let bitterness grow in our hearts. Give us faith that grows stronger through difficult times as we trust in Your good plans. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "When God Built a Hero",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-daily-devotion-december-3.html"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "The Folly of Favoritism",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/the-folly-of-favoritism.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "01-038-027",
+ "title": "The Birth of Perez and Zerah",
+ "refs": [
+  "Genesis 38:27-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1038027,
+   "end": 1038030,
+   "ref": "Genesis 38:27-30",
+   "ranges": [
+    [
+     1038027,
+     1038030
+    ]
+   ],
+   "title": "God's Grace in a Broken Story",
+   "key_verse": [
+    1038029,
+    1038029
+   ],
+   "reflect": [
+    {
+     "text": "The birth of Tamar's twin sons comes out of a messy and painful family history. Yet God was at work through all of it. Tamar acted in faith to keep God's covenant promise alive when Judah's family had neglected it. God honored her faith. Even though Zerah put his hand out first, Perez broke through and was born first. God chose Perez to become a key ancestor in the family line leading all the way to Jesus.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This story also shows us the depth of God's grace, which means his kindness to people who do not deserve it. Judah had done great wrong, but his true sorrow and change of heart showed real repentance. God used Judah's brokenness to shape him into a faithful leader. God's grace has the power to change even notorious sinners into faithful servants.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God can redeem messy lives and bring life from broken situations, we should not lose hope. We should never stop praying for or reaching out to people who seem hopelessly lost in sin. No one is beyond God's power to save and transform.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Who in your life seems far away from God that you need to keep praying for?",
+    "How does God's ability to work through Tamar and Judah give you comfort about your own past mistakes?"
+   ],
+   "prayer": "Lord, thank you that your grace can reach into any broken situation and bring good out of it. Help us not to give up on people who seem completely lost in their sin. Please forgive our own wrongs and shape our hearts to serve you faithfully. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "God's Grace and Reward",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-grace-and-reward"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

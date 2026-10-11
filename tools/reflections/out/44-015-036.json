@@ -1,0 +1,66 @@
+{
+ "id": "44-015-036",
+ "title": "Paul’s Second Missionary Journey Begins",
+ "refs": [
+  "Acts 15:36-41"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44015036,
+   "end": 44015041,
+   "ref": "Acts 15:36-41",
+   "ranges": [
+    [
+     44015036,
+     44015041
+    ]
+   ],
+   "title": "When Disagreements Arise",
+   "key_verse": [
+    44015039,
+    44015039
+   ],
+   "reflect": [
+    {
+     "text": "In Acts, Paul and Barnabas faced a sharp disagreement over whether to bring Mark on their journey. Even faithful Christians can have strong differences about how to serve the Lord. But having different convictions does not mean we have to let our relationships turn into bitter fighting.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When conflict comes, we need to find the real cause beneath the surface. We can invite the Holy Spirit to search our hearts and point out any hidden pride or selfishness. It is also important to restrain our anger so our emotional reactions do not lead to sinful words or damaging actions.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We must submit our disagreements completely to God. If we do not hand them over to Him, we give the enemy an opportunity to divide us. By committing to pray with each other and for each other, we keep our focus on God's glory rather than protecting our own personal opinions.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you disagree with another believer, do you ask the Holy Spirit to check your heart for pride?",
+    "How can you pray for someone you disagree with so that God gets the glory?"
+   ],
+   "prayer": "Lord, search my heart whenever disagreements arise, and show me if pride or anger is guiding my words. Help me to submit every conflict to you so that division has no place among us. Teach me to pray for others and to seek your glory above my own way. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 253: Acts 15:39–41",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-253-acts-15-3941.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

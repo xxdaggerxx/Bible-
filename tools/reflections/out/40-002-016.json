@@ -1,0 +1,68 @@
+{
+ "id": "40-002-016",
+ "title": "Weeping and Great Mourning",
+ "refs": [
+  "Matthew 2:16-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40002016,
+   "end": 40002018,
+   "ref": "Matthew 2:16-18",
+   "ranges": [
+    [
+     40002016,
+     40002018
+    ]
+   ],
+   "title": "Hope in the Midst of Deep Grief",
+   "key_verse": [
+    40002018,
+    40002018
+   ],
+   "reflect": [
+    {
+     "text": "King Herod was terrified of losing his power. In a furious attempt to keep his throne, he ordered the slaughter of all the young boys in Bethlehem. The mothers' heartbreak was unbearable. Matthew points back to the prophet Jeremiah, who described Rachel weeping for her lost children during Israel's exile. This tragedy showed that God's people were still living under the heavy burden of exilic suffering, even while dwelling in their homeland.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This terrible cruelty was not hidden from God, nor was it outside His sovereign knowledge. God watched over those grieving parents and attentively recorded every tear. Jesus stepped directly into this broken, violent world, sharing our exposure to deep loss. Violent oppressors may inflict terrible pain, but they can never overturn God's saving purposes. In Christ, God has inaugurated His new covenant to bring an end to exile and bring ultimate healing to a weeping world.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face sorrow or see cruelty in the world, how does knowing that God counts every tear bring you comfort?",
+    "How does Jesus stepping into our violent, hurting world help you trust God's saving plans?"
+   ],
+   "prayer": "Father, thank You for seeing our deepest sorrow and never overlooking our tears. We thank You that Jesus came into our dark world to bring an end to exile and begin Your promised healing. Please help us to trust that no earthly harm can ever overturn Your good and sovereign plans. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The End of Exile",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/end-exile"
+    },
+    "D2": {
+     "author": "Wendy Stringer",
+     "work": "It Is Written",
+     "site": "The Gospel Coalition",
+     "url": "https://ca.thegospelcoalition.org/article/it-is-written-2/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

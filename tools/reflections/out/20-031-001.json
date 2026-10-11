@@ -1,0 +1,75 @@
+{
+ "id": "20-031-001",
+ "title": "The Sayings for King Lemuel",
+ "refs": [
+  "Proverbs 31:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 20031008,
+   "end": 20031009,
+   "ref": "Proverbs 31:8-9",
+   "ranges": [
+    [
+     20031008,
+     20031009
+    ]
+   ],
+   "title": "\"Open Your Mouth for Those with No Voice\"",
+   "key_verse": [
+    20031008,
+    20031008
+   ],
+   "reflect": [
+    {
+     "text": "God gives us a clear command to speak up for the defenseless rather than remaining passive. Often, our silence when someone is mistreated comes from personal fear rather than a lack of love. Even so, the Lord calls us to pay attention to the vulnerable, the poor, and those who are pushed to the margins.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Defending those who have no voice starts when we listen humbly to understand what they are going through. When we choose to stand in the gap for people who suffer, it brings them deep relief and honors their dignity. Praying about these situations helps us face our personal apathy, or lack of concern, and helps us see how God wants us to use our gifts to help.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Following God means turning our faith into loving, practical action that pursues justice. As we advocate for those treated unfairly, we show genuine love to our neighbors. Speaking out for people who cannot protect themselves is a vital part of obeying the Lord.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there someone around you who is being mistreated or overlooked that God is asking you to notice?",
+    "What fears or hesitations hold you back from speaking up on behalf of others?"
+   ],
+   "prayer": "Lord, forgive us when fear or apathy keeps us quiet while others are mistreated. Give us humble hearts to listen to the needs of the vulnerable around us. Help us use our voices and actions to defend them in true obedience to you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Amanda Idleman",
+     "work": "Speak Up for Those Who Cannot (Proverbs 31:8-9) - Your Daily Bible Verse - September 7",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-september-7.html"
+    },
+    "D2": {
+     "author": "Vivian Bricker",
+     "work": "Choosing to Stand Up for Others - iBelieve Truth: A Devotional for Women - September 10, 2024",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/choosing-to-stand-up-for-others.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

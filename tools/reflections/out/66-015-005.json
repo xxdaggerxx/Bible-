@@ -1,0 +1,66 @@
+{
+ "id": "66-015-005",
+ "title": "Preparation for Judgment",
+ "refs": [
+  "Revelation 15:5-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66015005,
+   "end": 66015008,
+   "ref": "Revelation 15:5-8",
+   "ranges": [
+    [
+     66015005,
+     66015008
+    ]
+   ],
+   "title": "The Holiness of God's Final Judgment",
+   "key_verse": [
+    66015008,
+    66015008
+   ],
+   "reflect": [
+    {
+     "text": "In this vision, seven angels step out of the heavenly temple wearing bright linen and golden sashes, dressed much like high priests. Their clothing shows that their mission of judgment is entirely clean and holy. We often think of anger as someone losing their temper, but God's wrath is never like that. It is the righteous and pure reaction of His perfect holiness against sin that has not been forgiven.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The angels are handed golden bowls full of this divine wrath. These bowls remind us of the incense bowls mentioned earlier in the book, which held the prayers of God's people. This link shows that God's holy judgment comes as a direct answer to the prayers of Christians calling out for justice.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Smoke from God's glorious power fills the temple so deeply that no one can enter until the plagues are completed. God's holiness requires that evil be fully judged before the world can be restored. The final new creation cannot arrive until His holy wrath against sin is completely carried out.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God's wrath is holy and just change the way you think about His judgment?",
+    "How does it encourage you to know that God remembers the prayers of His people?"
+   ],
+   "prayer": "Holy God, You are completely pure and righteous in all Your ways. Thank You for hearing the prayers of Your people and promising to deal with evil. Help us to stand in awe of Your great power and trust Your perfect justice. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Bowls of Divine Wrath",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/bowls-of-divine-wrath"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

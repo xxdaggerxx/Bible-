@@ -1,0 +1,66 @@
+{
+ "id": "09-014-047",
+ "title": "Saul’s Victories",
+ "refs": [
+  "1 Samuel 14:47-52"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9014047,
+   "end": 9014052,
+   "ref": "1 Samuel 14:47-52",
+   "ranges": [
+    [
+     9014047,
+     9014052
+    ]
+   ],
+   "title": "Outward Victories and Inward Faith",
+   "key_verse": [
+    9014047,
+    9014047
+   ],
+   "reflect": [
+    {
+     "text": "In this summary of Saul's reign, we see him fighting bravely to defend God's people. He fought against enemies on every side and delivered Israel from those who attacked them. By doing this, Saul showed genuine dedication to his duty as king. He took on the hard work of protecting the nation, gathering capable leaders, and building a strong army.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "By human standards, Saul looked like a great success. He had royal stature, family blessings, and a record of military victories. Yet outward achievements do not tell the whole story. Unlike David, Saul lacked true faithfulness in his heart and the lasting presence of the Lord walking with him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This passage reminds us how God sees our lives. The world often measures us by what we accomplish or how strong we appear. But the Lord looks deeper. God measures true success not by visible victories, but by covenant obedience and a heart devoted to His will.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When do you feel tempted to judge your life by outward success rather than your heart before God?",
+    "What does it look like for you to seek inward obedience to the Lord today?"
+   ],
+   "prayer": "Lord, help us to look beyond outward achievements and care about what matters to You. Teach us to walk in genuine obedience and devotion each day. Keep our hearts faithful to Your will. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Saul’s Successes",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/sauls-successes"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

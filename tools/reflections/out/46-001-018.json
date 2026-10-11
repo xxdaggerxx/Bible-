@@ -1,0 +1,115 @@
+{
+ "id": "46-001-018",
+ "title": "The Message of the Cross",
+ "refs": [
+  "1 Corinthians 1:18-25"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46001018,
+   "end": 46001018,
+   "ref": "1 Corinthians 1:18",
+   "ranges": [
+    [
+     46001018,
+     46001018
+    ]
+   ],
+   "title": "\"The Message of the Cross\"",
+   "key_verse": [
+    46001018,
+    46001018
+   ],
+   "reflect": [
+    {
+     "text": "The natural world shows us how great God is, but the cross of Jesus shows us His mercy in the clearest way. In two simple wooden beams, we see how deeply God loves us. Through Jesus dying in our place, we are rescued from God's holy anger against sin. Clever words and human status might impress our minds, but only this good news has the power to change a human heart.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "How someone responds to the cross shows where their heart truly stands with God. To people who are spiritually lost, a dying Savior sounds like pure foolishness. But to those whom God is saving, the cross is His mighty power. As Christians, we never outgrow our daily need for the cross. Remembering what Jesus gave for us gives us strength to keep going in our faith and helps us speak boldly to others about Him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does looking at Jesus dying in your place change the way you see God's love today?",
+    "In what areas of your daily walk do you need to lean on the power of the cross rather than your own strength?"
+   ],
+   "prayer": "Lord God, thank You for loving us so much that You sent Jesus to die in our place. Guard our hearts from seeking worldly praise instead of the good news. Help us to hold tightly to the cross each day and to share its hope with those around us. In Jesus' name, Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Word of the Cross",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-word-of-the-cross"
+    },
+    "D3": {
+     "author": "Sharon Jaynes",
+     "work": "God’s Gift to You",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-june-18-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 46001018,
+   "end": 46001025,
+   "ref": "1 Corinthians 1:18-25",
+   "ranges": [
+    [
+     46001018,
+     46001025
+    ]
+   ],
+   "title": "God Above Human Wisdom",
+   "key_verse": [
+    46001019,
+    46001019
+   ],
+   "reflect": [
+    {
+     "text": "When God warns that He will destroy worldly wisdom, it sounds frightening to proud thinkers. But to the quiet believer, that warning is actually a comforting promise. We do not need to panic or wear ourselves out trying to defeat every intellectual trend. The Lord has declared that He will bring human philosophy to nothing, and what He promises to do, He will surely finish.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever feel troubled when intellectual critics mock Christian faith?",
+    "How can trusting God's promise to bring proud human wisdom to nothing give you peace today?"
+   ],
+   "prayer": "Heavenly Father, You alone are truly wise, and human thinking cannot stand against Your truth. When the world tries to shake our trust in You, help us rest quietly in Your sovereign promise. Keep our faith simple, steady, and secure in Your Word. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 24",
+     "on": "1 Corinthians 1:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "People who consider themselves learned and wise often try to tear down the faith of humble Christians. They offer clever arguments and modern theories to prove that the Bible cannot be trusted. Yet human ideas crumble under their own weight. As Charles Spurgeon wrote, \"The old gospel is not extinct yet,\" and it will never die out because God Himself keeps it alive.",
+     "problem": "Neither the devotional nor the Scripture passage mentions arguments or theories aimed specifically at proving that the Bible cannot be trusted."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

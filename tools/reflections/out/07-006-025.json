@@ -1,0 +1,75 @@
+{
+ "id": "07-006-025",
+ "title": "Gideon Destroys Baal’s Altar",
+ "refs": [
+  "Judges 6:25-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7006025,
+   "end": 7006032,
+   "ref": "Judges 6:25-32",
+   "ranges": [
+    [
+     7006025,
+     7006032
+    ]
+   ],
+   "title": "Tearing Down Idols to Follow God",
+   "key_verse": [
+    7006025,
+    7006025
+   ],
+   "reflect": [
+    {
+     "text": "Israel's deep trouble came from a spiritual problem: the people had turned away from the Lord to worship false gods. Before God would deliver them, false worship had to be removed, starting right in Gideon's own family home. True worship of God requires real action. It begins by tearing down the idols that get in the way of our devotion to Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God's directions meant that Gideon had to break away from the traditions of his family and neighbors. Gideon was an ordinary, hesitant man, yet he trusted God's word. Even though fear made him carry out the task under the cover of night, he still obeyed. The burnt offering he made on the newly built altar showed total and unconditional surrender to God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Following God often means standing alone. Like Gideon, we can struggle with the fear of other people and what they might do or say. Rather than relying on our own strength or worldly standing, we need God-given courage to obey His Word even when we face opposition.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any place in your life where fear of other people makes it hard to obey God?",
+    "What helps you give the Lord your complete surrender, even if it means standing alone?"
+   ],
+   "prayer": "Lord, give us courage to obey your Word even when we are afraid of what others might think. Help us remove anything in our lives that takes your rightful place. We choose to surrender ourselves completely to you today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Lord Calls Gideon",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lord-calls-gideon"
+    },
+    "D2": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 03/24/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-03-or-24-or-2002-1127524.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

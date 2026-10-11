@@ -1,0 +1,66 @@
+{
+ "id": "57-001-023",
+ "title": "Additional Greetings",
+ "refs": [
+  "Philemon 1:23-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 57001023,
+   "end": 57001025,
+   "ref": "Philemon 1:23-25",
+   "ranges": [
+    [
+     57001023,
+     57001025
+    ]
+   ],
+   "title": "Grace for Difficult Relationships",
+   "key_verse": [
+    57001025,
+    57001025
+   ],
+   "reflect": [
+    {
+     "text": "Paul closes his letter by sending greetings from his fellow workers and praying for the Lord's grace to be with Philemon. Grace is God's undeserved kindness and help. We deeply need this grace whenever we face delicate problems in our relationships with other believers. Sorting through hurt and conflict is never simple, but God's grace gives us the strength to move forward.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's Word reminds us of the true dignity of every human being. Because people have value in God's eyes, biblical truth always leads us toward love, reconciliation, and freedom. Reconciliation means making peace where there was once brokenness. While the world may handle conflicts with anger or pride, disciples of Jesus must let Scripture guide their choices rather than following cultural trends.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Following God's guidance often requires hard choices. We are called to turn away from sin and obey what God commands, even when those steps feel painful or uncomfortable. When we depend on Christ rather than ourselves, his grace helps us choose forgiveness and peace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a strained relationship in your life where you need God's grace to seek peace?",
+    "Where might you be tempted to follow cultural habits instead of following God's Word?"
+   ],
+   "prayer": "Lord Jesus, thank you for your grace that sustains us in every challenge. Help us value others and seek reconciliation when our relationships are strained. Give us willing hearts to obey your Word, even when your commands are difficult. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Final Greetings for Philemon",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/final-greetings-philemon"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

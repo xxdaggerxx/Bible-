@@ -1,0 +1,129 @@
+{
+ "id": "44-001-006",
+ "title": "The Ascension",
+ "refs": [
+  "Acts 1:6-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44001008,
+   "end": 44001008,
+   "ref": "Acts 1:8",
+   "ranges": [
+    [
+     44001008,
+     44001008
+    ]
+   ],
+   "title": "\"You will be My witnesses\"",
+   "key_verse": [
+    44001008,
+    44001008
+   ],
+   "reflect": [
+    {
+     "text": "Jesus promises His followers that they will receive power through the Holy Spirit to tell others about Him. Many believers feel nervous or afraid of being rejected when talking about their faith. But just as the early disciples were changed from fearful men hiding behind locked doors into bold preachers, we too are given the Holy Spirit. We do not have to rely on our own strength to share God's truth with the people around us or across the world.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "To be an effective witness, we must look to Jesus as our example. He shared the truth everywhere He went, speaking openly both to crowds and to individuals. As Charles Spurgeon wrote, we should \"make your life a clear testimony.\" That means living with honest hearts and genuine love that everyone can see. Even when speaking up brings hardship or suffering, we can be glad to stand with our Lord and point others to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "While we receive the Holy Spirit when we are saved, we still need God's help each day. We need to surrender our own plans and ask the Holy Spirit to guide our actions and speech. Walking in humility and staying close to Christ gives us the strength we need to honor Him wherever He sends us.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or worries tend to keep you from speaking openly about Jesus?",
+    "How can your everyday actions and words show Christ more clearly to the people around you?"
+   ],
+   "prayer": "Lord Jesus, thank You for giving us Your Holy Spirit to make us brave. Please fill us each day with Your power so we do not hide our faith. Help our lives and our words to be clear witnesses of Your love, even when it is difficult. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 7",
+     "on": "Acts 1:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "The Spirit’s Power - Truth For Life - May 8",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-may-8-2024.html"
+    },
+    "D4": {
+     "author": "Jack Graham",
+     "work": "PowerPoint - Jan. 8, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-jan-8-2010-11624670.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 44001006,
+   "end": 44001011,
+   "ref": "Acts 1:6-11",
+   "ranges": [
+    [
+     44001006,
+     44001011
+    ]
+   ],
+   "title": "The Promise of Christ's Return",
+   "key_verse": [
+    44001011,
+    44001011
+   ],
+   "reflect": [
+    {
+     "text": "As the disciples watched Jesus rise into the sky, two messengers gave them a sure promise. The very same Jesus who was taken up into heaven will return in the same way. Just as surely as He first arrived on earth to serve and suffer, He will return one day in power to reign as King.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This certain promise gives believers strong hope during hard times. Today we often face sorrow, misunderstanding, or mistreatment as we follow our Lord. But when Christ returns, the days of mourning will be over. Those who love Him will share in His joy, and all the struggles of living for Him will be fully rewarded.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing Jesus will return change how you face difficulties right now?",
+    "In what ways can the hope of His coming bring joy to your heart today?"
+   ],
+   "prayer": "Heavenly Father, thank You for the solid hope that Jesus is coming back. When life feels heavy and we face trials for following Him, remind us of the great day when He will return. Keep our hearts joyful and waiting with peace. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Dec. 25",
+     "on": "Acts 1:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

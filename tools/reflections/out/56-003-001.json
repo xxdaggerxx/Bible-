@@ -1,0 +1,79 @@
+{
+ "id": "56-003-001",
+ "title": "Heirs of Grace",
+ "refs": [
+  "Titus 3:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 56003001,
+   "end": 56003008,
+   "ref": "Titus 3:1-8",
+   "ranges": [
+    [
+     56003001,
+     56003008
+    ]
+   ],
+   "title": "Heirs of God's Undeserved Mercy",
+   "key_verse": [
+    56003004,
+    56003004
+   ],
+   "reflect": [
+    {
+     "text": "God calls us to live peaceful, gentle, and humble lives before everyone. As Adrian Rogers reminds us, true \"meekness is not weakness, but strength placed under control.\" When the world around us feels hostile, reacting with angry words or insults harms our witness and cannot produce God's righteousness. Instead, we are called to be patient, calm, and ready to show consideration to all people.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We treat others with gentleness because we remember how God treated us. We were once foolish and trapped in sinful habits, but God our Savior rescued us in pure kindness and love. Charles Spurgeon reflected on how wonderful it is to meditate on the Savior's great affection, which binds our hearts to Him. He poured out His Spirit on us and made us His heirs, giving us treasures of mercy that we could never earn.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This deep experience of God's undeserved mercy is what motivates us to do good works. Our good deeds do not earn God's favor or save us; they are simply the natural fruit of trusting in Christ. Sound biblical teaching helps us see what is truly helpful and good for others. Because of this, believers need to encourage one another to devote their lives to practical acts of love, even toward those who oppose us.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what situations do you find it hardest to respond with gentle meekness rather than anger?",
+    "How can remembering God's undeserved kindness toward you inspire you to do good to someone this week?"
+   ],
+   "prayer": "Lord God, thank You for the kindness and mercy You poured out on us when we were lost. Help us to keep our reactions under Your control and to speak with gentleness to everyone we meet. May the love of Christ lead us to serve others gladly through practical, loving deeds today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 4",
+     "on": "Titus 3:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "Meekness Is Not Weakness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-may-23-2023.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Good Works that Profit",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/good-works-that-profit"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

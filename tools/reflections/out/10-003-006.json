@@ -1,0 +1,66 @@
+{
+ "id": "10-003-006",
+ "title": "Abner Joins David",
+ "refs": [
+  "2 Samuel 3:6-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10003006,
+   "end": 10003021,
+   "ref": "2 Samuel 3:6-21",
+   "ranges": [
+    [
+     10003006,
+     10003021
+    ]
+   ],
+   "title": "Seeking Power or Serving God",
+   "key_verse": [
+    10003009,
+    10003009
+   ],
+   "reflect": [
+    {
+     "text": "Throughout history, changes in government and power have often been filled with violence and selfish ambition. We see this dynamic at work in Israel as the house of Saul grew weaker. When Abner had a conflict with Ish-bosheth, he decided to reach out and negotiate an agreement with David.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "On the surface, Abner spoke about God's promise to make David king over all the land. Yet Abner did not turn to David out of true devotion to the Lord. Instead, he made this move to protect his own influence and secure a high position for himself in the kingdom.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Abner shows us how easy it is to do the right thing for the wrong reasons. As followers of God, we must reject this pattern of shifting our loyalties just to gain personal status. We are called to lay aside selfish ambition and instead give our whole hearts to serving the kingdom of Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you serve God or support others, do you do it with a sincere heart or to gain recognition for yourself?",
+    "What is one practical way you can put Christ's kingdom ahead of your own status this week?"
+   ],
+   "prayer": "Lord, search our hearts and help us see our true motives. Keep us from selfish ambition and from trying to use Your plans for our own advantage. Teach us to follow King Jesus with honest loyalty and to seek His kingdom first. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Abner’s Negotiations with David",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/abners-negotiations-with-david"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

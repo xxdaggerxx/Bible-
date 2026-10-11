@@ -1,0 +1,66 @@
+{
+ "id": "02-029-045",
+ "title": "God Will Dwell among the People",
+ "refs": [
+  "Exodus 29:45-46"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2029045,
+   "end": 2029046,
+   "ref": "Exodus 29:45-46",
+   "ranges": [
+    [
+     2029045,
+     2029046
+    ]
+   ],
+   "title": "God Sees the Bigger Picture",
+   "key_verse": [
+    2029046,
+    2029046
+   ],
+   "reflect": [
+    {
+     "text": "When the Israelites left Egypt, God instructed them to take gold and valuables from their neighbors. Carrying heavy treasure into the wilderness must have felt awkward and impractical for travelers with a long journey ahead. Yet God was planning far ahead. Later on, those very materials were needed to build the tabernacle, the sacred tent where God would dwell among His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Life can often feel just as puzzling for us. We might wonder why God allows certain situations or leads us in ways that seem hard to understand. Even so, we can be confident that God already prepares what is needed for His purposes. He coordinates our lives so that He can be near to us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we face uncertain circumstances, we do not need to understand every step. Submitting to God's bigger picture brings real peace and courage to our hearts. We can trust that the Lord who redeemed us is faithfully working out His plan.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you currently facing a confusing situation where you need to trust God's bigger plan?",
+    "How can remembering that God prepares what you need give you peace today?"
+   ],
+   "prayer": "Lord God, thank You that You see the whole picture even when our path feels confusing. Help us trust that You are preparing everything needed for Your good purpose to dwell with us. Give us peace and courage as we submit to Your wise guidance today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Marybeth Whalen",
+     "work": "God Knows the Big Picture",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-july-21-2008-11579437.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

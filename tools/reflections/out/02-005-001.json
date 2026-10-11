@@ -1,0 +1,68 @@
+{
+ "id": "02-005-001",
+ "title": "Pharaoh’s First Refusal",
+ "refs": [
+  "Exodus 5:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2005001,
+   "end": 2005005,
+   "ref": "Exodus 5:1-5",
+   "ranges": [
+    [
+     2005001,
+     2005005
+    ]
+   ],
+   "title": "When Others Do Not Know God",
+   "key_verse": [
+    2005002,
+    2005002
+   ],
+   "reflect": [
+    {
+     "text": "When Moses and Aaron asked Pharaoh to let Israel go, the king pushed back with a question: Who is the LORD? That same dismissive question is still asked by many people around us today. Pharaoh resisted God's command because he openly admitted he did not know Him. Our human minds are finite and limited. We cannot fully comprehend the infinite nature and holiness of God. Yet, if God were small enough for our minds to grasp completely, He would be far too small to meet our deepest needs.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We often feel hurt and disappointed when others disagree with us or refuse to do what is right. However, expecting people who do not know the Lord to act with Christian character will only lead to frustration. Recognizing this truth allows us to let go of bitterness, establish wise boundaries, and pray for those who oppose God's ways. Even when others resist Him, the Holy Spirit empowers us to know God personally and make Him known to the world.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering that someone does not know God help you respond with patience instead of anger?",
+    "In what ways can you rely on the Holy Spirit to help you share God with others?"
+   ],
+   "prayer": "Lord, help us when we face resistance from people who do not know You. Teach us to release our anger, set wise boundaries, and pray faithfully for those who oppose Your truth. Thank You for letting us know You personally and giving us Your Holy Spirit to make Your name known. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Dawn Mast",
+     "work": "Unmet Expectations",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/unmet-expectations-encouragement-caf-may-16-2019.html"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "Who Is the Lord?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-daily-devotion-apr-22-2009-11602589.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

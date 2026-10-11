@@ -1,0 +1,66 @@
+{
+ "id": "18-012-001",
+ "title": "Job Presents His Case",
+ "refs": [
+  "Job 12:1-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18012001,
+   "end": 18012025,
+   "ref": "Job 12:1-25",
+   "ranges": [
+    [
+     18012001,
+     18012025
+    ]
+   ],
+   "title": "In God's Hands",
+   "key_verse": [
+    18012010,
+    18012010
+   ],
+   "reflect": [
+    {
+     "text": "Job reminds his friends that the life and breath of every creature rest firmly in God's hands. God holds all power and wisdom over the entire world, from animals in the wild to human leaders. Because God is completely in control, we do not need to carry the exhausting burden of trying to manage everything ourselves. Realizing this sets us free to step back and rest.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It is easy to become weighed down with worry over the painful troubles or decisions of those we love. Even so, we can trust God as the author of their stories. We can safely hand over the rest of our days to His purpose, wisdom, and grace—His steady kindness that we could never earn.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When the world feels shaky and uncertain, looking up to God reigning on heaven's throne calms our fears. Keeping our eyes fixed on Him replaces anxious thoughts with deep peace. We do not have to hold the world together, because our Creator already holds us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What situations or people are you trying to manage on your own instead of trusting God?",
+    "How does knowing God holds your breath and your days give you peace right now?"
+   ],
+   "prayer": "Lord God, thank You for holding our breath and our lives in Your hands. Help us lay down the heavy burden of trying to control everything ourselves. Teach us to trust You with our loved ones and our future. Give us Your deep peace as we keep our eyes on You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Scotty Smith",
+     "work": "He (Not Me) Has the Whole World in His Hands",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/scotty-smith/he-not-me-has-the-whole-world-in-his-hands/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

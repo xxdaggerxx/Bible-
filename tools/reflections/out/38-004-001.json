@@ -1,0 +1,151 @@
+{
+ "id": "38-004-001",
+ "title": "The Vision of the Lampstand and Olive Trees",
+ "refs": [
+  "Zechariah 4:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 38004010,
+   "end": 38004010,
+   "ref": "Zechariah 4:10",
+   "ranges": [
+    [
+     38004010,
+     38004010
+    ]
+   ],
+   "title": "\"Who Has Despised the Day of Small Things?\"",
+   "key_verse": [
+    38004010,
+    38004010
+   ],
+   "reflect": [
+    {
+     "text": "We often crave grand achievements, so we easily look down on ordinary, routine steps. Yet God spoke encouragement to Zerubbabel after long delays and slow progress. The Lord is actively faithful in our daily, mundane responsibilities, and He uses small beginnings to build something lasting.",
+     "sources": [
+      "D6"
+     ]
+    },
+    {
+     "text": "In Zechariah's vision, the plumb line—a simple weighted tool used to see if a wall is straight—was in the builder's hand. This showed that the temple would certainly be finished. For us, Jesus is the true Master Builder of His church. As Charles Spurgeon wrote, \"the plummet was in good hands.\"",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    },
+    {
+     "text": "Jesus does not rush His work with human haste. He uses careful judgment, checking every part of His spiritual building. Anything not aligned with Him must fall, but what He builds will reach completion. We can have peace knowing our small start is safe in His hands.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there ordinary or small duties in your life that you have looked down on recently?",
+    "How does knowing that Jesus is the patient Master Builder give you confidence today?"
+   ],
+   "prayer": "Lord Jesus, thank You for being the faithful Master Builder of our lives. Help us not to look down on small beginnings or everyday tasks. Keep our hearts aligned with Your truth, and finish the good work You have started in us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 26",
+     "on": "Zechariah 4:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "Truth For Life (adapted by Alistair Begg from C. H. Spurgeon)",
+     "work": "The Master Builder",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-november-26-2020.html"
+    },
+    "D6": {
+     "author": "Tiya Thomas-Alexander",
+     "work": "Meeting God in the Mystery of the Mundane",
+     "site": "The Gospel Coalition",
+     "url": "https://in.thegospelcoalition.org/article/meeting-god-in-the-mystery-of-the-mundane/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 38004001,
+   "end": 38004014,
+   "ref": "Zechariah 4:1-14",
+   "ranges": [
+    [
+     38004001,
+     38004014
+    ]
+   ],
+   "title": "Not by Might, but by the Spirit",
+   "key_verse": [
+    38004006,
+    38004006
+   ],
+   "reflect": [
+    {
+     "text": "We often face problems that loom like giant mountains. When we try to overcome them using only human strength and visible resources, we end up exhausted. God reminds us that our trials cannot be solved by our own force, but only by His invisible Spirit. Before His power, every mountain becomes level ground.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "The vision showed a lampstand fed continually with fresh oil from olive trees. In Scripture, oil represents the Holy Spirit. A lamp's wick does not create its own fuel; it only carries the oil. As F. B. Meyer observed, \"the light does not burn me, though it burns on me.\" We do not give light from our own weak resources.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "When we rely on self-will, we quickly burn out. Instead, God calls us to surrender our efforts each day and let the Spirit provide supernatural strength. Our task is simply to keep our hearts clean and open, allowing God's grace to flow freely so Christ's light can shine through us.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What mountain are you currently trying to conquer using only your own strength?",
+    "How can you pause today to surrender your efforts and rely on the Holy Spirit instead?"
+   ],
+   "prayer": "Lord God, forgive us for relying on human power and wearing ourselves out. Remove anything in our hearts that blocks the free flow of Your grace. Please level the mountains before us and let Your Holy Spirit shine through our lives. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 25",
+     "on": "Zechariah 4:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Zechariah 4:12",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D4": {
+     "author": "Jeff Schreve",
+     "work": "Burning the Wick or Burning the Oil?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-week-of-october-14.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

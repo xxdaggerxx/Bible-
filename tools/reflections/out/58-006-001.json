@@ -1,0 +1,79 @@
+{
+ "id": "58-006-001",
+ "title": "A Call to Maturity",
+ "refs": [
+  "Hebrews 6:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58006001,
+   "end": 58006012,
+   "ref": "Hebrews 6:1-12",
+   "ranges": [
+    [
+     58006001,
+     58006012
+    ]
+   ],
+   "title": "Growing in Faith and Love",
+   "key_verse": [
+    58006001,
+    58006001
+   ],
+   "reflect": [
+    {
+     "text": "Following Jesus means we should not stay at the starting line. Once we know the basic truths about Christ, we need to build on that foundation and move forward toward maturity. Growing takes intentional effort and personal resolve, yet we always rely on God's power and permission to move ahead. Moving forward on purpose protects us from sliding into spiritual laziness.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Times of hardship can tempt people to pull away from the faith. As F. B. Meyer explains, some people learn the truth in their heads without it truly taking hold in their hearts. A person cannot be restored while clinging stubbornly to wrong paths. But God is ready to forgive and restore anyone who turns away from sin and comes back to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As we press on, we can take heart knowing that God never overlooks our labor. Even when people forget your good deeds, God is the perfect record keeper. He sees every act of kindness you offer to other believers, and He values the love in your heart behind it. Knowing He remembers gives us strength to stay diligent rather than sluggish.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What is one step you can take this week to keep growing in your faith?",
+    "How does knowing that God remembers your acts of love encourage you to keep serving others?"
+   ],
+   "prayer": "Lord, thank You for helping us grow beyond the basics of faith. Help us to turn away from sin, rely on Your strength, and serve Your people with sincere love. Remind us each day that You see our quiet work and will never forget what we do for You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hebrews 6:6",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Two Things God Remembers about His Servants",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/two-things-god-remembers-about-his-servants-today-s-insight-december-13-2018.html"
+    },
+    "D3": {
+     "author": "Will Graham",
+     "work": "Will Graham Devotion: Are You Growing in Your Faith?",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/articles/will-graham-devotion-are-you-growing-in-your-faith"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "05-004-032",
+ "title": "The LORD Alone Is God",
+ "refs": [
+  "Deuteronomy 4:32-40"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5004032,
+   "end": 5004040,
+   "ref": "Deuteronomy 4:32-40",
+   "ranges": [
+    [
+     5004032,
+     5004040
+    ]
+   ],
+   "title": "The Lord Alone Is God",
+   "key_verse": [
+    5004039,
+    5004039
+   ],
+   "reflect": [
+    {
+     "text": "Moses reminded Israel of the amazing things God had done to bring them out of Egypt. Long ago, people bowed down to statues made of wood and stone. Today, we might not worship carved images, but our world still makes gods out of everyday things. We can easily put our ultimate trust in money, popularity, appearance, or relationships. Anything that replaces the living God in our lives acts like an idol, and none of those things can save us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Leaning on worldly securities always leads to disappointment. When circumstances change or sudden crises strike, money and status cannot hold us up. Just as God showed the weakness of Egypt's false gods through the plagues, He exposes how empty our modern substitutes really are. They cannot give us true help or lasting peace when life falls apart.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Deuteronomy calls us to take to heart that the Lord is the only true God in heaven above and on the earth below. He alone rules over all things, and He alone will prevail. When we turn away from empty substitutes and place our trust in Him, we rest in the one living God who will never fail to deliver us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly things, like money or popularity, are you most tempted to rely on instead of God?",
+    "How can remembering that the Lord alone is God bring you peace during hard times?"
+   ],
+   "prayer": "Lord God, remind us today that You alone rule over heaven and earth. Forgive us when we look to money, status, or other people for the security that only You can give. Help us put our full trust in Your power and love, knowing that You alone can save us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "The One, True God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/the-one-true-god-greg-laurie-daily-devotion-january-5-2015.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

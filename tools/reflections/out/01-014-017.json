@@ -1,0 +1,82 @@
+{
+ "id": "01-014-017",
+ "title": "Melchizedek Blesses Abram",
+ "refs": [
+  "Genesis 14:17-24"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1014018,
+   "end": 1014020,
+   "ref": "Genesis 14:18-20",
+   "ranges": [
+    [
+     1014018,
+     1014020
+    ]
+   ],
+   "title": "\"Blessed Be Abram\"",
+   "key_verse": [
+    1014019,
+    1014019
+   ],
+   "reflect": [
+    {
+     "text": "Melchizedek appears suddenly as both a king of peace from Salem and a priest of God Most High. He welcomes Abram with bread and wine, showing warm hospitality and reminding Abram of God's faithful care. This unique figure showed Abram that he was not alone in serving the one true God. By serving as both a ruler and a priest, Melchizedek points forward to Jesus, our eternal priest and king.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Melchizedek blesses Abram in the name of God Most High, the Creator of heaven and earth. As F. B. Meyer observed, remembering God as the Maker of all things inspires \"the profoundest humility.\" When we recognize that God rules over everything and gives us every victory, we are freed from pride. Abram showed this humble trust by accepting the blessing and giving a tenth of his goods to support God's servant.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Knowing that God owns heaven and earth also gives us security and courage when facing temptation. Abram could easily turn away from the corrupt wealth offered by Sodom because he trusted that God would supply all his needs. When we remember that our heavenly Father owns the whole world, we do not need to compromise, because we know we are safe in His hands.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God owns everything help you hold your possessions with a humble and generous heart?",
+    "In what area of your life do you need to trust God's provision instead of seeking help from worldly sources?"
+   ],
+   "prayer": "Lord God Most High, Creator of heaven and earth, we praise You for Your majesty and loving care. Thank You for fighting our battles and providing everything we truly need. Help us to walk in humble faith, to give generously in worship, and to trust Your good dominion over all things. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 14:19",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Blessed Be Abram",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/blessed-be-abram"
+    },
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Genesis 14, Matthew 13, Nehemiah 3, and Acts 13",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/genesis-14-matthew-13-nehemiah-3-acts-13/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

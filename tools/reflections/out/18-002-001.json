@@ -1,0 +1,66 @@
+{
+ "id": "18-002-001",
+ "title": "Job Loses His Health",
+ "refs": [
+  "Job 2:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18002001,
+   "end": 18002010,
+   "ref": "Job 2:1-10",
+   "ranges": [
+    [
+     18002001,
+     18002010
+    ]
+   ],
+   "title": "Trusting God Through Pain",
+   "key_verse": [
+    18002010,
+    18002010
+   ],
+   "reflect": [
+    {
+     "text": "Satan claimed that Job's love for God was only skin-deep. He argued that if Job lost his health, his faith would vanish right away. But God permitted Satan to strike Job's body to prove something vital. God is worthy of our devotion for who he is in himself, not merely for the good gifts he hands out to us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When terrible sores struck Job from head to toe, the pain was intense. Even his own wife urged him to give up, curse God, and die. Yet Job firmly refused to sin with his mouth. He recognized that God is completely sovereign, which means God has full rule over all things, guiding both prosperity and hardship.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When trials enter our lives, we are called to hold fast just as Job did. Believers are honored to serve as instruments through which God's great value is displayed. Even in our deepest suffering, trusting him shows the world that God is worth more than our comfort or health.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you love God only for the blessings he gives, or for who he is?",
+    "How can trusting God during hard times show others his true worth?"
+   ],
+   "prayer": "Lord, help us to love and worship you for who you are, not just for the gifts you provide. Give us strength to honor you with our words when suffering comes. May our lives show that you are our greatest treasure in both good times and bad. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Job's Trials Intensify",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jobs-trials-intensify"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

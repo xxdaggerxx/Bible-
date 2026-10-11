@@ -1,0 +1,74 @@
+{
+ "id": "10-004-009",
+ "title": "The Execution of Rechab and Baanah",
+ "refs": [
+  "2 Samuel 4:9-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10004009,
+   "end": 10004012,
+   "ref": "2 Samuel 4:9-12",
+   "ranges": [
+    [
+     10004009,
+     10004012
+    ]
+   ],
+   "title": "Waiting on God Rather Than Shortcuts",
+   "key_verse": [
+    10004009,
+    10004009
+   ],
+   "reflect": [
+    {
+     "text": "Rechab and Baanah thought they were doing David a favor by murdering Ish-bosheth in his bed. They expected a reward, assuming any path to the throne would please David. But David knew that the Lord alone was the one who redeemed his life from trouble. As F. B. Meyer noted, \"it had been his lifelong habit to wait\" on God instead of using evil shortcuts to gain power.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "A godly ruler submits to God's law rather than grasping for power through violence. The two men tried to validate their wicked deed, but God never commanded their murder. David upheld true justice by refusing to share in their crime and holding them accountable for shedding innocent blood. We must never use the excuse of serving the Lord to justify doing what is wrong.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When difficulties block our path, we may feel tempted to take matters into our own hands. Yet David's life reminds us that God can be trusted to remove our troubles in his own time. We do not need to snatch at success through actions that bring shame. Instead, we can rest and let the Lord bring his good purposes to pass.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where you feel tempted to take shortcuts rather than waiting on God?",
+    "How can you make sure you never excuse wrong choices by claiming they are for a good cause?"
+   ],
+   "prayer": "Lord, thank you for watching over our lives and redeeming us from distress. Teach us to wait patiently for your timing rather than rushing ahead in our own strength. Keep us from taking sinful shortcuts, and help us always to do what is right and just in your sight. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Samuel 4:9",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Justice for Ish-Bosheth",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/justice-for-ish-bosheth"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

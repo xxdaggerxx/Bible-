@@ -1,0 +1,119 @@
+{
+ "book": 19,
+ "chapter": 28,
+ "first": 1,
+ "last": 9,
+ "ref": "Psalms 28",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David turns to the Lord in prayer and calls Him his Rock, his firm foundation and safe place. He pleads with God not to turn a deaf ear or stay silent. If God will not answer, David feels he will be as good as dead, slipping down into the grave like a hopeless man.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "David asks the Lord to listen to his earnest cry for mercy. He lifts his hands toward God's holy dwelling place, the inner sanctuary where the ark of the covenant rested. Stretching out his hands shows that he comes like a beggar with empty hands, looking to God alone for help.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "David begs God not to drag him off to judgment along with wicked people. These sinners are hypocrites who speak friendly words of peace to their neighbors while hiding cruelty and plots in their hearts. David hates their deceit and pleads not to share their sinful ways or their terrible end.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "David asks the Lord to give evil people the exact punishment their actions deserve. He does not speak out of personal bitterness or revenge, but as a prophet declaring God's perfect justice. God takes note of what sinners do and even the wicked harm they plan in their hearts.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Wicked people completely ignore the great things God has made and how He rules the world. Because they pay no attention to His deeds and despise His warnings, God will demolish them like an old, ruined building. He will tear them down completely and never rebuild them.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The tone suddenly shifts from crying for help to joyful praise. David blesses the Lord because he is sure God has heard his plea for mercy. When true faith prays, it trusts God's promise so deeply that it rejoices even before the final rescue is fully seen.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The Lord gives David strength on the inside and shields him from danger on the outside. Because David trusted in God from the bottom of his heart, God sent him help and kept his spirits up. This fills his heart with great joy, bursting forth into a song of thanksgiving.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "God is not only David's helper, but also the defense and strength of all His people. He provides a safe refuge of victory for His anointed king. For believers, this also points to Jesus, God's ultimate Anointed One, who shares His divine strength and rescue with all who belong to Him.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "David closes by asking God to rescue and bless His chosen people, whom He treasures as His own heritage. He asks God to care for them like a shepherd who guides and feeds his flock. He also prays that the Lord will gently carry them in His arms and lift them up forever.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 1: removed sources ['Spurgeon']",
+  "v. 2: removed sources ['Spurgeon']",
+  "v. 3: removed sources ['Spurgeon']",
+  "v. 4: removed sources ['Spurgeon']",
+  "v. 5: removed sources ['Spurgeon']",
+  "v. 6: removed sources ['Spurgeon']",
+  "v. 7: removed sources ['Spurgeon']",
+  "v. 8: removed sources ['Spurgeon']",
+  "v. 9: removed sources ['Spurgeon']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

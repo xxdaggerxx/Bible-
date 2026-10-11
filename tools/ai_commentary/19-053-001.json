@@ -1,0 +1,116 @@
+{
+ "book": 19,
+ "chapter": 53,
+ "first": 1,
+ "last": 6,
+ "ref": "Psalms 53",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David describes someone who says in their heart that there is no God. The Bible calls this person a fool not because they lack brains, but because their moral choices are corrupt. Denying God leads people into vile habits and ruined lives, leaving no true goodness in them.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "https://enduringword.com/bible-commentary/psalm-53/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine taught that while few people openly deny God exists, anyone who believes God approves of their sinful habits is practically saying there is no God.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801053.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "God looks down from heaven over the whole human race to see if anyone seeks Him. He is not searching for worldly brilliance, but for people who desire to know and honor Him. Even when humans ignore their Creator, God never stops watching over everyone.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/psalm-53/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "God gives His verdict and finds that everyone has turned away and gone backward. Human nature has become spoiled and rotten, much like soured milk that has gone bad. Left to themselves, no one does what is truly good in God's sight.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "God asks if wicked people have any understanding at all, since they are heading for ruin. They mistreat and crush God's people with as little care as someone eating bread. At the same time, they proudly refuse to pray or ask God for help.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/psalm-53/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Those who attack God's people are suddenly struck with terror, even when there seems to be no visible reason for alarm. God completely breaks the power of the besieging army and leaves their bones scattered without honor. Because God despises their cruelty, His people see their attackers brought to complete shame.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine applied this verse to moral anxieties, arguing that people often panic over losing money where there is nothing truly to fear, while failing to fear the loss of godly wisdom.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801053.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "David cries out for God's full rescue to come out of Zion to help His troubled people. When the Lord brings His people out of their captivity and distress, their sorrow will turn into deep celebration. The whole nation will rejoice when they experience God's saving power.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://biblehub.com/commentaries/psalms/53-6.htm"
+   ],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals believe this prayer looks ahead to Christ's second coming, when He will deliver Israel and establish a literal thousand-year reign from Jerusalem.",
+     "sources": [
+      "https://www.studylight.org/commentary/psalms/53-6.html"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine taught that Christ Himself is the salvation out of Zion, who entered human weakness and was handed over to enemies so that He could set His people free from spiritual bondage.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801053.htm"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)', 'Adam Clarke']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

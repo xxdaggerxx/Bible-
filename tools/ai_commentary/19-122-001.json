@@ -1,0 +1,133 @@
+{
+ "book": 19,
+ "chapter": 122,
+ "first": 1,
+ "last": 9,
+ "ref": "Psalms 122",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David rejoices when his companions invite him to walk together to the house of the Lord to worship. True believers do not want to seek God alone; they encourage one another to join in public worship. Gathering with other believers brings deep delight to anyone who loves God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The travelers celebrate that their long journey is finished and they are finally standing inside the gates of Jerusalem. Arriving safely at the holy city makes up for all the tiredness and hardship of the road. Believers can rest with joy knowing they have a secure place among God's people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/psalm-122/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The worshipper looks at Jerusalem and admires how closely its buildings stand together in harmony and strength. This orderly design served as a picture of the peace and brotherly love that ought to unite all the citizens. God's people are strongest when they are bound together in one heart and purpose.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The tribes of Israel travel to Jerusalem because God commanded them to gather there for their yearly religious festivals. They assemble before the ark of the covenant—the sacred chest holding God's law—to hear His word and praise His name. Coming together for worship gives believers an opportunity to thank God publicly for all His mercies.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "https://enduringword.com/bible-commentary/psalm-122/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Jerusalem was also the royal capital where the kings from David's family sat to judge disputes fairly. Having honest judges at the center of the nation protected the weak and kept order according to God's laws. God desires both genuine worship in church life and fair treatment in daily society.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The psalmist calls on everyone to pray for the peace, safety, and health of Jerusalem. God promises spiritual blessing and quiet rest to those who genuinely love His city and His people. Praying for the well-being of the church brings God's peace into our own souls.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Believe this verse commands Christians to pray specifically for the modern earthly city of Jerusalem and its future role in Christ's return, rather than applying the promise only to the church.",
+     "sources": [
+      "https://biblehub.com/q/Meaning_of_Psalm_122_6_for_Christians.htm",
+      "https://www.studylight.org/commentaries/eng/ghe/psalms-122.html"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "This verse is a direct prayer for the city, asking for peace on its outer defensive walls and calm security inside the homes of its leaders. When outer defenses are safe from enemy attack and leaders enjoy inner quiet, the whole community thrives. We should pray that our churches stay free from both outside trouble and bitter internal arguments.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The writer prays for the city's peace out of genuine love for his relatives, friends, and fellow worshippers living within it. He does not seek the public good for selfish reasons, but because his brothers' lives are bound up with the city's safety. Love for our brothers and sisters in Christ should move us to pray continually for their good.",
+   "meaning_sources": [
+    "Calvin",
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "The ultimate reason the writer seeks Jerusalem's prosperity is because God's dwelling place is located there. His highest aim is to honor the Lord who chose to live among His people. True prayer for God's house naturally leads believers to labor with their own hands for its good.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://www.studylight.org/commentary/psalms/122-6.html"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 9: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "46-016-001",
+ "title": "The Collection for the Saints",
+ "refs": [
+  "1 Corinthians 16:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46016001,
+   "end": 46016004,
+   "ref": "1 Corinthians 16:1-4",
+   "ranges": [
+    [
+     46016001,
+     46016004
+    ]
+   ],
+   "title": "Sharing with the Family of Faith",
+   "key_verse": [
+    46016002,
+    46016002
+   ],
+   "reflect": [
+    {
+     "text": "Paul gave specific directions to the early believers about gathering money for poor Christians in Jerusalem. Even though these instructions were written for first-century churches, they provide enduring principles for us today. Managing our money well is a practical, spiritual duty. Caring for believers in need, such as when Gentile Christians sent help to Jewish Christians, clearly shows our real unity in Christ.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Paul asked the believers to set funds aside on the first day of every week. This regular habit reminds us of the early church gathering for worship on the Lord's Day. Our giving should be systematic and deliberate, rather than something left to spontaneous feelings or sudden impulses.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We are also called to give in proportion to how God has individually blessed and prospered us. We do not all have the same amount, but each believer has a primary responsibility to support the family of faith. By planning our gifts faithfully, churches can continue ministries of mercy that bring relief to brothers and sisters who are struggling.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is your giving deliberate and regular, or do you tend to wait for a spontaneous feeling?",
+    "How can sharing your resources show tangible unity with other believers who are in need?"
+   ],
+   "prayer": "Lord God, thank you for the prosperity and daily blessings you give to us. Teach us to plan our giving faithfully and thoughtfully rather than depending on our shifting feelings. Help our church family to practice ministries of mercy and care for those who are in need. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg",
+     "work": "Patterns for Our Giving",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-march-22-2023.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Collection for Jerusalem",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-collection-for-jerusalem"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

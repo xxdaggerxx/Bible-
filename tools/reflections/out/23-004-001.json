@@ -1,0 +1,74 @@
+{
+ "id": "23-004-001",
+ "title": "A Remnant in Zion",
+ "refs": [
+  "Isaiah 4:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23004001,
+   "end": 23004006,
+   "ref": "Isaiah 4:1-6",
+   "ranges": [
+    [
+     23004001,
+     23004006
+    ]
+   ],
+   "title": "The Glorious Branch and God's Refuge",
+   "key_verse": [
+    23004002,
+    23004002
+   ],
+   "reflect": [
+    {
+     "text": "War brought severe ruin and grief to Jerusalem, leaving the surviving community in deep distress. Yet Isaiah pointed beyond this devastation toward a lasting hope. God promised future renewal through the Messiah, the righteous Branch of the Lord, who comes to represent and restore his people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God did not preserve this remnant simply so they could go back to ordinary life. He used their difficult trials for a redemptive purpose, washing away moral uncleanness and declaring them holy. These painful seasons serve to purge sin, strengthen faith, and bring about true spiritual fruitfulness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Just as God once guided Israel with a pillar of cloud and fire in the desert, he promises his own protective presence as a canopy and shelter from life's storms. Through the gospel, we are invited to receive this grace now, resting in Christ's righteousness before the final day of judgment.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How might God be using current trials to purify your heart and strengthen your faith?",
+    "In what areas of your life do you need to take shelter under Christ's protection today?"
+   ],
+   "prayer": "Lord God, thank you for sending Jesus, the righteous Branch, to rescue and renew us. Cleanse our hearts from sin and use hard times to make us holy. Shelter us in your loving presence and keep us safe in Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "A Few Good Men",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/a-few-good-men-one-year-devotions-for-men-january-5.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The LORD's Glorious Branch",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lords-glorious-branch"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

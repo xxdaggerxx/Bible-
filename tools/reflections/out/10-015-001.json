@@ -1,0 +1,75 @@
+{
+ "id": "10-015-001",
+ "title": "Absalom’s Conspiracy",
+ "refs": [
+  "2 Samuel 15:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10015001,
+   "end": 10015012,
+   "ref": "2 Samuel 15:1-12",
+   "ranges": [
+    [
+     10015001,
+     10015012
+    ]
+   ],
+   "title": "Guarding the Heart Against Bitterness and Deceit",
+   "key_verse": [
+    10015006,
+    10015006
+   ],
+   "reflect": [
+    {
+     "text": "Absalom returned to Jerusalem, but an outward reunion was not genuine spiritual reconciliation or emotional healing. Underneath his royal display of chariots and horses, Absalom was consumed by unresolved anger and bitterness that had festered for years. Harboring grudges traps a person in an internal prison that gradually erodes character, and Absalom let his hurt turn into a desire for revenge against his father.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "To carry out his plans, Absalom used physical charm and flattering words to win over the crowd. He listened to people's complaints and claimed he would give everyone justice if he were made judge. Yet this display of concern for fairness was only a mask for selfish ambition. Physical charisma can easily hide an absence of godly character, and Absalom used public grievances to steal the allegiance of Israel.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "David failed to notice the growing rebellion, blinded by his own past sins and spiritual neglect. We need spiritual discernment to recognize hidden motives beneath smooth words and charm. Following Christ calls us to walk a very different path. Instead of letting bitterness drive us to manipulate others, we are called to extend forgiveness, even when those who hurt us never acknowledge their wrongdoing.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you holding onto any unresolved anger or grudges that could slowly damage your character?",
+    "How can you seek God's discernment so you look for genuine godly character rather than outward charm?"
+   ],
+   "prayer": "Lord, protect our hearts from bitterness, grudges, and selfish ambition. Give us spiritual discernment to see what is true, rather than being swayed by mere appearances. Grant us the grace to forgive others completely, even when our pain has not been acknowledged. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 64: 2 Samuel 15:1–12",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-64-2-samuel-15-112.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Absalom Makes a Play for the Throne",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/absalom-makes-play-for-throne"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

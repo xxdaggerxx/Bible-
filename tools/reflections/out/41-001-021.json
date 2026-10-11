@@ -1,0 +1,71 @@
+{
+ "id": "41-001-021",
+ "title": "Jesus Expels an Unclean Spirit",
+ "refs": [
+  "Mark 1:21-28",
+  "Luke 4:31-37"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 41001021,
+   "end": 41001028,
+   "ref": "Mark 1:21-28; Luke 4:31-37",
+   "ranges": [
+    [
+     41001021,
+     41001028
+    ],
+    [
+     42004031,
+     42004037
+    ]
+   ],
+   "title": "Teaching with True Authority",
+   "key_verse": [
+    41001027,
+    41001027
+   ],
+   "reflect": [
+    {
+     "text": "In the synagogue at Capernaum, Jesus taught with real authority. His newly called disciples watched closely as their own community reacted with astonishment to His words. As the divine authority of Jesus filled the room, an evil spirit could no longer stay hidden. The dark power was forced to reveal itself in the presence of Christ.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus showed absolute command over this unclean spirit. He firmly told the demon to be silent and to come out of the man, and the spirit had no choice but to obey. Everyone who watched was amazed by what had happened right in front of them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It is easy for crowds to get caught up in dramatic displays of power. Beth Moore points out that while spectators love the drama, Christ wants to build deeper spiritual maturity in us. He does not just want us to be amazed by what He can do. He wants us to walk with Him and grow into strong, steady faith.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you drawn more to dramatic spiritual moments or to steady growth in your walk with Jesus?",
+    "How can you let the authority of Jesus shape your daily life so your faith grows deeper?"
+   ],
+   "prayer": "Lord Jesus, thank you for your absolute authority over every dark power. Help us not to look only for dramatic signs, but to seek real spiritual maturity in our daily walk. Teach us to listen to your voice and obey your word each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 111: Mark 1:21–28",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-111-mark-1-2128.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

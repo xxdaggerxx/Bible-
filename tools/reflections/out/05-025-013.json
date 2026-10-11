@@ -1,0 +1,60 @@
+{
+ "id": "05-025-013",
+ "title": "Standard Weights and Measures",
+ "refs": [
+  "Deuteronomy 25:13-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5025013,
+   "end": 5025016,
+   "ref": "Deuteronomy 25:13-16",
+   "ranges": [
+    [
+     5025013,
+     5025016
+    ]
+   ],
+   "title": "Honest Weights and True Integrity",
+   "key_verse": [
+    5025015,
+    5025015
+   ],
+   "reflect": [
+    {
+     "text": "In daily work and personal life, God calls us to complete honesty and fairness. In Bible times, a trader might keep two different sets of weights in their bag, using a heavy stone when buying and a light one when selling. God calls cheating, manipulating others, and using unequal standards detestable. He cares deeply about integrity in every transaction, big or small.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Living by Christ's law means seeking our neighbor's good and treating others the way we want to be treated. We protect our Christian witness when we refuse deceit, pay our debts, and act with uprightness. Even if someone treats us unfairly, God gives us an opportunity to respond with his patient and forgiving love.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are all your daily dealings with others honest and fair?",
+    "How can you show patient, forgiving love when someone treats you unfairly?"
+   ],
+   "prayer": "Lord God, help us to be honest and fair in everything we do. Keep us from deceit and give us grace to treat our neighbors with love. When others wrong us, help us to reflect your patience and forgiveness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways - Mar. 9, 2008",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-mar-9-2008-11570130.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

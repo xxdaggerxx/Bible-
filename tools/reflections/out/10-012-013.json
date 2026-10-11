@@ -1,0 +1,75 @@
+{
+ "id": "10-012-013",
+ "title": "David’s Loss and Repentance",
+ "refs": [
+  "2 Samuel 12:13-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10012013,
+   "end": 10012023,
+   "ref": "2 Samuel 12:13-23",
+   "ranges": [
+    [
+     10012013,
+     10012023
+    ]
+   ],
+   "title": "Seeking Mercy and Choosing Worship",
+   "key_verse": [
+    10012020,
+    10012020
+   ],
+   "reflect": [
+    {
+     "text": "When David's child became deathly ill, this deep sorrow shook him out of his spiritual wandering and apathy. Nathan had told him that God had pardoned his sin, but the painful earthly consequences still unfolded. Because David knew God's merciful character, he immediately cast himself on the ground in earnest prayer. He begged for the boy's life with bold confidence, trusting that the Lord is always free to show grace and kindness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This season of grief brought David back into his heavenly Father's presence. God used this painful discipline not out of rejection, but to create a broken and contrite heart in David—a humble, repentant spirit that God accepts. Through this hardship, David learned again what it meant to depend entirely on the Lord.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Once the child died, David knew God's answer was final. Instead of retreating from the Lord in bitterness or despair, David accepted the outcome. He washed, changed his clothes, and went directly into the house of the Lord to worship before returning home to eat. In both his pleading and his letting go, David rested in God's goodness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face hard consequences or painful answers from God, what helps you turn to him rather than pull away in bitterness?",
+    "How can you honor God by worshiping him even when things do not turn out the way you prayed?"
+   ],
+   "prayer": "Father, thank you for your deep mercy and forgiveness. When we walk through difficult times or face the painful results of our mistakes, keep our hearts from turning cold or bitter. Teach us to trust your loving discipline and give us grace to worship you in every circumstance. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg",
+     "work": "The Heart That God Accepts - Truth For Life - November 6",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-november-6-2023.html"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 59: 2 Samuel 12:13-23",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-59-2-samuel-12-13-23.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

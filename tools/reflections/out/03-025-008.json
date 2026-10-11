@@ -1,0 +1,74 @@
+{
+ "id": "03-025-008",
+ "title": "The Year of Jubilee",
+ "refs": [
+  "Leviticus 25:8-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3025008,
+   "end": 3025012,
+   "ref": "Leviticus 25:8-12",
+   "ranges": [
+    [
+     3025008,
+     3025012
+    ]
+   ],
+   "title": "Proclaiming Liberty to All",
+   "key_verse": [
+    3025010,
+    3025010
+   ],
+   "reflect": [
+    {
+     "text": "God commanded His people to mark every fiftieth year as a holy Jubilee. During this special year, debts were wiped out, slaves were set free, and families returned to their original lands. This powerful call to announce freedom across the land was even placed on the Liberty Bell, reminding us that true liberty has its roots in the Scriptures.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The Jubilee shows that God cares deeply about human dignity and stands against oppression. While the ancient Israelites were freed from physical slavery and unpaid debts, people today still experience different kinds of captivity. We can be trapped by painful guilt, bad habits, or the exhausting struggle of trying to earn God's favor through our own religious effort. Jesus fulfills the Jubilee by releasing us from that pressure through His grace.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "True freedom begins with the good news of Jesus Christ. When culture drifts away from God, He does not need a huge army to bring people back; He can start a spiritual renewal through one person who answers His call. We are invited to walk in the freedom Christ has won for us and share that good news with those around us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy burdens or guilt are you still trying to carry instead of trusting in the freedom Jesus offers?",
+    "How might God want to use you today to bring His truth and grace to someone else?"
+   ],
+   "prayer": "Lord God, thank You for caring about our freedom and sending Jesus to release us from guilt and striving. Help us to rest in Your grace and to stop trying to earn Your love by our own works. Use our lives to share Your truth and bring spiritual renewal to those around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Mel Lawrenz",
+     "work": "How to Live The Bible — The Sound of Freedom",
+     "site": "BibleGateway",
+     "url": "https://www.biblegateway.com/blog/2018/07/how-to-live-the-bible-the-sound-of-freedom/"
+    },
+    "D2": {
+     "author": "Jack Graham",
+     "work": "\"Happy Fourth of July Weekend\" - PowerPoint - July 2, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/happy-fourth-of-july-weekend-powerpoint-july-2-2010-11634194.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

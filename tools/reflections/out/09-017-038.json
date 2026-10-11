@@ -1,0 +1,124 @@
+{
+ "id": "09-017-038",
+ "title": "David Slays Goliath",
+ "refs": [
+  "1 Samuel 17:38-58"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 9017047,
+   "end": 9017047,
+   "ref": "1 Samuel 17:47",
+   "ranges": [
+    [
+     9017047,
+     9017047
+    ]
+   ],
+   "title": "\"The Battle Is the LORD's\"",
+   "key_verse": [
+    9017047,
+    9017047
+   ],
+   "reflect": [
+    {
+     "text": "When David faced Goliath, the giant tried to intimidate him. Intimidation is one of the enemy's main tools to confuse us and make us focus on the odds against us. Yet David did not look at the giant's bronze armor or great spear. He knew that God chooses weakness over human credentials and military strength so that His own power is clearly seen. True victory begins when we stop measuring our own ability and remember that the fight belongs completely to God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We often think we must wait until we have great talent, wealth, or worldly influence before we can stand up for what is right. But Charles Spurgeon wrote that we should not delay, but run to meet the enemy \"with our own usual sling.\" When we keep our eyes fixed on God and surrender the outcome to Him, we do not need human weapons to feel safe. We can face difficult trials with quiet confidence, knowing that the Lord of Hosts is with us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What difficult problem or obstacle is intimidating you right now?",
+    "How can you surrender that struggle to God instead of trying to win it in your own strength?"
+   ],
+   "prayer": "Lord, forgive us when we look at our own weakness and feel afraid. Remind us that every battle belongs to You. Help us fix our eyes on Your power rather than the giants in our lives, trusting You to give the victory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 11",
+     "on": "1 Samuel 17:47",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "The Battle Is Mine",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/the-battle-is-mine-1"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 9017038,
+   "end": 9017058,
+   "ref": "1 Samuel 17:38-58",
+   "ranges": [
+    [
+     9017038,
+     9017058
+    ]
+   ],
+   "title": "Stepping Out with What You Have",
+   "key_verse": [
+    9017040,
+    9017040
+   ],
+   "reflect": [
+    {
+     "text": "King Saul offered David his heavy royal armor, but David took it off because he was not used to it. Instead of pretending to be someone else or waiting for outside advantages, David stayed authentic with the simple shepherd's staff and five smooth stones God had already given him. We do not need someone else's gifts to serve the Lord. When we place modest resources and small steps into God's hands, He can use them to overcome massive hurdles.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "As David walked toward the battle line, Goliath mocked him, but David refused to let negative voices shake his courage. He remembered how God had rescued him in the past and measured the size of the giant against the greatness of the living God. Our confidence does not rest on self-reliance, but on God's presence with us. When we step forward in faith with what we have, we can expect God to act so that He receives all the glory.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What simple gifts or tools has God already placed in your hands to use for Him today?",
+    "Which discouraging voices do you need to tune out so you can focus on God's past faithfulness?"
+   ],
+   "prayer": "Heavenly Father, thank You for the simple gifts You have entrusted to us. Teach us to remember Your past faithfulness whenever our problems look overwhelming. Give us courage to step forward in faith, trusting You to work through what we already have for Your glory. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Rick Warren",
+     "work": "Four Steps to Defeat Your Giants",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-june-30-2025.html"
+    },
+    "D4": {
+     "author": "Beth Moore",
+     "work": "Day 20: 1 Samuel 17:31–58",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-20-1-samuel-17-3158.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

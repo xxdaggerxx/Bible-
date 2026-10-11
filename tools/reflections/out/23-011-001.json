@@ -1,0 +1,97 @@
+{
+ "id": "23-011-001",
+ "title": "The Root of Jesse",
+ "refs": [
+  "Isaiah 11:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23011001,
+   "end": 23011016,
+   "ref": "Isaiah 11:1-16",
+   "ranges": [
+    [
+     23011001,
+     23011016
+    ]
+   ],
+   "title": "The Righteous Branch and His Peaceful Kingdom",
+   "key_verse": [
+    23011001,
+    23011001
+   ],
+   "reflect": [
+    {
+     "text": "Isaiah compares the royal line of David to a cut tree. To human eyes, the dynasty seemed finished and dead under judgment. Yet God kept life hidden in the roots. From that lowly stump of Jesse, Jesus arose as a tender green shoot. He did not come with worldly pride or military force, but entered our world in quiet humility to establish an everlasting kingdom.",
+     "sources": [
+      "D2",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "The Spirit of the Lord rested completely upon Christ, giving Him divine wisdom, counsel, and strength. As F. B. Meyer observes, living in fellowship with the Spirit makes us spiritually \"quick of scent\" to distinguish good from evil. Jesus does not judge by outward appearances. Instead, He rules with true fairness, protecting the poor and giving hope to the lowly.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Christ will also bring radical peace to creation. Dangerous predators will graze beside gentle prey, and harm will cease as the earth is filled with the knowledge of God. As we wait for this glorious day, we are called to set aside our self-interest, yield control to the Prince of Peace, and practice His peace wherever we go.",
+     "sources": [
+      "D3",
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you need to stop judging by outward appearances and ask the Holy Spirit for true discernment?",
+    "How can you set aside self-interest today and actively bring Christ's peace into your relationships?"
+   ],
+   "prayer": "Lord Jesus, thank You for coming in humility to bring true justice and lasting peace. Fill us with Your Holy Spirit so that we can clearly tell right from wrong and care for those in need. Help us let go of our own control today and follow You faithfully. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 11:3",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "A Shoot from Jesse's Stump",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/shoot-jesses-stump"
+    },
+    "D3": {
+     "author": "Sophia Bricker",
+     "work": "A Prayer for Those Longing for Peace in Creation",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-those-longing-for-peace-in-creation.html"
+    },
+    "D4": {
+     "author": "Lisa Appelo",
+     "work": "An Advent Prayer to Our Prince of Peace",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/christmas-devotionals/advent-prayer-peace-christmas-devotional-dec-16.html"
+    },
+    "D5": {
+     "author": "Ann Spangler",
+     "work": "Praying the Names of God - October 7",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/prayingnamesgod/praying-the-names-of-god-october-18.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

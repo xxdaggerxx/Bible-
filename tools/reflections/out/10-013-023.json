@@ -1,0 +1,74 @@
+{
+ "id": "10-013-023",
+ "title": "Absalom’s Revenge on Amnon",
+ "refs": [
+  "2 Samuel 13:23-33"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10013023,
+   "end": 10013033,
+   "ref": "2 Samuel 13:23-33",
+   "ranges": [
+    [
+     10013023,
+     10013033
+    ]
+   ],
+   "title": "When Revenge Takes the Place of Justice",
+   "key_verse": [
+    10013031,
+    10013031
+   ],
+   "reflect": [
+    {
+     "text": "David failed to discipline his son Amnon for his terrible crime, responding only with quiet anger. Because the king did not carry out proper justice, Absalom decided to take matters into his own hands. For two full years, Absalom hid his hatred and planned his revenge, finally ordering his servants to kill Amnon during a feast. Taking the law into his own hands brought lasting chaos and heartbreak to the whole family.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This tragedy brought David deep anguish and regret because he saw the bitter harvest of his own past sins. When David had taken another man's wife and arranged his death, God warned that violence would not leave his house. Even though God graciously forgives the eternal guilt of our sin through Christ, the earthly consequences of our choices often linger and cause real pain.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet even in the middle of our regrets, God's grace—His kindness we do not deserve—can work in our lives. We can ask God to take the natural fallout of our failures and turn it into something that helps us grow in humility and love. We also need to pray for leaders in the church and our communities, asking God to give them courage to act justly and promptly.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you holding onto bitterness or trying to get even instead of trusting God to make things right?",
+    "When you face the difficult results of past mistakes, how can you ask God to bring spiritual growth out of that pain?"
+   ],
+   "prayer": "Father, help us to let go of private revenge and trust your justice when we are hurt. Give our leaders the wisdom and courage to act rightly and protect the vulnerable. When we face the painful results of our own failures, please meet us with your grace and shape our hearts to follow you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Samuel 13:31",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Absalom Takes Justice into His Own Hands",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/absalom-takes-justice-into-his-own-hands"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

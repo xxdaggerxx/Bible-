@@ -1,0 +1,60 @@
+{
+ "id": "24-037-001",
+ "title": "Jeremiah Warns Zedekiah",
+ "refs": [
+  "Jeremiah 37:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24037001,
+   "end": 24037010,
+   "ref": "Jeremiah 37:1-10",
+   "ranges": [
+    [
+     24037001,
+     24037010
+    ]
+   ],
+   "title": "Do Not Deceive Yourselves",
+   "key_verse": [
+    24037009,
+    24037009
+   ],
+   "reflect": [
+    {
+     "text": "King Zedekiah and the leaders of Judah refused to listen to God or turn away from their sins. Instead of truly repenting, the king looked to an alliance with Egypt for help and protection. When the Babylonian army pulled back from Jerusalem for a little while, the leaders thought their troubles were finally over. They felt safe, but this was only a false sense of security. They deceived themselves into believing that their clever politics had rescued them from danger.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God sent Jeremiah to warn the leaders that human schemes and political maneuvers cannot overturn His spoken word. Relying on our own human wisdom instead of listening to God blinds us spiritually. We also deceive ourselves when we selectively follow Scripture, obeying only the parts that feel convenient. Judah learned that earthly plans cannot protect us when we ignore God's truth, for turning away from Him leads only to destruction.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas of your life where you rely on your own clever plans instead of listening to God's Word?",
+    "Do you ever find yourself selectively following Scripture instead of accepting all that God says?"
+   ],
+   "prayer": "Lord, forgive us when we rely on our own wisdom instead of trusting Your Word. Help us not to deceive ourselves with false security or pick and choose what to obey. Teach us to listen humbly to Your truth and follow You completely. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 08/25/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-08-or-25-or-2002-1147210.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

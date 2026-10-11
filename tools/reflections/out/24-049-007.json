@@ -1,0 +1,67 @@
+{
+ "id": "24-049-007",
+ "title": "Judgment on Edom",
+ "refs": [
+  "Jeremiah 49:7-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24049007,
+   "end": 24049022,
+   "ref": "Jeremiah 49:7-22",
+   "ranges": [
+    [
+     24049007,
+     24049022
+    ]
+   ],
+   "title": "Dwelling Deep in God's Peace",
+   "key_verse": [
+    24049008,
+    24049008
+   ],
+   "reflect": [
+    {
+     "text": "When God warned of judgment coming on the land, the people were told to flee and hide deep in the rocks and forests. In the storms of life, we also need a safe refuge, and our best shelter is the deep peace of God. This peace cannot be fully explained by the world, but believers know the way into it. Like the Lord Jesus sleeping peacefully during a storm at sea, we can rest safely where the fierce cares of life cannot pull us down.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We are also invited to dwell deep in close fellowship with God. We need to leave behind the noisy rush and strife of our daily surroundings and step into the clear, quiet depths of His nature. This kind of communion cannot happen through a few rushed words. Just as climbing into the heart of a mountain takes time, coming into deep communion with God asks for our patient attention. In His presence, our troubled thoughts settle and clear.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "To know this peace, we must seek stillness of soul rather than living only on the noisy surface of life. God waits to meet us in the quiet places of our hearts. Our spiritual health cannot survive unless we spend regular time waiting on Him in solitude. Even when alarms and troubles surround us, we can choose to be quiet and stay anchored in Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When life feels hurried and noisy, do you take time to draw near to God in quiet solitude?",
+    "How can you turn away from daily anxieties to rest in the deep peace God provides?"
+   ],
+   "prayer": "Lord God, thank You for being our safe shelter and giving us Your deep peace. Teach us to step away from the rush of the world so we can wait on You in quietness. Keep our souls still and close to You, whatever troubles may come. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 49:8",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "47-003-001",
+ "title": "Ministers of a New Covenant",
+ "refs": [
+  "2 Corinthians 3:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 47003005,
+   "end": 47003006,
+   "ref": "2 Corinthians 3:5-6",
+   "ranges": [
+    [
+     47003005,
+     47003006
+    ]
+   ],
+   "title": "\"Our Competence Comes from God\"",
+   "key_verse": [
+    47003005,
+    47003005
+   ],
+   "reflect": [
+    {
+     "text": "The world around us constantly urges us to rely on ourselves. Society and even church culture often prize natural charm and personal ambition, giving us a false sense of control. Yet when difficult trials arrive, our own helplessness is exposed, and self-reliance quickly leads to despair.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Thinking we are capable on our own keeps us from being used by God. The new covenant through Jesus shows that we bring nothing of our own except our need. When we admit our weakness, God meets us with his power. Just as Jesus caught Peter when he was sinking, God lifts us up and supplies the strength we need for every hardship.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Knowing that our sufficiency comes entirely from God brings deep relief. We do not need to carry the pressure of trying to be enough on our own. Resting in God's power gives us real peace, spiritual freedom, and the boldness to step forward in faith.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you currently trying to rely on your own ability rather than depending on God?",
+    "How can admitting your personal weakness today help you experience God's peace and strength?"
+   ],
+   "prayer": "Lord God, forgive us for trying to rely on our own strength and control. Thank you that you do not leave us to face our trials alone, but reach out to lift us up when we stumble. Help us to rest in your sufficiency each day and find our confidence in Christ alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Anne Peterson",
+     "work": "Our Sufficiency Comes from God (2 Corinthians 3:5) - Your Daily Bible Verse - June 8",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-june-8.html"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "The Joy of Inadequacy - Truth For Life - May 12",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-may-12-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

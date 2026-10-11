@@ -1,0 +1,67 @@
+{
+ "id": "29-001-001",
+ "title": "The Invasion of Locusts",
+ "refs": [
+  "Joel 1:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 29001001,
+   "end": 29001007,
+   "ref": "Joel 1:1-7",
+   "ranges": [
+    [
+     29001001,
+     29001007
+    ]
+   ],
+   "title": "Passing God's Truth to the Next Generation",
+   "key_verse": [
+    29001003,
+    29001003
+   ],
+   "reflect": [
+    {
+     "text": "Joel calls the people to notice what God is doing and tell it to their children, who must then tell their own children. God wants the story of His work kept alive from one generation to the next. As Charles Spurgeon points out, handing down our witness of God's truth is our first duty, and it must begin right at home.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Teaching young people about the Lord is a personal calling for parents and families. Sunday school teachers and church helpers can assist us, but they cannot take our place. Caring for our children's spiritual life is a natural responsibility. If we neglect speaking about God's wonderful works to our own households, both the church and the nation suffer.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Talking about Jesus with our children is also a joyful privilege. When parents share the faith and pray for their households, God often uses those words to bring young hearts to salvation. Sharing God's grace at home keeps the light of truth shining brightly for years to come.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How are you currently sharing God's truth with the children or young people in your family?",
+    "What is one simple way you can speak about God's goodness at home this week?"
+   ],
+   "prayer": "Lord, help us to faithfully share your truth with the next generation. Give us grace to make our homes places where your works and love are spoken of every day. Use our words and prayers to draw our children to know and trust you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 11",
+     "on": "Joel 1:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

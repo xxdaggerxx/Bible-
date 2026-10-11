@@ -1,0 +1,73 @@
+{
+ "id": "58-013-001",
+ "title": "Brotherly Love",
+ "refs": [
+  "Hebrews 13:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58013001,
+   "end": 58013004,
+   "ref": "Hebrews 13:1-4",
+   "ranges": [
+    [
+     58013001,
+     58013004
+    ]
+   ],
+   "title": "Living Out Brotherly Love",
+   "key_verse": [
+    58013001,
+    58013001
+   ],
+   "reflect": [
+    {
+     "text": "What we believe about God is the foundation for how we live each day. The Holy Spirit gives every believer an active desire to love and serve our fellow Christians. This brotherly love is not just a warm feeling inside us. It shows up in real, concrete sacrifice for others. When we love each other this way, we give one another the encouragement we need to keep standing firm in our faith.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God also calls our love to reach beyond our usual circle of friends. True hospitality means opening our hearts to care for people who are unfamiliar to us. To do this, we have to slow down and notice who God is placing along our path. Stepping out to welcome a stranger can feel uncomfortable, but it helps us overcome our self-centered fears.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When we share our lives and care for others, we become active channels of God's grace instead of dead ends. Welcoming others mirrors the unconditional welcome God has already extended to us. Living this way turns our faith into everyday action that honors God and blesses those around us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Who is an unfamiliar person God has placed along your path whom you could reach out to this week?",
+    "How can you offer practical, sacrificial help to encourage another believer today?"
+   ],
+   "prayer": "Lord, thank You for welcoming us with Your unconditional love and grace. Help us to slow down each day so we can notice the people You bring into our lives. Fill us with Your Spirit so we may encourage our brothers and sisters and become open channels of Your blessing to strangers. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Continuing Brotherly Love",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/continuing-brotherly-love"
+    },
+    "D2": {
+     "author": "Drew Williams",
+     "work": "Don't Ignore God's Call to Hospitality",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/don-t-ignore-god-s-call-to-hospitality-bible-study-minute-february-1-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

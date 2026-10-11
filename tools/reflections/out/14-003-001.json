@@ -1,0 +1,66 @@
+{
+ "id": "14-003-001",
+ "title": "Temple Construction Begins",
+ "refs": [
+  "2 Chronicles 3:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14003001,
+   "end": 14003004,
+   "ref": "2 Chronicles 3:1-4",
+   "ranges": [
+    [
+     14003001,
+     14003004
+    ]
+   ],
+   "title": "A Holy House for the Lord",
+   "key_verse": [
+    14003001,
+    14003001
+   ],
+   "reflect": [
+    {
+     "text": "When Solomon began building the temple in Jerusalem, every detail was chosen with purpose. The grand design and pure gold overlay showed the splendor of God's heavenly dwelling place. Carved figures of cherubim, the mighty heavenly beings who serve God, reminded everyone who entered that they were joining with the angels in reverent worship.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The temple also carried reminders of both our past separation and our future hope. A thick curtain or veil stood before the Most Holy Place, showing how humanity was cut off from God's presence after the garden of Eden. At the same time, building the sanctuary on Mount Moriah pointed forward to the true atonement—the complete forgiveness and peace with God accomplished through Jesus Christ.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God is so majestic and holy, we should approach Him with deep respect and wonder. Whether we gather with our church family or pray by ourselves at home, we can come to God with humble reverence and heartfelt awe.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus made peace between you and God shape the way you worship Him?",
+    "What helps you remember to approach God with reverence and awe during everyday prayer?"
+   ],
+   "prayer": "Lord God, thank You for sending Jesus to make a way for us to enter Your holy presence. Help us to come before You with true reverence and awe, both when we worship together as a church and when we pray alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Solomon Builds the Temple",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/solomon-builds-the-temple"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

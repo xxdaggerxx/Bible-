@@ -1,0 +1,67 @@
+{
+ "id": "19-069-001",
+ "title": "The Waters Are up to My Neck",
+ "refs": [
+  "Psalms 69:1-36"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19069001,
+   "end": 19069036,
+   "ref": "Psalms 69:1-36",
+   "ranges": [
+    [
+     19069001,
+     19069036
+    ]
+   ],
+   "title": "When the Waters Rise",
+   "key_verse": [
+    19069001,
+    19069001
+   ],
+   "reflect": [
+    {
+     "text": "Life can feel like floodwaters rising against a house until every barrier breaks. We often rely on things like wealth, standing, or friends to keep us safe. Yet when those earthly shelters wash away, the deep waters reach our very soul. In such desperate times, we find that nothing stands between us and total collapse except the Lord. It is then that we learn to cry out with David, asking God to save us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God sometimes allows our worldly props to be swept aside so that we learn to trust Him entirely. In our complete helplessness, He wants us to lean only on Him. We do not have to pretend to be strong or hide our wrongs, because He already knows our folly and our sins. Even when we sink into sorrow, He reaches out His hand to rescue us from the flood.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we call to God from the depths, He does not ignore our cries. He listens to the needy and never despises those who feel trapped by trouble. As we rely on Him, our weeping turns into songs of thankfulness. We discover that God is faithful to lift us out of the mire and restore our hope.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly securities are you tempted to lean on instead of God when troubles come?",
+    "How does knowing that God already sees your faults help you cry out to Him honestly?"
+   ],
+   "prayer": "Lord God, when troubles rise like a flood and I feel overwhelmed, help me turn to You. You know my sins and my weakness, yet You still reach out Your hand to rescue me. Teach me to put my whole trust in You alone and fill my mouth with thanksgiving. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 69:1",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

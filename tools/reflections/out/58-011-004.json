@@ -1,0 +1,68 @@
+{
+ "id": "58-011-004",
+ "title": "The Faith of Abel, Enoch, Noah",
+ "refs": [
+  "Hebrews 11:4-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58011004,
+   "end": 58011007,
+   "ref": "Hebrews 11:4-7",
+   "ranges": [
+    [
+     58011004,
+     58011007
+    ]
+   ],
+   "title": "Living by Faith in the Living God",
+   "key_verse": [
+    58011006,
+    58011006
+   ],
+   "reflect": [
+    {
+     "text": "Faith is much more than simply saying the right words or agreeing with true ideas. Abel, Enoch, and Noah showed that real faith shapes how we live each day. The world around us often tempts us to doubt anything we cannot see, which can dull our awareness of God. Yet God is truly near and actively working in unseen ways, calling us to live in that reality rather than following the skepticism of the world.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God tells us that without faith, it is impossible to please Him. True faith is a gift from God that justifies us, restoring our relationship with Him so that we are accepted in His sight. To come to God rightly, we must believe that He exists and that He rewards those who earnestly seek Him. Instead of shrinking back, genuine faith endures and diligently pursues friendship with God through prayer, worship, and reading Scripture.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you actively seek God through prayer and His Word today, rather than just knowing facts about Him?",
+    "Where does the skepticism of the world tempt you to forget that God is near and at work?"
+   ],
+   "prayer": "Lord God, thank You for the gift of faith that brings us into a relationship with You. Help us to remember that You are near and active, even when we cannot see what You are doing. Strengthen our hearts to seek You diligently each day and trust in Your promises. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Without Faith",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/without-faith"
+    },
+    "D2": {
+     "author": "Alex Crain",
+     "work": "The Duty of Living in the Reality of the Supernatural",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/the-duty-of-living-in-the-reality-of-the-supernatural-crosswalk-the-devotional-july-5-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

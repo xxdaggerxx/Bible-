@@ -1,0 +1,79 @@
+{
+ "id": "46-003-016",
+ "title": "God’s Temple and God’s Wisdom",
+ "refs": [
+  "1 Corinthians 3:16-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46003016,
+   "end": 46003023,
+   "ref": "1 Corinthians 3:16-23",
+   "ranges": [
+    [
+     46003016,
+     46003023
+    ]
+   ],
+   "title": "God's Temple and Belonging to Christ",
+   "key_verse": [
+    46003023,
+    46003023
+   ],
+   "reflect": [
+    {
+     "text": "You do not need to travel to a special holy site to meet with God. If you trust in Jesus, God's Spirit lives inside you right now. You and your fellow believers are His holy temple. Because you carry God's sacred presence into every ordinary part of your day, He calls you to honor Him in your thoughts, words, and actions. This truth also changes how we see other Christians, moving us to treat them with genuine honor, kindness, and respect.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Living as God's temple often looks backward to the people around us. The secular world regularly mocks deep devotion to God and treats humble worship as foolishness. Yet we should not let their laughter shake our faith. True wisdom begins when we are willing to let the world call us foolish so that we may faithfully follow the Lord.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Above all, remember where your true identity lies: you belong completely to Jesus. The Father gave you to Him, and Jesus paid for your life with His own blood. Because you are His, you have every reason to turn away from sin, work diligently, and stand firm through trials. As Charles Spurgeon wrote, let your reason for holy living simply be, \"I am Christ's.\"",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering that other Christians are God's temple change how you speak to them today?",
+    "When you face temptation or pressure from the world, how does knowing you belong to Christ give you strength to do what is right?"
+   ],
+   "prayer": "Lord God, thank You for making us Your temple and placing Your Holy Spirit within us. Give us courage when the world thinks our faith is foolish, and help us not to care about worldly praise. Keep our hearts mindful that we belong to Jesus, so that everything we do brings honor to Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 12",
+     "on": "1 Corinthians 3:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Whitney Hopler",
+     "work": "Every Place Can Be a Thin Place - The Crosswalk Devotional - June 15",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/every-place-can-be-a-thin-place-the-crosswalk-devotional.html"
+    },
+    "D3": {
+     "author": "Adrian Rogers",
+     "work": "Who Is the Real Fool? - Love Worth Finding - September 19",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-september-19-2020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

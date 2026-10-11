@@ -1,0 +1,113 @@
+{
+ "id": "46-014-026",
+ "title": "Orderly Worship",
+ "refs": [
+  "1 Corinthians 14:26-40"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46014033,
+   "end": 46014035,
+   "ref": "1 Corinthians 14:33-35",
+   "ranges": [
+    [
+     46014033,
+     46014035
+    ]
+   ],
+   "title": "\"Not a God of Disorder, but of Peace\"",
+   "key_verse": [
+    46014033,
+    46014033
+   ],
+   "reflect": [
+    {
+     "text": "The mixed messages and rapid changes of our culture can easily cause anxiety and mental fatigue. When the world feels noisy and unsettled, we can remember that God is never the author of confusion. He invites His children to walk in His quiet peace. We find reliable stability when we filter worldly noise through the truth of Scripture and rest in God's sovereign control, even when details remain uncertain.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God brings this same love for peace into the worship gathering of the church. Paul regulates authoritative teaching during public services so that meetings do not become chaotic. Scripture affirms women praying and prophesying, while reserving the pastoral teaching office for qualified men, reflecting God's order in creation. Both men and women are called to learn and grow under God's Word, honoring these biblical roles to preserve peace among God's people.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What confusing cultural messages do you need to filter through the truth of Scripture today?",
+    "How does resting in God's peaceful order help you learn and grow in the church?"
+   ],
+   "prayer": "Lord God, thank you that you are not a God of confusion, but of peace. When the world around us is noisy and stressful, help us find our stability in your Word. Teach us to honor your wise design in our church gatherings so that we may grow together in harmony. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Women Speaking in Church",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/women-speaking-in-church"
+    },
+    "D3": {
+     "author": "Emily Rose Massey",
+     "work": "A Prayer for Peace in Confusing Times - Your Daily Prayer - January 19",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-peace-in-confusing-times.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 46014026,
+   "end": 46014040,
+   "ref": "1 Corinthians 14:26-40",
+   "ranges": [
+    [
+     46014026,
+     46014040
+    ]
+   ],
+   "title": "Doing Everything in an Orderly Manner",
+   "key_verse": [
+    46014040,
+    46014040
+   ],
+   "reflect": [
+    {
+     "text": "Spiritual inspiration is a good gift, but inspiration without practical organization can lead to unnecessary frustration. We see God's character clearly in how He made the world. From the careful complexity of the human body to the rhythm of creation, God demonstrates that He is a God of purposeful order.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The local church reflects God's nature when believers coordinate their spiritual gifts and work together. Instead of acting independently, we are meant to cooperate so our worship helps everyone grow. We can also identify disordered areas in our personal lives and commit them to God, allowing Him to bring order so we can serve Him with greater effectiveness.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What area of your life feels disorganized and needs to be committed to God?",
+    "How can you better coordinate your gifts with other believers in your church?"
+   ],
+   "prayer": "Father, thank you for showing your wisdom through the order of creation. Forgive us when disorganization brings frustration to our lives and ministries. Help us to coordinate our gifts with one another so that our church reflects your nature to those around us. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Jack Graham",
+     "work": "Power Point - Feb. 14, 2008",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-feb-14-2008-11529765.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

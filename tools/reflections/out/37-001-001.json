@@ -1,0 +1,114 @@
+{
+ "id": "37-001-001",
+ "title": "A Call to Rebuild the Temple",
+ "refs": [
+  "Haggai 1:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 37001007,
+   "end": 37001009,
+   "ref": "Haggai 1:7-9",
+   "ranges": [
+    [
+     37001007,
+     37001009
+    ]
+   ],
+   "title": "\"Build the House\"",
+   "key_verse": [
+    37001008,
+    37001008
+   ],
+   "reflect": [
+    {
+     "text": "The people who returned from exile had stopped rebuilding the temple so they could focus completely on their own houses and livelihoods. They worked very hard, yet their crops were tiny, leaving them constantly drained and unsatisfied. God showed them that their persistent emptiness came from having their priorities out of order. Working harder was not the answer to their fruitless lives. Instead, true satisfaction and nourishment only come when we make space for God and give His presence first place.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When we hold back our giving to God to protect our own comfort, we think we are saving wisely. Yet as Charles Spurgeon noted, Scripture teaches that \"withholding tendeth to poverty.\" Selfishness always looks at home first, but godliness seeks God's kingdom. When we trust Him with an open hand, God can bless our efforts or grant deep contentment with what we have.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever felt exhausted and empty because your own plans pushed God out of first place?",
+    "How can you practice giving more freely to God's work this week?"
+   ],
+   "prayer": "Lord, forgive us when we keep our resources to ourselves and forget Your kingdom. Teach us to give with open hands and to seek Your presence before our own comfort. Please fill our hearts with contentment as we put You first. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 26",
+     "on": "Haggai 1:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Deidre Braley",
+     "work": "Build the Lord’s House First",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/build-the-lords-house-first-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 37001001,
+   "end": 37001011,
+   "ref": "Haggai 1:1-11",
+   "ranges": [
+    [
+     37001001,
+     37001011
+    ]
+   ],
+   "title": "Putting the Lord Back in First Place",
+   "key_verse": [
+    37001004,
+    37001004
+   ],
+   "reflect": [
+    {
+     "text": "It is easy for us to let everyday life, personal hobbies, and modern comforts crowd out our devotion to the Lord. In the days of the prophet Haggai, God's people spent their time and money finishing beautiful, paneled homes for themselves while leaving God's house in complete ruins. Their poor harvests and constant lack of joy were direct results of this disobedience. When we chase after our own desires instead of honoring God, our hearts end up restless.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God did not merely point out their wrong choices; He called them to turn back to Him right away. He gave them clear instructions to go to the hills, bring back timber, and build His house. For us today, renewal begins when we put down our personal idols and return the Lord to His rightful place as Master of our lives. When we obey His call and put Him above our worldly comforts, He brings true spiritual refreshment and fulfillment.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What personal comforts or hobbies are currently competing with your devotion to God?",
+    "What practical step can you take today to lay down those distractions and follow God's call?"
+   ],
+   "prayer": "Heavenly Father, search our hearts and show us where we have placed our personal comforts above You. Help us lay down every idol and obey Your commands without delay. Restore our spiritual strength and renew our joy as we follow You as our Lord. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Will Graham",
+     "work": "Will Graham Devotion: Struggling to Prioritize?",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/articles/will-graham-devotion-struggling-to-prioritize?ri=wc"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

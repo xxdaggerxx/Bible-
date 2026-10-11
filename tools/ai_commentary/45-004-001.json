@@ -1,0 +1,318 @@
+{
+ "book": 45,
+ "chapter": 4,
+ "first": 1,
+ "last": 25,
+ "ref": "Romans 4",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Paul asks what Abraham, the founding ancestor of the Jewish people, discovered through his own human efforts. The Jewish people took great pride in Abraham and looked to him as their greatest example. Paul begins with him to show that even this great patriarch was not accepted by God because of his good deeds.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "If Abraham had earned his right standing with God by his works, he would have had a reason to brag to other people. However, no human being can boast in the presence of God, because all human deeds fall short of God's perfection. Abraham therefore had no claim of merit before God.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Paul quotes Scripture to prove his point from Genesis. Abraham simply trusted God's promise about his future family, and God credited that faith to him as righteousness, which means being accepted as right with God. His right standing was not earned like wages, but was given freely by God.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Christ's own perfect righteousness is credited to the believer's account, and faith is simply the instrument that receives it.",
+     "sources": [
+      "Calvin",
+      "https://learn.ligonier.org/sermons/abraham-justified-faith"
+     ]
+    },
+    {
+     "tradition": "Methodist",
+     "view": "God graciously accepts the believer's faith itself in place of legal obedience, making faith the sole condition of acceptance.",
+     "sources": [
+      "Wesley",
+      "Adam Clarke"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Justification is not just a legal declaration of righteousness, but an internal change where God pours real righteousness into the believer's heart.",
+     "sources": [
+      "https://learn.ligonier.org/sermons/abraham-justified-faith",
+      "https://enduringword.com/bible-commentary/romans-4/"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Paul uses a common example from daily work. When someone works at a job, the pay they receive is an obligation owed to them, not a gift. If acceptance with God were based on our good deeds, God would be paying a debt instead of showing free grace.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Paul explains the core of the gospel message. God justifies—meaning He pardons and declares right—people who do not rely on their works but instead trust Him. Even though they are ungodly sinners in themselves, God accepts their faith and credits it as righteousness. Nobody needs to despair, because God freely forgives the undeserving.",
+   "meaning_sources": [
+    "Barnes",
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 8,
+   "meaning": "Paul turns to King David as a second witness to show that God credits righteousness apart from works. David declares that a person is truly blessed when their sins are forgiven, covered from sight, and never held against them by the Lord. True happiness comes not from earning God's favor, but from having our guilt completely wiped away by His mercy.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Paul asks whether this blessing of forgiveness is only for circumcised Jews or also for uncircumcised Gentiles. Scripture already stated that Abraham's faith was credited to him as righteousness. To settle who can receive this blessing, Paul examines the exact timing of when Abraham received it.",
+   "meaning_sources": [
+    "Barnes",
+    "Jamieson-Fausset-Brown",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "Paul points out that Abraham was declared righteous many years before he was circumcised. This proved that circumcision was not the cause or condition of his acceptance with God. Since Abraham was accepted while still uncircumcised, Gentiles can receive the same blessing without becoming Jewish.",
+   "meaning_sources": [
+    "Barnes",
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "Abraham received circumcision later as an outward sign and seal, confirming the righteousness he already possessed through faith. Because of this, Abraham is the spiritual father of all uncircumcised Gentiles who believe, allowing righteousness to be credited to them as well. Outward ceremonies do not create faith, but confirm what God has already done.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Circumcision was a covenant seal given to Abraham and his infant children, which shows that infants of believers belong in the church covenant and should be baptized.",
+     "sources": [
+      "Calvin",
+      "Matthew Henry"
+     ]
+    },
+    {
+     "tradition": "Baptist",
+     "view": "Circumcision sealed only the faith that Abraham personally had before the sign, showing that baptism belongs only to those who have already believed.",
+     "sources": [
+      "Matthew Henry",
+      "Robertson"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "Abraham is also the spiritual father of circumcised Jews, but only if they do more than carry the physical mark. They must also walk in the same steps of faith that Abraham took before he was circumcised. True connection to Abraham comes through sharing his faith, not merely through physical descent.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
+   "end": 13,
+   "meaning": "God promised Abraham and his descendants that he would be heir of the world, a promise pointing forward to Christ. This promise was not given because Abraham obeyed the law of Moses, since that law was not given until centuries later. Instead, it was granted through the righteousness that comes by trusting God.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 14,
+   "end": 14,
+   "meaning": "If the inheritance belonged only to those who keep the law, then faith would have no value at all. God's promise would be completely ruined, because no human being can obey the law perfectly. Relying on rule-keeping would shut everyone out from the blessing God promised.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 15,
+   "end": 15,
+   "meaning": "The law brings wrath because human beings are sinful and constantly break its commands. The law draws a clear line, and crossing that line turns wrong actions into deliberate violations. Since the law exposes our failure and brings judgment, it can never be the way we receive God's promise.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 16,
+   "end": 16,
+   "meaning": "God made the promise depend on faith so that it would rest entirely on His grace, which is His free and undeserved favor. This makes the promise completely secure for all of Abraham's spiritual family, including both Jews and Gentiles who share his faith. Because salvation rests on God's kindness rather than our weak efforts, it stands firm forever.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 17,
+   "end": 17,
+   "meaning": "Paul quotes Scripture where God told Abraham He had already made him the father of many nations. Abraham trusted in God, who brings the dead back to life and speaks of things that do not yet exist as though they already were. In God's certain plan, Abraham's vast family of believers was already established before it was seen on earth.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 18,
+   "end": 18,
+   "meaning": "Even when there was no natural reason for hope, Abraham chose to trust God's promise that he would have countless descendants. He believed he would become the father of many nations just as God had said. True faith trusts God's word even when all human circumstances seem completely impossible.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 19,
+   "end": 19,
+   "meaning": "Abraham did not weaken in faith, even though he knew his own body was as good as dead at about a hundred years old. He also looked honestly at the fact that Sarah had been unable to have children throughout her entire life. Faith does not ignore real difficulties, but looks past them to the power of God.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Barnes",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 20,
+   "end": 20,
+   "meaning": "Abraham did not waver in unbelief or doubt God's promise, but grew even stronger in his trust. By believing that God would do what seemed impossible, he brought great praise and honor to God. We bring glory to God whenever we treat His promises as entirely dependable.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 21,
+   "end": 21,
+   "meaning": "Abraham was completely convinced that God had full power to carry out whatever He had promised. He did not limit what God could do by his own human weakness. A healthy faith rests with complete confidence on God's ability to keep His word.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Barnes",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 22,
+   "end": 22,
+   "meaning": "Because Abraham trusted God with such unwavering confidence, God credited that faith to him as righteousness. This firm reliance proved that he was God's friend, and God accepted him as righteous in His sight. Trusting God's promise has always been the only way to be right with Him.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 23,
+   "end": 24,
+   "meaning": "The words saying that faith was credited to Abraham were not written merely to honor him as an ancient hero. They were written for us, assuring us that God will also credit righteousness to everyone who believes in Him. Our faith looks to the same powerful God who raised our Lord Jesus from the dead.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 25,
+   "end": 25,
+   "meaning": "Jesus was handed over to death on the cross to make atonement—meaning He paid the full penalty for our sins. He was then raised back to life for our justification, proving that His sacrifice was completely accepted by God and our pardon is secure. Christ's death paid our debt, and His resurrection guarantees our eternal life.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

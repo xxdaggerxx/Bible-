@@ -1,0 +1,66 @@
+{
+ "id": "24-007-016",
+ "title": "Judah’s Idolatry Persists",
+ "refs": [
+  "Jeremiah 7:16-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24007016,
+   "end": 24007029,
+   "ref": "Jeremiah 7:16-29",
+   "ranges": [
+    [
+     24007016,
+     24007029
+    ]
+   ],
+   "title": "True Life Through Obedience",
+   "key_verse": [
+    24007023,
+    24007023
+   ],
+   "reflect": [
+    {
+     "text": "In Jeremiah's day, people chased after other gods and their own desires, only to bring trouble on themselves. Many people today still spend their lives chasing worldly status, personal success, and material things. Yet running after these worldly goals always leaves us unfulfilled in the end.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God shows us in Scripture that true happiness and lasting success come through listening to Him. Obedience to God is not a sign of weakness, nor is it an oppressive burden that holds us down. Instead, it means surrendering our plans to His good and loving will.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we trust God and choose to walk in His ways, He frees us from the anxiety of trying to secure our own lives. Listening to His voice leads us away from empty pursuits and brings us into genuine peace and abundant life.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to look for happiness in worldly things rather than in God?",
+    "How can trusting God's good will free you from worry today?"
+   ],
+   "prayer": "Lord, forgive us for chasing things that can never truly satisfy us. Help us to see that obeying You is not a burden, but the way to true freedom and peace. Give us willing hearts to trust Your good will and walk in Your ways. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - August 16",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-aug-16-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

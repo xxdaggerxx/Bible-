@@ -1,0 +1,123 @@
+{
+ "id": "45-001-008",
+ "title": "Unashamed of the Gospel",
+ "refs": [
+  "Romans 1:8-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 45001016,
+   "end": 45001016,
+   "ref": "Romans 1:16",
+   "ranges": [
+    [
+     45001016,
+     45001016
+    ]
+   ],
+   "title": "\"Not Ashamed of the Gospel\"",
+   "key_verse": [
+    45001016,
+    45001016
+   ],
+   "reflect": [
+    {
+     "text": "To the world around Paul, the good news of a crucified and risen Savior sounded foolish. Rome was a mighty city, yet Paul was eager to share the message of Jesus there without embarrassment. Having met the risen Christ, he knew that the gospel centers on Jesus, whose life and impact surpass every human leader in history. We too are called to stand boldly for our faith in every setting, without hiding in shame or watering down the message to please skeptics.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "The gospel is far more than a plan to reform society. It is God's mighty power to rescue individual sinners from ruin. This divine power breaks the penalty of sin and keeps sustaining believers day by day. God designed salvation around faith so that it remains entirely a matter of grace, His undeserved kindness. Anyone who trusts in Christ, whether Jew or Gentile, receives this life-saving rescue.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "In what settings are you tempted to feel embarrassed or quiet about your trust in Jesus?",
+    "How does knowing that the gospel is God's power to save help you stand firm today?"
+   ],
+   "prayer": "Lord God, thank You for the saving power of the gospel of Jesus Christ. Give us courage to stand openly for our faith without fear or shame. Help us to rely on Your grace each day and share Your good news with those around us. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Power of God for Salvation",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/power-god-salvation"
+    },
+    "D4": {
+     "author": "Adrian Rogers",
+     "work": "The Gospel: The Power of God",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/decision-magazine/articles/the-gospel-the-power-of-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 45001017,
+   "end": 45001017,
+   "ref": "Romans 1:17",
+   "ranges": [
+    [
+     45001017,
+     45001017
+    ]
+   ],
+   "title": "\"The Righteous Will Live by Faith\"",
+   "key_verse": [
+    45001017,
+    45001017
+   ],
+   "reflect": [
+    {
+     "text": "In the gospel, God reveals His righteousness. Through faith, we receive a completely new standing before Him. Because of Jesus and His finished work, God does not merely forgive us; He justifies us by declaring us righteous according to His holy law. Christ's perfect standing is credited to all who believe, so God deals with us as though we had never sinned. Because Jesus satisfied every demand of the law for us, the law is no longer against us but now defends our salvation.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because our standing rests on Christ, we must live each day by faith rather than by our feelings or our good works. Charles Spurgeon observed that living by faith is far happier than relying on feelings, urging us to live \"by clinging to Jesus, by deriving all from Him.\" Just as a branch stays alive only by remaining joined to the vine, we receive true life by relying wholly on Jesus. Even our greatest efforts cannot save us, so our only security is trusting Him completely from start to finish.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you tend to measure your relationship with God by your daily feelings or by your faith in what Christ has done?",
+    "How does knowing that God treats you as though you had never sinned bring you comfort today?"
+   ],
+   "prayer": "Heavenly Father, thank You for declaring us righteous through the finished sacrifice of Jesus Christ. Teach us to rest in Your grace instead of depending on our own feelings or deeds. Keep us clinging to Jesus like branches in the vine, trusting Him with all our heart. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 20",
+     "on": "Romans 1:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Romans 1:17",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

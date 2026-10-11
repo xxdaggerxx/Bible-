@@ -1,0 +1,116 @@
+{
+ "id": "01-033-001",
+ "title": "Jacob Meets Esau",
+ "refs": [
+  "Genesis 33:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1033010,
+   "end": 1033010,
+   "ref": "Genesis 33:10",
+   "ranges": [
+    [
+     1033010,
+     1033010
+    ]
+   ],
+   "title": "\"Receive This Gift From My Hand\"",
+   "key_verse": [
+    1033010,
+    1033010
+   ],
+   "reflect": [
+    {
+     "text": "Jacob approached his brother Esau with deep humility in order to repair their broken relationship. Before coming to God, we have a duty to make peace with others. Jacob did not view his large household and herds as rewards from his own clever schemes. Instead, he recognized them as gifts of grace, God's kindness that he did not deserve. By urging Esau to accept his generous offering, Jacob sought to make restitution for past wrongs and confirm that fellowship between the brothers was truly restored.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Esau welcomed Jacob warmly because God had changed his heart, replacing his murderous hatred with genuine tears and brotherly love. People often understand how to honor earthly leaders by presenting acceptable gifts to gain their favor. In the same way, we are called to walk in peace, uprightness, and honest fellowship. Believers should reflect the love of Christ by forgiving others quickly, rather than holding onto bitterness or nursing old grudges.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there someone in your life with whom you need to seek peace and make things right?",
+    "How can you show the love of Christ today by letting go of bitterness and forgiving someone quickly?"
+   ],
+   "prayer": "Lord, thank You for Your grace and for changing hearts toward peace. Help us to seek reconciliation with others in humility and to make amends where we have caused pain. Teach us to forgive quickly and walk before You in uprightness. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 33:10",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Reconciled Brothers",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/reconciled-brothers"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1033001,
+   "end": 1033017,
+   "ref": "Genesis 33:1-17",
+   "ranges": [
+    [
+     1033001,
+     1033017
+    ]
+   ],
+   "title": "Reckoning on God in the Test",
+   "key_verse": [
+    1033014,
+    1033014
+   ],
+   "reflect": [
+    {
+     "text": "Just the night before meeting Esau, Jacob had wrestled with God and received His blessing. Yet as soon as he looked up and saw his brother coming with four hundred armed men, fear gripped him. As F. B. Meyer observed, \"After blessings often trial.\" Facing difficult people in ordinary life often tests whether our faith is real. Like Peter looking at the winds and waves, Jacob looked at his brother's strength and forgot that God was with him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Failure happens when we look at our troubles and rely on our own clever schemes instead of trusting God. Jacob resorted to an untrue excuse, promising to follow Esau slowly to Seir while intending all along to turn aside to Succoth. This deceit was unnecessary. God had already sent His angels ahead and changed Esau's heart. Instead of making excuses out of fear, we are called to act in simple faith, speaking truthfully and trusting God to carry us through every emergency.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When a trial appears after a time of spiritual blessing, do you trust God or turn to your own schemes?",
+    "In what areas of life are you tempted to make excuses rather than speaking honestly and acting in faith?"
+   ],
+   "prayer": "Heavenly Father, help us to remember that You are with us in every trial. Keep us from relying on our own deceitful plans when we feel afraid. Give us the faith to speak truthfully and trust Your power to lead us through each difficulty. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 33:14",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

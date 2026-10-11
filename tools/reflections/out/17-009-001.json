@@ -1,0 +1,81 @@
+{
+ "id": "17-009-001",
+ "title": "The Jews Destroy Their Enemies",
+ "refs": [
+  "Esther 9:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 17009001,
+   "end": 17009001,
+   "ref": "Esther 9:1",
+   "ranges": [
+    [
+     17009001,
+     17009001
+    ]
+   ],
+   "title": "\"Their Plan Was Overturned\"",
+   "key_verse": [
+    17009001,
+    17009001
+   ],
+   "reflect": [
+    {
+     "text": "On the very day set for their destruction, God completely overturned the plot against the Jews. Haman fell from pride into total ruin, while Mordecai was lifted from obscurity to great honor. Instead of gloating over their fallen foes, God's people celebrated His deliverance with praise. When we find ourselves facing circumstances that feel impossible or hopeless, we can depend on God's power to rescue and redeem us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "By refusing to take any plunder, the Jews made it clear that their battle was not about getting rich. Yet the gospel brings a vital truth to light. By nature, every one of us was an enemy of God deserving destruction, but Jesus took our punishment upon Himself on the cross. There, God turned a curse into our greatest blessing.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because of Christ, our calling is now very different from the battle in Esther. As F. B. Meyer notes, for the church, power is an opportunity for \"securing salvation and life.\" We do not fight with physical weapons, but in a spiritual battle through prayer and sharing the good news. God calls us to love our enemies and pray that the Holy Spirit will turn their hearts toward Him.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face situations that feel hopeless, how does God's power to overturn plans bring you peace?",
+    "How can you pray for and show love to someone who opposes you this week?"
+   ],
+   "prayer": "Lord God, thank You for being the One who can turn any hopeless situation around. We praise You that when we were Your enemies, Christ bore our punishment on the cross to give us life. Give us grace to lay down anger and fight our battles through prayer and the gospel. Work in the hearts of those who oppose You, and draw them to Your saving mercy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Esther 9:1",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "The God of Great Reversals",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-september-18-2023.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Holy War",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/holy-war"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

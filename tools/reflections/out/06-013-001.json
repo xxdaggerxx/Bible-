@@ -1,0 +1,114 @@
+{
+ "id": "06-013-001",
+ "title": "Lands Yet Unconquered",
+ "refs": [
+  "Joshua 13:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 6013001,
+   "end": 6013001,
+   "ref": "Joshua 13:1",
+   "ranges": [
+    [
+     6013001,
+     6013001
+    ]
+   ],
+   "title": "\"Much of the Land Remains\"",
+   "key_verse": [
+    6013001,
+    6013001
+   ],
+   "reflect": [
+    {
+     "text": "Joshua had spent decades leading God's people through difficult battles. Now he was an old man, but God did not put him into retirement. Instead, the Lord gave him a fresh task to oversee the division of the territory. Believers are never too old to serve God and point others to Jesus. Our spiritual gifts do not expire as the years pass. In later seasons of life, God still gives us vital work to do, such as mentoring younger believers, praying for others, visiting the sick, and sharing the good news.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "There are also fresh spiritual frontiers for every Christian to pursue. God gave us the Bible to possess, yet many of its pages remain untouched and unread. We can make up our minds to study unfamiliar books of Scripture and understand its great doctrines, which are the Bible's core teachings. There is also much more of Christ's love for us to discover. God shows no favoritism, so we can step out in faith and claim the spiritual riches He offers us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What parts of the Bible or steps in your walk with God have you left unexplored?",
+    "How can you use your gifts to serve the Lord and care for others in your current stage of life?"
+   ],
+   "prayer": "Lord, thank You that our calling to follow and serve You never expires. Open our eyes to the riches of Your Word and the depth of Your love for us. Help us to keep growing and to encourage the people around us today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joshua 13:1",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Zondervan",
+     "work": "Never Too Old",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/niv-devotions-for-women/niv-devotions-for-women-week-of-jan-2.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 6013001,
+   "end": 6013007,
+   "ref": "Joshua 13:1-7",
+   "ranges": [
+    [
+     6013001,
+     6013007
+    ]
+   ],
+   "title": "Dividing the Land in Faith",
+   "key_verse": [
+    6013007,
+    6013007
+   ],
+   "reflect": [
+    {
+     "text": "As Joshua grew old and physically exhausted, he faced a difficult question. He was not sure whether to assign the land to the tribes before every region had been conquered. God stepped into Joshua's dilemma with clear direction. The Lord did not reproach or blame Joshua for being unable to keep fighting. Instead, God promised that He Himself would drive out the remaining enemies on the borders if the Israelites trusted Him in battle.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God told Joshua to divide the land by casting lots. This showed God's supreme authority to choose each tribe's inheritance as He saw fit. The tribes were called to receive their land in faith, believing God would fulfill what He had promised. When we face confusing dilemmas and do not know what choice to make, we can look to Scripture and the Holy Spirit for practical guidance. We can move forward peacefully, knowing God is in control.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What difficult choice or situation is making you feel uncertain today?",
+    "How does knowing that God understands your limits help you rely on His guidance?"
+   ],
+   "prayer": "Father in heaven, thank You for Your gentle patience with our limits and fatigue. When we face hard choices, guide our steps through Your Word and Your Holy Spirit. Give us faith to trust Your promises and rest in Your loving care. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Divide the Conquered!",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/divide-the-conquered"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

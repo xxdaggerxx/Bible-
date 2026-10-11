@@ -1,0 +1,73 @@
+{
+ "id": "18-042-010",
+ "title": "The LORD Blesses Job",
+ "refs": [
+  "Job 42:10-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18042010,
+   "end": 18042017,
+   "ref": "Job 42:10-17",
+   "ranges": [
+    [
+     18042010,
+     18042017
+    ]
+   ],
+   "title": "Restored and Mature in God's Goodness",
+   "key_verse": [
+    18042010,
+    18042010
+   ],
+   "reflect": [
+    {
+     "text": "Devastating hardship can easily bring deep worry and confusion if we try to carry it by ourselves. In his sorrow, Job chose to keep worshipping God and trusting His authority. True spiritual restoration starts when we release our need for control and hand over our anxieties completely to God, trusting in His good timing.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Trials give us a choice. We can treat our suffering as an offense, or we can view it as a path to obey God. True endurance is not just giving up; it is actively pursuing holiness. By choosing God's will during hard times, Job grew into genuine spiritual maturity, finishing his long life full of faith and devotion.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God honored Job's steady endurance by restoring his broken relationships and doubling what he had lost. When we walk through trials, God can take our brokenness and use it to mature us spiritually. He invites us to surrender our worries and look forward to the goodness He brings in His time.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face deep trouble, do you tend to hold onto control or surrender your worries to God?",
+    "How can you view your present hardships as an opportunity to grow in obedience and spiritual maturity?"
+   ],
+   "prayer": "Lord, when life feels painful and confusing, help us release our worries and trust Your sovereign care. Give us grace to choose Your will rather than becoming bitter over our trials. Teach us to endure with patience so that we may grow in holiness and know Your restoration. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Tracie Miles",
+     "work": "God Can Restore What’s Been Lost and Broken",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-march-13-2018.html"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "CHOOSE GOD’S WILL",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-nov-21-2008-11595969.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

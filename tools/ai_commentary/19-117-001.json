@@ -1,0 +1,38 @@
+{
+ "book": 19,
+ "chapter": 117,
+ "first": 1,
+ "last": 2,
+ "ref": "Psalms 117",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "This is the shortest psalm in the Bible, and it calls the whole world to praise God, not just Israel. Paul quotes this verse in Romans 15:11 to show that the good news about Jesus was meant for the Gentiles (people who are not Jewish) too. The nations could only truly praise God if they would one day share in his mercy with Abraham's children. The call is given twice, which makes it even more certain that people from every nation will one day join in praising him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Here is the reason to praise God: his loving devotion and his faithfulness. The word for \"great\" also means \"strong.\" His mercy is powerful enough to win over sin and to cover even great sins. His faithfulness lasts forever, so he always keeps his promises, like his promise that all nations would be blessed through Abraham's family. The psalm ends as it began, with \"Hallelujah,\" which means \"Praise the LORD.\"",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 1: removed sources ['Keil & Delitzsch']",
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']"
+ ]
+}

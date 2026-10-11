@@ -1,0 +1,72 @@
+{
+ "id": "09-004-012",
+ "title": "The Death of Eli",
+ "refs": [
+  "1 Samuel 4:12-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9004012,
+   "end": 9004022,
+   "ref": "1 Samuel 4:12-22",
+   "ranges": [
+    [
+     9004012,
+     9004022
+    ]
+   ],
+   "title": "The Glory Has Departed",
+   "key_verse": [
+    9004022,
+    9004022
+   ],
+   "reflect": [
+    {
+     "text": "The terrible news of Israel's defeat and the capture of the ark brought sudden tragedy to Eli's family. Eli fell and died, and his daughter-in-law went into labor and died as well. Before she passed away, she named her newborn baby Ichabod, lamenting that the glory of God had departed from the nation. The loss of God's presence does not happen all at once; it often begins with empty religious routine and inward moral compromise.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Eli's daughter-in-law had already endured the sorrow of her husband's hypocrisy and death. Yet in her final moments, God's honor mattered far more to her than her own grief or physical pain. Naming her son Ichabod testified to the spiritual disaster facing Israel. Her reaction proved that she had lived closely with the Lord. Believers experience true hope and freedom when God's glory becomes their primary concern.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This account shows that living faith is fragile and can disappear in just one generation. Places that once enjoyed a vibrant Christian heritage can end up in spiritual ruins. We must guard against letting our worship become a hollow routine, keeping our hearts fully devoted to God.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Has your worship become an empty routine, or does it come from a heart truly devoted to God?",
+    "When you face difficulties, does God's honor matter more to you than your personal comfort?"
+   ],
+   "prayer": "Lord, protect us from drifting into cold and empty religious habits. Help us to walk closely with you each day so our faith remains vibrant and alive. May your glory and honor always be our greatest concern. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg",
+     "work": "His Glory, Our Concern",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-march-25-2025.html"
+    },
+    "D2": {
+     "author": "Stuart Briscoe",
+     "work": "Ichabod",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/ichabod-one-year-devotions-for-men-september-8.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

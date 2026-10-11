@@ -1,0 +1,154 @@
+{
+ "book": 23,
+ "chapter": 35,
+ "first": 1,
+ "last": 10,
+ "ref": "Isaiah 35",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "God promises that dry, empty wastelands will suddenly burst into bloom with beautiful flowers and singing. This picture shows the wonderful change God brings when his grace renews barren hearts and desolated lands. It points forward to the peace and fruitful life that the Messiah brings to the world.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "This foretells a future thousand-year earthly kingdom where the physical land of Israel and the earth will literally be transformed.",
+     "sources": [
+      "https://www.preceptaustin.org/isaiah-35-commentary"
+     ]
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "This describes the spiritual renewal of the church, bringing both Jews and Gentiles to spiritual life under Christ.",
+     "sources": [
+      "https://biblehub.com/commentaries/isaiah/35-1.htm"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Dry places will receive the lush green beauty of famous, fertile regions like Lebanon, Carmel, and Sharon. True beauty and spiritual fruitfulness come only when God reveals his own glory and goodness to his people. When believers see God's greatness by faith, their lives are filled with deep and lasting praise.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "God commands his servants to bring comfort to believers who feel exhausted and ready to faint. Weak hands cannot work or hold onto faith, and trembling knees cannot stand firm or run the race. God's people are called to encourage one another so that everyone can stand strong.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "God gives a message of courage to people whose hearts are racing with panic. He is coming with vengeance—his righteous punishment of evil forces that harm his people—in order to rescue them. Because God himself comes to save, his people do not need to live in fear of their enemies.",
+   "meaning_sources": [
+    "Calvin",
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "When the Lord arrives to save his people, the blind will see and the deaf will hear. Jesus fulfilled these words literally during his earthly ministry by healing the sick with a single word. These miracles also show how Christ cures spiritual blindness, opening our minds to understand God's truth.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://biblehub.com/commentaries/isaiah/35-5.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "People who were crippled will leap like deer, and those who could not talk will shout songs of joy. In the same way, fresh streams will suddenly burst out of dry sand in the desert. This reveals the life-giving work of God's Holy Spirit, who brings refreshing grace and joyful praise to barren souls.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "Sandy plains that once looked like water only because of heat mirages will become real lakes and bubbling springs. The dry dens where wild jackals once lived will turn into lush wetlands filled with tall grass and reeds. God promises to turn places of dryness and danger into rich homes of life and peace.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "God builds a raised road called the Way of Holiness to lead his people safely home. Unclean and rebellious people are kept off this road, which is reserved for those whom God has cleansed. The path of obeying God is made so clear that even simple, uneducated travelers will not get lost on it.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "The holy road is the Catholic Church, whose guidance keeps ordinary believers safe in the truth in a way that reading Scripture alone cannot guarantee.",
+     "sources": [
+      "https://biblehub.com/commentaries/haydock/isaiah/35.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "No lions or dangerous beasts of prey will be allowed on this holy path. Those whom God has redeemed—bought back and set free from bondage—will walk there in complete security. God removes every fatal obstacle and guards his travelers so that nothing can do them true harm.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "The people whom the Lord has bought back will return to Zion with songs of triumph and unending joy. Unlike earthly happiness that quickly fades, their joy will rest on them like a royal crown forever. In God's presence, all sadness, tears, and heavy sighing will run away and disappear for good.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 5: removed sources ['Adam Clarke']",
+  "v. 6: removed sources ['Wesley']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

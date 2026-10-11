@@ -1,0 +1,75 @@
+{
+ "id": "40-012-033",
+ "title": "Good and Bad Fruit",
+ "refs": [
+  "Matthew 12:33-37"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40012033,
+   "end": 40012037,
+   "ref": "Matthew 12:33-37",
+   "ranges": [
+    [
+     40012033,
+     40012037
+    ]
+   ],
+   "title": "What Your Words Reveal About Your Heart",
+   "key_verse": [
+    40012034,
+    40012034
+   ],
+   "reflect": [
+    {
+     "text": "Jesus teaches that what comes out of our mouths shows what is stored inside us. Just like a tree is recognized by its fruit, our words display our true inner character. When we speak without thinking, our off-the-cuff reactions and careless words reveal what is really in our hearts. Jesus warns that we will be held accountable on the day of judgment for every thoughtless and useless word we say.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When we notice harsh, critical, or unkind speech coming from our mouths, it points to underlying anger and insecurity. We cannot fix this simply by trying harder to hold back our words or filter what we say. Relying on our own willpower cannot solve the core problem of what is wrong inside.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The only real solution is the deep work of the gospel changing our hearts. We need the power of the Holy Spirit rather than our own effort. When we rest in God's love and let him heal our past pain, our renewed hearts will naturally overflow with words that are patient, kind, and good.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What do your everyday reactions and careless words reveal about the state of your heart?",
+    "Where do you need the Holy Spirit and God's love to heal your heart instead of just relying on willpower?"
+   ],
+   "prayer": "Lord, forgive us for the thoughtless and unkind words we have spoken. We know that we cannot change ourselves by our own strength. Please heal and transform our hearts through the Holy Spirit so that our speech reflects your love and grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Rick Warren",
+     "work": "What Does Your Tongue Reveal About Your Heart?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-june-21-2020.html"
+    },
+    "D2": {
+     "author": "Paul Carter",
+     "work": "Every Careless Word You Speak",
+     "site": "The Gospel Coalition",
+     "url": "https://ca.thegospelcoalition.org/columns/ad-fontes/every-careless-word-you-speak/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

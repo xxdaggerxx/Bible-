@@ -1,0 +1,66 @@
+{
+ "id": "21-003-009",
+ "title": "God’s Works Remain Forever",
+ "refs": [
+  "Ecclesiastes 3:9-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 21003011,
+   "end": 21003011,
+   "ref": "Ecclesiastes 3:11",
+   "ranges": [
+    [
+     21003011,
+     21003011
+    ]
+   ],
+   "title": "\"Eternity in the Hearts of Men\"",
+   "key_verse": [
+    21003011,
+    21003011
+   ],
+   "reflect": [
+    {
+     "text": "Humans are different from the rest of creation. We know that our time on earth will end, and that thought can trouble us. God has placed eternity in our hearts, giving each of us a deep desire for something beyond this mortal life. Without this eternal view, our days can feel empty and incomplete. Through faith in Jesus Christ, eternal life begins right now and continues beyond death. We can face our brief lives with quiet peace as we rest in God's gift of salvation.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God also holds time in His hands. The timing of the big events in our lives is never an accident. Even when we cannot see it, God works behind the scenes according to His plan. He can take our past hurt, deep sadness, and heartbreak, and turn them into healing and new purpose. When we trust that God has a clear timeline for our lives, we can move past our fears and worries. Looking back at how God guided our steps gives us confidence that He is still in control today.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you need to trust God's timing with past hurts or future fears?",
+    "How does knowing God has given you eternal life change the way you view your daily life?"
+   ],
+   "prayer": "Lord God, thank You for placing a longing for eternity inside our hearts and giving us life through Jesus. Help us to trust Your timing, even when we walk through painful seasons. Give us peace as we rest in Your hands today and always. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Amanda Idleman",
+     "work": "He Has Set Eternity in Our Hearts (Ecclesiastes 3:11) - Your Daily Bible Verse - March 9",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-march-9.html"
+    },
+    "D2": {
+     "author": "Tracie Miles",
+     "work": "God Doesn’t Work by Coincidence - Encouragement for Today - February 7, 2023",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-february-7-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

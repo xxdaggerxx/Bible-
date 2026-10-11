@@ -1,0 +1,66 @@
+{
+ "id": "23-014-024",
+ "title": "God’s Purpose against Assyria",
+ "refs": [
+  "Isaiah 14:24-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23014024,
+   "end": 23014027,
+   "ref": "Isaiah 14:24-27",
+   "ranges": [
+    [
+     23014024,
+     23014027
+    ]
+   ],
+   "title": "God's Plan Always Stands",
+   "key_verse": [
+    23014024,
+    23014024
+   ],
+   "reflect": [
+    {
+     "text": "When Isaiah spoke these words, the empire of Assyria seemed completely unstoppable. Yet God promised that Assyria would be broken and the heavy burden lifted from his people. The way history unfolded proved that Isaiah's words were true. Because God kept his promises about mighty world powers like Assyria and Babylon, we can be sure that his plans are totally dependable.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This shows us that our world is not governed by blind luck or random chance. God is actively involved in human history and earthly events. Even the most powerful nations and rulers cannot stop what he has decided to do. When God stretches out his hand to fulfill his purpose, no one has the power to turn it back.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This brings deep peace when we face daunting circumstances in our own lives. Hard situations can make us feel helpless, but we belong to a sovereign God, a God who has complete authority over everything. You can take comfort knowing that his good intentions for you will never be overturned.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What hard situation in your life feels too big or powerful right now?",
+    "How does knowing that God guides all of history give you peace today?"
+   ],
+   "prayer": "Lord, thank you that your plans can never be broken and that you hold the whole world in your hands. When life feels frightening, help me remember that no earthly power is greater than you. Please give me peace as I trust your good purpose for my life today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Amanda Idleman",
+     "work": "God's Sovereign Plan (Isaiah 14:24) - Your Daily Bible Verse - June 15",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-june-15.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

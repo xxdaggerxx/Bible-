@@ -1,0 +1,66 @@
+{
+ "id": "26-017-001",
+ "title": "The Parable of Two Eagles and a Vine",
+ "refs": [
+  "Ezekiel 17:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26017001,
+   "end": 26017010,
+   "ref": "Ezekiel 17:1-10",
+   "ranges": [
+    [
+     26017001,
+     26017010
+    ]
+   ],
+   "title": "Keeping Our Promises to God",
+   "key_verse": [
+    26017009,
+    26017009
+   ],
+   "reflect": [
+    {
+     "text": "God gave the prophet Ezekiel a parable about two great eagles and a vine. The first eagle with colorful feathers stands for King Nebuchadnezzar and his conquest of Judah. He set up King Zedekiah to rule, like a low vine planted in good soil. This vine was meant to live in peace and stability under Babylon.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Instead of being content, the vine turned its branches toward another eagle, looking to Egypt for military help. Reaching out to Egypt broke sacred vows, which are serious promises made before God. Because of this unfaithfulness, destruction came upon Jerusalem, and the vine was destined to wither away.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This parable reminds us that God takes our words seriously. As believers, we are accountable to keep every promise and covenant we make before Him. God calls us to remain honest and faithful to our commitments, even when we are tempted to look somewhere else for help.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a promise you have made to God or to someone else that you need to honor today?",
+    "Why is keeping your word so important when you follow God?"
+   ],
+   "prayer": "Lord God, thank you for being faithful to us in all things. Please help us to keep our promises and honor the vows we make before you. Give us strength to be honest and trustworthy every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 09/05/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-09-or-05-or-2002-1147232.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

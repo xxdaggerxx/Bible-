@@ -1,0 +1,66 @@
+{
+ "id": "65-001-017",
+ "title": "A Call to Persevere",
+ "refs": [
+  "Jude 1:17-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 65001017,
+   "end": 65001023,
+   "ref": "Jude 1:17-23",
+   "ranges": [
+    [
+     65001017,
+     65001023
+    ]
+   ],
+   "title": "Standing Firm and Rescuing Others",
+   "key_verse": [
+    65001021,
+    65001021
+   ],
+   "reflect": [
+    {
+     "text": "We live in a world where many people turn away from God and cause division. To stand strong, we need to anchor our lives in the truths taught in the Bible. Growing in faith is not something we are meant to do alone; it is a shared task with our brothers and sisters in Christ. As we pray together in the Holy Spirit and encourage one another in fellowship, we keep ourselves in God's love. Looking forward to the day Jesus gives us eternal life gives us the patience to keep going.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Standing firm in the truth also means reaching out to people who are in danger. Defending what is right should never replace our mission to help those who are lost. Some people are troubled by honest doubts, while others have believed harmful lies and need an urgent rescue with God's truth. We are called to show mercy to them, but we must also be careful that their sinful ways do not rub off on us. We can step toward them with confidence because God keeps us secure in His love.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you help another believer grow in faith this week?",
+    "Is there someone in your life struggling with doubt whom you can reach out to with mercy and truth?"
+   ],
+   "prayer": "Lord Jesus, thank You for holding us safe in Your care. Please teach us to build one another up in Your Word and pray through the guidance of Your Spirit. Give us loving hearts to reach out to those who wander, while keeping us pure from sin. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Build Yourselves Up",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/build-yourselves"
+    },
+    "D2": {
+     "author": "Grace to You",
+     "work": "Your Berean Battle Plan: Rescue",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/B150821/your-berean-battle-plan-rescue"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

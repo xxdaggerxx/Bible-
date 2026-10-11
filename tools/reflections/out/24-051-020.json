@@ -1,0 +1,61 @@
+{
+ "id": "24-051-020",
+ "title": "Babylon’s Punishment",
+ "refs": [
+  "Jeremiah 51:20-58"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24051020,
+   "end": 24051058,
+   "ref": "Jeremiah 51:20-58",
+   "ranges": [
+    [
+     24051020,
+     24051058
+    ]
+   ],
+   "title": "Guarding the Purity of God's House",
+   "key_verse": [
+    24051051,
+    24051051
+   ],
+   "reflect": [
+    {
+     "text": "In Jeremiah's day, God's people felt deep shame because foreigners had stepped into the holy places of the temple. That sacred space was meant for God and His appointed priests alone. Today, we should feel a similar sorrow when worldly ways creep into the church. It harms the community of faith when people treat the church as merely a social club or an earthly institution, rather than a gathered body of genuine believers. As Charles Spurgeon warned, \"To adulterate the Church is to pollute a well.\" God calls His people to protect the spiritual purity of His family.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This care for God's house must always start with ourselves. Before we look at others, we need to examine our own hearts. We must ask whether we are truly resting on Christ in saving faith or simply going through religious routines. Taking part in sacred practices like the Lord's Supper is a joy for those who trust in Jesus, but we must never approach it casually. When we come to the Lord, we should ask Him to search our inner lives so that we do not enter His presence as mere pretenders.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you take part in the Lord's Supper and gathered worship, do you take time to examine your heart before God?",
+    "How can we help keep our church community centered on true faith in Christ rather than empty religious routines?"
+   ],
+   "prayer": "Lord God, search our hearts and reveal anything that is not pleasing to You. Forgive us for the times we treat holy things lightly or settle for outward religion without true faith. Guard the purity of Your church, and draw us to Jesus with sincere and humble hearts.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 18",
+     "on": "Jeremiah 51:51",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

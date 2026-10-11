@@ -1,0 +1,67 @@
+{
+ "id": "38-012-001",
+ "title": "The Coming Deliverance of Jerusalem",
+ "refs": [
+  "Zechariah 12:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 38012001,
+   "end": 38012009,
+   "ref": "Zechariah 12:1-9",
+   "ranges": [
+    [
+     38012001,
+     38012009
+    ]
+   ],
+   "title": "Strength for the Feeble",
+   "key_verse": [
+    38012008,
+    38012008
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, the Lord promises to protect His people from every enemy that gathers against them. As Charles Spurgeon observes, one of the best ways God defends us is by giving us inner strength. People who trust the Lord are better than stone walls, and faith is far stronger than any fortress.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God does not depend on our natural abilities. He can take the weakest and most fragile person among us and make them like David, the young champion of Israel. When the Lord places His power in our hearts, we can face giant troubles with calm courage, completely confident in Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord can also take our leaders and make them far mightier than they could ever be on their own. He can lift His faithful servants to a level of grace and holiness that is clearly supernatural. When God dwells inside His people, He provides all the strength we need to stand firm.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of your life do you feel weak and in need of God's inner strength today?",
+    "How does knowing that God works through the feeblest believer change the way you face difficult situations?"
+   ],
+   "prayer": "Lord, thank You that our protection comes from Your power and not our own strength. Please take our weakness today and fill our hearts with sacred courage to trust You. Dwell within us, and make our whole church strong in faith so that Your work is clearly seen. In Jesus' name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 18",
+     "on": "Zechariah 12:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

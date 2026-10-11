@@ -1,0 +1,74 @@
+{
+ "id": "11-001-011",
+ "title": "Nathan and Bathsheba before David",
+ "refs": [
+  "1 Kings 1:11-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11001011,
+   "end": 11001027,
+   "ref": "1 Kings 1:11-27",
+   "ranges": [
+    [
+     11001011,
+     11001027
+    ]
+   ],
+   "title": "Faithful Action in a Time of Crisis",
+   "key_verse": [
+    11001020,
+    11001020
+   ],
+   "reflect": [
+    {
+     "text": "As King David grew weak and old, his son Adonijah took advantage of the situation to try to claim the throne. He threw a large feast and gathered supporters, but he intentionally left out Solomon and Nathan. This showed that Adonijah planned to get rid of them. Bathsheba and her young son Solomon faced real danger of being treated as traitors and put to death if Adonijah took control.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Nathan showed what true spiritual care looks like. Years earlier he had rebuked David and Bathsheba for their sin, but now he stood by them with compassion in their hour of need. Knowing Bathsheba had a voice David would listen to, Nathan sent her to speak to the king first, and then he stepped in right after her to back up her words.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Nathan and Bathsheba did not simply sit back and wait for God to fix everything on His own. They knew God's promises, but they also knew they needed to act with wisdom and courage. Their urgent appeal reminded frail King David of his oath, stirring him to protect his family and do what God had willed for the kingdom.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face a difficult situation, do you tend to sit back passively, or do you take wise, prayerful action?",
+    "How can you show both truth and ongoing care to someone you have had to correct in the past?"
+   ],
+   "prayer": "Lord God, thank You that Your promises never fail. Give us wisdom and courage to take faithful steps when difficulties arise rather than waiting passively. Teach us to support and protect one another with true compassion. In Jesus' name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Who Will Be King?",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/who-will-be-king"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 80: 1 Kings 1:11–31",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-80-1-kings-1-1131.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

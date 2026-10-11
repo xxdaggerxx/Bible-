@@ -1,0 +1,66 @@
+{
+ "id": "09-026-001",
+ "title": "David Again Spares Saul",
+ "refs": [
+  "1 Samuel 26:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9026001,
+   "end": 9026012,
+   "ref": "1 Samuel 26:1-12",
+   "ranges": [
+    [
+     9026001,
+     9026012
+    ]
+   ],
+   "title": "Waiting for the Lord's Time",
+   "key_verse": [
+    9026010,
+    9026010
+   ],
+   "reflect": [
+    {
+     "text": "Even though Saul had previously promised to leave David in peace, he broke his word and marched into the wilderness with an army to hunt him down. David and Abishai crept right into Saul's camp in the middle of the night. No one stopped them or even stirred, because the Lord had placed a deep sleep over the entire camp.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Abishai saw this as a golden opportunity to strike Saul dead with a single blow. Yet David held him back. God had already promised to make David king, but David refused to seize the throne by personal force or violence. He chose to wait, trusting that the Lord Himself would remove Saul when the right day arrived.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "David's patience shows deep faith in God's providence, which means God's sovereign control over every detail of life. Believers can rest knowing that God directs all circumstances and works faithfully for their ultimate good. Because He is in control, we never need to sin or rush ahead to force God's promises to come true.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you tempted to take matters into your own hands instead of waiting on God?",
+    "How does knowing that God is in control of your circumstances help you act patiently toward others?"
+   ],
+   "prayer": "Lord God, thank You for being in control of all our circumstances. Help us to trust Your timing when we are tempted to rush ahead or take matters into our own hands. Give us patience to obey You and to trust that You are always working for our good. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "David Spares Saul Again",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/david-spares-saul-again"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

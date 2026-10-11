@@ -1,0 +1,83 @@
+{
+ "id": "35-003-017",
+ "title": "Habakkuk Rejoices",
+ "refs": [
+  "Habakkuk 3:17-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 35003017,
+   "end": 35003019,
+   "ref": "Habakkuk 3:17-19",
+   "ranges": [
+    [
+     35003017,
+     35003019
+    ]
+   ],
+   "title": "Rejoicing When Everything Fails",
+   "key_verse": [
+    35003018,
+    35003018
+   ],
+   "reflect": [
+    {
+     "text": "We often expect joy to arrive only when our plans work out. Habakkuk faced the total collapse of his food and livelihood, with barren fields and empty stalls. Yet true biblical faith does not depend on easy times. Genuine faith learns to rejoice in God for His own sake, finding peace in His promises even when every earthly support is stripped away.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Deep spiritual joy comes from knowing that the Lord Himself is enough. As Charles Spurgeon noted, \"Jehovah Himself was his strength.\" When we remember how God cared for His people in the past, we can surrender our daily worries. His unchanging character remains our greatest reward, even through painful seasons of waiting and loss.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God does not simply give us endurance; He makes our steps steady like a deer leaping over steep rocks. When our path feels treacherous and demanding, the Lord keeps us from slipping. He guides us safely through the low valleys and leads us up the high hills into His own presence.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When things do not go as you planned, how can you look to God Himself for joy rather than your circumstances?",
+    "In what difficult or steep place in your life do you need God to make your steps sure today?"
+   ],
+   "prayer": "Lord God, thank You for being our strength when our earthly comforts fail. Help us to find our joy in who You are rather than what we have. Make our feet steady on difficult paths, and teach our hearts to rest in Your faithful love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 3",
+     "on": "Habakkuk 3:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Alisha Headley",
+     "work": "Joy That Doesn't Need Perfect Circumstances",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/joy-that-doesnt-need-perfect-circumstances.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Taking Joy in the God of Salvation",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/taking-joy-god-salvation"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

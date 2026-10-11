@@ -1,0 +1,67 @@
+{
+ "id": "26-048-030",
+ "title": "The City Gates and Dimensions",
+ "refs": [
+  "Ezekiel 48:30-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26048030,
+   "end": 26048035,
+   "ref": "Ezekiel 48:30-35",
+   "ranges": [
+    [
+     26048030,
+     26048035
+    ]
+   ],
+   "title": "The Lord Is There",
+   "key_verse": [
+    26048035,
+    26048035
+   ],
+   "reflect": [
+    {
+     "text": "Ezekiel describes a city with gates open on every side, named after the tribes of Israel, but its greatest feature is its final name: The Lord Is There. As F. B. Meyer notes, the main mark of this city is that God Himself lives among His people. This promise offers deep comfort to anyone carrying grief. Where God dwells, sorrow and crying cannot remain, and every tear will be wiped away.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This home also brings peace to people who are separated from family and friends. Its gates stand open to welcome God's children back from far lands and long journeys. In God's presence, they meet together as one family, never to be divided again.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's dwelling also comforts those who struggle with doubts and unanswered questions. In this life, we often walk through dark times, needing to trust God without seeing clearly. But in the city where God lives, His light clears away every shadow, solving every riddle and bringing true peace to our minds.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God is present bring you peace when you face grief or confusion?",
+    "Which promise of God's presence do you need to remember most today?"
+   ],
+   "prayer": "Lord God, thank You for the promise that You dwell with Your people. When we walk through sorrow, loneliness, or hard questions, remind us that You are near. Help us trust in Your light today and look forward to our eternal home with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 48:35",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,65 @@
+{
+ "id": "46-005-009",
+ "title": "Expel the Immoral Brother",
+ "refs": [
+  "1 Corinthians 5:9-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46005009,
+   "end": 46005013,
+   "ref": "1 Corinthians 5:9-13",
+   "ranges": [
+    [
+     46005009,
+     46005013
+    ]
+   ],
+   "title": "Loving the World and Guarding the Church",
+   "key_verse": [
+    46005012,
+    46005012
+   ],
+   "reflect": [
+    {
+     "text": "It is easy for churches to swing between two extremes. Sometimes we isolate ourselves completely from the world, and other times we become too easygoing about open sin inside the church family. Paul reminds us that we are meant to keep friendships with non-Christians. We need to stay in touch with them so we can show God's love and share the gospel. God Himself will judge those outside the church, so that is not our job.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The standard changes when someone claims to be a follower of Jesus but clings to serious, unrepentant sin. If we keep enjoying normal fellowship with them, we might give them a false sense of security about their salvation. Church discipline should always be handled patiently and follow biblical steps, with the true goal of leading the person to repentance, which means turning away from sin and back to God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you maintaining friendships with non-Christians so that you can show them God's love?",
+    "Why is it unloving to treat persistent, unrepentant sin among believers as if it does not matter?"
+   ],
+   "prayer": "Heavenly Father, give us wisdom to engage our neighbours with love and grace. Help our church hold to Your truth and protect its witness. Give us courage to address sin faithfully so that hearts may be turned back to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Purging Evil from the Church",
+     "site": "Ligonier Ministries",
+     "url": "https://www.ligonier.org/learn/devotionals/purging-evil-from-the-church"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "If that person still refuses to turn back, the church is called to take the difficult step of expelling them. This painful choice protects the purity and integrity of the church community. It also helps the person understand the serious danger of their sin.",
+     "problem": "Neither the devotional nor the passage states that expelling an individual helps them understand the serious danger of their sin."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

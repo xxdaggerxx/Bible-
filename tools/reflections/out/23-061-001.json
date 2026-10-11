@@ -1,0 +1,67 @@
+{
+ "id": "23-061-001",
+ "title": "The Year of the LORD’s Favor",
+ "refs": [
+  "Isaiah 61:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23061001,
+   "end": 23061011,
+   "ref": "Isaiah 61:1-11",
+   "ranges": [
+    [
+     23061001,
+     23061011
+    ]
+   ],
+   "title": "Beauty from Ashes and a Holy Calling",
+   "key_verse": [
+    23061003,
+    23061003
+   ],
+   "reflect": [
+    {
+     "text": "God promises in this chapter to replace our ashes with beauty and our grief with joy. Yet, as Kim Potter points out, we cannot have true beauty without the ashes first. Ashes come from fire, and God uses fire to refine us rather than destroy us. Like a metalsmith purifying silver, the Lord burns away sin and compromise. When we surrender to this refining work, He removes the hindrances in our hearts so His glory can be clearly seen.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Once God restores us, He invites us into a holy calling. The passage tells us that God's people will be known as priests and ministers. Charles Spurgeon notes that this promise belongs spiritually to all who believe in Christ. We may work regular jobs or go about ordinary tasks, but our true life work is to serve God. We are set apart to offer Him constant prayer, praise, and faithful obedience, letting go of the world's distractions to live wholly for Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What impurities or compromises might God be refining in your life right now?",
+    "How can you live today as someone set apart to serve the Lord in your daily routine?"
+   ],
+   "prayer": "Lord, refine our hearts and burn away anything that keeps us from following you completely. Help us to accept your cleansing work so that your beauty and grace can be seen in us. Teach us to live each day as your servants, offering our daily work, prayers, and praise to you alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 25",
+     "on": "Isaiah 61:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Kim Potter",
+     "work": "You Can’t Have Beauty Without Ashes",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/women/you-can-t-have-beauty-without-ashes.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "26-026-001",
+ "title": "A Prophecy against Tyre",
+ "refs": [
+  "Ezekiel 26:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26026001,
+   "end": 26026021,
+   "ref": "Ezekiel 26:1-21",
+   "ranges": [
+    [
+     26026001,
+     26026021
+    ]
+   ],
+   "title": "The Fall of Proud Tyre",
+   "key_verse": [
+    26026021,
+    26026021
+   ],
+   "reflect": [
+    {
+     "text": "When Jerusalem was destroyed, the merchant city of Tyre celebrated. Tyre looked at Jerusalem's ruin as an opportunity to gain control of trade routes and grow richer. Instead of taking warning from God's judgment on Jerusalem, the city gloated for selfish gain. God made it clear that he opposes such cold pride, announcing that many nations would rise against Tyre like ocean waves, beginning with King Nebuchadnezzar.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "In its day, Tyre seemed indestructible, ruling trade across the seas much like Venice or London did in later centuries. Yet Ezekiel foretold that its towers would fall, its lively songs would end, and the island would be scraped bare like a rock for spreading nets. As F. B. Meyer observed, everything that comes from \"human pride\" will eventually perish. History proved this prophecy true, showing us that Scripture can be fully trusted.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The chapter closes with the warning that Tyre would sink away and never be found. For believers, Scripture offers a wonderful contrast to this grim end. While earthly pride vanishes into judgment, God promises to forgive those who trust him, wiping away their sins so completely that their guilt can never be found.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever find yourself secretly pleased or seeking an advantage when someone else suffers a setback?",
+    "How does the historical fulfillment of God's warnings strengthen your confidence in the truth of the Bible?"
+   ],
+   "prayer": "Lord God, keep our hearts from pride, and teach us never to take pleasure in the hardships of others. Thank you that your word is entirely reliable and true in every generation. We praise you for your mercy, which blots out our sins so that they can never be held against us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 26:21",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Judgment of Tyre",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/judgment-tyre"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

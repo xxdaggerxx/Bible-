@@ -1,0 +1,98 @@
+{
+ "book": 24,
+ "chapter": 47,
+ "first": 1,
+ "last": 7,
+ "ref": "Jeremiah 47",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The Lord gave Jeremiah a message against the Philistines before an Egyptian Pharaoh attacked their city of Gaza. God revealed this warning while the Philistines still felt safe and prosperous, showing that human peace cannot prevent divine judgment. The Egyptian attack would only be the beginning of their troubles, pointing forward to a much larger destruction.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The Lord compares the coming Babylonian army to a river overflowing its banks and sweeping down from the north like a massive flood. This unstoppable force will drown the land, destroying its wealth, crops, and cities along with everyone living in them. Faced with such complete ruin, the people will have no heart to fight and will only howl in terror.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The deafening noise of charging warhorses and rattling chariot wheels will strike total panic into the people. The terror will be so overwhelming that parents will flee for their lives without even looking back to help their own children. Their hands will hang limp and useless because all strength and courage have drained away.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Calvin",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The set day of judgment has arrived to bring an end to the Philistine nation. The neighboring merchant cities of Tyre and Sidon will lose every ally who might have helped them resist the invaders. The Lord Himself is destroying the remnant of the Philistines, whose ancestors originally came from the island region of Caphtor.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The people of Gaza and Ashkelon shave their heads and cut their skin in extreme grief, following pagan customs of mourning. Their low coastal plains will be wiped out, leaving the surviving cities silent and desolate. Jeremiah asks how long they will continue gashing themselves over a disaster they cannot avoid or undo.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "A desperate cry goes out to the sword of the Lord, begging it to stop its slaughter and go back into its scabbard to rest. This plea expresses deep sorrow over the agony and horrors of war, longing for peace. The invading army is spoken of as God's own sword carrying out His judgment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The sword cannot stop because the Lord Himself has commanded it to march forward. God gave it a direct assignment against the city of Ashkelon and the entire Philistine seacoast, so no human plea can turn it back. When the Lord sets His judgment in motion against sin, it will not rest until its work is finished.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "06-015-001",
+ "title": "Judah’s Inheritance",
+ "refs": [
+  "Joshua 15:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6015001,
+   "end": 6015012,
+   "ref": "Joshua 15:1-12",
+   "ranges": [
+    [
+     6015001,
+     6015012
+    ]
+   ],
+   "title": "Judah’s Land and Calling",
+   "key_verse": [
+    6015012,
+    6015012
+   ],
+   "reflect": [
+    {
+     "text": "The long list of borders and landmarks in this chapter shows something wonderful. By dividing the land of Canaan into real plots for each tribe, God proved that He keeps His covenant promises to Abraham. Judah and the family of Joseph were given their land first because the oldest brother, Reuben, had lost his special birthright.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Judah received the largest territory of all, marked by natural borders stretching from the Dead Sea all the way to the Mediterranean Sea. God placed Judah on the southern frontier, where the terrain was rough and rocky. This placement was purposeful. Judah’s strength and rugged hills provided security and shielded the rest of the tribes from outside danger.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Receiving such a large territory brought a serious duty. Judah had to defend the southern border and carefully manage the land God provided. In our lives, when God entrusts us with time, gifts, or responsibilities, He calls us to be faithful stewards. Whatever God gives us is meant to be used wisely for His glory and for the good of those around us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What gifts or responsibilities has God placed in your hands to care for?",
+    "How can you use what God has given you to help protect or encourage others?"
+   ],
+   "prayer": "Lord, thank You for being faithful to keep every promise You make. You have placed each of us where we are and given us work to do. Help us to be faithful stewards of everything You provide. Teach us to use our strength to support and bless others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Judah’s Inheritance",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/judahs-inheritance"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

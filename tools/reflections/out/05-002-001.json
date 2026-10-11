@@ -1,0 +1,126 @@
+{
+ "id": "05-002-001",
+ "title": "Wanderings in the Wilderness",
+ "refs": [
+  "Deuteronomy 2:1-23"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 5002007,
+   "end": 5002007,
+   "ref": "Deuteronomy 2:7",
+   "ranges": [
+    [
+     5002007,
+     5002007
+    ]
+   ],
+   "title": "\"The LORD Your God Has Been With You\"",
+   "key_verse": [
+    5002007,
+    5002007
+   ],
+   "reflect": [
+    {
+     "text": "These barren places strip away our self-reliance so we learn to cling to God. While it is difficult to see while we are in the middle of it, our hardships show us His deep love and care with special clarity. Often, it is only when we look back that we see how He supplied all our needs and produced lasting spiritual growth in us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When we feel too weak to continue, remembering how faithful God was in the past gives us the strength to keep walking. The end of a hard testing time may be only a single step away. By surrendering to God in dry times, we are prepared for the next stretch of our journey.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Looking back on a difficult season, how can you see God's faithful presence and care?",
+    "What helps you remember that God is walking with you when you feel tired and empty?"
+   ],
+   "prayer": "Lord God, thank You for staying with me through every dry and weary place. Forgive me when I rely on my own strength instead of trusting Your constant care. Please use every trial to shape my heart, and give me endurance to take the next step with You. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Jennifer Kennedy Dean",
+     "work": "Fruitful Desert",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-june-24-2016.html"
+    },
+    "D3": {
+     "author": "Jennifer Waddle",
+     "work": "With Us in the Wilderness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/with-us-in-the-wilderness-bible-study-minute-january-18-2018.html"
+    },
+    "D4": {
+     "author": "Kristina Seymour",
+     "work": "The Final Step of the Journey",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/warrior-mom-wisdom/the-final-step-of-the-journey-warrior-mom-wisdom-week-of-october-6.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "Dry and painful seasons in life can be very hard because we rarely know how long they will last. As days turn into years, physical exhaustion often sets in. Yet even when we feel worn out on the outside, we do not walk alone. God is not watching from far away. He journeys through the desert right beside us, using trials like a gentle fire to clear away impurities in our hearts.",
+     "problem": "D3 describes God using trials like a 'refiner's fire' to surface and remove impurities during seasons that are painful, not a 'gentle fire.' Describing the refining trials as a gentle fire is not supported by the devotional and contradicts its emphasis on painful testing."
+    }
+   ],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 5002001,
+   "end": 5002023,
+   "ref": "Deuteronomy 2:1-23",
+   "ranges": [
+    [
+     5002001,
+     5002023
+    ]
+   ],
+   "title": "Turning Toward God's Promise",
+   "key_verse": [
+    5002003,
+    5002003
+   ],
+   "reflect": [
+    {
+     "text": "When we face painful circumstances or our own mistakes, it is easy to feel stuck in circles. We can spend years wandering around the same hill, replaying old regrets and feeling trapped in our mess. Israel circled Mount Seir for a long time, but God finally spoke and told them they had stayed there long enough.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God did not speak with harsh condemnation. Instead, He offered grace and pointed them toward a new destination. Difficult seasons give us a choice about whether our troubles will define us or refine us. To break out of defeating patterns, we must replace discouraging thoughts with the truth of God's Word and follow where He leads.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of your life have you felt stuck in circular, defeating thoughts?",
+    "What promise from God's Word can help you look forward instead of staying focused on past failure?"
+   ],
+   "prayer": "Father, thank You that You meet my failures with grace rather than condemnation. Help me stop circling my regrets and let Your truth quiet my discouraging thoughts. Give me courage to turn in the new direction You are calling me to walk. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Lysa TerKeurst",
+     "work": "When We’re Stuck In a Mess",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-august-20-2020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

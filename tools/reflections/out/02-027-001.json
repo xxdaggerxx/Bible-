@@ -1,0 +1,66 @@
+{
+ "id": "02-027-001",
+ "title": "The Bronze Altar",
+ "refs": [
+  "Exodus 27:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2027001,
+   "end": 2027008,
+   "ref": "Exodus 27:1-8",
+   "ranges": [
+    [
+     2027001,
+     2027008
+    ]
+   ],
+   "title": "The Altar and Our True Peace",
+   "key_verse": [
+    2027001,
+    2027001
+   ],
+   "reflect": [
+    {
+     "text": "God gave specific instructions for building the bronze altar in the tabernacle courtyard. This altar was the special place God provided to deal with sin. When a person brought an animal sacrifice, they placed their hands on it to show their guilt was transferred to an innocent substitute. That innocent animal then took the judgment for the person's wrongdoing.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "These Old Testament offerings were never meant to be the final cure for sin. The bronze altar and its sacrifices were shadows pointing forward to Jesus Christ. He is the true and perfect substitute who willingly took our guilt upon Himself and died in our place.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Today, we can enjoy lasting peace because of what Jesus accomplished. We do not need to bring animal sacrifices anymore. We can rest with quiet hearts, knowing our sins have been fully judged and completely forgiven through Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing Jesus took the judgment for your sins bring you peace today?",
+    "Are there past mistakes you still carry instead of trusting that Christ has fully forgiven them?"
+   ],
+   "prayer": "Lord God, thank You for providing an innocent substitute for us in Jesus Christ. We are grateful that He bore our guilt and took the punishment we deserved. Help us to live each day in the deep peace of Your full forgiveness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - January 26",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-jan-26-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

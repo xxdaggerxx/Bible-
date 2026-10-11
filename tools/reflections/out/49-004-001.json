@@ -1,0 +1,145 @@
+{
+ "id": "49-004-001",
+ "title": "Unity in the Body",
+ "refs": [
+  "Ephesians 4:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 49004015,
+   "end": 49004015,
+   "ref": "Ephesians 4:15",
+   "ranges": [
+    [
+     49004015,
+     49004015
+    ]
+   ],
+   "title": "\"Speaking the Truth in Love\"",
+   "key_verse": [
+    49004015,
+    49004015
+   ],
+   "reflect": [
+    {
+     "text": "God does not want us to remain spiritual infants who stay the same year after year. He desires for us to mature and grow into Christ. Charles Spurgeon reminds us that to ripen in grace, we must \"live near to Jesus\" in daily fellowship so that His light touches our lives and helps us grow in faith, hope, and love.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Growing up in Christ is not something we do all by ourselves. Jesus has given gifts to His church so that every believer can help build up the body. We are all called to share God's truth with our brothers and sisters. Healthy discipleship means we do not shrink back in cowardly silence, nor do we attack others with harsh self-righteousness.",
+     "sources": [
+      "D6"
+     ]
+    },
+    {
+     "text": "For our words to help others grow, biblical love must guide both how and when we speak. We must pay close attention to our tone and avoid causing unnecessary hurt. Sometimes love chooses to remain quiet. When correction is needed, it must come from genuine care for the other person rather than selfish pride.",
+     "sources": [
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you let genuine love shape your tone when you need to share a hard truth with someone?",
+    "Are you staying close to Jesus in your daily life so that your faith continues to grow?"
+   ],
+   "prayer": "Lord Jesus, draw us close to You so that we may mature in every good gift. Give us the courage to share Your truth and the humility to speak it only in love. Teach us when to speak and when to remain silent so that our words bring life to Your church. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 20",
+     "on": "Ephesians 4:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "Guy Richard",
+     "work": "Speaking the Truth in Love",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/speaking-truth-in-love"
+    },
+    "D6": {
+     "author": "Tony Reinke",
+     "work": "Speaking Truth in Love",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/speaking-truth-in-love"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 49004001,
+   "end": 49004016,
+   "ref": "Ephesians 4:1-16",
+   "ranges": [
+    [
+     49004001,
+     49004016
+    ]
+   ],
+   "title": "Walking Worthy in Lowliness and Love",
+   "key_verse": [
+    49004001,
+    49004001
+   ],
+   "reflect": [
+    {
+     "text": "God calls us to live a life worthy of the gospel. This requires balance between what we believe and how we act. Bible knowledge alone is not enough if our daily conduct is undisciplined. At the same time, emotional excitement without sound doctrine leaves us open to false ideas. True maturity needs both solid truth and holy living working together.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "To walk this path, we must follow the way of Christ. Before He ascended to heaven, He first humbled Himself to the lowest place as a servant. As F. B. Meyer explains, we also must take \"the low place of humility.\" We do this by confessing our sins honestly, considering others better than ourselves, and gladly serving our brothers and sisters.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Living in humility also means bearing with one another in love. Our closest relationships often bring the deepest friction and hurt. Because we are all imperfect, we need patience with each other. Remembering how Jesus forgives us softens our hearts and gives others the time and space they need to heal.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an area in your daily habits where your actions need to catch up with what you know from the Bible?",
+    "Who in your life needs your patience and gentle forgiveness today?"
+   ],
+   "prayer": "Heavenly Father, help us walk in a way that honors the calling we have received. Teach us to follow the humble path of Jesus by putting others before ourselves and serving them with gladness. Give us soft and patient hearts to bear with one another in love, just as You have shown great mercy to us. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ephesians 4:9",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Greg Laurie",
+     "work": "Lopsided Christians",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-march-2-2024.html"
+    },
+    "D4": {
+     "author": "Rev. Kyle Norman",
+     "work": "A Softer Heart for Family Tension",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/a-softer-heart-for-family-tension.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

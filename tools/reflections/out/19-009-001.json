@@ -1,0 +1,128 @@
+{
+ "id": "19-009-001",
+ "title": "I Will Give Thanks to the LORD",
+ "refs": [
+  "Psalms 9:1-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19009001,
+   "end": 19009001,
+   "ref": "Psalms 9:1",
+   "ranges": [
+    [
+     19009001,
+     19009001
+    ]
+   ],
+   "title": "\"I Will Give Thanks to the LORD\"",
+   "key_verse": [
+    19009001,
+    19009001
+   ],
+   "reflect": [
+    {
+     "text": "When we come to God in prayer, we often rush straight to our worries and requests. Psalm 9:1 shows us a better way to begin. Before David asks for new help, he stops to thank the Lord with his whole heart. Recounting the wonders God has done in the past turns our attention back to who He is. It helps us see that God is completely sufficient, and it reminds us of how much we rely on Him before we ask for anything else.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Giving thanks is also our natural duty whenever God answers our prayers. When the Lord warms our lives with His kindness, our gratitude should rise back to Him. To receive His gifts and say nothing is to act like the ungrateful lepers who never returned to thank Jesus after being healed.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Praising God does great good to our own hearts. It lifts heavy burdens, renews our hope, and strengthens our faith for daily life. When we speak openly of God's mercies, we also strengthen those around us. Hearing of God's help comforts weary believers and calms their doubts.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What past kindness from God can you thank Him for before bringing your requests today?",
+    "How might sharing what God has done in your life encourage someone around you who is struggling?"
+   ],
+   "prayer": "Lord, thank You for the many wonderful things You have done for us. Forgive us for rushing to You with our needs while forgetting to thank You for Your care. Help us remember Your goodness every day and gladly speak of Your love to others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 30",
+     "on": "Psalms 9:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Chelsey DeMatties",
+     "work": "A Prayer to Remember All God’s Wonderful Deeds",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-to-remember-all-gods-wonderful-deeds.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19009001,
+   "end": 19009020,
+   "ref": "Psalms 9:1-20",
+   "ranges": [
+    [
+     19009001,
+     19009020
+    ]
+   ],
+   "title": "The Lord Never Forgets the Needy",
+   "key_verse": [
+    19009010,
+    19009010
+   ],
+   "reflect": [
+    {
+     "text": "In seasons of trouble, we may wonder if God is really near. Psalm 9 reassures us that the Lord never abandons those who seek Him. Often our struggle to trust God comes simply from not knowing Him well enough. Hearing about God is not the same as knowing Him for ourselves. As F. B. Meyer wrote, trust grows when we learn to count God as our \"truest and tenderest Friend.\" Knowing Him like that takes time, and we need quiet moments to ponder His nearness, His promises, and His deep care for us.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "When we know God's character, we can endure seasons of lack and difficulty. People in need may look forgotten by the world, but the Lord holds them close. Believers are made rich through faith, trusting that God will supply what they need for this life and keep their future secure in Christ. Even when things are hard now, we can rest knowing that God will one day make all things right.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you set aside unhurried time today to know God more personally as your friend?",
+    "When you feel overlooked or in need, what promises of God help you remember that He cares for you?"
+   ],
+   "prayer": "Father in heaven, You never turn away from those who come to You. Slow our busy hearts so we can spend time with You and know Your love more deeply. Keep our faith strong when life is hard, and give us peace in the hope You have secured for us in Jesus. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 15",
+     "on": "Psalms 9:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 9:10",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

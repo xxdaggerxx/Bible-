@@ -1,0 +1,158 @@
+{
+ "book": 32,
+ "chapter": 2,
+ "first": 1,
+ "last": 10,
+ "ref": "Jonah 2",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Inside the belly of the giant fish, Jonah turned to the Lord in prayer. Even though he had run away, he still called God 'his God' because the Lord had kept him alive by a miracle. A dark prison under the sea could not keep Jonah from speaking to God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some critical scholars argue that this prayer was a later poem added during or after the Jewish exile, rather than a song written by Jonah himself.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/dcc/jonah.html",
+      "https://www.studylight.org/commentaries/eng/bcc/jonah-2.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Jonah looked back on his deep trouble and praised God for hearing his desperate cry. He felt as though he was calling out from Sheol, the dark place of the dead. Even from what seemed like the grave, the Lord heard his voice and showed him mercy.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Popular modern teaching",
+     "view": "Some popular Bible teachers suggest that Jonah actually died in the fish and entered the realm of the dead before being brought back to life.",
+     "sources": [
+      "https://www.preceptaustin.org/jonah-devotionals-and-sermon-illustrations",
+      "https://www.preceptaustin.org/sermons-on-jonah-lowell-johnson"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The sailors had thrown Jonah overboard, but Jonah knew it was really God who cast him into the deep sea. He saw the violent waves and rushing currents as God's tools to discipline him for running away. Borrowing words from the Psalms, he confessed that the crashing waters were God's own waves.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "At first, Jonah feared that God had cast him out of His sight forever because of his sin. Yet faith conquered his despair, and he chose to look with hope toward God's holy temple in Jerusalem. Even while trapped under the sea, he trusted that God would welcome his worship once again.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The ocean closed in around Jonah until it threatened to take his last breath. Thick seaweed tangled around his head as he sank down into the watery depths. He was entirely helpless, with no human way to save his own life.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Jonah sank to the hidden roots of the mountains at the very bottom of the sea. It felt like the earth had locked its iron gates behind him to keep him trapped forever. Just when all hope seemed lost, the Lord his God pulled his life up from the pit of death.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "As his strength drained away and death seemed near, Jonah remembered the Lord. His prayer traveled straight from the bottom of the sea into God's holy dwelling place in heaven. Remembering God's faithfulness gave him the courage to keep trusting Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "Jonah declared that people who trust in worthless idols turn their backs on the true mercy God offers them. Running from God to follow one's own plan is like chasing an empty shadow. When people abandon God, they cut themselves off from the love and care they need most.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Jonah promised to bring sacrifices to the Lord with songs of praise and to fulfill the vows he made while in danger. He committed himself to obey God's will instead of fleeing from it. He ended his song with the great truth that true rescue and salvation come only from the Lord.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "God spoke to the fish, and it obeyed at once by spitting Jonah out onto dry ground. This miracle proves that the Creator holds complete authority over all of nature. God showed wonderful mercy to His repentant prophet and set him free to fulfill his calling.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Jonah coming out of the fish alive on the third day is seen as a prophetic picture of Jesus rising from the dead on the third day.",
+     "sources": [
+      "Matthew Henry",
+      "https://www.catholic.com/audio/sp/what-you-missed-about-jonah-and-christs-passion-and-resurrection"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

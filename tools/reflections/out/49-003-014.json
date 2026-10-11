@@ -1,0 +1,134 @@
+{
+ "id": "49-003-014",
+ "title": "Paul’s Prayer for the Ephesians",
+ "refs": [
+  "Ephesians 3:14-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 49003016,
+   "end": 49003017,
+   "ref": "Ephesians 3:16-17",
+   "ranges": [
+    [
+     49003016,
+     49003017
+    ]
+   ],
+   "title": "\"That Christ May Dwell in Your Hearts\"",
+   "key_verse": [
+    49003017,
+    49003017
+   ],
+   "reflect": [
+    {
+     "text": "When we face discouragement or hard trials, we often feel weak in our inner life. Paul prayed for believers to receive deep strength through the Holy Spirit. This inner power comes from God's rich, never-ending supply of glory and grace. We need this daily help from the Spirit to grow in holiness and remain a fit dwelling place for the Lord.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Paul asks that Christ would live in our hearts through faith. As Charles Spurgeon noted, Jesus should not be a \"casual visitor\" who stays only for a night. Instead, Christ desires to settle down and make His permanent home in the center of our lives. He wants to fill not just our passing thoughts, but our deepest desires and affections.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Living with Christ in this way requires healthy faith. Faith is like the root of a flower, while love is the blossom. When we hold tightly to Jesus in trust, our love stays warm and steady. If our love for Him ever feels cold, we can ask God to strengthen our faith once again.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Does Jesus feel like a welcomed resident in your heart, or merely a visitor who stops by now and then?",
+    "What helps you hold firmly to Christ in faith when life feels discouraging?"
+   ],
+   "prayer": "Lord Jesus, make Your home deep within my heart today. Strengthen me by Your Holy Spirit so that my faith will not waver and my love for You will stay bright. Help me to trust You completely in every trial. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 23",
+     "on": "Ephesians 3:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Christ in Our Hearts",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/christ-our-hearts"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 49003014,
+   "end": 49003021,
+   "ref": "Ephesians 3:14-21",
+   "ranges": [
+    [
+     49003014,
+     49003021
+    ]
+   ],
+   "title": "A Vast Love and Limitless Power",
+   "key_verse": [
+    49003020,
+    49003020
+   ],
+   "reflect": [
+    {
+     "text": "The love of Christ is so immense that our words can never fully capture it. To understand it, we must think of His glorious throne in heaven and how low He stooped to save us. He became a man of sorrows, bore our deep shame, and suffered death on a cross. His vast love goes far beyond human knowledge, and seeing it moves us to thankful worship and lives of active love.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even when we see this love, we often struggle with self-doubt and feel too small or inadequate to serve God. Yet we are like empty jars waiting to be filled. Just as God multiplied the poor widow's small jar of oil, He fills our fragile human lives with His Holy Spirit.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "When we give whatever little we have into God's hands, His power goes to work within us. He is able to do far more than all we could ever ask or imagine. Our weakness does not limit Him; His endless power works through ordinary people for His glory.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you feel inadequate, and how can you hand those to God?",
+    "How does reflecting on Christ's sacrifice help you trust His great love for you?"
+   ],
+   "prayer": "Heavenly Father, Your great love for us in Christ goes far beyond what my mind can grasp. Thank You for filling my fragile, empty life with Your Holy Spirit. Take what little I have and do far more than I could ever ask or imagine, for Your glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 28",
+     "on": "Ephesians 3:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Rachael Adams",
+     "work": "Vessels of God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-april-30.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

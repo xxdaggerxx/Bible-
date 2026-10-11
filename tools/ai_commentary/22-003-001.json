@@ -1,0 +1,152 @@
+{
+ "book": 22,
+ "chapter": 3,
+ "first": 1,
+ "last": 11,
+ "ref": "Song of Solomon 3",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "A bride longs for her absent love while resting in bed at night, but she cannot find him. In the traditional Christian reading, this describes a believer or the church seeking fellowship with Christ during a dark, dry season. A comfortable or half-hearted search brings no relief, showing that true communion with the Lord requires real diligence.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many modern interpreters view this passage as a troubling dream the young woman had, reflecting her fear of losing her beloved as their wedding approached.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/song-of-solomon-3/",
+      "https://www.studylight.org/commentaries/eng/dcc/song-of-solomon-3.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The woman resolves to get up right away and search for her beloved through the city streets and public squares. This represents a believer leaving sluggish ease behind to seek Christ in prayer and public worship. Even when God delays the feeling of His comfort to test our faith, we are called to keep seeking Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The bride meets the city watchmen on their night patrol and asks if they have seen the one she loves. Traditionally, these watchmen represent church pastors and teachers who care for people's spiritual safety. While faithful leaders point us toward Christ, the soul cannot rest in human teachers until it finds the Savior Himself.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Shortly after leaving the watchmen, the bride finds her beloved and clings to him so he will not leave. She leads him into her mother's home, showing an honorable love that welcomes family approval. Spiritually, this shows a believer holding tightly to Christ by faith and welcoming Him into the heart and into the church family.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The bride urges the young women of Jerusalem not to stir up or disturb love until the proper time. In the spiritual life, this is a serious warning for believers not to act carelessly or bring strife into the church. Such sins can grieve the Holy Spirit—God's Spirit who comforts and guides us—and cause the sense of Christ's presence to depart.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals understand this as a practical warning against awakening romantic and sexual passions before marriage.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/song-of-solomon-3/"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Onlookers wonder at a glorious figure coming up from the desert, surrounded by rising pillars of fragrant incense smoke. Traditionally, this portrays the church or a rescued soul coming out of the wilderness of this world. Lifted up by God's Spirit, the believer ascends toward heaven with prayers and praises perfumed by the grace of Christ.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Modern scholars generally read this as a description of the wedding procession, where the bride is carried in royal splendor from the country into Jerusalem while incense is burned around her.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/song-of-solomon-3/",
+      "https://www.studylight.org/commentary/song-of-solomon/3-6.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 7,
+   "end": 8,
+   "meaning": "Sixty elite soldiers surround Solomon's royal travelling couch, holding swords and standing ready for any danger during the night. In traditional interpretation, this shows the complete safety of the church and every believer resting in Christ. God protects His people through His mighty power, holy angels, and faithful ministers who wield the sword of God's Word against spiritual enemies.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 10,
+   "meaning": "King Solomon makes an ornate royal carriage out of Lebanon's finest cedar wood, fitted with silver pillars, a gold foundation, a purple seat, and an interior decorated with love. Traditionally, this palanquin represents the gospel and God's plan of salvation. It is built on unfailing divine truth, sheltered by Christ's royal blood, and filled at its very center with His boundless love for His people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "The daughters of Zion are called to go out and look upon King Solomon wearing the wedding crown given by his mother on his happiest day. Believers traditionally see here a picture of Jesus Christ in His royal glory, crowned by the faith and praise of His church. The day of a soul's salvation brings supreme joy to the heart of Christ as He welcomes His people to Himself.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholic commentary sees in this crown both Christ's human nature taken from His mother Mary and the crown of thorns placed upon Him during His suffering.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/hcc/song-of-solomon-3.html"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

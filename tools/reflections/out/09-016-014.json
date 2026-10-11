@@ -1,0 +1,74 @@
+{
+ "id": "09-016-014",
+ "title": "David Serves Saul",
+ "refs": [
+  "1 Samuel 16:14-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9016014,
+   "end": 9016023,
+   "ref": "1 Samuel 16:14-23",
+   "ranges": [
+    [
+     9016014,
+     9016023
+    ]
+   ],
+   "title": "Strength, Tenderness, and God's Plan",
+   "key_verse": [
+    9016023,
+    9016023
+   ],
+   "reflect": [
+    {
+     "text": "King Saul suffered under a distressing spirit. This reminds us that God is completely in control of every circumstance, even painful seasons. In His providence, God brought young David into the royal palace to serve the very king he was chosen to replace. Living in the palace quietly prepared David for the future demands and pitfalls of leadership.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "David was chosen because the Lord was with him. Scripture reveals him in two roles that fit together: a brave fighter and a gentle musician. When David played the harp, his gentle care brought peace to Saul's troubled soul. As Beth Moore points out, strength and tenderness are not opposites, but essential qualities that belong together.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This blend of qualities points us straight to Jesus. Christ is our triumphant warrior who conquers sin, and He is also the tenderhearted Savior who heals our hurts. When we face hard trials, we can rest knowing God sovereignly rules our lives and works every detail for our ultimate good.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you show both gentle kindness and quiet courage in your daily life?",
+    "How does knowing God is in control of difficult times bring you comfort today?"
+   ],
+   "prayer": "Lord God, thank You for holding every detail of our lives in Your sovereign hands. Shape in us both the courage to stand strong and the gentle tenderness to comfort those around us. Help us follow Jesus, our strong and tender Savior, in all we do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 18: 1 Samuel 16:14–23",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-18-1-samuel-16-1423.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "David’s Ministry to Saul",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/davids-ministry-to-saul"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "01-026-006",
+ "title": "Isaac Deceives Abimelech",
+ "refs": [
+  "Genesis 26:6-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1026006,
+   "end": 1026011,
+   "ref": "Genesis 26:6-11",
+   "ranges": [
+    [
+     1026006,
+     1026011
+    ]
+   ],
+   "title": "Grace for Fearful Hearts",
+   "key_verse": [
+    1026009,
+    1026009
+   ],
+   "reflect": [
+    {
+     "text": "Isaac was living among strangers and became afraid for his life. Instead of trusting God to keep him safe, he let fear guide him and lied that Rebekah was his sister. In doing this, Isaac stumbled into the exact same fear-driven deceit his father Abraham had committed years earlier. By choosing fear over faith, Isaac put his own comfort first and placed others at risk.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When King Abimelech discovered the truth, he rightly rebuked Isaac. Isaac's lie could have led someone in the city to sin and brought moral guilt upon everyone. It is humbling to see a pagan king calling out Isaac for his poor choices and warning him of the spiritual danger he caused.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet God did not turn away from His weak servant. Instead of judgment, God intervened through Abimelech, who commanded that no one harm Isaac or Rebekah. The Bible does not hide the messy faults of its leaders. It shows their weakness so we can see that God's blessings come from grace—His free, unearned kindness—and not from our own perfection.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When are you most tempted to let fear lead you into dishonesty rather than trusting God?",
+    "How does knowing that God blesses messy, imperfect people bring you comfort when you fail?"
+   ],
+   "prayer": "Heavenly Father, forgive us when we let fear control our choices instead of trusting You. Thank You for Your undeserved kindness and for protecting us even when we make foolish mistakes. Help us to walk in honesty and rely on Your grace each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Erik Raymond",
+     "work": "God Blesses Messy People",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/erik-raymond/god-blesses-messy-people/"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Lord Favors Isaac",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lord-favors-isaac"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

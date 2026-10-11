@@ -1,0 +1,91 @@
+{
+ "id": "40-003-001",
+ "title": "The Mission of John the Baptist",
+ "refs": [
+  "Matthew 3:1-12",
+  "Mark 1:1-11",
+  "Luke 3:1-20",
+  "John 1:19-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40003001,
+   "end": 40003012,
+   "ref": "Matthew 3:1-12; Mark 1:1-11; Luke 3:1-20; John 1:19-28",
+   "ranges": [
+    [
+     40003001,
+     40003012
+    ],
+    [
+     41001001,
+     41001011
+    ],
+    [
+     42003001,
+     42003020
+    ],
+    [
+     43001019,
+     43001028
+    ]
+   ],
+   "title": "Preparing the Way for the Lord",
+   "key_verse": [
+    42003004,
+    42003004
+   ],
+   "reflect": [
+    {
+     "text": "John the Baptist broke centuries of silence to announce the coming King. He pointed everyone away from himself to Jesus, the far greater Messiah who brings spiritual redemption. Preparing a way for the Lord means looking honestly at our own hearts. Pride and boastful self-righteousness must be brought low, while despair and low thoughts of God must be lifted up by His grace. A wavering heart must choose a straight path of honesty, clearing away the rough stumbling blocks of sin so Christ may enter.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "John also warned of a gathering storm of God's wrath. Outward baptism with water is not enough on its own; we need the Holy Spirit to renew our hearts within, a divine gift that only Jesus has the authority to give. For those who flee to Christ in faith, the terrifying tempest has already spent itself upon the Savior. He is our safe shelter, turning away the judgment we deserved and welcoming us into His mercy.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What proud habits or low thoughts of God do you need His grace to level and heal today?",
+    "How does knowing that Jesus bore the storm of judgment on your behalf bring you comfort?"
+   ],
+   "prayer": "Lord Jesus, search our hearts and clear away our pride and rebellion so You may dwell with us. Renew us from the inside by Your Holy Spirit, and make our crooked ways straight. Thank You for taking the storm of wrath upon Yourself so that we can find safe shelter in Your grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 3",
+     "on": "Luke 3:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 25",
+     "on": "Matthew 3:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Forerunner's Message",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/forerunners-message"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

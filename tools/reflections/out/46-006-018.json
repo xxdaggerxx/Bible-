@@ -1,0 +1,81 @@
+{
+ "id": "46-006-018",
+ "title": "The Temple of the Holy Spirit",
+ "refs": [
+  "1 Corinthians 6:18-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46006018,
+   "end": 46006020,
+   "ref": "1 Corinthians 6:18-20",
+   "ranges": [
+    [
+     46006018,
+     46006020
+    ]
+   ],
+   "title": "Your Body, God's Temple",
+   "key_verse": [
+    46006019,
+    46006019
+   ],
+   "reflect": [
+    {
+     "text": "People often treat church buildings with great care, but God does not dwell in stone temples anymore. Instead, through faith in Christ, your own body has become the sanctuary of the Holy Spirit. God values our physical bodies and never meant for our physical lives to be separated from our spiritual lives. What we do with our bodies matters directly to our walk with Him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because God lives within you, your life is no longer your own. You were purchased at the highest cost, not with silver or gold, but with the precious blood of Christ. As F. B. Meyer wrote, we are \"the custodians of the Divine residence.\" We must take care not to grieve the Spirit who lives inside us, but instead throw our hearts open to Him and turn away from all sin.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our daily conduct serves as a clear testimony of our faith to the world. We cannot excuse wrongdoing by pretending our physical actions have no effect on our spiritual life. We are called to honor God with our bodies at all times, both in public and in secret when nobody else is watching.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you treat your everyday physical actions as something that matters deeply to God?",
+    "How can remembering that the Holy Spirit lives inside you change how you act when you are alone?"
+   ],
+   "prayer": "Lord, thank You for buying me with the precious blood of Jesus and making my body a home for Your Holy Spirit. Forgive me for the times I have separated my physical actions from my faith. Help me to flee from sin and honor You with my body, both in public and in secret. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Corinthians 6:19",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Charles Stanley",
+     "work": "A Healthy Body",
+     "site": "In Touch Ministries",
+     "url": "https://www.intouch.org/read/daily-devotions/a-healthy-body"
+    },
+    "D3": {
+     "author": "Adrian Rogers",
+     "work": "Keeping God’s Temple Clean",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-november-24-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

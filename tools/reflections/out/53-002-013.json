@@ -1,0 +1,67 @@
+{
+ "id": "53-002-013",
+ "title": "Stand Firm",
+ "refs": [
+  "2 Thessalonians 2:13-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 53002013,
+   "end": 53002017,
+   "ref": "2 Thessalonians 2:13-17",
+   "ranges": [
+    [
+     53002013,
+     53002017
+    ]
+   ],
+   "title": "Lasting Comfort and True Hope",
+   "key_verse": [
+    53002016,
+    53002016
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, Paul reminds believers to stand firm because God has loved us and given us eternal comfort. As Charles Spurgeon wrote, \"the eternity of comfort is the crown and glory of it.\" This lasting comfort begins with the knowledge that our sins are forgiven. God clears away our wrongdoing like a cloud, lifting the heavy weight of guilt from our hearts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This comfort also means we know God completely accepts us in Jesus. We are joined to Christ, so our Father looks on us with love. Because of this close bond, believers can find deep peace even when sickness weakens our bodies or when facing death. Hardships in this world cannot destroy the love God has placed inside us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Finally, we have the quiet confidence that we are safe. God has promised to save everyone who trusts in His Son, and He always keeps His word. Because our lives are secure in Jesus, we can stand strong and keep doing good deeds, knowing our hope will never fail.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that your sins are forgiven bring comfort when you face hard times?",
+    "In what area of your life do you need God's strength to stand firm today?"
+   ],
+   "prayer": "Father, thank You for loving us and giving us lasting comfort through Jesus. Help us to rest in the peace of knowing our sins are forgiven and that our lives are secure in Your care. Strengthen our hearts today so we can stand firm and honor You in our words and actions. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 11",
+     "on": "2 Thessalonians 2:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

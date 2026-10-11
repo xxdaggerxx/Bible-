@@ -1,0 +1,73 @@
+{
+ "id": "27-001-008",
+ "title": "Daniel’s Faithfulness",
+ "refs": [
+  "Daniel 1:8-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 27001008,
+   "end": 27001016,
+   "ref": "Daniel 1:8-16",
+   "ranges": [
+    [
+     27001008,
+     27001016
+    ]
+   ],
+   "title": "Standing Firm in Daily Choices",
+   "key_verse": [
+    27001008,
+    27001008
+   ],
+   "reflect": [
+    {
+     "text": "Daniel and his friends lived in exile far from home. Their new culture tried to reshape their whole identity, even giving them new names. Yet when offered the king's rich food and wine, Daniel drew a clear line. He set a firm boundary to avoid defilement and protect his close fellowship with God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Today, we face similar pressures. The world constantly pulls at our time and attention, tempting us to conform to culture instead of following the Lord. Like Daniel, we are called to set intentional boundaries against things that pull us away from God. Choosing His priorities over cultural pressure brings His lasting blessing.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Standing firm in small daily choices made a big difference. Daniel held onto his principles in what he ate and drank, and God kept his heart pure. Being faithful in these everyday decisions helped prepare Daniel and his friends to withstand much greater trials later.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What daily influences or pressures are pulling your attention away from God right now?",
+    "Where do you need to set a clear boundary to keep your fellowship with God strong?"
+   ],
+   "prayer": "Lord, help us to stand firm when the world pressures us to compromise. Give us wisdom to set healthy boundaries in our daily habits so we can stay close to You. Strengthen our hearts to honor Your priorities today.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "People of Principle",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-january-3-2024.html"
+    },
+    "D2": {
+     "author": "Robin Dugall",
+     "work": "Choosing Faithfulness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-may-3-2006-1394726.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

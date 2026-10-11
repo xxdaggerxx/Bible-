@@ -1,0 +1,74 @@
+{
+ "id": "24-023-009",
+ "title": "Lying Prophets",
+ "refs": [
+  "Jeremiah 23:9-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24023009,
+   "end": 24023032,
+   "ref": "Jeremiah 23:9-32",
+   "ranges": [
+    [
+     24023009,
+     24023032
+    ]
+   ],
+   "title": "The Power of God's True Word",
+   "key_verse": [
+    24023029,
+    24023029
+   ],
+   "reflect": [
+    {
+     "text": "In Jeremiah's day, false teachers offered people empty comfort. They selectively promised peace while ignoring hard truths about divine judgment, so no one turned away from sin. Yet God's Word is never weak. It possesses active authority and power, working like a blazing fire and a hammer to smash through self-reliance and convict stubborn hearts.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "F. B. Meyer explains that Christian work often fails because we run ahead before being sent. We can easily become trapped in fussy activities and the fever of our own will, speaking before we have truly listened. Jeremiah was used by God because he stood in God's council, taking time to wait on the Lord and receive His thoughts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The very same Word that shatters sin also refines believers and builds us up in godliness. Rather than rushing forward with our own plans, we must pause to spend time in prayer and the Bible. When our souls dwell in God's light, He gives us His true message to help turn people back to Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do we welcome God's Word when it convicts our sin, or do we only look for comfortable messages?",
+    "How can you make time this week to pause your busy work and wait quietly on God in prayer and Scripture?"
+   ],
+   "prayer": "Lord, forgive us when we rush ahead with our own plans instead of waiting in Your presence. Let Your Word work like fire and a hammer in our hearts to break our stubbornness and refine our faith. Teach us to listen closely to Your truth so that we may share it faithfully with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 23:22",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Power of God's Word",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/power-gods-word"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

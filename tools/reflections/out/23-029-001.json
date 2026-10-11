@@ -1,0 +1,82 @@
+{
+ "id": "23-029-001",
+ "title": "Woe to David’s City",
+ "refs": [
+  "Isaiah 29:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23029013,
+   "end": 23029014,
+   "ref": "Isaiah 29:13-14",
+   "ranges": [
+    [
+     23029013,
+     23029014
+    ]
+   ],
+   "title": "\"Their Hearts Are Far from Me\"",
+   "key_verse": [
+    23029013,
+    23029013
+   ],
+   "reflect": [
+    {
+     "text": "It is easy to go through the motions of religion without truly loving God. We might say familiar prayers or attend church out of habit, while our thoughts remain elsewhere. Charles Swindoll notes that people often rely on man-made traditions to feel secure, but empty religious habits can lead to spiritual bondage. Going through rituals by rote can never take the place of genuine faith.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Sin can slowly deaden our hearts so that we take God's goodness for granted. When we give God lip service while keeping our hearts far from Him, our worship becomes boring and dry. Persistently ignoring God's truth leaves us spiritually blind and hardened, unable to marvel at the wonder of who He is.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God breaks through our dull routines with the astonishing wonder of His grace, which is His kindness that we do not deserve. He promised to shake up our human wisdom with His own works. True freedom does not come from outward human rules, but through Jesus, the Savior who forgives our sins and restores our hearts.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When do your prayers or church habits feel like empty routines rather than true worship from the heart?",
+    "How can remembering what Jesus did for you renew your wonder at God's grace?"
+   ],
+   "prayer": "Lord, forgive us when we honor You with our mouths while our hearts stay far away. Help us not to lean on empty habits or human traditions for our security. Fill us again with awe at Your grace, and draw our hearts near to Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe (One Year Devotions for Men)",
+     "work": "The City of David",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/the-city-of-david-one-year-devotions-for-men-january-16.html"
+    },
+    "D2": {
+     "author": "Mike Pohlman",
+     "work": "Advent as Antidote to Christian Boredom",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-dec-4-2008-11596488.html"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "Superstition",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-may-18-2009-11603661.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,151 @@
+{
+ "id": "19-068-001",
+ "title": "God’s Enemies Are Scattered",
+ "refs": [
+  "Psalms 68:1-35"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19068005,
+   "end": 19068005,
+   "ref": "Psalms 68:5",
+   "ranges": [
+    [
+     19068005,
+     19068005
+    ]
+   ],
+   "title": "\"A Father of the Fatherless\"",
+   "key_verse": [
+    19068005,
+    19068005
+   ],
+   "reflect": [
+    {
+     "text": "Growing up without a father, or having an earthly father who caused pain, leaves deep emotional wounds. Many people carry persistent feelings of grief and insecurity into adulthood. These painful experiences can also distort the way we picture God, making it hard to trust Him or believe that He truly cares for us.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "The Scriptures give us great hope by revealing who God truly is. He is not a distant ruler or merely a temporary substitute. God is a devoted Father to the fatherless, watching over the vulnerable and protecting those who have been abandoned. Through faith in Jesus Christ, we are fully adopted into His family and welcomed into an unbreakable home.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Because God is completely faithful, we can bring all our hidden fears and hurt to Him. He provides infallible guidance, patient care, and unending strength whenever we feel weak. Turning to Him in an intimate, personal way heals our hearts. Resting in His fatherly love builds a deep spiritual security that no earthly loss can ever take away.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways might your experience with earthly parents shape how you view God?",
+    "How can knowing you are adopted into God's family bring you comfort today?"
+   ],
+   "prayer": "Heavenly Father, thank You for being a faithful and loving protector to all who feel lonely or abandoned. Heal any painful wounds from our past, and help us trust Your constant care. Remind us each day that we belong safely in Your family through Jesus Christ. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Ashley Moore",
+     "work": "Father to the Fatherless",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/father-to-the-fatherless-the-crosswalk-devotional.html"
+    },
+    "D5": {
+     "author": "Mike Schumann",
+     "work": "An Unbreakable Home: What God Says to the Fatherless",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/an-unbreakable-home"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19068001,
+   "end": 19068035,
+   "ref": "Psalms 68:1-35",
+   "ranges": [
+    [
+     19068001,
+     19068035
+    ]
+   ],
+   "title": "The God Who Bears Our Burdens",
+   "key_verse": [
+    19068019,
+    19068019
+   ],
+   "reflect": [
+    {
+     "text": "In this psalm of praise, we see that the Lord is not far off; He is actively involved in our daily walk. Our human nature often defaults to grumbling or worrying about what lies ahead. Yet God watches over our lives and knows what we need before we even ask Him. Charles Spurgeon reminds us that \"all God's gifts are prepared gifts laid up in store for wants foreseen.\" Whatever wilderness we face, He has already prepared His goodness and grace to meet us in every trial.",
+     "sources": [
+      "D2",
+      "D6"
+     ]
+    },
+    {
+     "text": "The greatest burden God has lifted from us is our sin. In His sacrificial work, Jesus took our guilt upon Himself and carried it completely away into forgetfulness. As He stood alone on the cross, He bore the full weight of our sin so we would never be separated from God. Because of what Christ has done, we are delivered from spiritual death and granted daily peace.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Just as the Lord saved us, He also preserves us. We cannot keep our own faith burning without His daily help, any more than a temple lamp could burn without fresh oil. If we neglect prayer, we leave room for doubt and weary spirits. We must continually come to Him, asking Him to strengthen the good work He has begun in us, while praising Him for bearing our burdens day by day.",
+     "sources": [
+      "D1",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel anxious about future needs, how does knowing God has already prepared for them encourage you?",
+    "What daily burdens can you hand over to the Lord in prayer today instead of complaining?"
+   ],
+   "prayer": "Lord God, thank You for bearing our burdens every single day and for wiping away our sin through Jesus Christ. Forgive us for complaining, and supply our hearts with the oil of Your grace so our faith does not grow weak. Please strengthen the work You have started in us, and keep our eyes fixed on Your goodness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 15",
+     "on": "Psalms 68:28",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 8",
+     "on": "Psalms 68:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 68:6",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D6": {
+     "author": "Dawn Mast",
+     "work": "My Gaze on Praise",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/my-gaze-on-praise-encouragement-caf-august-1-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

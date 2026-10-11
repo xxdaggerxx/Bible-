@@ -1,0 +1,66 @@
+{
+ "id": "54-005-017",
+ "title": "Honoring Elders",
+ "refs": [
+  "1 Timothy 5:17-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 54005017,
+   "end": 54005020,
+   "ref": "1 Timothy 5:17-20",
+   "ranges": [
+    [
+     54005017,
+     54005020
+    ]
+   ],
+   "title": "Honoring Those Who Teach God's Word",
+   "key_verse": [
+    54005017,
+    54005017
+   ],
+   "reflect": [
+    {
+     "text": "Paul tells the church to give double honor to elders who lead well, especially those who work hard at preaching and teaching. In the church, this honor is not just kind words. It includes generous financial support. When a church cares well for its teachers, these leaders are free to devote their full time and energy to ministry.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "To show that this is God's design, Paul points to Scripture. He quotes the Old Testament law about not muzzling an ox while it works, and he quotes Jesus' words that a worker deserves his wages. By placing the words of Jesus beside Deuteronomy, early Christians showed that they recognized the New Testament as authoritative Scripture from God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The way we support our leaders reflects our own hearts. Providing faithful financial care for those who serve shows how deeply we value the ministry of God's Word in our lives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does our support for church leaders show the value we place on God's Word?",
+    "In what ways can you encourage and honor those who teach you the Scriptures?"
+   ],
+   "prayer": "Lord, thank you for the leaders who faithfully teach and preach your Word. Help our church family to care for them generously so they can serve you well. May our support for them show how much we treasure your truth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Honoring Church Elders",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/honoring-church-elders"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

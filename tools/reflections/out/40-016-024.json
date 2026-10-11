@@ -1,0 +1,77 @@
+{
+ "id": "40-016-024",
+ "title": "Take Up Your Cross",
+ "refs": [
+  "Matthew 16:24-28",
+  "Mark 8:34-38",
+  "Luke 9:23-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40016024,
+   "end": 40016028,
+   "ref": "Matthew 16:24-28; Mark 8:34-38; Luke 9:23-27",
+   "ranges": [
+    [
+     40016024,
+     40016028
+    ],
+    [
+     41008034,
+     41008038
+    ],
+    [
+     42009023,
+     42009027
+    ]
+   ],
+   "title": "Taking Up the Cross Daily",
+   "key_verse": [
+    42009023,
+    42009023
+   ],
+   "reflect": [
+    {
+     "text": "Jesus calls everyone who wants to follow him to make a real choice. He asks us to deny ourselves and take up our cross daily. It is easy for us to seek personal comfort and stay in safe spaces where we will not upset anyone. We can easily treat the Christian life like a relaxing cruise ship instead of an active mission to help others. Yet true discipleship means choosing our convictions over an easy path, giving up our own comfort to serve our Lord faithfully.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Following Jesus can bring reproach, which means facing criticism or shame from the world. Even so, we are closely joined to Christ in love. As Charles Spurgeon reminds us, if we walk with Jesus in his shame, \"we shall be sharers with him\" in his radiant glory. When the Son of Man comes with his holy angels, he will keep his faithful people close to his heart. Standing with Christ through hardship now brings a bright hope that outshines every struggle.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to choose an easy, comfortable life instead of standing faithfully for Jesus?",
+    "How does the promise of sharing in Christ's future glory give you courage to follow him today?"
+   ],
+   "prayer": "Lord Jesus, help us lay down our desire for comfort and follow you with courage each day. Give us strength whenever standing for your truth brings disapproval from others. Keep our eyes fixed on the promise of your glorious return, trusting that we belong to you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 26",
+     "on": "Mark 8:38",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Jack Graham",
+     "work": "Do You Choose Comfort or Battle?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-june-6-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

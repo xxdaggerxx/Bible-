@@ -1,0 +1,66 @@
+{
+ "id": "19-003-001",
+ "title": "Deliver Me, O LORD!",
+ "refs": [
+  "Psalms 3:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19003001,
+   "end": 19003008,
+   "ref": "Psalms 3:1-8",
+   "ranges": [
+    [
+     19003001,
+     19003008
+    ]
+   ],
+   "title": "The Lord Who Lifts Your Head",
+   "key_verse": [
+    19003003,
+    19003003
+   ],
+   "reflect": [
+    {
+     "text": "Harsh words, cruel criticism, and unwanted opinions can wound us deeply. When other people speak against us, it is easy to feel completely exposed, alone, and not good enough. In Psalm 3, David faced many voices telling him that God would not rescue him. In the same way, hurtful comments from others can make us feel defenseless and weighed down with worry.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we face these painful attacks, we do not need to hide in embarrassment or lash out with sharp comebacks. God steps in as a protective shield that circles completely around us. He guards our tender hearts from the sting of criticism and gently lifts our bowed heads with true, divine confidence.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Trusting that the Lord surrounds you with His protection and favor gives you the strength you need to keep moving forward. Instead of dwelling on what others say about you, you can rest in the care of God. He sustains you and keeps you secure, giving you quiet courage to persevere each day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When someone criticizes you or speaks harsh words, how can remembering that God is your shield change the way you respond?",
+    "In what areas of your life do you need God to lift your head with His confidence today?"
+   ],
+   "prayer": "Lord, thank You for being a shield all around me when hurtful words and criticism bring me down. Help me to trust in Your protection instead of feeling ashamed or trying to strike back. Please lift my head and give me the strength to keep following You with confidence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Cindi McMenamin",
+     "work": "Your Shield of Protection",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/your-shield-of-protection-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

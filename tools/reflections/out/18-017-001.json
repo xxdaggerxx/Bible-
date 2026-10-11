@@ -1,0 +1,67 @@
+{
+ "id": "18-017-001",
+ "title": "Job Prepares for Death",
+ "refs": [
+  "Job 17:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18017001,
+   "end": 18017016,
+   "ref": "Job 17:1-16",
+   "ranges": [
+    [
+     18017001,
+     18017016
+    ]
+   ],
+   "title": "Holding On Through the Storm",
+   "key_verse": [
+    18017009,
+    18017009
+   ],
+   "reflect": [
+    {
+     "text": "In this chapter, Job feels crushed. His body is weak, his days seem over, and mockers surround him. Everything looks dark, and his plans have fallen apart. Yet right in the middle of this deep sorrow, Job says that the righteous person holds to their way. When true life from God enters a person, it stays there. Real faith does not quit when trials come; it has the power to keep going through the worst storms.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Any faith that is not given by God will eventually run out of strength and fail. It might start fast, like a plant sprouting on rocky soil, but it soon withers away. True endurance does not come from our own willpower. You are able to keep going because Jesus holds you firmly in His strong hand. He is your Shepherd, the Father has chosen to bring glory through your life, and the Holy Spirit lives inside you as a constant spring of life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Being kept faithful day after day is one of God's greatest miracles of grace, which is His kindness that we do not earn. Even when you feel as weak and hopeless as Job felt, God's help is enough to carry you. He will keep you steady on the path until heaven opens before you.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When hard times make you want to give up, how does knowing that Jesus holds you give you comfort?",
+    "Where do you need God's grace today to help you keep following Him?"
+   ],
+   "prayer": "Lord, when my strength fails and troubles surround me, remind me that You are holding me tight. Thank You that the Holy Spirit lives in me as a steady spring of life. Please give me Your grace to keep walking faithfully with You all the way to the end. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 17:9",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

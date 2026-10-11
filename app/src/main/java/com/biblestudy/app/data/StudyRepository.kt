@@ -74,6 +74,16 @@ data class CommentarySection(val start: Int, val end: Int, val body: String)
 class StudyRepository(private val context: Context) {
     private val db: SQLiteDatabase = open("study", DB_VERSION)
 
+    /**
+     * An imported version's own database (BIB-4), which holds its word tags, words of Jesus and
+     * paragraphs in the same tables as study.db; null for the bundled versions.
+     */
+    var ownDb: (String) -> SQLiteDatabase? = { null }
+
+    /** Where [version]'s rows of [table] are: its own database when it has the table, else study.db. */
+    private fun source(version: String, table: String): SQLiteDatabase =
+        ownDb(version)?.takeIf { hasTable(it, table) } ?: db
+
     /** The Hebrew and Greek text (assets/study/original.db), copied out the first time it's needed. */
     private val orig: SQLiteDatabase by lazy { open("original", ORIGINAL_VERSION) }
 
@@ -81,10 +91,7 @@ class StudyRepository(private val context: Context) {
         val file = context.getDatabasePath("${name}_v$version.db")
         if (!file.exists()) {
             file.parentFile?.listFiles()?.filter { it.name.startsWith("${name}_v") && it.name != file.name }?.forEach { it.delete() }
-            file.parentFile?.mkdirs()
-            val tmp = File(file.path + ".tmp")
-            context.assets.open("study/$name.db").use { input -> tmp.outputStream().use { input.copyTo(it) } }
-            tmp.renameTo(file)
+            PackedAssets.copy(context, "study/$name.db", file)
         }
         return SQLiteDatabase.openDatabase(file.path, null, SQLiteDatabase.OPEN_READONLY)
     }
@@ -93,13 +100,13 @@ class StudyRepository(private val context: Context) {
 
     /**
      * The words of Jesus in a chapter: verse number → character ranges in that verse's [texts].
-     * Only the bundled KJV, BSB and WEB are marked.
+     * Imported versions keep the file's own marks, or have them worked out on import.
      */
     fun redLetters(version: String, book: Int, chapter: Int, texts: Map<Int, String>): Map<Int, List<IntRange>> {
         if (book < 40) return emptyMap()
         val base = book * 1_000_000 + chapter * 1_000
         val out = HashMap<Int, List<IntRange>>()
-        db.rawQuery("SELECT id, words FROM red WHERE version = ? AND id BETWEEN ? AND ?",
+        source(version, "red").rawQuery("SELECT id, words FROM red WHERE version = ? AND id BETWEEN ? AND ?",
             arrayOf(version, base.toString(), (base + 999).toString())).use { c ->
             while (c.moveToNext()) {
                 val verse = c.getInt(0) - base
@@ -131,17 +138,40 @@ class StudyRepository(private val context: Context) {
 
     /** The Strong's number of each word of a verse (as split by [words]), or null where there is none. */
     fun strongs(version: String, verseId: Int): List<String?> {
-        val raw = db.rawQuery("SELECT words FROM tags WHERE version = ? AND id = ?", arrayOf(version, verseId.toString()))
+        val raw = source(version, "tags").rawQuery("SELECT words FROM tags WHERE version = ? AND id = ?", arrayOf(version, verseId.toString()))
             .use { c -> if (c.moveToFirst()) c.getString(0) else null } ?: return emptyList()
-        val prefix = if (verseId < NT_START) "H" else "G"
-        return raw.substring(1, raw.length - 1).split(' ').map { n ->
-            when {
-                n.isEmpty() -> null
-                n[0].isLetter() -> n
-                else -> prefix + n
-            }
+        return parseTags(verseId, raw)
+    }
+
+    /** Every tagged verse of a bundled version, for learning how words are translated (see [WordTagger]). */
+    fun forEachTagged(version: String, f: (Int, List<String?>) -> Unit) {
+        db.rawQuery("SELECT id, words FROM tags WHERE version = ?", arrayOf(version)).use { c ->
+            while (c.moveToNext()) f(c.getInt(0), parseTags(c.getInt(0), c.getString(1)))
         }
     }
+
+    /** How the KJV, BSB and WEB translate each Strong's number, for tagging imported Bibles (see [WordTagger]). */
+    val translations = object : WordTagger.Model {
+        override fun translations(stem: String): Map<String, Int> =
+            db.rawQuery("SELECT strong, n FROM glosses WHERE stem = ?", arrayOf(stem)).use { c ->
+                buildMap { while (c.moveToNext()) put(c.getString(0), c.getInt(1)) }
+            }
+
+        override fun count(stem: String): Int =
+            db.rawQuery("SELECT n FROM stems WHERE stem = ?", arrayOf(stem)).use { c -> if (c.moveToFirst()) c.getInt(0) else 0 }
+    }
+
+    /** A version's words of Jesus as stored: verse id → word ranges ("0-4,9-12"). */
+    fun redRows(version: String): Map<Int, String> =
+        source(version, "red").rawQuery("SELECT id, words FROM red WHERE version = ?", arrayOf(version)).use { c ->
+            buildMap { while (c.moveToNext()) put(c.getInt(0), c.getString(1)) }
+        }
+
+    /** Every verse that starts a paragraph in a version. */
+    fun paragraphIds(version: String): List<Int> =
+        source(version, "paragraphs").rawQuery("SELECT id FROM paragraphs WHERE version = ?", arrayOf(version)).use { c ->
+            buildList { while (c.moveToNext()) add(c.getInt(0)) }
+        }
 
     fun lexicon(id: String): LexEntry? =
         db.rawQuery("SELECT id, lemma, xlit, pron, derivation, def, kjv FROM lexicon WHERE id = ?", arrayOf(id)).use { c ->
@@ -159,7 +189,7 @@ class StudyRepository(private val context: Context) {
         val num = s.substring(1)
         val (lo, hi) = if (hebrew) 0 to NT_START - 1 else NT_START to Int.MAX_VALUE
         val tokens = listOf(" $num ", " $s ")
-        val rows = db.rawQuery(
+        val rows = source(version, "tags").rawQuery(
             "SELECT id, words FROM tags WHERE version = ? AND id BETWEEN ? AND ? AND (words LIKE ? OR words LIKE ?) ORDER BY id LIMIT $limit",
             arrayOf(version, lo.toString(), hi.toString(), "%${tokens[0]}%", "%${tokens[1]}%"),
         ).use { c -> buildList { while (c.moveToNext()) add(c.getInt(0) to c.getString(1)) } }
@@ -216,7 +246,7 @@ class StudyRepository(private val context: Context) {
     /** Verse numbers in a chapter that start a paragraph or a line of poetry (READ-6). */
     fun paragraphStarts(version: String, book: Int, chapter: Int): Set<Int> {
         val lo = book * 1_000_000 + chapter * 1000
-        return db.rawQuery(
+        return source(version, "paragraphs").rawQuery(
             "SELECT id FROM paragraphs WHERE version = ? AND id BETWEEN ? AND ?",
             arrayOf(version, lo.toString(), (lo + 999).toString()),
         ).use { c -> buildSet { while (c.moveToNext()) add(c.getInt(0) % 1000) } }
@@ -262,6 +292,29 @@ class StudyRepository(private val context: Context) {
                 "WHERE r.verse BETWEEN ? AND ? GROUP BY n.id ORDER BY COUNT(*) DESC, n.refs DESC LIMIT $limit",
             arrayOf(lo.toString(), (lo + 999).toString()),
         )
+    }
+
+    /**
+     * The people and places in each verse of a chapter, by the Strong's numbers that name them
+     * (AID-1): verse → (Strong's number → name). Only the names the verse is known to mention.
+     */
+    fun chapterNameStrongs(book: Int, chapter: Int): Map<Int, Map<String, NameEntry>> {
+        val lo = book * 1_000_000 + chapter * 1000
+        val rows = ArrayList<Triple<Int, String, Long>>()
+        db.rawQuery(
+            "SELECT r.verse, s.strong, n.id FROM name_refs r JOIN names n ON n.id = r.name JOIN name_strongs s ON s.name = n.id " +
+                "WHERE r.verse BETWEEN ? AND ?",
+            arrayOf(lo.toString(), (lo + 999).toString()),
+        ).use { c -> while (c.moveToNext()) rows += Triple(c.getInt(0), c.getString(1), c.getLong(2)) }
+        if (rows.isEmpty()) return emptyMap()
+        val byId = names("SELECT $NAME_COLS FROM names WHERE id IN (${rows.map { it.third }.distinct().joinToString(",")})", null).associateBy { it.id }
+        val out = HashMap<Int, HashMap<String, NameEntry>>()
+        for ((v, strong, id) in rows) {
+            val n = byId[id] ?: continue
+            val key = normalizeStrong(strong) ?: continue
+            out.getOrPut(v) { HashMap() }.merge(key, n) { a, b -> if (b.refCount > a.refCount) b else a }
+        }
+        return out
     }
 
     /** The person or place a Strong's number names, preferring the one mentioned in [verseId]. */
@@ -323,11 +376,27 @@ class StudyRepository(private val context: Context) {
 
     companion object {
         /** Bump when study.db changes, so the new copy replaces the old one. */
-        private const val DB_VERSION = 5
+        private const val DB_VERSION = 6
         private const val ORIGINAL_VERSION = 1
         const val NT_START = 40_000_000
 
         private val WORD = Regex("[\\p{L}\\p{M}\\p{N}_’']+")
+
+        /** Whether [db] has a table called [name] (imported Bibles from before 1.1 have no study tables). */
+        fun hasTable(db: SQLiteDatabase, name: String): Boolean =
+            db.rawQuery("SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = ?", arrayOf(name)).use { it.moveToFirst() }
+
+        /** A tags row (" 25 2316  1063 ") → the Strong's number of each word, or null. */
+        fun parseTags(verseId: Int, raw: String): List<String?> {
+            val prefix = if (verseId < NT_START) "H" else "G"
+            return raw.substring(1, raw.length - 1).split(' ').map { n ->
+                when {
+                    n.isEmpty() -> null
+                    n[0].isLetter() -> n
+                    else -> prefix + n
+                }
+            }
+        }
 
         /** Character ranges of the words of a verse, split the same way as when study.db was built. */
         fun words(text: String): List<IntRange> = WORD.findAll(text).map { it.range }.toList()

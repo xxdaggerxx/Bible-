@@ -1,0 +1,75 @@
+{
+ "id": "06-007-016",
+ "title": "The Sin of Achan",
+ "refs": [
+  "Joshua 7:16-26"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 6007020,
+   "end": 6007021,
+   "ref": "Joshua 7:20-21",
+   "ranges": [
+    [
+     6007020,
+     6007021
+    ]
+   ],
+   "title": "\"I Coveted Them and Took Them\"",
+   "key_verse": [
+    6007021,
+    6007021
+   ],
+   "reflect": [
+    {
+     "text": "Achan explained his disobedience in three simple steps: he saw the forbidden treasure, he wanted it, and he took it. Sin always starts in the heart before it turns into outward action. Human nature is naturally selfish, and we are quick to fall into temptation unless we submit our hearts to the Holy Spirit. Greed deceives us into thinking that nobody will notice what we have done.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Achan tried to bury the stolen goods under his tent, but private sin is never hidden from God. Trying to conceal our wrongdoing is foolish because the Lord sees every secret thing. Coveting, or wanting what is not ours, is a serious form of dishonesty that brings God's righteous anger. Walking in honesty each day is a true test of our Christian character.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We need to confess sinful desires right away rather than letting them grow. As Adrian Rogers reminds us, what we try to hide God exposes, but what we bring into the light He covers. Whenever we have acted deceitfully, we must turn away from our sin, ask God for His mercy, and make right what was taken.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a selfish desire or hidden wrong in your heart that you need to confess to God today?",
+    "What steps can you take to stay completely honest in your daily words and actions?"
+   ],
+   "prayer": "Lord, forgive us for the times we let selfish desires grow in our hearts. Help us never to hide our sins from You, but to bring them honestly into Your light. Teach us to follow Your Holy Spirit so that we may live truthful and obedient lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "Is Your Heart Open Before God?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-july-24-2024.html"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Mar. 15, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-mar-15-2010-11627482.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

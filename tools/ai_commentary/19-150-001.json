@@ -1,0 +1,71 @@
+{
+ "book": 19,
+ "chapter": 150,
+ "first": 1,
+ "last": 6,
+ "ref": "Psalms 150",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "A joyful call goes out to praise the Lord everywhere. People are invited to praise Him in His earthly sanctuary, the holy place where He meets with His worshippers. At the same time, praise belongs to Him across the mighty heavens, where His immense power and glory shine brightly.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "God is to be praised for two great reasons: what He does and who He is. His worshippers celebrate His mighty acts, such as creating the universe, caring for it, and saving His people. They also honor His excellent greatness, recognizing that His majesty is far beyond anything human words can fully express.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 5,
+   "meaning": "Worshippers are told to bring every kind of musical instrument into the celebration of God. The list includes horns, harps, lyres, tambourines, pipes, strings, and loud clashing cymbals. These diverse sounds worked together in the temple to show deep joy, wholehearted energy, and unity in honoring the Lord.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "These temple instruments belonged to Old Testament worship and were shadows that pointed to the spiritual praise of the heart in the church.",
+     "sources": [
+      "https://www.biblehub.com/commentaries/gill/psalms/150.htm"
+     ]
+    },
+    {
+     "tradition": "Charismatic",
+     "view": "Believers are encouraged to use every modern instrument and expressive bodily praise to celebrate God with joy today.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/psalm-150/"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The psalm widens its call to its highest point, inviting every living creature that breathes to join in worship. Breath is a gift from God, and it finds its truest purpose when it is used to thank and praise the One who gave it. With this final shout of joy, the entire Book of Psalms comes to a triumphant close.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

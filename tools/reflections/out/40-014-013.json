@@ -1,0 +1,98 @@
+{
+ "id": "40-014-013",
+ "title": "The Feeding of the Five Thousand",
+ "refs": [
+  "Matthew 14:13-21",
+  "Mark 6:30-44",
+  "Luke 9:10-17",
+  "John 6:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40014013,
+   "end": 40014021,
+   "ref": "Matthew 14:13-21; Mark 6:30-44; Luke 9:10-17; John 6:1-15",
+   "ranges": [
+    [
+     40014013,
+     40014021
+    ],
+    [
+     41006030,
+     41006044
+    ],
+    [
+     42009010,
+     42009017
+    ],
+    [
+     43006001,
+     43006015
+    ]
+   ],
+   "title": "Bread in Desolate Places",
+   "key_verse": [
+    41006038,
+    41006038
+   ],
+   "reflect": [
+    {
+     "text": "Jesus and His followers were weary, and Jesus was grieving the loss of John the Baptist. They tried to withdraw to a quiet place to rest, but large crowds followed them. Instead of turning them away, Jesus welcomed the people with deep compassion, teaching them and healing those who were sick.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "As evening approached, the disciples saw a problem they felt powerless to solve. They urged Jesus to send the crowd away to buy food. Instead, Jesus tested their faith by telling them to feed the people themselves. He moved their focus away from the money they lacked and directed them to look at the small resources they already held in their hands.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The disciples had only five loaves and two fish, but Jesus asked them to bring that small meal to Him. Christ did not bypass His followers; He invited them to take part by handing out the food. When we surrender our limited resources into Jesus' hands, He blesses and multiplies what we offer, leaving more than enough to meet every need.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face problems that seem too large to handle, do you focus on what you lack or on what you can place into Jesus' hands?",
+    "What small resources or abilities can you offer to Christ today to serve someone around you?"
+   ],
+   "prayer": "Lord Jesus, thank You for Your gentle compassion toward us when we are tired and overwhelmed. Forgive us for focusing on our limits rather than trusting Your power to provide. Please take the little we have, bless it, and use our hands to care for others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Emma Danzey",
+     "work": "Jesus' Great Compassion",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/jesus-great-compassion-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Mike DeVries",
+     "work": "How Many Loaves Do You Have?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/how-many-loaves-do-you-have-homeword-november-18.html"
+    },
+    "D3": {
+     "author": "Beth Moore",
+     "work": "Day 156: Luke 9:10–17",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-156-luke-9-1017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

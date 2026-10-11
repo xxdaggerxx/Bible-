@@ -1,0 +1,61 @@
+{
+ "book": 19,
+ "chapter": 133,
+ "first": 1,
+ "last": 3,
+ "ref": "Psalms 133",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David invites us to stop and look at something rare and lovely: brothers living as one. Being at peace is good, and it is also a joy. 'Brothers' means family, the people of Israel, and all of God's children. David may have written this after the tribes, once divided, came together under him as king.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Spurgeon (Treasury of David)",
+    "Geneva Notes",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars think the Hebrew wording points to a time after the exile in Babylon, so the psalm may be later than David. They read it as a song about God's people gathering from all over the land for worship at the great feasts.",
+     "sources": [
+      "Keil & Delitzsch"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Unity is like the holy, sweet-smelling oil poured on Aaron when he was made high priest. The oil was poured so freely that it ran down his beard onto his robe. In the same way, love among believers is holy, precious and pleasing to God, and it spreads out to bless everyone around. Some also see the oil as a picture of the grace that flows from Christ, the head of the church, to all his people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Geneva Notes",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Unity is also like the heavy dew of Mount Hermon that waters the hills around Zion. Dew cools, refreshes and helps things grow, and love does the same for God's people. Where brothers live in harmony, God gives his blessing as a command. The greatest blessing he gives is life that never ends.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Wesley",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']"
+ ]
+}

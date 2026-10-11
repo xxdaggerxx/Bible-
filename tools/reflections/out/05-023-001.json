@@ -1,0 +1,60 @@
+{
+ "id": "05-023-001",
+ "title": "Exclusion from the Congregation",
+ "refs": [
+  "Deuteronomy 23:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5023001,
+   "end": 5023008,
+   "ref": "Deuteronomy 23:1-8",
+   "ranges": [
+    [
+     5023001,
+     5023008
+    ]
+   ],
+   "title": "Turned into a Blessing",
+   "key_verse": [
+    5023005,
+    5023005
+   ],
+   "reflect": [
+    {
+     "text": "In this chapter, we read about enemies who hired Balaam to place a curse on God's people. Yet God refused to listen to that curse. Instead, He stepped in and turned it directly into a blessing. Deuteronomy 23:5 shows us that God has the power to take something meant for harm and transform it. Even when circumstances feel hopeless, unchangeable, or completely beyond our control, God can change the very nature of our problems when we place them in His hands.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Why does God step into our lives in this way? The verse gives a clear answer: He does it because He loves you. His steadfast love is the main reason He works to turn our mistakes into miracles. Just as God once altered Moses' rod, He can reshape the difficulties we face today. Because of His love, we can release our heavy burdens to Him and trust Him to bring about good and positive change.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy burden or difficult situation do you need to hand over to God today?",
+    "How does knowing that God loves you give you peace when facing hard circumstances?"
+   ],
+   "prayer": "Lord, thank You for Your steadfast love that watches over us. Please take the heavy burdens and difficult problems we face and transform them according to Your will. Help us to let go of our worries and trust You to bring blessings out of our troubles. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bayless Conley",
+     "work": "God Can Turn Your Mistake into a Miracle!",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/spiritual-life/god-can-turn-your-mistake-into-a-miracle-11555627.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,79 @@
+{
+ "id": "42-010-017",
+ "title": "The Joyful Return",
+ "refs": [
+  "Luke 10:17-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42010017,
+   "end": 42010020,
+   "ref": "Luke 10:17-20",
+   "ranges": [
+    [
+     42010017,
+     42010020
+    ]
+   ],
+   "title": "Rejoice That Your Names Are Written in Heaven",
+   "key_verse": [
+    42010020,
+    42010020
+   ],
+   "reflect": [
+    {
+     "text": "The disciples returned full of excitement because evil spirits obeyed them when they spoke the name of Jesus. Jesus reminded them that Satan's power is truly broken through His victory. When we face temptation or hardship, we share in Christ's triumph by trusting in His living name rather than our own strength. Even small victories in our daily lives have a real impact in God's kingdom.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet Jesus gently redirected their focus. He warned them not to build their happiness on what they could accomplish or on spiritual power. If our joy rises and falls with our ministry results or personal success, we will swing between pride and insecurity. True peace comes from knowing God has already written our names in heaven. Because salvation is His gift to us, we can stay humble when things go well and joyful when we struggle.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Knowing your name is recorded in heaven also means this world is only a temporary home. You have an eternal place where you truly belong. Keeping that heavenly home in view gives you steady hope, deep security, and quiet strength through every trial you meet.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you tend to measure your joy by your daily successes, or by the gift of belonging to God?",
+    "How can remembering that your name is written in heaven bring you peace when life feels hard?"
+   ],
+   "prayer": "Lord Jesus, thank You for breaking the power of evil and making us secure in Your love. Help us not to look for our worth in what we achieve, but to rest in the joy of being known by You. Keep our hearts fixed on our heavenly home today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Luke 10:18",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Stephen Witmer",
+     "work": "Peace Beyond Performance: Unshakable Joy for the Ups and Downs",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/peace-beyond-performance"
+    },
+    "D3": {
+     "author": "Mary Southerland",
+     "work": "This World is Not My Home",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-january-24-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

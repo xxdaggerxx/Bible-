@@ -1,0 +1,66 @@
+{
+ "id": "14-034-003",
+ "title": "Josiah Destroys Idolatry",
+ "refs": [
+  "2 Chronicles 34:3-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14034003,
+   "end": 14034007,
+   "ref": "2 Chronicles 34:3-7",
+   "ranges": [
+    [
+     14034003,
+     14034007
+    ]
+   ],
+   "title": "Seeking God with Youthful Courage",
+   "key_verse": [
+    14034003,
+    14034003
+   ],
+   "reflect": [
+    {
+     "text": "Young people are often expected to be careless or immature. Yet King Josiah began seeking the Lord when he was still a teenager. Even though his royal ancestors were wicked kings who led the nation into sin, Josiah did not follow their bad example. Instead, he took personal responsibility for his own spiritual life and for the spiritual well-being of his people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Josiah acted bravely on the truth he had. He took bold steps to wipe out idolatry, the worship of false gods and statues. He tore down pagan altars, smashed carved images into dust, and scattered the pieces. He did not hold back or wait for others to lead, but worked determinedly to clear away everything that took honor from the true God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Today, we have ready access to God's Word in the Bible. Josiah reminds us that our background or age does not define our walk with God. We are personally responsible to study God's truth and live it out courageously each day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you taking personal responsibility for your faith, or are you waiting for others to lead the way?",
+    "What false priorities or bad habits might God be calling you to clear out of your life?"
+   ],
+   "prayer": "Lord God, thank You for the example of King Josiah's bold faith. Give us courage to take personal responsibility for our walk with You, regardless of our age or background. Help us to remove anything that takes Your place in our hearts and to live out Your Word faithfully. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "Youthful Vigor",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/youthful-vigor-one-year-devotions-for-men-november-2.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

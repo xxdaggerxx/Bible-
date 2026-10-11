@@ -1,0 +1,149 @@
+{
+ "book": 6,
+ "chapter": 20,
+ "first": 1,
+ "last": 9,
+ "ref": "Joshua 20",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The Lord spoke directly to Joshua after the tribes had received their land. He reminded Joshua to set apart the safe towns known as cities of refuge, just as Moses had been instructed years earlier. God wanted to ensure that His people had places of safety ready before dangerous accidents happened.",
+   "meaning_sources": [
+    "Keil & Delitzsch",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars suggest that the cities of refuge were not established during Joshua's time, but arose much later during the religious reforms of King Josiah.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/bcc/joshua-20.html"
+     ]
+    },
+    {
+     "label": "Catholic",
+     "view": "The Catholic Encyclopedia suggests that the three western cities were established in the time of King Josiah, while the three eastern cities were added after the Babylonian exile.",
+     "sources": [
+      "https://www.newadvent.org/cathen/12712a.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "God told Joshua to tell Israel to choose these cities of refuge. These towns were planned by God through Moses to give mercy and safety to people in trouble. Christian readers see these cities as a picture of how sinners can run to Jesus Christ to find shelter from judgment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The cities were built for anyone who killed another person by pure accident, without any anger or plan to do harm. In those days, a close relative called the avenger of blood had the duty to seek justice for the family. The safe city protected the runner from being killed before anyone could hear what really happened.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "A person who caused an accidental death had to run to the city gate, where the town leaders sat to hear legal matters. He told them the whole story of what happened. If the elders saw he had no evil intent, they took him in and gave him a place to live in safety.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "If the dead person's relative chased the runner to the city, the town leaders were forbidden to hand him over. God's law looked closely at whether the killer had any hatred toward his neighbor beforehand. Because the death was an accident, the town protected the runner from unfair revenge.",
+   "meaning_sources": [
+    "https://enduringword.com/bible-commentary/joshua-20/",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The runner had to live in the city until the community held a public trial and until the current high priest died. Even though it was an accident, losing his home reminded everyone that human life is very precious to God. Once the high priest passed away, the runner was fully pardoned and could safely return home to his family.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Matthew Henry"
+   ],
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "The death of the high priest pictures the death of Jesus Christ, which frees believers from the penalty of sin.",
+     "sources": [
+      "Jamieson-Fausset-Brown",
+      "Keil & Delitzsch"
+     ]
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "The high priest's death was not a picture of Christ, but a national event of mourning where personal grudges were set aside.",
+     "sources": [
+      "https://biblehub.com/commentaries/joshua/20-6.htm"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "Israel set apart three cities on the west side of the Jordan River: Kedesh in the north, Shechem in the middle, and Hebron in the south. All three belonged to the Levites, the priestly tribe who could judge fairly and teach God's word. Placing them on hills throughout the country made them easy to see and reach quickly.",
+   "meaning_sources": [
+    "Keil & Delitzsch",
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "Across the Jordan River to the east, they appointed three more cities: Bezer, Ramoth, and Golan. Moses had already selected these towns earlier, and now they were formally opened for use. Having three cities on each side of the river meant no one was more than a short journey away from safety.",
+   "meaning_sources": [
+    "Keil & Delitzsch",
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "These cities were open to both native Israelites and foreign travelers living in the land. God's law gave equal protection to everyone who caused an accidental death, saving them from vengeance until they had a fair hearing. This shows God's fair justice and His desire to offer mercy and shelter to all people.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 5: removed sources ['Jamieson-Fausset-Brown']",
+  "v. 6: removed sources ['Calvin']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

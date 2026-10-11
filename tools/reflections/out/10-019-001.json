@@ -1,0 +1,75 @@
+{
+ "id": "10-019-001",
+ "title": "Joab Reproves David",
+ "refs": [
+  "2 Samuel 19:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10019001,
+   "end": 10019007,
+   "ref": "2 Samuel 19:1-7",
+   "ranges": [
+    [
+     10019001,
+     10019007
+    ]
+   ],
+   "title": "Hearing Hard Truth in Grief",
+   "key_verse": [
+    10019007,
+    10019007
+   ],
+   "reflect": [
+    {
+     "text": "David was so overwhelmed by the loss of his son Absalom that his sorrow completely took over. This intense mourning turned a major victory into deep shame for his loyal troops. The men who had risked everything to save David and his family felt forgotten, quietly sneaking back into town as if they had lost the battle.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Joab confronted the king with fierce and blunt words. Instead of offering gentle comfort, he spoke as a commander protecting the realm. Joab warned David that ignoring the men who loved and defended him would destroy their allegiance. If David stayed hidden in his grief, all his followers would leave him before night came.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Though Joab's rebuke was sharp and lacked compassion, it worked like a faithful wound that brought David to his senses. Leaders must remember to show genuine gratitude to the people who serve alongside them. David recognized that the hard counsel was right, and he prepared to leave his isolation to encourage his people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Has personal pain ever caused you to overlook the care and loyalty of the people around you?",
+    "Are you willing to listen with humility when someone brings you a hard truth you need to hear?"
+   ],
+   "prayer": "Lord, help us to notice and appreciate the people who support us, even when we walk through dark days. Give us humble hearts to receive hard corrections when we lose our way. Grant us the courage to step out of isolation and care for those you have placed around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "David’s Return to Jerusalem",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/davids-return-to-jerusalem"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 69: 2 Samuel 19:1–8",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-69-2-samuel-19-18.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

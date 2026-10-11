@@ -1,0 +1,76 @@
+{
+ "id": "40-009-016",
+ "title": "The Patches and the Wineskins",
+ "refs": [
+  "Matthew 9:16-17",
+  "Mark 2:21-22",
+  "Luke 5:36-39"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40009016,
+   "end": 40009017,
+   "ref": "Matthew 9:16-17; Mark 2:21-22; Luke 5:36-39",
+   "ranges": [
+    [
+     40009016,
+     40009017
+    ],
+    [
+     41002021,
+     41002022
+    ],
+    [
+     42005036,
+     42005039
+    ]
+   ],
+   "title": "New Wine for New Wineskins",
+   "key_verse": [
+    40009017,
+    40009017
+   ],
+   "reflect": [
+    {
+     "text": "Jesus uses everyday pictures to teach an important lesson. If you sew a new, unshrunk patch onto an old coat, the patch will shrink when washed and tear the fabric. In the same way, fresh wine bubbles and expands as it ferments. If you pour it into stiff, brittle wineskins, the pressure bursts the leather, ruining both the skins and the wine. The old containers simply cannot hold what is new.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Religious habits and spiritual disciplines can be helpful aids to our faith. However, problems arise when we turn human traditions into rigid rules and treat them like divine commands. Doing this places heavy spiritual burdens on people. Jesus did not squeeze his ministry into the inflexible expectations of his day. Trying to force Christ into our own human patterns only leads to spiritual damage.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God was doing a fresh work through his Son, and people needed to adjust their thinking to receive it. We must be careful never to treat secondary traditions as absolute truth. When we hold too tightly to our own comfortable customs, we risk closing ourselves off to being renewed and reformed by God's Word.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there religious traditions or personal habits you treat as strict rules instead of helpful aids?",
+    "In what ways can you keep your heart open to being corrected and shaped by God's Word?"
+   ],
+   "prayer": "Lord Jesus, thank you for the fresh life and grace you bring to us. Forgive us when we hold tightly to human traditions instead of listening to your voice. Please keep our hearts humble and flexible, ready to be reformed by your truth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "New Wine for New Wineskins",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/new-wine-new-wineskins"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "14-014-001",
+ "title": "Asa Reigns in Judah",
+ "refs": [
+  "2 Chronicles 14:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14014001,
+   "end": 14014015,
+   "ref": "2 Chronicles 14:1-15",
+   "ranges": [
+    [
+     14014001,
+     14014015
+    ]
+   ],
+   "title": "Seeking God and Relying on His Help",
+   "key_verse": [
+    14014011,
+    14014011
+   ],
+   "reflect": [
+    {
+     "text": "King Asa began his rule by taking a firm stand for the Lord. He cleared away false altars and idols, urging the people of Judah to obey God's commands and seek Him with their whole hearts. Because of their faithfulness, God blessed the nation with rest, peace, and prosperity. Doing what is right in God's eyes brings true blessing and strengthens a community.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet living faithfully does not mean we will never face hardship. A massive Cushite army soon came against Judah, outnumbering Asa's troops. Standing firmly for God often invites fierce opposition and trials that feel completely overwhelming. Instead of giving in to fear or relying on his own resources, Asa turned straight to God in humble prayer.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Asa openly admitted his utter helplessness before such a giant army. He chose to rely entirely on God's power to save them. The Lord answered his cry, striking down the enemy and giving Judah complete deliverance. This account reminds us to never let self-reliance take over, but to keep depending on the Lord who gives rest to our souls.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face trials that seem too big to handle, do you tend to rely on yourself or turn to God in prayer?",
+    "What false things in your life might you need to remove so you can seek the Lord with your whole heart?"
+   ],
+   "prayer": "Lord God, there is no one besides You to help the powerless. When challenges feel too big for us, guard our hearts from fear and self-reliance. Teach us to seek You faithfully and depend on Your strength every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: 2 Chronicles 14–15, Revelation 4, Haggai 2, and John 3",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/2-chronicles-14-15-revelation-4-haggai-2-john-3/"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 05/25/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-05-or-25-or-2002-1133454.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

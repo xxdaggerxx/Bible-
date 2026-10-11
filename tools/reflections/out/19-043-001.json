@@ -1,0 +1,67 @@
+{
+ "id": "19-043-001",
+ "title": "Send Out Your Light",
+ "refs": [
+  "Psalms 43:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19043001,
+   "end": 19043005,
+   "ref": "Psalms 43:1-5",
+   "ranges": [
+    [
+     19043001,
+     19043005
+    ]
+   ],
+   "title": "Finding Joy at God's Altar",
+   "key_verse": [
+    19043004,
+    19043004
+   ],
+   "reflect": [
+    {
+     "text": "The writer of this psalm felt deeply weighed down. Unfair and deceitful people opposed him, and he wondered if God had rejected him. Yet everything begins to change when he cries out for guidance. As F. B. Meyer observes, God sends his light and truth like \"twin angels\" to lead him straight into God's holy dwelling.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When the psalmist reaches the altar, the heavy clouds break. His difficult circumstances have not changed, but being near God transforms how he sees his life. He realizes that all of God's strength and goodness belong to him. His silent harp is taken up once again, and sorrow gives way to grateful praise.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of this, the writer speaks directly to his own downcast heart. He asks himself why he should stay upset and restless when such an inheritance is his. A short time spent in God's presence reminds us of who our Lord is, turning our eyes from our troubles to the God who is our greatest joy.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel weighed down by trouble, what helps you turn your attention back to God?",
+    "How does spending time in God's presence change the way you look at your hard circumstances?"
+   ],
+   "prayer": "Lord, send out your light and truth to guide us when life feels dark. Draw us near to you, and teach us to remember that your strength is ours. Quiet our restless souls so we may put our hope in you, our greatest joy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 43:4",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

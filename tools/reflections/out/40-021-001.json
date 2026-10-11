@@ -1,0 +1,89 @@
+{
+ "id": "40-021-001",
+ "title": "The Triumphal Entry",
+ "refs": [
+  "Matthew 21:1-11",
+  "Mark 11:1-11",
+  "Luke 19:28-40",
+  "John 12:12-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40021001,
+   "end": 40021011,
+   "ref": "Matthew 21:1-11; Mark 11:1-11; Luke 19:28-40; John 12:12-19",
+   "ranges": [
+    [
+     40021001,
+     40021011
+    ],
+    [
+     41011001,
+     41011011
+    ],
+    [
+     42019028,
+     42019040
+    ],
+    [
+     43012012,
+     43012019
+    ]
+   ],
+   "title": "The King of Unfailing Grace",
+   "key_verse": [
+    42019040,
+    42019040
+   ],
+   "reflect": [
+    {
+     "text": "Jesus rode into Jerusalem surrounded by shouting crowds, yet He knew exactly what lay ahead. The people cheered for rescue, hoping He would free them from Roman power, but He came to save them from sin and death. Pure grace led Him forward toward the cross, even while knowing that the loud praises of the crowd would soon turn into cries for His crucifixion.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We often resemble that fickle crowd. We praise God when things seem bright, but waver and doubt Him when trouble comes. Still, Jesus continues to meet our weakness with inexhaustible grace. When religious leaders told Him to quiet His praising followers, He replied that the very stones would shout if the disciples kept silent.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The rocks could speak of the power of their Maker, but we have a far greater reason to sing. God broke our hard hearts and shaped us into a living temple for Himself, and Christ rolled away the stone from the grave. As Charles Spurgeon wrote, \"we will hush their noise with ours\" by offering our own songs of thanks to the King who gave His life for us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways does your trust in God waver when circumstances change, and how does His steady grace comfort you?",
+    "What specific works of God in your life move you to speak His praise rather than staying silent?"
+   ],
+   "prayer": "Lord Jesus, thank You for moving toward the cross in pure grace to save us from sin. Forgive us for the times our faith is weak and our praise falls silent. Give us thankful hearts so we may gladly honor You as our King every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 23",
+     "on": "Luke 19:40",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Sharon Jaynes",
+     "work": "The Day Grace Rode Into Town",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-march-24-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

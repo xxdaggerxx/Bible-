@@ -1,0 +1,66 @@
+{
+ "id": "10-003-031",
+ "title": "David Mourns for Abner",
+ "refs": [
+  "2 Samuel 3:31-39"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10003031,
+   "end": 10003039,
+   "ref": "2 Samuel 3:31-39",
+   "ranges": [
+    [
+     10003031,
+     10003039
+    ]
+   ],
+   "title": "Mourning Abner and Leaving Justice to God",
+   "key_verse": [
+    10003037,
+    10003037
+   ],
+   "reflect": [
+    {
+     "text": "When Joab murdered Abner, King David openly condemned the wicked deed. David led the entire nation in deep and honest grief. He ordered the people to tear their clothes and wear sackcloth, while he personally walked behind the funeral bed. David wept aloud at the tomb, refused to eat any food until sunset, and sang a song of sorrow. His sincere, public mourning convinced all the people that he had no share in Abner's death.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even though David was the anointed king, he failed to carry out the justice required by God's law. He had the royal authority to punish murder, but he felt weak and hesitated to confront his fierce nephew Joab. Instead of executing the sentence himself, David stepped back and left the judgment to the Lord, asking God to repay the evildoer.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "David's hesitation shows that even leaders chosen by God can struggle to do what is right. His failure reminds us that ruling justly is difficult, and it prompts us to pray faithfully for our governing authorities so that they will have the courage to punish evil and reward good.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Why was it important for David to show the people that he truly grieved for Abner?",
+    "How can we faithfully pray for our leaders when they face the difficult task of punishing evil?"
+   ],
+   "prayer": "Lord God, You love righteousness and true justice. We ask You to give wisdom and courage to our governing leaders. Help them to stand firm against wrongdoing, protect what is good, and lead with honest hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Justice Left to God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/justice-left-to-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

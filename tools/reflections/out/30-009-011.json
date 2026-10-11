@@ -1,0 +1,73 @@
+{
+ "id": "30-009-011",
+ "title": "A Promise of Restoration",
+ "refs": [
+  "Amos 9:11-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 30009011,
+   "end": 30009015,
+   "ref": "Amos 9:11-15",
+   "ranges": [
+    [
+     30009011,
+     30009015
+    ]
+   ],
+   "title": "God Rebuilds the Fallen Tent",
+   "key_verse": [
+    30009011,
+    30009011
+   ],
+   "reflect": [
+    {
+     "text": "God promised King David that his royal line would never be abandoned, even though his descendants sinned and faced exile. Amos foresaw a time when the Lord would repair this fallen family line and restore its ruins. After centuries of silence, God kept His sworn word in a surprising way by sending Jesus Christ. Human failure cannot break the Lord's faithful promises.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "In the early church, James quoted these verses to show that God's plan included people from all nations. The blessing that started in Israel was meant to spread across the whole earth. Amos painted a picture of this new day as an overflowing harvest, where the ground produces fruit so quickly that the worker plowing the field catches up to the one gathering the crop.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God has restored us in Christ, we can live in true security and peace. Even so, as F. B. Meyer warned, we often do not \"possess our possessions.\" God has filled Jesus with every spiritual gift we need, including patience, wisdom, and love. Instead of living like we are empty, God invites us to step into the fullness He has already provided.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God always keeps His promises comfort you when you see human failure around you?",
+    "In what areas of your life are you forgetting to rely on the spiritual gifts and strength God has given you in Christ?"
+   ],
+   "prayer": "Lord God, thank You for keeping Your promises even when we are unfaithful. Thank You for bringing us into Your kingdom through Jesus and giving us every spiritual blessing we need. Help us to trust Your goodness today and walk in the fullness You have provided. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Amos 9:11",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Davidic Covenant II",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/davidic-covenant-ii"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

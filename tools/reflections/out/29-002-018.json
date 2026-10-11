@@ -1,0 +1,82 @@
+{
+ "id": "29-002-018",
+ "title": "Restoration Promised",
+ "refs": [
+  "Joel 2:18-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 29002025,
+   "end": 29002027,
+   "ref": "Joel 2:25-27",
+   "ranges": [
+    [
+     29002025,
+     29002027
+    ]
+   ],
+   "title": "\"I Will Restore the Years\"",
+   "key_verse": [
+    29002025,
+    29002025
+   ],
+   "reflect": [
+    {
+     "text": "Sometimes we look back on seasons that feel utterly lost or wasted. We might grieve over years spent in rebellion, lukewarm faith, or empty pursuits that human effort can never recover. Yet God makes a remarkable promise to restore what the locusts have devoured. Through His grace, which is God's kindness we do not deserve, He can deepen our walk with Christ and multiply our future service, bringing a rich spiritual harvest out of our former barrenness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Hardships and grief can strip life bare very quickly, leaving us feeling empty. In those moments, we face a choice to draw near to God rather than pull away from Him in defeat. God can use our bitter trials to teach us childlike dependence and make us watchful and humble. Just as a seed buried in dark soil eventually sprouts, God brings spiritual renewal and fresh growth out of barren ground.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Our confidence is not anchored in comfortable circumstances, but in the Lord's faithful presence. He promises that His people will not be put to shame. As we rest in His promise of restoration, our short-term losses turn into lasting gains that bring honor to Him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What wasted seasons or painful losses do you need to place into God's restoring hands today?",
+    "How can your past struggles help you grow in humble dependence on Christ?"
+   ],
+   "prayer": "Lord God, thank You for Your promise to restore the years that pain and sin have eaten away. Teach us to draw near to You in every season and trust Your enduring faithfulness. Please bring fruitful growth out of our barren places and use our lives to honor You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 18",
+     "on": "Joel 2:25",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Colin Smith",
+     "work": "God Can Restore Your Lost Years",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/god-can-restor-your-lost-years/"
+    },
+    "D3": {
+     "author": "Jessica Van Roekel",
+     "work": "God Longs to Restore You - The Crosswalk Devotional - July 29",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/god-longs-to-restore-you-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

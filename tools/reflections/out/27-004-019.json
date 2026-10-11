@@ -1,0 +1,60 @@
+{
+ "id": "27-004-019",
+ "title": "Daniel Interprets the Second Dream",
+ "refs": [
+  "Daniel 4:19-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 27004019,
+   "end": 27004027,
+   "ref": "Daniel 4:19-27",
+   "ranges": [
+    [
+     27004019,
+     27004027
+    ]
+   ],
+   "title": "Don't Miss God's Warning Signs",
+   "key_verse": [
+    27004027,
+    27004027
+   ],
+   "reflect": [
+    {
+     "text": "Success and personal pride can easily blind us to danger. When things seem to be going well, we often fail to notice the warning signs of an upcoming collapse. In this passage, God gave King Nebuchadnezzar advance notice and clear counsel through Daniel before disaster struck. God was merciful to warn the powerful ruler before he fell.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Daniel offered the king three specific actions to protect his peace: turn away from sin, do what is right, and show kindness to the poor and oppressed. In the same way, disruptions in our own lives—such as relationship conflict, repeated temptation, or inner confusion—often serve as loving warnings from God. He uses these moments to prompt us to pause, check our hearts, and realign our lives with Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What disruptions or conflicts in your life right now might God be using to catch your attention?",
+    "Where is God asking you to turn from sin, do what is right, or show mercy to someone in need?"
+   ],
+   "prayer": "Lord, forgive us for the times our pride blinds us to your guidance. When we experience confusion or tension, help us to recognize these moments as your loving warnings. Teach us to turn away from our sins, do what is right, and treat those around us with mercy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Rick Warren",
+     "work": "Pride: Don’t Miss the Warning Signs",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-october-24-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

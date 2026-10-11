@@ -1,0 +1,60 @@
+{
+ "id": "47-002-001",
+ "title": "Reaffirm Your Love",
+ "refs": [
+  "2 Corinthians 2:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 47002001,
+   "end": 47002011,
+   "ref": "2 Corinthians 2:1-11",
+   "ranges": [
+    [
+     47002001,
+     47002011
+    ]
+   ],
+   "title": "Reaffirming Love and Forgiveness",
+   "key_verse": [
+    47002008,
+    47002008
+   ],
+   "reflect": [
+    {
+     "text": "In this letter, Paul writes with deep care to a church dealing with painful hurt. A member of their community had caused grief and had been disciplined by the majority. Paul tells them that this punishment was enough. The proper goal of Christian discipline is never revenge or payback. Its true purpose is restoration, which means helping someone turn back to God and be healed within the church family.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul also knew that continuing to punish someone who repents carries real danger. If we hold back our forgiveness, a believer who is truly sorry can be swallowed up by deep grief and despair. When someone shows genuine sorrow over their sin, the community must stop rebuking them. Instead, we are called to comfort them, forgive them, and actively reaffirm our love.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there someone who has turned from wrongdoing whom you need to forgive and welcome back?",
+    "How can you actively show love and comfort to a person who feels weighed down by past mistakes?"
+   ],
+   "prayer": "Lord, thank you for your willingness to restore us when we turn away from sin. Please keep us from holding grudges or seeking revenge against others. Teach us to offer comfort, extend forgiveness, and actively show your love to those who are sorrowful.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Love for the Penitent",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/love-for-the-penitent"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "21-006-001",
+ "title": "The Futility of Life",
+ "refs": [
+  "Ecclesiastes 6:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 21006001,
+   "end": 21006012,
+   "ref": "Ecclesiastes 6:1-12",
+   "ranges": [
+    [
+     21006001,
+     21006012
+    ]
+   ],
+   "title": "Contentment Under a Sovereign God",
+   "key_verse": [
+    21006009,
+    21006009
+   ],
+   "reflect": [
+    {
+     "text": "Life becomes exhausting when we let our desires wander after what we do not have. True contentment begins when we stop comparing ourselves to others. We can learn to admire good things in other people's lives without feeling the need to own them ourselves. When our desires go unchecked, coveting steals away our peace.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Ecclesiastes also reminds us that God is completely sovereign over our lives. He rules over everything, while we remain limited human beings. Arguing with His will or fighting against His hand accomplishes nothing. Resisting God only keeps us from learning the lessons He wants to teach us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When we surrender control to God, our anxiety begins to fade. We shift our focus back to the One who sits on the throne. Instead of being consumed by restless longing or fighting our circumstances, we can rest in God's wisdom and enjoy what He has given us today.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where might comparing yourself to others be stealing your contentment today?",
+    "What area of your life do you need to surrender to God's sovereign control?"
+   ],
+   "prayer": "Lord, thank You for the gifts You have placed before us today. Help us to stop comparing ourselves to others and chasing after things we do not need. We surrender our worries to You, trusting that You sit on the throne and know what is best for our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Rick Warren",
+     "work": "Your Choice: Comparison or Contentment",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-august-24-2026.html"
+    },
+    "D2": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Don’t Argue with a Sovereign God",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/dont-argue-with-a-sovereign-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

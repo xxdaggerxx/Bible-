@@ -1,0 +1,75 @@
+{
+ "id": "01-047-001",
+ "title": "Jacob Settles in Goshen",
+ "refs": [
+  "Genesis 47:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1047001,
+   "end": 1047012,
+   "ref": "Genesis 47:1-12",
+   "ranges": [
+    [
+     1047001,
+     1047012
+    ]
+   ],
+   "title": "A Pilgrim Blessing a King",
+   "key_verse": [
+    1047007,
+    1047007
+   ],
+   "reflect": [
+    {
+     "text": "When Jacob stood before Pharaoh, the scene seemed upside down by the world's standards. Pharaoh was the mighty ruler of a rich empire, while Jacob was an elderly, displaced shepherd seeking pasture and food. Yet, it was Jacob who placed a blessing on Pharaoh. God overturned human expectations, showing that earthly power, royal titles, and wealth are not what carry true spiritual weight.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jacob spoke honestly about his life. He called his years few and hard, marked by past sin and sorrow. Instead of viewing Egypt or Canaan as his ultimate resting place, Jacob understood his life as a temporary pilgrimage, like an exile journeying toward his true heavenly home. His difficult path held much greater eternal value than all of Pharaoh's luxury.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God routinely chooses the humble and ordinary rather than the powerful. Suffering and weakness had shaped Jacob, making him ready to impart God's wisdom. When we recognize our true spiritual riches, we do not need worldly status to make a difference. God can use our own hardships to equip us to extend his blessing to those around us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does viewing your earthly life as a temporary journey change what you value most?",
+    "How might God use the hardships you have faced to help you bless someone else?"
+   ],
+   "prayer": "Lord, help us remember that our earthly lives are only a temporary journey toward our true home with you. Keep us from measuring our worth by wealth or worldly standing. Use our weakness and trials to mature us so that we may freely share your blessing with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "An Audience with Jacob",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/audience-jacob"
+    },
+    "D2": {
+     "author": "Daily Disciples Ministries",
+     "work": "The Lesser Blessed the Greater",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-oct-31-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

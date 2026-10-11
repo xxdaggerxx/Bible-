@@ -1,0 +1,73 @@
+{
+ "id": "60-004-012",
+ "title": "Suffering as Christians",
+ "refs": [
+  "1 Peter 4:12-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 60004012,
+   "end": 60004019,
+   "ref": "1 Peter 4:12-19",
+   "ranges": [
+    [
+     60004012,
+     60004019
+    ]
+   ],
+   "title": "Entrusting Your Soul to a Faithful Creator",
+   "key_verse": [
+    60004019,
+    60004019
+   ],
+   "reflect": [
+    {
+     "text": "When painful seasons come, we might wonder if something has gone wrong. Yet difficult trials are not strange accidents. God uses them as tools to refine and purify our faith. Hardship endured for the Savior confirms that we share a genuine union with Christ. These trials strip away our self-reliance so we learn to depend completely on Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When troubles arrive, it is wise to examine our lives to be sure we are not suffering because of our own sin. If God shows us wrongdoing, we should repent and turn back to Him. But when we face hardship simply for following Jesus, we can rejoice in what God permits and rely entirely on His care.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In every trial, Peter urges us to entrust our souls to God. Entrusting our soul means placing our life into God's safe keeping, much like putting something valuable into a secure deposit box. Bearing hardship for His name frees us from shame and prepares us to experience great joy when His glory is revealed.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When difficult times come, do you pause to examine your heart and turn away from any wrong choices?",
+    "How can handing your life over to God's safe keeping help you rest during trials?"
+   ],
+   "prayer": "Father, help us not to be surprised or afraid when trials come our way. Use our hardships to strip away our self-reliance and draw us closer to Jesus. We place our souls into Your faithful hands today, trusting You to keep us safe.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "His Safety Deposit Box",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-january-21-2012.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Rejoice and Be Glad",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/rejoice-and-be-glad"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

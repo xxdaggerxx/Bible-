@@ -1,0 +1,83 @@
+{
+ "id": "14-006-012",
+ "title": "Solomon’s Prayer of Dedication",
+ "refs": [
+  "2 Chronicles 6:12-42"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14006012,
+   "end": 14006042,
+   "ref": "2 Chronicles 6:12-42",
+   "ranges": [
+    [
+     14006012,
+     14006042
+    ]
+   ],
+   "title": "Turning to God in Humility and Repentance",
+   "key_verse": [
+    14006021,
+    14006021
+   ],
+   "reflect": [
+    {
+     "text": "Solomon kneels and lifts his hands before the assembly, showing deep humility and reverence before the only true God. Even though the highest heavens cannot contain God, He graciously chooses to dwell among and meet with His people. Solomon relies on God's covenant promises, but he also knows religious privileges provide no shield against judgment if people walk away from the Lord.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Much of Solomon's prayer anticipates times of defeat, drought, and sickness. As F. B. Meyer observed, God sometimes teaches us the good way \"by shutting up the bad one.\" When God allows trials or chastening, He does not act out of cruelty, but in love to bring us to our senses. The temple served as a place of repentance, where broken people could cry out and find forgiveness.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God is not confined to any building, and He continues to meet us whenever we gather for worship. Solomon's prayer points us toward Jesus Christ, our Mediator, who reconciles us to God. Instead of waiting for painful hardship to turn us around, we can listen to God's Word now, walk in His truth, and trust His mercy every day.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face disappointments or trials, how might God be using them to guide you back to His good way?",
+    "What does it look like for you to approach God with honest repentance and humble worship today?"
+   ],
+   "prayer": "Lord God, there is no one like You, faithful and merciful to all who seek You. When we wander or face difficult times, use those moments to bring us back to our senses. Forgive our sins, teach us Your ways through Your Word, and help us to walk closely with You each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 6:27",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Solomon’s Prayer of Dedication",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/solomons-prayer-of-dedication"
+    },
+    "D3": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 05/22/04",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-05-or-22-or-04-1262436.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

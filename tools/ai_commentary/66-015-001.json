@@ -1,0 +1,145 @@
+{
+ "book": 66,
+ "chapter": 15,
+ "first": 1,
+ "last": 8,
+ "ref": "Revelation 15",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "John sees an astonishing and wonderful sign in heaven. Seven angels hold the final seven plagues that will complete God's judgment on evil. God had long shown patience to his enemies, but now the time has come to finish his work of justice.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Barnes"
+   ],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "The seals, trumpets, and bowls occur one after another in chronological order, rather than describing the same period from different angles.",
+     "sources": [
+      "https://www.preceptaustin.org/revelation-15-commentary"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Some read the plagues as events at the very end of time, while others see them as calamities on ancient pagan Rome or as trials spread across the church age.",
+     "sources": [
+      "https://biblehub.com/commentaries/haydock/revelation/15.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "John sees a broad expanse looking like a clear sea of glass mingled with fire. Believers who stood firm and refused to worship the beast, its image, or its number stand safely by it. God gives them harps so they can rejoice and celebrate their victory over persecution.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "https://enduringword.com/bible-commentary/revelation-15/"
+   ],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "The company includes those who had already overcome as well as those who were still in the process of gaining victory, with more yet to join them.",
+     "sources": [
+      "Wesley"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The victors sing the song of Moses and of the Lamb, joining the old story of Israel's rescue from Egypt with the salvation won by Jesus. They praise God as the Almighty King whose deeds are great and whose paths are completely just and true. Rather than bragging about their own endurance, they focus entirely on God's greatness.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The singers proclaim that all people have reason to honor and revere the Lord, because he alone is completely pure and holy. God's fair dealings are now openly seen by all. Because of these righteous judgments, people from all nations will come to bow before him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "John looks up and sees the inner heavenly sanctuary opened up before him. This heavenly tent holds the testimony of God's covenant and his sacred presence. Opening this room shows that the judgments about to fall come directly from God himself.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The seven angels step out of the heavenly temple wearing bright, spotless linen and golden sashes. Their clean clothing shows that they are acting as holy servants carrying out pure and blameless justice. Every judgment they bring is free from cruelty or sin.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Adam Clarke",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "One of the four living creatures gives each of the seven angels a golden bowl filled with God's wrath. These broad, shallow dishes allow their contents to be poured out suddenly and completely. Because God lives forever and ever, his righteous sentence against evil cannot fail.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Wesley",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "Smoke from God's glorious power fills the temple, reminding us of the glory cloud that once filled the tabernacle in the desert. No one is able to enter the inner sanctuary until the seven angels have carried out every plague. God's majesty fills the scene as he moves forward with his decisive judgment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Adam Clarke",
+    "Wesley"
+   ],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "The temple doors being shut means that the time for sacrifice, intercession, and mercy is temporarily closed while these final judgments strike.",
+     "sources": [
+      "https://www.gty.org/sermons/66-56/the-seven-bowl-judgments-part-1"
+     ]
+    }
+   ],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 4: dropped differ point (Methodist): no checkable source",
+  "v. 4: removed sources ['Wesley']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

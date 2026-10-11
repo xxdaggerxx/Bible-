@@ -1,0 +1,117 @@
+{
+ "id": "19-145-001",
+ "title": "I Will Exalt You, My God and King",
+ "refs": [
+  "Psalms 145:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19145013,
+   "end": 19145013,
+   "ref": "Psalms 145:13",
+   "ranges": [
+    [
+     19145013,
+     19145013
+    ]
+   ],
+   "title": "\"An Everlasting Kingdom\"",
+   "key_verse": [
+    19145013,
+    19145013
+   ],
+   "reflect": [
+    {
+     "text": "Human nations and powerful rulers always rise and fall. Earthly governments crumble with time, but God's kingdom lasts through every single generation. Even when the world seems to ignore or resist His rule, the Lord still reigns supreme over all creation. Though His reign may feel hidden right now, the Scriptures promise that His eternal dominion will soon be fully revealed to all peoples.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "F. B. Meyer reminds us that Jesus has received an everlasting dominion that \"shall not pass away.\" Unlike harsh human rulers, our eternal King exercises His authority with deep kindness, patience, and generosity. He faithfully sustains every living creature, listens to the prayers of His people, and rescues them. Because His rule can never be overthrown, we can follow and serve Him boldly without any fear of ultimate failure.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When the news makes the world seem unstable, how does knowing God's kingdom lasts forever bring you peace?",
+    "In what area of your life can you serve King Jesus more boldly this week?"
+   ],
+   "prayer": "Lord Jesus, thank You that Your kingdom will never end. When earthly nations and human plans fall apart, help us trust Your steady rule. Teach us to serve You boldly and rest in Your faithful care today. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 145:13",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Everlasting King",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/everlasting-king"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19145001,
+   "end": 19145021,
+   "ref": "Psalms 145:1-21",
+   "ranges": [
+    [
+     19145001,
+     19145021
+    ]
+   ],
+   "title": "The God Who Hears and Saves",
+   "key_verse": [
+    19145019,
+    19145019
+   ],
+   "reflect": [
+    {
+     "text": "When we walk in the fear of the Lord, showing Him deep reverence and love, our hearts begin to want what He wants. God's Holy Spirit places good desires inside us so that we long to honor Him, grow in holiness, and be a blessing to others. Charles Spurgeon wrote that these holy longings are \"grace in the blade,\" which the Lord will carefully nurture until they fully mature. Because God planted these desires in us, we can be confident He will answer them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Along with our longing to serve God, we also experience deep burdens, confusion, and seasons of sharp distress. In those hard moments, our prayers can become desperate cries for help, just like small children crying out in pain. The Lord hears every tearful call and moves generously to supply all that we need. If our hearts truly revere God, we have nothing else in this world to fear, because our rescue and salvation in Him are completely secure.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What holy desires has the Holy Spirit placed in your heart recently?",
+    "When you feel overwhelmed, what helps you bring your cries honestly to God like a child?"
+   ],
+   "prayer": "Father, thank You for giving us hearts that want to love and honor You. When we face heavy burdens and feel helpless, hear our honest cries for help. Give us peaceful confidence knowing that because we belong to You, we have nothing else to fear. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 18",
+     "on": "Psalms 145:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

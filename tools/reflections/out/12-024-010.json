@@ -1,0 +1,67 @@
+{
+ "id": "12-024-010",
+ "title": "The Captivity of Jerusalem",
+ "refs": [
+  "2 Kings 24:10-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12024010,
+   "end": 12024017,
+   "ref": "2 Kings 24:10-17",
+   "ranges": [
+    [
+     12024010,
+     12024017
+    ]
+   ],
+   "title": "Lessons from the Exile",
+   "key_verse": [
+    12024013,
+    12024013
+   ],
+   "reflect": [
+    {
+     "text": "When Jerusalem fell, Babylon took the king, the people, and the sacred treasures from the house of the Lord. As F. B. Meyer notes, these holy vessels were later treated with disrespect in a foreign palace, yet God in his faithfulness eventually brought them back. The loss of these treasures was a painful reminder of what happens when God's people turn away from him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This captivity took place because Israel wanted to be like the kingdoms around her. Instead of trusting God, she copied their customs and sought their power. As Meyer warns, God's people must avoid \"all entangling alliances\" with the world. Because Israel tried to fit in with worldly nations, she was swept away into captivity by the very people she tried to imitate.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We can also feel the bitter pain of exile when we wander from God and face the results of our poor choices. Life can suddenly feel cold and far from home. Yet even in our lowest moments, hope is not lost. When we repent, turning away from our sins and back to the Lord, he meets us with mercy, complete forgiveness, and spiritual restoration.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways are we tempted to copy the values and habits of the world around us?",
+    "When you feel far from God, what gives you the courage to turn back to him and seek his forgiveness?"
+   ],
+   "prayer": "Lord, help us to keep our hearts loyal to you rather than trying to fit in with the world. Forgive us for the times we look for security away from your presence. Have mercy on us as we turn back to you, and restore our joy in following your ways.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 24:13",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

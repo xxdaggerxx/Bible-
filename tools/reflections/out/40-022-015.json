@@ -1,0 +1,75 @@
+{
+ "id": "40-022-015",
+ "title": "Paying Taxes to Caesar",
+ "refs": [
+  "Matthew 22:15-22",
+  "Mark 12:13-17",
+  "Luke 20:19-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40022015,
+   "end": 40022022,
+   "ref": "Matthew 22:15-22; Mark 12:13-17; Luke 20:19-26",
+   "ranges": [
+    [
+     40022015,
+     40022022
+    ],
+    [
+     41012013,
+     41012017
+    ],
+    [
+     42020019,
+     42020026
+    ]
+   ],
+   "title": "Giving to Caesar and to God",
+   "key_verse": [
+    40022021,
+    40022021
+   ],
+   "reflect": [
+    {
+     "text": "Jesus saw their hypocrisy right away and asked them to bring a tax coin. The coin had the Roman emperor's face stamped on it, along with claims of divinity. Since the coin carried Caesar's likeness, handing it back to the civil authority did not harm or compromise the true worship of God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus teaches that we have a clear duty to follow government rules and pay our taxes. God calls us to be peaceful and lawful citizens in our world today. At the exact same time, we remember that our highest devotion belongs to the Lord, and the state must never receive what belongs to God alone.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you show faithful citizenship while keeping God first in your heart?",
+    "Are there any ways you are tempted to hold back what rightfully belongs to God?"
+   ],
+   "prayer": "Heavenly Father, thank You for providing order through earthly laws and leaders. Help us to fulfill our duty by obeying authorities and paying what we owe with honesty. Above all, grant us the wisdom and courage to give our whole lives and worship to You alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Giving Caesar His Due",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/giving-caesar-his-due"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "In this passage, groups that were usually rivals joined together to trap Jesus. They asked Him a divisive question about paying Roman taxes. If He said yes, many Jewish people might turn against Him. If He said no, the Roman government could quickly arrest Him for rebellion.",
+     "problem": "The text and devotional do not mention the specific dilemma that if Jesus said yes, the Jewish people would turn against Him, or that if He said no, the Roman government would arrest Him for rebellion."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,83 @@
+{
+ "id": "28-010-001",
+ "title": "Retribution for Israel’s Sin",
+ "refs": [
+  "Hosea 10:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 28010012,
+   "end": 28010012,
+   "ref": "Hosea 10:12",
+   "ranges": [
+    [
+     28010012,
+     28010012
+    ]
+   ],
+   "title": "\"It is time to seek the LORD\"",
+   "key_verse": [
+    28010012,
+    28010012
+   ],
+   "reflect": [
+    {
+     "text": "Many areas of our lives can become like hard, unplowed dirt. We might leave daily work or relationships untended, letting bad habits, unpaid debts, or old hurts take root. Yet God calls us to break up this hardened ground. When pain or mistreatment comes, we can let it soften our hearts instead of reacting with bitterness. We prepare the soil when we choose to forgive, make things right, and walk in God's ways.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The prophet reminds us that the hour is urgent: it is time to seek the Lord. Our days pass quickly, whether we are young and full of energy or older with grey hair and fading health. As Charles Spurgeon wrote, \"let your heart bud and bloom with holy desires.\" God offers us His grace today, but our time is limited. We should not wait or put off seeking Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Left to ourselves, our hearts are like dry earth that cannot produce true goodness. But when we honor God and seek Him, He promises to send down His righteousness upon us like rain. He will refresh our lives with His unfailing love and help us grow good fruit.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an unplowed corner of your life, such as an unresolved hurt or bad habit, that God is calling you to break up today?",
+    "What helps you remember not to delay in seeking the Lord with your whole heart?"
+   ],
+   "prayer": "Lord, please soften the hard and unfruitful places in our hearts. Help us let go of bitterness, forgive others, and seek You without delay. Pour out Your righteousness like rain upon our lives, and teach us to walk in Your unfailing love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 1",
+     "on": "Hosea 10:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hosea 10:12",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Lysa TerKeurst",
+     "work": "Choosing Honor When I Feel Dishonored - Encouragement for Today - January 21, 2021",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-january-21-2021.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

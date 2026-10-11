@@ -14,6 +14,7 @@ import com.biblestudy.app.model.MarginImage
 import com.biblestudy.app.model.MarginText
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.model.SearchHit
+import com.biblestudy.app.model.Sketch
 import com.biblestudy.app.model.TypedNote
 import com.biblestudy.app.model.VerseId
 import java.nio.ByteBuffer
@@ -29,7 +30,7 @@ data class ChapterReading(val book: Int, val chapter: Int, val seconds: Int, val
 data class MarkRow(val book: Int, val chapter: Int, val verse: Int, val layerId: Long, val start: Int = -1)
 
 /** All of the user's own data: layers, ink, highlights, images, notes and bookmarks. */
-class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 9) {
+class UserDb(context: Context, name: String = NAME) : SQLiteOpenHelper(context, name, null, 11) {
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(
@@ -70,6 +71,8 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 9) {
         createReading(db)
         createSketches(db)
         db.execSQL("INSERT INTO layers(id, name, color, visible, locked, sort) VALUES(1, 'My Notes', ${DEFAULT_LAYER_COLOR}, 1, 0, 0)")
+        db.execSQL("ALTER TABLE sketches ADD COLUMN uid TEXT NOT NULL DEFAULT ''")
+        Sync.createTables(db)
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
@@ -103,6 +106,22 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 9) {
         if (oldVersion in 4..7) db.execSQL("ALTER TABLE texts ADD COLUMN marks TEXT NOT NULL DEFAULT ''") // 1.1: highlights in text boxes (HL-11)
         if (oldVersion == 7) db.execSQL("ALTER TABLE sketches ADD COLUMN note INTEGER NOT NULL DEFAULT 0") // 1.1: full-screen margin notes (MRG-15)
         db.execSQL("DROP TABLE IF EXISTS ink_text") // 1.1.2: handwriting reading removed (1.1.0 and 1.1.1 kept read text here)
+        if (oldVersion < 10) {
+            // 2.4: sync between devices (SYNC-1). Sketch pages get an id that's the same on every
+            // device ("ready-<n>" for the ready-made ones); their local number can differ.
+            db.execSQL("ALTER TABLE sketches ADD COLUMN uid TEXT NOT NULL DEFAULT ''")
+            db.execSQL("UPDATE sketches SET uid = CASE WHEN created BETWEEN 1 AND 999 THEN 'ready-' || created ELSE lower(hex(randomblob(16))) END")
+        }
+        if (oldVersion in 6..10) {
+            // 2.5: reading stats are kept per device ('' = this one) and added up, so they can sync
+            // without one device's time overwriting another's (SYNC-11).
+            for (t in listOf("reading_days", "reading_chapters")) db.execSQL("ALTER TABLE $t RENAME TO old_$t")
+            createReading(db)
+            db.execSQL("INSERT INTO reading_days SELECT '', day, read_s, study_s FROM old_reading_days")
+            db.execSQL("INSERT INTO reading_chapters SELECT '', book, chapter, seconds, opens, times_read, last_read FROM old_reading_chapters")
+            for (t in listOf("reading_days", "reading_chapters")) db.execSQL("DROP TABLE old_$t")
+        }
+        Sync.createTables(db)
     }
 
     private fun createSketches(db: SQLiteDatabase) {
@@ -115,12 +134,16 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 9) {
 
     private fun createReading(db: SQLiteDatabase) {
         // Seconds spent each day, reading and in the study tools (ANL-1, ANL-3).
-        db.execSQL("CREATE TABLE IF NOT EXISTS reading_days(day TEXT PRIMARY KEY, read_s INTEGER NOT NULL, study_s INTEGER NOT NULL)")
+        // [dev]: the device that read ('' = this one), so devices' times add up when synced (SYNC-11).
+        db.execSQL(
+            "CREATE TABLE IF NOT EXISTS reading_days(dev TEXT NOT NULL, day TEXT NOT NULL, read_s INTEGER NOT NULL, study_s INTEGER NOT NULL, " +
+                "PRIMARY KEY(dev, day))"
+        )
         // Per chapter: time spent, times opened and times read through (ANL-2, ANL-4).
         db.execSQL(
-            "CREATE TABLE IF NOT EXISTS reading_chapters(book INTEGER NOT NULL, chapter INTEGER NOT NULL, " +
+            "CREATE TABLE IF NOT EXISTS reading_chapters(dev TEXT NOT NULL, book INTEGER NOT NULL, chapter INTEGER NOT NULL, " +
                 "seconds INTEGER NOT NULL, opens INTEGER NOT NULL, times_read INTEGER NOT NULL, last_read INTEGER NOT NULL, " +
-                "PRIMARY KEY(book, chapter))"
+                "PRIMARY KEY(dev, book, chapter))"
         )
     }
 
@@ -144,13 +167,13 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 9) {
     // ---------- sketch pages (SKT) ----------
 
     fun sketches(): List<com.biblestudy.app.model.Sketch> =
-        readableDatabase.rawQuery("SELECT id, name, paper, book, chapter, verse, height, created, note FROM sketches ORDER BY created", null).use { c ->
+        readableDatabase.rawQuery("SELECT id, name, paper, book, chapter, verse, height, created, note, uid FROM sketches ORDER BY created", null).use { c ->
             buildList {
                 while (c.moveToNext()) add(
                     com.biblestudy.app.model.Sketch(
                         c.getLong(0), c.getString(1),
                         runCatching { com.biblestudy.app.model.Paper.valueOf(c.getString(2)) }.getOrDefault(com.biblestudy.app.model.Paper.BLANK),
-                        c.getInt(3), c.getInt(4), c.getInt(5), c.getFloat(6), c.getLong(7), c.getInt(8) == 1,
+                        c.getInt(3), c.getInt(4), c.getInt(5), c.getFloat(6), c.getLong(7), c.getInt(8) == 1, c.getString(9) ?: "",
                     )
                 )
             }
@@ -160,9 +183,16 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 9) {
         val v = ContentValues().apply {
             put("id", s.id); put("name", s.name); put("paper", s.paper.name); put("book", s.linkBook)
             put("chapter", s.linkChapter); put("verse", s.linkVerse); put("height", s.height); put("created", s.created); put("note", if (s.note) 1 else 0)
+            put("uid", s.uid.ifEmpty { sketchUid(s.id) ?: Sketch.newUid(s.created) })
         }
         writableDatabase.insertWithOnConflict("sketches", null, v, SQLiteDatabase.CONFLICT_REPLACE)
     }
+
+    /** The shared id of sketch page [id], if it has been saved. */
+    private fun sketchUid(id: Long): String? =
+        readableDatabase.rawQuery("SELECT uid FROM sketches WHERE id = ?", arrayOf(id.toString())).use { c ->
+            if (c.moveToFirst()) c.getString(0)?.ifEmpty { null } else null
+        }
 
     /** Deletes a sketch page and everything on it; returns its pictures' files to remove. */
     fun deleteSketch(s: com.biblestudy.app.model.Sketch): List<String> {
@@ -183,13 +213,13 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 9) {
         val db = writableDatabase
         db.beginTransaction()
         try {
-            db.execSQL("INSERT OR IGNORE INTO reading_days VALUES(?, 0, 0)", arrayOf(day))
+            db.execSQL("INSERT OR IGNORE INTO reading_days VALUES('', ?, 0, 0)", arrayOf(day))
             db.execSQL(
-                "UPDATE reading_days SET read_s = read_s + ?, study_s = study_s + ? WHERE day = ?",
+                "UPDATE reading_days SET read_s = read_s + ?, study_s = study_s + ? WHERE dev = '' AND day = ?",
                 arrayOf(seconds, if (study) seconds else 0, day),
             )
             ensureChapter(db, book, chapter)
-            db.execSQL("UPDATE reading_chapters SET seconds = seconds + ? WHERE book = ? AND chapter = ?", arrayOf(seconds, book, chapter))
+            db.execSQL("UPDATE reading_chapters SET seconds = seconds + ? WHERE dev = '' AND book = ? AND chapter = ?", arrayOf(seconds, book, chapter))
             db.setTransactionSuccessful()
         } finally {
             db.endTransaction()
@@ -199,36 +229,38 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 9) {
     /** Time on a sketch page: study time for the day, not tied to a chapter. */
     fun addStudy(day: String, seconds: Int) {
         val db = writableDatabase
-        db.execSQL("INSERT OR IGNORE INTO reading_days VALUES(?, 0, 0)", arrayOf(day))
-        db.execSQL("UPDATE reading_days SET study_s = study_s + ? WHERE day = ?", arrayOf(seconds, day))
+        db.execSQL("INSERT OR IGNORE INTO reading_days VALUES('', ?, 0, 0)", arrayOf(day))
+        db.execSQL("UPDATE reading_days SET study_s = study_s + ? WHERE dev = '' AND day = ?", arrayOf(seconds, day))
     }
 
     private fun ensureChapter(db: SQLiteDatabase, book: Int, chapter: Int) =
-        db.execSQL("INSERT OR IGNORE INTO reading_chapters VALUES(?, ?, 0, 0, 0, 0)", arrayOf(book, chapter))
+        db.execSQL("INSERT OR IGNORE INTO reading_chapters VALUES('', ?, ?, 0, 0, 0, 0)", arrayOf(book, chapter))
 
     fun addOpen(book: Int, chapter: Int) {
         val db = writableDatabase
         ensureChapter(db, book, chapter)
-        db.execSQL("UPDATE reading_chapters SET opens = opens + 1 WHERE book = ? AND chapter = ?", arrayOf(book, chapter))
+        db.execSQL("UPDATE reading_chapters SET opens = opens + 1 WHERE dev = '' AND book = ? AND chapter = ?", arrayOf(book, chapter))
     }
 
     fun markRead(book: Int, chapter: Int, at: Long) {
         val db = writableDatabase
         ensureChapter(db, book, chapter)
         db.execSQL(
-            "UPDATE reading_chapters SET times_read = times_read + 1, last_read = ? WHERE book = ? AND chapter = ?",
+            "UPDATE reading_chapters SET times_read = times_read + 1, last_read = ? WHERE dev = '' AND book = ? AND chapter = ?",
             arrayOf(at, book, chapter),
         )
     }
 
-    /** (day, reading seconds, study seconds), oldest first. */
+    /** (day, reading seconds, study seconds), oldest first: all devices added up. */
     fun readingDays(): List<Triple<String, Int, Int>> =
-        readableDatabase.rawQuery("SELECT day, read_s, study_s FROM reading_days ORDER BY day", null).use { c ->
+        readableDatabase.rawQuery("SELECT day, SUM(read_s), SUM(study_s) FROM reading_days GROUP BY day ORDER BY day", null).use { c ->
             buildList { while (c.moveToNext()) add(Triple(c.getString(0), c.getInt(1), c.getInt(2))) }
         }
 
     fun readingChapters(): List<ChapterReading> =
-        readableDatabase.rawQuery("SELECT book, chapter, seconds, opens, times_read, last_read FROM reading_chapters", null).use { c ->
+        readableDatabase.rawQuery(
+            "SELECT book, chapter, SUM(seconds), SUM(opens), SUM(times_read), MAX(last_read) FROM reading_chapters GROUP BY book, chapter", null,
+        ).use { c ->
             buildList { while (c.moveToNext()) add(ChapterReading(c.getInt(0), c.getInt(1), c.getInt(2), c.getInt(3), c.getInt(4), c.getLong(5))) }
         }
 

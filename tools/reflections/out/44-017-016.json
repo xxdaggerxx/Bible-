@@ -1,0 +1,68 @@
+{
+ "id": "44-017-016",
+ "title": "Paul in Athens",
+ "refs": [
+  "Acts 17:16-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44017016,
+   "end": 44017021,
+   "ref": "Acts 17:16-21",
+   "ranges": [
+    [
+     44017016,
+     44017021
+    ]
+   ],
+   "title": "Speaking the Truth in Athens",
+   "key_verse": [
+    44017017,
+    44017017
+   ],
+   "reflect": [
+    {
+     "text": "When Paul arrived in Athens, he was waiting alone for his friends. As he walked through the city, he saw false idols everywhere. This pervasive idolatry deeply troubled his spirit. Yet Paul did not shrink back in fear or lose his temper in an angry outburst. His deep concern for lost people moved him into action. He chose calm, reasoned conversation instead. Day by day, he talked about God with anyone who would listen, sharing truth in the synagogue as well as in the busy public marketplace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Proclaiming Christ and his resurrection inevitably sounded strange to this unbelieving culture. Some philosophers debated Paul and called him a babbler, but he did not let their ridicule derail him. By ignoring the skeptics, he stayed available for listeners who had honest questions about this new teaching. Paul looked for common ground by connecting with Athenian culture, yet he never watered down the supernatural truth about Jesus.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you see beliefs around you that do not honor God, do you respond with patient conversation or with anger and retreat?",
+    "How can you share the hope of Jesus with people who find the gospel strange or confusing?"
+   ],
+   "prayer": "Lord, give us a caring heart for people who do not know you. Help us to share the good news of Jesus with gentleness and courage, even when our faith sounds strange. Keep us from being discouraged by insults, and guide us to reach people with your truth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "David Mathis",
+     "work": "Some Mock, Others Believe: Pondering Strangeness in Our Preaching",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/some-mock-others-believe"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 261: Acts 17:15–23",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-261-acts-17-1523.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

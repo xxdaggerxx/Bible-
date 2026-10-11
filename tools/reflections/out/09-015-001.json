@@ -1,0 +1,66 @@
+{
+ "id": "09-015-001",
+ "title": "Saul’s Disobedience",
+ "refs": [
+  "1 Samuel 15:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9015001,
+   "end": 9015009,
+   "ref": "1 Samuel 15:1-9",
+   "ranges": [
+    [
+     9015001,
+     9015009
+    ]
+   ],
+   "title": "The Danger of Making Excuses",
+   "key_verse": [
+    9015009,
+    9015009
+   ],
+   "reflect": [
+    {
+     "text": "God gave King Saul a direct command to destroy the Amalekites and all their possessions. Instead of obeying fully, Saul and his army kept what was desirable. They spared King Agag and the best of the livestock, destroying only what seemed weak or worthless to them. Saul picked and chose how to obey, holding onto what looked good in his own eyes.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This kind of partial obedience is often driven by rationalization, which twists reality to excuse sin. As Charles Swindoll points out, self-deception begins quietly and blinds people to how foolish their actions have become. Instead of showing repentance, which means turning back to God with true sorrow, Saul tried to justify what he had done and protect his own honor.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Saul had a promising start as king, but a good start is not enough. Consistent faithfulness that finishes well matters far more. Making excuses keeps us from seeing our wrongdoing honestly and pulls us away from God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where you try to justify partial obedience?",
+    "What helps you recognize when you are making excuses rather than admitting a mistake?"
+   ],
+   "prayer": "Lord, help us to listen to your voice and obey you with an honest heart. Keep us from deceiving ourselves or making excuses for our disobedience. Teach us to walk in steady faithfulness so that we finish our race well. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Swindoll",
+     "work": "Rationalizations",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-august-26-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

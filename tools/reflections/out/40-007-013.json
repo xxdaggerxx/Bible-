@@ -1,0 +1,121 @@
+{
+ "id": "40-007-013",
+ "title": "The Narrow Gate",
+ "refs": [
+  "Matthew 7:13-14",
+  "Luke 13:22-30"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40007013,
+   "end": 40007014,
+   "ref": "Matthew 7:13-14",
+   "ranges": [
+    [
+     40007013,
+     40007014
+    ]
+   ],
+   "title": "\"Enter through the narrow gate\"",
+   "key_verse": [
+    40007013,
+    40007013
+   ],
+   "reflect": [
+    {
+     "text": "Jesus sets two clear paths before us. One is broad and crowded, where people simply drift along with the culture around them. The other is a small gate that leads to life. Jesus calls us to make a decisive choice to follow Him. We cannot earn this salvation through our own effort or good deeds. Instead, it is a free gift received by faith through God's grace, which is His unearned love and kindness.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Choosing this path means letting go of our own pride and selfish plans. We surrender our personal agendas so we can follow Jesus and His kingdom way. Walking this road can be difficult. It often brings trials, hardships, and opposition from the world. Yet we do not have to walk it in our own strength. We must rely daily on the Holy Spirit for power and guidance. As we trust Him, He keeps us faithful and leads us into eternal life and lasting joy.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to drift with the world instead of following Jesus?",
+    "How can you ask the Holy Spirit today for help in letting go of your own pride?"
+   ],
+   "prayer": "Lord Jesus, thank You for the gift of life found only in You. Please give us the strength of Your Holy Spirit to turn from the easy road and follow You wholeheartedly. Help us to surrender our own pride each day and trust in Your faithful care. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "A Narrow Gate; a Hard Way",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/narrow-gate-hard-way"
+    },
+    "D3": {
+     "author": "Meg Bucher",
+     "work": "What Does it Mean That the Gate Is Narrow in Matthew 7?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/what-does-it-mean-that-the-gate-is-narrow.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40007013,
+   "end": 40007014,
+   "ref": "Matthew 7:13-14; Luke 13:22-30",
+   "ranges": [
+    [
+     40007013,
+     40007014
+    ],
+    [
+     42013022,
+     42013030
+    ]
+   ],
+   "title": "Entering the Narrow Door",
+   "key_verse": [
+    42013024,
+    42013024
+   ],
+   "reflect": [
+    {
+     "text": "When someone asked Jesus if only a few people would be saved, they were asking out of curiosity. People often wonder about numbers, but Jesus did not answer that question. Instead, He cared deeply that those He loved would not miss the true blessing before them. He turned the question into a personal call to make every effort to enter the narrow door before it closes.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This door is so narrow that we cannot carry our old luggage through it. As F. B. Meyer noted, there is no room to carry the \"love of self\" or our desire for worldly praise and gain. We must leave behind our self-importance, our pride, and our attempts to prove our own merit. It is not enough to simply sit in church or share in the Lord's Supper. Jesus wants to deliver us from the power of sin, and that requires us to leave our selfish ways behind and come to Him with empty hands.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What selfish desires or love of praise might you be trying to carry instead of leaving them behind?",
+    "How can you move beyond mere religious routines to truly give your heart to Jesus?"
+   ],
+   "prayer": "Lord, search our hearts and show us anything we are clinging to that keeps us from You. Help us lay down our pride, our self-importance, and our love of the world. Give us the grace to enter through Your door and find our full life in You alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Luke 13:25",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

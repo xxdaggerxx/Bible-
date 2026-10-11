@@ -1,0 +1,74 @@
+{
+ "id": "23-064-001",
+ "title": "A Prayer for God’s Power",
+ "refs": [
+  "Isaiah 64:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23064001,
+   "end": 23064012,
+   "ref": "Isaiah 64:1-12",
+   "ranges": [
+    [
+     23064001,
+     23064012
+    ]
+   ],
+   "title": "Clay in the Potter's Hands",
+   "key_verse": [
+    23064008,
+    23064008
+   ],
+   "reflect": [
+    {
+     "text": "When we come to God in prayer, we do not come as people who have everything together. Isaiah reminds us that even our best deeds are stained by our own sin. As Charles Spurgeon wrote, \"the black fingers of sin leave smuts upon our fairest robes.\" We cannot save ourselves or impress God with our good works. Yet the true God does not ask us to work for Him as if He needed our help. Instead, He reveals His greatness by acting on behalf of those who wait for Him. True prayer means bringing our weakness and troubles to Him first.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "God is our Father and the master Potter, and we are the clay in His hands. An artisan potter handles clay with great patience and care. When an imperfection shows up, the potter does not throw the clay away; he gently reshapes and works it into something better. God holds the authority to shape, hollow out, and refine our character according to His good plan. Even when life feels broken, we can rest knowing we are held with deep affection by the One who made us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face a difficult problem, do you try to fix it on your own first, or do you wait on God in prayer?",
+    "How does knowing God is like a gentle potter help you trust Him when He reshapes your life?"
+   ],
+   "prayer": "Lord, thank You that You do not need our help, but gladly work for us when we wait on You. Forgive us for our sins and for relying on our own strength. Please take our lives like soft clay in Your hands, and gently mold us to reflect Your goodness.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 27",
+     "on": "Isaiah 64:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "The Potter and the Clay",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/the-potter-and-the-clay"
+    },
+    "D3": {
+     "author": "John Piper",
+     "work": "How Prayer Glorifies God",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/how-prayer-glorifies-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

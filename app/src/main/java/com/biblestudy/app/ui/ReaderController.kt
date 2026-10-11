@@ -10,6 +10,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.Path
+import com.biblestudy.app.model.translated
 import com.biblestudy.app.model.Annotation
 import com.biblestudy.app.model.Edit
 import com.biblestudy.app.model.Highlight
@@ -256,7 +257,8 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
      * A narrow panel in portrait (MRG-14): fit-width fits just the text column, and the margins
      * slide in from the side like drawers instead of shrinking the text.
      */
-    val drawerMode: Boolean get() = !Sketch.isSketch(panel.book) && !vm.landscape && panel.viewW > 0f && panel.viewW / density < DRAWER_BELOW_DP
+    val drawerMode: Boolean get() = !Sketch.isSketch(panel.book) && panel.viewW > 0f &&
+        (vm.phone || (!vm.landscape && panel.viewW / density < DRAWER_BELOW_DP)) // phones: margins tucked away (PH-5)
 
     private fun fitZoom(g: PageGeometry): Float {
         if (panel.viewW <= 0f) return 1f
@@ -422,7 +424,14 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             if (mode == null && lasso == null) reanchor(cur)
         }
         val topY = -panel.panY / z
-        pageAt(topY)?.let { panel.topVerse = it.layout.verseAtY(topY - it.top + 80f) }
+        pageAt(topY)?.let { pg ->
+            panel.topVerse = pg.layout.verseAtY(topY - pg.top + 80f)
+            // The exact point being read, to come back to when this tab is shown again.
+            val y = topY - pg.top
+            val v = pg.layout.verseAtY(y)
+            val (t, b) = pg.layout.verseSpan(v)
+            panel.resume = ScrollPos(-1, pg.layout.book, pg.layout.chapter, v, if (b > t) ((y - t) / (b - t)).coerceIn(0f, 1f) else 0f)
+        }
         // How far into the current chapter the reader has seen (ANL-2).
         val bottomY = topY + panel.viewH / z
         val cur2 = pages.firstOrNull { it.top == 0f }
@@ -633,7 +642,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         val ink = live ?: return
         val f = fastInk ?: return
         val w = penWidth(ink.width, pressure) * panel.zoom
-        f.draw(InkSegment(lastPos.x, lastPos.y, to.x, to.y, w, ink.color))
+        f.draw(InkSegment(lastPos.x, lastPos.y, to.x, to.y, w, if (ink.highlighter) ink.color else inkOn(vm.theme, ink.color)))
         lastPos = to
     }
 
@@ -835,6 +844,30 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         mode = null
     }
 
+    /**
+     * The region most of a stroke's points lie in, and its points measured from that region's
+     * origin. A stroke that starts on the words but runs mostly into the margin becomes margin ink,
+     * and the other way round; a tie stays where it started.
+     */
+    private fun mainRegion(ink: LiveInk, pts: FloatArray): Pair<Region, FloatArray> {
+        val g = ink.page.geo
+        val counts = HashMap<Region, Int>()
+        for (i in pts.indices step 3) {
+            val r = g.regionAt(pts[i] + ink.ox)
+            counts[r] = (counts[r] ?: 0) + 1
+        }
+        val best = counts.maxByOrNull { it.value } ?: return ink.region to pts
+        if (best.key == ink.region || best.value <= (counts[ink.region] ?: 0)) return ink.region to pts
+        val nx = g.originX(best.key)
+        val ny = g.originY(best.key, ink.verse)
+        val out = pts.copyOf()
+        for (i in out.indices step 3) {
+            out[i] = pts[i] + ink.ox - nx
+            out[i + 1] = pts[i + 1] + ink.oy - ny
+        }
+        return best.key to out
+    }
+
     private fun finishStroke() {
         val ink = live ?: return
         live = null
@@ -845,9 +878,29 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         var pts = ink.toArray()
         if (pts.size == 3) pts = floatArrayOf(pts[0], pts[1], pts[2], pts[0] + 0.5f, pts[1], pts[2])
         val layout = ink.page.layout
+        // Filed by where most of the stroke lies: mostly in a margin, it shows in every version;
+        // mostly on the words, only in this one (ANCH-4, ANCH-9).
+        // (Snapped highlights already land on the words or box they cover, and a shape snapped by
+        // holding the pen stays where it was started: an arrow from a margin note across the words
+        // is part of the note, MRG-11.)
+        val keep = (ink.highlighter && vm.snapHighlights) || ink.frozen
+        val (region, regionPts) = if (keep) ink.region to pts else mainRegion(ink, pts)
+        pts = regionPts
+        // Margin ink joins the sketch it's drawn beside: pinned to the same verse, so the drawing
+        // stays in one piece in every version.
+        var verse = ink.verse
+        if (region != Region.TEXT) {
+            val g = ink.page.geo
+            val ox = g.originX(region); val oy = g.originY(region, verse)
+            var l = Float.MAX_VALUE; var t = Float.MAX_VALUE; var r = -Float.MAX_VALUE; var b = -Float.MAX_VALUE
+            for (i in pts.indices step 3) { l = minOf(l, pts[i]); r = maxOf(r, pts[i]); t = minOf(t, pts[i + 1]); b = maxOf(b, pts[i + 1]) }
+            vm.marginGroupVerse(g, region, Rect(ox + l, oy + t, ox + r, oy + b))?.let { v ->
+                if (v != verse) { pts = pts.translated(0f, oy - g.originY(region, v)); verse = v }
+            }
+        }
 
-        if (ink.highlighter && vm.snapHighlights && ink.region != Region.TEXT && highlightBox(ink, pts)) return
-        if (ink.highlighter && vm.snapHighlights && ink.region == Region.TEXT) {
+        if (ink.highlighter && vm.snapHighlights && region != Region.TEXT && highlightBox(ink, pts)) return
+        if (ink.highlighter && vm.snapHighlights && region == Region.TEXT) {
             val h = snapHighlight(layout, pts, ink)
             if (h != null) {
                 vm.addItem(h)
@@ -857,11 +910,11 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         }
         val s = InkStroke(
             id = vm.newId(), layerId = ink.layerId,
-            version = if (ink.region == Region.TEXT) layout.version else null,
+            version = if (region == Region.TEXT) layout.version else null,
             book = layout.book, chapter = layout.chapter,
-            region = ink.region, verse = ink.verse,
+            region = region, verse = verse,
             highlighter = ink.highlighter, color = ink.color, width = ink.width,
-            points = if (ink.region == Region.TEXT) layout.linePoints(pts) else pts,
+            points = if (region == Region.TEXT) layout.linePoints(pts) else pts,
             font = vm.styleKey().encode(),
         )
         vm.addItem(s)

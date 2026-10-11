@@ -1,0 +1,66 @@
+{
+ "id": "27-001-001",
+ "title": "Daniel Removed to Babylon",
+ "refs": [
+  "Daniel 1:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 27001001,
+   "end": 27001007,
+   "ref": "Daniel 1:1-7",
+   "ranges": [
+    [
+     27001001,
+     27001007
+    ]
+   ],
+   "title": "The Lord Directs All Things",
+   "key_verse": [
+    27001002,
+    27001002
+   ],
+   "reflect": [
+    {
+     "text": "Daniel's story begins in a dark and difficult time. In 605 BC, the king of Babylon captured Jerusalem and took young men like Daniel away from home into exile. It might have looked like Babylon's idols were stronger than the true God. Yet the Bible makes it clear that Jerusalem fell only because the Lord delivered Judah and the holy temple objects into Nebuchadnezzar's hands. This defeat was not a sign of weakness in God, but His loving discipline upon His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Nebuchadnezzar could only succeed because God permitted it. The Lord is sovereign, meaning He holds supreme authority and total rule over everything. He directs the entire path of human history. God is the one who decides when nations rise and when they fall, and no earthly power moves without His say.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This truth brings strong comfort whenever life feels uncertain or frightening. God has planned every circumstance from eternity to bring glory to Himself and to work for the ultimate good of those who belong to Him. Even in painful trials, our lives rest securely in His wise hands.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When frightening or confusing things happen in the world, how does knowing God is in control help you?",
+    "What hard circumstance in your life do you need to trust God with today?"
+   ],
+   "prayer": "Lord God, You rule over every kingdom and guide all of history. Help us remember that You remain in control even when hard trials come our way. Give us faith to trust that You are working every detail for Your glory and for our good. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Daniel is Taken to Babylon",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/daniel-taken-babylon"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

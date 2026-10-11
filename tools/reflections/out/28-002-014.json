@@ -1,0 +1,105 @@
+{
+ "id": "28-002-014",
+ "title": "God’s Mercy to Israel",
+ "refs": [
+  "Hosea 2:14-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 28002014,
+   "end": 28002023,
+   "ref": "Hosea 2:14-23",
+   "ranges": [
+    [
+     28002014,
+     28002023
+    ]
+   ],
+   "title": "Pursued by Relentless Love",
+   "key_verse": [
+    28002019,
+    28002019
+   ],
+   "reflect": [
+    {
+     "text": "We often chase things in this world hoping they will satisfy us, but worldly substitutes only leave us empty. Instead of abandoning us in anger, God pursues us with relentless grace. He sometimes leads us into quiet wilderness seasons or difficult trials. There, away from every distraction, He speaks tenderly to our hearts and turns our painful troubles into a doorway of hope.",
+     "sources": [
+      "D2",
+      "D5",
+      "D6"
+     ]
+    },
+    {
+     "text": "In that solitude, God restores our connection with Him. He does not want us to cower in fear like slaves under a demanding master. Instead, He pledges Himself to us forever in righteousness, mercy, and faithfulness. Because of His kindness, serving Him is no longer a heavy burden, but a joy born of deep love.",
+     "sources": [
+      "D3",
+      "D4",
+      "D6"
+     ]
+    },
+    {
+     "text": "This bond brings genuine peace and healing rest. God promises to silence what threatens us and quiet our restless hearts. As Charles Spurgeon wrote, God enables His people to \"lie down in calm repose.\" When we trust His steadfast love, we can lay aside our worry and rest in safety.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "How might God be using a quiet or difficult season in your life to draw you closer to Him?",
+    "Do you tend to relate to God out of fearful duty or out of trusting love?"
+   ],
+   "prayer": "Lord, thank You for pursuing us with grace even when we look for satisfaction in the wrong places. Speak tenderly to our hearts in the quiet and difficult seasons of life. Help us to serve You with joy rather than fear, and grant us safe rest in Your unfailing love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 4",
+     "on": "Hosea 2:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 18",
+     "on": "Hosea 2:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 22",
+     "on": "Hosea 2:19-20",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 26",
+     "on": "Hosea 2:16-17",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D5": {
+     "author": "Deidre Braley",
+     "work": "Tender Words in the Wilderness - The Crosswalk Devotional - December 13",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/tender-words-in-the-wilderness-the-crosswalk-devotional.html"
+    },
+    "D6": {
+     "author": "Jennifer Slattery",
+     "work": "You Are Pursued in Love - The Crosswalk Devotional - October 1",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/you-are-pursued-in-love-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

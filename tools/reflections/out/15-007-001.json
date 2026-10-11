@@ -1,0 +1,75 @@
+{
+ "id": "15-007-001",
+ "title": "Ezra Arrives in Jerusalem",
+ "refs": [
+  "Ezra 7:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 15007010,
+   "end": 15007010,
+   "ref": "Ezra 7:10",
+   "ranges": [
+    [
+     15007010,
+     15007010
+    ]
+   ],
+   "title": "\"Set His Heart to Study the Law\"",
+   "key_verse": [
+    15007010,
+    15007010
+   ],
+   "reflect": [
+    {
+     "text": "Ezra gives us a clear pattern for how to handle God's Word. Before he ever stood up to guide the people, he dedicated himself to deep and persistent learning. Faithful teaching cannot rely on surface knowledge. It begins with careful, ongoing study so that we truly understand what God has spoken.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Study by itself is not enough. Ezra did not treat the Bible like a mere textbook for the mind. He put what he learned into daily practice. For anyone sharing God's truth, obedience must come before instruction. When we live out the Scriptures in our own lives and humbly turn from sin, our words carry genuine weight.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Only after studying and practicing did Ezra move to teaching. God calls us to pass along His truth without skipping these steps. When what we teach flows out of real study and an obedient life, God uses it to build up His people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you taking time to obey what you learn from the Bible before trying to correct or teach others?",
+    "What is one practical step you can take this week to study God's Word more deeply?"
+   ],
+   "prayer": "Lord God, help us to love Your Word and study it with careful hearts. Teach us to obey Your commands in daily life rather than just storing up knowledge. Use our lives and our words to guide others faithfully toward You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Robert Rothwell",
+     "work": "Prepare to Teach",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/prepare-to-teach"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Ezra 7",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/genesis-7-matthew-7-ezra-7-acts-7/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "24-012-014",
+ "title": "A Message for Israel’s Neighbors",
+ "refs": [
+  "Jeremiah 12:14-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24012014,
+   "end": 24012017,
+   "ref": "Jeremiah 12:14-17",
+   "ranges": [
+    [
+     24012014,
+     24012017
+    ]
+   ],
+   "title": "God's Mercy to the Nations",
+   "key_verse": [
+    24012016,
+    24012016
+   ],
+   "reflect": [
+    {
+     "text": "Jeremiah felt deeply troubled seeing evil people thrive while he suffered persecution and threats against his life. In response, God showed him that even harder trials were coming before Judah would face discipline and exile. Yet the cruel neighbor nations who harmed God's people would not escape justice either. God promised that they, too, would be uprooted from their lands for their sins.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Remarkably, God's judgment was not the final word for these enemies. The Lord promised to show compassion to them if they turned away from their idols. If they learned to honor the true God and swear by His name, He would welcome them and establish them right alongside His own people. God held out real hope of restoration and belonging to anyone willing to follow Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This reminds us that God's desire to save extends far beyond our expectations. When life feels confusing or unfair, believers are called to walk by faith. We can quietly trust God's sovereign goodness, knowing He controls the future and always acts with both perfect justice and tender mercy.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When life seems unfair or confusing, how can remembering God's sovereign goodness help you keep trusting Him?",
+    "How does knowing that God offers mercy even to His enemies change the way you look at people around you?"
+   ],
+   "prayer": "Lord God, thank You for Your great compassion that reaches out to all nations. Help us to walk by faith and trust Your good purposes, even when life is confusing and hard to understand. Teach us to extend Your kindness to others, just as You have shown mercy to us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Hope for the Nations",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/hope-nations"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

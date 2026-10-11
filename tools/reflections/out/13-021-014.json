@@ -1,0 +1,66 @@
+{
+ "id": "13-021-014",
+ "title": "A Plague on Israel",
+ "refs": [
+  "1 Chronicles 21:14-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13021014,
+   "end": 13021017,
+   "ref": "1 Chronicles 21:14-17",
+   "ranges": [
+    [
+     13021014,
+     13021017
+    ]
+   ],
+   "title": "God's Judgment and Mercy",
+   "key_verse": [
+    13021015,
+    13021015
+   ],
+   "reflect": [
+    {
+     "text": "David's choice to count the people brought severe discipline upon Israel. God holds sinners accountable for their pride and disobedience. In His holy rule over all things, God can direct secondary causes to work out His purposes while remaining completely free from evil Himself.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When judgment fell, David saw the angel standing with a drawn sword over Jerusalem. This destroying angel points forward to Jesus Christ, who will one day bring righteous judgment against those who refuse to repent. Yet as David confessed his wrongdoing and asked for forgiveness, the Lord showed great mercy. God told the angel to stop, holding back the destruction.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's discipline shows both His holiness and His tender heart. Because of God's abundant grace, which is kindness we do not deserve, all who turn to Jesus in obedient faith are spared from God's wrath. When we see our sin and turn to the Lord, we meet a God who is ready to pardon.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does David's humble confession encourage you to bring your own sins quickly to God?",
+    "How does remembering the mercy we have received in Jesus change the way you face God's discipline?"
+   ],
+   "prayer": "Holy Father, thank You for Your great mercy toward sinners. We confess that we often fail You through our pride and disobedience. Thank You for Jesus, who spares us from judgment through His abundant grace. Teach us to live each day in humble, obedient faith. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Angel Brings Judgment",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/angel-brings-judgment"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,82 @@
+{
+ "id": "30-005-004",
+ "title": "A Call to Repentance",
+ "refs": [
+  "Amos 5:4-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 30005004,
+   "end": 30005015,
+   "ref": "Amos 5:4-15",
+   "ranges": [
+    [
+     30005004,
+     30005015
+    ]
+   ],
+   "title": "Seek the Lord and Live",
+   "key_verse": [
+    30005014,
+    30005014
+   ],
+   "reflect": [
+    {
+     "text": "Amos urges us to stop being comfortable in our own luxury while ignoring the needs and hurts of people around us. God is not pleased with empty religious routines or outward ceremonies when our hearts are indifferent to others. Instead, He calls us to seek Him directly. As F. B. Meyer observed, the chapter \"resounds with invitations to seek God,\" whether in sunny seasons of hope or in dark storms where we run to Him for safety like a child to a parent.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "True repentance means loving what is good and hating what is evil. In our world, justice can easily be twisted by selfishness, dishonesty, and excuses for wrongdoers. Yet genuine faith cannot be separated from practical fairness. God calls His people to reject bribery and bias, defend the oppressed, and uphold what is right in public life.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "We have only one life to spend, and God invites us to live it with earnest purpose. Rather than wrapping ourselves in comfort and ease, we are called to look out for those who are struggling and actively help them. Seeking the Lord means letting His goodness shape how we treat our neighbors every day.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there comfortable routines in your life that distract you from truly seeking God and noticing people in need?",
+    "What is one practical way you can stand up for fairness and help someone who is mistreated or struggling?"
+   ],
+   "prayer": "Lord God, help us to seek You with honest hearts rather than resting in comfortable habits. Give us a true love for what is good and the courage to oppose injustice. Show us where others are hurting, and guide us to act with fairness, compassion, and truth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Amos 5:8",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Injustice",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-july-16-2015.html"
+    },
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Amos 5",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/1-chronicles-7-8-hebrews-11-amos-5-luke-11-38/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

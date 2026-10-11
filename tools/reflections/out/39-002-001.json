@@ -1,0 +1,74 @@
+{
+ "id": "39-002-001",
+ "title": "A Warning to the Priests",
+ "refs": [
+  "Malachi 2:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 39002001,
+   "end": 39002009,
+   "ref": "Malachi 2:1-9",
+   "ranges": [
+    [
+     39002001,
+     39002009
+    ]
+   ],
+   "title": "Honoring God with Truth and Reverence",
+   "key_verse": [
+    39002007,
+    39002007
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God speaks firmly to the priests because they failed to revere His holy name and keep His covenant. God gave spiritual leaders a sacred duty to guard divine knowledge and share His truth faithfully. Yet when we water down hard biblical teachings just to keep listeners comfortable, we strip God's word of its life-changing power. Living without wholehearted devotion misrepresents the Lord and leads others away from Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "What we say matters deeply to God. Careless speech and unfaithful guidance place stumbling blocks in the paths of those around us. Because of this danger, we need to examine our words carefully to see whether they serve our own selfish wants or God's enduring wisdom. Honoring the Lord means shaping our lives and conversations by His truth rather than our own preferences.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God's sharp warnings in Scripture are an invitation of grace. He corrects us so that we will turn back to Him in genuine repentance. When we fix our eyes on Christ, our lives begin to show healthy spiritual fruit. Walking with God in awe and obedience helps point those around us toward His goodness and truth.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do your daily words and actions encourage others to follow God, or could they cause someone to stumble?",
+    "In what areas of your life is God calling you to turn back to Him in genuine repentance?"
+   ],
+   "prayer": "Lord, forgive us for the times our words and choices have led others astray. Teach us to revere Your holy name and speak Your truth without compromise. Help us keep our eyes fixed on Christ so that our lives draw others closer to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Tonilee Adamson and Bobbye Brooks",
+     "work": "Daily Disciples Devotional - November 9",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-devotional-november-9-11558676.html"
+    },
+    "D2": {
+     "author": "Vanessa Luu",
+     "work": "Keeping Our Eyes on God: A Call Back to Reverence",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/keeping-our-eyes-on-god-a-call-back-to-reverence.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

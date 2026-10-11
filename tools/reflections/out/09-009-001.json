@@ -1,0 +1,81 @@
+{
+ "id": "09-009-001",
+ "title": "Saul Chosen as King",
+ "refs": [
+  "1 Samuel 9:1-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9009001,
+   "end": 9009027,
+   "ref": "1 Samuel 9:1-27",
+   "ranges": [
+    [
+     9009001,
+     9009027
+    ]
+   ],
+   "title": "God's Quiet Guidance and True Humility",
+   "key_verse": [
+    9009016,
+    9009016
+   ],
+   "reflect": [
+    {
+     "text": "Saul set out simply to search for his father's lost donkeys, but God was working out a much larger purpose. What seemed like an annoying detour and a series of random coincidences was actually the Lord quietly guiding Saul's steps. God cares about our daily troubles, and He directs all events for His good plans. When the search stalled, Saul's servant knew to seek Samuel, whose steady life with God gave him a trusted reputation throughout the land. A life spent in close friendship with God naturally carries quiet honor and truth.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "When Samuel honored Saul, Saul immediately pointed out that his tribe was the smallest and his family was lowly. Saul looked tall and impressive on the outside, but he carried deep feelings of insecurity. Focusing only on our own weaknesses is not true humility, because it still keeps ourselves at the center. Real humility looks away from our own status and trusts in the Lord's power. Saul began his calling with modesty and great promise, but a good start does not guarantee a faithful finish. To finish well, we must keep trusting God in daily obedience rather than relying on human judgment.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When everyday plans get disrupted, how can you remember that God is still guiding your steps?",
+    "Are you tempted to focus on your own weaknesses instead of trusting God's strength?"
+   ],
+   "prayer": "Lord God, thank You that nothing in our lives happens by accident and that You direct our steps with care. Forgive us when we look only at our own shortcomings instead of looking to You. Teach us true humility that rests in Your power, and keep us faithful to You day by day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 9:6",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 11: 1 Samuel 9:14b–25",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-11-1-samuel-9-14b25.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Samuel Meets Saul",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/samuel-meets-saul"
+    },
+    "D4": {
+     "author": "D. A. Carson",
+     "work": "Devotional: 1 Samuel 9",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/1-samuel-9-romans-7-jeremiah-46-psalm-22/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

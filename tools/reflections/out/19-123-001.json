@@ -1,0 +1,81 @@
+{
+ "id": "19-123-001",
+ "title": "I Lift Up My Eyes to You",
+ "refs": [
+  "Psalms 123:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19123001,
+   "end": 19123004,
+   "ref": "Psalms 123:1-4",
+   "ranges": [
+    [
+     19123001,
+     19123004
+    ]
+   ],
+   "title": "Looking to the Master's Hand",
+   "key_verse": [
+    19123002,
+    19123002
+   ],
+   "reflect": [
+    {
+     "text": "Life can often feel overwhelming, especially when we face harsh words or mockery from proud people around us. When the world feels chaotic, this psalm calls us to lift our eyes away from human strife and look straight toward God on His heavenly throne. Turning our focus toward the Lord brings peace to our hearts and keeps us from growing bitter or cynical.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "The psalm compares our walk with God to servants watching their master's hand. In the ancient world, servants owned nothing and relied fully on their master for food, safety, and guidance. Even though believers in Christ are dearly loved children, we still come to God as humble servants with empty hands. When we realize our own smallness and give up any sense of entitlement, we see how wonderful His mercy really is.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Like a servant waiting for the quietest gesture, we are called to watch God patiently instead of rushing ahead on our own plans. As F. B. Meyer reminds us, we should \"wait patiently until it give some sign.\" Keeping our eyes on Him helps us stay alert to how He answers our prayers and guides our steps each day.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What proud or distracting voices in the world do you need to look away from today?",
+    "How can you practice waiting quietly for God's guidance instead of rushing ahead on your own?"
+   ],
+   "prayer": "Lord God enthroned in heaven, we lift our eyes to You today. We bring empty hands and ask for Your mercy when the world around us feels harsh and overwhelming. Teach us to watch Your hand with patient hearts and to follow Your gentle guidance in all we do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 123:1",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Robert VanDoodewaard",
+     "work": "Praying as a Servant",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/praying-as-a-servant"
+    },
+    "D3": {
+     "author": "Meg Bucher",
+     "work": "A Prayer for Recognizing God's Answers to Our Prayers",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-recognizing-gods-answers-to-our-prayers.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

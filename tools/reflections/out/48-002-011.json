@@ -1,0 +1,88 @@
+{
+ "id": "48-002-011",
+ "title": "Paul Confronts Cephas",
+ "refs": [
+  "Galatians 2:11-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 48002020,
+   "end": 48002020,
+   "ref": "Galatians 2:20",
+   "ranges": [
+    [
+     48002020,
+     48002020
+    ]
+   ],
+   "title": "\"Christ Lives in Me\"",
+   "key_verse": [
+    48002020,
+    48002020
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus died on the cross, he died as our substitute. In God's eyes, all who trust him died with him, paying the debt of sin and becoming free from the law's curse. This is not just a cold fact to agree with from a distance. Family history and outward rituals cannot save us. Faith must be deeply personal. We can say with real conviction that the Son of God loved us individually and gave himself up for us.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "Saying that we are crucified with Christ might sound as if we lose our identity. We often fear letting go of our independence, much like someone who hesitates to take a new name in marriage. Yet surrendering our self-reliance does not wipe out our personhood. It actually restores our true self. We become dead to our old sinful nature and find our true life in him.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Now, Christ himself lives in us. His life flows into our souls just as sap flows from a vine into its branches. Faith is the living link that joins us to our Lord. It holds onto Jesus with a firm grip, trusting his worth above all else. In this close union, we enjoy his love and walk in his strength each day.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you resting your identity on your own independence, or on your union with Christ?",
+    "How does knowing that Jesus loved you personally change the way you trust him today?"
+   ],
+   "prayer": "Lord Jesus, thank you for loving us and giving your life on the cross in our place. Teach us to surrender our self-reliance so that our true identity is found in you. Hold us fast in your love, and let your life flow through us every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 14",
+     "on": "Galatians 2:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 28",
+     "on": "Galatians 2:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Katherine Britton",
+     "work": "What's in a Name?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-aug-6-2008-11580185.html"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Personal Faith",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/personal-faith"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

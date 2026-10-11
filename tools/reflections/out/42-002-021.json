@@ -1,0 +1,66 @@
+{
+ "id": "42-002-021",
+ "title": "Jesus Presented at the Temple",
+ "refs": [
+  "Luke 2:21-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42002021,
+   "end": 42002024,
+   "ref": "Luke 2:21-24",
+   "ranges": [
+    [
+     42002021,
+     42002024
+    ]
+   ],
+   "title": "Presented to the Lord",
+   "key_verse": [
+    42002022,
+    42002022
+   ],
+   "reflect": [
+    {
+     "text": "Mary and Joseph faithfully followed God's law after Jesus was born. They observed three Old Testament rites: circumcision, redemption, and purification. Jesus took part in physical circumcision, which points forward to the spiritual change of heart that transforms believers today.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "His parents also brought Him to Jerusalem to present Him to God as their firstborn son. This presentation stood for redemption, showing ahead of time how Christ would buy believers back from sin. When they offered two birds, Mary and Joseph used the law's special rule for the poor, showing their lack of worldly wealth.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus entered our world in simple poverty. He did this so He could grow up to be the ultimate sacrifice, cleansing us from sin and giving believers lasting spiritual riches forever.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does Jesus entering earthly poverty change how you think about true riches?",
+    "In what ways has Jesus changed your heart and set you free from sin?"
+   ],
+   "prayer": "Lord God, thank You for sending Jesus into a humble, poor family to rescue us. Thank You that He gave Himself as the final sacrifice to cleanse our hearts and buy us back from sin. Help us to treasure the eternal riches we have in You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 131: Luke 2:21–24",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-131-luke-2-2124.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

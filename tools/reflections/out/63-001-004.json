@@ -1,0 +1,66 @@
+{
+ "id": "63-001-004",
+ "title": "Walking in the Truth",
+ "refs": [
+  "2 John 1:4-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 63001004,
+   "end": 63001006,
+   "ref": "2 John 1:4-6",
+   "ranges": [
+    [
+     63001004,
+     63001006
+    ]
+   ],
+   "title": "Walking in Truth and Love",
+   "key_verse": [
+    63001006,
+    63001006
+   ],
+   "reflect": [
+    {
+     "text": "John was glad to find believers walking in the truth. It is good and necessary to know what God teaches in Scripture. However, having sound doctrine in our minds is never enough on its own. Intellectual understanding must never take the place of our calling to love. Even faithful believers who are walking in God's truth still need regular reminders to love one another.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "John explains what genuine Christian love really means. In the Bible, love is not just a warm or sentimental feeling. God defines love as active obedience to His commandments. When we love God, we obey what He says, and that obedience naturally directs how we treat the people around us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Walking in love means putting our faith into practice through concrete deeds toward our neighbors. God does not want us to choose between holding firmly to the truth and showing love. He calls us to do both, letting the truth we know bear fruit in practical service every day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you move beyond just knowing the truth to showing active love to someone today?",
+    "What is one practical deed of kindness you can do for a neighbor this week?"
+   ],
+   "prayer": "Heavenly Father, thank You for Your Word that guides our path. Help us not to settle for head knowledge alone, but teach us to obey Your commandments in love. Give us opportunities to serve our neighbors through concrete deeds today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Walk in Love",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/walk-love"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

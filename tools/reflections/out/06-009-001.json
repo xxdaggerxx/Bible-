@@ -1,0 +1,140 @@
+{
+ "id": "06-009-001",
+ "title": "The Deceit of the Gibeonites",
+ "refs": [
+  "Joshua 9:1-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 6009014,
+   "end": 6009014,
+   "ref": "Joshua 9:14",
+   "ranges": [
+    [
+     6009014,
+     6009014
+    ]
+   ],
+   "title": "\"Did Not Seek the Counsel of the Lord\"",
+   "key_verse": [
+    6009014,
+    6009014
+   ],
+   "reflect": [
+    {
+     "text": "Joshua and the leaders looked at the dry, moldy bread and the cracked wineskins, trusting what their physical senses told them instead of turning to God. Past victories can easily tempt us to live on spiritual autopilot. We rarely plan to leave God out of our plans, but busyness and quiet self-reliance cause us to forget prayer in our ordinary choices.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "The Gibeonites used flattering and religious words to hide their true identity. It is easy to be caught off guard when someone or something looks harmless or sounds devout. As F. B. Meyer observed, trouble comes when believers are \"relying on their own judgment, and not asking counsel of God.\" We need to test everything by God's Word rather than trusting our own cleverness.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    },
+    {
+     "text": "Even when our intentions seem good, rushing ahead without prayer can lead to painful, lasting mistakes. We often feel an urge to jump in and solve problems using human wisdom, forgetting to ask what the Lord desires. Real wisdom means pausing to seek God's direction before making commitments, pointing people to Him rather than trying to fix everything ourselves.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what parts of your daily life are you tempted to act on autopilot instead of asking God for guidance?",
+    "How can you pause and seek the Lord's wisdom before making your next choice?"
+   ],
+   "prayer": "Lord, forgive us for the times we rush ahead without asking for Your help. Teach us not to rely merely on what our eyes see or trust our own clever thinking. Give us humble hearts that pause to seek Your guidance in prayer and in Your Word every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joshua 9:14",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Karen Del Tatto",
+     "work": "Seeking God Before You Try to Save the Day",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/seeking-god-before-you-try-to-save-the-day.html"
+    },
+    "D3": {
+     "author": "Greg Morse",
+     "work": "The Secret Failure of Many Leaders",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-secret-failure-of-many-leaders"
+    },
+    "D5": {
+     "author": "D.A. Carson",
+     "work": "The Gibeonite Deception",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/joshua-9-psalms-140-141-jeremiah-3-matthew-17/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 6009001,
+   "end": 6009027,
+   "ref": "Joshua 9:1-27",
+   "ranges": [
+    [
+     6009001,
+     6009027
+    ]
+   ],
+   "title": "Unexpected Mercy for Outsiders",
+   "key_verse": [
+    6009015,
+    6009015
+   ],
+   "reflect": [
+    {
+     "text": "When the leaders of Israel discovered they had been tricked by the Gibeonites, they chose to keep their promise. Even though the people grumbled against them, the leaders stood by their sworn oath made before the Lord. Godly people are called to honor their commitments, showing true integrity even when keeping a promise proves costly.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Under the law, the Gibeonites faced complete destruction, yet they received surprising mercy. Instead of being put to death, they were spared and assigned to serve at the house of God as woodcutters and water carriers. Over time, they became part of the life of Israel, even helping generations later to rebuild the broken walls of Jerusalem.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "This account shows us a picture of grace, which is God's kindness to people who do not deserve it. The Gibeonites were fearful outsiders who acted deceitfully, yet they were brought near to the worship of the living God. In the same way, the Lord extends His unexpected mercy to sinners like us, welcoming us into His family and giving us a place to serve Him.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Why is it important for believers to keep their word even when doing so is difficult?",
+    "How does God's unexpected mercy to the Gibeonites help you appreciate the grace He has shown to you?"
+   ],
+   "prayer": "Heavenly Father, thank You for Your amazing grace that welcomes outsiders and sinners like us. Help us to be people of truth who honor our promises, even when it is hard. Give us grateful hearts that rejoice in the undeserved mercy You have shown us. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Grace for the Gibeonites",
+     "site": "Ligonier Ministries",
+     "url": "https://www.ligonier.org/learn/devotionals/grace-for-gibeonites"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

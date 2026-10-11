@@ -1,0 +1,75 @@
+{
+ "id": "23-035-001",
+ "title": "The Glory of Zion",
+ "refs": [
+  "Isaiah 35:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23035001,
+   "end": 23035010,
+   "ref": "Isaiah 35:1-10",
+   "ranges": [
+    [
+     23035001,
+     23035010
+    ]
+   ],
+   "title": "God Will Come to Save You",
+   "key_verse": [
+    23035004,
+    23035004
+   ],
+   "reflect": [
+    {
+     "text": "Life can bring heavy hardship, weariness, and sadness. Long ago, God gave Isaiah words of comfort to people facing judgment and exile. God assured them that he had not abandoned them. He promised that he would come to rescue them and heal the broken world. This promise pointed forward to Jesus. His healings proved he was the Messiah, God's chosen Savior, who brings deep spiritual renewal and begins remaking all things.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "This hope in Christ's return sustains us through hard seasons and fills us with gratitude. As we wait for him, God calls us to walk on his royal road, the Way of Holiness. Charles Spurgeon wrote that \"the way of holiness is so straight and plain\" that the simplest minds will not go astray. Worldly shortcuts only lead to danger. When we follow God's commands and walk in truth and honesty, we remain safe under his protection.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face hardship or fear, how does the promise of Jesus' future deliverance give you courage?",
+    "Where might you be tempted to take a worldly shortcut rather than staying on God's plain path of truth?"
+   ],
+   "prayer": "Lord God, thank you for the promise that you will heal and renew all things through Jesus. When we feel weary or afraid, strengthen our hearts with this hope. Keep our feet walking on your path of truth, and guide us safely under your royal care.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 1",
+     "on": "Isaiah 35:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "David C. McCasland",
+     "work": "Well Done, David Schumm",
+     "site": "Our Daily Bread",
+     "url": "https://military.odb.org/well-done-david-schumm/"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Glory of the Restoration",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/glory-restoration"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

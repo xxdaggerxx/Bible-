@@ -1,0 +1,75 @@
+{
+ "id": "35-001-012",
+ "title": "Habakkuk’s Second Complaint",
+ "refs": [
+  "Habakkuk 1:12-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 35001012,
+   "end": 35001017,
+   "ref": "Habakkuk 1:12-17",
+   "ranges": [
+    [
+     35001012,
+     35001017
+    ]
+   ],
+   "title": "Bringing Our Hard Questions to God",
+   "key_verse": [
+    35001012,
+    35001012
+   ],
+   "reflect": [
+    {
+     "text": "Habakkuk faced a question that troubled him deeply. God is holy and pure, so how could He remain silent while a cruel and wicked nation swallowed up people who were more righteous than they were? While questioning God out of pride is wrong, believers are welcome to bring their genuine confusion and honest sorrow to Him in faith.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even while he was perplexed, the prophet rooted his prayer in God's eternal character. He called God the Rock, the Holy One, and the everlasting Lord. As F. B. Meyer noted, it is wonderful that ordinary people may look at the eternal God and say, \"my God; mine Holy One.\" God has not left His throne or lost His strength; He remains unchanged and completely in control.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Bringing our questions to God in faith means bowing to His holiness and trusting who He is. When life confuses us, we can safely lay our burdens before Him and wait patiently for His answer, resting content with whatever He decides.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What hard questions about the world or your life do you need to bring honestly to God in prayer?",
+    "How does remembering that God is eternal and holy help you trust Him when you do not understand what He is doing?"
+   ],
+   "prayer": "Lord God, You are eternal, holy, and our unchanging Rock. When we see evil and do not understand Your ways, help us bring our honest questions to You in humble faith. Teach us to rest quietly in Your good character and wait for Your answer.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Habakkuk 1:12",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Habakkuk Questions the Lord",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/habakkuk-questions-lord"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

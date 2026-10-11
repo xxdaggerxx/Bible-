@@ -1,0 +1,66 @@
+{
+ "id": "03-005-014",
+ "title": "Laws for Guilt Offerings",
+ "refs": [
+  "Leviticus 5:14-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3005014,
+   "end": 3005019,
+   "ref": "Leviticus 5:14-19",
+   "ranges": [
+    [
+     3005014,
+     3005019
+    ]
+   ],
+   "title": "Forgiveness for Careless Hearts",
+   "key_verse": [
+    3005015,
+    3005015
+   ],
+   "reflect": [
+    {
+     "text": "In ancient Israel, someone could mishandle God's holy things without realizing it. Even though it was not done on purpose, God still saw it as real guilt. The person had to bring an unblemished ram as a guilt offering and repay what was harmed. Treating sacred things lightly robs God of the honor that belongs to him. This warns us against offering God distracted, halfhearted worship when we gather in his name.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God deserves our reverence, we should prepare our hearts deliberately when we come to worship. We need to pay close attention to his Word and reflect on it throughout our days. Yet even on our best days, our focus drifts and our worship falls short. On our own, our carelessness would leave us guilty before a holy God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The good news of the gospel is that Jesus lived in perfect obedience. He offered himself as the true and final guilt offering for our sinful failures. We are not accepted by God because our worship is flawless. Instead, we are cleansed and welcomed entirely because of Jesus and his perfect righteousness given to us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways do you find yourself becoming distracted or casual when you worship God?",
+    "How does knowing Jesus is your ultimate guilt offering give you comfort when your worship is imperfect?"
+   ],
+   "prayer": "Lord, forgive us for the times we treat your worship lightly with distracted minds. Thank you for sending Jesus to be the ultimate guilt offering for all our shortcomings. Help us to listen to your Word with focused hearts, resting in the grace you give us through Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Erik Raymond",
+     "work": "What Do We Do with Our Imperfect Worship?",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/erik-raymond/what-do-we-do-with-our-imperfect-worship/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

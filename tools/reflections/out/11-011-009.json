@@ -1,0 +1,75 @@
+{
+ "id": "11-011-009",
+ "title": "God’s Anger against Solomon",
+ "refs": [
+  "1 Kings 11:9-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11011009,
+   "end": 11011013,
+   "ref": "1 Kings 11:9-13",
+   "ranges": [
+    [
+     11011009,
+     11011013
+    ]
+   ],
+   "title": "God's Discipline and Faithful Mercy",
+   "key_verse": [
+    11011011,
+    11011011
+   ],
+   "reflect": [
+    {
+     "text": "We often like to dwell on God's love and patience, but Scripture reminds us that rebellion stirs His holy anger. Even though God appeared to Solomon twice with clear warnings, Solomon turned his heart toward idols and led the nation into false worship. God is patient, but His patience has limits when His people persistently walk away from Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because Solomon broke God's covenant—His sacred agreement and commands—the Lord declared that the kingdom would be torn away and given to a subordinate. When we stubbornly chase things other than God, His discipline may painfully strip away the peace, security, or relationships we built on disobedience.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet even in this stern judgment, God remained faithful to His covenant with David. He delayed the division of the kingdom during Solomon's lifetime and kept one tribe in Jerusalem. God often shows mercy by holding back the full weight of consequences we deserve, reminding us to thank Him without presuming upon His grace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there personal idols or habits pulling your heart away from wholehearted devotion to God?",
+    "How has God shown you mercy by holding back the full consequences your disobedience deserved?"
+   ],
+   "prayer": "Lord, search our hearts and help us turn away from anything that pulls our love away from You. Thank You for Your incredible patience and for withholding the full ruin our sins deserve. Keep us faithful to Your Word, and teach us never to take Your mercy for granted. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "God's Attitude toward Defiance",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/god's-attitude-toward-defiance"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Solomon’s Final Days",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/solomons-final-days"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

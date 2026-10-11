@@ -1,0 +1,66 @@
+{
+ "id": "03-026-040",
+ "title": "God Remembers Those Who Repent",
+ "refs": [
+  "Leviticus 26:40-46"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3026040,
+   "end": 3026046,
+   "ref": "Leviticus 26:40-46",
+   "ranges": [
+    [
+     3026040,
+     3026046
+    ]
+   ],
+   "title": "The Hope of True Restoration",
+   "key_verse": [
+    3026044,
+    3026044
+   ],
+   "reflect": [
+    {
+     "text": "Even when God warned His people that unfaithfulness would lead to exile, this painful warning was not the end of the story. The threat of losing their land warned them against presumption—taking God's kindness for granted. God used the danger of exile to steer His people away from stubborn pride and urge them toward genuine repentance.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Exile was never meant to be the final end for God's covenant community. The Lord promised that if His people humbled their hearts and confessed their sins, He would remember His covenant with Abraham, Isaac, and Jacob. Their restoration showed both their need to turn back from sin and God's sovereign grace, which is His unearned kindness in preserving a faithful remnant.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This lasting hope of restoration points ahead to Jesus Christ. We cannot keep God's law by our own strength. Christ fulfilled every covenant requirement in our place so that God's people could be fully forgiven, redeemed, and brought home to Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When God corrects you through life's trials, how can remembering His promises help you turn back to Him?",
+    "How does knowing that Jesus fulfilled God's covenant for you bring comfort when you confess your sins?"
+   ],
+   "prayer": "Lord God, thank You that Your discipline is meant to guide us to repentance and not to cast us off. We praise You for Jesus Christ, who fulfilled every requirement of the covenant to restore us. Please humble our hearts so we may confess our sins honestly and trust in Your faithful grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Hope of Restoration",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/hope-restoration"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

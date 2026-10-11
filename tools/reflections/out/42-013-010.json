@@ -1,0 +1,68 @@
+{
+ "id": "42-013-010",
+ "title": "Jesus Heals a Disabled Woman",
+ "refs": [
+  "Luke 13:10-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 42013012,
+   "end": 42013013,
+   "ref": "Luke 13:12-13",
+   "ranges": [
+    [
+     42013012,
+     42013013
+    ]
+   ],
+   "title": "\"Woman, You Are Set Free\"",
+   "key_verse": [
+    42013012,
+    42013012
+   ],
+   "reflect": [
+    {
+     "text": "The woman in this story was a real person whose long suffering mirrors our own struggles today. For eighteen years, she was hunched over and could not stand up straight. Even though she was exhausted by years of painful hardship, she still chose to draw near to Jesus at the synagogue. In our own lives, heavy burdens like past trauma, shame, and regret can bend and cripple our spirits. The enemy uses these weights to keep us immobilized, but Jesus always notices when we are hurting.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus saw this woman in the crowd and called her forward with gentle compassion rather than shame. With His spoken words and loving touch, He immediately broke her long years of physical bondage. Jesus came to undo the work of the enemy. He does not simply untie our past chains; He sets us free to live an abundant, full life. When the woman stood straight for the very first time in years, she instantly gave worshipful praise to God. We can trust that Jesus sees our deep struggles and offers us the same restoring healing.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy burdens, regrets, or hurts feel like they are bending your spirit today?",
+    "How can knowing that Jesus sees you with compassion encourage you to come to Him for healing?"
+   ],
+   "prayer": "Lord Jesus, thank You for seeing us in our deepest pain and meeting us with tender compassion. Please lift the heavy loads of shame, trauma, and regret that weigh our spirits down. Break our chains so we can stand upright and praise You with grateful hearts for the new life You give. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Sharon Jaynes",
+     "work": "Are You Emotionally Crippled?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-march-13-2019.html"
+    },
+    "D2": {
+     "author": "Leah DiPascal",
+     "work": "When the Struggles of Life Knock You Over",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-october-24-2016.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

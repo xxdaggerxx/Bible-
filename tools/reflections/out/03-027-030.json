@@ -1,0 +1,66 @@
+{
+ "id": "03-027-030",
+ "title": "Instruction on Tithes",
+ "refs": [
+  "Leviticus 27:30-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3027030,
+   "end": 3027034,
+   "ref": "Leviticus 27:30-34",
+   "ranges": [
+    [
+     3027030,
+     3027034
+    ]
+   ],
+   "title": "Honoring God with What We Have",
+   "key_verse": [
+    3027030,
+    3027030
+   ],
+   "reflect": [
+    {
+     "text": "In Leviticus, the Lord told the Israelites that a tenth of their harvest and livestock belonged to Him. This tithe was holy, set apart specially for God. We are called to manage our finances faithfully as God's stewards, caretakers who look after what belongs to Him. Giving back a portion of what we earn is an act of worship that admits everything we own comes from the Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It is easy to worry about having enough, and giving money away can sometimes feel like a loss. Yet putting our resources into God's work brings genuine blessing rather than lack. Real-life experiences show that God reliably provides for people who choose to give faithfully. His promises are trustworthy, and we do not have to be afraid of running out.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we honor the Lord with what we have, we learn that it is impossible to out-give Him. He is generous, and He takes care of those who put Him first. Giving faithfully reshapes our hearts, helping us hold our possessions loosely and trust God as our true provider every single day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering that everything belongs to God change the way you look at your money?",
+    "In what ways have you seen God provide when you chose to be generous?"
+   ],
+   "prayer": "Lord, thank You for providing everything we have. Help us to be faithful caretakers of Your resources and to give generously to Your work. Teach us to trust Your promises and remember that we can never out-give You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Billy Graham",
+     "work": "We Cannot Out-Give God",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/devotions/we-cant-out-give-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

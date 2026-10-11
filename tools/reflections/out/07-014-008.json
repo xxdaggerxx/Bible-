@@ -1,0 +1,67 @@
+{
+ "id": "07-014-008",
+ "title": "Samson’s Riddle",
+ "refs": [
+  "Judges 14:8-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7014008,
+   "end": 7014020,
+   "ref": "Judges 14:8-20",
+   "ranges": [
+    [
+     7014008,
+     7014020
+    ]
+   ],
+   "title": "Strength and Sweetness from the Lion",
+   "key_verse": [
+    7014014,
+    7014014
+   ],
+   "reflect": [
+    {
+     "text": "Samson found honey inside the dead lion he had killed earlier, and from that came his riddle about sweetness coming from the strong. The roaring lion reminds us of the temptations we face in life. Temptation presses in close, threatening to pull us away from God. Yet when God helps us face and overcome a temptation, that hard struggle leaves behind something good.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "F. B. Meyer notes, \"Every conquered temptation yields these two things—strength and sweetness.\" First, we gain spiritual strength. Whenever we say no to sin, like choosing patience instead of anger, our ability to resist grows. The power of the battle passes into our own hearts, making us firmer in faith for the next test.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Second, overcoming temptation brings sweetness. It softens our character with humility, modesty, and gentleness. We realize we did not win by our own power, but by God walking with us. This victory also gives us a fresh hunger for God's Word, finding it sweeter than honey to our souls. What began as a fierce battle ends as a quiet blessing.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What is a temptation you are facing right now where you need God's strength to overcome it?",
+    "How have past struggles helped you grow in gentleness and humility?"
+   ],
+   "prayer": "Lord, help us to stand firm whenever temptation roars against us. Give us Your strength to resist sin, and work in us a spirit of humility and gentleness through every trial. Teach us to find our greatest sweetness in Your presence and Your holy Word. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Judges 14:14",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

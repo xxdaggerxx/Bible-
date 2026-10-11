@@ -1,0 +1,114 @@
+{
+ "id": "01-002-004",
+ "title": "Man and Woman in the Garden",
+ "refs": [
+  "Genesis 2:4-25"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1002007,
+   "end": 1002007,
+   "ref": "Genesis 2:7",
+   "ranges": [
+    [
+     1002007,
+     1002007
+    ]
+   ],
+   "title": "\"Breathed the Breath of Life\"",
+   "key_verse": [
+    1002007,
+    1002007
+   ],
+   "reflect": [
+    {
+     "text": "God formed the first man directly from the humble dust of the earth and breathed His own breath of life into his nostrils. This shows the special dignity and worth human beings have in creation. The Lord God is the sovereign Ruler of all, yet He acted with gentle closeness. Our physical bodies truly matter to Him, and He did not make us as distant objects. By breathing life into us, He gave us the unique ability to know Him and share a personal relationship with Him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Our human sin brought physical death, causing our frail bodies to return to the dust. Yet God has not abandoned the people He formed. Christ bore the curse of our sin on the cross to conquer the power of the grave. Because of Jesus, believers have a confident hope for the future. One day, God will awaken those who sleep in the dust and remake our fragile bodies into glorious, everlasting life that will never perish.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God personally breathed life into you shape how you view your own worth?",
+    "In what ways does the promise of the resurrection bring you comfort when facing physical weakness?"
+   ],
+   "prayer": "Lord God, thank You for giving us life and making us able to know and love You. We praise You for caring about our bodies and for sending Christ to defeat death. Help us to live with confident hope in Your promise to raise us to eternal life. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Breath of Life",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-breath-life"
+    },
+    "D3": {
+     "author": "Nancy Guthrie",
+     "work": "Those Who Sleep in the Dust Will Awake",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/from-dust-of-earth-to-breath-of-life/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1002004,
+   "end": 1002025,
+   "ref": "Genesis 2:4-25",
+   "ranges": [
+    [
+     1002004,
+     1002025
+    ]
+   ],
+   "title": "Caring for the Garden",
+   "key_verse": [
+    1002015,
+    1002015
+   ],
+   "reflect": [
+    {
+     "text": "When God placed the man in the garden of Eden, He gave him meaningful work to do before sin ever entered the world. This truth shows us that labor and daily responsibility are good gifts from God rather than a punishment. God invites us to cultivate and care for what He places in our hands. Taking good care of what He entrusts to us reflects His loving character and deepens our thankfulness toward Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our daily routines can often feel ordinary and mundane, but these tasks are never wasted. We bring glory to God whenever we carry out our everyday duties with a thankful heart. Amid demanding schedules and busy routines, we also need intentional moments of stillness and prayer. Pausing quietly before the Lord helps us recognize His faithful hand working through all the responsibilities He provides, reminding us that we serve Him in everything we do.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can viewing your daily chores and work as gifts from God change your attitude toward them?",
+    "What is one way you can make time for quiet prayer during a busy day?"
+   ],
+   "prayer": "Lord, thank You for the daily responsibilities and work You have entrusted to our hands. Teach us to do our ordinary duties with thankful hearts that bring You honor. Give us moments of quiet prayer so we can clearly see Your guidance through every busy day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Abby McDonald",
+     "work": "Seeing God’s Hand in the Shift from Rest to Responsibility",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/seeing-gods-hand-in-the-shift-from-rest-to-responsibility.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

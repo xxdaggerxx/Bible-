@@ -1,0 +1,66 @@
+{
+ "id": "26-047-013",
+ "title": "The Borders of the Land",
+ "refs": [
+  "Ezekiel 47:13-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26047013,
+   "end": 26047023,
+   "ref": "Ezekiel 47:13-23",
+   "ranges": [
+    [
+     26047013,
+     26047023
+    ]
+   ],
+   "title": "An Inheritance for All God's People",
+   "key_verse": [
+    26047022,
+    26047022
+   ],
+   "reflect": [
+    {
+     "text": "When the people of Israel were living in exile far from home, God gave Ezekiel a vision of their restored land. The Lord marked out clear boundaries and promised that the tribes would receive their share. This promise assured the weary exiles that God was bringing them back into His peace and favor. Setting these borders confirmed that the Lord keeps His covenant promises across every generation.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In this vision, God also gave a surprising command. The people were to divide the land equally with resident foreigners who lived among them. In the ancient world, outsiders rarely received family land. Yet God told Israel to treat them like native-born Israelites. God's mercy reached beyond ordinary borders to bring foreigners into the very heart of His blessing.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This points forward to what Jesus has done for us. Under the new covenant, all believers are full citizens of God's household. No matter what your background or family history may be, you have equal access to the King. In God's family, no one is treated as a second-class citizen. We all share in the lasting inheritance He freely gives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God keeps His promises across generations give you peace today?",
+    "In what ways can you help others feel fully welcomed in God's family?"
+   ],
+   "prayer": "Lord God, thank You for being faithful to Your promises in every age. We praise You that through Christ, You have welcomed us as full citizens into Your household. Help us to love and receive others just as warmly as You have received us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Apportioning the Restored Land",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/apportioning-restored-land"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

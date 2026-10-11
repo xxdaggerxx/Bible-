@@ -1,0 +1,131 @@
+{
+ "id": "20-015-001",
+ "title": "A Gentle Answer Turns Away Wrath",
+ "refs": [
+  "Proverbs 15:1-33"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 20015008,
+   "end": 20015008,
+   "ref": "Proverbs 15:8",
+   "ranges": [
+    [
+     20015008,
+     20015008
+    ]
+   ],
+   "title": "\"The Prayer of the Upright Is His Delight\"",
+   "key_verse": [
+    20015008,
+    20015008
+   ],
+   "reflect": [
+    {
+     "text": "We often come to prayer only when we want relief from anxiety or need help with our problems. Yet God truly looks forward to meeting with us in prayer. He does not judge our words by clever grammar or fine speaking. Just as a loving father takes joy in the simple stammering of his young children, our heavenly Father finds pleasure in hearing from us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God calls us to approach Him with upright, honest lives. If we choose crooked paths and cling to wrongdoing, our prayers are shut out. But when we turn away from known sin and walk with integrity, we can pray with full confidence. We do not depend on our own merit, but on Jesus, whose righteousness makes our prayers sweet to God.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because our prayers give God genuine delight, we should never rush through them as a mere chore. Take quiet time to rest in His presence and listen as well as ask. Make frequent visits to His throne throughout the day, knowing that your Father is waiting with love to receive you.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you view your prayer time as a quick duty, or as a moment that brings joy to God?",
+    "Is there any dishonesty or unconfessed sin you need to let go of so you can pray with an upright heart?"
+   ],
+   "prayer": "Lord, thank You for taking pleasure in our simple prayers. Keep our hearts honest and upright as we walk before You. Help us to slow down each day and enjoy quiet fellowship with You through Jesus Christ. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 18",
+     "on": "Proverbs 15:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Proverbs 15:8",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 20015001,
+   "end": 20015033,
+   "ref": "Proverbs 15:1-33",
+   "ranges": [
+    [
+     20015001,
+     20015033
+    ]
+   ],
+   "title": "Humility Comes Before Honor",
+   "key_verse": [
+    20015033,
+    20015033
+   ],
+   "reflect": [
+    {
+     "text": "The path of wisdom reminds us that true honor never begins with self-promotion. In God's kingdom, we must stoop before we can rise. Just as Jesus descended in lowliness before He ascended into glory, we must grow downward in humility before we can grow upward. When we empty ourselves of pride, God fills our hearts with His love.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God desires to pour out His blessings, but He gives only what is safe for us to handle. If we were handed great victories while full of pride, we would take the praise for ourselves and fall into danger. As Charles Spurgeon wrote, \"God will deny no blessing to a thoroughly humbled spirit.\" Staying low protects our souls.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Humility is a seasoning that improves every part of our lives. It helps us treat other people with gentleness and patience. It also prepares us to handle hard work, praise, and suffering with grace. When we stop clinging to our own importance, we become ready to receive everything God longs to give.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life might pride be holding you back from receiving God's blessing?",
+    "How would your conversations with others change today if you put on true humility first?"
+   ],
+   "prayer": "Heavenly Father, please take away our pride and teach us to walk in genuine lowliness. Help us to follow the humble pattern of Jesus in everything we do. Season our words and actions with grace so that You receive all the glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 5",
+     "on": "Proverbs 15:33",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

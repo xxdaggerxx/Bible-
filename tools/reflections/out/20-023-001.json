@@ -1,0 +1,75 @@
+{
+ "id": "20-023-001",
+ "title": "True Riches",
+ "refs": [
+  "Proverbs 23:1-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 20023001,
+   "end": 20023035,
+   "ref": "Proverbs 23:1-35",
+   "ranges": [
+    [
+     20023001,
+     20023035
+    ]
+   ],
+   "title": "Guiding Your Heart in God's Truth",
+   "key_verse": [
+    20023019,
+    20023019
+   ],
+   "reflect": [
+    {
+     "text": "The world often tells us to follow our hearts, but our feelings can easily lead us into trouble. Proverbs warns us that chasing fleeting wealth, overeating, or turning to wine brings ruin instead of happiness. Instead of letting random cravings pull us along, we are told to actively guide our hearts toward what is right. This starts with humbly listening to wise instruction and godly guidance.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Sometimes we look at people who ignore God and seem to prosper, and we feel tempted to envy them. It can feel like they have the easier, happier path. But as Charles Spurgeon observes, \"the fear of God casts out envy of men.\" Living with a steady awareness of God's presence lifts our desires above earthly things. Reverence for God—loving and honoring Him as Lord—clears our vision and heals envy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "A clear look at the future also guards our hearts. The glitter and wealth of sinners quickly fade away, but God promises that our hope will never be cut off. True peace comes when we stop envying earthly riches and find our chief delight in the Lord. When He satisfies our desires, our hearts stay steady and content.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you currently tempted to follow your feelings rather than God's wise instruction?",
+    "How can remembering God's future promises help you overcome envy of others today?"
+   ],
+   "prayer": "Lord, protect our hearts from chasing after things that quickly fade away. Teach us to live in your presence each day and rescue us from envying the wicked. Help us find our deepest joy in you and trust your promise of lasting hope. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 6",
+     "on": "Proverbs 23:17-18",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Jon Bloom",
+     "work": "Direct Your Heart",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/direct-your-heart"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,140 @@
+{
+ "id": "58-007-011",
+ "title": "A Superior Priesthood",
+ "refs": [
+  "Hebrews 7:11-28"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 58007025,
+   "end": 58007025,
+   "ref": "Hebrews 7:25",
+   "ranges": [
+    [
+     58007025,
+     58007025
+    ]
+   ],
+   "title": "\"He Always Lives to Intercede\"",
+   "key_verse": [
+    58007025,
+    58007025
+   ],
+   "reflect": [
+    {
+     "text": "In ancient times, high priests had to bring animal sacrifices day after day. Those repeated offerings could never truly finish the work. Jesus changed everything. He offered Himself once on the cross, serving as both our priest and the sacrifice. God will never overturn what Jesus accomplished, so our salvation is safe forever.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "Jesus is not distant or idle today. He lives forever before the Father, continuously speaking to God on our behalf. He points to what He did on the cross, so the enemy cannot condemn us. Because Jesus prays for us according to the Father's own kind will, our faith will not fail when hard trials come.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because Jesus constantly represents us, we never need other people or saints to carry our requests to God. His work is complete, and His door is open. Knowing that our risen Savior actively speaks for us gives us quiet boldness to come straight to God with every need.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus prays for you today give you comfort in your struggles?",
+    "What keeps you from coming directly and boldly to God in prayer?"
+   ],
+   "prayer": "Lord Jesus, thank You for offering Yourself once for all to rescue us. We praise You that You live right now to plead for us before the Father. Help us to rest in Your complete work and to pray with confidence each day. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Scott Hubbard",
+     "work": "To the Uttermost: How Jesus Keeps Us Day by Day",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/to-the-uttermost"
+    },
+    "D3": {
+     "author": "Chris Bruno",
+     "work": "Before the Throne for You: What It Means for Christ to Intercede",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/before-the-throne-for-you"
+    },
+    "D5": {
+     "author": "Crosswalk.com",
+     "work": "Time with God - November 9, 2016",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/timewithgod/time-with-god-november-9-2016.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 58007011,
+   "end": 58007028,
+   "ref": "Hebrews 7:11-28",
+   "ranges": [
+    [
+     58007011,
+     58007028
+    ]
+   ],
+   "title": "A Priest by an Indestructible Life",
+   "key_verse": [
+    58007016,
+    58007016
+   ],
+   "reflect": [
+    {
+     "text": "The old law and its line of priests could never make anyone perfect. Those earthly priests were weak, and death always cut their work short. They were temporary signposts pointing forward to someone far better. We needed a priest who was entirely holy, innocent, and unstained by evil.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Jesus became our High Priest through the power of an indestructible life. Death and the grave tried to hold Him fast, but as F. B. Meyer writes, \"His life defied death.\" In the ancient world, people felt trapped by endless defeat, but Jesus changed everything by rising from the dead to reign forever.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus shared our human nature completely, yet He remained pure and set apart from sin. Through faith, God gives us Christ's own spotless goodness. By the Holy Spirit, the risen Savior breathes His own life into us, calling us to let His life rule in our hearts today.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Why is it good news that Jesus never sinned and cannot die again?",
+    "In what area of your life do you need Christ's risen life to rule today?"
+   ],
+   "prayer": "Heavenly Father, thank You for giving us a pure and perfect High Priest in Your Son. Thank You that the grave could not hold Him and that He lives forever. Pour His life into our hearts through Your Holy Spirit, so we may honor You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hebrews 7:16",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "An Unstained Priest",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/unstained-priest"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

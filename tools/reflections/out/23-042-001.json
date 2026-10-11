@@ -1,0 +1,136 @@
+{
+ "id": "23-042-001",
+ "title": "Here Is My Servant",
+ "refs": [
+  "Isaiah 42:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23042002,
+   "end": 23042003,
+   "ref": "Isaiah 42:2-3",
+   "ranges": [
+    [
+     23042002,
+     23042003
+    ]
+   ],
+   "title": "\"A Bruised Reed He Will Not Break\"",
+   "key_verse": [
+    23042003,
+    23042003
+   ],
+   "reflect": [
+    {
+     "text": "When a plant stem is crushed or a lamp wick only sputters smoke, people usually throw them away. We can feel just like that when we are worn down by weakness, sorrow, or our own failures. We wonder if God will discard us because our light seems gone. Yet Isaiah promises that God's Servant does not crush the weak or snuff out faint faith.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Satan often whispers that our struggles make us useless and that we should be trampled or put out. But Jesus responds with deep tenderness. As Charles Spurgeon wrote, \"I may reckon upon tender treatment from my Lord.\" Weakness and weariness do not push Christ away. Instead, they draw Him near to care for us, just like a loving parent caring for a sick child.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because Jesus endured suffering and overcame darkness Himself, He has the power to heal what is broken. Instead of turning us away, He gently protects us and fans our smoldering embers back into flame. You do not need to hide your wounds from Him or fear rejection.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you feel weak or worn down right now?",
+    "How does knowing that Jesus treats you with gentle kindness change how you bring your struggles to Him?"
+   ],
+   "prayer": "Lord Jesus, thank You for Your gentle mercy when we feel broken and faint. When we doubt our worth, remind us that You do not push us away or put out our struggling faith. Please blow upon our hearts and restore us by Your love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 8",
+     "on": "Isaiah 42:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 42:3",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Sinclair Ferguson",
+     "work": "A Bruised Reed He Will Not Break",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/podcasts/things-unseen-with-sinclair-ferguson/a-bruised-reed-he-will-not-break"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 23042001,
+   "end": 23042009,
+   "ref": "Isaiah 42:1-9",
+   "ranges": [
+    [
+     23042001,
+     23042009
+    ]
+   ],
+   "title": "The Faithful Servant of the Lord",
+   "key_verse": [
+    23042001,
+    23042001
+   ],
+   "reflect": [
+    {
+     "text": "God originally called the nation of Israel to serve Him in holiness and reflect His truth to the world, but they continually fell short. Because of their disobedience, they stood in deep need of spiritual cleansing and atonement, which is the forgiveness and covering of sin. God therefore promised to send a chosen Servant who would carry out this mission faithfully.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Some might think this servant could be a powerful earthly ruler like King Cyrus. Yet a conquering pagan king could never show the gentle, righteous character described by the prophet. Instead, this Servant is Jesus the Messiah. He represents both the ideal Israel and the individual Savior who offered perfect obedience to the Father.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Jesus fulfills this grand purpose by establishing God's true justice across the earth. He does not rule by harsh force, but by freeing captives from the dark prison of sin, giving sight to the spiritually blind, and redeeming His people. Through Christ, God extends His light and covenant blessing to all nations.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Why is it comforting that our salvation depends on Christ's perfect obedience rather than our own efforts?",
+    "In what ways have you experienced Jesus freeing you from the darkness of sin?"
+   ],
+   "prayer": "Heavenly Father, thank You for sending Your beloved Servant, Jesus, who obeyed You perfectly when we could not. We praise You for freeing us from spiritual darkness and giving us spiritual sight. Help us to trust in His righteous work each day. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "The Servant of the Lord",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/servant-lord"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

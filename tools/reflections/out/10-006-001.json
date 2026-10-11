@@ -1,0 +1,74 @@
+{
+ "id": "10-006-001",
+ "title": "David Fetches the Ark",
+ "refs": [
+  "2 Samuel 6:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10006001,
+   "end": 10006004,
+   "ref": "2 Samuel 6:1-4",
+   "ranges": [
+    [
+     10006001,
+     10006004
+    ]
+   ],
+   "title": "Serving God on His Terms",
+   "key_verse": [
+    10006003,
+    10006003
+   ],
+   "reflect": [
+    {
+     "text": "David gathered Israel to bring the ark of God up to Jerusalem. He did not want the city to be merely a political capital, but a true center of worship. David recognized that his royal authority depended completely on submitting to the invisible King of kings. True spiritual greatness comes not from earthly pride or power, but from humble surrender to God.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet despite their good desires, they made a serious mistake by placing the ark on a new cart. God had explicitly commanded that His holy ark be carried on the shoulders of consecrated men. As F. B. Meyer noted, \"We are fond of bringing new carts to God.\" We often try to serve Him with our own clever inventions and resolutions, wanting to drive the cart ourselves rather than obeying His clear directions.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God asks for living obedience rather than our self-made efforts. When we let go of our own control, submit our plans to Him, and approach Him in the way He has commanded, we have no reason to be afraid. True worship means lowering ourselves before Him and walking in simple obedience to His Word.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to rely on your own plans instead of following God's clear guidance?",
+    "What does it look like for you to submit to the King of kings in your daily routine?"
+   ],
+   "prayer": "Lord, help us to honor You as our supreme King and yield our plans to Your will. Forgive us for the times we try to serve You in our own strength and according to our own ideas. Give us humble hearts that are eager to listen and obey You in all things. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Samuel 6:3",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Ark Taken to Jerusalem - Bible Pathway - April 13, 2012",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-april-13-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

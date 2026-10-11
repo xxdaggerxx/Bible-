@@ -1,0 +1,67 @@
+{
+ "id": "55-004-016",
+ "title": "The Lord Remains Faithful",
+ "refs": [
+  "2 Timothy 4:16-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 55004016,
+   "end": 55004018,
+   "ref": "2 Timothy 4:16-18",
+   "ranges": [
+    [
+     55004016,
+     55004018
+    ]
+   ],
+   "title": "Safe into His Heavenly Kingdom",
+   "key_verse": [
+    55004018,
+    55004018
+   ],
+   "reflect": [
+    {
+     "text": "Even when people abandon us, the Lord stands near to deliver us and guide us safely into his heavenly kingdom. That heavenly city is not an idle place. As Charles Spurgeon wrote, believers there \"never cease to fulfil the good pleasure of their King.\" In heaven, we will rest from every worry and trial, while enjoying joyful and active service to God day and night.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This heavenly home is also a place of deep fellowship and complete victory. We will not be isolated or singing alone. Instead, we will join all of God's people from every age, praising our King together in a great chorus. Every hard battle against temptation and fear in this life will end in full triumph, because Christ has made us conquerors through his love.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Above all, the kingdom Christ prepares for us is a place of total security. When we face trials today, our faith gives us a foretaste of the safety that will be ours forever. God's grace teaches our hearts to long for that eternal home, where all danger is past and our praise will never end.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does the promise of heavenly fellowship and rest comfort you when you feel lonely or tired in your faith?",
+    "Where do you need the Lord to remind you of the victory and security he has prepared for you?"
+   ],
+   "prayer": "Lord Jesus, thank you for standing by us and keeping us safe until we reach your heavenly home. Help us to serve you with joy today, knowing that our future with all your people is secure in your hands. Teach our hearts to long for your kingdom and to praise you through every trial. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 12",
+     "on": "2 Timothy 4:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "36-003-001",
+ "title": "Judgment on Jerusalem",
+ "refs": [
+  "Zephaniah 3:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 36003001,
+   "end": 36003005,
+   "ref": "Zephaniah 3:1-5",
+   "ranges": [
+    [
+     36003001,
+     36003005
+    ]
+   ],
+   "title": "Resting in God When Life Is Unfair",
+   "key_verse": [
+    36003005,
+    36003005
+   ],
+   "reflect": [
+    {
+     "text": "In Zephaniah's day, leaders mistreated the weak, and the unjust showed no shame. When people hurt us or treat us unfairly, it is very easy to hold onto anger, bitterness, and grudges. We can invite God to search our hearts and cleanse those hidden places where resentment likes to hide.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Instead of falling into self-pity, wanting revenge, or keeping score of every wrong, we are called to let those burdens go. We can rest in the truth that the Lord is completely righteous and never fails to bring justice. Even when people never acknowledge the wrong they did, God gives us the strength to choose the difficult path of forgiveness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When mistreatment leaves deep wounds, we can turn our eyes to Jesus Christ. He suffered unjustly on our behalf, taking the penalty for wrongs He did not commit. As we look to Him, He meets us with healing, peace, and renewed hope.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an unfair situation where you are still keeping score or holding onto bitterness?",
+    "How does remembering the unjust suffering of Jesus help you choose forgiveness today?"
+   ],
+   "prayer": "Lord, search my heart and wash away any lingering bitterness, self-pity, or desire for revenge. Help me to rest in Your righteous justice and grant me the grace to forgive those who have wronged me. Thank You, Jesus, for suffering on my behalf and filling my life with Your peace and hope.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Overcoming Unfair Treatment",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-october-16-2021.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

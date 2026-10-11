@@ -1,0 +1,75 @@
+{
+ "id": "11-014-021",
+ "title": "Rehoboam Reigns in Judah",
+ "refs": [
+  "1 Kings 14:21-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11014021,
+   "end": 11014024,
+   "ref": "1 Kings 14:21-24",
+   "ranges": [
+    [
+     11014021,
+     11014024
+    ]
+   ],
+   "title": "Turning Away from God",
+   "key_verse": [
+    11014022,
+    11014022
+   ],
+   "reflect": [
+    {
+     "text": "Rehoboam was the king of Judah, ruling in Jerusalem where the Lord had placed His name. Yet once his kingdom felt secure, Rehoboam turned away from God's law. Instead of leading the people in faithfulness, he guided them into deep spiritual failure. Judah set up false shrines and idol poles across the land, copying the corrupt practices of the nations God had driven away before them.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This unfaithfulness provoked the Lord to jealous anger. By chasing after idols and evil customs, Judah lost the Lord's protection and invited discipline. Yet even when David's royal sons failed so badly, God did not abandon His covenant. He preserved David's line purely out of grace, which is God's kindness that we do not deserve. The survival of God's people never depended on human merit, but on the Lord's mercy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Empty rituals and keeping up appearances can never replace true obedience from the heart. Judah still had Jerusalem and the temple, but their hearts were far from God. Today, we are reminded that our walk with God is not about outward show. It is about resting in His grace and responding with sincere, wholehearted loyalty.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways might we be tempted to keep up outward appearances rather than offering God genuine obedience?",
+    "How does knowing that God preserves His people by grace encourage your trust in Him today?"
+   ],
+   "prayer": "Lord, protect our hearts from drifting away from Your truth. Forgive us when we care more about appearances than about walking with You in genuine obedience. Thank You for the grace that holds us fast, even when our own strength fails. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Fall of Jeroboam I and Rehoboam",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/fall-of-jeroboam-and-rehoboam"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Apr. 27, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-apr-27-2010-11629431.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,61 @@
+{
+ "id": "23-059-018",
+ "title": "The Covenant of the Redeemer",
+ "refs": [
+  "Isaiah 59:18-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23059018,
+   "end": 23059021,
+   "ref": "Isaiah 59:18-21",
+   "ranges": [
+    [
+     23059018,
+     23059021
+    ]
+   ],
+   "title": "God's Spirit and Words for Generations",
+   "key_verse": [
+    23059021,
+    23059021
+   ],
+   "reflect": [
+    {
+     "text": "God makes a wonderful promise to those who turn to Him and serve Him with their voices. As F. B. Meyer points out, this promise holds two things that belong together: we must receive the Holy Spirit, and we must speak the words God gives us. When the Holy Spirit fills our hearts, He touches our speech so we can tell others about Him. God equips us and teaches us what to say when we step out in faith.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This passage also shows that God's grace extends to the future. God promises that His Spirit and His words will remain with our children and grandchildren. Meyer reminds us that God delights to bless family lines for the sake of His Word. When you earnestly love and serve the Lord today, your faith leaves a quiet imprint. Long after you are gone, God remains faithful, carrying His blessing to the generations that follow.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you invite the Holy Spirit to guide what you say to others each day?",
+    "What kind of spiritual example are you passing on to the younger people in your family or church?"
+   ],
+   "prayer": "Lord, fill us with Your Holy Spirit and give us words to speak for You. Thank You for Your covenant faithfulness that extends to our children and grandchildren. Help us to live faithfully today so that future generations will know and fear Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 59:21",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

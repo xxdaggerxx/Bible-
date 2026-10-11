@@ -1,0 +1,130 @@
+{
+ "book": 19,
+ "chapter": 64,
+ "first": 1,
+ "last": 10,
+ "ref": "Psalms 64",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David cries out to God in earnest prayer because his life is in danger. He asks God to protect him not just from physical death, but also from the paralyzing fear of his enemies. Turning straight to God in prayer was David's best defense in every trouble.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "David begs God to shelter him from two kinds of danger: secret plots and open, violent mobs. Evil men first plan their schemes in the dark, and then those schemes turn into loud rebellions. God alone can provide a safe hiding place where their hatred cannot reach him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The enemies use their words like deadly weapons to attack the innocent. Just as a soldier sharpens a sword to cut deep, these wicked men polish their lies to ruin someone's reputation. Their cruel and bitter speech flies like arrows shot from far away to cause pain.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "These plotters act like cowards hiding in an ambush to strike an upright person without warning. They attack suddenly, giving their blameless victim no time to defend himself. In their stubborn pride, they have no fear of God or His coming judgment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The wicked urge one another to keep going in their evil plans. They carefully discuss how to hide their traps and boast that no one will ever catch them. Deep down, they foolishly believe that God is not watching what they do.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The enemies work hard searching for every possible way to invent new harm. When they finish crafting their evil scheme, they tell themselves they have perfected a foolproof plan. The human heart can be deeply hidden and full of twisted wickedness that only God can uncover.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "Just when the wicked think they have won, God suddenly turns the battle around. The enemies shot their secret arrows of slander, but God shoots back with His own righteous judgment. His arrows strike swiftly and never miss their target.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "God causes the wicked to fall by turning their own hateful words back upon them. The very traps and curses they made for others bring about their own ruin. Those who watch their downfall pull back in shock and shake their heads in awe at God's justice.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "The sudden downfall of the wicked fills people with a healthy, reverent fear of God. Observers recognize that this was not an accident, but the clear work of the Lord. They tell others about what happened and think deeply about His righteous ways.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "God's people find deep joy and growing confidence when they see Him rescue the innocent and defend the truth. Their happiness is not spiteful, but centers on the Lord and His faithfulness. All whose hearts are sincere and upright can boast in His safe protection.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 9: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 10: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

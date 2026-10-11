@@ -1,0 +1,75 @@
+{
+ "id": "28-014-001",
+ "title": "A Call to Repentance",
+ "refs": [
+  "Hosea 14:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 28014001,
+   "end": 28014003,
+   "ref": "Hosea 14:1-3",
+   "ranges": [
+    [
+     28014001,
+     28014003
+    ]
+   ],
+   "title": "Finding Mercy as God's Children",
+   "key_verse": [
+    28014003,
+    28014003
+   ],
+   "reflect": [
+    {
+     "text": "God calls us to turn back to him even when we have fallen into sin. He does not ask us to fix ourselves before we approach him; he welcomes broken people right away. True repentance—turning away from sin and back to God—relies directly on who he is. We come asking him to take away our wrongdoing because we know he is full of mercy and ready to heal us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Real confession means letting go of things we wrongly trust to keep us safe. Israel had to admit that earthly allies, military horses, and man-made idols could never deliver them. When we return to God, we set aside our own achievements and worldly protectors. We learn that relying on the living God is far better than depending on any human helper.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "In turning to God, we come as needy people with nowhere else to go. Like orphans who have lost their earthly protectors, we find that God steps in to care for us. Charles Spurgeon reminds us that the fatherless with God are truly rich. When we turn to him, God does not leave us abandoned. He restores us as his children into his loving family.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What false securities or self-made confidences are you tempted to rely on instead of God?",
+    "How does knowing that God welcomes broken people encourage you to come to him in confession today?"
+   ],
+   "prayer": "Lord, thank you for welcoming us even when we have stumbled in our sin. Forgive us for trusting in our own strength and worldly protectors instead of resting in you. Be our guardian and Father, and keep us safe within your loving family. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 6",
+     "on": "Hosea 14:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Andrew M. King",
+     "work": "4 Gospel Truths About Repentance from Hosea",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/gospel-truths-repentance-hosea/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

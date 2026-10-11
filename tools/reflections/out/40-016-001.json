@@ -1,0 +1,76 @@
+{
+ "id": "40-016-001",
+ "title": "The Demand for a Sign",
+ "refs": [
+  "Matthew 16:1-4",
+  "Mark 8:11-13",
+  "Luke 12:54-56"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40016001,
+   "end": 40016004,
+   "ref": "Matthew 16:1-4; Mark 8:11-13; Luke 12:54-56",
+   "ranges": [
+    [
+     40016001,
+     40016004
+    ],
+    [
+     41008011,
+     41008013
+    ],
+    [
+     42012054,
+     42012056
+    ]
+   ],
+   "title": "Recognizing the Signs of Christ",
+   "key_verse": [
+    40016003,
+    40016003
+   ],
+   "reflect": [
+    {
+     "text": "The Pharisees and Sadducees usually disagreed with each other about many things. Yet they set their differences aside to challenge Jesus and test His authority. They asked Him for a sign from heaven to prove who He was. Jesus pointed out that they could easily read the weather by looking at the clouds and the sky, but they failed to see the clear evidence of the Messiah standing right in front of them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Their request was not an honest search for truth. It came from hard hearts and spiritual blindness. Because of this, Jesus refused to give them the kind of proof they wanted. The only sign they would receive was the sign of Jonah, which pointed ahead to Jesus dying and rising again from the dead.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It can be easy to fall into the same trap today. We might ask God for special signs or extra answers to satisfy our doubts. But we need to be careful not to demand more proof while ignoring what God has already clearly revealed to us through His word and the work of Jesus.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you waiting for extra signs from God instead of trusting what He has already shown you in Jesus?",
+    "How can you soften your heart to accept God's clear truth today?"
+   ],
+   "prayer": "Lord Jesus, forgive us when our hearts are stubborn and we demand more signs from You. Help us to see and trust the truth You have already given in Your death and resurrection. Give us humble hearts that believe Your word and follow You faithfully. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Another Request for a Sign",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/another-request-sign"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

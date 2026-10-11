@@ -1,0 +1,72 @@
+{
+ "id": "09-001-001",
+ "title": "Elkanah and His Wives",
+ "refs": [
+  "1 Samuel 1:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9001001,
+   "end": 9001008,
+   "ref": "1 Samuel 1:1-8",
+   "ranges": [
+    [
+     9001001,
+     9001008
+    ]
+   ],
+   "title": "Bringing Our Deepest Pain to God",
+   "key_verse": [
+    9001007,
+    9001007
+   ],
+   "reflect": [
+    {
+     "text": "Hannah lived in a painful home environment. Elkanah had two wives, which went against God's original plan for marriage. Even though having more than one wife was accepted in that culture, public opinion does not change God's standards. This setup caused ongoing family hurt. When Elkanah tried to comfort Hannah, his words showed he did not truly understand her deep grief. He focused on himself instead of offering real empathy.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "To make matters worse, Hannah faced cruel taunts year after year from Peninnah. Many of us also have someone who brings repeated pain into our lives. Hannah did not try to strike back with harsh words. Instead, she chose to bring her heavy emotional sorrow to the Lord in prayer.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we hand our deepest hurts over to God, He can restore our peace and joy even before our problems disappear. True spiritual victory happens when our hearts find their greatest delight in God Himself, rather than in the gifts of this world.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When someone hurts you or fails to understand your pain, do you strike back, or do you take your grief straight to God in prayer?",
+    "How can you seek your deepest joy in the Lord today, even before your difficult circumstances change?"
+   ],
+   "prayer": "Lord, thank You that we can bring all our tears and emotional burdens directly to You. Help us to find our greatest joy in Your presence rather than in earthly things. Please give us patient hearts that turn away from revenge when others hurt us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jill Briscoe",
+     "work": "A Peninnah Problem - One Year Devotions for Women",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-women/a-peninnah-problem-one-year-devotions-for-women-february-5.html"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 4: 1 Samuel 1:1–8",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-4-1-samuel-1-18.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

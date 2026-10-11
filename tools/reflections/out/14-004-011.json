@@ -1,0 +1,67 @@
+{
+ "id": "14-004-011",
+ "title": "Completion of the Bronze Works",
+ "refs": [
+  "2 Chronicles 4:11-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14004011,
+   "end": 14004018,
+   "ref": "2 Chronicles 4:11-18",
+   "ranges": [
+    [
+     14004011,
+     14004018
+    ]
+   ],
+   "title": "Giving Beyond Calculation",
+   "key_verse": [
+    14004018,
+    14004018
+   ],
+   "reflect": [
+    {
+     "text": "When King Solomon made all the bronze furnishings for the temple, there was so much metal that no one could weigh it all. As F. B. Meyer points out, nobody tried to keep a strict account of what was given to God. Many of us tend to track our giving very closely, keeping a neat record of what we offer. Yet the highest devotion forgets about such calculations and simply gives from the heart.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We see this same generous spirit in other parts of Scripture. Mary broke open an expensive bottle of perfume for Jesus without worrying about what it cost. In the same way, the believers in Macedonia gave freely out of their deep poverty because they were full of joy. They did not calculate what they could afford to lose; they simply gave as much as they could.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This lavish generosity is a picture of God's own heart. God never sets a limit on His kindness or stops giving when He reaches a certain measure. His blessings overflow like a carpet of spring flowers across the earth. His love is so great that we could never count up all the wonderful things He does for us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever find yourself keeping score of what you give or do for God?",
+    "How does knowing God's boundless kindness help you give more freely to Him and others?"
+   ],
+   "prayer": "Lord, thank You for Your endless love and for blessing us far beyond what we could ever measure. Forgive us when we hold back or try to calculate what we owe You. Fill our hearts with joy so that we may give freely and mirror Your generous care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 4:18",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "13-016-023",
+ "title": "Sing to the LORD, All the Earth",
+ "refs": [
+  "1 Chronicles 16:23-36"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13016023,
+   "end": 13016036,
+   "ref": "1 Chronicles 16:23-36",
+   "ranges": [
+    [
+     13016023,
+     13016036
+    ]
+   ],
+   "title": "Great Is the Lord",
+   "key_verse": [
+    13016025,
+    13016025
+   ],
+   "reflect": [
+    {
+     "text": "In the ancient world, people bowed down to many different gods. Yet those idols were completely lifeless and powerless. In sharp contrast, the Lord alone is the living God who made the heavens. Because of His supreme majesty and power, He alone deserves our wholehearted praise and deep respect.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's majesty and wonderful deeds are not meant to stay hidden within a single group of people. Scripture calls for His salvation to be proclaimed to every nation. God has always desired for all peoples across the earth to worship Him, a purpose that continues today through the Great Commission as the good news is shared with the world.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Knowing who God is shapes how we come before Him. True worship does not take God lightly. It brings together reverent trembling before His holiness, along with deep joy and genuine thanksgiving for who He is and what He has done.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you share God's greatness and kindness with people around you who do not yet know Him?",
+    "What helps you balance joyful thanksgiving with holy reverence when you worship the Lord?"
+   ],
+   "prayer": "Lord God, You alone made the heavens, and You are greater than any earthly power. Give us courage to declare Your goodness and deeds to those around us. Teach our hearts to approach You with joyful thanksgiving and deep, reverent awe. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Greatness of God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/greatness-of-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

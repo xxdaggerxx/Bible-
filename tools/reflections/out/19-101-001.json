@@ -1,0 +1,96 @@
+{
+ "id": "19-101-001",
+ "title": "I Will Set No Worthless Thing before My Eyes",
+ "refs": [
+  "Psalms 101:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19101001,
+   "end": 19101008,
+   "ref": "Psalms 101:1-8",
+   "ranges": [
+    [
+     19101001,
+     19101008
+    ]
+   ],
+   "title": "Walking with Integrity in God's House",
+   "key_verse": [
+    19101002,
+    19101002
+   ],
+   "reflect": [
+    {
+     "text": "Before making any vows about how to live, David begins with a song of praise for God's loving devotion and justice. Faith recognizes that even when God sends hard trials or discipline, He does so in love for our spiritual good. Our desire to pursue a clean and blameless life cannot come from self-righteous pride or human strength. Instead, true devotion springs from gratitude for God's steadfast mercy toward us.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    },
+    {
+     "text": "This pursuit of holiness starts where life is most ordinary: inside our own homes. As F. B. Meyer observed, \"a man is really no better than he is to his own.\" Showing gentle courtesy and self-control amid daily friction tests our faith far more than public religious activity. We guard this home life by refusing to set worthless things before our eyes, choosing to turn away from corrupt influences so we can protect our minds and keep our hearts pure.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "We cannot stand against temptation on our own, but must continually depend on Christ. The King notices each person who seeks to remain sincere and true. Jesus looks upon the faithful with favor, drawing them near to live in fellowship with Him and choosing them to serve Him in His kingdom.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "In what small, daily ways can you show greater patience and kindness to the people under your own roof?",
+    "What worthless or corrupt distractions do you need to turn away from to keep your heart clean before God?"
+   ],
+   "prayer": "Lord, thank You for Your constant mercy and for the loving ways You correct and guide our lives. Give us grace to walk with patience and honesty in our homes, especially during daily frustrations. Guard our eyes and minds from worthless things, and help us depend on Jesus so we may serve You faithfully.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 12",
+     "on": "Psalms 101:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 9",
+     "on": "Psalms 101:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 101:2",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "Charles R. Swindoll",
+     "work": "Honesty and Purity",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/honesty-and-purity"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "Godly Resolve",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/godly-resolve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

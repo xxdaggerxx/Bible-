@@ -1,0 +1,83 @@
+{
+ "id": "38-010-001",
+ "title": "Judah and Israel Will Be Restored",
+ "refs": [
+  "Zechariah 10:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 38010001,
+   "end": 38010012,
+   "ref": "Zechariah 10:1-12",
+   "ranges": [
+    [
+     38010001,
+     38010012
+    ]
+   ],
+   "title": "The Lord Restores His Scattered Flock",
+   "key_verse": [
+    38010006,
+    38010006
+   ],
+   "reflect": [
+    {
+     "text": "After returning from exile, God's people still struggled with false guides and superstitious habits instead of asking the Lord for the help they needed. Their leaders failed to provide godly care, bringing the Lord's judgment on themselves for neglecting His flock. Yet God promised to step in for His people. Their coming back from Babylon was only an early step toward a much greater future restoration that would gather and unite all His scattered people.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When God brings His people back, His mercy is complete. As F. B. Meyer notes, the Lord restores them so fully that it is \"as though they had never been cast off.\" He forgives past sins, wipes away their shame, and restores what was lost. To receive these rich blessings, God calls His people to put away empty idols and ask Him for the true, refreshing rain of His Spirit.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The Lord also promises to make His people strong in Himself. Strength found in God protects us from human pride and will never run dry. Instead of remaining weak or captive to fear, we are set free to walk through life in His name, trusting and obeying Him with glad hearts.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there empty comforts or false guides you need to turn away from so you can look to God alone?",
+    "How does knowing that God treats you with full forgiveness give you confidence to walk in His strength?"
+   ],
+   "prayer": "Lord God, thank You for having compassion on us and forgiving our past failures completely. Help us to turn away from worthless idols and seek our help from You alone. Grant us the refreshing help of Your Spirit, and strengthen our hearts so we may walk faithfully in Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 11",
+     "on": "Zechariah 10:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Zechariah 10:6",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Faithless Shepherds Condemned",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/faithless-shepherds-condemned"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

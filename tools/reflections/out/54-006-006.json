@@ -1,0 +1,75 @@
+{
+ "id": "54-006-006",
+ "title": "Godliness with Contentment",
+ "refs": [
+  "1 Timothy 6:6-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 54006006,
+   "end": 54006010,
+   "ref": "1 Timothy 6:6-10",
+   "ranges": [
+    [
+     54006006,
+     54006010
+    ]
+   ],
+   "title": "Finding True Wealth in Godly Contentment",
+   "key_verse": [
+    54006006,
+    54006006
+   ],
+   "reflect": [
+    {
+     "text": "It is easy to look around at what others have, especially on social media, and feel like we do not have enough. Comparing ourselves to others feeds envy and makes us feel inadequate. When we fixate on what we lack, our vision gets twisted and we become blind to the blessings right in front of us. This kind of discontent shows that we are struggling to trust God's loving and wise care for our lives.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God's Word reminds us that simple necessities like food and clothing are enough reason to be satisfied. Contentment begins when we choose to notice and appreciate God's everyday provisions. Any extra things we receive are gifts to enjoy with thanksgiving rather than entitlement. True contentment is an inner work of God's grace, and it brings real spiritual wealth that worldly goods can never give.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We can also find freedom from self-centered worry by turning our attention toward meeting the needs of others. When we rest in Christ and his Word, God restores our eternal perspective. Trusting in him calms our restless desires and gives us lasting peace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What everyday blessings from God might you be overlooking while focusing on what you lack?",
+    "How could turning your attention toward helping someone else today bring you peace?"
+   ],
+   "prayer": "Lord, forgive us when we look at others with envy and forget your steady care. Teach us to be thankful for our daily food, clothing, and simple necessities. Help us rest in your Word, find contentment in Christ, and gladly share with those in need. Amen.",
+   "sources": {
+    "D1": {
+     "author": "T. Suzanne Eller",
+     "work": "Distorted Vision",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-aug-13-2009-11607287.html"
+    },
+    "D2": {
+     "author": "Emily Rose Massey",
+     "work": "The Great Gain of Godly Contentment",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/the-great-gain-of-godly-contentment-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

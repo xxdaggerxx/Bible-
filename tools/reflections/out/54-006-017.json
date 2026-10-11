@@ -1,0 +1,91 @@
+{
+ "id": "54-006-017",
+ "title": "A Charge to the Rich",
+ "refs": [
+  "1 Timothy 6:17-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 54006017,
+   "end": 54006019,
+   "ref": "1 Timothy 6:17-19",
+   "ranges": [
+    [
+     54006017,
+     54006019
+    ]
+   ],
+   "title": "Putting Our Hope in the Living God",
+   "key_verse": [
+    54006017,
+    54006017
+   ],
+   "reflect": [
+    {
+     "text": "Money and possessions often feel secure, but earthly wealth can vanish overnight. It is far better to look away from money and turn to a living Person who delights to give without holding back. Wealth is uncertain, but God never changes. When we rely on riches, our hearts are easily filled with worry. When we place our full confidence in our Heavenly Father, we find true rest and safety.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God is not stingy with us. He does not want us to carry false guilt about good things, nor does He want us to pack our faith away. He generously pours out daily blessings for us to use and enjoy. Charles Spurgeon reminds us that our Lord \"does not for a solitary instant withdraw his hand.\" Receiving His gifts with gratitude brings delight to our hearts and brings pleasure back to the Giver.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Because God cares for us so richly, we do not need to cling tightly to what we have. Material things become dangerous only when they take control of our hearts. We can keep our worship reserved for God alone, holding our goods loosely and sharing them freely with others.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you placing your confidence in what you own, or in the God who provides for you?",
+    "How can you enjoy God's blessings with gratitude while keeping your hands open to share?"
+   ],
+   "prayer": "Heavenly Father, thank You for providing for our needs and giving us good things to enjoy. Help us not to place our hope in uncertain wealth, but to rest securely in Your unchanging care. Keep our hearts free from greed, and teach us to be generous with all that You have given us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 16",
+     "on": "1 Timothy 6:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Timothy 6:17",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "Enjoying Good Things",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-november-18-2024.html"
+    },
+    "D4": {
+     "author": "Sharon Jaynes",
+     "work": "Enjoying God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-august-3-2022.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

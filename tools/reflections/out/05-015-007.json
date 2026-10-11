@@ -1,0 +1,73 @@
+{
+ "id": "05-015-007",
+ "title": "Generosity in Lending and Giving",
+ "refs": [
+  "Deuteronomy 15:7-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5015007,
+   "end": 5015011,
+   "ref": "Deuteronomy 15:7-11",
+   "ranges": [
+    [
+     5015007,
+     5015011
+    ]
+   ],
+   "title": "Open Hands and Generous Hearts",
+   "key_verse": [
+    5015010,
+    5015010
+   ],
+   "reflect": [
+    {
+     "text": "God calls His people to show open-handed compassion to those who are hurting and in need. Real compassion means we do not turn away when a neighbor falls on hard times. Neither having wealth nor being poor makes someone good or bad by itself; what matters is where our hearts are focused. God wants us to care for people struck by tragedy and to stand up for those who are treated unfairly.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When we help someone, God tells us not to give with a grudging or resentful mindset. God promises to bless those who practice heartfelt generosity in their everyday work and lives. This kind of open-handed living includes our finances, but it also means giving our time, energy, and gentle encouragement.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Good stewardship means using our money and personal gifts to serve God and build His kingdom. Giving sacrificially breaks the power of materialism—the trap of loving possessions—and helps us become more like Christ. As we trust God to take care of us, we can find true joy in His abundant provision.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you share your time, energy, or money with someone facing hardship this week?",
+    "What selfish worries make it hard for you to give generously to others?"
+   ],
+   "prayer": "Lord, soften our hearts and open our hands toward those who are in need. Guard us from grudging thoughts when we are called to share our resources. Teach us to trust Your faithful promise to care for us. Help us to reflect the generosity of Christ in all that we do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Rick Warren",
+     "work": "You Can't Out-Give God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/you-can-t-out-give-god-daily-hope-with-rick-warren-dec-22-2015.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Reasons for Poverty",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/reasons-poverty"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,141 @@
+{
+ "id": "20-018-001",
+ "title": "The Selfishness of the Unfriendly",
+ "refs": [
+  "Proverbs 18:1-24"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 20018010,
+   "end": 20018010,
+   "ref": "Proverbs 18:10",
+   "ranges": [
+    [
+     20018010,
+     20018010
+    ]
+   ],
+   "title": "\"A Strong Tower\"",
+   "key_verse": [
+    20018010,
+    20018010
+   ],
+   "reflect": [
+    {
+     "text": "In ancient times, cities built high towers with thick stone walls so people could run inside when danger approached. Proverbs reminds us that the name of the Lord is our true, unshakeable fortress. God's name is far more than a simple title. It represents His holy character, His supreme power, and His loving authority. Believers know Him as a caring Father rather than a harsh judge, and His name is a safe haven that never falls.",
+     "sources": [
+      "D3",
+      "D6"
+     ]
+    },
+    {
+     "text": "When sudden troubles shake our homes or painful feelings weigh us down, we quickly learn that human strength is not enough. We often try to escape into busy work or screens, but those distractions can never rescue us. Real security comes when we call on God in humble prayer and rely on His limitless power. He invites us to step into His presence each day, finding peace and shelter that no earthly defense could ever provide.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you usually turn first when trouble or emotional stress comes your way?",
+    "How can you run to God in prayer today instead of looking to distractions for comfort?"
+   ],
+   "prayer": "Lord, thank You for being our strong and unshakeable shelter. Forgive us for running toward empty distractions when we feel afraid or overwhelmed. Teach us to call on Your holy name and rest in Your loving presence every day. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Whitney Hopler",
+     "work": "Run to God for Security - The Crosswalk Devotional - May 17",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/run-to-god-for-security-the-crosswalk-devotional.html"
+    },
+    "D4": {
+     "author": "Arlene Pellicane",
+     "work": "Your Strong Tower - Encouragement for Today - January 25, 2022",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-january-25-2022.html"
+    },
+    "D6": {
+     "author": "Jack Graham (PowerPoint Ministries)",
+     "work": "The Holy Name of Your Awesome God - PowerPoint - January 26",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-january-20-2014.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 20018001,
+   "end": 20018024,
+   "ref": "Proverbs 18:1-24",
+   "ranges": [
+    [
+     20018001,
+     20018024
+    ]
+   ],
+   "title": "The Danger of Pride and Careless Words",
+   "key_verse": [
+    20018012,
+    20018012
+   ],
+   "reflect": [
+    {
+     "text": "Pride is a quiet danger that leads straight to ruin. As Charles Spurgeon wrote, \"a haughty heart is the prophetic prelude of evil.\" When we begin to boast about our own achievements, talents, or spiritual growth, we are setting ourselves up for a fall. Pride can easily sneak into a believer's heart, tricking us into thinking we have no need of help. God brings down boastful thoughts, calling us instead to live in lowliness at the foot of the cross.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It is easy to paint a glowing picture of our own goodness, especially in public. But our true character is seen by those who live with us every day, like our family and close neighbors. While we might sound convincing when speaking alone, an honest look from others quickly tests our words. Even more searching is God's pure light, which reveals our hidden sins and shows our deep need for Christ's blood and grace, God's kindness we do not deserve.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because our words carry such weight, Scripture warns us against careless and arrogant speech. Proverbs is not teaching that we possess creative power to speak whatever we want into existence. Instead, the chapter urges us to avoid hasty arguments and self-important talking. True wisdom means using our tongues with caution, approaching God in humble dependence rather than making proud demands.",
+     "sources": [
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life might pride be hiding behind your words or self-image?",
+    "How can you practice humility and listen carefully at home and with those closest to you?"
+   ],
+   "prayer": "Lord, strip away our pride and keep us from speaking boastful or careless words. Search our hearts, forgive our secret sins through Christ, and show us how we truly treat the people closest to us. Help us to walk in humble dependence on You every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 6",
+     "on": "Proverbs 18:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Proverbs 18:17",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D5": {
+     "author": "Lucky Mogakane",
+     "work": "Can We Speak Things into Existence? Considering Proverbs 18:21",
+     "site": "The Gospel Coalition",
+     "url": "https://africa.thegospelcoalition.org/article/can-we-speak-things-into-existence-considering-proverbs-1821/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

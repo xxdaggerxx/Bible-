@@ -1,0 +1,74 @@
+{
+ "id": "44-016-006",
+ "title": "Paul’s Vision of the Macedonian",
+ "refs": [
+  "Acts 16:6-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44016006,
+   "end": 44016010,
+   "ref": "Acts 16:6-10",
+   "ranges": [
+    [
+     44016006,
+     44016010
+    ]
+   ],
+   "title": "Following God Through Closed Doors",
+   "key_verse": [
+    44016010,
+    44016010
+   ],
+   "reflect": [
+    {
+     "text": "Every believer faces times when good plans do not work out. Paul and his team hoped to preach in Asia and Bithynia, but the Spirit stopped them. Instead of freezing in place or feeling defeated, Paul showed maturity by letting go of his travel route. He kept moving forward, trusting the Lord to show the right way.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God often uses a closed door to steer us toward His greater purpose. In Troas, God gave Paul a vision calling him across the sea to Macedonia. Following God means laying aside our own ambitions and letting Him guide our steps. When our plans break apart, God can still do life-changing work through what feels like second best to us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When we ask God each day to match our wishes to His will, we find peace and spiritual clarity. We can trust that God's redirection always leads to what is best.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you usually react when God closes a door to something you planned?",
+    "What personal agenda might you need to hand over to God today so you can follow His lead?"
+   ],
+   "prayer": "Lord, help us trust You when our plans are stopped. Give us peace when doors close, and keep us moving forward in faith. Align our hearts with Your will so we are ready to follow wherever You lead.",
+   "sources": {
+    "D1": {
+     "author": "Jennifer Slattery",
+     "work": "Recognizing God’s Guidance",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/recognizing-gods-guidance-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Dr. Roger Barrier",
+     "work": "When Life Doesn't Go Your Way",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/when-life-doesn-t-go-your-way-bible-study-minute-january-1-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

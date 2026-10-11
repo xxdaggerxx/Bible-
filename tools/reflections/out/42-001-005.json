@@ -1,0 +1,66 @@
+{
+ "id": "42-001-005",
+ "title": "Gabriel Foretells John’s Birth",
+ "refs": [
+  "Luke 1:5-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42001005,
+   "end": 42001025,
+   "ref": "Luke 1:5-25",
+   "ranges": [
+    [
+     42001005,
+     42001025
+    ]
+   ],
+   "title": "Called into Fellowship and Service",
+   "key_verse": [
+    42001013,
+    42001013
+   ],
+   "reflect": [
+    {
+     "text": "Serving in the temple was a rare honor for a priest. On this special day, Zechariah was chosen by lot to burn incense before the Lord. While he was at the altar, the angel Gabriel appeared with startling news. Zechariah and his wife Elizabeth would have a son named John. This promised child received a dramatic calling to prepare the hearts of the people for the coming Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Instead of rejoicing right away, Zechariah responded with doubt. He looked at his advanced age and wondered how such a thing could happen. Because he did not believe the message, he was struck speechless until the Lord fulfilled His promise. Yet God's plan was not stopped by human weakness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Zechariah experienced a rare moment in the temple, but every believer receives an unforgettable gift from God. We share the wonderful gift of being called into fellowship, friendship with God, and service in His kingdom. He invites each of us to walk with Him and serve Him faithfully.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you usually respond when God asks you to trust His word rather than your own doubts?",
+    "In what ways can you enjoy fellowship with God and serve Him today?"
+   ],
+   "prayer": "Lord God, thank You for the wonderful gift of knowing You and serving in Your kingdom. Forgive us when we look at our own weakness and doubt what You can do. Help us to trust Your promises and walk with You faithfully each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "Once in a Lifetime",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/once-in-a-lifetime-one-year-devotions-for-men-january-23.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

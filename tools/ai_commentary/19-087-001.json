@@ -1,0 +1,132 @@
+{
+ "book": 19,
+ "chapter": 87,
+ "first": 1,
+ "last": 7,
+ "ref": "Psalms 87",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "God chose Jerusalem and established it firmly on the hills of Zion and Moriah. These mountains were holy because the Lord chose to place His presence and His temple there. The secure founding of the city reminds believers that God's people rest safely on His unchanging promises.",
+   "meaning_sources": [
+    "Calvin",
+    "Matthew Henry",
+    "Adam Clarke",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "God cares for every family home among His people, but He has a special love for the gates of Zion. The gates stand for the entire city, where the nation gathered to worship at the temple. In the same way, the Lord takes great delight when His people meet together as a church to pray and praise Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The ancient prophets spoke wonderful praises and promises about Jerusalem, the city where God chose to dwell. These words point forward to the church, which Christ loves and beautifies with His grace. Believers can take great heart knowing that every glorious thing God has promised will surely come to pass.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Rahab is a poetic name for Egypt that means pride. God announces that ancient, hostile enemies like Egypt and Babylon will come into a personal relationship with Him. Instead of being kept as outsiders, people from distant Gentile nations will be counted as full citizens of God's family, as if they had been born in Zion.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Adam Clarke understood this verse as a comparison of famous worldly capitals, arguing that being born in great empires like Egypt or Babylon cannot compare to the honor of being a native citizen of Jerusalem.",
+     "sources": [
+      "Adam Clarke"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Countless individuals from every nation will enter the church, each one counted as born in Zion through spiritual adoption. Entering God's people gives ordinary men and women a higher standing than any earthly royal court could ever offer. The Most High God Himself promises to keep this community safe and unshakable forever.",
+   "meaning_sources": [
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Early church fathers like Augustine and traditional Catholic interpreters saw the man born in Zion as a prophecy of Jesus Christ, who entered humanity in Judea and founded the Church.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801087.htm",
+      "https://www.studylight.org/commentaries/eng/hcc/psalms-86.html",
+      "Calvin"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The Lord is pictured as keeping a census book of all the peoples of the world. When He looks over the register, He personally marks down every believer as an adopted child who belongs in Zion. Not a single person who has been born again by His Spirit will be overlooked in God's final count.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Albert Barnes suggested this verse indicates God will mainly gather His kingdom from children who were born and nurtured within the fellowship of the church.",
+     "sources": [
+      "https://www.studylight.org/commentary/psalms/87-6.html"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The entry of the nations into God's city is celebrated with joyful music, dancing, and singing. The worshippers gladly confess that every stream of life, joy, and comfort flows directly from the Lord. A true believer finds lasting satisfaction in God rather than in the passing pleasures of the world.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "John Wesley understood the springs to refer to the church itself, meaning that all fountains of mercy, grace, and spiritual refreshment come through the church and its worship ordinances.",
+     "sources": [
+      "Wesley"
+     ]
+    }
+   ],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

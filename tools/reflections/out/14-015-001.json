@@ -1,0 +1,67 @@
+{
+ "id": "14-015-001",
+ "title": "The Prophecy of Azariah",
+ "refs": [
+  "2 Chronicles 15:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14015001,
+   "end": 14015007,
+   "ref": "2 Chronicles 15:1-7",
+   "ranges": [
+    [
+     14015001,
+     14015007
+    ]
+   ],
+   "title": "Serving God with All Our Energy",
+   "key_verse": [
+    14015007,
+    14015007
+   ],
+   "reflect": [
+    {
+     "text": "God had done great things for King Asa and his people, but they were still unsteady and weak. Their steps wavered, and their hearts hesitated. Because of this, God sent Azariah to speak to them. The Lord promised to stay with them as long as they stayed with Him, but He warned that walking away from Him would bring trouble. He reminded them of past times when people wandered into deep distress, yet found the Lord as soon as they turned back to Him in repentance, which means turning away from sin.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God gave this message to make His people firm and strong in doing what is right. He does not want us to be half-hearted. As Charles Spurgeon wrote, \"If the service of God is worth anything, it is worth everything.\" Giving God only part of our effort brings no true reward. When we put our whole soul into serving Him with steady diligence, our work is never wasted.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even when life feels like a fierce storm, God calls us not to let our hands grow slack. We can keep moving forward with full confidence. He promises that our work for Him will be rewarded, and He will bring us safely through.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you serving the Lord with your whole heart, or have you become half-hearted in following Him?",
+    "What task has God given you today where you need His strength to keep going?"
+   ],
+   "prayer": "Lord, forgive us when our hearts hesitate and our hands grow weak in serving You. Give us strength to seek You with our whole soul and to walk steadily in Your truth. Thank You for the promise that our labor for You is never in vain. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 17",
+     "on": "2 Chronicles 15:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

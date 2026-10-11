@@ -1,0 +1,75 @@
+{
+ "id": "43-003-001",
+ "title": "Jesus and Nicodemus",
+ "refs": [
+  "John 3:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43003001,
+   "end": 43003021,
+   "ref": "John 3:1-21",
+   "ranges": [
+    [
+     43003001,
+     43003021
+    ]
+   ],
+   "title": "New Life Through God's Great Love",
+   "key_verse": [
+    43003001,
+    43003001
+   ],
+   "reflect": [
+    {
+     "text": "Jesus told Nicodemus that we must be born again to enter God's kingdom. Just growing up in a religious home or calling ourselves Christians is not enough. We cannot change our own hearts, just as no one can make a dead body come back to life. Only God's Holy Spirit can do this supernatural work, breathing real spiritual life into us and giving us a completely new nature.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This gift of new life comes straight from God's deep love. God loved the world so much that He sent His only Son to die for us. Salvation is not something we earn, but a gift received by simple faith. As Charles Spurgeon wrote, \"Many have found room in 'whosoever' who would have felt themselves shut out.\" Anyone who turns to Jesus will not be lost, but will have eternal life.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus did not come into our world to condemn us, but to rescue us from perishing. When we place our trust in Him, the Spirit renews who we are from the inside out. We no longer have to hide in the darkness of our sin, because Christ brings us safely into His welcoming light.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you trusted in Jesus for yourself, or have you been relying on simply being called a Christian?",
+    "How does knowing that God gave His own Son out of love give you peace today?"
+   ],
+   "prayer": "Lord Jesus, thank You for loving the world so deeply that You gave Your life for our rescue. Please renew my heart by Your Holy Spirit and make me a new person in You. Help me to leave darkness behind and walk faithfully in Your light every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 6",
+     "on": "John 3:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 6",
+     "on": "John 3:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

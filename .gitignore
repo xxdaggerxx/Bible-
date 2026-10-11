@@ -5,3 +5,6 @@ local.properties
 *.iml
 *.apk
 .kotlin/
+tools/sounds/
+tools/ai_commentary/log.txt
+tools/__pycache__/

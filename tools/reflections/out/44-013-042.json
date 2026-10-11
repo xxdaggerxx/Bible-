@@ -1,0 +1,73 @@
+{
+ "id": "44-013-042",
+ "title": "A Light for the Gentiles",
+ "refs": [
+  "Acts 13:42-52"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44013042,
+   "end": 44013052,
+   "ref": "Acts 13:42-52",
+   "ranges": [
+    [
+     44013042,
+     44013052
+    ]
+   ],
+   "title": "A Light for the Nations",
+   "key_verse": [
+    44013047,
+    44013047
+   ],
+   "reflect": [
+    {
+     "text": "Paul and Barnabas began their work by sharing the good news in the local synagogue. This was their regular pattern because the Jewish people were called to hear the message first. Yet when many leaders rejected the word, the apostles turned to the Gentiles, people from outside the Jewish community. This moment showed that under the new covenant, all people stand on equal ground before God.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Spiritual breakthroughs often bring sudden resistance. When crowds gathered to listen, jealous opponents used prominent leaders in the city to organize persecution and drive the apostles away. The enemy often uses human standing and social authority to hinder the work of the gospel. In our daily lives, each of us holds influence over others. That personal influence is a sacred trust that we must ask the Holy Spirit to guide.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even amid opposition, the word continued to spread and the disciples were filled with joy. We have a primary calling to care for and build up the household of faith, our brothers and sisters in Christ. At the same time, we are called to bring the light of the Lord to the wider world so that others may find eternal life.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How are you using your daily influence to point those around you to God's truth?",
+    "How can you stay filled with joy when others resist or oppose your faith?"
+   ],
+   "prayer": "Lord, thank you for welcoming people from every nation into your kingdom. Help us to treat our personal influence as a sacred trust and follow the guidance of your Holy Spirit. Fill our hearts with joy and boldness as we share your love with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 245: Acts 13:42–52",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-245-acts-13-4252.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Transfer of the Kingdom",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-transfer-of-the-kingdom"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

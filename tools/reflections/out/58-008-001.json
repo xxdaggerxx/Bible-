@@ -1,0 +1,66 @@
+{
+ "id": "58-008-001",
+ "title": "Christ’s Eternal Priesthood",
+ "refs": [
+  "Hebrews 8:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58008001,
+   "end": 58008005,
+   "ref": "Hebrews 8:1-5",
+   "ranges": [
+    [
+     58008001,
+     58008005
+    ]
+   ],
+   "title": "Our True Priest in Heaven",
+   "key_verse": [
+    58008001,
+    58008001
+   ],
+   "reflect": [
+    {
+     "text": "We have a High Priest who is alive and serving right now. Jesus' work as our priest is not just a nice thought or an abstract idea. It is a living, established reality. He has sat down at the right hand of God in heaven. Sitting there shows His divine honor, His sovereign authority, and His complete triumph over every enemy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Earthly priests served in places that were only shadows and copies of the real thing. Jesus, however, ministers in the true sanctuary set up by the Lord, not by human hands. He does not serve in a temporary tent on earth, but in heaven itself on our behalf.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because Jesus is our great High Priest, we can run straight to Him whenever we are struggling. In every spiritual distress, He is ready to help. We can come directly to our living Savior to receive lasting peace, wisdom, and strength.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel troubled, do you remember that Jesus is ruling in heaven and interceding for you?",
+    "In what area of your life do you need to run to Jesus today for peace and wisdom?"
+   ],
+   "prayer": "Lord Jesus, thank You for reigning with supreme authority at the Father's right hand. Thank You for serving as our true High Priest in heaven. When we face trials and worries, help us run straight to You for lasting peace and help. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The High Priest We Have",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-high-priest-we-have"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

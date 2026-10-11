@@ -1,0 +1,66 @@
+{
+ "id": "03-023-026",
+ "title": "The Day of Atonement",
+ "refs": [
+  "Leviticus 23:26-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3023026,
+   "end": 3023032,
+   "ref": "Leviticus 23:26-32",
+   "ranges": [
+    [
+     3023026,
+     3023032
+    ]
+   ],
+   "title": "Resting in God's Atonement",
+   "key_verse": [
+    3023028,
+    3023028
+   ],
+   "reflect": [
+    {
+     "text": "In Leviticus, God commanded Israel to observe the Day of Atonement once every year. On this solemn day, all the people were told to humble themselves and rest completely from their daily labor. Meanwhile, the high priest offered sacrifices and went alone into the Holy of Holies, the most sacred place in the sanctuary, to seek atonement, which means making peace between God and His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God strictly told the people not to do any work on this day. Turning away from hard labor that causes sweat teaches us a deep truth: our own striving can never earn God's favor. We cannot work our way into forgiveness or fix our relationship with God through our own strength. True reconciliation comes only through what God provides.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus fulfills the Day of Atonement for us as our great High Priest. Because He gave Himself for our sins, believers now have direct access to God. We do not need an earthly priest to speak for us, nor do we need to struggle to earn God's love. Instead, we can enter His presence and rest fully in what Christ has done.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways do you sometimes try to earn God's approval through your own efforts instead of resting in His grace?",
+    "How does knowing that Jesus opened direct access to God encourage you to come to Him in prayer today?"
+   ],
+   "prayer": "Lord God, thank You that we cannot and do not need to earn Your favor through our own striving. We praise You for Jesus, our great High Priest, who made full atonement for our sins and brought us into Your presence. Help us to put away our pride and find true rest in Your grace today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Feb. 9, 2011",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-feb-9-2011-11645383.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

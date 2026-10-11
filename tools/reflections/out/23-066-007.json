@@ -1,0 +1,75 @@
+{
+ "id": "23-066-007",
+ "title": "Rejoice with Jerusalem",
+ "refs": [
+  "Isaiah 66:7-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23066013,
+   "end": 23066013,
+   "ref": "Isaiah 66:13",
+   "ranges": [
+    [
+     23066013,
+     23066013
+    ]
+   ],
+   "title": "\"As a Mother Comforts\"",
+   "key_verse": [
+    23066013,
+    23066013
+   ],
+   "reflect": [
+    {
+     "text": "God uses the picture of a caring mother to show us the warmth and tenderness of His love. Every good and gentle quality we see in human mothers begins with God and is made complete in Him. For anyone who lacked a mother's care or had an imperfect home, God's love offers true healing and never fails. As Charles Spurgeon noted, this tender care invites us to \"holy familiarity, to unreserved confidence, to sacred rest.\" We can bring all our tears and sorrows to Him, knowing He listens and never grows tired of us.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "A mother's comfort does not mean shielding a child from every difficulty or controlling every step. True care allows children room to make mistakes and grow in resilience, while offering guidance whenever they ask. In the same way, our Heavenly Father patiently lets us learn, supports us through hard lessons, and listens when we need help. As we receive His steady comfort and endurance, we are also strengthened to share that same warmth and encouragement with people around us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you need to rest in God's gentle, unconditional comfort today?",
+    "How can experiencing the Lord's patient care help you encourage someone who is going through a difficult time?"
+   ],
+   "prayer": "Heavenly Father, thank You for loving us with such deep tenderness and welcoming us when we are hurting. Help us bring our grief and weakness to You instead of trying to carry them alone. Teach us to trust Your guidance as we grow, and show us how to share Your comfort with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 14",
+     "on": "Isaiah 66:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Meg Bucher",
+     "work": "Don't Do It for Them - iBelieve Truth - May 17, 2024",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/dont-do-it-for-them.html"
+    },
+    "D3": {
+     "author": "Candice Lucey",
+     "work": "What Does Isaiah 66:13 Mean by ‘As a Mother Comforts Her Child, So Will I Comfort You?’",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/special-coverage/mothers-day/what-does-isaiah-6613-mean-by-as-a-mother-comforts-her-child-so-will-i-comfort-you.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,129 @@
+{
+ "id": "07-018-014",
+ "title": "The Danites Take Micah’s Idols",
+ "refs": [
+  "Judges 18:14-31"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 7018024,
+   "end": 7018024,
+   "ref": "Judges 18:24",
+   "ranges": [
+    [
+     7018024,
+     7018024
+    ]
+   ],
+   "title": "\"You Took the Gods I Had Made\"",
+   "key_verse": [
+    7018024,
+    7018024
+   ],
+   "reflect": [
+    {
+     "text": "Micah cried out in despair because men stole his carved images and lured away his priest. He felt he had nothing left. When our supreme love rests on things made by human hands or on earthly treasures, we risk losing everything in a single moment. As F. B. Meyer observed, \"Whatever can be taken from us has the mark and signature of man.\"",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Micah was completely sincere in his feelings, yet he was entirely wrong in his faith. Human priests and earthly comforts can easily be carried off by change or diverted by others. When trouble comes, things made by people can never truly comfort our souls.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Our living Lord is different. Earthly things vanish, but God can never be stolen from us. Jesus is our eternal High Priest who never changes or turns away. Even in our deepest struggles or failures, nothing can separate us from His unfailing love.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any earthly thing in your life that you rely on more than God?",
+    "How does knowing that Jesus can never be taken away bring you comfort today?"
+   ],
+   "prayer": "Lord, help us to place our whole trust in You rather than in things that can be lost or stolen. Thank You for Jesus, our faithful High Priest who never abandons us. Keep our hearts secure in Your unchanging love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Judges 18:24",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways - Mar. 29, 2008",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-mar-29-2008-11571885.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 7018014,
+   "end": 7018031,
+   "ref": "Judges 18:14-31",
+   "ranges": [
+    [
+     7018014,
+     7018031
+    ]
+   ],
+   "title": "Forsaking the Covenant for Power",
+   "key_verse": [
+    7018031,
+    7018031
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, the tribe of Dan seized Micah's images and hired priest, treating them as superstitious lucky charms for their conquest. At the same time, the young Levite cared far more about his own career than about God. Instead of offering true, godly guidance, he gladly abandoned Micah for a bigger position and a larger tribe.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When people turn away from God's covenant, raw force quickly replaces justice. The Danite warriors threatened Micah with violence to silence his protests. Then they marched on to Laish and destroyed an unsuspecting, peaceful city, showing how cruel human ambition becomes without God.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This dark chapter shows what happens when God's ways are abandoned. Superstition, selfish ambition, violence, and spiritual decay all grow together. When we ignore God's truth, society soon falls into using religion for selfish gain and using power to harm the weak.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you ever tempted to treat faith like a lucky charm rather than obeying God from the heart?",
+    "Where do you see selfish ambition causing harm in the world around you today?"
+   ],
+   "prayer": "Heavenly Father, guard our hearts from using faith for personal gain or selfish ambition. Teach us to walk faithfully in Your truth, seeking justice and peace rather than power. Help us to follow Your ways with sincere and humble obedience. Amen.",
+   "sources": {
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Judges 18, Acts 22, Jeremiah 32, and Psalms 1–2",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/judges-18-acts-22-jeremiah-32-psalms-1-2/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

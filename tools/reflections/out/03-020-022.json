@@ -1,0 +1,73 @@
+{
+ "id": "03-020-022",
+ "title": "Distinguish between Clean and Unclean",
+ "refs": [
+  "Leviticus 20:22-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 3020026,
+   "end": 3020026,
+   "ref": "Leviticus 20:26",
+   "ranges": [
+    [
+     3020026,
+     3020026
+    ]
+   ],
+   "title": "\"You Shall Be Holy to Me\"",
+   "key_verse": [
+    3020026,
+    3020026
+   ],
+   "reflect": [
+    {
+     "text": "In this verse, God tells His people that they belong to Him. Because He is holy, He calls us to be set apart from the surrounding culture. Even though the old ceremonial rules have passed away, God still wants His followers to live and worship differently from the world. Walking in holiness is not about missing out on good things. God gives this call in love, and living for Him brings true blessing instead of deprivation.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Standing apart from the world means making hard choices. We often have to step away from popular culture, worldly standards, and entertainment that do not honor God. Choosing to walk on this distinct path is not always easy. Yet, when we choose to stand apart for the Lord, we gain the lasting reward of pleasing our heavenly Father.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we try to keep God's law by our own strength, we quickly see our deep weakness. We cannot make ourselves righteous on our own. This struggle shows us just how much we need God's grace, His loving kindness that we do not deserve. Through the sacrifice of Jesus Christ, we are freed from the law and given the grace to live consecrated lives dedicated to Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what parts of your daily routine is God calling you to step away from worldly culture?",
+    "How does knowing that Christ gives you grace help you when you fail to be holy on your own?"
+   ],
+   "prayer": "Lord, thank You for setting us apart to belong to You. Forgive us for the times we follow the crowd instead of honoring Your truth. Please give us grace through Jesus to make choices that please You each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Wendy Blight",
+     "work": "Standing Apart from Everyone Else",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/standing-apart-from-everyone-else-encouragement-for-today-mar-22-2013.html"
+    },
+    "D2": {
+     "author": "Katherine Britton",
+     "work": "Who Cares about Leviticus?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/who-cares-about-leviticus-crosswalk-the-devotional-march-8-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "42-022-024",
+ "title": "Who Is the Greatest?",
+ "refs": [
+  "Luke 22:24-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42022024,
+   "end": 42022030,
+   "ref": "Luke 22:24-30",
+   "ranges": [
+    [
+     42022024,
+     42022030
+    ]
+   ],
+   "title": "True Greatness in Serving Others",
+   "key_verse": [
+    42022026,
+    42022026
+   ],
+   "reflect": [
+    {
+     "text": "Even in the most sacred moments, our hearts can wander into selfishness. Right after sharing the Last Supper and hearing Jesus speak of His betrayal, the disciples began to argue about which of them was the greatest. Selfish ambition is rooted in human nature, and craving recognition remains an ongoing struggle even after salvation. When we push our own agendas and compare ourselves with others, it damages our relationships and harms our fellowship with God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead of harshly condemning the disciples, Jesus graciously showed them a better way. Earthly rulers love to lord power over people and boast of their importance, but Jesus explained that God's kingdom works upside down. In His kingdom, the greatest person is the one who serves others. Jesus did not just teach this truth; He lived it out by serving the very people who followed Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We do not have to remain trapped in the chase for status. Through the Holy Spirit, God gives us divine power to defeat selfish desires. Fixing our eyes on Christ frees us from self-absorption, because real satisfaction does not come from our own prominence. It comes from being captivated by the glory of Jesus and quietly following His example of humble service.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you most tempted to compare yourself with others or seek personal credit?",
+    "How can you rely on the Holy Spirit this week to choose humble service over your own agenda?"
+   ],
+   "prayer": "Lord Jesus, forgive us for the times we seek our own importance and compete with those around us. Fill us with Your Holy Spirit so that we can turn away from selfish ambition and follow Your example of humble love. Help us to find our joy in Your glory as we quietly serve others today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Betsy St. Amant Haddox",
+     "work": "Fighting Selfishness (Luke 22:24) - Your Daily Bible Verse - August 2",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-august-2.html"
+    },
+    "D2": {
+     "author": "Jon Bloom",
+     "work": "Who Is the Greatest?",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/who-is-the-greatest"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

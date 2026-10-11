@@ -178,7 +178,7 @@ class FamilyTree(
 @Composable
 fun FamilyTreeDialog(vm: StudyViewModel, startUid: String, onDismiss: () -> Unit) {
     var uid by remember { mutableStateOf(startUid) }
-    val tree by produceState<FamilyTree?>(null, uid) { value = withContext(Dispatchers.IO) { FamilyTree.build(vm.study, uid) } }
+    val tree by produceState<FamilyTree?>(null, uid) { value = background { FamilyTree.build(vm.study, uid) } }
     val scope = rememberCoroutineScope()
     BigDialog(onDismiss) {
         Column {
@@ -191,7 +191,7 @@ fun FamilyTreeDialog(vm: StudyViewModel, startUid: String, onDismiss: () -> Unit
             Box(Modifier.weight(1f).fillMaxWidth().verticalScroll(rememberScrollState()).padding(vertical = 12.dp)) {
                 if (t != null) TreeView(t) { n ->
                     scope.launch {
-                        val found = withContext(Dispatchers.IO) { vm.study.nameByUid(n.uid) }
+                        val found = background { vm.study.nameByUid(n.uid) }
                         if (found != null) uid = n.uid else vm.message = "No entry for ${n.label}."
                     }
                 }

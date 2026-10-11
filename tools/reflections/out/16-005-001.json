@@ -1,0 +1,91 @@
+{
+ "id": "16-005-001",
+ "title": "Nehemiah Defends the Oppressed",
+ "refs": [
+  "Nehemiah 5:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 16005001,
+   "end": 16005013,
+   "ref": "Nehemiah 5:1-13",
+   "ranges": [
+    [
+     16005001,
+     16005013
+    ]
+   ],
+   "title": "Mercy and the Fear of God",
+   "key_verse": [
+    16005009,
+    16005009
+   ],
+   "reflect": [
+    {
+     "text": "The people working to rebuild Jerusalem were suffering from famine, taxes, and deep exhaustion. Instead of helping, the wealthy leaders took advantage of their trouble. They charged high interest on loans, took family lands, and forced children into slavery. Selfishness caused deep cracks inside the community. Nehemiah saw that how we treat money and other people shows our real spiritual character.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Nehemiah confronted the leaders directly. He pointed out that taking advantage of their brothers came from a lack of the fear of God, which means honoring and respecting God as Lord. The nobles were silenced by their hypocrisy. Because Nehemiah did not use his own position for personal gain, his words had weight. True renewal required obeying God's Word in money matters, not just building stone walls.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The leaders responded with true repentance. They promised to cancel unfair debts, give back the mortgaged fields, and stop charging interest. Human failure shows our need for changed hearts. Just as Christ became poor for our sake, God calls us to put Him first, show generous mercy, and care for those who are struggling.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How does the way you handle money and treat people show what you truly believe about God?",
+    "Is there anyone in need whom you can treat with greater kindness and generosity this week?"
+   ],
+   "prayer": "Lord God, teach us to walk in your fear and honor you with our money. Give us soft hearts so we do not take advantage of others when they face hard times. Help us to reflect the generous mercy of Jesus, who became poor so that we might live. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Test of Personal Hardship",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/test-personal-hardship"
+    },
+    "D2": {
+     "author": "Jonathan Parnell",
+     "work": "Doctrine Matters for Deeds of Mercy",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/doctrine-matters-for-deeds-of-mercy"
+    },
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Nehemiah 5",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/genesis-16-matthew-15-nehemiah-5-acts-15/"
+    },
+    "D4": {
+     "author": "Jack Graham",
+     "work": "Power Point - December 7, 2005",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-december-7-2005-1367169.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

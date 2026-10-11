@@ -1,0 +1,68 @@
+{
+ "id": "27-007-013",
+ "title": "Daniel’s Vision of the Son of Man",
+ "refs": [
+  "Daniel 7:13-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 27007013,
+   "end": 27007014,
+   "ref": "Daniel 7:13-14",
+   "ranges": [
+    [
+     27007013,
+     27007014
+    ]
+   ],
+   "title": "An Everlasting Kingdom",
+   "key_verse": [
+    27007014,
+    27007014
+   ],
+   "reflect": [
+    {
+     "text": "Throughout history, even the strongest human empires have broken down and disappeared into ruins. In Daniel's vision, God sits sovereign on His heavenly throne with total authority to judge every hostile earthly ruler. Then Daniel sees someone with human likeness coming with the clouds of heaven. In the Bible, arriving on the clouds shows divine majesty. This figure is truly God, yet He approaches the Ancient of Days as someone distinct from Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This prophetic scene points directly to Jesus Christ, who ascended into heaven after securing victory over evil. When He returned to the Father, He was given an everlasting kingdom and glory that will never pass away. People from every language and nation are called to serve Him. Because Christ is already seated at the Father's right hand, we can find true peace and protection. World events may feel uncertain or chaotic, but we rest secure knowing that Jesus has already won the victory and His reign will never end.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus reigns forever bring you comfort when the world feels uncertain?",
+    "In what areas of your life can you rest in Christ's secure victory today?"
+   ],
+   "prayer": "Lord God, thank You that every earthly power is under Your rule. We praise You for giving Jesus an eternal kingdom that can never be destroyed. Help us to trust in His victory and find peace in His everlasting protection today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "One like a Son of Man",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/one-son-man"
+    },
+    "D2": {
+     "author": "Stuart Briscoe",
+     "work": "The Winner - One Year Devotions for Men",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/the-winner-one-year-devotions-for-men-july-6.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

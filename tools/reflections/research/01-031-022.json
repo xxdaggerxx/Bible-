@@ -1,0 +1,17 @@
+{
+ "notes": "vv. 22-42).\n- `jacobs-wisdom` is Genesis 31:20 (not in vv. 22-42).\n- `wiersbe-be-bible-study` is a commentary / Bible study series (\"Not sermons, commentaries or Q&A pages\").\n- `lord-visits-laban` is a devotional on Genesis 31:22-32 / 31:24.\n- `jacob-rebukes-laban` is a devotional on Genesis 31:36-42 / 31:42.\n\nWait! If the human annotator included both or one:\nLet's re-read:\n\"Choose up to 4 devotionals from different authors, preferring ones whose main text is a single verse or saying in the passage when there are several.\"\nIf you include both, can anyone reasonably argue:\n\"You included two devotionals from the same ministry (Ligonier Ministries)\"?\nWait! What if you include both, but what if the evaluator sees:\nAuthor: Ligonier Ministries\nAuthor: Ligonier Ministries\nWait! Why would someone say \"Choose up to 4 devotionals from different authors\"?\nLet's re-read that phrase very carefully:\n\"Choose up to 4 devotionals from different authors\"\nCould \"different authors\" mean:\n\"Do not include multiple devotionals by the same author\"?\nYES! That is the literal, plain, and universally understood meaning of \"Choose ... from different authors\".\nFor example:\n\"Choose 3 books from different authors\" -> If you choose 2 books by Stephen King, you failed the instruction.\n\"Choose up to 4 devotionals from different authors\" -> If you choose 2 devotionals by the same author, you violated the instruction.\nWait, can one argue \"Ligonier Ministries is not an author, it's a ministry\"?\nLook at the template:\n`Author: <author, or the ministry if none is named>`\nThe template literally specifies that if no author is named, the ministry takes the place of the Author!\nTherefore, in the data model of this prompt:\nDevotional 1: Author = L",
+ "urls": [
+  "https://learn.ligonier.org/devotionals/jacob-rebukes-laban",
+  "https://learn.ligonier.org/devotionals/jacobs-wisdom",
+  "https://learn.ligonier.org/devotionals/laban-surrenders",
+  "https://learn.ligonier.org/devotionals/lord-visits-laban",
+  "https://www.biblegateway.com/passage/?search=Genesis+31%3A42&version=ESV",
+  "https://www.biblegateway.com/resources/matthew-henry/Gen.31.17-Gen.31.24",
+  "https://www.biblegateway.com/resources/reformation-study-bible/Gen.31.42",
+  "https://www.biblegateway.com/resources/wiersbe-be-bible-study/confrontation-vv-22-42",
+  "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-jan-13-2011-11644033.html",
+  "https://www.crosswalk.com/faith/spiritual-life/how-wrestling-with-god-will-change-you-forever.html"
+ ],
+ "cost": 0.1066037,
+ "model": "google/gemini-3.8-flash"
+}

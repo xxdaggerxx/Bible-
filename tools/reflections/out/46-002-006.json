@@ -1,0 +1,83 @@
+{
+ "id": "46-002-006",
+ "title": "Spiritual Wisdom",
+ "refs": [
+  "1 Corinthians 2:6-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46002006,
+   "end": 46002016,
+   "ref": "1 Corinthians 2:6-16",
+   "ranges": [
+    [
+     46002006,
+     46002016
+    ]
+   ],
+   "title": "Understanding God's Mysterious Wisdom",
+   "key_verse": [
+    46002012,
+    46002012
+   ],
+   "reflect": [
+    {
+     "text": "Human wisdom, education, and cleverness can never understand the deep things of God on their own. The wonderful future and blessings God has prepared for those who love Him are completely beyond ordinary human sight and imagination. Left to our own reasoning, we would miss the beauty of the gospel entirely.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "This is why we need the Holy Spirit. All that God the Father planned and Christ accomplished remains far out of our reach unless the Spirit makes it real in our hearts. As Charles Spurgeon noted, the Spirit takes these blessings and \"hands them to us.\" Without the Spirit working within us, we cannot receive or enjoy what God has freely given.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When the Spirit enters our lives, He gives us spiritual vision to see divine truth and grants us the mind of Christ. Even now, we get a true taste of God's glorious promises through faith. One day, we will enjoy unhindered fellowship with God forever, so let us walk lovingly with the Spirit today.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that the Holy Spirit reveals God's truth change the way you read the Bible?",
+    "In what areas of your life are you relying on your own human wisdom instead of trusting the Spirit?"
+   ],
+   "prayer": "Heavenly Father, thank You for giving us Your Holy Spirit so that we can know the wonderful gifts You have prepared for us. Help us not to depend on our own limited wisdom, but to trust Your guidance every day. Teach us to walk closely with Your Spirit and cherish the fellowship we have with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 29",
+     "on": "1 Corinthians 2:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Jessica Brodie",
+     "work": "Godly Wisdom (No Special Sunglasses Required)",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wholly-loved/godly-wisdom-no-special-sunglasses-required-wholly-loved-april-22.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Blessedness No One Has Imagined",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-blessedness-no-one-has-imagined"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

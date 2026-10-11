@@ -1,0 +1,121 @@
+{
+ "id": "20-029-001",
+ "title": "The Flourishing of the Righteous",
+ "refs": [
+  "Proverbs 29:1-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 20029018,
+   "end": 20029018,
+   "ref": "Proverbs 29:18",
+   "ranges": [
+    [
+     20029018,
+     20029018
+    ]
+   ],
+   "title": "\"Where There Is No Vision\"",
+   "key_verse": [
+    20029018,
+    20029018
+   ],
+   "reflect": [
+    {
+     "text": "People often take this proverb to mean we need big personal goals or clever church projects. But the word vision here does not mean human ambition. It refers to God's divine revelation, His truth given to us in the Scriptures. When communities ignore God's Word, people throw off moral boundaries and wander into spiritual ruin. True blessing comes from submitting to what God has said.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "That is why those who teach others must know God for themselves. It is not enough to repeat facts or rely on clever speech. As F. B. Meyer reminds us, what matters most is \"to have seen the King.\" When we quietly seek God in faith and look to Jesus, God opens our eyes to His glory. Having looked upon His truth, we can joyfully help others walk in the life and peace found in His commands.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you been treating God's Word as your main guide, or relying more on your own personal plans?",
+    "How can you set aside quiet time this week to fix your eyes on Jesus?"
+   ],
+   "prayer": "Lord, thank You for giving us Your truth in the Bible so we are not left in the dark. Keep us from chasing our own schemes instead of listening to Your voice. Help us to see Jesus clearly and to walk gladly in obedience to Your Word. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Proverbs 29:18",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Jared C. Wilson",
+     "work": "Proverbs 29:18 Is Not About Your Big Ideas",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/proverbs-2918-is-not-about-your-big-ideas/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 20029001,
+   "end": 20029027,
+   "ref": "Proverbs 29:1-27",
+   "ranges": [
+    [
+     20029001,
+     20029027
+    ]
+   ],
+   "title": "Finding Security in the Lord",
+   "key_verse": [
+    20029025,
+    20029025
+   ],
+   "reflect": [
+    {
+     "text": "Proverbs 29 contrasts two very different paths in life. Sin traps wicked people in their own guilt, suspicion, and fear, while upright living produces a singing, carefree heart. When leaders accept lies, moral decay spreads through everything they touch. Even the hatred that violent people show toward the blameless points us ahead to the cross, where the completely innocent Jesus was condemned by evil men.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "One of the easiest ways we get pulled off the upright path is by worrying about what other people think of us. Craving human approval can look innocent, but it is actually a dangerous snare. It blinds our eyes to God's great love and damages our friendships because we start using people instead of loving them. Real safety and peace come only when reverence for God replaces our dread of human opinion.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what situations are you most tempted to worry about what others think rather than what pleases God?",
+    "How does resting in God's love and justice help you let go of the fear of people?"
+   ],
+   "prayer": "Father, forgive us for letting the opinions of other people control our hearts and choices. Teach us to rest in Your great love instead of craving human praise. Give us the quiet joy that comes from trusting You and walking in Your truth. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Marshall Segal",
+     "work": "Fear Your Fear of Man",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/fear-your-fear-of-man"
+    },
+    "D4": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Leviticus 15, Psalm 18, Proverbs 29, 2 Thessalonians 3",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/leviticus-15-psalm-18-proverbs-29-2-thess-3/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

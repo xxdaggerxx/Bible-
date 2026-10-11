@@ -1,0 +1,90 @@
+{
+ "id": "09-024-001",
+ "title": "David Spares Saul",
+ "refs": [
+  "1 Samuel 24:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9024001,
+   "end": 9024015,
+   "ref": "1 Samuel 24:1-15",
+   "ranges": [
+    [
+     9024001,
+     9024015
+    ]
+   ],
+   "title": "Leaving Justice in God's Hands",
+   "key_verse": [
+    9024012,
+    9024012
+   ],
+   "reflect": [
+    {
+     "text": "In the dark cave, David had an easy chance to end his troubles by harming Saul. His men urged him to strike, but David only cut a corner of Saul's robe. Even then, David felt immediate remorse. As F. B. Meyer noted, \"Opportunity does not make a wrong thing right.\" David had a sensitive conscience guided by God, so he stopped himself right away rather than seeking payback.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "David honored Saul's God-given role as king, but that did not mean staying silent about Saul's unfair actions. Instead of talking behind Saul's back, David went out and spoke directly to him with honesty and respect. We can also hurt people when our words cut down their character. David showed real integrity by addressing the problem openly while refusing to take personal revenge.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Instead of getting even, David placed the whole situation into God's hands. He trusted God to be the true judge. Doing what is right does not guarantee that someone treating us badly will permanently change, but it protects us from destructive mistakes. Reverence for God helped David keep a clear conscience and walk away in peace.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you have an easy chance to get back at someone who hurt you, what helps you pause and choose restraint?",
+    "How can you speak truthfully and respectfully to others while leaving the final outcome to God?"
+   ],
+   "prayer": "Lord, give us tender hearts that listen when your Spirit warns us against doing harm. Help us to speak the truth with respect instead of tearing others down behind their backs. Teach us to trust your justice rather than trying to get revenge on our own.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 24:5",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Augustus Lopes",
+     "work": "Do Not Touch the Lord’s Anointed",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/do-not-touch-the-lords-anointed"
+    },
+    "D3": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "A Clear Conscience",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/a-clear-conscience"
+    },
+    "D4": {
+     "author": "Beth Moore",
+     "work": "Day 32: 1 Samuel 24:1–22",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-32-1-samuel-24-122.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

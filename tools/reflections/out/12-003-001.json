@@ -1,0 +1,138 @@
+{
+ "id": "12-003-001",
+ "title": "Moab’s Rebellion",
+ "refs": [
+  "2 Kings 3:1-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 12003016,
+   "end": 12003017,
+   "ref": "2 Kings 3:16-17",
+   "ranges": [
+    [
+     12003016,
+     12003017
+    ]
+   ],
+   "title": "\"Make This Valley Full of Ditches\"",
+   "key_verse": [
+    12003016,
+    12003016
+   ],
+   "reflect": [
+    {
+     "text": "Three armies and their animals were perishing from thirst in the dry desert. All the soldiers and leaders could not find a single drop of water from the sky or from the earth. Their deep need exposed how helpless human beings really are. When we reach the end of our own strength, we learn to look away from worldly help and seek the Lord.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "God told the people to dig ditches throughout the valley before they saw any wind or rain. This required active, trusting obedience. They were asked to prepare for God's gift before it arrived, like someone who carries an umbrella when praying for rain. We are called to show genuine faith by preparing our hearts, prayers, and daily efforts to receive the blessings God wants to give.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "The Lord met their need in an unexpected way. He did not bring a visible storm, but silently filled the trenches so that everyone had plenty to drink. God is not bound to our ideas or ordinary methods. He provides abundantly for his people according to his own wise and sovereign timing.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "In what part of your life do you feel helpless and in need of God's provision?",
+    "What practical step of faith can you take today to prepare for God's answer to your prayers?"
+   ],
+   "prayer": "Lord, forgive us for relying on our own strength instead of looking to you. Give us faith to prepare our hearts and make room for your work, even before we see the outcome. Thank you that you provide for all our needs in your own wise and generous ways. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 16",
+     "on": "2 Kings 3:16-17",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 4",
+     "on": "2 Kings 3:16-17",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Truth For Life",
+     "work": "Humbly Receive from Him",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-may-16-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 12003001,
+   "end": 12003027,
+   "ref": "2 Kings 3:1-27",
+   "ranges": [
+    [
+     12003001,
+     12003027
+    ]
+   ],
+   "title": "Regard for the King",
+   "key_verse": [
+    12003014,
+    12003014
+   ],
+   "reflect": [
+    {
+     "text": "When the king of Moab rebelled against Israel, King Jehoram asked King Jehoshaphat of Judah to join him in the fight. Together with the king of Edom, their armies marched through the wilderness. Soon they were stranded without water, facing complete defeat. In their desperation, they turned to the prophet Elisha to seek guidance from the Lord.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Elisha was unwilling to help Jehoram, who persisted in the sins of his family. Yet the prophet agreed to seek the Lord solely out of respect for Jehoshaphat, the righteous king of Judah. Because of Jehoshaphat's presence, God intervened, preserved the armies with water, and gave them victory over Moab.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "This event points us to how God deals with us today. On our own, we are unworthy sinners who have no claim on God's favor. Yet God hears our cries and shows us grace—his undeserved kindness—solely because of Jesus Christ. Jesus is the true, righteous King, and we receive God's blessing only because we belong to him.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God accepts you only through Jesus change the way you pray?",
+    "How can remembering Christ's righteousness bring you peace when you feel unworthy?"
+   ],
+   "prayer": "Heavenly Father, we know we have no goodness of our own to earn your favor. Thank you for welcoming and saving us solely through the righteousness of Jesus, our true King. Help us to rest in his grace and live thankfully for all you have done. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "God’s Regard for the King of Judah",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-regard-for-king-of-judah"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

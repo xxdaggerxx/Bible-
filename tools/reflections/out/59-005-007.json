@@ -1,0 +1,79 @@
+{
+ "id": "59-005-007",
+ "title": "Patience in Suffering",
+ "refs": [
+  "James 5:7-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 59005007,
+   "end": 59005012,
+   "ref": "James 5:7-12",
+   "ranges": [
+    [
+     59005007,
+     59005012
+    ]
+   ],
+   "title": "Standing Firm While You Wait",
+   "key_verse": [
+    59005008,
+    59005008
+   ],
+   "reflect": [
+    {
+     "text": "Waiting through hard times can bring discomfort and weariness. Like a farmer waiting for a crop, we are called to wait well, trusting that God is actively working even when we cannot see it beneath the surface. Biblical waiting is not doing nothing. It means daily faithfulness and obedience, knowing that God never leaves us alone and gives us the mercy we need to keep going.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When suffering tempts us to quit or turn bitter, Scripture points us to Job. He showed steadfast endurance, and in the end God proved His compassion. We can stand firm under pressure by bringing our burdens straight to Jesus and anchoring our minds in His promises. Choosing to trust and praise Him even during heartache purifies our faith.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Our greatest comfort in suffering is knowing that our Lord's return is near. As Charles Spurgeon wrote, this truth \"lets in a flood of light upon the present.\" Knowing Jesus may return soon calms our fears and strengthens our hearts. It gives us the courage to stay steady, do our daily work, and patiently endure whatever trials we face today.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of your life are you finding it hard to wait on God right now?",
+    "How can remembering that the Lord's return is near help you stay steady today?"
+   ],
+   "prayer": "Lord Jesus, help us to be patient when we face trials and long seasons of waiting. Strengthen our hearts so we do not grow weary or bitter, but remain faithful in our daily duties. Anchor our minds in Your promises, and remind us often that You are near. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 26",
+     "on": "James 5:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Carolyn Dale Newell",
+     "work": "A Prayer for Patience in the Waiting Season of Life",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/a-prayer-for-patience-in-the-waiting-season-of-life.html"
+    },
+    "D3": {
+     "author": "Ramona Davis",
+     "work": "Squirrelly Persistence",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-june-22-2005-1336349.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

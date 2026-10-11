@@ -1,0 +1,66 @@
+{
+ "id": "23-019-016",
+ "title": "A Blessing upon the Earth",
+ "refs": [
+  "Isaiah 19:16-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23019016,
+   "end": 23019025,
+   "ref": "Isaiah 19:16-25",
+   "ranges": [
+    [
+     23019016,
+     23019025
+    ]
+   ],
+   "title": "Egypt Redeemed and Reconciled",
+   "key_verse": [
+    23019025,
+    23019025
+   ],
+   "reflect": [
+    {
+     "text": "For generations, Egypt was known as an ancient enemy of God and His covenant people. Yet Scripture foretells that this deep hostility would not last forever. Isaiah prophesied that Egyptian cities would one day turn away from their past, pledge allegiance to the Lord, and warmly embrace the true faith.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord promised to make Himself known to Egypt in a completely new way. Instead of meeting them only as their judge, He would come to them as their healer and redeemer. Even more remarkable, mortal enemies Egypt and Assyria would experience genuine reconciliation. Together with Israel, they would bow and worship the Lord side by side.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This vision of united worship finds its true fulfillment in the gospel. Through Jesus Christ, God breaks down ancient divisions and gathers people from every nation into His church. Those who once lived in opposition to God and to each other are redeemed, healed, and united in praise.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does God's promise to turn ancient enemies into His worshipers give you hope for divided people today?",
+    "How does the gospel help you welcome and worship alongside believers from different backgrounds?"
+   ],
+   "prayer": "Lord God, thank You for Your mercy that reaches nations once far away from You. Thank You for healing our hearts and bringing enemies together through the good news of Christ. Help us to celebrate the unity You give us in Your church and worship You with one voice. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Egypt Redeemed",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/egypt-redeemed"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

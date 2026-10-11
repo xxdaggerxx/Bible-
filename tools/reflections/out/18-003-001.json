@@ -1,0 +1,72 @@
+{
+ "id": "18-003-001",
+ "title": "Job Laments His Birth",
+ "refs": [
+  "Job 3:1-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18003001,
+   "end": 18003026,
+   "ref": "Job 3:1-26",
+   "ranges": [
+    [
+     18003001,
+     18003026
+    ]
+   ],
+   "title": "Finding Light in Seasons of Deep Grief",
+   "key_verse": [
+    18003020,
+    18003020
+   ],
+   "reflect": [
+    {
+     "text": "When heavy sorrow falls upon us, even faithful believers can sink into deep despair. Job suffered so intensely that he wished he had never been born. While he stopped short of cursing God directly, his deep pain still led him to question God's wisdom. Scripture makes plenty of room for our tears, our groaning, and our honest questions when life hurts, but we are called not to step across the line into doubting God's goodness or demanding explanations.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "On our own, deep suffering feels like a dark piece of charcoal that has no brightness in it at all. Yet, as F. B. Meyer reminds us, we only detect light in dark things \"when we behold them in the light which streams from the face of Jesus.\" When we bring our pain into the presence of Christ, His light shows us comfort, hope, and love that we could never see in the dark.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you walk through grief or confusion, how can you share your honest pain with God while still trusting His goodness?",
+    "How can looking to Jesus help you find comfort during times that feel completely dark?"
+   ],
+   "prayer": "Lord, when trouble feels heavy and our days seem dark, give us the grace to endure faithfully. Help us bring our honest grief to You without losing our trust in Your wisdom. Turn our eyes toward Jesus, so that His light may bring comfort and hope to our weary hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 3:9",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Job's First Lament",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jobs-first-lament"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "Job also spoke about how the thing he feared had overtaken him. Some people wrongly claim that our fears bring about our troubles, but Scripture guarantees no such rule. Tragedies simply occur in a fallen world. In seasons of hardship, God does not ask us to figure out every mystery. Instead, we are called to ask Him for the grace to endure faithfully.",
+     "problem": "Neither the passage nor devotional [D2] teaches that tragedies simply occur in a fallen world."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

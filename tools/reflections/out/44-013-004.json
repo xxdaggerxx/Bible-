@@ -1,0 +1,66 @@
+{
+ "id": "44-013-004",
+ "title": "On Cyprus",
+ "refs": [
+  "Acts 13:4-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44013004,
+   "end": 44013012,
+   "ref": "Acts 13:4-12",
+   "ranges": [
+    [
+     44013004,
+     44013012
+    ]
+   ],
+   "title": "God's Truth Overcomes Opposition",
+   "key_verse": [
+    44013012,
+    44013012
+   ],
+   "reflect": [
+    {
+     "text": "When we step out to follow God and share his good news, things do not always go smoothly. Serving God frequently brings spiritual pushback rather than comfort. The devil actively uses lies and trickery to twist the truth and keep people from welcoming the gospel. Because of this, we need to recognize that the evil one is the real force behind distractions that pull people away from God's Word.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet God never leaves his people helpless against such opposition. He gives his servants the spiritual authority and power they need to face and overcome demonic resistance. When Paul confronted the sorcerer, the Holy Spirit gave him the boldness and power to speak the truth, showing that God is far greater than any enemy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We also see that a sincere desire to hear God's message prepares a person's heart. Sergius Paulus truly wanted to listen, and in the end, he was amazed by the teaching about the Lord. When we face hurdles while sharing God's love, we can trust God to use his truth to reach open hearts.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face resistance or distraction while serving God, do you recognize the spiritual struggle behind it?",
+    "How can relying on God's power help you remain bold when sharing the gospel feels hard?"
+   ],
+   "prayer": "Lord, grant us courage whenever we meet spiritual resistance. Help us see the enemy's distractions for what they are and rely entirely on your power. Prepare the hearts of the people around us so they may receive your truth with wonder. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 243: Acts 13:4–12",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-243-acts-13-412.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

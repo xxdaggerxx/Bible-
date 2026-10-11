@@ -1,0 +1,76 @@
+{
+ "id": "38-005-005",
+ "title": "The Vision of the Woman in a Basket",
+ "refs": [
+  "Zechariah 5:5-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 38005005,
+   "end": 38005011,
+   "ref": "Zechariah 5:5-11",
+   "ranges": [
+    [
+     38005005,
+     38005011
+    ]
+   ],
+   "title": "Wickedness Carried Away",
+   "key_verse": [
+    38005009,
+    38005009
+   ],
+   "reflect": [
+    {
+     "text": "Zechariah sees a woman trapped inside a measuring basket under a heavy lead lid. The angel explains that she represents wickedness. Instead of wiping out His people because of their wrongdoing, God acts to purge their guilt. This vision illustrates expiation, which means lifting sin and carrying it completely away so it cannot bring ruin on God's people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Two winged figures then carry the basket between heaven and earth toward Shinar, or Babylon. As F. B. Meyer writes, the evil that troubled God's people is \"removed beyond recall.\" Sin is exiled outside the camp to its own place. One day, God will permanently banish all wickedness from His presence.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This vision offers deep comfort when we struggle with our own failures. If we try to hide our sin, it slowly eats away at our heart. But when we confess our wrongs and turn to God, He breaks the power of sin. Even though we still battle temptation in this life, God rescues us and teaches us to hate what is evil and hold fast to what is good.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you keeping any secret sins hidden instead of confessing them to God?",
+    "How does knowing that God carries your sin far away bring you relief and hope?"
+   ],
+   "prayer": "Lord, thank You for forgiving our iniquity and removing our guilt so far from us. Help us to confess our sins honestly instead of hiding them from You. Strengthen us by Your Spirit to turn away from what is evil and hold fast to what is good. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Zechariah 5:10",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Purging Iniquity",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/purging-iniquity"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

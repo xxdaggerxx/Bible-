@@ -1,0 +1,76 @@
+{
+ "id": "38-001-018",
+ "title": "The Vision of the Horns and the Craftsmen",
+ "refs": [
+  "Zechariah 1:18-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 38001018,
+   "end": 38001021,
+   "ref": "Zechariah 1:18-21",
+   "ranges": [
+    [
+     38001018,
+     38001021
+    ]
+   ],
+   "title": "God Finds the Right Workmen",
+   "key_verse": [
+    38001020,
+    38001020
+   ],
+   "reflect": [
+    {
+     "text": "Zechariah saw four horns pushing and scattering God's people so fiercely that no one could lift their head. These horns represent proud worldly powers that attack the church from every side. It can be easy to feel dismayed when we see forces of opposition that seem so strong and destructive.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Right after the horns appeared, the Lord showed Zechariah four craftsmen, or carpenters. God did not send three workers to face four horns; He sent the exact number needed. He did not send architects to draw quiet plans, but practical laborers equipped to do rough work and break down those proud forces.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We never need to despair over the apparent weakness of God's church. Charles Spurgeon reminded believers that \"the Lord knows where to find his servants.\" God prepares defenders in quiet obscurity and brings them forward at the right moment. The victory belongs to Him, and He always provides the help His people need.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you look at challenges facing the church today, what helps you remember that God is in control?",
+    "How can you trust the Lord to supply the right help in your own times of trouble?"
+   ],
+   "prayer": "Lord God, thank You that no enemy can ever defeat Your church. When hostile powers seem strong, help us remember that You always have the right servants ready at the right time. Give us quiet confidence in Your strength and keep us faithful to Christ today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 5",
+     "on": "Zechariah 1:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Truth For Life",
+     "work": "God's Resourcefulness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-dec-5-2010-11642203.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

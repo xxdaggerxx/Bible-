@@ -1,0 +1,75 @@
+{
+ "id": "07-009-007",
+ "title": "Jotham’s Parable",
+ "refs": [
+  "Judges 9:7-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7009007,
+   "end": 7009021,
+   "ref": "Judges 9:7-21",
+   "ranges": [
+    [
+     7009007,
+     7009021
+    ]
+   ],
+   "title": "When a Bramble Rules",
+   "key_verse": [
+    7009015,
+    7009015
+   ],
+   "reflect": [
+    {
+     "text": "In Jotham's story, productive plants like the olive tree, fig tree, and grapevine refuse to be king. They are content with their God-given purpose and will not trade fruitful service to dominate others. By contrast, the leaders of Shechem turn to a prickly thornbush. They reject God's rule and chase false security, choosing Abimelech through family ties and violent bloodshed.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The thornbush invites the tall trees to find refuge under its tiny branches, warning that fire will consume anyone who refuses. A bramble cannot give real shade. It only offers an illusion of safety that hides ruin and oppression. When people lust for control over others, destruction quickly follows.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Every human substitute for God's rule turns out to be a thorny bramble. Our only true protection from the corrupting desire for power is submitting to God. Jesus Christ is the true Vine who offers real and everlasting refuge.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where might you be seeking safety or control in worldly things rather than resting in God's care?",
+    "How can you stay faithful in the quiet, fruitful work God has given you instead of chasing status?"
+   ],
+   "prayer": "Lord God, keep our hearts from chasing worldly power and false security. Forgive us when we look to empty things for protection instead of resting in Your care. Help us to find our true shelter in Jesus Christ, the living Vine. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "Lust for Power",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/lust-for-power-one-year-devotions-for-men-august-22.html"
+    },
+    "D2": {
+     "author": "Jared C. Wilson",
+     "work": "When You’ve Got a Bramble for a King",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/when-youve-got-a-bramble-for-a-king/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "42-019-001",
+ "title": "Jesus and Zacchaeus",
+ "refs": [
+  "Luke 19:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42019001,
+   "end": 42019010,
+   "ref": "Luke 19:1-10",
+   "ranges": [
+    [
+     42019001,
+     42019010
+    ]
+   ],
+   "title": "Welcoming Jesus and Reaching the Lost",
+   "key_verse": [
+    42019010,
+    42019010
+   ],
+   "reflect": [
+    {
+     "text": "People in society looked down on Zacchaeus and avoided him because of his dishonest work as a chief tax collector. Yet Jesus did not condemn or shun him. Instead, Jesus looked up, called him by name, and asked to stay at his home. Zacchaeus pushed past his fear and shame to welcome the Lord with open joy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Being personally accepted by Jesus changed Zacchaeus deeply and freed him from greed. Unlike the rich ruler who walked away clinging to his wealth, Zacchaeus showed genuine repentance by giving half his goods to the poor and paying back anyone he had cheated. When we realize how welcoming Christ is, we do not have to let guilt or self-reliant pride keep us from running to Him with open hands.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus came to seek and to save the lost, and He asks us to follow His example. We are called to overcome our own fears and reach out to people who seem different or hard to love. Stepping toward those whom society rejects reflects the true heart of Christ's mission to share His good news with everyone.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are lingering guilt or pride keeping you from running to Jesus with open hands today?",
+    "Who is an outcast or unlovable person in your life that Jesus is calling you to reach out to?"
+   ],
+   "prayer": "Lord Jesus, thank you for seeking us out and welcoming us by name when we were lost. Free our hearts from greed and pride so we can receive you with genuine joy. Give us courage to step past our fears and show your personal love to those who feel forgotten. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Laura MacCorkle",
+     "work": "Are You Scared of Loving Zacchaeus?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/are-you-scared-of-loving-zacchaeus-crosswalk-the-devotional-march-31-2011.html"
+    },
+    "D2": {
+     "author": "Jodi Harris",
+     "work": "How Do I Respond to Jesus?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-december-5-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

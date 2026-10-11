@@ -1,0 +1,73 @@
+{
+ "id": "21-002-001",
+ "title": "The Futility of Pleasure",
+ "refs": [
+  "Ecclesiastes 2:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 21002001,
+   "end": 21002011,
+   "ref": "Ecclesiastes 2:1-11",
+   "ranges": [
+    [
+     21002001,
+     21002011
+    ]
+   ],
+   "title": "Empty Pursuits and Lasting Worth",
+   "key_verse": [
+    21002011,
+    21002011
+   ],
+   "reflect": [
+    {
+     "text": "Solomon had the wealth to try everything the world could offer. He built grand houses, planted lush vineyards, and gathered great riches for himself. Yet living only for personal pleasure did not satisfy his soul. Each new pursuit brought less joy than the one before, leaving him frustrated and empty. His experience reminds us that worldly achievements and wealth can never give us lasting fulfillment apart from God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our world often measures success by what we do, such as career status and material rewards. But when we focus only on external accomplishments, we can end up spiritually hollow inside. God cares far more about who we are becoming than what we achieve. Developing inner character and godly virtues takes a lifetime, but it creates treasure that will not fade.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Chasing after personal gain alone is like trying to catch the wind. True peace and meaning come only when we live for God's eternal purpose and seek His kingdom. When we let Him shape our hearts, we find the deep satisfaction that earthly success could never provide.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to measure your worth by what you accomplish rather than who you are becoming?",
+    "How can you invest more time this week in building godly character and serving God's kingdom?"
+   ],
+   "prayer": "Lord, help us remember that earthly things and accomplishments cannot satisfy our souls. Teach us to care more about who we are becoming in You than about what we achieve. Direct our desires toward Your kingdom and fill our hearts with Your lasting peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - July 28, 2006",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-july-28-2006-1409932.html"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Doing vs. Being",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-feb-3-2010-11625734.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

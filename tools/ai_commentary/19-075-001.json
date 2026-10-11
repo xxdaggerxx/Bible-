@@ -1,0 +1,108 @@
+{
+ "book": 19,
+ "chapter": 75,
+ "first": 1,
+ "last": 10,
+ "ref": "Psalms 75",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "God's people thank Him twice to show how deep and earnest their gratitude is. His \"Name\" means His personal presence and character, which are close at hand rather than far away. The wonderful things He has done prove that He is actively caring for His church.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "God Himself breaks in to speak, assuring His people that He will step onto the judgment seat at the right moment. Human rulers often delay or twist justice, but the Lord never acts too early or too late. When His chosen hour arrives, He will settle all things with complete fairness.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "When human society falls into chaos, it feels as if the whole world is melting and falling apart. In those terrifying times, God Himself holds up the earth's supporting pillars so that moral order does not collapse completely. Because the Lord keeps the foundations steady, His people do not need to give way to panic.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 5,
+   "meaning": "The Lord warns arrogant people to stop bragging and flexing their strength. In the Bible, an animal lifting its horns stands for pride and aggressive power, like an ox refusing to bow its head to the plow's wooden frame (the yoke). Flaunting human power against heaven is pure foolishness, because God easily brings down those who stiffen their necks in rebellion.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 7,
+   "meaning": "True honor, rescue, and authority do not come from any earthly direction—neither from the sunrise, the sunset, nor the southern wilderness. God alone is the supreme Judge who governs the rise and fall of leaders and nations. At His own pleasure, He knocks down proud rulers and lifts up the humble.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "God holds a cup of foaming, spiced wine that represents His fierce anger against sin. While believers receive only fatherly discipline, the wicked will be forced to swallow every drop, straight down to the bitter sediment at the bottom. This picture shows that unrepentant rebels cannot escape the full weight of God's final punishment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "While the ungodly face ruin, the psalmist commits himself to singing God's praises without end. He honors the Lord as the \"God of Jacob,\" remembering the faithful covenant God who rescued Jacob from all his troubles. Telling the world about God's mighty acts is the lifelong joy of the faithful.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "God declares that He will strip wicked oppressors of all their boastful power and weapons of mischief. At the same time, He will lift up and reward the righteous who trusted in Him. True dignity belongs to those who obey God, while proud bullies will have their influence broken forever.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 9: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 10: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

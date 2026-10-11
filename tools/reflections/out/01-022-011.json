@@ -1,0 +1,121 @@
+{
+ "id": "01-022-011",
+ "title": "The LORD Provides the Sacrifice",
+ "refs": [
+  "Genesis 22:11-19"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1022014,
+   "end": 1022014,
+   "ref": "Genesis 22:14",
+   "ranges": [
+    [
+     1022014,
+     1022014
+    ]
+   ],
+   "title": "\"The LORD Will Provide\"",
+   "key_verse": [
+    1022014,
+    1022014
+   ],
+   "reflect": [
+    {
+     "text": "Abraham named the mountain after God's faithfulness: the Lord will provide, or Jehovah-Jireh. Abraham held on to God's promises even when he faced losing his dear son. He trusted that God would make a way, believing he and the boy would return together safely from the altar. His obedience went right to the edge, trusting God completely to do what seemed impossible.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Help came at the final second. Right when Abraham was ready to make the sacrifice, God stepped in and pointed out a ram caught in the bushes. God gave that ram as a substitute to die in Isaac's place. This event pointed ahead to the greatest provision of all, when God provided His own Son to die on the cross for our sins.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God often delivers His people when their own strength runs out. When you face hard trials and feel you have reached the very end of your wisdom and power, remember this story. As F. B. Meyer notes, God's help is provided \"in the mount of trial and sacrifice.\" You can trust Him to supply what is needed at just the right time.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of your life do you feel at the end of your strength and need to trust God to provide?",
+    "How does knowing Jesus died as your substitute help you trust God in hard trials?"
+   ],
+   "prayer": "Lord God, thank You for being the One who always provides for us. Forgive us when we worry and rely on our own strength instead of trusting You. Thank You most of all for sending Jesus to die in our place. Help us to keep trusting Your good timing every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 22:14",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Jill Briscoe",
+     "work": "Jehovah-Jireh - One Year Devotions for Women",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-women/jehovah-jireh-one-year-devotions-for-women-january-10.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1022011,
+   "end": 1022019,
+   "ref": "Genesis 22:11-19",
+   "ranges": [
+    [
+     1022011,
+     1022019
+    ]
+   ],
+   "title": "Faith Proven by Obedience",
+   "key_verse": [
+    1022012,
+    1022012
+   ],
+   "reflect": [
+    {
+     "text": "Real faith is much more than simply agreeing in your head with religious truths. It proves itself through active obedience, even when God asks for what is most precious to us. When God said He knew Abraham, it showed His covenant approval of a servant walking in faithful trust. True devotion means holding nothing back from the Lord.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there anything precious in your life that you find hard to surrender to God?",
+    "How can your daily actions show that your faith is more than just head knowledge?"
+   ],
+   "prayer": "Heavenly Father, You deserve our whole hearts and our deepest love. Show us anything we are clinging to more tightly than we cling to You. Give us the faith to obey Your voice and hold nothing back. Help us to walk faithfully in Your ways each day. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Abraham Passes His Test",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/abraham-passes-his-test"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "When the angel called out from heaven to stop Abraham, the patriarch passed a severe trial. God declared that He now knew Abraham feared Him, because Abraham had not held back his cherished son. Biblical fear of God is not being terrified of Him. It is genuine, reverent devotion shown through our actions.",
+     "problem": "The claim that biblical fear of God is 'not being terrified of Him' is not found in the passage or devotional (D3 states that fear of God is not mere intellectual assent, but does not say it is not being terrified)."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

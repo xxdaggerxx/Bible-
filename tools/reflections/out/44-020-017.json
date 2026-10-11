@@ -1,0 +1,129 @@
+{
+ "id": "44-020-017",
+ "title": "Paul’s Farewell to the Ephesians",
+ "refs": [
+  "Acts 20:17-38"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44020028,
+   "end": 44020028,
+   "ref": "Acts 20:28",
+   "ranges": [
+    [
+     44020028,
+     44020028
+    ]
+   ],
+   "title": "\"Be shepherds of the church of God\"",
+   "key_verse": [
+    44020028,
+    44020028
+   ],
+   "reflect": [
+    {
+     "text": "Paul gives church leaders a serious charge to watch over God's people. Yet before leaders can watch over others, they must pay close attention to their own walk with God. As Beth Moore reminds us, we cannot guide others where we do not go ourselves. Leaders remain sheep in need of rest and grace. The Holy Spirit appoints them from within the flock, giving them the solemn duty to serve God rather than seek the praise of people.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    },
+    {
+     "text": "The church is deeply loved and valuable because God purchased her with His own blood. For this reason, shepherds must care for the congregation with sacrificial devotion. They must also stay alert against false teachings that try to twist the truth, whether those dangers come from outside or from within the church itself. Guarding God's people requires leaders who know God's word well and church members who support and pray for their leaders.",
+     "sources": [
+      "D1",
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "How are you caring for your own daily walk with God while you help others?",
+    "In what ways can you pray for and support the leaders in your church this week?"
+   ],
+   "prayer": "Lord God, thank You for loving the church so much that You bought us with Your own blood. Please strengthen our pastors and leaders to stay close to You and protect us from false teachings. Give us grateful hearts that support and pray for those who care for our souls. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Acts 20:28",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D4": {
+     "author": "Eric Watkins",
+     "work": "Shepherds of Christ's Flock",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/shepherds-of-christs-flock"
+    },
+    "D5": {
+     "author": "Beth Moore",
+     "work": "Day 274: Acts 20:25–31",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-274-acts-20-2531.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 44020017,
+   "end": 44020038,
+   "ref": "Acts 20:17-38",
+   "ranges": [
+    [
+     44020017,
+     44020038
+    ]
+   ],
+   "title": "Finishing the Race with Generous Hearts",
+   "key_verse": [
+    44020024,
+    44020024
+   ],
+   "reflect": [
+    {
+     "text": "As Paul said goodbye to the Ephesian elders, he knew hard times awaited him. Yet he did not measure his life by its length or comfort. What mattered to him was running his race and finishing the task Jesus gave him. God decides how long we live on earth, so our real goal each day is to point our lives toward eternity by sharing the good news of God's grace.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Paul also reminded the believers of how Jesus lived and taught. He urged them to remember that giving brings more joy than receiving. Holding tightly to earthly things keeps us from loving others well. When we share what we have and care for the weak, we can trust that God promises to reward our love and generosity with true heavenly treasure.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What specific task has God given you to focus on today?",
+    "How can remembering God's future reward help you give freely to someone in need?"
+   ],
+   "prayer": "Heavenly Father, help us to run our race faithfully each day without clinging to earthly comforts. Teach our hearts that it truly is better to give than to receive. May we use our time, work, and resources to serve others for Your glory. Amen.",
+   "sources": {
+    "D2": {
+     "author": "David Mathis",
+     "work": "Better to Give Than to Get? Remembering God’s Promise of Reward",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/better-to-give-than-to-get"
+    },
+    "D3": {
+     "author": "Greg Laurie",
+     "work": "Move in the Right Direction",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-november-1-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,127 @@
+{
+ "id": "44-007-054",
+ "title": "The Stoning of Stephen",
+ "refs": [
+  "Acts 7:54-60"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44007055,
+   "end": 44007056,
+   "ref": "Acts 7:55-56",
+   "ranges": [
+    [
+     44007055,
+     44007056
+    ]
+   ],
+   "title": "\"I See Heaven Open\"",
+   "key_verse": [
+    44007056,
+    44007056
+   ],
+   "reflect": [
+    {
+     "text": "Stephen lived continually filled with the Holy Spirit, brimming like a clear mountain lake. It is the special work of the Holy Spirit to lift our gaze beyond what we can see with our eyes. Instead of looking only at the scary world around us, the Spirit directs our hearts toward heaven and helps us see Jesus in His beauty and glory.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In his darkest hour, Stephen looked up and saw Jesus standing at God's right hand. Being at the right hand of God means that Jesus holds ultimate power and rules over everything. He was not sitting passively or ignoring Stephen's pain. Jesus stood up to actively support, welcome, and care for His faithful servant.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When we go through deep trials, we might feel alone or wonder if God cares. Remembering Christ and what He has already done for us helps us overcome those doubts. We can ask the Holy Spirit to give us spiritual sight each day, so our eyes remain locked on Jesus rather than on our fears.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face hard times, what helps you look to Jesus instead of your troubles?",
+    "How does knowing that Jesus actively cares for you change how you handle fear?"
+   ],
+   "prayer": "Lord Jesus, thank You that You reign with power and never leave us alone. Holy Spirit, please give us spiritual sight to look past our earthly troubles. Help us keep our eyes fixed on Christ in every difficult moment. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Acts 7:55",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Scotty Smith",
+     "work": "A Prayer about Jesus Rising for the Occasion of Our Need",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/scotty-smith/a-prayer-about-jesus-rising-for-the-occasion-of-our-need/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 44007054,
+   "end": 44007060,
+   "ref": "Acts 7:54-60",
+   "ranges": [
+    [
+     44007054,
+     44007060
+    ]
+   ],
+   "title": "Faithful to the End",
+   "key_verse": [
+    44007060,
+    44007060
+   ],
+   "reflect": [
+    {
+     "text": "As stones were hurled at him, Stephen fell to his knees and cried out for mercy on behalf of the very people who were taking his life. He asked God not to hold their sin against them. In the middle of extreme cruelty, Stephen demonstrated the amazing grace, God's undeserved kindness, of forgiving his enemies.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "From a worldly viewpoint, Stephen's ministry might not look like a success. He did not build a giant following, and his hearers responded with fury and violence. Yet speaking God's Word is never unfruitful. God used Stephen's faithful stand, and his dying testimony planted a deep seed in the heart of a young man named Saul.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "We often judge success by outward numbers, results, and applause. But God defines success as simple, faithful obedience to His calling. When we share God's truth, we do not need to worry about earthly measurements. We can trust that God uses our quiet faithfulness in ways we may never see.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Why is it comforting to know that God values our faithfulness more than big numbers or popularity?",
+    "Is there someone who has hurt you that you need God's grace to forgive?"
+   ],
+   "prayer": "Lord, help us to be faithful to Your call even when others reject Your message. Give us loving hearts that show grace and forgiveness to those who oppose us. May our daily obedience bring honor to Your name. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Greg Laurie",
+     "work": "Just One",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/harvest-daily-feb-15-2007-11529751.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

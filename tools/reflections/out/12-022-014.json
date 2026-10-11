@@ -1,0 +1,82 @@
+{
+ "id": "12-022-014",
+ "title": "Huldah’s Prophecy",
+ "refs": [
+  "2 Kings 22:14-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12022014,
+   "end": 12022020,
+   "ref": "2 Kings 22:14-20",
+   "ranges": [
+    [
+     12022014,
+     12022020
+    ]
+   ],
+   "title": "A Tender Heart Before the Lord",
+   "key_verse": [
+    12022019,
+    12022019
+   ],
+   "reflect": [
+    {
+     "text": "When King Josiah heard God's law, he saw how far his people had wandered into idolatry. Instead of ignoring the warning, he tore his clothes in grief and humbled himself before God. The Lord chose the prophetess Huldah to deliver His message with boldness, confirming that judgment would come on the nation. Yet because Josiah responded with a tender heart that trembled at God's words, the Lord promised to spare him from seeing the disaster.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Charles Spurgeon reminds us, \"Happy is he who trembles at the word of the Lord.\" God notices those who grieve over sin and take His warnings seriously, offering them peace. At the same time, F. B. Meyer notes that God's kind promises call for our continued trust and obedience. Later in life, Josiah acted unwisely by marching into battle on his own. We must take care that self-will and unbelief do not lead us away from the peaceful path God prepares for us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God can speak through anyone He chooses to share His truth. Like Huldah, we are called to speak God's word with courage. Like Josiah in his humility, we should keep our hearts soft toward God and work together to honor Him.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you have a tender heart that listens when God points out sin, or are you tempted to ignore His warnings?",
+    "Are there areas in your life where choosing your own way might pull you away from God's peaceful guidance?"
+   ],
+   "prayer": "Lord, give us soft and humble hearts that listen when Your word speaks. Help us turn away from our sins and rest in Your mercy. Keep us from stubbornly following our own way, and give us courage to share Your truth with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 3",
+     "on": "2 Kings 22:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 22:20",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D3": {
+     "author": "Jason Soroski",
+     "work": "What You Should Know about Huldah in the Bible",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/what-you-should-know-about-huldah-in-the-bible.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

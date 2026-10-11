@@ -1,0 +1,74 @@
+{
+ "id": "38-007-001",
+ "title": "A Call to Justice and Mercy",
+ "refs": [
+  "Zechariah 7:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 38007001,
+   "end": 38007014,
+   "ref": "Zechariah 7:1-14",
+   "ranges": [
+    [
+     38007001,
+     38007014
+    ]
+   ],
+   "title": "True Worship and Compassion",
+   "key_verse": [
+    38007009,
+    38007009
+   ],
+   "reflect": [
+    {
+     "text": "While rebuilding the temple, the returning exiles asked whether they should keep up their long-standing fasts. God answered by questioning their true motives. For seventy years, their fasting and mourning had been done for selfish reasons and self-justification rather than real devotion to Him. Spiritual habits like fasting are meant to turn our hearts away from worldly desires toward God, but the Lord rejects empty rituals when our motives are not right.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Zechariah reminded the people that outward religious forms mean nothing to God without genuine obedience. True covenant faithfulness shows itself in how we treat others. The Lord calls His people to administer fair justice, show loving compassion, and care for defenseless people such as widows, orphans, foreigners, and the poor.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Their ancestors had hardened their hearts against these same words and faced God's discipline. We need to learn from the past instead of repeating those cold-hearted mistakes. When we practice spiritual disciplines, we must draw near to God through His Word and prayer, letting His love shape how we care for those around us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Why do you take part in religious habits, and are your motives focused on honoring God?",
+    "How can you show practical kindness and justice to someone in need this week?"
+   ],
+   "prayer": "Lord, search our hearts and keep us from empty religious routines. Help us to seek You with honest motives in our prayer and worship. Give us tender hearts that love justice and care for the vulnerable around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "A Call for Kindness and Mercy",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/call-kindness-and-mercy"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - September 28",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-sept-28-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

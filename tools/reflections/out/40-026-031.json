@@ -1,0 +1,150 @@
+{
+ "id": "40-026-031",
+ "title": "Jesus Predicts Peter’s Denial",
+ "refs": [
+  "Matthew 26:31-35",
+  "Mark 14:27-31",
+  "Luke 22:31-38",
+  "John 13:36-38"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 42022031,
+   "end": 42022032,
+   "ref": "Luke 22:31-32",
+   "ranges": [
+    [
+     42022031,
+     42022032
+    ]
+   ],
+   "title": "\"I Have Prayed for You\"",
+   "key_verse": [
+    42022032,
+    42022032
+   ],
+   "reflect": [
+    {
+     "text": "Jesus knows our weaknesses before we ever fall. He is never surprised by our struggles or stumbles. Long before an attack comes, Jesus goes before God the Father to plead on our behalf. As Charles Spurgeon wrote, \"mercy outruns malice.\" Jesus does not merely tell us to stand firm on our own. He prays for us so that our faith will not fail when hard tests arrive.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Times of testing can feel like being shaken violently, like wheat separated from its chaff. Yet we do not need to panic when these hard seasons come. God uses trials to clear away what is worthless in our hearts and refine our trust in Him. Staying close to a praying church family helps us stay grounded when our world feels unsteady.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Jesus did not say \"if\" Peter returned, but \"when.\" He always plans for our restoration after we repent. Our stumbles are not the end of our story. God takes the lessons we learn through testing and uses them for good. Once we are restored, He sends us to encourage and build up our brothers and sisters who are hurting.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face hard testing, how does knowing that Jesus prays for you bring you peace?",
+    "How can the lessons you learned from a past failure help you strengthen someone else today?"
+   ],
+   "prayer": "Lord Jesus, thank You for praying for us before we even realize we are in danger. Purify our hearts through difficult seasons and keep our faith from failing. When we stumble, lead us back to You so we can encourage and support others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 11",
+     "on": "Luke 22:32",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Rick Warren",
+     "work": "Jesus’ Prayer and Plan for Your Failures",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-april-22-2022.html"
+    },
+    "D4": {
+     "author": "Meredith Houston Carr",
+     "work": "Three Ways to Stay Faithful in a Sifting Season",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-august-11-2020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40026031,
+   "end": 40026035,
+   "ref": "Matthew 26:31-35; Mark 14:27-31; Luke 22:31-38; John 13:36-38",
+   "ranges": [
+    [
+     40026031,
+     40026035
+    ],
+    [
+     41014027,
+     41014031
+    ],
+    [
+     42022031,
+     42022038
+    ],
+    [
+     43013036,
+     43013038
+    ]
+   ],
+   "title": "Trust God, Not Your Own Resolve",
+   "key_verse": [
+    40026033,
+    40026033
+   ],
+   "reflect": [
+    {
+     "text": "Peter made a bold pledge to Jesus. He promised that even if everyone else deserted the Lord, he never would. Peter truly meant what he said, but his promise rested only on his own human strength. When danger arrived that very night, his brave words quickly collapsed, and he denied knowing Jesus at all.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Our own promises and willpower are fragile. Human resolve is like a delicate blossom on a branch, easily knocked down by the first passing breeze. When we rely on our own courage, we will soon stumble. We cannot bear the weight of life by leaning on human promises.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We must learn where to place our confidence. We should not depend on our own feelings or resolutions. Instead, we can rest completely on the promises of God. His word never fails, and we can safely trust Him with our present life and our eternal future.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to rely on your own willpower rather than on God?",
+    "How does resting on God's promises bring you deeper confidence than trusting your own strength?"
+   ],
+   "prayer": "Lord, forgive us for trusting in our own weak promises and human resolve. Teach us not to depend on our own strength, which easily fails in times of trouble. Help us to place our complete trust in Your faithful word today and forever. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Dec. 26",
+     "on": "Matthew 26:33",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

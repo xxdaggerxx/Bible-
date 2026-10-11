@@ -1,0 +1,66 @@
+{
+ "id": "46-016-010",
+ "title": "Timothy and Apollos",
+ "refs": [
+  "1 Corinthians 16:10-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46016010,
+   "end": 46016012,
+   "ref": "1 Corinthians 16:10-12",
+   "ranges": [
+    [
+     46016010,
+     46016012
+    ]
+   ],
+   "title": "Caring for Faithful Servants",
+   "key_verse": [
+    46016010,
+    46016010
+   ],
+   "reflect": [
+    {
+     "text": "When Paul wrote to the church in Corinth, he asked them to make Timothy feel welcome and safe among them. Instead of viewing Timothy with doubt or suspicion, the believers were called to put him at ease. Even though Timothy was younger and was not one of the main apostles, he was faithfully doing the Lord's work. We are called to honor and care for faithful Christian servants, regardless of their youth or title.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul also showed great humility when speaking about Apollos. People in the Corinthian church had split into rival groups, yet Paul showed no jealousy. He actively encouraged Apollos to visit and minister to them. Paul cared far more about God's work and the good of the church than about personal competition.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Today, we are called to follow this example in our own churches. We should show love, patience, and high respect to pastors and elders who faithfully teach God's Word. When we support church leaders and refuse to give in to rivalries, we help them serve with joy and peace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you help your pastors and church leaders feel supported and at ease?",
+    "Are there critical attitudes or rivalries you need to set aside to better encourage others in ministry?"
+   ],
+   "prayer": "Lord, thank you for the faithful ministers who teach us your Word. Help us to treat them with honor, patience, and warm love. Guard our hearts against jealousy and division so we may work together in peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Timothy and Apollos",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/timothy-and-apollos"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

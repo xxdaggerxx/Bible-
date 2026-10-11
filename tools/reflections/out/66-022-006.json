@@ -1,0 +1,82 @@
+{
+ "id": "66-022-006",
+ "title": "Jesus Is Coming",
+ "refs": [
+  "Revelation 22:6-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66022006,
+   "end": 66022017,
+   "ref": "Revelation 22:6-17",
+   "ranges": [
+    [
+     66022006,
+     66022017
+    ]
+   ],
+   "title": "Jesus Is Coming Soon",
+   "key_verse": [
+    66022012,
+    66022012
+   ],
+   "reflect": [
+    {
+     "text": "Many people prefer to think of Jesus only as a gentle child in a manger, but Revelation reveals Him as the eternal Lord, the Beginning and the End. He is returning soon as the sovereign Judge. His return will be sudden, and He will reward and judge all people according to how they have lived.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When Christ returns, all chances to be saved will come to an end. That day will bring tremendous joy to those who trust Him, but tragic ruin to anyone who continues in sin and stays outside the holy city. Believers are called to keep watch and share this urgent message before time runs out.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Yet right up to the end, Jesus invites everyone who is thirsty to come to Him. As Charles Spurgeon noted, Jesus \"wants no payment or preparation.\" We do not need good deeds or special standing to come. Anyone who is willing may receive the free gift of life simply by trusting in the Savior.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you relying on your own good deeds to be accepted by God, or have you come to Jesus for His free gift of life?",
+    "Since Jesus is coming soon, how can you urgently share His good news with someone in your life?"
+   ],
+   "prayer": "Lord Jesus, thank You that You freely give eternal life to all who are thirsty and come to You. Help us live holy lives that honor You while we wait for Your return. Give us courage to share Your gospel with urgency before the day of judgment arrives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 13",
+     "on": "Revelation 22:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Closing Words from Christ",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/closing-words-from-christ"
+    },
+    "D3": {
+     "author": "Dr. Michael Youssef",
+     "work": "His Judgment Is Just",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-may-12-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

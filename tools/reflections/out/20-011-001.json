@@ -1,0 +1,138 @@
+{
+ "id": "20-011-001",
+ "title": "Dishonest Scales",
+ "refs": [
+  "Proverbs 11:1-31"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 20011025,
+   "end": 20011025,
+   "ref": "Proverbs 11:25",
+   "ranges": [
+    [
+     20011025,
+     20011025
+    ]
+   ],
+   "title": "\"He Who Refreshes Others Will Be Refreshed\"",
+   "key_verse": [
+    20011025,
+    20011025
+   ],
+   "reflect": [
+    {
+     "text": "God's way of gaining is completely different from the world's way. The world tells us to hold tightly to everything we have so we can stay safe and comfortable. But faith teaches us that gaining comes through giving. When we spend all our time looking inward at our own worries, feelings, and weaknesses, we only grow tired and empty. Yet when we turn outward to care for those in need, God promises to look after us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Giving our time and love actually restores our own spiritual life. If you feel like your inner well has run dry, the best thing to do is pull the plug and pour out what you have to help someone else. As Charles Spurgeon wrote, \"in watering others, we are ourselves watered.\" Helping the sick, comforting the sad, or encouraging a brother or sister brings hidden strength to the surface. It is like rubbing a freezing friend's hands in the snow; while keeping them warm, you get your own blood moving too.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Being generous also keeps our hearts healthy and humble. When we sit with poor or suffering believers to teach them, we often find that their faith teaches us and exposes how little we knew. Sharing freely keeps us from starving our souls with selfishness. Because the Lord Jesus gave everything for us, we can cheerfully pour out our lives and trust Him to refresh us in return.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever felt spiritually dry because you were focusing too much on yourself?",
+    "Who around you needs comfort or encouragement that you could refresh today?"
+   ],
+   "prayer": "Lord, forgive us for holding back what You have given us. Help us to stop dwelling on our own weakness and start looking for ways to bless others. Pour out Your love through our lives, and refresh our hearts as we serve those around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 21",
+     "on": "Proverbs 11:25",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 9",
+     "on": "Proverbs 11:25",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 10",
+     "on": "Proverbs 11:25",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 20011001,
+   "end": 20011031,
+   "ref": "Proverbs 11:1-31",
+   "ranges": [
+    [
+     20011001,
+     20011031
+    ]
+   ],
+   "title": "Measuring Life by What We Give",
+   "key_verse": [
+    20011024,
+    20011024
+   ],
+   "reflect": [
+    {
+     "text": "When a farmer walks across a plowed field and scatters handfuls of good grain into the dirt, a young city child might think the farmer is throwing valuable food away. But the farmer knows that every seed cast into the soil will live and multiply into a bountiful harvest. God's wisdom invites us to look at our lives in this same way. We should measure our days not by how much we save or store up, but by how much we pour out for others.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "The world thinks the richest person is the one who gathers the most wealth, but heaven honors the person who gives the most away. If grain is hoarded in a barn, it simply spoils or gets eaten by bugs, just as still water turns stagnant and covered in scum. When we hold tightly to our time, energy, and money, we lose their true value. But when we release them freely into the Lord's hands, like the boy offering his five loaves and two fish, God multiplies them so there is more than enough left over.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "As F. B. Meyer observed, \"as we give we get.\" Sharing the truth you know or giving what you have will not leave you empty. God continually supplies seed to those who sow generously. As we spend our lives in sacrifice and service, the Lord replenishes our strength and returns everything we have spent with an overflowing reward.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you usually measure your success by what you have kept or by what you have given away?",
+    "What time, energy, or resources could you place in the Lord's hands today for Him to multiply?"
+   ],
+   "prayer": "Heavenly Father, teach us not to cling selfishly to the things You have entrusted to us. Give us the faith of a sower who scatters seed freely, trusting You for the harvest. Multiply our small gifts and simple service for the good of Your people and the glory of Your name. Amen.",
+   "sources": {
+    "D4": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Proverbs 11:24",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

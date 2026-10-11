@@ -1,0 +1,67 @@
+{
+ "id": "19-052-001",
+ "title": "Why Do You Boast of Evil?",
+ "refs": [
+  "Psalms 52:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19052008,
+   "end": 19052008,
+   "ref": "Psalms 52:8",
+   "ranges": [
+    [
+     19052008,
+     19052008
+    ]
+   ],
+   "title": "\"Like an Olive Tree Flourishing\"",
+   "key_verse": [
+    19052008,
+    19052008
+   ],
+   "reflect": [
+    {
+     "text": "Olive trees are hardy and endure through many changing seasons and harsh trials. In the same way, God desires for His children to flourish continually. This healthy, green life does not come from relying on our own strength or self-righteousness, which only leaves us in spiritual drought. Instead, we thrive when we stay rooted in God's presence, turning back to Him so He can nurture us to bear fruit that blesses others.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We can trust God completely because His mercy is tender, rich, and boundless. As Charles Spurgeon wrote, \"His mercy is like himself—it is infinite.\" None of us earned this kindness, yet God freely gives it to bandage our wounds and lift our drooping spirits. His mercy is never exhausted. It stays with us as a faithful friend in temptation, keeps us from sinking in trouble, and holds us through every season of life.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you relying on your own strength right now, or are you resting in God's unfailing love?",
+    "How has God's gentle mercy supported you during a difficult trial?"
+   ],
+   "prayer": "Lord, thank You for Your endless and tender mercy that we could never earn. Keep us deeply rooted in Your presence so we do not dry up in our own strength. Help us to endure through every season and bear fruit that blesses those around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 17",
+     "on": "Psalms 52:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "A Woman's Walk",
+     "work": "Flourishing - God's Love at Work - Week of August 25",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/a-womans-walk/a-womans-walk-week-of-aug-29-11608022.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

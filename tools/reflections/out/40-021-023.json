@@ -1,0 +1,76 @@
+{
+ "id": "40-021-023",
+ "title": "Jesus’ Authority Challenged",
+ "refs": [
+  "Matthew 21:23-27",
+  "Mark 11:27-33",
+  "Luke 20:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40021023,
+   "end": 40021027,
+   "ref": "Matthew 21:23-27; Mark 11:27-33; Luke 20:1-8",
+   "ranges": [
+    [
+     40021023,
+     40021027
+    ],
+    [
+     41011027,
+     41011033
+    ],
+    [
+     42020001,
+     42020008
+    ]
+   ],
+   "title": "A Question of Authority",
+   "key_verse": [
+    40021024,
+    40021024
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus was teaching in the temple, the religious leaders came to challenge Him. They demanded to know who gave Him the right to do these things, hoping to trap Him into claiming divine or human authority. Instead of falling into their trap, Jesus turned the question back on them. He asked whether John the Baptist received his authority from heaven or from human beings.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The leaders found themselves cornered. If they admitted John was sent by God, Jesus would ask why they had refused to believe him. If they said John's work was merely human, they feared the crowd would turn against them. To protect themselves, they chose self-preservation over the truth and claimed they did not know. By exposing their lack of honesty and moral authority, Jesus rightly chose not to answer their question.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This story reminds us that we must welcome the truth God has already given us. If we are unwilling to submit to the light we have already received, we cannot expect God to grant us further spiritual insight. True faith means honoring God's truth above our own safety and pride.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there truths God has already shown you in His Word that you are hesitating to obey?",
+    "Do you ever let the fear of other people keep you from being honest about what is true?"
+   ],
+   "prayer": "Lord, give us honest hearts that love Your truth more than our own comfort or reputation. Help us to humbly follow the light You have already provided. Teach us to gladly submit to Your authority in every part of our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "A Question of Authority",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/question-authority"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

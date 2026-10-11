@@ -1,0 +1,80 @@
+{
+ "id": "47-004-007",
+ "title": "Treasure in Jars of Clay",
+ "refs": [
+  "2 Corinthians 4:7-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 47004017,
+   "end": 47004018,
+   "ref": "2 Corinthians 4:17-18",
+   "ranges": [
+    [
+     47004017,
+     47004018
+    ]
+   ],
+   "title": "\"What is Unseen is Eternal\"",
+   "key_verse": [
+    47004018,
+    47004018
+   ],
+   "reflect": [
+    {
+     "text": "We live in a world broken by sin, so we must not expect life here to be perfect. Hardships and pain are unavoidable on earth, but they are only temporary. God promises to support us through every trial and carry us safely to the other side. Our troubles will not last forever, and they are achieving an eternal glory that far outweighs every earthly challenge.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Because of this, we can look through our visible circumstances to see what God is doing underneath. Hard times are like looking through a window. Instead of focusing only on the outer frame of trouble or sickness, we look for the unseen gifts God gives us. As F. B. Meyer noted, \"Beneath that trying dispensation there are celestial compensations.\" Even long seasons of difficulty seem brief when we realize God is using them to prepare us for heaven.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Our faith stays focused on the bright future that lies ahead. In that heavenly home, sin and sorrow will be completely gone, and we will be welcomed into the loving arms of Jesus. When we remember how endless eternity is compared to our short time on earth, our present gloom begins to lift. The joy waiting for us ahead will easily make up for every earthly sorrow.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face daily hardships, how does remembering that earth is not heaven change how you respond?",
+    "What unseen blessings from God, like His quiet strength and eternal hope, can you look for in your current difficulties?"
+   ],
+   "prayer": "Lord, help us fix our eyes on what is eternal whenever life feels heavy. Remind us that our pain is temporary and that You are preparing us for unending joy in Your presence. Give us the grace to trust Your good purposes until we reach our heavenly home. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 29",
+     "on": "2 Corinthians 4:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Corinthians 4:18",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Rick Warren",
+     "work": "One Day You’ll See It All Clearly",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-july-28-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

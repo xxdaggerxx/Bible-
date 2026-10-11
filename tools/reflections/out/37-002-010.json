@@ -1,0 +1,75 @@
+{
+ "id": "37-002-010",
+ "title": "Blessings for a Defiled People",
+ "refs": [
+  "Haggai 2:10-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 37002010,
+   "end": 37002019,
+   "ref": "Haggai 2:10-19",
+   "ranges": [
+    [
+     37002010,
+     37002019
+    ]
+   ],
+   "title": "From This Day on, I Will Bless You",
+   "key_verse": [
+    37002019,
+    37002019
+   ],
+   "reflect": [
+    {
+     "text": "In Haggai's day, God's people faced terrible crop failures. Blight, mildew, and hail destroyed their grain. These troubles were beyond human control. As Charles Spurgeon reminds us, such hardships are chastisements from heaven, meant to show us our deep dependence on the Lord. In the same way, our spiritual lives can suffer from a kind of mildew when pride or laziness creeps in, causing our prayers and love for God to dry up.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The people suffered poor harvests because of their sin and neglect of the Lord. Yet a turning point came when they began to obey God's voice and rebuild His temple. God marked that very day. Even before the seeds sprouted in the field or the fruit trees blossomed, God promised that His blessing would rest upon them from that moment forward.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When the Holy Spirit leads us to turn from sin and obey God's word, we can count on His kindness. We might still face opposition from others, but we will enjoy a closer relationship with God and a clearer view of His grace. We depend completely on Him to keep away the blight of sin and to make our lives fruitful for Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any area of neglect or disobedience in your life that you need to turn over to God today?",
+    "How does God's promise to bless an obedient heart encourage you to start fresh with Him?"
+   ],
+   "prayer": "Lord, show us where we have grown careless or disobedient, and guard our hearts against spiritual coldness. Give us willing minds to obey Your word and put You first in all things. Thank You for Your promised grace, and draw us closer to You each day.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 4",
+     "on": "Haggai 2:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 19",
+     "on": "Haggai 2:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,81 @@
+{
+ "id": "18-009-001",
+ "title": "Job: How Can I Contend with God?",
+ "refs": [
+  "Job 9:1-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18009001,
+   "end": 18009035,
+   "ref": "Job 9:1-35",
+   "ranges": [
+    [
+     18009001,
+     18009035
+    ]
+   ],
+   "title": "A Mediator Between God and Man",
+   "key_verse": [
+    18009033,
+    18009033
+   ],
+   "reflect": [
+    {
+     "text": "Job asked the deepest question any person can face: how can a mortal be right before God? In his suffering, Job recognized God's supreme power and greatness. A human being cannot take God to court or argue with Him on equal ground. No amount of good deeds, human effort, or religious rituals can earn us a clean standing before our Maker.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "We often judge ourselves by looking at other people, which makes our lives seem good enough. Yet God's standard is His own perfect holiness. As F. B. Meyer observed, even at our best we are people who need constant cleansing. On our finest days, we still fall short of God's glory and depend on His mercy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In his pain, Job longed for someone who could bring both sides together—a mediator to place a hand on both God and man. God answered that longing through Jesus Christ. Jesus is the ultimate Mediator who bridges the divide between holy God and sinful people. Through faith in Him and God's grace, which is His unearned favor, we are forgiven and brought near.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Why can we never make ourselves right with God through our own good deeds?",
+    "How does knowing Jesus stands as your Mediator bring you peace today?"
+   ],
+   "prayer": "Lord God, You are holy, mighty, and far greater than we can comprehend. Thank You for sending Jesus to be the Mediator who bridges the gap between us. Teach us to rely on Your grace rather than our own efforts, and fill our hearts with daily thanks for His sacrifice. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 9:31",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - June 17, 2005",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-june-17-2005-1335238.html"
+    },
+    "D3": {
+     "author": "Jack Graham",
+     "work": "PowerPoint - May 7, 2009",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-may-7-2009-11603271.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

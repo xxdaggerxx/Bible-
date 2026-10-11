@@ -1,0 +1,67 @@
+{
+ "id": "26-036-001",
+ "title": "A Prophecy to the Mountains of Israel",
+ "refs": [
+  "Ezekiel 36:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26036001,
+   "end": 26036015,
+   "ref": "Ezekiel 36:1-15",
+   "ranges": [
+    [
+     26036001,
+     26036015
+    ]
+   ],
+   "title": "Fruit from Desolate Mountains",
+   "key_verse": [
+    26036008,
+    26036008
+   ],
+   "reflect": [
+    {
+     "text": "When Ezekiel spoke to the mountains of Israel, the land lay in ruins. Foreign nations had mocked the empty hills and claimed them as their own. Yet the Lord made a wonderful promise to those silent valleys and ruined heights. He declared that He was on their side, and that the land would soon shoot forth branches and bear fruit for His returning people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "F. B. Meyer reminds us that these words also speak gently to our own hearts when we are broken by deep grief. There are seasons when our joy seems gone, a home feels quiet and empty, and sorrow casts a heavy shadow over every path. We might wonder if we will ever be happy again, or if our sadness will last forever.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's word assures us that desolation will not have the final say. He allows hardship so that our hearts may be purified and turned back to Him. As we let Him work through our sorrow, we can hold fast to His promises. The Lord will restore our joy and make our lives fruitful again, doing even better for us than at our beginnings.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you feel empty or worn down right now?",
+    "How can trusting God's promise to restore you bring hope in the middle of sadness?"
+   ],
+   "prayer": "Lord God, thank You that You see our quiet grief and turn toward us with great mercy. Please comfort our weary hearts and cleanse us from our sins as we wait on You. Bring new life and fruitfulness to the dry places in our lives, just as You promised to Your people. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 36:8",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

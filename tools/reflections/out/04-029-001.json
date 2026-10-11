@@ -1,0 +1,73 @@
+{
+ "id": "04-029-001",
+ "title": "The Feast of Trumpets",
+ "refs": [
+  "Numbers 29:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 4029001,
+   "end": 4029001,
+   "ref": "Numbers 29:1",
+   "ranges": [
+    [
+     4029001,
+     4029001
+    ]
+   ],
+   "title": "\"A Day to Sound the Trumpets\"",
+   "key_verse": [
+    4029001,
+    4029001
+   ],
+   "reflect": [
+    {
+     "text": "On the Feast of Trumpets, God called His people to set aside their everyday labor and gather together in sacred worship. The trumpets sounded continuously throughout the day, drawing the people's attention away from their own tents and toward the service of the Lord. Even in the midst of joyful celebration and thanksgiving, they continued to bring offerings to atone for their sins, showing that they always relied on God's mercy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "F. B. Meyer noted that while there was much holy work to be done around God's house, it was the service \"not of slaves, but of sons.\" We do not do good deeds to earn our salvation or to work our way up to the cross. Instead, we come to Christ empty-handed and receive His gift of eternal life by faith. When we are united to Him, loving obedience and good works flow naturally from our hearts without strain.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you trying to work to earn God's approval, or are you serving Him freely as His child?",
+    "How can setting aside time to worship God reshape how you wait for Christ's return?"
+   ],
+   "prayer": "Lord God, thank You for saving us through Christ and making us Your children. Help us to rest from trying to earn Your love, and give us joy in serving You each day. Keep our eyes fixed on Jesus as we wait for the day of His return. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 29:1",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways - Feb. 25, 2009",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-feb-25-2009-11599978.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "The long summer break between Pentecost and the Feast of Trumpets points ahead to the age we live in today, as we wait for Jesus to return. Until that day comes, we can rest from the burden of trying to save ourselves and gladly offer our lives to God in worship.",
+     "problem": "Paragraph 3 teaches that we can 'rest from the burden of trying to save ourselves,' but this concept comes from [D1] and is not found in [D2] (the only devotional cited) or in Numbers 29:1-6."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

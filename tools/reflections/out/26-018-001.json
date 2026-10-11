@@ -1,0 +1,129 @@
+{
+ "id": "26-018-001",
+ "title": "The Soul Who Sins Will Die",
+ "refs": [
+  "Ezekiel 18:1-32"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 26018002,
+   "end": 26018003,
+   "ref": "Ezekiel 18:2-3",
+   "ranges": [
+    [
+     26018002,
+     26018003
+    ]
+   ],
+   "title": "\"Sour Grapes\"",
+   "key_verse": [
+    26018002,
+    26018002
+   ],
+   "reflect": [
+    {
+     "text": "When life is hard, it is easy to look for someone else to blame. In Ezekiel's day, the people repeated a popular proverb about parents eating sour grapes and children getting a bitter taste. They claimed they were suffering only because of the sins of their ancestors, excusing their own wrongdoing and accusing God of being unfair.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Shifting the blame onto our upbringing or family history can make us feel trapped, as though doing what is right does not matter. Our environment certainly influences us, but it does not remove our personal moral accountability. God rejects this excuse and firmly reminds us that each person answers for their own choices.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God calls us to turn away from excuses and walk with Him in daily faith. Instead of assuming our problems are someone else's fault, we are invited to take honest responsibility for our actions. Only when we face our own guilt can we receive God's personal grace, His kindness we do not deserve, and His true forgiveness.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there times when you blame other people or your past instead of owning your mistakes?",
+    "What is one area of your life where God is asking you to take personal responsibility today?"
+   ],
+   "prayer": "Heavenly Father, help me to stop making excuses or blaming others for my sins. Give me an honest heart to admit my own wrongdoing and trust that Your ways are completely fair. Thank You for Your ready forgiveness and grace as I turn back to You. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Stuart Briscoe",
+     "work": "Sour Grapes",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/sour-grapes-one-year-devotions-for-men-december-6.html"
+    },
+    "D3": {
+     "author": "Dr. Jeff Schreve",
+     "work": "The Devil's Favorite Proverb",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-week-of-october-28-2016.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 26018001,
+   "end": 26018032,
+   "ref": "Ezekiel 18:1-32",
+   "ranges": [
+    [
+     26018001,
+     26018032
+    ]
+   ],
+   "title": "Every Soul Belongs to God",
+   "key_verse": [
+    26018004,
+    26018004
+   ],
+   "reflect": [
+    {
+     "text": "At the very foundation of this passage is a clear truth: every soul belongs to God. The Lord holds a rightful claim on every human life, whether struggling in sorrow and sin or walking in the light. He owns us by right of creation because He formed us. For believers, He also owns us by redemption, having bought us back with the precious blood of Christ.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because you belong to God, you do not need to live in fear. Even if you walk through a dry wilderness without visible help, or face the end of this earthly life, your heavenly Father remains responsible for you. A caring owner will not let his home fall apart or allow his animals to starve. God will certainly maintain, nurture, and cherish what belongs to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "F. B. Meyer reminds us that having God's mark upon us gives us complete reason to trust Him: \"Let Him do with us as He please.\" Since God is completely within His rights, we can safely rest in His holy care and loving direction.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing you belong completely to God bring you peace during difficult seasons?",
+    "In what practical way can you surrender your worries to the God who created and bought you?"
+   ],
+   "prayer": "Lord God, thank You that my life belongs to You by creation and by the blood of Christ. When I feel helpless or alone, remind me that You faithfully nurture and protect all who are Yours. I place my life into Your hands, trusting Your perfect care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 18:4",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

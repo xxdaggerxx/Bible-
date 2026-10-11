@@ -1,0 +1,142 @@
+{
+ "id": "66-003-014",
+ "title": "To the Church in Laodicea",
+ "refs": [
+  "Revelation 3:14-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 66003020,
+   "end": 66003020,
+   "ref": "Revelation 3:20",
+   "ranges": [
+    [
+     66003020,
+     66003020
+    ]
+   ],
+   "title": "\"I Stand at the Door and Knock\"",
+   "key_verse": [
+    66003020,
+    66003020
+   ],
+   "reflect": [
+    {
+     "text": "During painful seasons, we often feel that God is far away, especially when life does not match what we hoped for. Yet that sense of distance is not reality because the Lord remains right beside us. As Megan J. Conner notes, Christ gently knocks and calls out to our hearts without ever forcing His way inside. He waits patiently for us to respond in trust.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "When we answer His call through repentance and faith, Jesus enters our lives to share deep fellowship with us. On our own, our cupboards are completely empty, but Jesus brings everything needed for the feast. He comes with comfort, healing, and lasting peace to restore our troubled souls.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "Welcoming Jesus into our lives leaves us permanently transformed. Charles Spurgeon urges us to open the door and \"give him the keys of your heart\" so He can dwell there. When we surrender our hearts to Him, He fills us with the enduring love and joy that we could never produce on our own.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What disappointments or unmet expectations might be causing you to keep your heart guarded against Jesus?",
+    "In what area of your life do you need the healing, comfort, and peace that Christ brings?"
+   ],
+   "prayer": "Lord Jesus, thank You for standing at the door of my heart and calling to me in love. Forgive me for pulling away when life is difficult or confusing. Please come in, heal my brokenness, and fill my life with Your lasting joy and peace. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 25",
+     "on": "Revelation 3:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Megan J. Conner",
+     "work": "Will You Open the Door? - The Crosswalk Devotional - February 24",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/will-you-open-the-door-the-crosswalk-devotional.html"
+    },
+    "D5": {
+     "author": "Jim Burns",
+     "work": "Open Your Heart to Jesus - Homeword - December 4",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/open-your-heart-to-jesus-homeword-december-4.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 66003014,
+   "end": 66003022,
+   "ref": "Revelation 3:14-22",
+   "ranges": [
+    [
+     66003014,
+     66003022
+    ]
+   ],
+   "title": "Faithful Promises and Wholehearted Devotion",
+   "key_verse": [
+    66003014,
+    66003014
+   ],
+   "reflect": [
+    {
+     "text": "Jesus introduces Himself to the church as the Amen, the faithful and true witness. This title means that He is completely trustworthy and never changes. As Charles Spurgeon reminds us, Jesus is \"the Amen in all his promises.\" Every word He has spoken stands firm forever, and He will never break His word to those who rely on Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because the Lord loves His people, He corrects us and tells us not to be lukewarm. He calls us to be earnest and full of zeal, which means having a warm, active devotion to God. This zeal is not something we manufacture by our own strength; it is produced by the Holy Spirit working within our souls.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Our zeal stays strong when we remember what Christ has done to save us from destruction. Deep gratitude for His mercy stirs us to action, and looking to Jesus' own tireless life shows us how to serve without delay. Recognizing that time is short encourages us to give our whole hearts to His kingdom.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does the truth that Jesus never takes back His promises give you confidence today?",
+    "What steps can you take to keep your love for God active rather than drifting into spiritual indifference?"
+   ],
+   "prayer": "Lord Jesus, You are the faithful Amen whose words never fail. Forgive us when our hearts grow careless or half-hearted in our devotion to You. Fill us with Your Holy Spirit and stir our gratitude, so that we may follow You with earnest love and purpose. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 19",
+     "on": "Revelation 3:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 7",
+     "on": "Revelation 3:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

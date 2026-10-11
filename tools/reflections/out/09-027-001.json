@@ -1,0 +1,138 @@
+{
+ "id": "09-027-001",
+ "title": "David and the Philistines",
+ "refs": [
+  "1 Samuel 27:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 9027001,
+   "end": 9027001,
+   "ref": "1 Samuel 27:1",
+   "ranges": [
+    [
+     9027001,
+     9027001
+    ]
+   ],
+   "title": "\"I Will Be Swept Away\"",
+   "key_verse": [
+    9027001,
+    9027001
+   ],
+   "reflect": [
+    {
+     "text": "David looked at his hard situation and convinced himself that Saul would finally destroy him. This fearful thought was completely false. God had already promised David the kingdom through Samuel's anointing, and the Lord had delivered him from every past danger. There was no real evidence in David's life to suggest that God was going to abandon him now.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When we allow dark and fearful thoughts to go unchecked, they lead us into bad choices. As F. B. Meyer wrote, \"Unbelief always brings many other bitter sorrows in its train.\" David panicked and ran straight to the Philistines for safety, trading his confidence in God for a web of deception and compromise among enemies.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "We often fall into the very same downward spiral, doubting God's care without any cause. Instead of looking at our fears, we need to remember how God has protected us in the past. Even when our thinking goes astray and we make poor choices, God's steadfast kindness and mercy remain ready to rescue us.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What past moments of God's help can you recall when fearful thoughts start taking over?",
+    "How can testing your thoughts against God's promises keep you from making foolish choices?"
+   ],
+   "prayer": "Lord, forgive us when we forget your past faithfulness and give in to despair. Help us to keep our eyes on you rather than on the dangers around us. Thank you that your mercy never runs out, even when our thoughts turn dark. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 17",
+     "on": "1 Samuel 27:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 27:1",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "Where to Turn When Your Thoughts Go Dark",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-august-25-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 9027001,
+   "end": 9027012,
+   "ref": "1 Samuel 27:1-12",
+   "ranges": [
+    [
+     9027001,
+     9027012
+    ]
+   ],
+   "title": "God at Work in Tangled Ways",
+   "key_verse": [
+    9027012,
+    9027012
+   ],
+   "reflect": [
+    {
+     "text": "Fleeing to Philistine territory showed a lapse in David's faith after God had protected him in Israel for so long. Living among enemies soon created a very messy situation. David asked King Achish for a country town and settled his followers in Ziklag, trying to survive in enemy territory.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "From his base in Ziklag, David raided Israel's ancient adversaries while falsely telling Achish he was attacking Judah. David's craftiness won the king's complete trust, but it was a dangerous game. His deceit ended up trapping him in a difficult dilemma regarding future battles between the Philistines and his own people.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "David's conduct during this year and four months was questionable, yet God still used those raids to weaken Israel's enemies. God is sovereign, meaning he holds complete power over everything. He is great enough to overrule human failure and bring about his good purposes even through complicated and imperfect choices.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When have you relied on human cleverness to escape trouble instead of trusting God?",
+    "How does knowing that God rules over our complicated mistakes bring you comfort?"
+   ],
+   "prayer": "Heavenly Father, we confess that we often create complicated problems when our faith wavers. Thank you that your sovereign rule is greater than our failures and poor decisions. Please bring your good purposes out of the messy situations in our lives today. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "David Deceives Achish",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/david-deceives-achish"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,134 @@
+{
+ "id": "51-003-001",
+ "title": "Put On the New Self",
+ "refs": [
+  "Colossians 3:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 51003002,
+   "end": 51003002,
+   "ref": "Colossians 3:2",
+   "ranges": [
+    [
+     51003002,
+     51003002
+    ]
+   ],
+   "title": "\"Set Your Minds on Things Above\"",
+   "key_verse": [
+    51003002,
+    51003002
+   ],
+   "reflect": [
+    {
+     "text": "People sometimes warn us not to be too focused on heaven. Yet Scripture directly tells us to set our thoughts on things above. God gives us a healthy longing for our true home with Jesus. Thinking about eternity is not running away from real life. Instead, it fills us with hope and stirs us up to love and obey God today.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Our world always tempts us to chase earthly possessions. We often think that buying more things will bring lasting happiness, but goods can never satisfy our hearts. When we fix our minds on Christ, we are protected from greed. Our daily ambition shifts from impressing other people to serving God and sharing His message.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Looking toward heaven changes how we act each day. Filling our thoughts with pure and holy things drives out harmful desires and selfish habits. When we remember our eternal future, we begin to live by the values of God's kingdom right now.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What earthly possessions or worries tend to distract you from focusing on God?",
+    "How can remembering your future in heaven change the way you treat people today?"
+   ],
+   "prayer": "Lord Jesus, help us turn our thoughts away from earthly treasures that do not last. Teach us to fix our eyes on You and Your kingdom. Give us pure desires so that our daily choices honor You as we wait to see You face to face. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Rachel Olsen",
+     "work": "Thinking Higher",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-mar-10-2010-11627303.html"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "Goods vs. God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-feb-28-2015.html"
+    },
+    "D4": {
+     "author": "Jack Graham",
+     "work": "Power Point - Jan. 10, 2007",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-jan-10-2007-1462654.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 51003001,
+   "end": 51003017,
+   "ref": "Colossians 3:1-17",
+   "ranges": [
+    [
+     51003001,
+     51003017
+    ]
+   ],
+   "title": "Christ Who Is Our Life",
+   "key_verse": [
+    51003004,
+    51003004
+   ],
+   "reflect": [
+    {
+     "text": "Jesus is the very source of our spiritual life. Just as His voice called Lazarus out of the grave, He brought us from death in our sins into new life. We live only because He lives in us. He is the center of who we are, guiding our thoughts and moving us to action.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Christ also sustains us each day. Like travelers walking through a dry wilderness, our souls find nothing in this world that can truly feed us. Only Jesus satisfies our hunger. In hard times, His presence is our comfort. As Charles Spurgeon wrote, \"his lovingkindness is better than life.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus is the true goal and model for our journey. Like an arrow flying toward its target, our lives point straight toward closer fellowship with Him. When we stay close to our Savior, we begin to walk in His footsteps and become like Him. Our greatest joy is to share in His victory.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways do you turn to Jesus for daily strength when your soul feels weary?",
+    "How does knowing that Christ lives in you help you follow His example today?"
+   ],
+   "prayer": "Lord Jesus, thank You for raising us to new life and making Your home in our hearts. You are our daily food, our comfort in trouble, and our greatest joy. Help us walk closely in Your footsteps and find our full satisfaction in You alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 10",
+     "on": "Colossians 3:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

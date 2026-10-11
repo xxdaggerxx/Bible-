@@ -1,0 +1,68 @@
+{
+ "id": "18-001-013",
+ "title": "Job Loses His Children and Possessions",
+ "refs": [
+  "Job 1:13-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 18001021,
+   "end": 18001022,
+   "ref": "Job 1:21-22",
+   "ranges": [
+    [
+     18001021,
+     18001022
+    ]
+   ],
+   "title": "\"Blessed Be the Name of the LORD\"",
+   "key_verse": [
+    18001021,
+    18001021
+   ],
+   "reflect": [
+    {
+     "text": "In just a few hours, Job suffered the sudden loss of all his children, his wealth, and his servants. Yet instead of growing bitter or blaming God, he fell to the ground in worship. Job recognized that the Lord has the sovereign right over everything He gives and takes away. His response shows that God Himself is our true reward, not just the good gifts He provides. Suffering cannot touch us without God's permission, which assures us that our trials carry a divine purpose.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Job did not demand answers for why he was hurting. He humbly admitted that he did not understand, while looking beyond his earthly sorrow to the hope of the resurrection. Entrusting our unexplained pain to God keeps us grounded and guards us from destructive reactions. When we choose to praise God during our sorrow, it clears away distractions, deepens our love, and binds us securely to Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face sudden loss or disappointment, do you focus more on what was taken or on God Himself?",
+    "How can praising the Lord in hard times help you trust Him with things you do not understand?"
+   ],
+   "prayer": "Lord, you give and you take away, yet you remain good and worthy of our worship. Help us to find our greatest treasure in you rather than in earthly blessings. When suffering makes no sense to us, keep our hearts humble and securely bound to your love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Handling Adversity",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-august-28-2019.html"
+    },
+    "D2": {
+     "author": "Vaneetha Rendall Risner",
+     "work": "The Lord Gave and Took Away: Lessons on Suffering from Job",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-lord-gave-and-took-away"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

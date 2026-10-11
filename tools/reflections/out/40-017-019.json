@@ -1,0 +1,78 @@
+{
+ "id": "40-017-019",
+ "title": "The Power of Faith",
+ "refs": [
+  "Matthew 17:19-21",
+  "Luke 17:5-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40017019,
+   "end": 40017021,
+   "ref": "Matthew 17:19-21; Luke 17:5-10",
+   "ranges": [
+    [
+     40017019,
+     40017021
+    ],
+    [
+     42017005,
+     42017010
+    ]
+   ],
+   "title": "Small Faith and God's Great Power",
+   "key_verse": [
+    40017020,
+    40017020
+   ],
+   "reflect": [
+    {
+     "text": "Sometimes we run into troubles that feel as huge and unmovable as mountains. These challenges might be serious sickness, money problems, or hard spiritual battles. Jesus tells us that we do not need giant faith to face them. Even faith as small as a tiny mustard seed has great power, because faith does not rely on our own willpower. Genuine faith simply links us to the unlimited strength of God and the help of Christ.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Our faith grows deeper as we spend time reading the Bible, praying, and choosing to obey God each day. Instead of worrying about whether our faith feels strong enough, we learn to rest peacefully in His great ability. God is the one who carries the heavy load and does the impossible.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we follow and obey the Lord, we must also remember who we are. Doing what God commands does not place Him in our debt or give us a special status. We remain unworthy servants who have simply done our duty. In all things, our only hope is depending on God's unearned mercy.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What difficult challenge in your life feels like a mountain you need to trust God with?",
+    "How does remembering that God does not owe us anything change how you view your obedience?"
+   ],
+   "prayer": "Lord Jesus, help us to trust Your great power instead of relying on our own strength. When difficulties feel like mountains, remind us that even our small faith connects us to Your mighty hand. Thank You for Your free mercy toward us, Your servants. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Whitney Hopler",
+     "work": "What it Means to Have Faith that Can Move Mountains",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/faith-can-move-mountains-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "John Piper",
+     "work": "All We Will Get in 2002 Is Mercy",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/all-we-will-get-in-2002-is-mercy"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

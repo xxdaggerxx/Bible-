@@ -1,0 +1,82 @@
+{
+ "id": "50-001-021",
+ "title": "To Live Is Christ",
+ "refs": [
+  "Philippians 1:21-26"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 50001021,
+   "end": 50001023,
+   "ref": "Philippians 1:21-23",
+   "ranges": [
+    [
+     50001021,
+     50001023
+    ]
+   ],
+   "title": "\"To Live Is Christ, and to Die Is Gain\"",
+   "key_verse": [
+    50001021,
+    50001021
+   ],
+   "reflect": [
+    {
+     "text": "When the Holy Spirit shows us what Jesus did on the cross for our sins, our whole purpose changes. We stop chasing after wealth, fame, or power, which only leave us anxious, envious, and empty. Instead, Jesus becomes our greatest treasure. As Charles Spurgeon observed, Jesus becomes the very \"life of our life.\" We discover lasting contentment not by winning the world, but by letting Christ lead our desires, our daily labor, and our hearts.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because Christ is our life, death is not a final defeat but pure gain. Physical death entered the world through sin and still brings real sorrow here. Yet for the believer, dying means leaving this body to be immediately and consciously with the Lord. We do not pass into an unconscious sleep. We step directly into Christ's holy presence, which bridges this earthly life with our promised bodily resurrection.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Living with this hope frees us from fear. We can say we are ready for either path: to stay and serve faithfully where God places us, or to depart and be with our Savior, which is far better. Whatever our circumstances, true joy is found in belonging wholly to Jesus.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Does your daily routine show that Jesus is your greatest treasure, or are you chasing worldly success?",
+    "How does the promise of being immediately with Christ comfort you when you face the reality of death?"
+   ],
+   "prayer": "Lord Jesus, thank you for giving your life on the cross to forgive our sins. Keep our hearts from chasing money, praise, and empty ambitions that cannot satisfy. Whether you call us to work for you here or to depart and be in your presence, help us to live wholly for your glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 7",
+     "on": "Philippians 1:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "The Pursuit of Happiness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-march-29-2013.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Death and the Intermediate State",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/death-and-intermediate-state"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

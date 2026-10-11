@@ -1,0 +1,66 @@
+{
+ "id": "19-060-001",
+ "title": "Victory with God",
+ "refs": [
+  "Psalms 60:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19060001,
+   "end": 19060012,
+   "ref": "Psalms 60:1-12",
+   "ranges": [
+    [
+     19060001,
+     19060012
+    ]
+   ],
+   "title": "Standing Firm with God",
+   "key_verse": [
+    19060012,
+    19060012
+   ],
+   "reflect": [
+    {
+     "text": "Life often brings hard times and painful losses that show how broken our world really is. Tragic events and ongoing hostility remind us how precious our lives and freedom are. When destructive forces push against us, they try to paralyze our hearts with fear and make us feel helpless.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even when trouble surrounds us, we do not have to give up. We can stand firm against every threat because we know God's ultimate victory is completely secure. Human strength alone cannot save us, but we can face hard days with resolve when we bow humbly before God in renewed faith.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Lasting courage does not come from pretending we are strong on our own. Instead, true perseverance comes through quiet confidence and total dependence on the Lord. When we lean entirely on Him, He helps us stand strong through every trial.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or difficulties are threatening to paralyze your peace right now?",
+    "In what areas of your life do you need to stop relying on human help and depend fully on God?"
+   ],
+   "prayer": "Lord God, our world is broken and we know that human help cannot save us. When fear tries to overwhelm us, remind us that Your final victory is certain. Teach us to bow before You in faith and find our courage in quiet trust. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Why, God? Part Two",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-december-14-15-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

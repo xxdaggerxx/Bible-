@@ -1,0 +1,87 @@
+{
+ "id": "59-005-013",
+ "title": "The Prayer of Faith",
+ "refs": [
+  "James 5:13-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 59005016,
+   "end": 59005018,
+   "ref": "James 5:16-18",
+   "ranges": [
+    [
+     59005016,
+     59005018
+    ]
+   ],
+   "title": "\"The Prayer of a Righteous Man\"",
+   "key_verse": [
+    59005016,
+    59005016
+   ],
+   "reflect": [
+    {
+     "text": "We often imagine that powerful prayer belongs only to extraordinary believers. Elijah can seem completely out of our league, but Scripture reminds us that he had the very same human nature and weaknesses that we have. He faced real fears and deep discouragement, yet he prayed with boldness. The strength of his prayer did not come from his own perfection, but from the faithful God who heard him. Ordinary people can pray with great impact because we serve the same promise-keeping God.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "James calls us to pray for one another. Charles Spurgeon observed that praying for our brothers and sisters carries a \"weighty cargo\" of their needs before God. When we speak to the King on behalf of others, our prayers reflect the loving heart of Jesus, who constantly intercedes for us. Bringing a friend's burdens to God's throne shows genuine love and invites the Lord's help into their trials.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Prayer does not need to be a complicated ritual. It is simply an honest conversation that admits how much we need God. He cares about our smallest daily struggles, so we can turn to him as our first instinct rather than our last resort. Even when God's answers look different from what we expected, we can rest quietly in his wisdom, knowing he always chooses what is best for us.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Who is someone facing a difficulty whose needs you can bring to God in prayer today?",
+    "What keeps you from turning to God as your first response when everyday problems arise?"
+   ],
+   "prayer": "Father, thank you that you listen to ordinary people like us whenever we call on you. Give us compassionate hearts that carry the burdens of our friends and family to your throne. Help us to speak with you throughout the day and trust your perfect wisdom in every answer you give. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 6",
+     "on": "James 5:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "James 5:16",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Mary Southerland",
+     "work": "The Prayer of a Righteous Woman",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-january-20-2020.html"
+    },
+    "D4": {
+     "author": "Chuck Swindoll",
+     "work": "The Big Leagues",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-november-2-2016.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

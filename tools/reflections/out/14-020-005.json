@@ -1,0 +1,75 @@
+{
+ "id": "14-020-005",
+ "title": "Jehoshaphat’s Prayer",
+ "refs": [
+  "2 Chronicles 20:5-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 14020012,
+   "end": 14020012,
+   "ref": "2 Chronicles 20:12",
+   "ranges": [
+    [
+     14020012,
+     14020012
+    ]
+   ],
+   "title": "\"Our Eyes Are upon You\"",
+   "key_verse": [
+    14020012,
+    14020012
+   ],
+   "reflect": [
+    {
+     "text": "Prolonged struggles, such as ongoing family conflict, health crises, or money troubles, can leave us completely exhausted. In those hard moments, we often realize we have no human solutions and feel powerless. King Jehoshaphat showed us what to do by openly admitting his own weakness and bringing his vulnerability straight to God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Fear does not have to paralyze us. Instead, we can let that fear prompt us to cry out earnestly in prayer. We can speak openly to the Lord about what we need, placing our heavy burdens into His hands and leaving them there.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Rather than staring at the size of our trial, we can choose to turn our attention toward God. Giving Him praise and worship when we feel afraid is an active step of faith that welcomes His power. As we trust His guidance and take obedient steps forward, He gives us strength and fights for us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What overwhelming situation in your life do you need to bring honestly to God today?",
+    "How can focusing your eyes on God help you worship Him even when you feel afraid?"
+   ],
+   "prayer": "Lord, we confess that we often feel weak and do not know how to handle our problems. We lay our heavy burdens in Your hands and choose to look to You rather than our fears. Please give us strength, guide our steps, and fight our battles for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Meredith Houston Carr",
+     "work": "A Battle Plan for the Weary",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-february-6-2023.html"
+    },
+    "D2": {
+     "author": "Jeff Schreve",
+     "work": "What to Do When You Don't Know What to Do",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-week-of-september-21.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

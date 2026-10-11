@@ -1,0 +1,68 @@
+{
+ "id": "47-011-016",
+ "title": "Paul’s Suffering and Service",
+ "refs": [
+  "2 Corinthians 11:16-33"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 47011016,
+   "end": 47011033,
+   "ref": "2 Corinthians 11:16-33",
+   "ranges": [
+    [
+     47011016,
+     47011033
+    ]
+   ],
+   "title": "Serving Christ Through Hard Times",
+   "key_verse": [
+    47011030,
+    47011030
+   ],
+   "reflect": [
+    {
+     "text": "When Paul answered his rivals, he insisted that he belonged to God's chosen people just as much as they did. When we put our full trust in Jesus alone, God's great promises belong to us as well. We are accepted and forgiven by grace, which is God's undeserved kindness. But being part of God's family brings duty along with joy. If we claim to belong to Christ, we must also be willing to stand with His people when they are mocked and give our hearts to serve Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul proved his devotion through what he endured. He faced beatings, shipwrecks, sleepless nights, and constant dangers. Paul gave up his high standing in Israel and had nothing earthly to gain by following the Lord, which shows that the gospel is truly real. No human effort can explain how he endured so much. It was the power of the Holy Spirit that filled Paul with deep love for Christ, giving him strength even in his greatest weaknesses.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you ready to stand with God's people during hard times as well as good times?",
+    "How does Paul's willingness to suffer for Jesus strengthen your trust in the gospel?"
+   ],
+   "prayer": "Lord, thank You for welcoming us into Your family through Your grace. Give us the Holy Spirit's strength to serve You faithfully, even when following Jesus brings hardship or scorn. Help us not to boast in our own pride, but to rely on Your power in our weakness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 6",
+     "on": "2 Corinthians 11:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Corinthians 11:26",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

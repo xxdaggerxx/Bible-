@@ -1,0 +1,76 @@
+{
+ "id": "04-021-010",
+ "title": "The Journey to Moab",
+ "refs": [
+  "Numbers 21:10-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 4021017,
+   "end": 4021017,
+   "ref": "Numbers 21:17",
+   "ranges": [
+    [
+     4021017,
+     4021017
+    ]
+   ],
+   "title": "\"Spring Up, O Well\"",
+   "key_verse": [
+    4021017,
+    4021017
+   ],
+   "reflect": [
+    {
+     "text": "In the desert, God promised to give His people water, and Israel answered with faith and song. Instead of complaining in their dry surroundings, they sang before the water even bubbled up. We also face dry times in our lives. When our souls feel thirsty, God invites us not to grumble, but to trust His promise and sing with joyful hope.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This song was also an earnest prayer. The people called out, asking the deep waters to rise. In the same way, Jesus promises to place a spring of living water in believing hearts, rising to eternal life. We can ask God to clear away the clutter and weeds in our hearts so His Spirit can flow freely through us, reviving our churches and refreshing a weary world.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "While God gave the water, the leaders still picked up their staffs and dug into the dry sand. God gives His gifts generously, but He does not call us to be idle. As Charles Spurgeon reminds us, \"the Lord would have us active in obtaining grace.\" We dig by praying, reading Scripture, and gathering with God's people to seek the fresh springs He provides.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face dry or difficult times, do you tend to complain, or do you turn to God in hopeful song and prayer?",
+    "What clutter might you need to clear away so God's Spirit can flow more freely through your life?"
+   ],
+   "prayer": "Lord, when our hearts feel dry and weary, remind us of Your faithful promises. Clear away our distractions and sins so Your living water may spring up within us. Help us to seek You diligently each day, and let Your life-giving peace refresh both our church and our neighbors.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 17",
+     "on": "Numbers 21:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 21:17",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

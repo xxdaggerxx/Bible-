@@ -1,0 +1,74 @@
+{
+ "id": "13-016-007",
+ "title": "David’s Psalms of Thanksgiving",
+ "refs": [
+  "1 Chronicles 16:7-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13016007,
+   "end": 13016022,
+   "ref": "1 Chronicles 16:7-22",
+   "ranges": [
+    [
+     13016007,
+     13016022
+    ]
+   ],
+   "title": "Seeking God and Speaking of His Wonders",
+   "key_verse": [
+    13016011,
+    13016011
+   ],
+   "reflect": [
+    {
+     "text": "David's song calls us to praise the Lord and tell others about His wonders. Yet, as F. B. Meyer observed, \"there seems a too great reticence among Christian people about the best things.\" We easily talk about church events, sermons, and daily routines, but we often say very little about what God has done. What fills our hearts tends to come out of our mouths. When our minds are crowded with other things, we find it hard to talk naturally about the Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "To keep our love for God alive, we need to seek Him continually. Keeping our faith warm is much like building and tending a campfire. The Holy Spirit gives us the spark of life, but we are called to feed that fire every day. We do this through simple habits like regular prayer and reading the Bible. These small daily disciplines strengthen our walk with God and prepare us to serve Him in larger ways.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When we actively seek the Lord, our inner life is renewed. We can think about His mighty acts in Scripture, His care in our lives today, and His promises for the future. As we nurture this relationship, we are able to shine God's light to those around us and speak gladly of His goodness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What everyday topics usually fill your conversations, and how might you speak more often of God's goodness?",
+    "What simple habit, like daily prayer or Scripture reading, can you practice today to keep your faith burning?"
+   ],
+   "prayer": "Lord, help us seek Your face each day and tend the fire of faith You have placed in our hearts. Teach us to remember Your wondrous deeds and fill our thoughts with Your grace. Give us the courage to speak warmly of Your love and shine Your light to others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 16:9",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ryan Duncan",
+     "work": "Feeding the Fire - Crosswalk the Devotional - October 11",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-october-1-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

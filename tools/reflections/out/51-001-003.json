@@ -1,0 +1,121 @@
+{
+ "id": "51-001-003",
+ "title": "Thanksgiving and Prayer",
+ "refs": [
+  "Colossians 1:3-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 51001010,
+   "end": 51001010,
+   "ref": "Colossians 1:10",
+   "ranges": [
+    [
+     51001010,
+     51001010
+    ]
+   ],
+   "title": "\"Walk in a Manner Worthy\"",
+   "key_verse": [
+    51001010,
+    51001010
+   ],
+   "reflect": [
+    {
+     "text": "Learning about God is more than just collecting information in our heads. Real spiritual knowledge grows when we put God's truth into practice in our daily lives. As we stay close to Jesus and serve others in love, we begin to see His presence and work all around us. We come to know Him in a personal, living way when our faith moves into action.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Living a life worthy of the Lord does not mean we need to show off or create grand spectacles. People are often drawn to loud, impressive things, but God looks for quiet, humble obedience. Simple acts of faithful service please Him deeply, especially when we do them without seeking praise from human eyes. Releasing the urge to impress others brings lasting peace to our souls.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "When we combine active obedience with a humble heart, our lives bear real fruit. We do not need public applause to please our Master. Instead, we can simply serve where we are, trusting that every quiet act of love draws us closer to Him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where might God be calling you to turn your knowledge of Him into practical, loving service today?",
+    "Are there areas in your life where you serve to be noticed by others rather than to please God quietly?"
+   ],
+   "prayer": "Lord, help us to live out Your truth in humble obedience rather than just keeping it in our heads. Free us from the desire to impress other people with what we do. Teach us to serve quietly and faithfully, bearing good fruit that brings pleasure to You. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Kristen Terrette",
+     "work": "Growing in Knowledge of God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wholly-loved/growing-in-knowledge-of-god-wholly-loved-april-27.html"
+    },
+    "D3": {
+     "author": "Linda Vujnov",
+     "work": "Great Impression",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-april-20-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 51001003,
+   "end": 51001014,
+   "ref": "Colossians 1:3-14",
+   "ranges": [
+    [
+     51001003,
+     51001014
+    ]
+   ],
+   "title": "The Hope Stored Up in Heaven",
+   "key_verse": [
+    51001005,
+    51001005
+   ],
+   "reflect": [
+    {
+     "text": "In this life, we often face heavy weariness, grief, and ongoing struggles against sin. We fight battles against temptation and sorrow, longing for relief. Yet the gospel gives us a certain hope kept safe for us in heaven. As Charles Spurgeon wrote, this future hope is the \"fountain of joyous effort\" that sustains us today. Heaven promises full rest from our toil, victory over every enemy, and an eternal home where death and sin can never enter.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Looking ahead to heaven does not mean we ignore our responsibilities right now. Instead, knowing what waits for us gives us strength to live faithfully today. When we remember our true reward is coming in the next world, we can work hard without needing immediate rewards here. The hope of heaven fills us with cheer, strengthens our holiness, and helps us stand firm against temptation while we wait to hear our Savior welcome us home.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can fixing your eyes on the promised rest of heaven bring you joy in your current struggles?",
+    "In what way does the promise of an eternal reward encourage you to serve faithfully right now?"
+   ],
+   "prayer": "Father, thank You for the secure hope of heaven that You have stored up for us through the gospel. When we grow tired from daily battles and sorrows, lift our eyes to the rest and holiness waiting ahead. Give us strength to work with joy today, knowing that our eternal reward is safe with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 2",
+     "on": "Colossians 1:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "01-036-001",
+ "title": "The Descendants of Esau",
+ "refs": [
+  "Genesis 36:1-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1036001,
+   "end": 1036019,
+   "ref": "Genesis 36:1-19",
+   "ranges": [
+    [
+     1036001,
+     1036019
+    ]
+   ],
+   "title": "Earthly Blessings and True Faith",
+   "key_verse": [
+    1036007,
+    1036007
+   ],
+   "reflect": [
+    {
+     "text": "Throughout Genesis, Moses often records the family tree of the son outside the covenant just before turning his attention to the chosen heirs. Here we see the family of Esau, who cared little for spiritual realities, expanding into a large and powerful nation. God faithfully kept His promise to Isaac by blessing faithless Esau with many descendants, rulers, and great abundance.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Esau had so many livestock and goods that the land could not support both him and his brother Jacob. This shows us that God often provides earthly success and material wealth even to people who reject Him. Having riches, comfort, or worldly honor is never proof on its own that someone has authentic faith or belongs to God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This record challenges us to examine our own hearts. It can be very easy to focus on material gifts while ignoring eternal matters. God invites us to seek His kingdom above all else, rather than merely settling for the temporary blessings of this life.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever mistake earthly comfort or success for proof that your heart is right with God?",
+    "How can you make seeking God's kingdom your main priority instead of focusing only on worldly gifts?"
+   ],
+   "prayer": "Lord, thank You for Your kindness and the earthly gifts You provide each day. Please guard our hearts from loving the things of this world more than we love You. Help us to seek Your kingdom first and to put our trust in Your eternal promises. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Blessings for Esau",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/blessings-esau"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

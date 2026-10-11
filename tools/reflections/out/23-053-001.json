@@ -1,0 +1,137 @@
+{
+ "id": "23-053-001",
+ "title": "The Suffering Servant",
+ "refs": [
+  "Isaiah 53:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23053005,
+   "end": 23053005,
+   "ref": "Isaiah 53:5",
+   "ranges": [
+    [
+     23053005,
+     23053005
+    ]
+   ],
+   "title": "\"He was pierced for our transgressions\"",
+   "key_verse": [
+    23053005,
+    23053005
+   ],
+   "reflect": [
+    {
+     "text": "Religious artwork often softens how brutal the crucifixion really was. Before Jesus went to the cross, Roman soldiers whipped Him with heavy lashes that tore into His flesh. He faced public shame, cruel mockery, and agonizing physical torment for our sake.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "We were completely broken and rebellious against God, deserving death for our wrongdoing. Instead of leaving us condemned, Christ willingly took our place as our substitute. He bore God's judgment on the cross to pay our debt and make peace between us and God.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "As Charles Spurgeon wrote, Jesus stands before us as the \"mirror of agonizing love.\" His painful wounds bring spiritual healing and life to our dying souls. Remembering what our rescue cost Him fills our hearts with deep love and thankfulness every day.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering the pain Jesus suffered change the way you view His love for you?",
+    "In what area of your life do you need to receive the peace that Christ bought for you?"
+   ],
+   "prayer": "Lord Jesus, thank You for taking the punishment and pain that we deserved. Your wounds have healed our broken souls and given us peace with God. Help us to keep Your great love in our hearts throughout each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 31",
+     "on": "Isaiah 53:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Will Graham",
+     "work": "Will Graham Devotion: How the Cross Met Our 4 Greatest Needs",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/articles/will-graham-devotion-how-the-cross-met-our-4-greatest-needs"
+    },
+    "D4": {
+     "author": "Dr. Jack Graham",
+     "work": "The Power of Christ’s Pain for You - Powerpoint - March 12",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-march-29-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 23053001,
+   "end": 23053008,
+   "ref": "Isaiah 53:1-8",
+   "ranges": [
+    [
+     23053001,
+     23053008
+    ]
+   ],
+   "title": "The Lord Laid Our Guilt on Him",
+   "key_verse": [
+    23053006,
+    23053006
+   ],
+   "reflect": [
+    {
+     "text": "The Bible gives us an honest picture of our human condition. Every person who belongs to God must admit the same truth: we have all wandered away from Him like lost sheep. No one is righteous on their own, and we all share this fallen nature.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This confession is also deeply personal. Each of us has chosen our own selfish path, sinning against God in our own particular ways. Genuine repentance means dropping all our excuses and self-defense, acknowledging that we stand completely guilty before Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet this sorrowful truth does not leave us weeping in despair. Instead, it turns into comfort because the Lord took all our guilt and placed it upon His Servant. Where Christ bore our heavy misery, God's mercy took over, bringing rest and steady confidence to our weary hearts.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What personal sins or excuses do you need to confess honestly before the Lord today?",
+    "How does knowing that God placed your guilt on Jesus give you rest instead of fear?"
+   ],
+   "prayer": "Heavenly Father, we confess that we have wandered away from You and chosen our own selfish ways. Thank You for not leaving us to bear our guilt, but placing it all upon Jesus. Give our hearts quiet rest and joyful confidence in His mercy today. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 3",
+     "on": "Isaiah 53:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

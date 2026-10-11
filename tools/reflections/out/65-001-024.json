@@ -1,0 +1,60 @@
+{
+ "id": "65-001-024",
+ "title": "Doxology",
+ "refs": [
+  "Jude 1:24-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 65001024,
+   "end": 65001025,
+   "ref": "Jude 1:24-25",
+   "ranges": [
+    [
+     65001024,
+     65001025
+    ]
+   ],
+   "title": "Kept by His Joyful Hand",
+   "key_verse": [
+    65001024,
+    65001024
+   ],
+   "reflect": [
+    {
+     "text": "Life can bring heavy trials and deep doubts. In hard times, we often worry about whether our faith will hold out until the very end. We may look at our own weakness and wonder if our willpower is strong enough to keep us from falling away. But staying faithful does not ultimately rely on our own striving or human effort.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our real security rests in God Himself. He is fully able to guard His people from stumbling and bring them safely into His glorious presence without any fault. Even more wonderfully, God does not hold onto us reluctantly or out of cold duty. As David Mathis explains, the Lord preserves believers with great joy. We are safe because we are held by God's powerful hand and delighted love.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel anxious about your faith, do you rely on your own effort or on God's power to keep you?",
+    "How does knowing that God holds you with joy give you peace today?"
+   ],
+   "prayer": "Lord God, thank You that our faith does not depend on our own weak strength. Thank You for guarding us from stumbling and holding us fast with great delight. Help us to rest peacefully in Your powerful hands today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "David Mathis",
+     "work": "He Will Hold Me Fast",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/he-will-hold-me-fast"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "01-033-018",
+ "title": "Jacob Settles in Shechem",
+ "refs": [
+  "Genesis 33:18-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1033018,
+   "end": 1033020,
+   "ref": "Genesis 33:18-20",
+   "ranges": [
+    [
+     1033018,
+     1033020
+    ]
+   ],
+   "title": "Settling Down and Making God Your Own",
+   "key_verse": [
+    1033020,
+    1033020
+   ],
+   "reflect": [
+    {
+     "text": "When Jacob arrived safely in Canaan, he bought a plot of land and set up camp outside Shechem. However, he stopped short of traveling on to Bethel, the place he had previously vowed to visit. By choosing comfort and convenience over complete obedience, Jacob made a compromise that would later bring painful trouble to his household.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even with this compromise, Jacob still showed true devotion to the Lord upon entering the land. He built an altar and called it El-Elohe-Israel. Through this name, Jacob personally claimed God as his own God. There is a real difference between simply talking about God and knowing Him closely in your own life.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Our everyday routines and busy to-do lists can easily make us feel spiritually distant from the Lord. Yet God cares deeply about our ordinary days and invites us into an intimate, personal walk with Him. We are challenged to keep worship at the center of our homes by spending regular time with Him in prayer and Scripture.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there places in your life where you have settled for what is comfortable instead of following God completely?",
+    "How can you make personal prayer and worship a regular part of your daily routine this week?"
+   ],
+   "prayer": "Lord God, thank You for caring about the daily details of our lives and calling us to know You personally. Forgive us when we choose our own comfort over wholehearted obedience. Help us to put worship at the center of our homes and to walk closely with You every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Melissa Spoelstra",
+     "work": "The God of Me",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-may-25-2021.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Jacob Settles in Shechem",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jacob-settles-shechem"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

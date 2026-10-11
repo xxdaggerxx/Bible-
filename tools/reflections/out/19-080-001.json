@@ -1,0 +1,79 @@
+{
+ "id": "19-080-001",
+ "title": "Hear Us, O Shepherd of Israel",
+ "refs": [
+  "Psalms 80:1-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19080001,
+   "end": 19080019,
+   "ref": "Psalms 80:1-19",
+   "ranges": [
+    [
+     19080001,
+     19080019
+    ]
+   ],
+   "title": "Restore Us, O God of Hosts",
+   "key_verse": [
+    19080019,
+    19080019
+   ],
+   "reflect": [
+    {
+     "text": "The psalmist cries out for God to shine His face on His people and save them. We often live in a world that claims to follow God on the outside but lacks true godliness within. It is easy for us to grow comfortable with spiritual darkness instead of shining with Christ's light. Real restoration does not start with fixing other people or our nation first. It begins when we slow down, remember our deep need for a Savior, and ask God to revive our own hearts.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Setting aside quiet time for God's Word helps build lasting truth into our lives and families. We do not need to feel discouraged if we feel behind or have missed spiritual opportunities. God invites us to come to Him simply. We can ask Him to give us a fresh appetite for Scripture and to restore our love for His presence.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This psalm also compares God's people to a vine, and speaks of wild beasts trampling through it. Just as wild animals can blindly wreck a garden, people often harm God's good creation through carelessness. God gave human beings the special gift of seeing the wonder and beauty of the natural world. He calls us to live thoughtfully, cherishing, guarding, and caring for the earth rather than neglecting it.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you need God to bring fresh spiritual life to your own heart today?",
+    "In what ways can you show greater care for God's Word and His creation this week?"
+   ],
+   "prayer": "Lord God of Hosts, turn our hearts back to You and cause Your face to shine upon us. Forgive us when we grow comfortable with darkness or live thoughtlessly in the world You created. Give us a genuine hunger for Your Word, and begin a lasting revival within our own lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jack Graham",
+     "work": "Understanding Where True Restoration Begins",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-dec-6-2010-11642205.html"
+    },
+    "D2": {
+     "author": "Alex Crain",
+     "work": "\"Oops! Advent Began Last Sunday?\" - Crosswalk the Devotional - Nov. 30, 2011",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/oops-advent-began-last-sunday-crosswalk-the-devotional-nov-30-2011.html"
+    },
+    "D3": {
+     "author": "Barbour Publishing",
+     "work": "Wisdom from the Psalms 6/29",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-6-or-29-552416.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

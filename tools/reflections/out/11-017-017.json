@@ -1,0 +1,75 @@
+{
+ "id": "11-017-017",
+ "title": "Elijah Raises the Widow’s Son",
+ "refs": [
+  "1 Kings 17:17-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11017017,
+   "end": 11017024,
+   "ref": "1 Kings 17:17-24",
+   "ranges": [
+    [
+     11017017,
+     11017024
+    ]
+   ],
+   "title": "Bringing Sudden Pain to God",
+   "key_verse": [
+    11017022,
+    11017022
+   ],
+   "reflect": [
+    {
+     "text": "Faithfully obeying the Lord does not protect us from painful surprises. When the widow lost her son, she was overwhelmed with grief and blamed Elijah. Instead of arguing or defending himself, Elijah responded with patient gentleness. His quiet spirit eased the tension, and the hurting mother allowed him to take her lifeless child into his care.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Elijah carried the boy to the upper room where he was staying. This was a private place where Elijah was already accustomed to meeting God. Because he had a regular habit of quiet prayer, he did not panic in the crisis. Instead, he carried his honest sorrow straight to the Lord. Consistent prayer prepares us to meet life's sudden trials with steady faith.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God heard Elijah's earnest plea and brought the boy back to life. Seeing her son alive convinced the mother that Elijah's ministry was real and that God's word is completely reliable. Difficult moments remind us why we need a regular place of prayer, so we know where to go to seek God's restoring power.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you usually react when someone speaks to you in anger or grief?",
+    "Do you have a regular place of quiet prayer where you can bring sudden troubles to God?"
+   ],
+   "prayer": "Lord, help us respond with patience and calm when others are hurting. Teach us to meet You faithfully each day in quiet prayer. When painful surprises come, give us faith to bring all our sorrow directly to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "When Tragedy Strikes",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/when-tragedy-strikes1"
+    },
+    "D2": {
+     "author": "Leading The Way",
+     "work": "Painful Surprises",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-week-of-october-17.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

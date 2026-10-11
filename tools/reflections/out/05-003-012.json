@@ -1,0 +1,66 @@
+{
+ "id": "05-003-012",
+ "title": "Land Division East of the Jordan",
+ "refs": [
+  "Deuteronomy 3:12-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5003012,
+   "end": 5003022,
+   "ref": "Deuteronomy 3:12-22",
+   "ranges": [
+    [
+     5003012,
+     5003022
+    ]
+   ],
+   "title": "Do Not Be Afraid",
+   "key_verse": [
+    5003022,
+    5003022
+   ],
+   "reflect": [
+    {
+     "text": "Before Israel crossed the Jordan, Moses reminded Joshua of what God had already accomplished. Joshua had seen the defeat of two mighty kings with his own eyes. Remembering those past victories gave Joshua courage and hope as he faced future unknowns. In the middle of major transitions in leadership, God's past faithfulness provided a steady anchor.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Most of us will never face physical armies or literal giants. Yet our struggles are no less real. Our modern battles are often spiritual or emotional, bringing heavy burdens, doubt, and fear about what tomorrow holds.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Moses gave Joshua a clear command: do not be afraid. Believers do not need to give in to fear, because God Himself fights for us. When we reflect on what God has already done, we find the strength to move forward, knowing that the same God who helped us before will fight for us today.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What past times of God's faithfulness can you remember when you feel uncertain about the future?",
+    "What spiritual or emotional battles are you facing right now that you need to trust God to fight?"
+   ],
+   "prayer": "Lord God, thank You for being faithful in the past and for fighting our battles. When we face spiritual and emotional struggles, protect our hearts from fear. Help us to remember what You have already done and place our full trust in You for the days ahead. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Quiet Walk",
+     "work": "Quiet Walk - Feb. 17",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/quiet-walk/quiet-walk-feb-17-1126598.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

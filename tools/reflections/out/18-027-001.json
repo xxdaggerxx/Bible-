@@ -1,0 +1,74 @@
+{
+ "id": "18-027-001",
+ "title": "Job Affirms His Integrity",
+ "refs": [
+  "Job 27:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 18027005,
+   "end": 18027006,
+   "ref": "Job 27:5-6",
+   "ranges": [
+    [
+     18027005,
+     18027006
+    ]
+   ],
+   "title": "\"I Will Maintain My Integrity\"",
+   "key_verse": [
+    18027006,
+    18027006
+   ],
+   "reflect": [
+    {
+     "text": "Job was in deep pain, yet he refused to use his suffering as an excuse to turn toward sin. His companions urged him to admit to wrongs he had not committed, but Job would not compromise his testimony just to please them. In our lives, even minor dishonesties or small compromises can slowly tear down our spiritual integrity. Job chose instead to stand firm, knowing that keeping a blameless heart matters deeply.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Like Job, we are called to cling to a clear vision of what God wants us to be. Along the way, we face many obstacles. We slip, we fail, and other people may discourage or misunderstand us. Yet as F. B. Meyer wrote, \"Jesus who inspired the ideal waits to realize it\" when we open our hearts to Him. He satisfies our desire to do what is right and never lets down a seeking soul.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Holding to upright character and keeping our word can be difficult in a world where truthfulness is rare. But God does not leave us to struggle on our own during seasons of testing. He provides the strength we need to keep our conscience clear and remain faithful until the end.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you tempted to make small compromises or excuses when you go through difficult times?",
+    "How can relying on Jesus help you protect your character and keep your word this week?"
+   ],
+   "prayer": "Lord, thank you for giving us the strength to live with an honest heart. Guard us from making excuses or turning toward sin when we face painful trials. Help us to invite Jesus into our daily struggles so we may keep our conscience clear. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 27:6",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Bible Pathway",
+     "work": "The Integrity of Job",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/the-integrity-of-job-bible-study-minute-july-20-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

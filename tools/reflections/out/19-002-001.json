@@ -1,0 +1,73 @@
+{
+ "id": "19-002-001",
+ "title": "The Triumphant Messiah",
+ "refs": [
+  "Psalms 2:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19002001,
+   "end": 19002012,
+   "ref": "Psalms 2:1-12",
+   "ranges": [
+    [
+     19002001,
+     19002012
+    ]
+   ],
+   "title": "Refuge in the Exalted King",
+   "key_verse": [
+    19002012,
+    19002012
+   ],
+   "reflect": [
+    {
+     "text": "Earthly rulers and nations often fight against God and His authority. Throughout history and in our world today, people try to throw off God's standards and make their own rules. Yet opposing God's chosen King, Jesus Christ, is the same as declaring war against God Himself. All human plots against Him are completely useless, because God has already set His Son on the throne.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus is far more than an infant lying in a manger. The Old Testament Scriptures promised that He would reign as the exalted King and righteous Judge over all nations. Even when people push back against Him, God reaches out in kindness and urges everyone to turn from rebellion. Destruction comes to those who refuse the Son, but blessing belongs to those who trust Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because Christ is our sinless King, He calls us to give Him our wholehearted allegiance. We do not need to live in fear when the world opposes God or His truth. Christ actively defends His people, and He will conquer every enemy in the end.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what parts of your life are you tempted to follow your own rules rather than King Jesus?",
+    "How does knowing that Christ defends His people give you peace when the world opposes Him?"
+   ],
+   "prayer": "Lord God, thank You for establishing Jesus as the rightful King over all the earth. Forgive us for the times we want our own way instead of Your good guidance. Help us to gladly submit to Christ and take our refuge in Him alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Michael Youssef, Ph.D.",
+     "work": "More Than a Babe in a Manger",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-week-of-november-29.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Opposing the Lord's Annointed",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/opposing-lords-annointed"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

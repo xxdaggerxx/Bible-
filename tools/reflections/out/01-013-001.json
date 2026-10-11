@@ -1,0 +1,73 @@
+{
+ "id": "01-013-001",
+ "title": "Abram and Lot Part Ways",
+ "refs": [
+  "Genesis 13:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1013008,
+   "end": 1013009,
+   "ref": "Genesis 13:8-9",
+   "ranges": [
+    [
+     1013008,
+     1013009
+    ]
+   ],
+   "title": "\"Please Let There Be No Contention\"",
+   "key_verse": [
+    1013008,
+    1013008
+   ],
+   "reflect": [
+    {
+     "text": "Having plenty of possessions can test our character even more than going through hard times. As Abram and Lot grew wealthier, the land could not support all their herds, and arguments started between their workers. Abram recognized that growing wealth was straining their relationship, and he chose to protect peace within the family rather than fight over limited resources.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Abram was the older relative and the one God had promised to bless, so he could have pulled rank and taken the first pick. Instead, he acted as an unselfish mentor and waived his personal rights, offering Lot first choice of the land. A true life of faith means being willing to let go of what we feel entitled to, trusting God rather than demanding our own way.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Insisting on our own rights and advantages can dull our spiritual insight and stop our growth. Our natural impulse is to look out for ourselves and grab what looks best, but Abram chose obedience over self-interest. Believers honor God when they trust his care instead of simply seizing what seems immediately advantageous.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a relationship in your life right now where insisting on your rights is creating tension?",
+    "What helps you trust God to provide for you when you choose to let someone else go first?"
+   ],
+   "prayer": "Lord, help us to value peace with others more than our possessions or status. Teach us to let go of our personal rights and trust your care. Give us the faith to seek your direction rather than simply grabbing what looks good to us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Chuck Swindoll",
+     "work": "Prosperity - Today's Insight - August 31, 2024",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-august-31-2024.html"
+    },
+    "D2": {
+     "author": "Oswald Chambers",
+     "work": "The Test of Self-Interest",
+     "site": "My Utmost for His Highest",
+     "url": "https://utmost.org/modern-classic/the-test-of-self-interest/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

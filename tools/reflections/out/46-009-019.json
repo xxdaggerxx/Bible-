@@ -1,0 +1,79 @@
+{
+ "id": "46-009-019",
+ "title": "Paul the Servant to All",
+ "refs": [
+  "1 Corinthians 9:19-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46009019,
+   "end": 46009023,
+   "ref": "1 Corinthians 9:19-23",
+   "ranges": [
+    [
+     46009019,
+     46009023
+    ]
+   ],
+   "title": "Becoming a Servant to Reach People",
+   "key_verse": [
+    46009022,
+    46009022
+   ],
+   "reflect": [
+    {
+     "text": "Paul had one main goal in everything he did: to see people saved. He did not just want to make people better behaved or teach them interesting facts. He knew people needed forgiveness and new life in Christ. Because this mattered so much to him, Paul gladly set aside his own personal preferences and rights so nothing would get in the way of sharing the good news.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "To reach others today, we need to meet them right where they are. Many people know very little about the Bible. Instead of giving one-sided speeches, we must start with genuine kindness and compassion. When we listen to others and adapt how we speak to fit their background, we build a bridge of trust.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This means we should avoid pulling away from the world around us. Instead, we can look for creative ways to connect with neighbors and friends through everyday community activities. Any intentional step we take to cross the gap to non-believers can lead to a lasting impact for Christ.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What personal preferences could you set aside to make it easier for someone to hear the gospel?",
+    "How can you show genuine care and listen more closely to a neighbor or coworker this week?"
+   ],
+   "prayer": "Lord, give us your heart of compassion for the people around us. Help us set aside our own preferences and step into our community with love. Teach us to listen well and build connections that point others to Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 7",
+     "on": "1 Corinthians 9:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "Start with Compassion",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-october-7-2022.html"
+    },
+    "D3": {
+     "author": "Jack Graham",
+     "work": "How to Make Connections for Christ",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-june-1-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

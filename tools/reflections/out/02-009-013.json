@@ -1,0 +1,61 @@
+{
+ "id": "02-009-013",
+ "title": "The Seventh Plague: Hail",
+ "refs": [
+  "Exodus 9:13-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2009013,
+   "end": 2009035,
+   "ref": "Exodus 9:13-35",
+   "ranges": [
+    [
+     2009013,
+     2009035
+    ]
+   ],
+   "title": "Safe from the Storm in God's Shelter",
+   "key_verse": [
+    2009026,
+    2009026
+   ],
+   "reflect": [
+    {
+     "text": "When terrible hail and lightning fell across Egypt, destroying crops and trees, one place remained completely peaceful. In the land of Goshen, where the Israelites lived, not a single hailstone fell. As F. B. Meyer notes, God's people were safe inside His solemn covenant promise to Abraham. They were not protected because of their own goodness or earned merit, for they were merely enslaved people. They were safe simply because God had promised to be their God and shield them under His wings.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In the very same way, we find our refuge from judgment and fear in Jesus Christ. We do not enter this shelter through our own works or beauty, but by trusting in the Lord Jesus. He let the terrible storm sweep over His own heart on our behalf so that it would never touch us. Resting in Him by faith, we know that He is our hiding place, deliverer, and peace in every storm.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you trying to earn God's protection by your own effort, or are you resting in Jesus as your true shelter?",
+    "How does knowing that Jesus took the storm for you bring you peace today?"
+   ],
+   "prayer": "Lord Jesus, thank You for being our strong shelter and hiding place. You bore the storm of judgment on the cross so that we could be forgiven and secure in Your love. Help us to rest completely in Your promises today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 9:26",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

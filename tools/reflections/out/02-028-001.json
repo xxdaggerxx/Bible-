@@ -1,0 +1,73 @@
+{
+ "id": "02-028-001",
+ "title": "Garments for the Priests",
+ "refs": [
+  "Exodus 28:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2028001,
+   "end": 2028005,
+   "ref": "Exodus 28:1-5",
+   "ranges": [
+    [
+     2028001,
+     2028005
+    ]
+   ],
+   "title": "Garments of Glory and Beauty",
+   "key_verse": [
+    2028002,
+    2028002
+   ],
+   "reflect": [
+    {
+     "text": "God instructed Moses to make holy clothing for Aaron to give him glory and beauty. The Lord did not ask for garments that were only practical or useful. As R.C. Sproul pointed out, God values beauty alongside goodness and truth, with His own character setting the standard. Sometimes we settle for what is merely functional in church life, but our worship and community can honor God by showing tasteful beauty and care.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "These sacred clothes gave Aaron a clear public identity and showed dignity in his role as high priest. They showed visually that he was set apart for God and mirrored the grandeur of the Lord he served. Aaron also carried the names of the people over his heart, which reminded him to bring their needs directly into God's presence.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Today, believers in Jesus represent Him through godly conduct in everyday life. We are called to honor God in our shared life and worship, and to faithfully bring the needs of other people before Him in prayer.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can the way you live and worship reflect God's honor and beauty to the people around you?",
+    "Who is in need right now that you can carry before God in prayer?"
+   ],
+   "prayer": "Lord God, thank You for Your majesty and for the beauty of Your character. Help our worship and our daily lives to honor You with care and dignity. Give us faithful hearts to pray for others and bring their needs before You today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "All Dressed Up - One Year Devotions for Men",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/all-dressed-up-one-year-devotions-for-men-june-20.html"
+    },
+    "D2": {
+     "author": "R.C. Sproul",
+     "work": "The Church Adorned with Beauty",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/church-adorned-beauty"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

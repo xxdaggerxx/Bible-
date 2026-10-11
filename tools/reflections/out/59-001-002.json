@@ -1,0 +1,123 @@
+{
+ "id": "59-001-002",
+ "title": "Rejoicing in Trials",
+ "refs": [
+  "James 1:2-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 59001002,
+   "end": 59001004,
+   "ref": "James 1:2-4",
+   "ranges": [
+    [
+     59001002,
+     59001004
+    ]
+   ],
+   "title": "\"Consider It Pure Joy\"",
+   "key_verse": [
+    59001002,
+    59001002
+   ],
+   "reflect": [
+    {
+     "text": "When troubles come our way, Scripture tells us to welcome them with joy instead of feeling defeated. This does not mean we must pretend that painful moments feel pleasant. Instead, James calls us to see our hardships as open doors for spiritual growth. Kelly McFadden compares this to an oyster that turns an irritating grain of sand into a lovely pearl. In the same way, God takes our difficult seasons and uses them to shape our character and build mature faith.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Biblical testing serves to purify our faith rather than destroy it. Our trust in God may start small, but it grows stronger as He guides us through diverse struggles. If we try to deny our hardships, flee from them, or ignore them, we can miss the lessons God wants to teach us. When we choose to endure faithfully, trials strip away our reliance on worldly hopes and teach us to depend wholly on Christ.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face an unexpected trouble, do you usually try to run away from it, or do you ask what God might be teaching you?",
+    "How has going through a past trial helped your trust in Christ become stronger?"
+   ],
+   "prayer": "Lord, help us to trust You when difficult times come our way. Teach us not to turn to worldly comfort, but to rely wholly on Christ. Please work through our daily trials to shape our faith and produce patient endurance in us. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Trials of Various Kinds",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/trials-various-kinds"
+    },
+    "D4": {
+     "author": "Kelly McFadden",
+     "work": "Becoming a Pearl",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/becoming-a-pearl-homeword-november-12.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 59001002,
+   "end": 59001012,
+   "ref": "James 1:2-12",
+   "ranges": [
+    [
+     59001002,
+     59001012
+    ]
+   ],
+   "title": "Wisdom to Ask and Grace to Endure",
+   "key_verse": [
+    59001012,
+    59001012
+   ],
+   "reflect": [
+    {
+     "text": "When we look at our own lives, we quickly realize how much we lack wisdom. We do not know how to guide our own steps, and we easily make foolish mistakes even in simple matters. Yet God invites us to come and simply ask Him for direction. He gives generously to all of us without scolding us for our lack of understanding. We only need to pray in faith, trusting His sure promise that heavenly wisdom will be given.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Walking with the Lord also means enduring through testing without rebelling against Him or giving up our integrity. Charles Spurgeon wrote that the crown of life is \"the hallmark of divine approval\" for those who stand the test. This promised reward is true, holy life given to those who genuinely love God. Hard times reveal where our hearts belong, because only a sincere love for the Lord will hold fast to the end without turning back to the world.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you bring both your big decisions and your simple daily choices to God in prayer for His wisdom?",
+    "How does the promise of eternal life encourage you to stay faithful to God when your love is tested?"
+   ],
+   "prayer": "Heavenly Father, give us the wisdom we lack to guide our daily steps without stumbling. Keep our hearts from turning back to the world when we face hard tests. Deepen our love for You so that we remain faithful and receive the life You have promised. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 8",
+     "on": "James 1:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 14",
+     "on": "James 1:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

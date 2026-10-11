@@ -1,0 +1,78 @@
+{
+ "id": "40-007-024",
+ "title": "The House on the Rock",
+ "refs": [
+  "Matthew 7:24-27",
+  "Luke 6:46-49"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40007024,
+   "end": 40007027,
+   "ref": "Matthew 7:24-27; Luke 6:46-49",
+   "ranges": [
+    [
+     40007024,
+     40007027
+    ],
+    [
+     42006046,
+     42006049
+    ]
+   ],
+   "title": "Building Our Lives on the Rock",
+   "key_verse": [
+    40007024,
+    40007024
+   ],
+   "reflect": [
+    {
+     "text": "Jesus teaches that hard times and painful storms will come to all of us. Just as a weak foundation causes a structure to shift and collapse, our lives break down when we depend on the wrong things. We often look for security in our careers, relationships, or status, but these cannot last. Obeying Jesus anchors us to Him, the only foundation we can never lose.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "True wisdom means closing the distance between knowing God's Word and actually living it out. Our faith is truly tested when our circumstances fall apart. It is easy to listen to what Jesus says, but hearing without doing leaves our lives without support when trouble arrives.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This practice must reach into our everyday prayer lives as well. We often bring our requests to God, yet we keep holding onto our anxiety instead of handing it over. Building on the rock means we inspect our lives regularly, obey what Jesus taught, and release our worries to Him completely.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What temporary things are you most tempted to rely on for your security?",
+    "Where is there a gap between what you know from God's Word and what you are doing?"
+   ],
+   "prayer": "Lord Jesus, help us not only to hear Your teachings, but to put them into practice today. Show us where we are leaning on things that will not last, and teach us to release our worries to You. Keep our lives firmly anchored in You through every storm. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Lynn Cowell",
+     "work": "Gaining What I Cannot Lose",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-december-22-2021.html"
+    },
+    "D2": {
+     "author": "Clarence L. Haynes Jr.",
+     "work": "Is Your Prayer Life Built on the Rock?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/is-your-prayer-life-built-on-the-rock-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

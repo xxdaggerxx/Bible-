@@ -1,0 +1,67 @@
+{
+ "id": "03-012-001",
+ "title": "Purification after Childbirth",
+ "refs": [
+  "Leviticus 12:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3012001,
+   "end": 3012008,
+   "ref": "Leviticus 12:1-8",
+   "ranges": [
+    [
+     3012001,
+     3012008
+    ]
+   ],
+   "title": "An Offering within Reach",
+   "key_verse": [
+    3012008,
+    3012008
+   ],
+   "reflect": [
+    {
+     "text": "In this law, when a mother could not afford a lamb, God kindly allowed her to bring two birds instead. This tender rule showed God's deep care for people with very little. It also looked ahead to Jesus, whose own parents were so poor that they brought this same humble gift. Jesus owned everything, yet He chose to become poor so that we could be filled with God's blessings.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "All of these ancient sacrifices pointed toward the one true sacrifice of Jesus on the cross. His gift of salvation is completely within reach of the poorest and weakest person. No one is turned away for lacking money or having nothing good of their own to offer. The gospel is a free gift for anyone who simply trusts in Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This provision also reminds us that what matters most is who we trust, not how strong we feel. As F. B. Meyer notes, \"the question is not as to the quantity but the object of faith.\" A timid, small faith in Jesus saves just as fully as a strong, bold faith, because Jesus Himself is the one who rescues us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever worry that your faith is too small or weak for God to accept you?",
+    "How does knowing that Jesus willingly lived in poverty comfort you today?"
+   ],
+   "prayer": "Lord God, thank You that salvation in Jesus is completely free and open to all of us. When our faith feels weak or small, help us to keep our eyes fixed on Your Son. Thank You for welcoming us in our poverty and giving us life through Him. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 12:8",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

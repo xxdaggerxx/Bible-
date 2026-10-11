@@ -1,0 +1,122 @@
+{
+ "id": "30-001-001",
+ "title": "Judgment on Israel’s Neighbors",
+ "refs": [
+  "Amos 1:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 30001001,
+   "end": 30001001,
+   "ref": "Amos 1:1",
+   "ranges": [
+    [
+     30001001,
+     30001001
+    ]
+   ],
+   "title": "\"Among the Sheepherders of Tekoa\"",
+   "key_verse": [
+    30001001,
+    30001001
+   ],
+   "reflect": [
+    {
+     "text": "God chose Amos to speak His message, even though Amos was not a trained prophet or a member of the religious ruling class. He was simply a shepherd and an ordinary farm worker. F. B. Meyer reminds us that \"it is not what a man has, but what he is, that matters.\" God often delights in using people whom the world considers weak or common. When our hearts are devoted to Him, God can take our daily, ordinary labor and use it for His holy purposes.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Amos was sent to deliver God's warning during a time when the nation enjoyed great wealth and military success. Sadly, material comfort often tempts people to rely on their own strength. In those days, the ruling classes became proud and began to mistreat the poor. This reminds us to stay watchful against pride. Instead of trusting in wealth or status, we are called to depend on God and use whatever influence we have to serve others.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ordinary parts of your daily life can you serve God faithfully?",
+    "Are you ever tempted to trust in your own success rather than relying on the Lord?"
+   ],
+   "prayer": "Lord, thank You that You love to work through ordinary people. Keep our hearts pure and completely devoted to You. Guard us from pride and self-reliance when life is comfortable, and show us how to use what we have to help others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Amos 1:1",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Prophecy of Amos",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/prophecy-amos"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 30001001,
+   "end": 30001015,
+   "ref": "Amos 1:1-15",
+   "ranges": [
+    [
+     30001001,
+     30001015
+    ]
+   ],
+   "title": "The Sovereign Judge of All Nations",
+   "key_verse": [
+    30001002,
+    30001002
+   ],
+   "reflect": [
+    {
+     "text": "The opening chapter of Amos presents the Lord as a roaring lion whose voice shakes the earth. This powerful image shows that the sovereign Lord rules over every nation, not just Israel. For years, neighboring kingdoms had committed repeated acts of cruelty, including human trafficking, violent conquest, and ruthless anger. The repeating phrase about their sins piling up shows that God's patience had reached its limit. God sees every single action on earth, and He will not allow terrible injustice to go unanswered forever.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Knowing that God is the just Judge brings deep comfort to anyone who has suffered mistreatment, because no wrong escapes His sight. At the same time, His anger against cruelty warns us to look closely at our own hearts. We need to turn away from any hidden greed, anger, or selfishness in our daily lives. As followers of Jesus, we can bring our sins to God without terror, because Jesus bore the punishment for our guilt on the cross.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God sees all injustice bring you peace when you face unfair treatment?",
+    "What selfish thoughts or lingering anger do you need to confess to the Lord today?"
+   ],
+   "prayer": "Heavenly Father, You are the righteous Judge of all the earth who sees every hidden deed. Thank You for Your justice and for caring for those who are hurt. Search our hearts, forgive our sins through the sacrifice of Christ, and teach us to live with compassion toward all people. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "The Lord of All Nations",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-august-14-2025.html"
+    },
+    "D4": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Amos 1",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/2-kings-25-hebrews-7-amos-1-psalm-144/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

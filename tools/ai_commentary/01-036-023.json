@@ -1,0 +1,156 @@
+{
+ "book": 1,
+ "chapter": 36,
+ "first": 23,
+ "last": 43,
+ "ref": "Genesis 36:23-43",
+ "notes": [
+  {
+   "verse": 23,
+   "end": 23,
+   "meaning": "Shobal was one of the early clan leaders living in the hill country of Seir, and these five men were his sons. Listing them preserves the history of the original inhabitants of the land before Esau's family fully took over.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 24,
+   "end": 24,
+   "meaning": "Zibeon's sons are named here, including Anah, who found hot springs while pasturing his father's donkeys in the wilderness. Even while doing an ordinary, humble chore, he made a valuable discovery that helped his people. Faithful work in everyday duties can bring unexpected blessings.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 25,
+   "end": 26,
+   "meaning": "Anah had a son named Dishon and a daughter named Oholibamah. Dishon's four sons are also named as part of the growing Horite family tree. These details show how the ancient clans branched out and built settlements across the wilderness.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 27,
+   "end": 28,
+   "meaning": "These lines record the sons of Ezer and Dishan, who were also clan leaders among the native Horites. Keeping track of these family branches helped later readers understand who held the surrounding mountains before Edom rose to power.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 29,
+   "end": 30,
+   "meaning": "This summary names the seven main chiefs of the Horites who governed the different areas of Mount Seir. Esau's descendants eventually intermarried with these families and absorbed their territory into the nation of Edom.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 31,
+   "end": 31,
+   "meaning": "Edom was governed by a line of kings long before Israel had any king of its own. God had promised Jacob that kings would come from his family, but the children of promise had to wait patiently while other nations reached worldly power first. God's promises may take time, but they always come true in the end.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many scholars view this phrase as an editorial note written during or after the time of King Saul, since the wording seems to look back on Israel's established monarchy.",
+     "sources": [
+      "https://biblehub.com/commentaries/genesis/36-31.htm",
+      "https://www.studylight.org/commentaries/eng/ebc/genesis-36.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 32,
+   "end": 33,
+   "meaning": "Bela was the first recorded king of Edom, ruling from his city of Dinhabah, and Jobab succeeded him after his death. Because each king came from a different town and family, Edom's kings were likely elected by clan leaders rather than inheriting a dynasty.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 34,
+   "end": 35,
+   "meaning": "When Jobab died, Husham became king, followed by Hadad son of Bedad. Hadad won fame by defeating a Midianite army in the fields of Moab, showing how Edomite kings defended and expanded their regional influence.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 36,
+   "end": 37,
+   "meaning": "Samlah ruled after Hadad, and then Shaul from Rehoboth on the Euphrates River took the throne. Because Shaul came from far away along the river, it shows that even leaders from outside Edom's borders could be chosen as king.",
+   "meaning_sources": [
+    "Keil & Delitzsch",
+    "https://www.studylight.org/commentaries/eng/tpc/genesis-36.html"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 38,
+   "end": 39,
+   "meaning": "Baal-hanan ruled next, and Hadad took his place, living in the city of Pau with his wife Mehetabel. Unlike the earlier kings, Hadad's death is not mentioned here, which suggests he was still on the throne when this record was originally composed.",
+   "meaning_sources": [
+    "Keil & Delitzsch",
+    "https://www.studylight.org/commentaries/eng/tpc/genesis-36.html"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 40,
+   "end": 41,
+   "meaning": "This list records the chiefs of Edom and the specific districts they ruled. Several of these territories took their names from well-known family leaders who first established settlements there.",
+   "meaning_sources": [
+    "Keil & Delitzsch",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 42,
+   "end": 43,
+   "meaning": "The chapter finishes by listing the final chiefs and reminding readers that Esau is the father of all the Edomites. While Israel was still enslaved or wandering with only a promise, Esau's family already possessed cities and lands of their own. It is far better to hold God's promise for the future than to settle for quick worldly success.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

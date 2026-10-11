@@ -1,0 +1,133 @@
+{
+ "id": "19-042-001",
+ "title": "As the Deer Pants for the Water",
+ "refs": [
+  "Psalms 42:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19042001,
+   "end": 19042002,
+   "ref": "Psalms 42:1-2",
+   "ranges": [
+    [
+     19042001,
+     19042002
+    ]
+   ],
+   "title": "\"As the Deer Pants for Streams of Water\"",
+   "key_verse": [
+    19042001,
+    19042001
+   ],
+   "reflect": [
+    {
+     "text": "Walking through seasons of sadness, grief, or inner turmoil is a normal part of human life, not a sign of sin. Even Jesus and faithful believers throughout history faced moments of deep sorrow. Being honest about our downcast state allows us to seek God and step into His light. Like a panting deer searching for water in an arid land, our souls crave the comfort of God's presence.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "A deer pants after running hard or fleeing danger, picturing how exhausted we feel when trials overwhelm us. Just as an injured animal searches for water to survive, our hurting hearts instinctively need God to heal our wounds. Water is not an optional extra for our bodies, and God is completely essential for our spiritual survival.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "When our strength is gone, we do not have to hide our weakness. Jesus welcomes everyone who feels worn out to come straight to Him. He offers Himself as the living water, restoring our weary hearts and satisfying the deep thirst within us.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel spiritually drained or weary, how easily do you admit your need for God?",
+    "How can coming to Jesus as living water change the way you face your trials today?"
+   ],
+   "prayer": "Lord, you know the moments when my heart is tired and thirsty for you. Thank you that feeling sorrow is not a sin, and that Jesus offers living water to heal my soul. Help me to turn honestly to you whenever I am weak, knowing you alone can restore my spirit. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Longing for God",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/longing-for-god1"
+    },
+    "D4": {
+     "author": "Emma Danzey",
+     "work": "A Closer Look at Psalm 42 and What It Means to Thirst for God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/psalm-42-what-it-means-to-thirst-for-god-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19042001,
+   "end": 19042011,
+   "ref": "Psalms 42:1-11",
+   "ranges": [
+    [
+     19042001,
+     19042011
+    ]
+   ],
+   "title": "Hope in God Through the Deep",
+   "key_verse": [
+    19042007,
+    19042007
+   ],
+   "reflect": [
+    {
+     "text": "In Psalm 42, the waves and breakers feel overwhelming, yet the depths of our sorrow are met by greater depths in God. As F. B. Meyer explains, the deep of God's heart calls to the deep of our human need. God is always first to reach out. Whatever poverty, weakness, or groaning we feel inside, Christ answers with the limitless riches of His grace, His undeserved kindness. When our grief is at its lowest, God's boundless love reaches down to supply everything we lack through faith.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because God's love is sure, we do not need to give in to hopeless thoughts. Winter always yields to spring, and darkness always gives way to morning light. Charles Spurgeon reminds us that \"God fails thee not,\" and His care for us in the dark is as real as it was during our brightest seasons. Even when trials feel heavy, God uses them for our lasting good, and our present sorrow will not last forever.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Instead of walking in constant mourning, we can place our hope firmly in the Lord. His song remains with us even through the night. By looking past our temporary trials to the joy of eternity with Christ, we can praise Him right in the middle of our troubles.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What deep sorrows or worries do you need to bring to God's boundless love today?",
+    "How does remembering that God's love does not change in the dark help you keep hoping in Him?"
+   ],
+   "prayer": "Heavenly Father, thank you that your deep love reaches all the way to my deepest needs. Even when heavy waves seem to roll over me, remind my heart that you never fail. Give me faith to trust your goodness and praise you through the darkest night. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 21",
+     "on": "Psalms 42:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 42:7",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

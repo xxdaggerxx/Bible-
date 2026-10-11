@@ -1,0 +1,75 @@
+{
+ "id": "44-004-001",
+ "title": "Peter and John before the Sanhedrin",
+ "refs": [
+  "Acts 4:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44004012,
+   "end": 44004012,
+   "ref": "Acts 4:12",
+   "ranges": [
+    [
+     44004012,
+     44004012
+    ]
+   ],
+   "title": "\"No Other Name\"",
+   "key_verse": [
+    44004012,
+    44004012
+   ],
+   "reflect": [
+    {
+     "text": "Our culture often encourages us to view Jesus as just one option among many religious paths. People in ancient Rome thought the same way, and Peter and John faced anger because they refused to treat Christ as merely one choice among others. When we talk with people today, we can easily feel hesitant or embarrassed to declare that Jesus is the only way to be saved.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet when we see our sin clearly, we realize that God was under no obligation to provide any path of rescue for us. Having only one Savior is not an unfair limitation by God. Instead, giving us Jesus is a lavish gift of grace, which means God's undeserved kindness and love. No other source can save us from eternal death.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Watering down the truth about Christ weakens the gospel and robs people of true hope. Because God has given this saving name under all of heaven, we are called to follow the apostles' courage. We can gladly and boldly bring the good news of Jesus to people in every nation.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When do you feel most hesitant to speak about Jesus as the only Savior?",
+    "How does remembering that God's rescue is a free gift of grace help you share Christ with courage?"
+   ],
+   "prayer": "Lord God, thank you for your lavish kindness in giving us Jesus when you owed us nothing. Grant us courage like the apostles to speak the truth without shame or fear. Help us to share the saving name of Christ faithfully with those around us and with all nations. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg (Truth For Life)",
+     "work": "No Other Name",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-january-19-2024.html"
+    },
+    "D2": {
+     "author": "Scott Hubbard",
+     "work": "There Is a Name: Our Exclusive and Precious Christ",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/there-is-a-name"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

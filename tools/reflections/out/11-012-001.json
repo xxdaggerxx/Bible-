@@ -1,0 +1,66 @@
+{
+ "id": "11-012-001",
+ "title": "Rebellion against Rehoboam",
+ "refs": [
+  "1 Kings 12:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11012001,
+   "end": 11012015,
+   "ref": "1 Kings 12:1-15",
+   "ranges": [
+    [
+     11012001,
+     11012015
+    ]
+   ],
+   "title": "A Young King's Folly",
+   "key_verse": [
+    11012014,
+    11012014
+   ],
+   "reflect": [
+    {
+     "text": "When Rehoboam became king, he faced an immediate test of his leadership. The people asked him to lighten the heavy burden of forced labor that King Solomon had placed on them. Older leaders who had served Solomon gave him wise advice. They urged him to care for the people and speak kindly to them. But Rehoboam turned away from their wisdom. Instead, he asked the younger men he had grown up with, and they advised him to rule with harsh threats.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Rehoboam chose the cruel advice of his peers and spoke harshly to the people. His oppressive words pushed the people away and triggered a massive rebellion that split the nation in two. This painful division fulfilled what God had already spoken through His prophet. God guided history through these human events, yet Rehoboam was still fully accountable for his foolish choices.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We see here that our decisions matter deeply. God directs all things according to His purpose, but we remain responsible for how we treat others and whose counsel we choose to follow.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Whose advice do you usually listen to when you face a hard decision?",
+    "How can you choose kindness and humble service over harsh words today?"
+   ],
+   "prayer": "Lord, give us wisdom to listen to sound counsel rather than foolish voices. Help us to treat others with gentleness and care instead of being harsh. Remind us that You guide our lives, while teaching us to take responsibility for our actions. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "A Young King’s Folly",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/young-kings-folly"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

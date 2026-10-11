@@ -1,0 +1,80 @@
+{
+ "id": "40-011-001",
+ "title": "John’s Inquiry",
+ "refs": [
+  "Matthew 11:1-6",
+  "Luke 7:18-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40011001,
+   "end": 40011006,
+   "ref": "Matthew 11:1-6; Luke 7:18-23",
+   "ranges": [
+    [
+     40011001,
+     40011006
+    ],
+    [
+     42007018,
+     42007023
+    ]
+   ],
+   "title": "Trusting God in Times of Doubt",
+   "key_verse": [
+    40011006,
+    40011006
+   ],
+   "reflect": [
+    {
+     "text": "John the Baptist was locked in prison for doing what was right. While waiting in that dark place, he faced real discouragement and wondered about Jesus. Even the strongest believers can wrestle with doubt when hard times hit. Yet Jesus did not condemn John for his questions. We are completely free to bring our honest struggles to the Lord when life does not turn out the way we planned.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead of scolding John, Jesus pointed to the good things taking place: people were being healed, the dead were raised, and the good news was being preached. Looking back at what God has done helps restore our faith when current answers seem slow to arrive. Blaming God during hardship leads nowhere. True biblical faith accepts what God chooses to give rather than demanding what we want.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus told the messengers that anyone who refuses to stumble or take offense over His ways is blessed. When our surroundings seem dark, God remains good and in sovereign control. We can endure our hardest seasons by trusting that the Father's heart is loving and His timing is perfect.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What honest questions or doubts do you need to bring to Jesus today instead of hiding them?",
+    "How can remembering what God has done in the past help you trust His plan right now?"
+   ],
+   "prayer": "Lord Jesus, thank You for welcoming our honest questions when we feel discouraged and confused. Please help us not to blame You or fall away when life becomes hard. Give us the faith to accept Your will, knowing that You are good and in control. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "Still Good, Still in Control",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-august-30-2026.html"
+    },
+    "D2": {
+     "author": "Susie Larson",
+     "work": "When We Lose Heart",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/when-we-lose-heart-bible-study-minute-may-25-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

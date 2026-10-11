@@ -1,0 +1,67 @@
+{
+ "id": "35-003-001",
+ "title": "Habakkuk’s Prayer",
+ "refs": [
+  "Habakkuk 3:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 35003001,
+   "end": 35003016,
+   "ref": "Habakkuk 3:1-16",
+   "ranges": [
+    [
+     35003001,
+     35003016
+    ]
+   ],
+   "title": "God's Ways Are Everlasting",
+   "key_verse": [
+    35003006,
+    35003006
+   ],
+   "reflect": [
+    {
+     "text": "In this prayer, the prophet Habakkuk remembers God's mighty deeds in the past. People often change their minds. We act quickly out of fear or sudden anger, and we often regret what we have done. But God is never caught by surprise. As Charles Spurgeon wrote, \"Man's ways are variable, but God's ways are everlasting.\" What God has done in the past to rescue His people, He is ready to do again.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's ways do not change because His character never changes. He is always wise, just, tender, and faithful. His actions show who He really is. In Habakkuk's prayer, mountains shake and waters rush as the Lord marches out to rescue His people. No power on earth can stop God's hand or turn Him back. His ways are built on what is good and right, so they will stand forever.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even when difficult days lie ahead, we can turn to our heavenly Father with steady confidence. Because God does not change, we can be sure of His kindness and help. Jesus Christ remains the same yesterday, today, and forever, and in Him God is always gracious to us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God never changes comfort you when your life feels uncertain?",
+    "How does remembering God's past help give you confidence to trust Him today?"
+   ],
+   "prayer": "Heavenly Father, thank You that Your character and Your ways never change. When the world around us shakes and our own hearts feel weak, help us to trust in Your unchanging power and mercy. Keep our eyes fixed on Jesus, who is the same yesterday, today, and forever. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 12",
+     "on": "Habakkuk 3:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

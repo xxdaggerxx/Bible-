@@ -1,0 +1,75 @@
+{
+ "id": "24-009-001",
+ "title": "A Lament over Zion",
+ "refs": [
+  "Jeremiah 9:1-26"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 24009023,
+   "end": 24009024,
+   "ref": "Jeremiah 9:23-24",
+   "ranges": [
+    [
+     24009023,
+     24009024
+    ]
+   ],
+   "title": "\"Let Him Who Boasts Boast in This\"",
+   "key_verse": [
+    24009024,
+    24009024
+   ],
+   "reflect": [
+    {
+     "text": "We easily drift toward trusting our own abilities for security. The culture around us urges us to depend on our own smarts, physical strength, or wealth. Even when we read the Bible, we can slip into treating it as a self-help tool for personal improvement, which only feeds our pride.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God graciously reveals how empty these false confidences really are. Looking at the cross of Jesus strips away our pride and produces genuine humility, because it shows that our self-effort cannot save us. A lasting faith begins when we turn away from our own achievements and rest in God's mercy and glory.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The Lord makes clear that our only real ground for confidence is knowing Him. We cannot boast in human wisdom, strength, or money. Instead, our only boast is that God has made Himself known to us as the One who delights in steadfast kindness, justice, and righteousness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you most tempted to rely on your own abilities, wisdom, or wealth instead of resting in God?",
+    "How does focusing on God's kindness and justice help keep you from spiritual pride?"
+   ],
+   "prayer": "Lord God, forgive us when we put our confidence in human wisdom, strength, or possessions. Help us look to the cross of Jesus so that all our pride is stripped away. Grant us the joy of boasting only in You, knowing that You delight in steadfast love and righteousness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Scotty Smith",
+     "work": "Boasting in the Right Things (Person): Praying through Jeremiah 9:23-24 (NIV)",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/scotty-smith/boasting-in-the-right-things-person-praying-through-jeremiah-923-24-niv/"
+    },
+    "D2": {
+     "author": "Katherine Britton",
+     "work": "A Reason to Boast",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-june-3-2009-11604307.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

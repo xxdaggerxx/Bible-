@@ -1,0 +1,134 @@
+{
+ "id": "52-004-013",
+ "title": "The Return of the Lord",
+ "refs": [
+  "1 Thessalonians 4:13-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 52004017,
+   "end": 52004018,
+   "ref": "1 Thessalonians 4:17-18",
+   "ranges": [
+    [
+     52004017,
+     52004018
+    ]
+   ],
+   "title": "\"Always with the Lord\"",
+   "key_verse": [
+    52004017,
+    52004017
+   ],
+   "reflect": [
+    {
+     "text": "When Christ returns, believers who have already died will not miss out on His kingdom. The resurrection of Jesus guarantees that everyone who trusts in Him will also be raised. The dead in Christ rise first, and then believers who are still alive will be caught up together with them. Like a royal delegation welcoming their returning king, we will meet the Lord in the air. Paul shared this truth to bring deep comfort when we grieve, not to cause arguments about the future.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "The greatest joy of that day is that we will be with Jesus forever. Christians are united to Him like a body is joined to its head, and nothing can divide us from our Saviour. We walk with Him through trials now, and we will share in His royalty and triumph then. As Charles Spurgeon wrote, our best hope is \"myself for ever with Him in nearest and dearest fellowship.\"",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "In this world, our moments of closeness with Jesus can feel short and easily interrupted by worry, sorrow, or sin. But when we are gathered to Him, no trouble will distract us and no tears will cloud our eyes. We will see Him face to face and enjoy His love without end.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that all believers will welcome King Jesus together bring you comfort in times of grief?",
+    "What difference does it make in your daily life to know that nothing can separate you from Christ?"
+   ],
+   "prayer": "Lord Jesus, thank You for the sure promise that we will be with You forever. Comfort our hearts when we face loss, and remind us that death cannot break our bond with You. Help us to follow You faithfully today as we wait to see You face to face. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 10",
+     "on": "1 Thessalonians 4:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Dec. 17",
+     "on": "1 Thessalonians 4:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Caught Up in the Clouds",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/caught-up-in-the-clouds"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 52004013,
+   "end": 52004018,
+   "ref": "1 Thessalonians 4:13-18",
+   "ranges": [
+    [
+     52004013,
+     52004018
+    ]
+   ],
+   "title": "Hope for Those Who Sleep",
+   "key_verse": [
+    52004014,
+    52004014
+   ],
+   "reflect": [
+    {
+     "text": "When the Bible describes believers who have died as sleeping, it does not mean their souls are unconscious. Jesus told the dying thief that he would be with Him that very day in paradise. While the body rests in the earth, the soul enters God's presence, praising Him for washing away every sin.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "For the Christian, death is called sleep because it is a place of peaceful rest. Like a tired child resting safely on its mother's chest, the believer rests from hard labour and earthly pain. Death closes the door against the troubles of this world and gives the weary worker a quiet rest.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This rest is not the end of the story. God watches over His people until the time comes to wake them and give them their full reward. Bodies that were buried weak, worn, and aged will not rise in weakness. Just as a dry seed buried in the dirt springs up into a beautiful flower, God will raise His people in lasting beauty and glory.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does picturing death as restful sleep help you think about your own future or the loss of a loved one?",
+    "How can the promise of a glorious, renewed body encourage you when facing physical weakness or sickness?"
+   ],
+   "prayer": "Heavenly Father, thank You that those who die trusting in Jesus are safe and at rest with You. Thank You that their weary bodies will one day wake in strength and beauty. Grant us peace in our sorrow, and keep our hope anchored in Your resurrection power. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 29",
+     "on": "1 Thessalonians 4:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

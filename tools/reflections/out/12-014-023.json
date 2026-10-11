@@ -1,0 +1,75 @@
+{
+ "id": "12-014-023",
+ "title": "Jeroboam II Reigns in Israel",
+ "refs": [
+  "2 Kings 14:23-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12014023,
+   "end": 12014029,
+   "ref": "2 Kings 14:23-29",
+   "ranges": [
+    [
+     12014023,
+     12014029
+    ]
+   ],
+   "title": "God's Mercy in Bitter Times",
+   "key_verse": [
+    12014027,
+    12014027
+   ],
+   "reflect": [
+    {
+     "text": "Jeroboam II was an evil king who continued in Israel's false worship, yet he reigned for forty-one years and won back lost territory. Scripture shows that these victories did not happen because Jeroboam was good. Instead, God saw the bitter suffering of the helpless people and stepped in to rescue them, keeping the promise He had spoken through the prophet Jonah.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God showed great patience toward a nation that had ignored Him for generations. Their military success and expanding borders were pure gifts of divine mercy, which means God's undeserved kindness to people who cannot help themselves. God was not willing to wipe out Israel, so He delivered them despite their unfaithfulness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Tragically, Israel did not respond to this kindness with genuine repentance, which means turning away from sin and back to God. Instead, their wealth and safety fostered greed, injustice, and moral compromise. They credited false gods for their blessings. Earthly security without a surrendered heart leads to spiritual ruin, so we should let God's patience lead us to seek His forgiveness rather than take His goodness for granted.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When God gives you relief or blessings, do you thank Him or take His kindness for granted?",
+    "How can seeing God's patience with flawed people encourage you to turn away from sin today?"
+   ],
+   "prayer": "Lord, thank You for Your great patience and for showing mercy to us when we are helpless. Forgive us for the times we enjoy Your good gifts but fail to surrender our lives to You. Help us never to take Your kindness for granted, but to turn our hearts completely back to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Northern Decline Accelerates",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/northern-decline-accelerates"
+    },
+    "D2": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - May 6, 2009",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-may-6-2009-11603197.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

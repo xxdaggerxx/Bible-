@@ -1,0 +1,104 @@
+{
+ "id": "12-006-008",
+ "title": "Elisha Captures the Blinded Arameans",
+ "refs": [
+  "2 Kings 6:8-23"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 12006016,
+   "end": 12006017,
+   "ref": "2 Kings 6:16-17",
+   "ranges": [
+    [
+     12006016,
+     12006017
+    ]
+   ],
+   "title": "\"Those Who Are with Us Are More\"",
+   "key_verse": [
+    12006016,
+    12006016
+   ],
+   "reflect": [
+    {
+     "text": "When trouble surrounds us, it is easy to feel outnumbered and helpless, just like Elisha's servant. When we fix our eyes only on visible problems and daily cares, fear quickly takes over. Yet right beside our physical world, God's unseen presence and heavenly help are actively at work defending His people. Elisha stayed calm because he recognized this spiritual reality instead of focusing only on the enemy army.",
+     "sources": [
+      "D3",
+      "D5",
+      "D6"
+     ]
+    },
+    {
+     "text": "Elisha did not panic; he prayed for his young servant's eyes to be opened. As Charles Spurgeon noted, \"Faith, having God with her, is in a clear majority.\" We do not need to physically see fiery chariots to trust that God stands between us and our worries, temptations, or hardships. He surrounds us with His sovereign care, which far outweighs any danger we will ever face.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Our seasons of weakness invite us to stop striving on our own and lean entirely on the Lord. We can ask God to grant spiritual sight to both ourselves and others walking through hard trials. Reminding each other of God's greater power builds true courage and frees us to rest in His peaceful presence.",
+     "sources": [
+      "D3",
+      "D4",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "What visible hardship or worry is making you feel overwhelmed right now?",
+    "How can trusting that God's unseen help is near change the way you face your challenges today?"
+   ],
+   "prayer": "Lord, open our eyes when we feel surrounded by the struggles of this life. Help us trust Your unseen protection and rely completely on Your strength instead of our own. Give us peace and courage to remind one another that You are greater than any enemy or fear. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 17",
+     "on": "2 Kings 6:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 6:17",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D3": {
+     "author": "Scotty Smith",
+     "work": "“Chariots of Grace” All Around Us",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/scotty-smith/chariots-of-grace-all-around-us/"
+    },
+    "D4": {
+     "author": "Brent Rinehart",
+     "work": "Praying for Open Eyes",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-may-25.html"
+    },
+    "D5": {
+     "author": "Greg Laurie",
+     "work": "Closer Than We Think",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/closer-than-we-think-greg-laurie-daily-devotion-january-18-2016.html"
+    },
+    "D6": {
+     "author": "Lynette Kittle",
+     "work": "Open Our Eyes, Lord",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-march-16.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "03-023-033",
+ "title": "The Feast of Tabernacles",
+ "refs": [
+  "Leviticus 23:33-44"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3023033,
+   "end": 3023044,
+   "ref": "Leviticus 23:33-44",
+   "ranges": [
+    [
+     3023033,
+     3023044
+    ]
+   ],
+   "title": "Remembering God's Care in the Booths",
+   "key_verse": [
+    3023043,
+    3023043
+   ],
+   "reflect": [
+    {
+     "text": "The Feast of Booths took place right after the yearly harvest. It was a joyful time for the people to thank God for providing their food and meeting their daily needs. For a week, everyone stepped away from their usual routines and lived outdoors in small, temporary shelters made from leafy branches.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Staying in these booths reminded Israel of their long journey through the wilderness after leaving Egypt. God stayed with them and faithfully kept them alive. Living in fragile shelters also guarded the people from pride. It stopped them from assuming that their comfortable homes and good harvests came from their own power.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Stepping away from our everyday comforts shows us how fragile we really are. It is easy to trust in ourselves when life is secure. This feast reminds us to put away self-reliance and turn with our whole hearts to God our Redeemer.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When are you most tempted to rely on your own strength instead of trusting God?",
+    "How can remembering God's past care keep you humble and thankful today?"
+   ],
+   "prayer": "Lord God, thank you for providing everything we need and for carrying us through every season. Guard our hearts from pride and from thinking we can make it on our own. Help us to leave behind self-reliance and depend completely on you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Feast of Booths",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/feast-booths"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,83 @@
+{
+ "id": "01-035-016",
+ "title": "Benjamin Born, Rachel Dies",
+ "refs": [
+  "Genesis 35:16-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1035016,
+   "end": 1035020,
+   "ref": "Genesis 35:16-20",
+   "ranges": [
+    [
+     1035016,
+     1035020
+    ]
+   ],
+   "title": "Hope in the Midst of Sorrow",
+   "key_verse": [
+    1035018,
+    1035018
+   ],
+   "reflect": [
+    {
+     "text": "Rachel faced deep anguish during the birth of her second child. In her dying moments, she named him Ben-oni, meaning son of sorrow. Yet Jacob chose to call him Benjamin, meaning son of my right hand. Although Jacob deeply grieved losing his beloved wife, he refused to let the newborn boy be defined only by pain. Instead, he chose a name rooted in hope and the mercy of new life.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "This story reminds us that God often reveals His mercy in our darkest hours. Rachel's death was a painful heartbreak, yet the birth of this twelfth son answered her earlier prayers and proved God was faithfully building Israel into a nation. As Charles Spurgeon wrote, \"To every matter there is a bright as well as a dark side.\" Our natural reaction to trouble is often to focus only on loss, but faith looks for God's goodness within calamity.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "God invites us to view our trials from His perspective. When we walk through grief, we do not have to let sorrow have the last word. The Lord can take our hardest seasons and give them eternal purpose, turning our distress into trust. As we cling to His promises, we can actively look for His grace and encourage others through their own heartbreak.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face hard trials, do you tend to focus only on the sorrow, or do you look for signs of God's mercy?",
+    "How can remembering God's covenant promises help you encourage someone who is grieving?"
+   ],
+   "prayer": "Lord, thank you that your faithfulness never fails, even during our most painful losses. When grief threatens to overwhelm us, help us to see your hand of mercy and hope. Give us grace to trust your eternal purposes and comfort those who are hurting. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 8",
+     "on": "Genesis 35:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Nicki Koziarz",
+     "work": "Give It A New Name",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-march-22-2018.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Rachel's Last Son",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/rachels-last-son"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

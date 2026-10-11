@@ -1,0 +1,68 @@
+{
+ "id": "01-050-015",
+ "title": "Joseph Comforts His Brothers",
+ "refs": [
+  "Genesis 50:15-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1050020,
+   "end": 1050020,
+   "ref": "Genesis 50:20",
+   "ranges": [
+    [
+     1050020,
+     1050020
+    ]
+   ],
+   "title": "\"God Intended It for Good\"",
+   "key_verse": [
+    1050020,
+    1050020
+   ],
+   "reflect": [
+    {
+     "text": "Joseph endured terrible hardship across many years. His own family betrayed him, and he suffered through slavery, false accusations, and prison. In times of grief, unfair treatment, and bad news, our troubles can feel overwhelming and empty of hope. Yet Joseph discovered that his long years of betrayal had a divine purpose. When he was given power over his brothers, he did not seek revenge. Instead, he chose mercy and forgiveness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Joseph looked past his pain to see God's greater plan to save many lives. When people hurt us or hard times come, God still holds the final word. Difficult seasons can help our faith grow deeper and teach us to trust God more. When we let go of bitterness, we begin to see how God can bring good out of harmful things. Even when events do not turn out the way we hoped, we can rest in God's eternal care and find peace in Scripture when life exhausts us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life are you finding it hard to see God's good purpose right now?",
+    "How might letting go of bitterness help you trust God with painful memories?"
+   ],
+   "prayer": "Lord, thank You that You have the final word over every hardship we face. Please help us reject bitterness and choose mercy when others hurt us. Give us peace in Your word and teach us to trust Your good plan, even when our circumstances are difficult. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Betsy St. Amant Haddox",
+     "work": "Hope When There’s None Left (Genesis 50:20)",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-april-12-2021.html"
+    },
+    "D2": {
+     "author": "Sharon Jaynes",
+     "work": "When God Intends \"IT\" for Good",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/when-god-intends-it-for-good-girlfriends-in-god-june-9-2014.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

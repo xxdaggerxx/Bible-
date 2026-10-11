@@ -1,0 +1,66 @@
+{
+ "id": "60-003-008",
+ "title": "Turning from Evil",
+ "refs": [
+  "1 Peter 3:8-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 60003008,
+   "end": 60003013,
+   "ref": "1 Peter 3:8-13",
+   "ranges": [
+    [
+     60003008,
+     60003013
+    ]
+   ],
+   "title": "Hope to Choose Good over Evil",
+   "key_verse": [
+    60003009,
+    60003009
+   ],
+   "reflect": [
+    {
+     "text": "When someone hurts or insults us, our first reaction is often to strike back. Yet God calls us to do the exact opposite. We are told never to repay evil with evil, but to give a blessing instead. When we fail to obey this command, it is usually because we stop believing that following Christ brings far greater blessing than getting even.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God knows that walking away from revenge is painful and difficult. Scripture encourages us to turn from evil by pointing our eyes toward eternal joy instead of brief satisfaction. Following Jesus may cost us our pride or cause us hardship in this life, but obeying Him is always ultimately better for us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We cannot show this kind of patient love in our own strength. The power to answer insults with kindness comes from a firm hope in God's eternal reward. Because we know the Lord watches over us and hears our prayers, we can freely let go of payback and pursue peace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When someone treats you unfairly, what makes it hard to trust that God's way is better than getting revenge?",
+    "How can remembering God's eternal reward help you choose to bless someone today?"
+   ],
+   "prayer": "Lord, help us to trust that following you is always better than holding onto anger. Fill our hearts with hope in your eternal promises so we can show kindness to those who hurt us. Teach us to turn away from evil and seek peace in all we do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "John Piper",
+     "work": "Hope to Obey Hard Commands",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/hope-to-obey-hard-commands"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

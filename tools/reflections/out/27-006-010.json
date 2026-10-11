@@ -1,0 +1,132 @@
+{
+ "id": "27-006-010",
+ "title": "Daniel in the Lions’ Den",
+ "refs": [
+  "Daniel 6:10-24"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 27006010,
+   "end": 27006010,
+   "ref": "Daniel 6:10",
+   "ranges": [
+    [
+     27006010,
+     27006010
+    ]
+   ],
+   "title": "\"Just as He Had Done Before\"",
+   "key_verse": [
+    27006010,
+    27006010
+   ],
+   "reflect": [
+    {
+     "text": "When Daniel learned about the king's law, he did not panic or look to human rulers for protection. Instead, he went straight to his upper room, knelt toward Jerusalem, and prayed three times a day. Anne Graham Lotz explains that Daniel had a steady daily habit of setting aside a specific place and time to seek the Lord. Kneeling showed his humility before God, and looking toward Jerusalem kept his focus on God's promises rather than the culture around him.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "In times of fear, we are often tempted to chase quick comforts or complain about our problems. Daniel did something very different. He gave thanks to God. Because he practiced gratitude every day, thankfulness was his natural response when trouble arrived. Choosing praise shifts our perspective and leads our hearts out of despair.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Daniel's bravery came from a lifetime of regular prayer. Even though he prayed privately in his room, his deep loyalty to God was obvious to everyone around him. When we maintain a steady prayer life, it gives us courage in hard times and becomes a clear testimony to others.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What is your first reaction when trouble comes: panic, complaining, or turning to God with thanks?",
+    "How can setting a regular time and place to pray help you stay close to the Lord?"
+   ],
+   "prayer": "Lord, help us build daily habits of prayer and gratitude like Daniel. Teach us to kneel before You in humility and keep our eyes on Your promises. Give us steady hearts that trust and thank You even in difficult moments. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Rev. Kyle Norman",
+     "work": "Seasoned in Prayer",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/seasoned-in-prayer-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Lysa TerKeurst",
+     "work": "What Did Daniel Pray?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/what-did-daniel-pray-encouragement-for-today-august-8-2013.html"
+    },
+    "D4": {
+     "author": "Anne Graham Lotz",
+     "work": "4 Ways to Prepare for Prayer Like Daniel",
+     "site": "BibleGateway",
+     "url": "https://www.biblegateway.com/learn/voices/4-ways-to-prepare-for-prayer-like-daniel/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 27006010,
+   "end": 27006024,
+   "ref": "Daniel 6:10-24",
+   "ranges": [
+    [
+     27006010,
+     27006024
+    ]
+   ],
+   "title": "God Shuts the Lions' Mouths",
+   "key_verse": [
+    27006022,
+    27006022
+   ],
+   "reflect": [
+    {
+     "text": "When Daniel was lowered into the pit, God sent an angel to shut the mouths of the fierce lions. Jill Briscoe points out that the same God who silenced those wild animals can help us control our own speech. We can trust Him to place a guard over our lips so we do not fall into sinful speech.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Living as an exile in a foreign land was not easy, but Daniel knew when to speak up and when to keep quiet. He did not lash out in anger or use bitter words against the leaders who mistreated him. His careful, restrained words earned the deep respect of four pagan kings over many years.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Controlling our tongue is difficult, but it brings honor to the Lord. When we choose gentle, godly words instead of hasty arguments, people notice. Our quiet self-control leaves a lasting impression on everyone who watches our lives.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there moments in your daily life where it is wiser to remain silent rather than speak in frustration?",
+    "How can asking God for help with your words change the way others see your faith?"
+   ],
+   "prayer": "Father, You have the power to shut the mouths of lions and to protect Your people. Please help us guard our speech and keep our words gentle and pure. May the way we speak bring honor to You and point others toward Your grace. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Jill Briscoe",
+     "work": "Mouth Traps",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-women/mouth-traps-one-year-devotions-for-women-june-14.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "04-036-001",
+ "title": "Zelophehad’s Daughters Marry",
+ "refs": [
+  "Numbers 36:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4036001,
+   "end": 4036013,
+   "ref": "Numbers 36:1-13",
+   "ranges": [
+    [
+     4036001,
+     4036013
+    ]
+   ],
+   "title": "Trusting God's Plan for His People",
+   "key_verse": [
+    4036010,
+    4036010
+   ],
+   "reflect": [
+    {
+     "text": "The family leaders from the tribe of Manasseh came to Moses with an honest concern. If Zelophehad's daughters married men from other tribes, their family land would pass outside their clan. God listened carefully and provided a wise, practical solution. His commands were never cold or robotic; they were given for human flourishing and to keep His people in right relationship with Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The Lord instructed the daughters to marry within their father's tribal clan to protect the inheritance of each tribe. Zelophehad's daughters gladly complied and married cousins within their tribe. While modern culture often idolizes romance and personal preference above everything else, these women submitted their personal desires to God's design for the wider covenant community.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's careful ruling shows how attentive He is to the needs of vulnerable people. Securing this temporary earthly land also points forward to something even greater. In Jesus Christ, God gives believers an eternal, unfading inheritance that can never be lost or taken away.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to put your own preferences ahead of God's design for His people?",
+    "How does knowing you have an eternal inheritance in Jesus give you confidence to trust His guidance?"
+   ],
+   "prayer": "Lord, thank You for caring about every detail of our lives and giving us guidance for our good. Help us lay aside selfish desires and submit our choices to Your loving purpose. Thank You for the secure, eternal inheritance we have received through Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Numbers 36",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/numbers-36-psalm-80-isaiah-28-2-john/"
+    },
+    "D2": {
+     "author": "Mike Leake",
+     "work": "3 Important Lessons from the Daughters of Zelophehad",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/lessons-from-the-daughters-of-zelophehad.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,80 @@
+{
+ "id": "04-030-001",
+ "title": "Laws about Vows",
+ "refs": [
+  "Numbers 30:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4030001,
+   "end": 4030016,
+   "ref": "Numbers 30:1-16",
+   "ranges": [
+    [
+     4030001,
+     4030016
+    ]
+   ],
+   "title": "Keeping Our Word to the Lord",
+   "key_verse": [
+    4030002,
+    4030002
+   ],
+   "reflect": [
+    {
+     "text": "God calls His people to be truthful and to keep their promises. When someone makes a vow or swears an oath, God takes it seriously. In the Old Testament law, breaking a pledge damaged trust and went against the honesty God requires deep inside us. When people treat their personal and marriage vows lightly, they soon begin to abandon their commitments to God as well.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The law also recognized family responsibilities and real life limits. If a young woman or a wife made a vow that her father or husband disallowed, God released her from that pledge. As F. B. Meyer observed, God understands our situation and \"accepts your will for the deed\" when authorities or unexpected duties outside our control stop us from completing what we intended. God does not hold anger against us in those moments, though leaders and parents must take care not to hinder others unfairly.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Living with integrity is a sacred calling that reflects God's own character. Jesus gave us the greatest example of promise-keeping by submitting to the Father and willingly going to the cross to save us. When we fail to keep our word, Jesus stands as our advocate before God, and the Holy Spirit gives us the strength to live with honest hearts.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there promises you have made to God or to other people that you need to follow through on?",
+    "How does knowing Jesus kept His word to the Father give you comfort when your own strength falls short?"
+   ],
+   "prayer": "Lord, thank You for being faithful to every promise You have made. Please forgive us for the times we have spoken rashly or failed to keep our word. Help us by Your Holy Spirit to walk in truth and honor our commitments today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 30:5",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "D.A. Carson",
+     "work": "Read the Bible: Numbers 30, Psalm 74, Isaiah 22, 2 Peter 3",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/numbers-30-psalm-74-isaiah-22-2-peter-3/"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Keeping Our Vows",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/keeping-our-vows"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

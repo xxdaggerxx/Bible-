@@ -1,0 +1,75 @@
+{
+ "id": "11-018-001",
+ "title": "Elijah’s Message to Ahab",
+ "refs": [
+  "1 Kings 18:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11018001,
+   "end": 11018015,
+   "ref": "1 Kings 18:1-15",
+   "ranges": [
+    [
+     11018001,
+     11018015
+    ]
+   ],
+   "title": "Trusting God During Seasons of Waiting",
+   "key_verse": [
+    11018001,
+    11018001
+   ],
+   "reflect": [
+    {
+     "text": "For over three years, Elijah and the land of Israel faced a terrible drought and a long season of divine silence. During such dry times, it is easy to wonder if God has forgotten His people. Yet spiritual dry spells do not mean God is absent or doing nothing. Elijah waited through the hardship without complaint because he trusted the Lord completely.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God used that long delay for a purpose. The prolonged crisis showed everyone that false prophets had no power to help. At the same time, the hardship softened hardened hearts so the people would be ready to hear the truth. While we wait on God, we are called to look closely at our own lives, turn away from personal sin, and hold fast to what we know is true about God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When the word of the Lord finally came telling Elijah to go to Ahab, it brought real hope. Quiet waiting calls for deeper faith and an eager readiness for God's rescue. God always keeps His promises, and His word will arrive at the right time to bring deliverance.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face a season where God seems quiet, how can you remind yourself that He is still working?",
+    "What foundational truths about God can you hold onto while waiting for His timing?"
+   ],
+   "prayer": "Lord, help us to trust You even when You seem quiet and we are waiting through hard times. Search our hearts, turn us from sin, and teach us to wait patiently without complaint. Give us hope as we cling to Your promises, knowing You will never fail us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "No Doubt",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-july-18-2008-11579328.html"
+    },
+    "D2": {
+     "author": "Ron Edmondson",
+     "work": "7 Suggestions for When God Is Silent",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/7-suggestions-for-when-god-is-silent-bible-study-minute-january-25-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,83 @@
+{
+ "id": "12-005-015",
+ "title": "Gehazi’s Greed and Leprosy",
+ "refs": [
+  "2 Kings 5:15-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12005015,
+   "end": 12005027,
+   "ref": "2 Kings 5:15-27",
+   "ranges": [
+    [
+     12005015,
+     12005027
+    ]
+   ],
+   "title": "Free Grace and the Trap of Greed",
+   "key_verse": [
+    12005026,
+    12005026
+   ],
+   "reflect": [
+    {
+     "text": "Elisha refused to take any gifts from Naaman so the commander would understand that God's grace—His kindness we do not earn—is completely free. Yet Gehazi questioned his master's spiritual wisdom. He told himself that taking some wealth was harmless, rationalizing his desire for personal profit. While Elisha sent Naaman away in peace, Gehazi allowed hidden greed to take root in his mind.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Greed quickly led Gehazi into deeper dishonesty. He invented a believable story to get silver and clothing from Naaman, secretly hid the treasures, and then lied directly to Elisha. Even though Gehazi outwardly served God's prophet, his heart actually bowed to wealth and status. God saw right past his outward compliance to the true posture of his heart.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Elisha confronted his servant by asking if this was really the time to pursue personal riches. Because Gehazi chose covetousness—the selfish craving for things that belong to others—he lost his calling and inherited Naaman's disease. His story reminds us that God desires uncompromised integrity, urging us to choose contentment over the destructive love of money.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where might we be tempted to rationalize selfish gain or hide small dishonest choices?",
+    "What helps us cultivate true contentment rather than chasing after money and status?"
+   ],
+   "prayer": "Lord, protect our hearts from the subtle pull of greed and deceit. Help us remember that Your grace is a free gift to be shared, not sold. Teach us to live with honest hearts, choosing contentment and integrity wherever You place us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Chuck Swindoll",
+     "work": "Hidden Greed",
+     "site": "Insight for Living",
+     "url": "https://insight.org/churchleaderarticle/hidden-greed"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 05/02/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-05-or-02-or-2002-1133406.html"
+    },
+    "D3": {
+     "author": "Susan Tyner",
+     "work": "Why Did Elisha Allow Naaman to Bow to an Idol?",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/elisha-naaman-bow-idol/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

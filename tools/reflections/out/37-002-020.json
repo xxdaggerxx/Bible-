@@ -1,0 +1,66 @@
+{
+ "id": "37-002-020",
+ "title": "Zerubbabel the LORD’s Signet Ring",
+ "refs": [
+  "Haggai 2:20-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 37002020,
+   "end": 37002023,
+   "ref": "Haggai 2:20-23",
+   "ranges": [
+    [
+     37002020,
+     37002023
+    ]
+   ],
+   "title": "God's Chosen Signet Ring",
+   "key_verse": [
+    37002023,
+    37002023
+   ],
+   "reflect": [
+    {
+     "text": "Ever since sin first entered the world, God has been working out His great plan to restore good, righteous human rule over creation. Even though Israel's kings repeatedly broke their covenant promises to God and suffered exile, the Lord remained faithful to King David's royal line.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In this passage, God promised to shake the nations and overturn worldly powers. He selected Zerubbabel, a governor from David's family, calling him His servant and His signet ring. An ancient signet ring was used by a ruler to seal documents and represented divine authority, showing that God was renewing Davidic leadership among His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Zerubbabel did not set up an everlasting kingdom during his own lifetime, showing the conditional nature of prophetic promises. Instead, this promise pointed forward to its ultimate fulfillment in Jesus Christ. Jesus is the true King from David's line, and He now shares His kingdom with His redeemed people.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God keeps His promises encourage you when worldly rulers and nations seem unstable?",
+    "In what ways can you find comfort in the truth that Jesus shares His eternal kingdom with His people?"
+   ],
+   "prayer": "Lord God, thank You for staying faithful to Your promises throughout history. We praise You that while earthly powers fall, the kingdom of Christ will never end. Help us to trust in Jesus as our true King and to rejoice that we belong to Him. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Restoration Stumbles",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/restoration-stumbles"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

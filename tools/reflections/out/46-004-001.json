@@ -1,0 +1,96 @@
+{
+ "id": "46-004-001",
+ "title": "Servants of Christ",
+ "refs": [
+  "1 Corinthians 4:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46004001,
+   "end": 46004013,
+   "ref": "1 Corinthians 4:1-13",
+   "ranges": [
+    [
+     46004001,
+     46004013
+    ]
+   ],
+   "title": "Faithful Stewards of Christ",
+   "key_verse": [
+    46004002,
+    46004002
+   ],
+   "reflect": [
+    {
+     "text": "God calls followers of Christ to be servants and stewards rather than celebrities or masters. A steward is simply a helper who takes care of what belongs to another. God does not measure us by how popular or successful we seem to the world. Instead, he asks for one main thing: that we remain faithful and trustworthy to him and his message.",
+     "sources": [
+      "D3",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Because we belong to the Lord, human opinions cannot give the final verdict on our lives. Neighbors and fellow believers often judge us, but their opinions do not last. Even a clear conscience is not proof of innocence, because our own hearts can easily overlook faults. As F. B. Meyer wrote, our own favorable verdict \"is liable to be reversed\" by God's court. We must wait patiently, for only the Lord can bring hidden motives into the light.",
+     "sources": [
+      "D1",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Knowing this also protects us from the subtle trap of pride. Every gift, ability, and open door is something we received from God, not something we built on our own. Since everything is a gift, we have no reason to boast or look down on others. True humility gladly moves the spotlight off ourselves so that God receives all the praise.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When people praise or criticize you, how can remembering God's final judgment bring you peace?",
+    "What gifts or abilities do you tend to take credit for instead of thanking God for giving them?"
+   ],
+   "prayer": "Lord Jesus, help us remember that we are only stewards of the gifts you have placed in our hands. Keep us from worrying about human opinions or boasting in what we have received. Make us faithful servants who quietly point all praise back to you.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Corinthians 4:4",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Mike Pohlman",
+     "work": "The Subtle Pride of Achievement",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-mar-5-2009-11600319.html"
+    },
+    "D3": {
+     "author": "Burk Parsons",
+     "work": "Not Lords, Stewards",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/not-lords-stewards"
+    },
+    "D4": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: 1 Samuel 23, 1 Corinthians 4, Ezekiel 2, and Psalm 38",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/1-samuel-23-1-corinthians-4-ezekiel-2-psalm-38/"
+    },
+    "D5": {
+     "author": "John MacArthur",
+     "work": "True Servants of Christ",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/articles/print/A319/true-servants-of-christ"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

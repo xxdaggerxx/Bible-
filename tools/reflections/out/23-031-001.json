@@ -1,0 +1,121 @@
+{
+ "id": "23-031-001",
+ "title": "Woe to Those Who Rely on Egypt",
+ "refs": [
+  "Isaiah 31:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23031005,
+   "end": 23031005,
+   "ref": "Isaiah 31:5",
+   "ranges": [
+    [
+     23031005,
+     23031005
+    ]
+   ],
+   "title": "\"Like Birds Hovering Overhead\"",
+   "key_verse": [
+    23031005,
+    23031005
+   ],
+   "reflect": [
+    {
+     "text": "Think of how a mother bird rushes to her nest when trouble comes. She does not waste a moment. She flies swiftly to bring help and then spreads her wings over her chicks, using her own body as a shield. As Charles Spurgeon wrote, God's almighty love is \"swift to succor, and sure to cover.\" The Lord has the power of the Creator, but He acts with the gentle devotion of a parent bird watching over her young.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jerusalem was perched on a mountain like a nest, looking down at a fierce invading army. To human eyes, the people were helpless fledglings before a hawk. But God promised to stand between the danger and His city. Jesus showed this same heart when He longed to gather His people safely under His wings. When trouble presses in, you can remember that God places Himself between you and whatever you dread, giving you safety and peace beneath His care.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or troubles do you need to bring under God's protective wings today?",
+    "How does knowing that God swiftly shields you change how you face danger?"
+   ],
+   "prayer": "Lord God, thank You for being our safe dwelling place. When dangers surround us, remind us that You stand between us and our fears. Help us to rest peacefully beneath the shadow of Your wings today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Dec. 18",
+     "on": "Isaiah 31:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 31:5",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 23031001,
+   "end": 23031009,
+   "ref": "Isaiah 31:1-9",
+   "ranges": [
+    [
+     23031001,
+     23031009
+    ]
+   ],
+   "title": "Trusting the Lord, Not Chariots",
+   "key_verse": [
+    23031001,
+    23031001
+   ],
+   "reflect": [
+    {
+     "text": "When danger threatened, God's people looked to Egypt's horses and chariots instead of seeking the Lord. Relying on worldly power and human alliances brings God's judgment rather than safety. True security is found only in the Lord, who defends His people both with the fierce strength of a roaring lion and with tender care.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "To know God's blessing, we cannot offer Him half-hearted devotion. The people were called to turn away from their rebellion and throw down every idol of silver and gold they had made. God requires full repentance, which means turning completely back to Him rather than clinging to false things we have built with our own hands.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "In the end, Assyria was defeated not by human swords, but by the supernatural power of God. This historical deliverance pointed forward to an even greater truth. It shows us that God will ultimately conquer every enemy and establish His final reign, saving His people by His own mighty hand.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there worldly solutions or resources you are tempted to trust instead of seeking God?",
+    "What idols or divided loyalties do you need to turn away from so you can follow the Lord completely?"
+   ],
+   "prayer": "Heavenly Father, forgive us for turning to human strength and worldly answers instead of seeking You. Search our hearts and help us discard every idol that divides our loyalty. We trust in Your supernatural power and look forward to the day of Your final victory. Amen.",
+   "sources": {
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Isaiah 31",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/deuteronomy-3-psalm-85-isaiah-31-revelation1/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

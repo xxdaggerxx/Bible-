@@ -1,0 +1,75 @@
+{
+ "id": "44-004-032",
+ "title": "Sharing among Believers",
+ "refs": [
+  "Acts 4:32-37"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44004032,
+   "end": 44004037,
+   "ref": "Acts 4:32-37",
+   "ranges": [
+    [
+     44004032,
+     44004037
+    ]
+   ],
+   "title": "Sharing God's Blessings with One Another",
+   "key_verse": [
+    44004032,
+    44004032
+   ],
+   "reflect": [
+    {
+     "text": "In the earliest church, the believers were united in heart and soul. They took Christ's command to love their neighbors seriously, holding their possessions with an open hand. Those who owned fields or houses voluntarily sold them so that no brother or sister would lack necessities. They understood that God is the true owner of all things, and we are simply managers of his gifts.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This kind of radical generosity starts when we realize God's great grace, which is his undeserved kindness and blessings in our lives. When we rest in the abiding love of Jesus, our fear fades away, and we find the freedom to share what we have. Faithful and sincere giving reflects our true devotion to God and our mutual care for the church community.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Following Jesus shapes our everyday lifestyle choices. Discipleship means loving the world through our daily interactions and practical, small kindnesses. By using what God has given us to meet the needs of others, we reflect Christ to those around us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God owns everything change the way you view your possessions?",
+    "What is one small kindness or choice you can make this week to care for someone in need?"
+   ],
+   "prayer": "Lord, thank you for your immense grace and abiding love toward us. Help us remember that everything we own belongs to you. Teach us to care for one another with open hands, showing your love through daily acts of kindness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Becca Stevens",
+     "work": "Love the Whole World, One Person at a Time (Acts 4:32) - Your Daily Bible Verse - May 23",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/love-the-whole-world-one-person-at-a-time-bible-study-minute-may-23-2018.html"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 11/10/04",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-11-or-10-or-04-1293996.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

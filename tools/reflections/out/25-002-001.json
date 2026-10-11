@@ -1,0 +1,66 @@
+{
+ "id": "25-002-001",
+ "title": "God’s Anger over Jerusalem",
+ "refs": [
+  "Lamentations 2:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 25002001,
+   "end": 25002022,
+   "ref": "Lamentations 2:1-22",
+   "ranges": [
+    [
+     25002001,
+     25002022
+    ]
+   ],
+   "title": "Honest Hearts Before the Lord",
+   "key_verse": [
+    25002018,
+    25002018
+   ],
+   "reflect": [
+    {
+     "text": "Jerusalem fell into terrible ruin because false teachers flattered the people instead of warning them about their sin. When we drift away from God, we lose spiritual discernment, which is the ability to judge what is right and true. Worldly temptations often disguise destructive traps that lure us away from the Lord. To recognize God's voice and follow Him faithfully, we need daily prayer and time in the Bible. Even after failure, turning back to God in repentance brings renewal and rest.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "In the midst of this deep sorrow, the prophet urged the people to cry out and pour their grief before the Lord. Scripture reassures us that God sees our vulnerabilities and hears the cries of our hearts. Today, people around us often drop quiet clues that reveal their inner loneliness and hurt. God calls us to pay attention and become vessels of His comfort. Offering simple, intentional gestures of encouragement helps others know they are genuinely valued.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can daily prayer and reading Scripture protect you from quietly drifting away from God?",
+    "Who around you might be dropping subtle clues of loneliness, and how can you encourage them today?"
+   ],
+   "prayer": "Lord, help us stay close to You in prayer and Scripture so we are not led astray. When we are hurting or have failed, help us pour out our hearts to You in honest repentance. Give us eyes to notice the quiet pain in others, and make us gentle vessels of Your comfort. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Karen Ehman",
+     "work": "How to Hear a Heart-Drop",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-march-13-2017.html"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - August 30",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-aug-30-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

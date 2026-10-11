@@ -1,0 +1,133 @@
+{
+ "id": "40-010-034",
+ "title": "Not Peace but a Sword",
+ "refs": [
+  "Matthew 10:34-39",
+  "Luke 12:49-53"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40010034,
+   "end": 40010035,
+   "ref": "Matthew 10:34-35",
+   "ranges": [
+    [
+     40010034,
+     40010035
+    ]
+   ],
+   "title": "\"Not Peace, but a Sword\"",
+   "key_verse": [
+    40010034,
+    40010034
+   ],
+   "reflect": [
+    {
+     "text": "Following Jesus does not always bring smooth relationships. When we stand firmly on biblical truth, we can face painful division, even losing friendships we hold dear. Jesus plainly told us that His message draws a dividing line between those who follow Him and those who do not. Doing what is right will sometimes put us at odds with the people closest to us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "As Charles Spurgeon wrote, \"before peace, he brings war.\" Where truth appears, lies must flee, which creates a sharp conflict. We do not try to make enemies, but we cannot lower God's standards to keep the world happy. Standing firm takes real courage, which God's Spirit faithfully works within our hearts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Real discipleship means loving Christ above every human relationship and earthly approval. Walking this path can bring grief and feelings of rejection. Yet, when earthly friends turn away, Jesus draws nearer than ever with His comforting presence and lasting purpose.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever felt distant from a friend or family member because you chose to follow God's truth?",
+    "How can remembering Christ's close presence bring you comfort when others misunderstand your faith?"
+   ],
+   "prayer": "Lord Jesus, give us courage to stand firmly on Your truth even when it costs us human approval. Help us to love You more than any earthly relationship. Comfort our hearts when we face rejection, and remind us of Your faithful presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 28",
+     "on": "Matthew 10:34",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Emily Rose Massey",
+     "work": "When Christ Brings a Sword to Your Relationships",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/when-christ-brings-a-sword-to-your-relationships.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40010034,
+   "end": 40010039,
+   "ref": "Matthew 10:34-39; Luke 12:49-53",
+   "ranges": [
+    [
+     40010034,
+     40010039
+    ],
+    [
+     42012049,
+     42012053
+    ]
+   ],
+   "title": "The Cost of Divided Houses",
+   "key_verse": [
+    42012051,
+    42012051
+   ],
+   "reflect": [
+    {
+     "text": "At Jesus' birth, the angels announced peace on earth. Yet here, Jesus tells us that He brings division. Both statements are true. Christ came to make peace between sinners and God, but that very reconciliation changes everything about how we live. It completely transforms our inner core, our values, and the direction of our lives.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "When our priorities change to match heaven, tension naturally follows. Following Jesus means seeing the world through His eyes. That shift can provoke friction with people who do not share our new life, even members of our own households. Living for God inevitably uncovers spiritual conflict all around us.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Christ's ultimate purpose is to bring lasting, eternal harmony. But until that day comes, walking closely with Him has a real cost. We must be willing to accept the pain of division right now as we follow our Lord into a transformed life.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways has following Jesus changed your daily values and the direction of your life?",
+    "Are you willing to endure friction with others in order to remain faithful to heaven's priorities?"
+   ],
+   "prayer": "Father, thank You for reconciling us to Yourself and reshaping our hearts with heaven's values. Grant us grace to bear the friction and division that come with following Your Son. Keep our eyes fixed on the eternal harmony You have promised. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "The Great Divide",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-august-6-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

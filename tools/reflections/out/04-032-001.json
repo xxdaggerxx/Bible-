@@ -1,0 +1,137 @@
+{
+ "id": "04-032-001",
+ "title": "The Tribes East of the Jordan",
+ "refs": [
+  "Numbers 32:1-42"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 4032023,
+   "end": 4032023,
+   "ref": "Numbers 32:23",
+   "ranges": [
+    [
+     4032023,
+     4032023
+    ]
+   ],
+   "title": "\"Your Sin Will Find You Out\"",
+   "key_verse": [
+    4032023,
+    4032023
+   ],
+   "reflect": [
+    {
+     "text": "Moses gave the tribes a serious warning about the sin of doing nothing. Remaining behind in comfort while our brothers face hardships is not harmless. Inaction and secret selfish choices never escape the sight of the Lord. As F. B. Meyer noted, sin acts like a boomerang that inevitably returns to the hand that threw it.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The consequences of sin do not always show up right away. There is often a delay between the flash of lightning and the sound of thunder, but what a person sows will certainly be reaped. Sin tracks us down like a hound following a trail. Neglecting God's call and choosing passive ease will always catch up to us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Yet the gospel gives hope to everyone who turns from sin. Jesus Christ bore the full penalty of our guilt upon the cross, breaking its power forever. When sin comes looking for you, your only safe shelter is to be hidden in the righteousness of Jesus. Forgiven by His sacrifice, we are freed to turn from selfish neglect and join our spiritual family in God's work.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a responsibility or an act of love to your church family that you have been neglecting?",
+    "Are you resting in Jesus alone to protect you from the penalty your sins deserve?"
+   ],
+   "prayer": "Lord Jesus, thank You for taking the punishment for my sins on the cross. Forgive me when I choose selfish ease and ignore the needs of my brothers and sisters. Help me find my shelter in You and actively serve Your people with a glad heart. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 32:23",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "Greg Morse",
+     "work": "Sin Will Find You Out",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/sin-will-find-you-out"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 4032001,
+   "end": 4032042,
+   "ref": "Numbers 32:1-42",
+   "ranges": [
+    [
+     4032001,
+     4032042
+    ]
+   ],
+   "title": "Standing with Our Brothers",
+   "key_verse": [
+    4032006,
+    4032006
+   ],
+   "reflect": [
+    {
+     "text": "The tribes of Reuben and Gad noticed that the land east of the Jordan was well suited for their livestock. Their request made good business sense, but it was driven by material gain rather than wholehearted devotion to God. Choosing convenience over God's full promises can easily weaken our spiritual life and create distance between us and the rest of God's people.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Moses showed them that belonging to a family brings clear duties. Charles Spurgeon reminded us that \"kindred has its obligations,\" and it is unbrotherly to take our own ease while leaving our brothers to fight alone. We have received so much from believers who came before us. It is wrong for us to fold our hands in idleness while others labor hard in the work of the church.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We cannot expect a life of soft cushions while longing to wear the crown of a soldier of the cross. Real faith does not shrink from trials or avoid the battles that our brothers and sisters face. When we surrender our personal convenience to God's will, we find true joy in standing together with the family of faith.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you tempted to make life decisions based on material convenience rather than God's will?",
+    "How can you step forward this week to help carry burdens alongside your church family?"
+   ],
+   "prayer": "Heavenly Father, keep me from choosing my own comfort over faithful obedience to You. Teach me to stand shoulder to shoulder with my brothers and sisters in Christ. Give me a willing spirit to share in their labors and bring honor to Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 5",
+     "on": "Numbers 32:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - February 27",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-feb-27-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

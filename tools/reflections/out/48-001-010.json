@@ -1,0 +1,114 @@
+{
+ "id": "48-001-010",
+ "title": "Paul Preaches the Gospel",
+ "refs": [
+  "Galatians 1:10-24"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 48001015,
+   "end": 48001017,
+   "ref": "Galatians 1:15-17",
+   "ranges": [
+    [
+     48001015,
+     48001017
+    ]
+   ],
+   "title": "\"To Reveal His Son in Me\"",
+   "key_verse": [
+    48001016,
+    48001016
+   ],
+   "reflect": [
+    {
+     "text": "Paul defended his ministry by pointing out that his message came straight from Jesus Christ, not from human teachers. Even before Paul was born, God had set him apart for a special purpose. His sudden change from an angry persecutor of the church into a faithful apostle shows how powerful God's grace really is. God does not simply rescue us from sin. He also gives every believer a special calling and gifts to build up His church.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "If you trust in Jesus, His Spirit lives inside you. Even so, daily worries and unbelief can hide His presence deep within our hearts. We need to ask the Father to show Christ clearly in our daily thoughts and actions. As F. B. Meyer noted, God gives this inner sight \"not for selfish enjoyment, but for ministering help.\" When Christ shapes us from the inside, we are equipped to point other people to Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you use the gifts and calling God has given you to serve others this week?",
+    "Are there distractions in your daily life that keep Christ from shining clearly through your actions?"
+   ],
+   "prayer": "Heavenly Father, thank You for calling us by Your grace and giving us a place to serve in Your church. Help us clear away worldly distractions so Christ may be clearly seen in our daily lives. Give us courage to share Your love and truth with the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Galatians 1:15-16",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Paul's Conversion",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/pauls-conversion"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 48001010,
+   "end": 48001024,
+   "ref": "Galatians 1:10-24",
+   "ranges": [
+    [
+     48001010,
+     48001024
+    ]
+   ],
+   "title": "Pleasing God Instead of People",
+   "key_verse": [
+    48001010,
+    48001010
+   ],
+   "reflect": [
+    {
+     "text": "Many believers fall into the trap of religious pretending because they care deeply about what other people think. We often act like we have everything figured out, hiding our real struggles behind a careful smile. Striving to win approval from others leaves us trapped and anxious, as if we are left sitting on a shelf instead of living freely for the Lord.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Stepping out of that hiding place requires real courage. Being vulnerable and showing who we truly are can feel painful and risky. Yet Jesus gave us the perfect pattern to follow, because He never pretended to be someone He was not. When we serve Christ first, we no longer need to fear what others think. True Christian freedom comes when we rest quietly in God's complete acceptance of us, despite all our weaknesses and flaws.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what situations are you most tempted to pretend or hide your real struggles to please other people?",
+    "How does knowing that God fully accepts you in Christ help you live more openly and freely?"
+   ],
+   "prayer": "Lord Jesus, thank You for showing us how to live honestly without seeking the praise of other people. Forgive us for the times we wear masks and hide our weaknesses out of fear. Teach us to rest securely in Your grace and acceptance so we can serve You freely. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Sharon Jaynes",
+     "work": "The Velveteen Woman",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-nov-15-2010-11640860.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

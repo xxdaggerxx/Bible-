@@ -1,0 +1,84 @@
+{
+ "id": "01-008-001",
+ "title": "The Ark Rests on Ararat",
+ "refs": [
+  "Genesis 8:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1008001,
+   "end": 1008005,
+   "ref": "Genesis 8:1-5",
+   "ranges": [
+    [
+     1008001,
+     1008005
+    ]
+   ],
+   "title": "God Remembered Noah",
+   "key_verse": [
+    1008001,
+    1008001
+   ],
+   "reflect": [
+    {
+     "text": "When we go through long trials and feel isolated, it can be easy to wonder if God has forgotten us. In the Bible, however, God remembering someone does not mean He simply recalled forgotten information. Instead, it means He steps in to act on His promises. After months on the flood waters, God remembered Noah, sending a wind and causing the waters to steadily recede. As F. B. Meyer observed, God shared \"the seclusion of the Ark\" with His servant, staying close to him through every hour of waiting.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Noah had to wait patiently through many weeks before the mountain peaks finally appeared. God's timing often feels slow to us, but He never delays without purpose. He always acts at the exact right moment. By keeping Noah and his family safe, God showed that His ultimate desire for His creation is restoration rather than ruin.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The cross and resurrection of Jesus give us permanent proof that God never abandons those He loves. Because Jesus rose from the dead, we have full assurance that God keeps every promise He makes. Even when difficult seasons surround us, we can trust His faithfulness to bring us through.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What helps you remember that God has not forgotten you during long seasons of waiting?",
+    "How does the resurrection of Jesus give you confidence when you face hard times?"
+   ],
+   "prayer": "Lord God, thank You that You never forget Your people when troubles surround them. Teach us to trust Your perfect timing when the answers we wait for seem slow to arrive. Remind us of the cross and resurrection of Jesus, where You showed us Your lasting faithfulness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 8:1",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "God Remembered Noah",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-remembered-noah"
+    },
+    "D3": {
+     "author": "Jared C. Wilson",
+     "work": "Remembering the God Who Remembers You",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/remembering-the-god-who-remembers-you/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

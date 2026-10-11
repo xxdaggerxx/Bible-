@@ -1,0 +1,114 @@
+{
+ "id": "07-019-001",
+ "title": "The Crime of the Benjamites",
+ "refs": [
+  "Judges 19:1-30"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 7019001,
+   "end": 7019001,
+   "ref": "Judges 19:1",
+   "ranges": [
+    [
+     7019001,
+     7019001
+    ]
+   ],
+   "title": "\"There Was No King in Israel\"",
+   "key_verse": [
+    7019001,
+    7019001
+   ],
+   "reflect": [
+    {
+     "text": "Judges begins this dark account by reminding us that Israel had no king. Without God's rule, life among His people quickly broke down into violence and chaos. As D. A. Carson points out, the law of the jungle completely took over. Men forgot basic hospitality, and leaders showed deep cowardice by throwing helpless women to danger. When people abandon God's authority, they hurt others to save themselves and then try to hide their own guilt.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "F. B. Meyer noted that this history reveals how low we can sink apart from God's grace, His undeserved kindness. When Christ does not reign as King over our hearts, pride and cruelty pursue their ruin unchecked. We cannot conquer sin on our own strength. As Meyer urged, we must \"crown Him lord of all,\" asking Jesus to take charge of our thoughts and put down the evil that tries to rule our lives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily life are you tempted to live by your own rules instead of obeying Jesus as King?",
+    "How can you bring your hidden faults to Christ today rather than excusing them?"
+   ],
+   "prayer": "Lord Jesus, we ask You to be the King of our hearts today. Please rule over our thoughts, our desires, and our actions. Help us to protect the weak and turn away from all selfishness, trusting You to overcome the sin in our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Judges 19:1",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "D.A. Carson",
+     "work": "Read the Bible: Judges 19, Acts 23, Jeremiah 33, Psalms 3–4",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/judges-19-acts-23-jeremiah-33-psalms-3-4/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 7019001,
+   "end": 7019030,
+   "ref": "Judges 19:1-30",
+   "ranges": [
+    [
+     7019001,
+     7019030
+    ]
+   ],
+   "title": "When God's People Follow the World",
+   "key_verse": [
+    7019030,
+    7019030
+   ],
+   "reflect": [
+    {
+     "text": "The terrible crime in Gibeah shows how deep Israel's moral collapse had become. Without a godly king to guide them, the nation fell into total disorder. Even the Levite, who was meant to serve God and lead the people spiritually, treated his concubine with extreme coldness. His willingness to sacrifice her revealed that the religious leaders were thoroughly corrupted from the inside out.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The wickedness of Gibeah mirrored the ancient sins of Sodom. Israel was supposed to be a holy nation, set apart for the Lord. Instead, the Israelites had become just as evil as the pagan people who lived around them. When God's people fail to live distinct lives, they inevitably adopt the sinful patterns of the world.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does the culture around you influence the way you treat other people?",
+    "What is one practical way you can live a holy, distinct life for God this week?"
+   ],
+   "prayer": "Heavenly Father, forgive us for the times we copy the sinful patterns of the world instead of following Your holy ways. Guard our leaders from corruption, and give them hearts that truly care for others. Keep us pure and faithful to You in all that we do. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Israel Becomes Sodom",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/israel-becomes-sodom"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

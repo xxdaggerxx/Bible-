@@ -1,0 +1,115 @@
+{
+ "id": "03-019-001",
+ "title": "Commandments for Holiness",
+ "refs": [
+  "Leviticus 19:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 3019002,
+   "end": 3019002,
+   "ref": "Leviticus 19:2",
+   "ranges": [
+    [
+     3019002,
+     3019002
+    ]
+   ],
+   "title": "\"Be Holy Because I Am Holy\"",
+   "key_verse": [
+    3019002,
+    3019002
+   ],
+   "reflect": [
+    {
+     "text": "God calls His people to be holy because He is holy. God's holiness means that He is completely pure, set apart from everything else, and free from all evil. Because He is our Lord, He asks us to follow His example and shape our daily lives after His goodness. Yet we cannot become holy simply by trying harder on our own. It is a lifelong process of change through Jesus Christ. It begins the moment we are saved, continues as we follow Him each day, and will only be completed when we reach heaven.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Human willpower easily fails because we make resolutions and quickly forget them. We need the Holy Spirit to teach us, help our weaknesses, and keep God in our minds. As F. B. Meyer notes, the thought of God should ring in our hearts \"as a perpetual chime.\" When we pause in the morning and throughout our day to remember God's loving presence, He shields us from temptation and inspires us to be kind and generous. He has set us apart for Himself so we can bring joy to His heart and do His work.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what parts of your life are you trying to change by your own willpower rather than asking the Holy Spirit for help?",
+    "How might pausing to remember God's presence throughout the day change how you treat others?"
+   ],
+   "prayer": "Lord God, You are completely holy, pure, and good. Thank You for setting us apart to belong to You and to bring joy to Your heart. Please send Your Holy Spirit to remind us of Your presence today and steadily shape our lives to be like Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 19:2",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "Zondervan",
+     "work": "He Is- Holy",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/niv-devotions-for-women/niv-devotions-for-women-week-of-feb-6.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 3019001,
+   "end": 3019008,
+   "ref": "Leviticus 19:1-8",
+   "ranges": [
+    [
+     3019001,
+     3019008
+    ]
+   ],
+   "title": "Turned Back to God",
+   "key_verse": [
+    3019004,
+    3019004
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, the Lord commands His people not to turn away to lifeless idols. Even after we belong to God's family, we can still be lured away by strong attractions and wander down forbidden paths. There are times when our desire to pray fades, our love for the Bible grows dull, and we feel trapped by our sinful habits. A person is given new spiritual life from above only once, but believers often need to be turned back to God many times throughout their lives.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When we drift away, we cannot fix our hearts by our own power. We are like the disciple Peter, who turned his back and denied Jesus, but was turned around when Jesus looked at him with mercy and met him again. When we feel cold, powerless, or distant from God, we should not hide our failure. Instead, we can admit our weakness and ask the Lord to turn us back to Himself, trusting that the One who first saved us is faithful to restore us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Has your desire to read the Bible or spend time with God grown cool in recent weeks?",
+    "What comfort do you find in knowing that Jesus actively seeks to restore you when you wander?"
+   ],
+   "prayer": "Father, we confess that our hearts sometimes wander toward things that pull us away from You. When our love grows cold and we lose our way, please look on us with mercy and turn our hearts back to You. Restore our joy and help us walk closely with our Savior. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 19:4",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,114 @@
+{
+ "id": "05-001-019",
+ "title": "Twelve Spies Sent Out",
+ "refs": [
+  "Deuteronomy 1:19-25"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 5001020,
+   "end": 5001021,
+   "ref": "Deuteronomy 1:20-21",
+   "ranges": [
+    [
+     5001020,
+     5001021
+    ]
+   ],
+   "title": "\"Go Up and Take Possession\"",
+   "key_verse": [
+    5001021,
+    5001021
+   ],
+   "reflect": [
+    {
+     "text": "When God sets a path before us, our natural caution often makes us hesitate. We can easily magnify the obstacles in our way and forget how faithful God has already been. When we fix our minds on the dangers instead of God's power, fear takes over, and we end up wasting time in cycles of doubt. Moving forward requires a deliberate daily choice to trust God's promises rather than retreating into what feels comfortable.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God calls us to step out with boldness. As Charles Spurgeon wrote, \"There is a heritage of grace which we ought to be bold enough to win.\" This grace—God's undeserved kindness—means we can all grow in strong faith, sincere love, and active service. The world around us also needs the good news of Jesus. No neighborhood is too dark and no heart is too hard for God's power to reach. We can move ahead with courage because the Lord has already set the land before us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you focusing more on the obstacles in your life than on God's power?",
+    "What is one daily choice you can make to trust God's promises instead of holding back?"
+   ],
+   "prayer": "Lord God, forgive us when we forget Your faithfulness and let fear hold us back. Help us to trust Your promises every day and give us courage to move forward. May Your grace work through us to reach the people around us with the love of Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 6",
+     "on": "Deuteronomy 1:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Stuart Briscoe",
+     "work": "The Way Forward - One Year Devotions for Men",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/the-way-forward-one-year-devotions-for-men-october-9.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 5001019,
+   "end": 5001025,
+   "ref": "Deuteronomy 1:19-25",
+   "ranges": [
+    [
+     5001019,
+     5001025
+    ]
+   ],
+   "title": "Overcoming the Fear of Inadequacy",
+   "key_verse": [
+    5001025,
+    5001025
+   ],
+   "reflect": [
+    {
+     "text": "The twelve men saw that the land was good and fruitful, but they were also confronted with massive challenges. It is very common to feel completely inadequate when God calls us to step into something difficult. When we compare our own limits to giant problems, we quickly begin to expect failure. Focusing on our personal weaknesses makes us feel small, and fear begins to control our choices.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "When we feel inadequate, our first instinct is often to run back to safety. Yet backing away from what God asks of us does not bring true peace; it only leads to spiritual bondage and stagnation. Real security is never found in retreat. We are not meant to rely on our own power to handle the task. Instead, we must look at who God is and stand on His promises, trusting Him to supply the strength we need for the assignment.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of your life do you feel too weak or inadequate to do what God is asking?",
+    "How can focusing on God's character help you stop retreating and begin to trust Him for strength?"
+   ],
+   "prayer": "Father, we confess that large challenges often make us feel weak and afraid. Keep us from running away into false safety when You call us forward. Teach us to rest in Your character and trust Your strength to carry us through. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Charles F. Stanley",
+     "work": "The Burden of Inadequacy",
+     "site": "In Touch Ministries",
+     "url": "https://www.intouch.org/read/daily-devotions/the-burden-of-inadequacy"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,122 @@
+{
+ "id": "05-029-001",
+ "title": "The Covenant in Moab",
+ "refs": [
+  "Deuteronomy 29:1-29"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 5029029,
+   "end": 5029029,
+   "ref": "Deuteronomy 29:29",
+   "ranges": [
+    [
+     5029029,
+     5029029
+    ]
+   ],
+   "title": "\"The Secret Things Belong to the Lord\"",
+   "key_verse": [
+    5029029,
+    5029029
+   ],
+   "reflect": [
+    {
+     "text": "We often struggle when we do not have all the answers to life's hard questions. In times of uncertainty, we easily spend our energy trying to guess God's secret plans for the future. Yet Scripture reminds us that some things belong to God alone. His secret will governs everything in this world, but we cannot search it out ahead of time; we usually only see it after it happens.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God has not left us in the dark about how we should live today. He has clearly revealed his moral guidance in the Bible so we know what pleases him. Tara Johnson notes that a close relationship with God matters far more than having complete knowledge. Like children who trust a loving father, we can find peace by simply obeying what God has revealed in his Word, leaving what is hidden in his caring hands.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you spending more time trying to figure out the future than obeying what God has already commanded?",
+    "How can you practice childlike trust in God when you do not have all the answers you want?"
+   ],
+   "prayer": "Lord, thank you that your Word gives us everything we need to follow you. Forgive us when we worry about the future and try to know what you have kept hidden. Help us to trust you with childlike faith and gladly obey what you have revealed.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Defining the Will of God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/defining-will-god"
+    },
+    "D3": {
+     "author": "Tara Johnson",
+     "work": "When We Don’t Have the Answers",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wholly-loved/when-we-don-t-have-the-answers-wholly-loved-october-25.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 5029001,
+   "end": 5029029,
+   "ref": "Deuteronomy 29:1-29",
+   "ranges": [
+    [
+     5029001,
+     5029029
+    ]
+   ],
+   "title": "Walking in the Track of God's Will",
+   "key_verse": [
+    5029019,
+    5029019
+   ],
+   "reflect": [
+    {
+     "text": "The human heart can easily fool itself. We hear God warn against turning away into sin, yet we tell ourselves that we will be safe anyway. As F. B. Meyer observed, a person wrongly thinks they will \"come off scot free\" even while following their own stubborn desires. When we demand our own way instead of God's way, we cut ourselves off from true safety and bring deep unrest to our souls.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Real peace is impossible when we hold on to a stubborn spirit. If you feel inner turmoil, the secret cause may be that you have not fully surrendered your life to the Lord. We cannot expect soul rest while secretly choosing what God forbids. The only way to find quietness inside is to give up fighting God, turn away from our self-will, and bow before him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God invites us to ask him for help. He can soften our hard hearts and give us a gentle willingness to obey him. When we take his yoke and let him lead our daily steps, we find the rest our souls long for. Walking in the path of God's holy will brings a deep peace that guards our hearts and minds.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an area of your life where you are stubbornly holding onto your own way instead of obeying God?",
+    "What would it look like today to surrender that area and ask God for a soft heart?"
+   ],
+   "prayer": "Lord, forgive us for the times we stubbornly follow our own desires while expecting peace. Please remove the hardness from our hearts and teach us to yield our wills to yours. Guide our daily steps so that we may walk in your truth and find rest in you.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Deuteronomy 29:19",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

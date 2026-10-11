@@ -1,0 +1,73 @@
+{
+ "id": "50-003-012",
+ "title": "Pressing on toward the Goal",
+ "refs": [
+  "Philippians 3:12-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 50003012,
+   "end": 50003016,
+   "ref": "Philippians 3:12-16",
+   "ranges": [
+    [
+     50003012,
+     50003016
+    ]
+   ],
+   "title": "Pressing Forward Toward the Goal",
+   "key_verse": [
+    50003014,
+    50003014
+   ],
+   "reflect": [
+    {
+     "text": "The apostle Paul knew he had not yet reached spiritual perfection. Even though we can be certain of our future glory in heaven, that assurance does not mean we sit back and do nothing. Instead, knowing that God will complete our salvation encourages us to know Christ even more fully. To stay active in our faith, we must listen to the Holy Spirit's guidance through the Scriptures and keep moving forward.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Living as a follower of Jesus is like running a race. If a runner constantly looks backward, they break their stride and slow down. In the same way, looking back at our past sins can hinder our walk with God. Because God has already forgiven our failures, we should not let lingering guilt rule our present lives. At the same time, we must not rest on our past spiritual victories, which can make us complacent instead of determined.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "To reach the finish line, believers need undivided attention. We are called to push aside every distraction and focus directly on God's heavenly call until our race is complete. Trusting Christ, we strain ahead toward the eternal prize He has set before us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are past regrets or past spiritual successes holding you back from moving forward with Christ?",
+    "What distractions do you need to set aside this week to focus on God's call?"
+   ],
+   "prayer": "Lord Jesus, thank You for forgiving our past mistakes and promising to finish Your good work in us. Help us leave behind old guilt and push aside anything that distracts us from You. Guide us through Your Word and give us strength to run this race with undivided focus until we reach the goal. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "Running the Race",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-may-28-2025.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Pressing Forward",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/pressing-forward"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

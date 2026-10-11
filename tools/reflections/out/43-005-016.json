@@ -1,0 +1,61 @@
+{
+ "id": "43-005-016",
+ "title": "The Father and the Son",
+ "refs": [
+  "John 5:16-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43005016,
+   "end": 43005030,
+   "ref": "John 5:16-30",
+   "ranges": [
+    [
+     43005016,
+     43005030
+    ]
+   ],
+   "title": "Watching and Following the Father",
+   "key_verse": [
+    43005016,
+    43005016
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, Jesus explains His close bond with God. He does not act independently or chase His own goals. Instead, He watches what the Father is doing and does the very same thing. As F. B. Meyer noted, Jesus kept His eye on the \"dial-plate of eternity,\" paying attention to unseen heavenly truths rather than worldly praise. Because the Son loved and obeyed the Father perfectly, the Father lovingly revealed His work to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Father also promised to show Jesus even greater works, guiding Him step by step from quiet miracles to giving life to the dead. Meyer reminds us that we are called to follow this same path of humble service. As God's adopted children, we do not need to rely on our own cleverness or rush ahead on our own. When we keep Jesus' words and stay close to Him, the Father teaches us to walk in obedience and join in His lasting work.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you trying to live by your own plans, or are you taking time to look for what God is doing?",
+    "How can growing in humble obedience help you follow Jesus more closely today?"
+   ],
+   "prayer": "Father, thank You for showing us Your love and truth through Your Son, Jesus. Teach us to listen for Your guidance and depend on You rather than our own strength. Help us to keep Your Word with humble hearts and walk faithfully where You lead. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "John 5:20",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

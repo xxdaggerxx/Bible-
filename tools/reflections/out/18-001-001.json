@@ -1,0 +1,67 @@
+{
+ "id": "18-001-001",
+ "title": "Job’s Character and Wealth",
+ "refs": [
+  "Job 1:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18001001,
+   "end": 18001005,
+   "ref": "Job 1:1-5",
+   "ranges": [
+    [
+     18001001,
+     18001005
+    ]
+   ],
+   "title": "Seeking Cleansing After Times of Joy",
+   "key_verse": [
+    18001005,
+    18001005
+   ],
+   "reflect": [
+    {
+     "text": "Job was a godly and wealthy man who cared deeply about his family. When his children finished their feasts, Job would rise early in the morning to offer sacrifices for each of them. He knew that during happy celebrations, it is easy for human hearts to wander, become careless, and speak thoughtless words.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Charles Spurgeon pointed out that during cheerfulness and family gatherings, our joy can easily turn into \"unhallowed mirth.\" We often forget our calling as believers and slip into loose speech. While holy gratitude should naturally flow from good times, our weak hearts often fail, making it wise for us to review our conduct at the end of festive days.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we see that we have sinned in ignorance or carelessness, we do not need to fall into despair. Job brought burnt offerings for his children, and we can turn to Jesus, whose sacrifice cleanses our conscience. Living close to Christ's cleansing fountain brings peace and removes every lingering guilt from our hearts.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you let careless words or thoughts slip into your times of celebration?",
+    "How does turning to Jesus as your sacrifice bring you peace when you recognize your sins?"
+   ],
+   "prayer": "Lord, forgive us for the careless words and thoughts we fall into when we are enjoying ourselves. Thank You that Jesus offered Himself to wash away all our guilt and give us clean hearts. Help us to keep close to Your cleansing grace every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 25",
+     "on": "Job 1:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

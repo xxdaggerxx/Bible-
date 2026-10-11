@@ -1,0 +1,67 @@
+{
+ "id": "13-015-014",
+ "title": "The Priests and Levites Carry the Ark",
+ "refs": [
+  "1 Chronicles 15:14-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13015014,
+   "end": 13015024,
+   "ref": "1 Chronicles 15:14-24",
+   "ranges": [
+    [
+     13015014,
+     13015024
+    ]
+   ],
+   "title": "Turning Sighs into Songs",
+   "key_verse": [
+    13015016,
+    13015016
+   ],
+   "reflect": [
+    {
+     "text": "When the Levites carried the Ark of the Lord to Jerusalem, the whole journey was marked by great gladness. David appointed musicians and singers to lead the people in joyful praise. Even if we do not consider ourselves musicians, our hearts can still receive the joy of the Lord. As F. B. Meyer wrote, song is simply being in harmony with the life of God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Doing the will of God does not always feel easy at the beginning. It sometimes enters our lives like a sigh, just as David's first attempt to move the Ark brought trouble and grief. Yet when we truly welcome God's presence and ways into our inner lives, those sighs turn into songs, and our tears turn into thanksgiving.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's commands may seem demanding from a distance, but practicing them brings genuine peace. When we choose to stay within the circle of His will, we find that heaven meets us there. We can trust Him and gladly talk about all His wonderful works.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life has doing God's will felt more like a heavy sigh than a song?",
+    "How can welcoming God's presence help turn your daily worries into thanksgiving?"
+   ],
+   "prayer": "Lord God, thank You for the joy that comes from walking in Your will. Help us to welcome Your presence into the centre of our lives every day. When obedience feels difficult, please turn our sighs into songs of praise. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 15:22",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,142 @@
+{
+ "id": "01-029-014",
+ "title": "Jacob Marries Leah and Rachel",
+ "refs": [
+  "Genesis 29:14-30"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1029020,
+   "end": 1029020,
+   "ref": "Genesis 29:20",
+   "ranges": [
+    [
+     1029020,
+     1029020
+    ]
+   ],
+   "title": "\"It Seemed but a Few Days\"",
+   "key_verse": [
+    1029020,
+    1029020
+   ],
+   "reflect": [
+    {
+     "text": "Jacob worked for seven long years to marry Rachel, yet those years felt like only a few days to him because of his deep love. A genuine love has the power to lift heavy burdens. It changes how we view time and turns hard labor into something we bear with joy.",
+     "sources": [
+      "D2",
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "This is how love works in our walk with Jesus. Wholehearted love for our Savior is the driving force that sustains us through long, difficult seasons of Christian service. When our affection for Christ cools, following Him can quickly feel like an overwhelming chore. But when we remember how Jesus endured the cross for us, our love for Him is renewed, and our burdens grow light.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "We do not have to generate this devotion on our own. We can nurture it by pausing to think about Christ dying for us and noticing His care in our daily lives. As we ask the Holy Spirit to breathe love into our hearts, that love naturally flows out to the people around us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When has serving Jesus felt heavy to you, and how might remembering His love change that burden?",
+    "In what practical ways can you pause today to reflect on Christ's sacrifice for you?"
+   ],
+   "prayer": "Lord Jesus, thank You for loving us first and enduring the cross to redeem us. Please send Your Holy Spirit to fill our hearts with that same love. Help us to serve You and others with patience and joyful endurance today. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 29:20",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "Greg Morse",
+     "work": "Laboring a Few Days for Christ: How Great Loves Make Burdens Light",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/laboring-a-few-days-for-christ"
+    },
+    "D5": {
+     "author": "Lysa TerKeurst",
+     "work": "The Driving Force of Love",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-march-28-2006-1386066.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1029014,
+   "end": 1029030,
+   "ref": "Genesis 29:14-30",
+   "ranges": [
+    [
+     1029014,
+     1029030
+    ]
+   ],
+   "title": "The Morning Light and Heavenly Rules",
+   "key_verse": [
+    1029025,
+    1029025
+   ],
+   "reflect": [
+    {
+     "text": "When morning arrived, Jacob faced a painful shock: he had been given Leah instead of Rachel. This moment of discovery reminds us that earthly relationships and worldly pleasures can never fully satisfy our deepest longings. Leah herself spent years aching for Jacob's approval, yet true peace came only when she looked to God instead. In His gentle mercy, God showed grace to this unloved woman and placed her in the family line of Jesus.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Laban made an excuse for his deception by claiming that the older daughter must be wed before the younger. Charles Spurgeon reminds us that in God's kingdom, \"the cross must be carried before the crown can be worn.\" We often want the sweet gifts of peace and joy right away, but God calls us to walk through repentance and holiness first.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Expecting spiritual reward without labor or honor without humility is an idle hope. When we accept God's wise order for our lives out of love for Christ, even difficult duties become sweet, knowing that eternity with Him will make up for all our earthly trials.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there places in your life where you look to people or worldly things instead of God for satisfaction?",
+    "How can accepting God's call to repentance and holiness prepare your heart for true joy?"
+   ],
+   "prayer": "Heavenly Father, teach us to find our deepest contentment in You alone. Give us patient hearts to follow You in true repentance before we seek comfort. Thank You for Your unfailing grace to the forgotten and weary. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 14",
+     "on": "Genesis 29:26",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Tedd Tripp",
+     "work": "The Forgotten Woman",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/forgotten-woman"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

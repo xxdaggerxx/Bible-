@@ -1,0 +1,90 @@
+{
+ "id": "26-047-001",
+ "title": "Waters from under the Temple",
+ "refs": [
+  "Ezekiel 47:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 26047008,
+   "end": 26047009,
+   "ref": "Ezekiel 47:8-9",
+   "ranges": [
+    [
+     26047008,
+     26047009
+    ]
+   ],
+   "title": "\"Wherever the River Flows, Everything Will Flourish\"",
+   "key_verse": [
+    26047009,
+    26047009
+   ],
+   "reflect": [
+    {
+     "text": "Daily demands and heavy heartbreaks can leave us feeling drained, numb, or weary. When life hurts, we are often tempted to believe our broken situation is beyond repair. But in Ezekiel's vision, a small trickle flowing from God's house becomes a river so deep that nobody can cross it on foot. Where it enters the salty, lifeless Dead Sea, the waters turn fresh and sweet. God shows us that nothing in our lives is too dead or damaged for his renewing touch.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "This river is a picture of God's grace—his free kindness to us—and the good news of Jesus reaching into a dry, broken world. As Charles Spurgeon wrote, grace \"does not wait for life to come to it, but it creates life.\" Ever since Jesus died on the cross, the gospel has spread outward, bringing healing and true life wherever it travels. It sweeps through desert places and turns empty waters into thriving homes for fish.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God invites us to experience this abundant life inside our own hearts. We are often tempted to just dip our toes into God's presence or stay ankle-deep. Instead, we can wade out deeper into prayer and love until we are completely immersed in him. When we trust his living water to reach every dry or tired corner of our lives, he revives us and makes us flourish.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an area of your life or a hurt that feels too dry for God to heal?",
+    "How can you move past just dipping your toes into God's presence and step deeper into prayer today?"
+   ],
+   "prayer": "Lord God, thank you for sending your living water to heal and revive what is broken. Please pour your grace into our tired hearts and wash away our discouragement. Help us not to stay in the shallows, but to trust you fully and rest in your deep love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 24",
+     "on": "Ezekiel 47:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 47:9",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Lysa TerKeurst",
+     "work": "What Makes Faith Fall Apart",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-april-16-2020.html"
+    },
+    "D4": {
+     "author": "Rachel Olsen",
+     "work": "Alive",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-july-2-2009-11605509.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

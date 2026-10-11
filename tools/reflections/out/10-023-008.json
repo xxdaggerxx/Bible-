@@ -1,0 +1,66 @@
+{
+ "id": "10-023-008",
+ "title": "David’s Mighty Men",
+ "refs": [
+  "2 Samuel 23:8-39"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10023008,
+   "end": 10023039,
+   "ref": "2 Samuel 23:8-39",
+   "ranges": [
+    [
+     10023008,
+     10023039
+    ]
+   ],
+   "title": "Standing Together in God's Service",
+   "key_verse": [
+    10023016,
+    10023016
+   ],
+   "reflect": [
+    {
+     "text": "God gave David great victories, but He did not make David win them all alone. Instead, the Lord worked through many faithful warriors. God can use anyone who surrenders to Him, refusing to limit His power to a single person. Needing the help of others protected David from pride, self-sufficiency, and isolated leadership. This also reminds us not to place leaders on unhealthy pedestals, which guards both leaders and the church from harmful hero worship.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even during wartime, David was not afraid to speak of a simple need. Unlike young children who ask for help easily, adults often hesitate to share what they need. Yet David did not hide his longing for water from Bethlehem, and his men listened. We too should pay attention to both the spoken requests and quiet heartaches of those nearby. Being attentive allows us to step in with practical help and faithful, persistent prayer.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Whose spoken needs or quiet heartaches can you pay closer attention to this week?",
+    "Is there a need in your own life that you should humbly share instead of trying to carry it alone?"
+   ],
+   "prayer": "Lord, thank You for placing others alongside us to share the load. Keep us from pride, and teach us not to put human leaders on pedestals. Open our eyes to notice the needs and hurts of people around us. Give us willing hearts to help and pray for them in love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Cara Meredith",
+     "work": "Who Among Us Is Crying Out for Help?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-july-19.html"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 75: 2 Samuel 23:8–17",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-75-2-samuel-23-817.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

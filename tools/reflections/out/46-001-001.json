@@ -1,0 +1,81 @@
+{
+ "id": "46-001-001",
+ "title": "Greetings from Paul and Sosthenes",
+ "refs": [
+  "1 Corinthians 1:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46001001,
+   "end": 46001003,
+   "ref": "1 Corinthians 1:1-3",
+   "ranges": [
+    [
+     46001001,
+     46001003
+    ]
+   ],
+   "title": "Called to Be Holy in Christ",
+   "key_verse": [
+    46001002,
+    46001002
+   ],
+   "reflect": [
+    {
+     "text": "The church in ancient Corinth was surrounded by cultural vices and struggled with pride and division. Yet, Paul greeted these believers as sanctified, or made holy, in Christ Jesus. In the Bible, sainthood is not a special title given long after death. It begins the moment a person trusts in Christ. God gives believers this holy status by grace, His undeserved kindness, rather than because of our own works or power.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "This holiness is the work of the whole Trinity. As Charles Spurgeon wrote, \"none of the Persons of the Trinity act apart\" in deeds of grace. The Father, the Son, and the Holy Spirit work in complete unity to cleanse and shape God's people. Because God places such a high value on holiness, we should treasure it as well.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Christian growth means learning to live out the holy standing God has already granted us. Even when we fail, our identity in Christ remains secure. We are invited to examine our daily habits and speech, seeking to let our everyday conduct reflect who we are in the Lord.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God already views you as holy in Christ encourage you when you fail?",
+    "What is one daily habit you can adjust so that your life better reflects your calling in Christ?"
+   ],
+   "prayer": "Father, thank You for giving us a holy standing through faith in Jesus Christ. We praise You, the Son, and the Holy Spirit for working together to make us clean and whole. Please guide our daily choices so that our conduct reflects the gracious identity You have given us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 12",
+     "on": "1 Corinthians 1:2-3",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "To the Church of God in Corinth",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/to-the-church-of-god-in-corinth"
+    },
+    "D3": {
+     "author": "Daily Disciples Ministries",
+     "work": "Daily Disciples - Oct.13, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-oct13-2010-11639413.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

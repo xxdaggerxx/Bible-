@@ -1,0 +1,121 @@
+{
+ "id": "02-020-001",
+ "title": "The Ten Commandments",
+ "refs": [
+  "Exodus 20:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2020007,
+   "end": 2020007,
+   "ref": "Exodus 20:7",
+   "ranges": [
+    [
+     2020007,
+     2020007
+    ]
+   ],
+   "title": "\"Do Not Take God's Name in Vain\"",
+   "key_verse": [
+    2020007,
+    2020007
+   ],
+   "reflect": [
+    {
+     "text": "In Scripture, God's name represents his holy character and calls for our deepest reverence. Our culture often treats this commandment lightly, using the Lord's name or Jesus' name as casual exclamations, curse words, or quick text abbreviations without any serious thought. Yet using his name so flippantly empties it of the honor it deserves. Even when people misuse Jesus' name in anger, they unintentionally admit that his name holds unique power.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Dishonoring God's name goes beyond careless words. We also dishonor him when we gossip about, slander, or curse other people, who are made in his image. Most damaging of all, we take his name in vain when we claim to belong to Christ but choose to live in open disobedience. Because our speech and actions matter, we need the Holy Spirit to guard our tongues and help us treat God's name with true respect.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there ways you use God's name casually in your everyday speech, messages, or habits?",
+    "How does the way you speak about others and live each day reflect your respect for God?"
+   ],
+   "prayer": "Lord, forgive us for the times we treat your holy name lightly in our words or actions. Holy Spirit, guard our mouths from gossip, careless talk, and empty phrases. Help us to honor your name by the way we treat other people and by living in faithful obedience to you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "A Misunderstood Commandment - Greg Laurie Devotion - May 13, 2022",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-may-13-2022.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Third Commandment",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-third-commandment"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 2020012,
+   "end": 2020012,
+   "ref": "Exodus 20:12",
+   "ranges": [
+    [
+     2020012,
+     2020012
+    ]
+   ],
+   "title": "\"Honor Your Father and Mother\"",
+   "key_verse": [
+    2020012,
+    2020012
+   ],
+   "reflect": [
+    {
+     "text": "God gives each of us specific parents as part of his loving and purposeful design. Growing up in a home teaches our hearts how to submit to guidance, which prepares us to respect God and rightful authorities in society. While adult children move past the childhood stage of simple obedience, showing honor to our parents remains a lifelong calling. God attaches a promise of blessing to this command, which ultimately directs our hearts toward our eternal home with him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Honoring our parents means remembering the sacrifices they made for us and treating them with genuine respect. We can practice this in ordinary, daily ways, such as making planned phone calls, giving thoughtful gifts, and spending quality time with them. For those who have lost parents, this same care can extend to in-laws and other elder mentors who have guided them. Because life on earth is short and fragile, we should take every chance to show steady love to the elders in our families.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What practical step, such as a phone call or spending time together, can you take this week to honor your parents or family elders?",
+    "How has learning respect within your family helped you grow in reverence toward God?"
+   ],
+   "prayer": "Heavenly Father, thank you for placing us in families and for the elders who have sacrificed for us. Teach us to show lasting honor to our parents and in-laws through our time, attention, and practical care. Guide our hearts to respect them faithfully as we remember that our days on earth are short. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Marshall Segal",
+     "work": "Honor the Parents God Gave You",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/honor-the-parents-god-gave-you"
+    },
+    "D4": {
+     "author": "Michelle S. Lazurek",
+     "work": "Honor Your Father and Mother (In-Law) - Crosswalk Couples Devotional - November 19",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-couples-devotional/honor-your-father-and-mother-in-law-crosswalk-couples-devotional-november-19.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,68 @@
+{
+ "id": "19-117-001",
+ "title": "Extol Him, All You Peoples",
+ "refs": [
+  "Psalms 117:1-2"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19117001,
+   "end": 19117002,
+   "ref": "Psalms 117:1-2",
+   "ranges": [
+    [
+     19117001,
+     19117002
+    ]
+   ],
+   "title": "Praise from Every Nation and Moment",
+   "key_verse": [
+    19117001,
+    19117001
+   ],
+   "reflect": [
+    {
+     "text": "Psalm 117 is the shortest chapter in the Bible, but it carries a huge message. We often miss chances to worship because we think we need long, uninterrupted blocks of time. This brief psalm shows us that praise can happen in quick, frequent moments throughout an ordinary day, such as during a commute or an evening routine. At the same time, it looks far beyond our own lives, calling every tribe and nation across the globe to honor God together without any racial or cultural barriers.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Our praise rests on two steady realities: God's great, steadfast love and His truth that never ends. Through grace, God rescues people who were once His enemies and welcomes them as friends. Jesus likely sang these exact words with His disciples at the Last Supper before giving His life for sinners on the cross. Even a very short song can direct our thoughts to Christ, His saving love, and His mission to reach all people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What ordinary moments during your day could you use to pause and give God praise?",
+    "How does knowing that God invites every nation to praise Him affect how you think about others?"
+   ],
+   "prayer": "Lord God, thank You for Your steadfast love toward us and Your faithfulness that lasts forever. Help us remember to praise You in small moments throughout our daily routines. We thank You for sending Jesus to turn enemies into friends, and we ask You to draw people from every nation to Your grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Joe Holland",
+     "work": "Moments of Praise",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/moments-of-praise"
+    },
+    "D2": {
+     "author": "Erik Raymond",
+     "work": "The Self Interest of God (Psalm 117)",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/erik-raymond/the-self-interest-of-god-psalm-117/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

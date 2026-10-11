@@ -1,0 +1,71 @@
+{
+ "id": "40-014-034",
+ "title": "Jesus Heals at Gennesaret",
+ "refs": [
+  "Matthew 14:34-36",
+  "Mark 6:53-56"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40014034,
+   "end": 40014036,
+   "ref": "Matthew 14:34-36; Mark 6:53-56",
+   "ranges": [
+    [
+     40014034,
+     40014036
+    ],
+    [
+     41006053,
+     41006056
+    ]
+   ],
+   "title": "Reaching Out in Faith to Jesus",
+   "key_verse": [
+    41006056,
+    41006056
+   ],
+   "reflect": [
+    {
+     "text": "After a stormy night on the water redirected their boat, Jesus and His disciples landed at Gennesaret. The local people recognized Jesus right away. They saw Him as their true source of hope. People spread the word across the whole region, carrying their bedridden friends and family members on mats to wherever they heard Jesus was visiting.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Wherever Jesus went in villages, towns, or the countryside, people placed the sick in public squares and begged to touch the fringe of His clothing. Jesus wore these fringes because God's law given through Moses required them, showing His faithful obedience to the Scriptures. The crowd's faith may have had some superstitious ideas mixed in, but their faith brought real healing because it was centered on Jesus Himself.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We must be careful never to treat Jesus simply as a miracle-worker who is here only to fix our problems. At the same time, we can come to Him with complete confidence. He has real power to heal, restore, and care for us when we bring our deepest needs to Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways might we be tempted to treat Jesus only as a problem-solver rather than as our Lord?",
+    "Who in your life is hurting right now, and how can you bring them to Jesus in prayer?"
+   ],
+   "prayer": "Lord Jesus, thank You for Your obedience to God's Word and Your deep care for hurting people. Help us not to treat You merely as someone to serve our wishes, but to trust You as our Savior. Give us faith to bring our own needs and our loved ones to You, trusting in Your power to heal and restore. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Healings in Gennesaret",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/healings-gennesaret"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

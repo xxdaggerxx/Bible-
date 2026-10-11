@@ -1,0 +1,74 @@
+{
+ "id": "54-006-011",
+ "title": "Fight the Good Fight",
+ "refs": [
+  "1 Timothy 6:11-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 54006012,
+   "end": 54006013,
+   "ref": "1 Timothy 6:12-13",
+   "ranges": [
+    [
+     54006012,
+     54006013
+    ]
+   ],
+   "title": "\"Fight the Good Fight of the Faith\"",
+   "key_verse": [
+    54006012,
+    54006012
+   ],
+   "reflect": [
+    {
+     "text": "God frequently calls ordinary believers to accomplish extraordinary work for his kingdom. Following Christ places us in a spiritual battleground where we are called to stand firm and defend the truth. This path may bring hardship or personal danger, but we can show courageous faith, just as Stephen did when hostility mounted against him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "As we fight for the faith, we must remember who our real enemy is. The adversary in this conflict is the devil rather than other people. For this reason, defending what is right must never turn into argumentative behavior or personal bullying. We are called to balance tough convictions and discernment with genuine tenderness toward others.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We do not have to endure these hardships in our own human strength. Believers overcome spiritual hostility through Christ's victory. Whatever difficulties we meet, we can stand firm knowing that the exalted Christ watches over us and sustains us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you stand firm for God's truth while still treating people around you with gentleness and love?",
+    "What hardship are you facing today where you need to trust Christ to sustain you instead of relying on your own strength?"
+   ],
+   "prayer": "Lord Jesus, thank you that you watch over and sustain us when we face difficult trials. Help us to stand firm for your truth with courage, without becoming argumentative or harsh toward others. Teach us to rest in your victory rather than our own strength. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Fred Alberti",
+     "work": "Enduring Hurled Stones",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-june-23-2009-11605077.html"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "Our Calling: What We Fight For",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/church-leaders/our-calling-what-we-fight-for?ga=testimonial-resources"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

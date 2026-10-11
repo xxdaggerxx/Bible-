@@ -1,0 +1,81 @@
+{
+ "id": "46-007-001",
+ "title": "Principles of Marriage",
+ "refs": [
+  "1 Corinthians 7:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46007003,
+   "end": 46007005,
+   "ref": "1 Corinthians 7:3-5",
+   "ranges": [
+    [
+     46007003,
+     46007005
+    ]
+   ],
+   "title": "\"Do Not Deprive Each Other\"",
+   "key_verse": [
+    46007005,
+    46007005
+   ],
+   "reflect": [
+    {
+     "text": "God made physical intimacy in marriage to be holy and good. Scripture teaches that husbands and wives give authority over their bodies to one another in mutual love. This shared authority is never an excuse to make hurtful, demeaning, or ungodly demands. Instead, Christian partners are called to honor each other, seeking the other person's joy and well-being rather than merely pressing their own rights.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because marriage is built on mutual giving, spouses should not withhold intimacy as a weapon or bargaining chip when feeling hurt. Withholding physical closeness damages trust and opens the door to outside temptation. The Bible says couples should step back from intimacy only by mutual agreement for a short time of focused prayer, or for legitimate reasons such as illness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Whenever differences arise, self-giving grace helps resolve disagreements. Husbands and wives protect their covenant by caring for one another's needs with patience and respect. Most of all, we must look to Christ for our deepest sense of love and fulfillment, trusting Him to help us give generously to our spouse.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you show self-giving love and honor toward your spouse instead of focusing only on your own desires?",
+    "Are you looking to Jesus first for your deepest sense of love and contentment?"
+   ],
+   "prayer": "Lord Jesus, thank You for the good gift of marriage and the covenant of mutual love. Teach us to honor each other and to serve with patience, tenderness, and respect. Help us look to You for our ultimate fulfillment so we can give freely and guard our hearts against temptation. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Michelle S. Lazurek",
+     "work": "Don’t Use Sex as a Weapon - Crosswalk Couples Devotional - May 3",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-couples-devotional/dont-use-sex-as-a-weapon-crosswalk-couples-devotional-may-3.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Conjugal Rights in Marriage",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/conjugal-rights-in-marriage"
+    },
+    "D3": {
+     "author": "John Piper",
+     "work": "Sexual Intimacy and the Rights over a Spouse’s Body in Marriage",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/sexual-intimacy-and-the-rights-over-a-spouses-body-in-marriage"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

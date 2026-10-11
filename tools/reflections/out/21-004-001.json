@@ -1,0 +1,66 @@
+{
+ "id": "21-004-001",
+ "title": "The Evil of Oppression",
+ "refs": [
+  "Ecclesiastes 4:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 21004001,
+   "end": 21004012,
+   "ref": "Ecclesiastes 4:1-12",
+   "ranges": [
+    [
+     21004001,
+     21004012
+    ]
+   ],
+   "title": "Contentment and Companionship",
+   "key_verse": [
+    21004009,
+    21004009
+   ],
+   "reflect": [
+    {
+     "text": "Many people feel constant pressure from the world to chase after more things and keep up with others. We often compare our lives to people around us, thinking that having more will make us happy. Yet this endless striving steals our peace, harms our family relationships, and pulls us into dangerous worldly traps. Instead of chasing after every upgrade, we find quiet rest when we learn to take delight in God rather than in endless work.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God also did not design us to live or work completely on our own. When we try to face life by ourselves, hardships feel heavier and isolation sets in. Working together brings much better results than solitary labor. A trusted companion gives us clear perspective and courage when times feel threatening. When we stumble or feel weak, a faithful friend is there to lift us up instead of walking away.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where might the pressure to keep up with others be stealing your peace?",
+    "Who is a trusted friend you can walk alongside so you do not carry life's hardships alone?"
+   ],
+   "prayer": "Lord, help us let go of the pressure to compare ourselves with others and chase after more things. Teach us to find our quiet contentment in you rather than in endless striving. Thank you for the gift of companionship, and give us trusted friends to walk beside when times are hard. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Shea Smith",
+     "work": "Letting Go of the Need to Keep Up - Your Nightly Prayer - July 15th",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/letting-go-of-the-need-to-keep-up.html"
+    },
+    "D2": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Two Are Better Than One",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/two-are-better-than-one"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

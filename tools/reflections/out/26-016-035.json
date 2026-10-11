@@ -1,0 +1,66 @@
+{
+ "id": "26-016-035",
+ "title": "Judgment on Jerusalem",
+ "refs": [
+  "Ezekiel 16:35-58"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26016035,
+   "end": 26016058,
+   "ref": "Ezekiel 16:35-58",
+   "ranges": [
+    [
+     26016035,
+     26016058
+    ]
+   ],
+   "title": "Pride and the Sin of Sodom",
+   "key_verse": [
+    26016049,
+    26016049
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God compares Jerusalem to her sister city, Sodom. While many people think of Sodom only in terms of outward moral failure, Ezekiel reveals a deeper problem beneath the surface. God explains that Sodom's root offense was inner arrogance, joined with plenty of food, ease, and a failure to help the poor and needy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It is easy for us to judge others when we focus only on external rules. Yet focusing strictly on outward standards can easily hide our own spiritual pride. Jerusalem looked down on Sodom, but she had become just as corrupt. We must oppose arrogance in our own hearts and churches just as fiercely as we oppose visible wrongdoing.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Seeing our own need for grace keeps us from feeling superior to those around us. A humble posture is necessary if we want to speak God's truth to others with real love and wisdom.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there places in your life where comfort and ease have made you blind to the needs of the poor?",
+    "How can keeping a humble heart change the way you talk with others about God's truth?"
+   ],
+   "prayer": "Lord, search our hearts and remove any hidden pride. Forgive us for the times we have enjoyed comfort while ignoring those who are needy. Grant us humble spirits so we can share your truth with gentleness and love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Tyler Kenney",
+     "work": "The Sin of Sodom",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-sin-of-sodom"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

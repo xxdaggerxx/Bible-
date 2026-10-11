@@ -1,0 +1,135 @@
+{
+ "id": "40-028-016",
+ "title": "The Great Commission",
+ "refs": [
+  "Matthew 28:16-20",
+  "Mark 16:14-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40028018,
+   "end": 40028020,
+   "ref": "Matthew 28:18-20",
+   "ranges": [
+    [
+     40028018,
+     40028020
+    ]
+   ],
+   "title": "\"I Am with You Always\"",
+   "key_verse": [
+    40028020,
+    40028020
+   ],
+   "reflect": [
+    {
+     "text": "Jesus holds all authority in heaven and on earth. Because of this, He calls every believer to be His agent in the world. His command fulfills the ancient promise that people from every nation would belong to God. Jesus has not retired from His work; He continues to gather His harvest through the church. Through our ordinary daily lives and simple faithfulness, He invites us to point others to the good news so they can enter God's family.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "We are never left to do this on our own. Everything in this passing world fades, but Jesus stands as an unchanging rock. His living presence is with us right now. Knowing He is near warms our hearts with love, gives us endurance for every task, and carries us through our deepest trials. As Charles Spurgeon noted, this promise is \"enough for my soul to live upon.\" We can gladly follow Him wherever He leads.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus holds all authority encourage you in your daily work?",
+    "Where do you need to lean on the comforting promise of His presence today?"
+   ],
+   "prayer": "Lord Jesus, thank You for holding all authority and choosing to use ordinary believers like us. Fill our hearts with Your love so that we can share Your good news with others. Help us to rest each day in the comfort of Your unchanging presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 11",
+     "on": "Matthew 28:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 26",
+     "on": "Matthew 28:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Rick Warren",
+     "work": "Jesus’ First and Last Words",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-january-31-2026.html"
+    },
+    "D5": {
+     "author": "Aaron Garriott",
+     "work": "What Does Matthew 28:18–20 Mean?",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/what-does-matthew-28-mean"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40028016,
+   "end": 40028020,
+   "ref": "Matthew 28:16-20; Mark 16:14-18",
+   "ranges": [
+    [
+     40028016,
+     40028020
+    ],
+    [
+     41016014,
+     41016018
+    ]
+   ],
+   "title": "Trusting Christ for Salvation",
+   "key_verse": [
+    41016016,
+    41016016
+   ],
+   "reflect": [
+    {
+     "text": "People often try to map out their own way to God. We tend to think we must earn our acceptance by trying hard, praying just the right way, or keeping all the rules. But the Lord's way is entirely different. God does not ask us to build up our own goodness to impress Him. Salvation is a matter of free grace, which means God's kindness given to us without our earning it. Because it is a gift, there is no place for human pride.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus makes the way clear: whoever believes and is baptized will be saved. To believe simply means to rely on Jesus and trust Him with your whole life. Baptism is our outward step of obedience that pictures our dying and rising with Him. While the water itself does not save us, it is a joyful sign we must not overlook. If you put your trust in Christ, you can lay down your worries and be confident in His promise.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there ways you still try to earn God's love instead of simply resting in Christ?",
+    "What does it mean for your daily peace to know that salvation is received through simple trust?"
+   ],
+   "prayer": "Lord Jesus, thank You that salvation does not depend on our own good works, but on Your free grace. Teach us to trust in You completely and leave behind all fear. Help us to obey Your commands with humble and grateful hearts. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 5",
+     "on": "Mark 16:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

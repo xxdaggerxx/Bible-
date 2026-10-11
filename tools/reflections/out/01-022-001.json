@@ -1,0 +1,73 @@
+{
+ "id": "01-022-001",
+ "title": "The Offering of Isaac",
+ "refs": [
+  "Genesis 22:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1022001,
+   "end": 1022010,
+   "ref": "Genesis 22:1-10",
+   "ranges": [
+    [
+     1022001,
+     1022010
+    ]
+   ],
+   "title": "Trusting God on the Mountain",
+   "key_verse": [
+    1022008,
+    1022008
+   ],
+   "reflect": [
+    {
+     "text": "When God asked Abraham to offer Isaac, Abraham did not argue, make excuses, or seek advice from other people. He showed childlike faith by getting up early the next morning to obey. God's call demands an immediate surrender of our will. Rather than picking our own hardships, we are called to accept the exact trials God appoints for us in life.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Walking through this deep trial brought intense emotional pain, especially when Isaac asked where the sacrificial lamb was. Yet walking through such hard tests with God guards our hearts against judging others quickly, and it draws us into closer friendship with Him. Abraham reached a place of complete surrender, choosing to obey God no matter what it might cost on earth.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When Abraham said that God would provide the lamb, he did not know a ram would appear in the bushes. Instead, he relied on God's covenant promises—His faithful pledges to His people—even through death. We are invited to make God's provision our own solid foundation, trusting Him to care for us in whatever He calls us to do.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of your life is God calling you to surrender your will without delay or excuses?",
+    "How does remembering that God provides help you trust His promises during painful trials?"
+   ],
+   "prayer": "Lord, grant us childlike faith to obey Your voice without debate or delay. When tests bring sorrow or confusion, teach us to lean completely on Your faithful promises. Help us to know You more closely and rest in Your provision every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Isaac's Question",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/isaacs-question"
+    },
+    "D2": {
+     "author": "Oswald Chambers",
+     "work": "The Supreme Climb",
+     "site": "My Utmost for His Highest",
+     "url": "https://utmost.org/modern-classic/the-supreme-climb/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

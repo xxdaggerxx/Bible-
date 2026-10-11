@@ -1,0 +1,61 @@
+{
+ "id": "16-005-014",
+ "title": "Nehemiah’s Generosity",
+ "refs": [
+  "Nehemiah 5:14-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 16005014,
+   "end": 16005019,
+   "ref": "Nehemiah 5:14-19",
+   "ranges": [
+    [
+     16005014,
+     16005019
+    ]
+   ],
+   "title": "Giving Up Our Rights for Others",
+   "key_verse": [
+    16005015,
+    16005015
+   ],
+   "reflect": [
+    {
+     "text": "As governor, Nehemiah had every right to take food and silver for his support. He was doing vital work, and no critic could blame him for claiming his allowance. Yet the people around him were poor and carrying a heavy burden. Out of holy fear of God, which is a deep reverence and awe for Him, Nehemiah gave up his rightful claims. He chose to stand on the people's level and share in their hardship so he could truly help them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We can learn the same lesson for our own lives. As F. B. Meyer wrote, \"often we must forego our evident rights and liberties in order to influence others\". People around us may argue that certain privileges are completely fine, and they may not understand when we choose to step back. But our highest rule is our devotion to Jesus. Christ gave Himself completely for us in love. If Nehemiah gave up so much out of reverence for God, our love for Jesus should lead us to lay down our own rights to bless those around us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a personal right or privilege you could set aside to help someone who is struggling?",
+    "How can your love for Jesus shape the way you use your daily freedoms?"
+   ],
+   "prayer": "Lord Jesus, thank you for loving us and giving up your life for our sake. Help us not to cling tightly to our own rights and comforts. Teach us to live with reverence and love, so that we may gladly serve and bless the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Nehemiah 5:15",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

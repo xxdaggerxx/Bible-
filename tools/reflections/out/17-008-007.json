@@ -1,0 +1,67 @@
+{
+ "id": "17-008-007",
+ "title": "The Decree of Xerxes",
+ "refs": [
+  "Esther 8:7-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 17008007,
+   "end": 17008017,
+   "ref": "Esther 8:7-17",
+   "ranges": [
+    [
+     17008007,
+     17008017
+    ]
+   ],
+   "title": "Light and Gladness After Darkness",
+   "key_verse": [
+    17008016,
+    17008016
+   ],
+   "reflect": [
+    {
+     "text": "King Xerxes gave Mordecai his signet ring to seal a new decree that could never be overturned. F. B. Meyer points out that this resembles the way the Holy Spirit seals those who trust in Christ. Just as a royal ring pressed the ruler's image into soft wax to make an order permanent, God places the character of Jesus on our hearts. This seal is God's proof that we are His children. It guarantees our place in His family with a promise that no enemy can ever undo.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When this message of freedom went out, the streets of Susa filled with shouting and celebration. The threat of destruction was replaced with honor and feasting. Charles Swindoll observes that this great joy reminds us that deep darkness and despair do not last forever. God is able to break down the hardest walls, bringing real hope to those facing hostility or grief. Even when we do not know when relief will arrive, we can trust that our seasons of weeping will eventually yield to His light.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God has sealed you as His child give you peace in uncertain situations?",
+    "What heavy season or difficult barrier in your life do you need to place in God's hands today?"
+   ],
+   "prayer": "Lord God, thank You for sealing us with Your Holy Spirit and giving us a secure promise that cannot be reversed. When we walk through seasons of grief or deep worry, remind us that darkness will not have the final say. Help us trust that You can break down every wall and bring light to our hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Esther 8:8",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Breaking Down Walls",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-sept-11-2008-11581643.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

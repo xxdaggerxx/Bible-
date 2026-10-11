@@ -1,0 +1,75 @@
+{
+ "id": "66-008-001",
+ "title": "The Seventh Seal",
+ "refs": [
+  "Revelation 8:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66008001,
+   "end": 66008005,
+   "ref": "Revelation 8:1-5",
+   "ranges": [
+    [
+     66008001,
+     66008005
+    ]
+   ],
+   "title": "Silence in Heaven and Our Prayers",
+   "key_verse": [
+    66008004,
+    66008004
+   ],
+   "reflect": [
+    {
+     "text": "When the Lamb opens the seventh seal, the ceaseless songs of heaven suddenly fall silent. For about half an hour, celestial praises stop in solemn anticipation of God's coming judgment. Heaven grows completely quiet because God is paying close attention to the voices of His people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "An angel stands before the altar holding incense alongside the prayers of all the saints. As the smoke rises up to God, it carries the cries of suffering believers who have long pleaded for justice and for God's kingdom to come. Not a single prayer offered by God's children is ever forgotten or wasted before His throne.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Finally, the angel fills the censer with altar fire and hurls it to the earth, answering those cries with thunder and an earthquake. God brings His judgment in direct answer to the appeals of His people. We should never doubt that our prayers are effective and active in God's sovereign plans.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever worry that your quiet prayers are overlooked or forgotten by God?",
+    "How does picturing heaven falling silent encourage you to keep praying for God's justice and kingdom?"
+   ],
+   "prayer": "Heavenly Father, thank You for hearing our cries and keeping every prayer safe before Your throne. When we feel small or unheard, remind us that our words are never wasted in Your sight. Help us to pray with patience and faith as we wait for You to make all things right. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Opening the Seventh Seal",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/opening-the-seventh-seal"
+    },
+    "D2": {
+     "author": "Greg Morse",
+     "work": "Prayers of the Apocalypse",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/prayers-of-the-apocalypse"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

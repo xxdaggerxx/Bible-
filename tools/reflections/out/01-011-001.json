@@ -1,0 +1,76 @@
+{
+ "id": "01-011-001",
+ "title": "The Tower of Babel",
+ "refs": [
+  "Genesis 11:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1011001,
+   "end": 1011009,
+   "ref": "Genesis 11:1-9",
+   "ranges": [
+    [
+     1011001,
+     1011009
+    ]
+   ],
+   "title": "When God Stops Our Pride",
+   "key_verse": [
+    1011004,
+    1011004
+   ],
+   "reflect": [
+    {
+     "text": "At Babel, the people worked hard to build a towering city to make a name for themselves. We often pour our energy into the very same pursuit. Beneath our drive to gain attention and look great is fear and deep insecurity. We think that building bigger, stronger, and more impressive things will keep us safe. Yet building monuments to our own reputation actually makes us more vulnerable and leads to the collapse we fear.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God's disruption at Babel seemed painful, but it was truly a mercy. Scattering the people restrained the destructive power of human pride. When God ruins our selfish plans today, He is doing the same gracious work. He opposes our pride and sends setbacks to rescue us from empty self-reliance. True strength does not come from making ourselves great, but from stepping down in humility so Christ may increase in our lives.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to build your own reputation or security instead of trusting God?",
+    "How might a recent setback or ruined plan be God's mercy keeping you from pride?"
+   ],
+   "prayer": "Lord, forgive us for trying to make a name for ourselves and seeking safety in our own strength. Thank You for lovingly disrupting the plans that lead us away from You. Grant us true humility, and help us find our lasting joy and significance in Jesus Christ alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 11:7",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Jared C. Wilson",
+     "work": "Too Big Not To Fail",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/too-big-not-to-fail-2/"
+    },
+    "D3": {
+     "author": "Jon Bloom",
+     "work": "When God Mercifully Ruins Our Plans",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/when-god-mercifully-ruins-our-plans"
+    }
+   },
+   "dropped": 1,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

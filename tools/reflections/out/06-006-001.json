@@ -1,0 +1,152 @@
+{
+ "id": "06-006-001",
+ "title": "The Walls of Jericho",
+ "refs": [
+  "Joshua 6:1-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 6006002,
+   "end": 6006003,
+   "ref": "Joshua 6:2-3",
+   "ranges": [
+    [
+     6006002,
+     6006003
+    ]
+   ],
+   "title": "\"I Have Delivered Jericho into Your Hand\"",
+   "key_verse": [
+    6006002,
+    6006002
+   ],
+   "reflect": [
+    {
+     "text": "When the Lord told Joshua that Jericho was already handed over, high walls still stood strong against Israel. Circling the city each day forced the people to see how formidable the obstacle truly was. In our own lives, we face modern Jerichos in serious illnesses, painful family crises, and problems we cannot solve. These towering barriers can easily make us feel small and forgotten.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "Marching silently day after day tested their patience, but Israel did not win through military power. Real breakthroughs begin when we humbly admit that we cannot handle matters on our own. The seven-day procession also granted the people of Jericho a prolonged chance to turn away from their evil ways and repent before God.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "God asks us to depend entirely on His word rather than our own strength. His supreme gift of His Son assures us that He will bring ultimate victory. Remembering how God has moved in the past keeps our faith secure against modern idols.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What impossible obstacle in your life is showing you that you cannot succeed on your own?",
+    "How does remembering God's gift of His Son help you wait patiently for His timing?"
+   ],
+   "prayer": "Lord God, when our difficulties seem too large to handle, help us to admit our weakness and turn to You. Teach us to wait patiently on Your timing instead of rushing ahead with our own plans. Thank You for the gift of Your Son and the victory You have promised us. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Marshall Segal",
+     "work": "Do It Again, God",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/do-it-again-god"
+    },
+    "D5": {
+     "author": "Greg Laurie",
+     "work": "What’s Your Jericho?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/what-s-your-jericho-greg-laurie-daily-devotion-august-14-2015.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 6006001,
+   "end": 6006027,
+   "ref": "Joshua 6:1-27",
+   "ranges": [
+    [
+     6006001,
+     6006027
+    ]
+   ],
+   "title": "The Fall of Jericho",
+   "key_verse": [
+    6006020,
+    6006020
+   ],
+   "reflect": [
+    {
+     "text": "God gave Israel unusual instructions to take Jericho. Instead of attacking the gates with weapons, the priests carried the ark and the people marched in silence. They were not asked to understand every detail, but simply to obey. As F. B. Meyer noted, we must yield to the \"slow and reverent pace of faith\" while God works.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Israel had to keep taking obedient steps each day, even when the fortress walls showed no sign of crumbling. An absence of visible progress does not mean God has stopped working. When the trumpets finally sounded on the seventh day and the people shouted, the walls fell flat by divine power.",
+     "sources": [
+      "D2",
+      "D4",
+      "D6"
+     ]
+    },
+    {
+     "text": "Jericho's downfall was a holy judgment against persistent wickedness, yet God showed mercy by saving Rahab and her family because she turned to Him in faith. Joshua then placed a solemn curse on anyone who would rebuild the city. We must not try to revive the errors and sins that God has brought down. Instead, we fight our spiritual battles today through God's appointed means: prayer, the preaching of the gospel, and spreading the truth of Scripture.",
+     "sources": [
+      "D1",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you tempted to stop obeying God because you do not see quick results in your situation?",
+    "How can you use prayer and the truth of the Bible to fight the spiritual battles in your life?"
+   ],
+   "prayer": "Heavenly Father, help us to keep obeying Your Word even when we see no immediate change around us. Guard our hearts from returning to sins and false ways that You have torn down. Give us grace to rely on Your truth, prayer, and the gospel every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 29",
+     "on": "Joshua 6:26",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joshua 6:20",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D4": {
+     "author": "Lysa TerKeurst",
+     "work": "Doing Things God’s Way",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-june-28-2018.html"
+    },
+    "D6": {
+     "author": "Ligonier Ministries",
+     "work": "The Fall of Jericho",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/fall-of-jericho"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

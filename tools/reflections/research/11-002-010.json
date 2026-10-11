@@ -1,0 +1,18 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://insight.org/",
+  "https://learn.ligonier.org/devotionals/guidance-to-solomon",
+  "https://www.biblegateway.com/passage/?search=1+Kings+2%3A10-12%2C1+Kings+3%3A3-14&version=NRSVUE",
+  "https://www.biblegateway.com/passage/?search=1+Kings+2%3A10-12&version=ESV",
+  "https://www.biblegateway.com/passage/?search=1+Kings+2%3A10-3%3A14&version=NIV",
+  "https://www.biblegateway.com/passage/?search=1+Kings+2&version=NKJV",
+  "https://www.biblegateway.com/resources/matthew-henry/1Kgs.2.1-1Kgs.2.11",
+  "https://www.davidjeremiah.org/",
+  "https://www.gty.org/",
+  "https://www.thegospelcoalition.org/commentary/1-kings/"
+ ],
+ "cost": 0.03571445,
+ "model": "google/gemini-3.8-flash"
+}

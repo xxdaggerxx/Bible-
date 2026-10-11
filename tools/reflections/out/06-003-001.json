@@ -1,0 +1,121 @@
+{
+ "id": "06-003-001",
+ "title": "Crossing the Jordan",
+ "refs": [
+  "Joshua 3:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 6003005,
+   "end": 6003005,
+   "ref": "Joshua 3:5",
+   "ranges": [
+    [
+     6003005,
+     6003005
+    ]
+   ],
+   "title": "\"Consecrate Yourselves\"",
+   "key_verse": [
+    6003005,
+    6003005
+   ],
+   "reflect": [
+    {
+     "text": "Standing at the edge of the Promised Land was a defining moment for the people of Israel. The choices they made right there would shape their future walk with God. The Lord desired to do wondrous things in their daily lives, but first He called them to consecrate themselves. To consecrate means to set ourselves apart from worldly habits so we can give our full attention to God.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Many of us want to see God show His power in our lives, but we often miss what He is doing because our hearts are not ready. When we deliberately remove spiritual distractions, we make room to see God at work. Experiencing His power begins with choosing obedience and trust. Whenever God calls us to purify our hearts, He also gives us the help we need to walk in His ways.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What distractions or worldly habits might be keeping you from focusing on God?",
+    "What is one practical choice you can make today to prepare your heart to follow Him?"
+   ],
+   "prayer": "Lord God, help us clear away the distractions that keep us from focusing on You. Purify our hearts and teach us to walk in daily obedience. We want to see Your wondrous work in our lives. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Wendy Pope",
+     "work": "Concentrating on Consecration",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-jan-1-2008-11563081.html"
+    },
+    "D3": {
+     "author": "Jack Graham",
+     "work": "Power Point - April 28, 2005",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-april-28-2005-1326537.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 6003001,
+   "end": 6003017,
+   "ref": "Joshua 3:1-17",
+   "ranges": [
+    [
+     6003001,
+     6003017
+    ]
+   ],
+   "title": "Crossing the Jordan",
+   "key_verse": [
+    6003013,
+    6003013
+   ],
+   "reflect": [
+    {
+     "text": "Facing big life changes and unknown situations can naturally stir up fear and hesitation. When Israel stood before the flooded Jordan River, the way forward looked impossible. Yet God promised them His presence and protection before they even took a single step toward the water.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God did not hold the river back while the priests stayed on the safe riverbank. The waters only stopped flowing after the priests placed their feet directly into the river. In the same way, seeing God provide for us often requires us to take a step of faith before the path ahead becomes clear.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we feel unsure about the future, our first reaction is often to cling to familiar routines. Instead, we can treat our hesitation as a quiet invitation to ask God for His direction and trust Him to lead us forward.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What unfamiliar situation or life transition is making you feel hesitant right now?",
+    "What is one small step of faith God is asking you to take before you see the whole path?"
+   ],
+   "prayer": "Heavenly Father, thank You for promising to be with us in every unknown place. When fear makes us want to hold back, give us courage to take the first step of faith. Guide our steps and help us trust Your faithful provision. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Lynn Cowell",
+     "work": "Our Reluctance to Return to Normal",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-june-3-2021.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

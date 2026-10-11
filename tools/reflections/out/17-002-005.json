@@ -1,0 +1,66 @@
+{
+ "id": "17-002-005",
+ "title": "Esther Finds Favor",
+ "refs": [
+  "Esther 2:5-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 17002005,
+   "end": 17002016,
+   "ref": "Esther 2:5-16",
+   "ranges": [
+    [
+     17002005,
+     17002016
+    ]
+   ],
+   "title": "Poise and Self-Control in Difficult Times",
+   "key_verse": [
+    17002009,
+    17002009
+   ],
+   "reflect": [
+    {
+     "text": "Esther was taken into a strange place and faced an unwanted, difficult situation. Even though she could have felt bitter or helpless, she responded with quiet poise and grace. Her inner godliness and gentle charm stood out, winning the favor of Hegai, the royal custodian, who quickly showed her special kindness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Esther also listened carefully to Mordecai and kept her family roots secret. It took great self-control to hold her tongue and guard what he trusted her with. Her loyalty and verbal restraint showed true strength and dignity under pressure.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We cannot always choose our circumstances, but we can choose our reaction. When life turns in ways we do not expect, quiet trust and careful words honor God far more than complaining or lashing out.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you usually react when you find yourself in an unfair or hard situation?",
+    "Is there an area of your life right now where you need to show more self-control with your words?"
+   ],
+   "prayer": "Lord God, help us to trust you when our circumstances are hard. Give us grace and patience instead of bitterness. Guard our lips so that our words show dignity and honor you each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Chuck Swindoll",
+     "work": "Strength and Dignity - Today's Insight - March 7, 2024",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-march-7-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

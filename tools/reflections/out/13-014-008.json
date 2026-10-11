@@ -1,0 +1,74 @@
+{
+ "id": "13-014-008",
+ "title": "Two Victories over the Philistines",
+ "refs": [
+  "1 Chronicles 14:8-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13014008,
+   "end": 13014017,
+   "ref": "1 Chronicles 14:8-17",
+   "ranges": [
+    [
+     13014008,
+     13014017
+    ]
+   ],
+   "title": "Waiting for God to Lead the Battle",
+   "key_verse": [
+    13014015,
+    13014015
+   ],
+   "reflect": [
+    {
+     "text": "When facing dangerous enemies, King David did not rush into battle on his own strength. Instead, he made prayer and God's guidance his top priority. Before each attack, he asked the Lord for direction. Even after winning an earlier victory, David did not assume the next battle would be the same. He waited for fresh instructions and obeyed God's specific plan with humble trust.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God told David to wait until he heard the sound of marching in the tree tops. As F. B. Meyer observed, this sound showed that heavenly armies were going out ahead of them: \"The battle is not ours, but God's.\" David's task was to wait quietly until God moved first. It is useless to run ahead of the Lord, but when we wait on Him, He fights against our spiritual foes and temptations.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because David obeyed, the Lord gave him complete victory and spread his fame among the nations. David kept his focus on honoring God as the true ruler. His rise as an exalted king points us forward to Jesus Christ, whom God has lifted up above every other name.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you pause to seek God's direction in prayer before trying to solve difficult problems?",
+    "How can remembering that God fights ahead of you give you peace in tough times?"
+   ],
+   "prayer": "Lord God, teach us to wait on Your guidance instead of running ahead in our own strength. Help us to seek You in prayer every day and follow Your Word with humble obedience. Thank You for fighting our battles and for the victory we have in Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 14:15",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 05/16/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-05-or-16-or-2002-1133434.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

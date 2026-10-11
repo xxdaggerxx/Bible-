@@ -1,0 +1,75 @@
+{
+ "id": "38-005-001",
+ "title": "The Vision of the Flying Scroll",
+ "refs": [
+  "Zechariah 5:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 38005001,
+   "end": 38005004,
+   "ref": "Zechariah 5:1-4",
+   "ranges": [
+    [
+     38005001,
+     38005004
+    ]
+   ],
+   "title": "The Flying Scroll and God's Mercy",
+   "key_verse": [
+    38005003,
+    38005003
+   ],
+   "reflect": [
+    {
+     "text": "In this vision, Zechariah sees a giant flying scroll moving across the land. It carries God's judgment against sins like stealing and lying under oath. We often swing between treating our sins as small matters and fearing they are too heavy for God to forgive. Yet God takes our sin seriously because it pollutes His dwelling place. When the scroll enters the home of the wrongdoer, it shows that God sees our hidden faults and that sin brings real destruction.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Even so, God's purpose in this judgment is not to ruin His redeemed people, but to consume and remove sin itself. The vision shows that God deals with wickedness thoroughly. He does not leave evil in place, but banishes it so His people can live in peace as His clean house.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This picture points us to Jesus Christ. On the cross, Jesus took the full curse of God's law upon Himself for us. Through His death and resurrection, sin is stripped of its power to condemn us. Jesus bore the curse so we could be cleansed and made into God's pure dwelling place.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever find yourself either making light of sin or fearing it is too great to be forgiven?",
+    "How does knowing that Jesus took the curse on the cross bring you peace today?"
+   ],
+   "prayer": "Lord God, thank You for showing us the seriousness of our sin and the greatness of Your mercy. We praise You that Jesus took the curse of the law in our place and removed our guilt. Cleanse our hearts today, and help us live in the freedom and truth You have given us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Purging Iniquity",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/purging-iniquity"
+    },
+    "D2": {
+     "author": "Ryan Shelton",
+     "work": "Our Sins Are Many, His Mercy Is More",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/our-sins-are-many-his-mercy-is-more"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

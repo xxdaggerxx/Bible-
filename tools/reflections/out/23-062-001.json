@@ -1,0 +1,75 @@
+{
+ "id": "23-062-001",
+ "title": "Zion’s Salvation and New Name",
+ "refs": [
+  "Isaiah 62:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23062001,
+   "end": 23062012,
+   "ref": "Isaiah 62:1-12",
+   "ranges": [
+    [
+     23062001,
+     23062012
+    ]
+   ],
+   "title": "Delighted In and Sought Out",
+   "key_verse": [
+    23062004,
+    23062004
+   ],
+   "reflect": [
+    {
+     "text": "To feel forsaken is one of the sharpest sorrows anyone can carry. When trusted friends or family leave us, the pain runs deep. Feeling abandoned by God feels even more bitter. Yet God promises His people that this dreary label is gone forever. Instead, He gives us a new name that means He delights in us. His loving favor turns our weeping into joy and assures us that we will never be left alone.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God does not leave us lost in our dark wanderings. As Charles Spurgeon noted, God's grace is seen in that we were \"not only sought, but sought out.\" Like someone searching through dirt to find a precious piece of gold, God kept looking until He found us. We were lost like sheep wandering in a strange country, but His mercy tracked us down. He never abandons His search until His people are brought safely home.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We did nothing of our own to earn this rescue. God searched for us simply because of His great love. He does not claim us today only to cast us away tomorrow. His wisdom and power never fail. Because He has chosen us, we can rest knowing that we are forever treasured and sought out by Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When have you felt forgotten or far from God, and how does His promise to never leave you bring comfort?",
+    "How does knowing that God patiently tracked you down change the way you see your worth to Him?"
+   ],
+   "prayer": "Lord God, thank You for never leaving us to wander alone in the dark. Your mercy searched us out when we were lost and could not find our way home. Thank You for taking delight in us and giving us a secure place in Your family. Teach us to rest quietly in Your faithful love today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 11",
+     "on": "Isaiah 62:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 8",
+     "on": "Isaiah 62:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,71 @@
+{
+ "book": 24,
+ "chapter": 45,
+ "first": 1,
+ "last": 5,
+ "ref": "Jeremiah 45",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Jeremiah delivers a personal message from God to his assistant, Baruch. Baruch had been writing down Jeremiah's prophetic messages on a scroll during the fourth year of King Jehoiakim. Even though this chapter appears near the end of the book, these events happened many years earlier, right around the time the king angrily burned the scroll and tried to arrest them both.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://biblehub.com/commentaries/gill/jeremiah/45.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The Lord addresses Baruch directly by name and introduces Himself as the God of Israel. Even though Baruch was only a scribe copying another prophet's words, the Lord noticed him and cared about his personal struggles. Calling Himself the God of Israel reminded Baruch of the Lord's covenant faithfulness to His people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://biblehub.com/commentaries/gill/jeremiah/45.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "God repeats back to Baruch the heavy complaints he had been voicing in his distress. Baruch was terrified and exhausted because delivering warnings of judgment made him a target for the king, and he grieved over the ruin of his nation. He felt worn out with groaning and complained that God was piling new troubles onto his existing pain instead of giving him rest.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://enduringword.com/bible-commentary/jeremiah-45/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "God tells Baruch to consider the bigger picture by revealing His own grief and judgment over the land. The Lord was about to tear down and uproot the very nation and temple that He had planted and cared for over centuries. When God's entire covenant community was facing destruction, Baruch needed to look beyond his own personal comfort and safety.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://biblehub.com/commentaries/gill/jeremiah/45.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The Lord gently rebukes Baruch for seeking personal honour, safety, or career success during a time of national disaster. Total ruin was coming upon the land, but God graciously promised Baruch that his life would be spared wherever he was forced to flee. In times of great tragedy, escaping with one's life is a priceless mercy that calls for grateful trust rather than selfish ambition.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown",
+    "https://biblehub.com/commentaries/gill/jeremiah/45.htm"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "52-004-001",
+ "title": "Living to Please God",
+ "refs": [
+  "1 Thessalonians 4:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 52004001,
+   "end": 52004012,
+   "ref": "1 Thessalonians 4:1-12",
+   "ranges": [
+    [
+     52004001,
+     52004012
+    ]
+   ],
+   "title": "Living to Please God",
+   "key_verse": [
+    52004001,
+    52004001
+   ],
+   "reflect": [
+    {
+     "text": "We often spend a lot of time trying to figure out God's hidden plans for our future. Yet Scripture makes His chief desire for us very clear. God wants us to grow in holiness, which means turning away from sin and living purely. The world around us teaches that personal happiness and self-fulfillment matter most, but following God's will may mean giving up our own comfort to obey Him. We do not have to do this alone, because the Holy Spirit gives us the strength and grace to turn from wrongdoing and live to please God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our culture also pushes us to chase after status, wealth, and public attention. But the Bible redirects our ambition toward something much simpler and quieter. Shawn McEvoy points out that Scripture calls us to humble, quiet faithfulness in our ordinary routines. When we avoid gossip and stop meddling in other people's business, we are free to serve God through honest work. Real Christian ambition is not about becoming famous. It is about knowing the Lord, pleasing Him, and sharing His love with others every day.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily life are you tempted to chase personal comfort or status rather than holiness?",
+    "How can living a quiet and faithful life today help you show Christ's love to those around you?"
+   ],
+   "prayer": "Lord, thank You for showing us so clearly what pleases You. Help us by Your Holy Spirit to choose holiness over selfish desires and to work hard each day with a quiet spirit. May our daily walk honor You and bring Your light to the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Knowing God's Will",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/knowing-gods-will"
+    },
+    "D2": {
+     "author": "Shawn McEvoy",
+     "work": "Ambition",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-apr-1-2008-11571987.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

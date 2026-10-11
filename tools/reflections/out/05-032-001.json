@@ -1,0 +1,134 @@
+{
+ "id": "05-032-001",
+ "title": "The Song of Moses",
+ "refs": [
+  "Deuteronomy 32:1-47"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 5032004,
+   "end": 5032004,
+   "ref": "Deuteronomy 32:4",
+   "ranges": [
+    [
+     5032004,
+     5032004
+    ]
+   ],
+   "title": "\"He Is the Rock\"",
+   "key_verse": [
+    5032004,
+    5032004
+   ],
+   "reflect": [
+    {
+     "text": "When life brings hard times or long delays, we can easily wonder if God has forgotten us. We often feel frustrated because we expect God to follow our own plans and timelines. Yet Moses reminds us that God is the Rock whose deeds are always perfect and completely fair. Going through an adverse season does not mean that God has stopped being good to us.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Calling God a Rock also points to His unchanging nature. Human beings often fail and break their promises, but the Lord never fails to keep His covenant commitments. Because He is holy, everything He does is upright and just. Instead of leaning on shifting human opinions, we are called to build our daily lives upon His enduring truth.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "As we walk through uncertain days, we can choose to pray with quiet faith rather than giving in to fear. God remains our solid ground even when our feelings and circumstances change.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When delays or hardships happen, do you find yourself questioning God's goodness?",
+    "What helps you build your daily life on God's unchanging truth instead of your own expectations?"
+   ],
+   "prayer": "Lord God, You are our solid Rock, and all Your ways are completely just and right. Forgive us when we let delays and hardships make us doubt Your goodness. Help us to rest in Your unchanging promises and wait on You in faith rather than fear. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Alex Seeley",
+     "work": "He Is Faithful, Even When We Are Faithless",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-april-16-2026.html"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "A Rock Unchanging",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/rock-unchanging"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 5032001,
+   "end": 5032047,
+   "ref": "Deuteronomy 32:1-47",
+   "ranges": [
+    [
+     5032001,
+     5032047
+    ]
+   ],
+   "title": "The Lord's Portion",
+   "key_verse": [
+    5032009,
+    5032009
+   ],
+   "reflect": [
+    {
+     "text": "Moses teaches us that the Lord's chosen portion is His own people. God did not pick us because of any goodness in us. Instead, He set His love upon us by His own free choice. He also bought us at the highest price, redeeming us not with silver or gold, but with the precious blood of Jesus Christ. When our stubborn hearts resisted Him, His patient mercy broke through our defenses and won us over.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "What reveals that someone truly belongs to God as His child? Charles Spurgeon explains that the sure mark is \"a hearty faith in the appointed Redeemer.\" Those who belong to God hear the voice of Jesus, trust Him, and follow where He leads. This connection is not a guessing game; it rests on personally receiving Christ into our hearts.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because this question matters for our eternal future, we must take it to heart. We can ask God to search us and confirm our faith in Him. Knowing that we belong completely to our Savior brings true joy, and it moves us to live for His glory each day.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you have that quiet assurance that you belong to Jesus through faith in Him?",
+    "How does knowing that God chose and redeemed you change the way you want to live each day?"
+   ],
+   "prayer": "Lord, thank You for choosing us and buying us with the precious blood of Your Son. Search our hearts today and deepen our trust in Christ our Shepherd. Help us to follow Your voice gladly and live as Your beloved children. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 15",
+     "on": "Deuteronomy 32:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 22",
+     "on": "Deuteronomy 32:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

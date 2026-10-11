@@ -1,0 +1,141 @@
+{
+ "id": "19-031-001",
+ "title": "Into Your Hands I Commit My Spirit",
+ "refs": [
+  "Psalms 31:1-24"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19031014,
+   "end": 19031015,
+   "ref": "Psalms 31:14-15",
+   "ranges": [
+    [
+     19031014,
+     19031015
+    ]
+   ],
+   "title": "\"My Times Are in Your Hands\"",
+   "key_verse": [
+    19031015,
+    19031015
+   ],
+   "reflect": [
+    {
+     "text": "Sudden disruptions and unexpected changes can leave us feeling confused and overwhelmed. We often assume that we control our daily calendar, but life's surprises quickly remind us that we do not. Even when our plans are delayed or ruined, we have not permanently missed out on what God has for us. Trust is an active choice we make while the road ahead is still uncertain. Instead of giving in to panic, we can bring our honest feelings to the Lord and rest in His faithful care.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Time itself is one of the greatest gifts God gives us, second only to salvation in Jesus. We only continue to live second by second because the Lord upholds our lives. Everyone receives the very same amount of time each day, and God asks us to be careful with how we use it. When we remember that our hours belong to Him, we can choose to live each moment for His glory.",
+     "sources": [
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "What sudden change or delay can you surrender to God today instead of worrying?",
+    "How can you use the hours God gives you today to honor Him?"
+   ],
+   "prayer": "Father, thank You that my days and my future are held safely in Your hands. When life changes without warning, help me choose prayer over panic. Teach me to treasure the gift of each day and use my time for Your glory. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Lynette Kittle",
+     "work": "Your Timeline Is Safe with God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/your-timeline-is-safe-with-god.html"
+    },
+    "D5": {
+     "author": "Jessica Ward",
+     "work": "Trusting the Timing of Your Life When Circumstances Suddenly Change",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/trusting-the-timing-of-your-life-when-circumstances-suddenly-change.html"
+    },
+    "D6": {
+     "author": "Adrian Rogers",
+     "work": "Every Second Is a Gift from God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-oct-12-2008-11582835.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19031001,
+   "end": 19031024,
+   "ref": "Psalms 31:1-24",
+   "ranges": [
+    [
+     19031001,
+     19031024
+    ]
+   ],
+   "title": "Taking Refuge in the Lord",
+   "key_verse": [
+    19031005,
+    19031005
+   ],
+   "reflect": [
+    {
+     "text": "Hardships and temptations can feel like a hidden net that traps an unsuspecting bird. In our own strength, we cannot break free from the enemy's cunning snares. But God is greater than every trap, and His power can pull us out of any danger. We can face our trials with peace when we depend entirely on His strength rather than our own.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our greatest treasure in this life is not our money or our physical body, but our soul. The safest place for our soul is in the hands of the God who created it. Because the Lord has already redeemed us, paying the price to set us free, we have a firm reason to trust Him. His past faithfulness assures us that He will never abandon us in life or in death.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Human friends may walk away or ignore us when trouble strikes, but God draws closer when life is dark. Painful trials search our hearts, exposing our hidden pride and self-will. Even so, it is enough that our Father knows our grief. We do not need to display our sorrow before everyone, because God already sees and understands the deepest struggles of our soul.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you trying to escape your current struggles in your own power, or are you resting in God's strength?",
+    "How does knowing that God sees your hidden sorrow bring you comfort today?"
+   ],
+   "prayer": "Lord, You are my strength when temptations and trials surround me like a net. I place my soul into Your caring hands, knowing You have redeemed me. Thank You for drawing near when others turn away, and for understanding every grief in my heart. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 19",
+     "on": "Psalms 31:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 27",
+     "on": "Psalms 31:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 31:7",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

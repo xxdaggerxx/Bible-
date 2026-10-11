@@ -1,0 +1,17 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://utmost.org/",
+  "https://www.biblegateway.com/passage/?AMP=&HCV=&interface=amp&search=1+Chronicles+27&version=NIV",
+  "https://www.biblegateway.com/passage/?search=1%20Chronicles%2027&version=NET",
+  "https://www.biblegateway.com/verse/en/1%20Chronicles%2027%3A33",
+  "https://www.biblegateway.com/verse/en/1%20Chronicles%2027%3A34",
+  "https://www.crosswalk.com/family/marriage/the-consequences-of-adultery.html",
+  "https://www.desiringgod.org/",
+  "https://www.gty.org/",
+  "https://www.intouch.org/"
+ ],
+ "cost": 0.031376675,
+ "model": "google/gemini-3.8-flash"
+}

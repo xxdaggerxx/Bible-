@@ -1,0 +1,66 @@
+{
+ "id": "10-010-001",
+ "title": "David’s Messengers Disgraced",
+ "refs": [
+  "2 Samuel 10:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10010001,
+   "end": 10010008,
+   "ref": "2 Samuel 10:1-8",
+   "ranges": [
+    [
+     10010001,
+     10010008
+    ]
+   ],
+   "title": "Kindness Met with Contempt",
+   "key_verse": [
+    10010002,
+    10010002
+   ],
+   "reflect": [
+    {
+     "text": "David wanted to show genuine kindness to Hanun, who was grieving the death of his father. By sending delegates to comfort him, David mirrored the compassionate heart of God. But Hanun listened to cynical advisers. Instead of receiving the comfort, he assumed the worst and treated the peaceful messengers like hostile spies.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Hanun then stripped David's men of their dignity by shaving off half their beards and cutting their clothes. This harsh treatment reminds us of how humanity later rejected and humiliated Jesus on the cross. Yet David showed protective care for his men. Rather than parading their shame in public, he told them to stay safely in Jericho until their beards grew back.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When you try to do good and face insult or suspicion instead, it hurts deeply. Even so, we can take great comfort in knowing that God personally defends His people. He sees your grief and will vindicate those who suffer disgrace while obeying Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Has someone ever treated your sincere kindness with suspicion or contempt?",
+    "How does knowing that God defends His people help you when you feel misunderstood?"
+   ],
+   "prayer": "Lord, thank You for Your gentle compassion and protective care. When our good intentions are met with hostility or shame, remind us that You see everything. Help us to rest in the comfort that You are our defender and will make all things right. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 54: 2 Samuel 10:1–19",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-54-2-samuel-10-119.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

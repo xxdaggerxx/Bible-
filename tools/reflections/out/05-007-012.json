@@ -1,0 +1,67 @@
+{
+ "id": "05-007-012",
+ "title": "The Promises of God",
+ "refs": [
+  "Deuteronomy 7:12-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5007012,
+   "end": 5007026,
+   "ref": "Deuteronomy 7:12-26",
+   "ranges": [
+    [
+     5007012,
+     5007026
+    ]
+   ],
+   "title": "Winning the Battle Little by Little",
+   "key_verse": [
+    5007022,
+    5007022
+   ],
+   "reflect": [
+    {
+     "text": "When God promised to clear the land for His people, He told them He would do it little by little. We often want quick results in our walk with God and in our fight against sin. Yet evil habits and bad practices die hard. As Charles Spurgeon reminds us, we should not expect to win victories \"by a single blow.\" Even when progress seems slow, God calls us to keep going without giving up.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God works gradually for our own good. By removing evils step by step, He teaches us perseverance, which means staying faithful over time. This slow work helps our faith grow stronger, keeps us watchful, and stops us from becoming careless or overconfident in our own strength. God alone gives the power to overcome what is wrong, and He promises to work through us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of this promise, we can take courage. We do not need to make compromises with sin or look for easy approval from the world. Instead, we can thank God for every small victory He gives and ask Him for more help each day. Every small step forward adds up to something great in His hands.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life are you feeling discouraged by slow progress against sin?",
+    "How can remembering that God works little by little help you stay patient today?"
+   ],
+   "prayer": "Lord God, thank You for working in our lives patiently, even when our growth feels slow. Help us not to become weary or give up when facing our struggles. Teach us to trust Your timing and to thank You for every small victory You give. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 23",
+     "on": "Deuteronomy 7:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

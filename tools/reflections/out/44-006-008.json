@@ -1,0 +1,75 @@
+{
+ "id": "44-006-008",
+ "title": "The Arrest of Stephen",
+ "refs": [
+  "Acts 6:8-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44006008,
+   "end": 44006015,
+   "ref": "Acts 6:8-15",
+   "ranges": [
+    [
+     44006008,
+     44006015
+    ]
+   ],
+   "title": "Facing Opposition with God's Peace",
+   "key_verse": [
+    44006015,
+    44006015
+   ],
+   "reflect": [
+    {
+     "text": "Stephen was a man whose life showed true personal integrity and faithful service. Being filled with the Holy Spirit meant that he chose to submit daily to God's direction rather than chasing his own interests. True biblical wisdom meant translating what he knew from Scripture into god-honoring conduct, even in humble and unglamorous daily tasks. His life showed that God's power always walks hand in hand with grace, gentleness, and humility.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When opponents argued with Stephen, they could not stand against the wisdom and the Spirit by which he spoke. Even when people brought false charges against him and dragged him before the council, Stephen did not try to defend himself. Instead of fighting the accusations, he boldly seized the hard moment as an open door to share Christ and tell the story of God's redemption.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Before angry religious leaders, Stephen reflected God's peace so clearly that his face looked like the face of an angel. Even under severe threats, he remained calm and gracious. His bold and gentle testimony in the middle of a trial laid an enduring spiritual foundation that would later touch the life of Saul of Tarsus.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When others criticize you or treat you unfairly, do you focus on defending yourself or on reflecting God's peace?",
+    "What is one small, everyday task where you can choose humility and submit to the Holy Spirit today?"
+   ],
+   "prayer": "Lord, help us to yield our lives to the Holy Spirit each day instead of seeking our own comfort. Give us wisdom to live out your word with gentleness and grace, especially when facing opposition. Let your deep peace shine through us so that others may see Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "The Well-Lived Life of Stephen",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-october-18-2025.html"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 231: Acts 6:8–15",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-231-acts-6-815.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

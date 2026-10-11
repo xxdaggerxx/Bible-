@@ -1,0 +1,127 @@
+{
+ "id": "44-004-023",
+ "title": "The Believers’ Prayer",
+ "refs": [
+  "Acts 4:23-31"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44004031,
+   "end": 44004031,
+   "ref": "Acts 4:31",
+   "ranges": [
+    [
+     44004031,
+     44004031
+    ]
+   ],
+   "title": "\"Filled with the Holy Spirit\"",
+   "key_verse": [
+    44004031,
+    44004031
+   ],
+   "reflect": [
+    {
+     "text": "Our prayer life can easily become dry and routine when we depend only on our own strength. When the early believers faced harsh threats, they did not shrink back in fear or look only at their own safety. Instead, they gathered together in united faith and asked God for courage to speak His truth. Their focus turned outward to God's kingdom rather than staying trapped in personal worries.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God answered their prayers immediately. Even though these Christians had already received the Spirit at Pentecost, they experienced another filling. As F. B. Meyer notes, believers may expect \"repeated fillings of the Holy Spirit.\" We do not need an earthquake or dramatic outward signs to receive God's help. The Spirit often comes gently, like quiet drops filling a well, bringing deep meekness, freedom in worship, and love for others.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This divine presence completely transformed ordinary, fearful disciples into courageous witnesses. When the Holy Spirit fills us, He replaces our cowardice with bold faith so we can share God's word clearly. We are invited to keep coming together in prayer, asking Him to renew our strength day by day.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When your prayers feel dull or routine, how can focusing on God's mission help renew your faith?",
+    "In what situations do you need to ask the Holy Spirit for fresh boldness today?"
+   ],
+   "prayer": "Lord, forgive us when we rely on our own strength and settle for routine prayers. Fill us anew with Your Holy Spirit and grant us quiet courage to speak Your truth. Keep our eyes on Your kingdom and help us share Your love with those around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Acts 4:31",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Kia Stephens",
+     "work": "Praying Powerful Prayers (Acts 4:31)",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-july-13.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 44004023,
+   "end": 44004031,
+   "ref": "Acts 4:23-31",
+   "ranges": [
+    [
+     44004023,
+     44004031
+    ]
+   ],
+   "title": "Praying with Confidence in Opposition",
+   "key_verse": [
+    44004024,
+    44004024
+   ],
+   "reflect": [
+    {
+     "text": "When people oppose or intimidate us because of our faith, our first reaction is often fear or anger. Yet the early church shows us a better way: their first instinct was to turn straight to God in prayer. Rather than complaining about their enemies or plotting revenge, they immediately brought the pressure they faced before the Lord.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Notice how their prayer begins. Before mentioning their problems, they worshiped God as the sovereign Creator of heaven and earth. They remembered that God had already spoken through the Scriptures about earthly rulers plotting in vain against His Anointed One. The rulers who put Jesus to death thought they were in control, but they were only carrying out what God had decided beforehand in His plan to save us.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Because they trusted God's control over history, the believers did not even ask Him to stop the threats. They left the opposition entirely in God's hands and asked for one thing: boldness to keep preaching His word. Through the Holy Spirit, God still empowers ordinary Christians to stand firm and proclaim the good news courageously in every hard situation.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face opposition or unkind words, do you turn first to prayer or to worry?",
+    "How does remembering that God is in complete control change what you ask for in hard times?"
+   ],
+   "prayer": "Sovereign Lord, You made heaven and earth, and nothing happens outside Your good plan. When we face pressure or fear, remind us to worship You first and leave every threat in Your hands. Grant us the power of Your Holy Spirit so that we may speak Your truth with courageous hearts. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Kees van Kralingen",
+     "work": "Acts 4 Teaches Us How to Pray in Opposition",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/pray-opposition/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

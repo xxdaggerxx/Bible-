@@ -1,0 +1,89 @@
+{
+ "book": 19,
+ "chapter": 128,
+ "first": 1,
+ "last": 6,
+ "ref": "Psalms 128",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "True happiness belongs to everyone who honors the Lord with deep respect and obeys His commands. This promise is not limited to the rich or powerful, but is open to anyone of any background who walks in God's ways. Genuine faith in God always shapes daily life, because a heart that loves Him naturally leads to feet that follow Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Spurgeon (Treasury of David)",
+    "https://enduringword.com/bible-commentary/psalm-128/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "God promises that those who honor Him will enjoy the rewards of their daily, honest work. Instead of enemies stealing their harvest or trouble ruining their toil, they will have the health to work and peacefully eat what they earn. While the world often praises wealth without effort, God honors faithful labor and makes it a source of quiet contentment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "A faithful home is described through two thriving, fruitful plants. The wife is compared to a fruitful vine inside the house, bringing warmth, comfort, and children into the family life. The children gather around the dinner table like fresh olive shoots, growing strong and full of promise for the future.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The writer calls the reader to pause and notice the charming picture of home life just described. God delights to give this kind of domestic peace and favor to those who live in holy reverence toward Him. While not every believer marries or has a large family, this shows the kind of gentle, everyday goodness God provides for households that trust Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "https://enduringword.com/bible-commentary/psalm-128/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The psalm shifts into a prayer that God will send His blessing straight from His dwelling place in Zion. True worshippers do not care only about their own private households, but also long for the city of God and His people to flourish. A family's joy is only complete when the church and the community are also walking in strength and good health.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Geneva Notes",
+    "https://enduringword.com/bible-commentary/psalm-128/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The blessing reaches its peak with the gift of a long life, allowing the believer to see grandchildren grow up in safety. The song ends with a prayer for peace and wholeness over the entire nation. God's blessings in the home are meant to flow outward into peace for the whole family of faith.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

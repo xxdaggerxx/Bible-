@@ -1,0 +1,82 @@
+{
+ "id": "46-009-024",
+ "title": "Run Your Race to Win",
+ "refs": [
+  "1 Corinthians 9:24-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46009024,
+   "end": 46009027,
+   "ref": "1 Corinthians 9:24-27",
+   "ranges": [
+    [
+     46009024,
+     46009027
+    ]
+   ],
+   "title": "Running for an Imperishable Crown",
+   "key_verse": [
+    46009025,
+    46009025
+   ],
+   "reflect": [
+    {
+     "text": "Athletes push their bodies through strict, demanding training to win trophies that soon lose their shine. If worldly competitors work that hard for temporary praise, we should be inspired to put even greater effort into what lasts forever. As believers, our race is not against each other. Instead, we run together against temptation, obstacles, and the enemy, moving forward purposefully rather than living aimlessly.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Running well requires steady spiritual self-control rather than following our changing feelings. This effort is not meant to earn forgiveness or eternal life, because those are already free gifts from God through Jesus. Rather, as F. B. Meyer explains, the prize is the joy of winning souls and bringing others to Christ. We train our bodies and habits so that our actions match the truth we share, ensuring we do not miss out on bearing fruitful results for God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Even if you feel you have stumbled or lost your pace, you are never cut off from the love of God. You can always step back into His training program, let Him renew your focus, and regain your spiritual momentum for the road ahead.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily life are you following your feelings instead of practicing spiritual discipline?",
+    "How can you run with purpose this week to help others come to know Jesus?"
+   ],
+   "prayer": "Lord, thank You for the gift of life and secure love that we have in Christ. Teach us to practice self-control and discipline our bodies so that we do not wander aimlessly. Give us strength to overcome temptation and help us point others toward Your eternal glory.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Corinthians 9:27",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Michael A. Youssef, Ph.D.",
+     "work": "Run the Race to Win - Leading The Way - Devotional for August 14",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-august-14-2026.html"
+    },
+    "D3": {
+     "author": "Mike Pohlman",
+     "work": "The BCS Title Game, Perishable Wreaths and the Gospel of Jesus Christ",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-jan-8-2009-11597872.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

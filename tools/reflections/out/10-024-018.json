@@ -1,0 +1,76 @@
+{
+ "id": "10-024-018",
+ "title": "David Builds an Altar",
+ "refs": [
+  "2 Samuel 24:18-25"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 10024024,
+   "end": 10024024,
+   "ref": "2 Samuel 24:24",
+   "ranges": [
+    [
+     10024024,
+     10024024
+    ]
+   ],
+   "title": "\"Cost Me Nothing\"",
+   "key_verse": [
+    10024024,
+    10024024
+   ],
+   "reflect": [
+    {
+     "text": "When King David went to build an altar, Araunah offered him the land, oxen, and wood for free. David refused to take the easy way out. He knew authentic worship should never settle for convenience or handouts. Giving God a sacrifice that required nothing from him would not be real worship. As F. B. Meyer wrote, \"where there is true, strong love to Jesus, it will cost us something.\"",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God gave everything for us when He did not spare His own Son. Yet we often slip into cheap worship. We might show up to church without giving our full attention, or give our money and help grudgingly. Sometimes we even avoid sharing our faith because we fear embarrassment or want to protect our good reputation. True devotion asks us to put aside our selfishness and offer God our whole hearts.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Honoring God will ask something of us. It may cost us money, comfort, and sometimes even close companionships. But giving up ourselves for Christ brings true joy. When we surrender our time, dreams, and lives to His kingdom, we never truly lose out. What we place in His hands is returned to us transformed and full of life.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to offer God what is easy or convenient rather than what costs you something?",
+    "What is one area of your time, money, or comfort that you can surrender to the Lord today?"
+   ],
+   "prayer": "Lord Jesus, thank You for giving everything when You laid down Your life for us. Forgive us when we offer You half-hearted worship or cling tightly to our own comfort. Teach us to gladly surrender our time, resources, and dreams to serve Your kingdom.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Samuel 24:24",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "John North",
+     "work": "Time with God - August 22, 2017",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/timewithgod/time-with-god-august-22-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

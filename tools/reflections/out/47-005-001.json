@@ -1,0 +1,75 @@
+{
+ "id": "47-005-001",
+ "title": "Our Eternal Dwelling",
+ "refs": [
+  "2 Corinthians 5:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 47005001,
+   "end": 47005010,
+   "ref": "2 Corinthians 5:1-10",
+   "ranges": [
+    [
+     47005001,
+     47005010
+    ]
+   ],
+   "title": "Our Eternal Home with the Lord",
+   "key_verse": [
+    47005001,
+    47005001
+   ],
+   "reflect": [
+    {
+     "text": "Our bodies in this world are only temporary homes, like tents we live in for a short season. When physical life ends, what is left behind is merely an earthly shell. A believer's soul does not stay in the grave. The very moment our physical life ends, our spirit moves directly into the presence of God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because of this truth, Christians do not need to fear death. God has given us the Holy Spirit living inside us to give us assurance of what is coming. We can be completely confident, knowing our earthly remains will one day be raised and transformed into eternal bodies that will never wear out.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Knowing that we will one day stand before Christ gives our daily lives clear direction. Since our future is filled with hope, we walk by faith rather than sight. We make it our goal to honor and please the Lord in everything we do today while we wait for our true home.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing you will immediately be with Christ after death change the way you face your fears?",
+    "How can the certainty of your heavenly home help you live to please Jesus today?"
+   ],
+   "prayer": "Lord, thank you for the promise that when our life here ends, we will immediately be at home with you. Thank you for giving us your Holy Spirit so we do not have to live in fear. Help us to walk by faith each day and make it our goal to honor you in all we do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Chuck Swindoll",
+     "work": "Home with the Lord",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/home-with-the-lord"
+    },
+    "D2": {
+     "author": "Clarence L. Haynes Jr.",
+     "work": "What Does 'Absent from the Body Present with the Lord' Mean in 2 Corinthians 5:8?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/what-does-absent-from-the-body-present-with-the-lord-mean.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "26-043-001",
+ "title": "The Glory of the LORD Returns to the Temple",
+ "refs": [
+  "Ezekiel 43:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26043001,
+   "end": 26043012,
+   "ref": "Ezekiel 43:1-12",
+   "ranges": [
+    [
+     26043001,
+     26043012
+    ]
+   ],
+   "title": "God's Glory Returns to the Temple",
+   "key_verse": [
+    26043005,
+    26043005
+   ],
+   "reflect": [
+    {
+     "text": "Ezekiel saw the bright glory of God return to the temple from the east. This vision brought deep comfort to the exiles, showing them that the Lord had not cast them off forever. Even after a necessary season of discipline and judgment, God remained faithful to His covenant promises. As F. B. Meyer wrote, 'to the soul that desires holiness, the holy God comes.'",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This vision ultimately points forward to Jesus Christ, who arrived in divine glory to cleanse His people from sin. Our own spiritual health depends on spending meaningful time listening to God speak through His Word. When we listen with a humble heart and choose obedience, the Lord faithfully dwells with us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there worldly habits or sins you need to put away so you can welcome God's presence?",
+    "How can you make time each day to listen humbly to God speaking through His Word?"
+   ],
+   "prayer": "Lord, thank You for Your unending faithfulness to us even when we need Your discipline. Cleanse our hearts from every idol and fill us with Your holy presence. Help us to listen carefully to Your Word and walk in humble obedience today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 43:5",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Lord Returns to His Temple",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lord-returns-his-temple"
+    },
+    "D3": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways - Sept. 13, 2008",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-sept-13-2008-11581739.html"
+    }
+   },
+   "dropped": 1,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

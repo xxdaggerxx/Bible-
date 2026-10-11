@@ -1,0 +1,66 @@
+{
+ "id": "28-004-001",
+ "title": "God’s Case against His People",
+ "refs": [
+  "Hosea 4:1-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 28004001,
+   "end": 28004019,
+   "ref": "Hosea 4:1-19",
+   "ranges": [
+    [
+     28004001,
+     28004019
+    ]
+   ],
+   "title": "Letting God Wash Away Our Stubbornness",
+   "key_verse": [
+    28004016,
+    28004016
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, the Lord speaks about the serious sins of his people. He compares Israel to an obstinate, stubborn calf digging in its heels. God had taken care of them, yet they quickly forgot his kindness and went back to their sinful habits instead of following him like lambs in an open meadow.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We can act the very same way when God tries to correct us. Think of a muddy pet fighting with all its strength to avoid a bath. We often resist spiritual cleansing because conviction, which is God pointing out our wrongdoing, feels uncomfortable. When we hold onto our stubbornness, we can easily become dangerously comfortable living with unconfessed sin in our lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God desires to wash us clean through sanctification, which is the process of God making us holy. While admitting our faults can feel hard, running away only keeps us dirty. When we yield promptly to God's washing instead of fighting back, he brings immediate peace and deep spiritual refreshment to our souls.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an unconfessed sin in your life that you have grown comfortable with?",
+    "How can you yield more quickly when God points out something that needs cleansing?"
+   ],
+   "prayer": "Lord, forgive us for the times we act like stubborn calves and resist your correction. Help us not to hide our sins or run away from your cleansing touch. Give us soft hearts that yield quickly to you so we can know your peace and refreshment. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Daily Disciples Ministries",
+     "work": "Daily Disciples Devotional: Watch Your Stubbornness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-devotional-dec-10-2008-11596768.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

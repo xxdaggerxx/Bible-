@@ -1,0 +1,83 @@
+{
+ "id": "12-004-001",
+ "title": "The Widow’s Oil",
+ "refs": [
+  "2 Kings 4:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12004001,
+   "end": 12004007,
+   "ref": "2 Kings 4:1-7",
+   "ranges": [
+    [
+     12004001,
+     12004007
+    ]
+   ],
+   "title": "Bringing Our Emptiness to God",
+   "key_verse": [
+    12004006,
+    12004006
+   ],
+   "reflect": [
+    {
+     "text": "When the widow faced a crushing debt and the threat of losing her sons, she did not hide her desperate situation. She openly cried out for help. Even though she felt completely emptied out, God began His work with the tiny bit she still had in her home. Difficult moments like these become places where God shows His deep kindness and care for us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Elisha told her to borrow empty jars and warned her not to gather just a few. We often ask God for far too little. The widow trusted God and obeyed His directions, gathering many containers and pouring out her small jar of oil behind closed doors. God's power met her simple obedience in a way that went far beyond human expectation.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The miracle only stopped when there were no more jars to fill. As F. B. Meyer notes, God's power could have gone on without exhaustion, but the oil stopped when the vessels ran out. God provides fully to save and sustain those who trust Him. When we stop bringing our empty needs to God, we miss out on the blessings He is ready to pour out.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What small things or areas of need in your life can you bring to God today?",
+    "Are you holding back from asking God to do great things because you expect too little from Him?"
+   ],
+   "prayer": "Lord, thank You that You care for us in our deepest moments of need. Forgive us when we ask for too little and limit what we expect from Your kindness. Please fill our empty lives with Your abundant grace and provide all that we need to serve You.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 4:6",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Anne Peterson",
+     "work": "When You Feel Completely Empty",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-september-24.html"
+    },
+    "D3": {
+     "author": "Erwin Raphael McManus",
+     "work": "When Enough Isn’t Enough",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-december-6-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

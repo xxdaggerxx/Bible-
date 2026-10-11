@@ -1,0 +1,71 @@
+{
+ "id": "40-005-021",
+ "title": "Anger and Reconciliation",
+ "refs": [
+  "Matthew 5:21-26",
+  "Luke 12:57-59"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40005021,
+   "end": 40005026,
+   "ref": "Matthew 5:21-26; Luke 12:57-59",
+   "ranges": [
+    [
+     40005021,
+     40005026
+    ],
+    [
+     42012057,
+     42012059
+    ]
+   ],
+   "title": "The Heart of Reconciliation",
+   "key_verse": [
+    40005024,
+    40005024
+   ],
+   "reflect": [
+    {
+     "text": "Jesus teaches us what God's law truly means. While the ancient command says not to murder, Jesus explains that simply avoiding physical violence is not enough. God looks at what is happening inside our hearts. When we hold on to unjust anger, nurse bitter thoughts, or look down on someone with hatred, we are breaking the commandment on a deeper level. To live as God desires, we must ask the Holy Spirit to help us put away all bitterness and pursue forgiveness.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Unresolved offenses also stand between us and God. When we have hurt someone, leaving that wrong unsettled damages our prayers and disrupts our worship. Jesus tells us that if we remember someone has something against us, we must not ignore it. Instead, He calls us to a clear path: stop what we are doing, go to the person we hurt, make peace by confessing our fault, and then return to worship. God calls us to take the lead in seeking reconciliation.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an unsettled hurt between you and someone else that you need to address?",
+    "How might asking the Holy Spirit for help change the way you respond to anger or bitterness in your heart?"
+   ],
+   "prayer": "Lord, show us where we hold anger or where we have wronged someone else. Give us humble hearts to admit our faults and take the first step toward making peace. Please fill us with Your Holy Spirit so we may let go of bitterness and worship You with sincere hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "When You Are the Offender, Part 1",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-april-10-2023.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Scope of the Sixth Commandment",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-scope-of-the-sixth-commandment"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

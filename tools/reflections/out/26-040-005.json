@@ -1,0 +1,66 @@
+{
+ "id": "26-040-005",
+ "title": "The East Gate",
+ "refs": [
+  "Ezekiel 40:5-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26040005,
+   "end": 26040016,
+   "ref": "Ezekiel 40:5-16",
+   "ranges": [
+    [
+     26040005,
+     26040016
+    ]
+   ],
+   "title": "Measured by God's Word",
+   "key_verse": [
+    26040005,
+    26040005
+   ],
+   "reflect": [
+    {
+     "text": "It is easy to skim past long lists of measurements in the Bible. We might think dimensions of walls, gates, and chambers are dry details that have little to do with our daily lives. Yet when we slow down, we see a heavenly guide carefully checking every part of the building. He uses a measuring rod to make sure the entire structure matches God's exact pattern.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In the same way, God has given us the Bible as a spiritual measuring tool. As we read Scripture and pray, God's Word examines our thoughts, motives, and everyday actions. It shows us where our lives do not match His holy standard and helps us see what needs to change.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we let the Bible guide us each day, the Lord works in us to set us apart from harmful influences. He shapes our character and builds our lives according to His good design.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you make time today to let Scripture measure your thoughts and choices?",
+    "Is there any part of your life that needs to be brought back in line with God's Word?"
+   ],
+   "prayer": "Lord, thank You for giving us Your Word to guide our steps. Please search our hearts and show us where we fall short of Your plan. Help us yield to Your truth each day so that our lives are built according to Your will. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - September 12",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-sept-12-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

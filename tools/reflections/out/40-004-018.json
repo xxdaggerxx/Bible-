@@ -1,0 +1,108 @@
+{
+ "id": "40-004-018",
+ "title": "The First Disciples",
+ "refs": [
+  "Matthew 4:18-22",
+  "Mark 1:16-20",
+  "Luke 5:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40004018,
+   "end": 40004022,
+   "ref": "Matthew 4:18-22; Mark 1:16-20; Luke 5:1-11",
+   "ranges": [
+    [
+     40004018,
+     40004022
+    ],
+    [
+     41001016,
+     41001020
+    ],
+    [
+     42005001,
+     42005011
+    ]
+   ],
+   "title": "Leaving Our Nets to Follow Jesus",
+   "key_verse": [
+    42005011,
+    42005011
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus called the fishermen, they did not hesitate or make excuses. Simon had worked all night with nothing to show for it, yet he trusted Jesus' word above his own fishing experience and lowered the nets. True obedience means acting right away when the Lord speaks, rather than letting good intentions fade away.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    },
+    {
+     "text": "Peter and his partners quickly discovered that their own skill was empty without the Lord. As Charles Spurgeon wrote, \"Christ's presence confers success.\" God uses ordinary people, their boats, and their daily labor, but only His presence brings life. Following Him means stepping outside our comfort zones into everyday life, sharing His gospel with gentleness and boldness rather than relying on gimmicks.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "We are not asked to save people by our own cleverness, but simply to point them toward Jesus. In the end, the greatest blessing that day was not the miraculous boatload of fish, but the joy of leaving everything behind to walk with Christ.",
+     "sources": [
+      "D3",
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an area where Jesus is asking you to trust His word instead of your own past frustration?",
+    "How can you step out of your comfort zone today to gently point someone toward Him?"
+   ],
+   "prayer": "Lord Jesus, thank You for meeting us in our ordinary work and calling us to follow You. Help us to obey Your word promptly without making excuses or relying only on our own strength. Teach us to share Your good news with gentleness, boldness, and love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 20",
+     "on": "Mark 1:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 8",
+     "on": "Luke 5:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 29",
+     "on": "Mark 1:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Rev. Kyle Norman",
+     "work": "Faithfully Fishing - The Crosswalk Devotional - January 28",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/faithfully-fishing-the-crosswalk-devotional.html"
+    },
+    "D5": {
+     "author": "Sharon Jaynes",
+     "work": "“Because Jesus Said So” - Girlfriends in God - March 23, 2015",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/because-jesus-said-so-girlfriends-in-god-march-23-2015.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "24-015-010",
+ "title": "Jeremiah’s Woe",
+ "refs": [
+  "Jeremiah 15:10-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 24015015,
+   "end": 24015016,
+   "ref": "Jeremiah 15:15-16",
+   "ranges": [
+    [
+     24015015,
+     24015016
+    ]
+   ],
+   "title": "\"Your Words Were Found, and I Ate Them\"",
+   "key_verse": [
+    24015016,
+    24015016
+   ],
+   "reflect": [
+    {
+     "text": "Jeremiah faced harsh rejection and pain from the people around him. Yet in the middle of his troubles, he found comfort and honor in God's promises. He described God's words as food that he eagerly took in. Scripture is like a personal love letter from God to His children, reminding us that we are chosen and treasured.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "It is easy for us to spend hours on everyday entertainment while setting the Bible aside. Neglecting regular feeding on God's truth is a warning sign of spiritual decline. God's Word cannot remain just an intellectual idea in our heads. We need to come to it with purpose so that it reaches deep into our inner life.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Taking in Scripture provides vital food for our souls. When we meditate on God's grace, His kindness that we do not deserve, our close walk with Him grows stronger. Ingesting His truth guides our daily thoughts and actions, filling our hearts with lasting joy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How much time do you give to God's Word compared to secular entertainment?",
+    "In what ways can you take in Scripture this week so that it shapes your actions and brings you joy?"
+   ],
+   "prayer": "Lord, thank You for giving us Your Word as a message of Your love. Forgive us when we spend hours on distractions and ignore the nourishment You provide for our souls. Help us to feed on Your truth daily so that our hearts are filled with lasting joy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Tope Keku",
+     "work": "A Precious Love Letter",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/beloved-women/beloved-women-july-23-2020.html"
+    },
+    "D2": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - Aug. 18, 2008",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-aug-18-2008-11580597.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

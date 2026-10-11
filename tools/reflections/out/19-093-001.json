@@ -1,0 +1,88 @@
+{
+ "id": "19-093-001",
+ "title": "The LORD Reigns!",
+ "refs": [
+  "Psalms 93:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19093001,
+   "end": 19093005,
+   "ref": "Psalms 93:1-5",
+   "ranges": [
+    [
+     19093001,
+     19093005
+    ]
+   ],
+   "title": "The Lord on High Is Mighty",
+   "key_verse": [
+    19093004,
+    19093004
+   ],
+   "reflect": [
+    {
+     "text": "God holds complete control over the entire universe and has no rivals. He rules with perfect power and wisdom, standing like a victorious commander who goes ahead of us. Because He leads the way and never retreats, we do not need to be afraid. When we run to Him for safety in our daily struggles, our anxiety turns into joyful praise.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Even so, life can bring troubles that feel like crashing ocean waves. Difficulties sometimes roar around our lives like a fierce sea, threatening to overwhelm us. Yet God is greater than the loudest floodwaters. As F. B. Meyer notes, He sits as King \"higher than the spray is tossed.\" He can quiet the storm, and even if we sink, we are held safely in His hand.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This mighty Lord has ruled from all eternity. In Jesus, we have a living Savior who never changes and is always ready to comfort, guard, and help us. His cleansing power never weakens over our whole lifetime. As we trust His reliable words and walk in holiness, our lives show His majestic rule to the world around us.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What roaring troubles in your life do you need to place under God's mighty rule today?",
+    "How can remembering that God never retreats give you confidence during hard times?"
+   ],
+   "prayer": "Lord God, thank You for reigning over all creation and standing above every storm. When our problems roar like mighty waters, remind us that You are in total control and will never retreat. Help us follow Your true words and rest quietly in Your eternal love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 18",
+     "on": "Psalms 93:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 93:3",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Crosswalk.com",
+     "work": "Wisdom from the Psalms 7/25",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-7-or-25-552468.html"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "God's Eternal Reign",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-eternal-reign"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

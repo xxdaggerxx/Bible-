@@ -1,0 +1,66 @@
+{
+ "id": "28-002-001",
+ "title": "Israel’s Adultery Rebuked",
+ "refs": [
+  "Hosea 2:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 28002001,
+   "end": 28002013,
+   "ref": "Hosea 2:1-13",
+   "ranges": [
+    [
+     28002001,
+     28002013
+    ]
+   ],
+   "title": "God's Merciful Thorns",
+   "key_verse": [
+    28002006,
+    28002006
+   ],
+   "reflect": [
+    {
+     "text": "When life feels blocked and our plans fall apart, we often see only trouble. Yet God tells His wandering people that He places thorny hedges across their paths. These painful obstacles are actually gifts of mercy. God loves His people too much to let them run easily toward false comforts that cannot satisfy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our hearts can quickly turn away from God toward other things. Like a faithful husband, the Lord acts with a holy jealousy born of deep, passionate love for His bride. He frustrates our pursuit of lesser loves and closes the wrong doors so that we cannot find what we thought we wanted.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus persistently pursues us whenever we stray. He allows difficulties to stop our sprint into danger and to wake us up to what we have lost. In His kindness, the Lord uses these hard hedge walls to turn our wandering steps back toward home.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Has God ever used a closed door or an obstacle to keep you from running toward the wrong things?",
+    "How does knowing God pursues you in love change the way you see hard disruptions in your life?"
+   ],
+   "prayer": "Lord, thank You for loving us so deeply that You do not let us wander away unnoticed. Forgive us for running toward empty things that cannot save or satisfy. When You place hedges and obstacles in our way, help us see Your mercy and turn our hearts back to You.",
+   "sources": {
+    "D1": {
+     "author": "Scotty Smith",
+     "work": "The Gift of Precious Providential Thornbushes",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/scotty-smith/the-gift-of-precious-providential-thornbushes/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

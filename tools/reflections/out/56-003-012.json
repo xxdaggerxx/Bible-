@@ -1,0 +1,66 @@
+{
+ "id": "56-003-012",
+ "title": "Final Remarks and Greetings",
+ "refs": [
+  "Titus 3:12-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 56003012,
+   "end": 56003015,
+   "ref": "Titus 3:12-15",
+   "ranges": [
+    [
+     56003012,
+     56003015
+    ]
+   ],
+   "title": "Faithful Work in Everyday Moments",
+   "key_verse": [
+    56003014,
+    56003014
+   ],
+   "reflect": [
+    {
+     "text": "Paul ends his letter by naming everyday helpers like Artemas, Tychicus, and Zenas. Most people today know very little about them, yet their quiet work mattered to God. We are called to serve Christ faithfully right where we are, instead of chasing human fame or remembrance. Ministry belongs to the Lord, and he directs all our plans and steps. Even when our daily efforts go unnoticed by the world, God sees and values every bit of our service.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Serving others also takes thoughtful practice. Paul tells believers to learn how to devote themselves to good deeds so they can meet urgent needs. This means looking at our daily callings and scheduling our highest priorities first. When we manage our time well and make the most of our mornings, we create space in our days to help people when unexpected troubles appear. Giving our energy to loving others in this disciplined way brings deep and lasting joy.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can knowing that God sees your quiet service change the way you view your daily routines?",
+    "What is one way you can plan your time this week to be ready to help someone in need?"
+   ],
+   "prayer": "Lord, thank you that no act of service done for you is ever forgotten or unseen. Teach us to use our time wisely and make space in our schedules for good works. Help us find true joy in meeting the pressing needs of the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "John Sartelle",
+     "work": "Zenas Who?",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/zenas-who"
+    },
+    "D2": {
+     "author": "David Mathis",
+     "work": "Four Lessons in Fruitful Time-Management",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/four-lessons-in-fruitful-time-management"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

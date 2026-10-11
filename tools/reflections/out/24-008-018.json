@@ -1,0 +1,89 @@
+{
+ "id": "24-008-018",
+ "title": "Jeremiah Weeps for His People",
+ "refs": [
+  "Jeremiah 8:18-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24008018,
+   "end": 24008022,
+   "ref": "Jeremiah 8:18-22",
+   "ranges": [
+    [
+     24008018,
+     24008022
+    ]
+   ],
+   "title": "Is There No Balm in Gilead?",
+   "key_verse": [
+    24008022,
+    24008022
+   ],
+   "reflect": [
+    {
+     "text": "Jeremiah wept over his people because hopeful seasons came and went, yet they were not saved. God gave them many opportunities to turn back to him, but they delayed and chased worthless idols instead. Time moves swiftly from our youth toward the end of our lives. It is dangerous to hear God's message of mercy again and again while putting off repentance, which means turning away from sin to trust God.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "The prophet asked if there was any healing balm or physician in Gilead. Gilead was known for its soothing ointment, but Israel's true sickness was in the heart. The problem was never a lack of power or care on God's side, for the Lord stood ready to restore them. Instead, the people gave in to despair or turned to useless remedies rather than opening their wounds before God.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Today, Jesus is our Great Physician. Just as healing balsam came from a pierced plant, Christ was pierced on the cross to bring us spiritual healing and peace. F. B. Meyer reminds us that there is \"no hurt He cannot heal.\" We do not have to live in defeat or keep delaying our response. When we bring our brokenness honestly to Jesus, he heals and restores us.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you putting off trusting God, waiting for a better time that might never arrive?",
+    "What hurt, habit, or sin do you need to bring openly to Jesus for healing today?"
+   ],
+   "prayer": "Lord, forgive us for the times we have heard your truth yet delayed turning back to you. Thank you for Jesus, our Great Physician, who was pierced on the cross to forgive our sins and heal our souls. Please give us the courage to lay all our brokenness before you and trust your healing care today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 31",
+     "on": "Jeremiah 8:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 8:22",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Truth For Life",
+     "work": "Truth for Life - December 31, 2016",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-december-31-2016.html"
+    },
+    "D4": {
+     "author": "Tammy Kennington",
+     "work": "What Is the Balm of Gilead according to the Bible?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/what-is-the-balm-of-gilead-according-to-the-bible.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

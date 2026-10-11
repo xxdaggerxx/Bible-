@@ -28,6 +28,7 @@ import androidx.compose.ui.test.swipeUp
 import androidx.compose.ui.test.click
 import androidx.compose.ui.test.hasSetTextAction
 import androidx.compose.ui.test.performTextInput
+import androidx.compose.ui.test.performTextReplacement
 import androidx.compose.ui.text.TextMeasurer
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -47,6 +48,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import androidx.compose.ui.test.assertTextEquals
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.filter
 import org.junit.Assert.assertTrue
@@ -56,6 +58,8 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.Assert.assertFalse
 import com.biblestudy.app.ui.Slot
+import com.biblestudy.app.ui.cardSpec
+import com.biblestudy.app.ui.cardText
 import androidx.compose.ui.graphics.asImageBitmap
 import com.biblestudy.app.ui.HIGHLIGHT_COLORS
 import com.biblestudy.app.model.Region
@@ -75,28 +79,20 @@ import java.io.File
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 @Config(qualifiers = "w1280dp-h800dp-land-xhdpi")
 class FeatureTest {
-    @get:Rule
+    /** Applies state changes made outside composition (see [SnapshotFlusher]). */
+    @get:Rule(order = 0)
+    val flusher = SnapshotFlusher()
+
+    @get:Rule(order = 1)
     val compose = createAndroidComposeRule<MainActivity>()
 
     /** On failure, prints the state objects written most often during the test (to find update loops). */
-    @get:Rule
+    @get:Rule(order = 2)
     val writes = object : org.junit.rules.TestWatcher() {
         val counts = java.util.concurrent.ConcurrentHashMap<String, Int>()
         var handle: androidx.compose.runtime.snapshots.ObserverHandle? = null
-        var flusher: androidx.compose.runtime.snapshots.ObserverHandle? = null
         override fun starting(d: org.junit.runner.Description) {
             counts.clear()
-            // Apply state changes made outside composition, as Compose's GlobalSnapshotManager does
-            // on a device. In a long Robolectric run that manager stops doing it after a few tests,
-            // leaving changes pending so Compose never reports idle.
-            val main = android.os.Handler(android.os.Looper.getMainLooper())
-            val posted = java.util.concurrent.atomic.AtomicBoolean(false)
-            flusher = androidx.compose.runtime.snapshots.Snapshot.registerGlobalWriteObserver {
-                if (posted.compareAndSet(false, true)) main.post {
-                    posted.set(false)
-                    androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications()
-                }
-            }
             handle = androidx.compose.runtime.snapshots.Snapshot.registerApplyObserver { changed, _ ->
                 for (c in changed) {
                     val k = c.toString().take(160)
@@ -202,10 +198,31 @@ class FeatureTest {
             }
             File("build/state-writes.txt").appendText(out.toString())
         }
-        override fun finished(d: org.junit.runner.Description) { handle?.dispose(); flusher?.dispose() }
+        override fun finished(d: org.junit.runner.Description) { handle?.dispose() }
     }
 
     private val vm: StudyViewModel get() = ViewModelProvider(compose.activity)[StudyViewModel::class.java]
+
+    /**
+     * Waits until [condition] holds. Before each check it applies state changes made outside
+     * composition and lets work that finished on a background thread (a chapter or a window's
+     * data loading) carry on, on this thread, which is Robolectric's main thread: in a long run
+     * Compose doesn't always get round to it, and the screen would wait out the timeout showing
+     * "Loading…".
+     */
+    private fun waitFor(timeoutMs: Long, condition: () -> Boolean) {
+        val end = System.currentTimeMillis() + timeoutMs
+        while (true) {
+            androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications()
+            // Let finished background work resume: on Compose's test scheduler (driven by its
+            // clock) and on the main looper.
+            compose.mainClock.advanceTimeByFrame()
+            org.robolectric.Shadows.shadowOf(android.os.Looper.getMainLooper()).idle()
+            if (condition()) return
+            if (System.currentTimeMillis() > end) throw androidx.compose.ui.test.ComposeTimeoutException("Condition still not satisfied after $timeoutMs ms")
+            Thread.sleep(10)
+        }
+    }
 
     /**
      * Chapters and saved ink load on background threads, which waitForIdle doesn't track.
@@ -213,7 +230,7 @@ class FeatureTest {
      */
     private fun waitForLoaded(timeoutMs: Long = 10_000) {
         runCatching {
-            compose.waitUntil(timeoutMs) {
+            waitFor(timeoutMs) {
                 compose.onAllNodesWithTag("loading").fetchSemanticsNodes().isEmpty() && vm.pendingLoads == 0
             }
         }.onFailure {
@@ -246,12 +263,17 @@ class FeatureTest {
             vm.paneVerse = null
             vm.compareVersions = false
             vm.verseInPanel = false // the older tests use the verse window
+            vm.showVerseCommentary(false)
+            vm.chatWindow = false
             vm.verseWordStudy = null
+            vm.chat.changeEnabled(false) // no chat bubble over the page in the older tests
             vm.readMode = false
             vm.underlineMode = false
             vm.changeTextFont(com.biblestudy.app.model.TextFont.BOOK)
+            vm.changeTextSize(com.biblestudy.app.model.TextSize.NORMAL)
             vm.panels[0].back.clear()
             vm.panels[0].forward.clear()
+            vm.clearSteps()
             vm.panels[0].zoomRel.keys.forEach { vm.panels[0].zoomRel[it] = 1f }
         }
         waitForLoaded()
@@ -333,6 +355,74 @@ class FeatureTest {
         compose.onNodeWithTag("reader0").performTouchInput { swipeDown(durationMillis = 300) }
         compose.waitForIdle()
         compose.onNodeWithText("John 3").assertExists()
+    }
+
+    @Test
+    fun everyPenColourShowsOnTheDarkPage() {
+        // INK-17: the default black pen writes light on the dark page; every colour shows.
+        compose.runOnUiThread { vm.theme = com.biblestudy.app.ui.PageTheme.DARK; vm.setVersion(0, "KJV"); vm.goTo(0, 43, 3, 1, remember = false); vm.fingerDraw = true; vm.tool = Tool.PEN }
+        waitForLoaded()
+        val before = vm.textStrokesFor("KJV", 43, 3).size
+        for ((i, c) in com.biblestudy.app.ui.PEN_COLORS.withIndex()) {
+            compose.runOnUiThread { vm.penColor = c; vm.penSize = 2 }
+            compose.onNodeWithTag("reader0").performTouchInput {
+                val y = 420f + i * 70f
+                down(Offset(260f, y)); repeat(20) { moveBy(Offset(22f, if (it % 2 == 0) -10f else 10f)) }; up()
+            }
+            compose.waitForIdle()
+        }
+        assertEquals(before + com.biblestudy.app.ui.PEN_COLORS.size, vm.textStrokesFor("KJV", 43, 3).size)
+        // Saved in the colour picked; only how it's shown changes.
+        assertEquals(com.biblestudy.app.ui.PEN_COLORS[0], vm.textStrokesFor("KJV", 43, 3)[before].color)
+        snap("204-pen-colours-dark")
+        compose.onNodeWithContentDescription("Pen colour and size").performClick()
+        compose.waitForIdle()
+        snap("205-pen-colours-dark-picker")
+        compose.runOnUiThread { vm.penColor = com.biblestudy.app.ui.PEN_COLORS[0] }
+        compose.onNodeWithContentDescription("Pen colour and size").performClick()
+        compose.runOnUiThread { vm.theme = com.biblestudy.app.ui.PageTheme.LIGHT }
+        compose.waitForIdle()
+        snap("206-pen-colours-light")
+        compose.runOnUiThread {
+            vm.textStrokesFor("KJV", 43, 3).drop(before).forEach { vm.removeItem(it) }
+            vm.theme = com.biblestudy.app.ui.PageTheme.DARK; vm.fingerDraw = false
+        }
+        waitForLoaded()
+    }
+
+    @Test
+    fun strokesAreFiledByWhereMostOfThemLie() {
+        compose.runOnUiThread { vm.marginRight = true; vm.marginLeft = false }
+        waitForLoaded()
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        val z = zoom()
+        val edge = vm.panels[0].panX + Page.COL_W * z // where the words end and the right margin begins (strokes start clear of its resize handle)
+        // Starts on the words, runs mostly into the margin: margin ink, in every version (ANCH-9).
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset(edge - 70f, 600f)); repeat(18) { moveBy(Offset(14f, 2f)) }; up()
+        }
+        compose.waitForIdle()
+        assertEquals("text=${vm.textStrokesFor("KJV", 43, 3).map { it.region }} edge=$edge z=$z ch=${vm.panels[0].chapter} m2=${vm.marginStrokesFor(43, 2).size} m4=${vm.marginStrokesFor(43, 4).size} canUndo=${vm.canUndo} w=${readerSize().width} top=${vm.panels[0].topVerse} msg=${vm.message}", Region.RIGHT, vm.marginStrokesFor(43, 3).singleOrNull()?.region)
+        assertEquals(0, vm.textStrokesFor("KJV", 43, 3).size)
+        // Starts in the margin, runs mostly over the words: ink on the words, this version only (ANCH-4).
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset(edge + 70f, 800f)); repeat(18) { moveBy(Offset(-14f, 1f)) }; up()
+        }
+        compose.waitForIdle()
+        assertEquals(1, vm.textStrokesFor("KJV", 43, 3).size)
+        assertEquals(1, vm.marginStrokesFor(43, 3).size)
+        // In the BSB: the margin ink is there, the ink on the KJV words isn't.
+        compose.runOnUiThread { vm.fingerDraw = false; vm.setVersion(0, "BSB") }
+        waitForLoaded()
+        assertEquals(0, vm.textStrokesFor("BSB", 43, 3).size)
+        assertEquals(1, vm.marginStrokesFor(43, 3).size)
+        snap("157-strokes-filed")
+        compose.runOnUiThread {
+            vm.setVersion(0, "KJV")
+            vm.marginStrokesFor(43, 3).toList().forEach { vm.removeItem(it) }
+            vm.textStrokesFor("KJV", 43, 3).toList().forEach { vm.removeItem(it) }
+        }
+        waitForLoaded()
     }
 
     @Test
@@ -460,7 +550,97 @@ class FeatureTest {
         assertEquals(19 to 23, vm.panels[0].book to vm.panels[0].chapter)
         // The chapter arrows don't add to history.
         compose.onNodeWithContentDescription("Next chapter").performClick()
-        assertEquals(1, vm.panels[0].back.size)
+        assertEquals(1, vm.backSteps.size)
+    }
+
+    @Test
+    fun backAndForwardUndoPanelsAndTabsAndTabsRememberWhereYouWere() {
+        compose.runOnUiThread { while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex); vm.goTo(0, 43, 3, 20, remember = false); vm.clearSteps() }
+        waitForLoaded()
+        // Open the commentary beside the text, then Romans 8:28 in a new tab (NAV-1).
+        compose.runOnUiThread { vm.sidePane = PaneKind.COMMENTARY }
+        waitForLoaded()
+        compose.runOnUiThread { vm.newTab(45, 8, 28) }
+        waitForLoaded()
+        assertEquals(2, vm.backSteps.size)
+        assertEquals(2, vm.tabs.size)
+
+        // Back: the new tab goes; Back again: the commentary goes. The screen is as it was.
+        compose.onNodeWithContentDescription("Back").performClick()
+        waitForLoaded()
+        assertEquals(1, vm.tabs.size)
+        assertEquals(PaneKind.COMMENTARY, vm.sidePane)
+        compose.onNodeWithContentDescription("Back").performClick()
+        waitForLoaded()
+        assertNull(vm.sidePane)
+        assertEquals(43 to 3, vm.panels[0].book to vm.panels[0].chapter)
+        assertTrue("John 3 at ${vm.panels[0].topVerse}", vm.panels[0].topVerse in 19..21)
+        snap("153-back-to-start")
+
+        // Forward twice brings them back.
+        repeat(2) { compose.onNodeWithContentDescription("Forward").performClick(); waitForLoaded() }
+        assertEquals(2, vm.tabs.size)
+        assertEquals(1, vm.activeTab)
+        assertEquals(45 to 8, vm.panels[0].book to vm.panels[0].chapter)
+
+        // Switching tabs keeps each one where it was scrolled to.
+        compose.runOnUiThread { vm.selectTab(0) }
+        waitForLoaded()
+        assertTrue("John 3 at ${vm.panels[0].topVerse}", vm.panels[0].topVerse in 19..21)
+        compose.runOnUiThread { vm.selectTab(1) }
+        waitForLoaded()
+        assertTrue("Romans 8 at ${vm.panels[0].topVerse}", vm.panels[0].topVerse in 27..29)
+        // And Back goes back across the switch.
+        compose.onNodeWithContentDescription("Back").performClick()
+        waitForLoaded()
+        assertEquals(0, vm.activeTab)
+        compose.runOnUiThread { while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex); vm.sidePane = null; vm.clearSteps() }
+        waitForLoaded()
+    }
+
+    @Test
+    fun startFreshAndTheBackList() {
+        compose.runOnUiThread { while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex); vm.goTo(0, 43, 3, 16, remember = false); vm.clearSteps() }
+        waitForLoaded()
+        // A busy screen: Psalm 23, the commentary beside it, and a second tab.
+        compose.runOnUiThread { vm.goTo(0, 19, 23) }
+        waitForLoaded()
+        compose.runOnUiThread { vm.sidePane = PaneKind.COMMENTARY }
+        waitForLoaded()
+        compose.runOnUiThread { vm.newTab(45, 8, 28) }
+        waitForLoaded()
+        assertEquals(3, vm.backSteps.size)
+
+        // Hold Back: the screens it goes to, nearest first; pick the oldest (NAV-1).
+        compose.onNodeWithContentDescription("Back").performTouchInput { longClick() }
+        compose.onNodeWithText("Go back to").assertExists()
+        compose.onNodeWithText("Psalms 23 and Commentary").assertExists()
+        snap("154-back-list")
+        compose.onNodeWithText("John 3").performClick()
+        waitForLoaded()
+        assertEquals(1, vm.tabs.size)
+        assertNull(vm.sidePane)
+        assertEquals(43 to 3, vm.panels[0].book to vm.panels[0].chapter)
+        assertEquals(3, vm.forwardSteps.size)
+        // Hold Forward to come back to the second tab.
+        compose.onNodeWithContentDescription("Forward").performTouchInput { longClick() }
+        compose.onNodeWithText("Romans 8 \u00b7 2 tabs").performClick()
+        waitForLoaded()
+        assertEquals(2, vm.tabs.size)
+        assertEquals(45 to 8, vm.panels[0].book to vm.panels[0].chapter)
+
+        // Start fresh (NAV-2): one tab, one panel, where you're reading; Back undoes it.
+        compose.onNodeWithContentDescription("Panels").performClick()
+        compose.onNodeWithText("Start fresh").performClick()
+        waitForLoaded()
+        assertEquals(1, vm.tabs.size)
+        assertEquals(1, vm.tab.shown)
+        assertEquals(45 to 8, vm.panels[0].book to vm.panels[0].chapter)
+        compose.onNodeWithContentDescription("Back").performClick()
+        waitForLoaded()
+        assertEquals(2, vm.tabs.size)
+        compose.runOnUiThread { while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex); vm.sidePane = null; vm.clearSteps() }
+        waitForLoaded()
     }
 
     @Test
@@ -523,7 +703,7 @@ class FeatureTest {
     @Test
     fun typedNotesAreSearchable() {
         compose.runOnUiThread { vm.setNote(com.biblestudy.app.model.VerseTarget(43, 3, 16), "God's love for the whole world") }
-        compose.waitUntil(5_000) { vm.user.searchNotes("whole world", 1, 66).isNotEmpty() }
+        waitFor(5_000) { vm.user.searchNotes("whole world", 1, 66).isNotEmpty() }
         val hits = vm.user.searchNotes("love world", 40, 66)
         assertEquals(43003016, hits.single().let { it.book * 1_000_000 + it.chapter * 1_000 + it.verse })
         assertTrue(vm.user.searchNotes("love world", 1, 39).isEmpty()) // Old Testament only
@@ -547,14 +727,14 @@ class FeatureTest {
 
         // Book, chapter and verse are all marked.
         compose.onNodeWithText("John 3").performClick()
-        compose.waitUntil(5_000) { compose.onAllNodesWithContentDescription("John has notes").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(5_000) { compose.onAllNodesWithContentDescription("John has notes").fetchSemanticsNodes().isNotEmpty() }
         compose.onAllNodesWithContentDescription("Genesis has notes").assertCountEquals(0)
         snap("15-picker-books")
         compose.onNodeWithText("John").performClick()
         compose.onNodeWithContentDescription("John 3 has notes").assertExists()
         compose.onAllNodesWithContentDescription("John 4 has notes").assertCountEquals(0)
         compose.onNodeWithText("3").performClick()
-        compose.waitUntil(5_000) { compose.onAllNodesWithContentDescription("John 3:$verse has notes").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(5_000) { compose.onAllNodesWithContentDescription("John 3:$verse has notes").fetchSemanticsNodes().isNotEmpty() }
         snap("16-picker-verses")
 
         // Hiding the layer hides its markers.
@@ -568,9 +748,9 @@ class FeatureTest {
 
         // Typed notes aren't on a layer, so they are always marked.
         compose.runOnUiThread { vm.setNote(com.biblestudy.app.model.VerseTarget(19, 23, 1), "The Lord is my shepherd") }
-        compose.waitUntil(5_000) { vm.user.notedVerses().contains(19023001) }
+        waitFor(5_000) { vm.user.notedVerses().contains(19023001) }
         compose.onNodeWithText("John 3").performClick()
-        compose.waitUntil(5_000) { compose.onAllNodesWithContentDescription("Psalms has notes").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(5_000) { compose.onAllNodesWithContentDescription("Psalms has notes").fetchSemanticsNodes().isNotEmpty() }
         compose.runOnUiThread {
             vm.setAllLayersVisible(true)
             vm.setNote(com.biblestudy.app.model.VerseTarget(19, 23, 1), "")
@@ -584,6 +764,7 @@ class FeatureTest {
             vm.setVersion(1, "WEB")
         }
         waitForLoaded()
+        // The link button is in each Bible panel's header.
         compose.onAllNodesWithContentDescription("Link panels")[0].performClick()
         waitForLoaded()
         assertTrue(vm.linked)
@@ -609,7 +790,7 @@ class FeatureTest {
         waitForLoaded()
         assertEquals(19 to 119, vm.panels[1].book to vm.panels[1].chapter)
         // The other panel follows once its chapter is laid out.
-        runCatching { compose.waitUntil(5_000) { kotlin.math.abs(vm.panels[1].topVerse - 50) <= 1 } }
+        runCatching { waitFor(5_000) { kotlin.math.abs(vm.panels[1].topVerse - 50) <= 1 } }
         assertTrue("right panel at ${vm.panels[1].topVerse}", kotlin.math.abs(vm.panels[1].topVerse - 50) <= 1)
 
         // Unlinked, the panels move independently.
@@ -638,8 +819,8 @@ class FeatureTest {
         val x = (Page.COL_PAD + box.center.x) * z
         val y = (Page.TEXT_TOP + layout.headingLineTops(block)[lineIndex] + box.center.y) * z + vm.panels[0].panY
         compose.onNodeWithTag("reader0").performTouchInput { click(Offset(x, y)) }
-        compose.waitUntil(5_000) { compose.onAllNodesWithText("Genesis 1:1\u20132 (KJV)").fetchSemanticsNodes().isNotEmpty() }
-        compose.waitUntil(5_000) { compose.onAllNodesWithText("In the beginning", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        waitFor(5_000) { compose.onAllNodesWithText("Genesis 1:1\u20132 (KJV)").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(5_000) { compose.onAllNodesWithText("In the beginning", substring = true).fetchSemanticsNodes().isNotEmpty() }
         compose.onAllNodesWithText("the earth was without form", substring = true).assertCountEquals(1)
         snap("18-passage-popover")
 
@@ -657,14 +838,15 @@ class FeatureTest {
         compose.runOnUiThread { vm.openVerse(43, 3, 16) }
         compose.waitForIdle()
         // (References chosen so they aren't also in this verse's cross-reference list.)
+        compose.onNodeWithTag("addNote").performClick()
         compose.onNode(hasSetTextAction()).performTextInput("Like Ruth 1:16, and Ps 23.")
         compose.onNodeWithText("Ruth 1:16").assertExists()
         compose.onNodeWithText("Psalms 23").performClick()
-        compose.waitUntil(5_000) { compose.onAllNodesWithText("is my shepherd", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        waitFor(5_000) { compose.onAllNodesWithText("is my shepherd", substring = true).fetchSemanticsNodes().isNotEmpty() }
         snap("19-note-link")
         compose.onNodeWithContentDescription("Close passage").performClick()
         compose.onNodeWithText("Ruth 1:16").performClick()
-        compose.waitUntil(5_000) { compose.onAllNodesWithText("Intreat me not to leave thee", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        waitFor(5_000) { compose.onAllNodesWithText("Intreat me not to leave thee", substring = true).fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("Go to").performClick()
         waitForLoaded()
         assertEquals(8 to 1, vm.panels[0].book to vm.panels[0].chapter)
@@ -769,7 +951,7 @@ class FeatureTest {
         compose.onNodeWithContentDescription("My notes").performScrollTo().performClick()
         compose.waitForIdle()
         compose.onNodeWithText("Highlights").performClick()
-        compose.waitUntil(5_000) { compose.onAllNodesWithText("John 3:", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        waitFor(5_000) { compose.onAllNodesWithText("John 3:", substring = true).fetchSemanticsNodes().isNotEmpty() }
         // The whole verse is listed, not just the highlighted word.
         val shown = compose.onNodeWithTag("highlightText", useUnmergedTree = true).fetchSemanticsNode().config[androidx.compose.ui.semantics.SemanticsProperties.Text].first().text
         val verse = vm.text(h.version).verseText(com.biblestudy.app.model.VerseId.of(43, 3, vm.highlightVerses(h).first))!!
@@ -799,7 +981,10 @@ class FeatureTest {
     @Test
     fun bookIntroductionsOpenFromThePickerAndHeader() {
         compose.onNodeWithText("John 3").performClick()
-        compose.onNodeWithContentDescription("About Romans").performClick()
+        // No ⓘ on each book; the introduction is on the book's chapter screen.
+        compose.onNodeWithContentDescription("About Romans").assertDoesNotExist()
+        compose.onNodeWithText("Romans").performClick()
+        compose.onNodeWithText("About this book").performClick()
         compose.waitForIdle()
         compose.onNodeWithText("About Romans").assertExists()
         compose.onNodeWithText("Historical background").assertExists()
@@ -814,6 +999,24 @@ class FeatureTest {
         // The chapter header opens the current book's introduction.
         compose.onNodeWithContentDescription("About this book").performClick()
         compose.onNodeWithText("About Romans").assertExists()
+
+        // A key verse opens its card over the window, not behind it on the screen underneath.
+        val key = com.biblestudy.app.data.BookIntros.get(compose.activity, 45)!!.keyVerses.first()
+        compose.onNodeWithText("Connections").performScrollTo() // just below the key verses
+        compose.onNodeWithText(vm.passageLabel(key)).performClick()
+        compose.waitForIdle()
+        compose.onNodeWithContentDescription("Close passage").assertExists()
+        val global = Class.forName("android.view.WindowManagerGlobal")
+        @Suppress("UNCHECKED_CAST")
+        val roots = global.getDeclaredField("mViews").apply { isAccessible = true }
+            .get(global.getMethod("getInstance").invoke(null)) as List<android.view.View>
+        val card = roots.last().layoutParams as android.view.WindowManager.LayoutParams
+        val window = roots[roots.size - 2]
+        assertEquals(window.windowToken, card.token)
+        assertTrue(compose.activity.window.decorView.windowToken != card.token)
+        snap("44b-book-intro-key-verse")
+        compose.onNodeWithContentDescription("Close passage").performClick()
+        compose.onNodeWithText("About Romans").assertExists()
     }
 
     @Test
@@ -826,7 +1029,7 @@ class FeatureTest {
         compose.onNodeWithContentDescription("Search").performScrollTo().performClick()
         compose.onNodeWithText("Words", substring = true).performTextInput("loved -world")
         compose.onNodeWithText("Words", substring = true).performImeAction()
-        compose.waitUntil(15_000) { compose.onAllNodesWithText("verses in", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        waitFor(15_000) { compose.onAllNodesWithText("verses in", substring = true).fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("John 3:16").assertDoesNotExist() // "the world" is left out
         snap("45-search-grouped")
         compose.onNodeWithText("Genesis \u2014 8").assertExists()
@@ -835,6 +1038,189 @@ class FeatureTest {
         compose.waitForIdle()
         compose.onNodeWithText("Deuteronomy \u2014 4").assertExists()
         compose.onNodeWithText("Genesis \u2014 8").assertDoesNotExist()
+    }
+
+    @Test
+    fun aiChatAnswersFromTheChosenSitesWithLinks() {
+        val asked = ArrayList<Triple<List<String>, List<com.biblestudy.app.data.ChatTurn>, String>>()
+        var reply: com.biblestudy.app.data.ChatResult = com.biblestudy.app.data.ChatResult.Answer(
+            "The sites say God showed his love in giving his Son.[1]\n\n- See also **Romans 5:8**.[2]",
+            listOf(
+                com.biblestudy.app.data.ChatSource("God so loved the world", "https://www.gotquestions.org/John-3-16.html"),
+                com.biblestudy.app.data.ChatSource("The love of God", "https://www.ligonier.org/learn/love"),
+            ),
+        )
+        compose.runOnUiThread {
+            vm.chat.changeEnabled(true)
+            vm.chat.changeKey("")
+            vm.chat.newChat()
+            vm.chat.attached.clear()
+            vm.chat.changeSites(com.biblestudy.app.data.AiChat.DEFAULT_SITES)
+            vm.chat.service = com.biblestudy.app.data.ChatService { _, sites, _, history, q, hasVerses -> asked += Triple(sites, history, q); assertTrue(hasVerses("see Rom 5:8")); reply }
+        }
+        // The bubble opens the chat in its own little window over the text; first it asks for the key.
+        compose.onNodeWithTag("chatBubble").performClick()
+        compose.waitForIdle()
+        assertTrue(vm.chatWindow)
+        assertNull(vm.sidePane)
+        compose.onNodeWithTag("chatWindow").assertExists()
+        compose.onNodeWithTag("chatKey").performTextInput("sk-test-key")
+        compose.onNodeWithText("Save key").performClick()
+        assertEquals("sk-test-key", vm.chat.apiKey)
+        // The bubble closes it again; Ask AI below opens it.
+        compose.onNodeWithTag("chatBubble").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithTag("chatWindow").assertDoesNotExist()
+
+        // A verse goes to the chat from its window.
+        compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+        compose.onNodeWithText("Ask AI").performClick()
+        compose.waitForIdle()
+        assertEquals(listOf("John 3:16 (KJV)"), vm.chat.attached.map { it.label })
+        compose.onNodeWithTag("chatInput").performTextInput("What does this teach about God's love?")
+        compose.onNodeWithContentDescription("Send").performClick()
+        waitFor(5_000) { compose.onAllNodesWithTag("chatAnswer").fetchSemanticsNodes().isNotEmpty() }
+        val (sites, history, q) = asked.single()
+        assertEquals(com.biblestudy.app.data.AiChat.DEFAULT_SITES, sites)
+        assertTrue(history.isEmpty())
+        assertTrue(q, q.contains("John 3:16 (KJV): For God so loved the world") && q.endsWith("What does this teach about God's love?"))
+        compose.onNodeWithText("God so loved the world").assertExists()
+        compose.onNodeWithText("ligonier.org").assertExists()
+        snap("131-ai-chat")
+
+        // Bible references in the answer open the passage pop-over.
+        val answer = compose.onNodeWithTag("chatAnswer").fetchSemanticsNode()
+            .config[androidx.compose.ui.semantics.SemanticsProperties.Text].first()
+        assertTrue(answer.text, answer.text.contains("\u2022 See also Romans 5:8."))
+        assertTrue(answer.getLinkAnnotations(0, answer.length).isNotEmpty())
+
+        // The verses it names are listed together; each opens its passage.
+        compose.onNodeWithTag("chatVerses").assertExists()
+        compose.onNodeWithText("Romans 5:8", useUnmergedTree = true).assertExists()
+
+        // Copy a message.
+        compose.onAllNodesWithText("Copy")[1].performClick()
+        val copied = androidx.test.core.app.ApplicationProvider.getApplicationContext<android.content.Context>()
+            .getSystemService(android.content.ClipboardManager::class.java).primaryClip!!.getItemAt(0).text.toString()
+        assertTrue(copied, copied.startsWith("The sites say God showed his love") && copied.contains("[2] The love of God: https://www.ligonier.org/learn/love"))
+
+        // Edit the question and send it again: it replaces the old one and its answer.
+        compose.onNodeWithText("Edit").performClick()
+        assertEquals(0, vm.chat.editing)
+        assertEquals(listOf("John 3:16 (KJV)"), vm.chat.attached.map { it.label })
+        compose.onNodeWithTag("chatInput").performTextReplacement("What does this verse teach about eternal life?")
+        compose.onNodeWithContentDescription("Send").performClick()
+        waitFor(5_000) { !vm.chat.busy && vm.chat.entries.size == 2 }
+        assertEquals("What does this verse teach about eternal life?", vm.chat.entries[0].text)
+        assertTrue(asked.last().second.isEmpty())
+        assertTrue(asked.last().third.contains("John 3:16 (KJV)"))
+        assertNull(vm.chat.editing)
+
+        // Nothing found on the sites: no answer, just a note. The earlier turns go with it.
+        reply = com.biblestudy.app.data.ChatResult.NotFound(listOf("holiness in Leviticus"))
+        compose.onNodeWithTag("chatInput").performTextInput("And in Leviticus?")
+        compose.onNodeWithContentDescription("Send").performClick()
+        waitFor(5_000) { compose.onAllNodesWithTag("chatNote").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Searched for: \u201choliness in Leviticus\u201d", substring = true).assertExists()
+        assertEquals(2, asked.last().second.size)
+        assertFalse(asked.last().second[0].text.isEmpty())
+        assertEquals(3, asked.size)
+
+        // Try again (AI-11): the last question is asked again and its reply replaced.
+        reply = com.biblestudy.app.data.ChatResult.Failed("Couldn't reach the AI. Check your internet connection.")
+        compose.onNodeWithTag("chatRetry").performClick()
+        waitFor(5_000) { !vm.chat.busy && asked.size == 4 }
+        compose.onNodeWithText("Couldn't reach the AI", substring = true).assertExists()
+        assertEquals(4, vm.chat.entries.size)
+        snap("133-ai-chat-retry")
+        reply = com.biblestudy.app.data.ChatResult.Answer("Leviticus calls God's people to be holy as he is holy.[1] See Leviticus 19:2.", listOf(com.biblestudy.app.data.ChatSource("Holiness", "https://www.gotquestions.org/holiness.html")))
+        compose.onNodeWithTag("chatRetry").performClick()
+        waitFor(5_000) { !vm.chat.busy && asked.size == 5 }
+        assertEquals(4, vm.chat.entries.size)
+        assertEquals("And in Leviticus?", vm.chat.entries[2].text)
+        assertEquals(asked[3].second, asked[4].second)
+        assertEquals(asked[3].third, asked[4].third)
+        assertNull(vm.chat.entries.last().note)
+        assertTrue(vm.chat.attached.isEmpty())
+
+        assertTrue(vm.chatWindow)
+        snap("132-ai-chat-window")
+
+        // The chat can move into a panel beside the text; the bubble makes way.
+        compose.onNodeWithContentDescription("Open the chat beside the text").performClick()
+        compose.waitForIdle()
+        assertFalse(vm.chatWindow)
+        assertEquals(PaneKind.CHAT, vm.sidePane)
+        compose.onNodeWithTag("chatBubble").assertDoesNotExist()
+        compose.onNodeWithText("holy as he is holy", substring = true).assertExists()
+
+        // Turned off: no bubble, no Ask AI, and the panel view leaves the menu.
+        compose.runOnUiThread { vm.sidePane = null; vm.chat.changeEnabled(false); vm.openVerse(43, 3, 16) }
+        compose.waitForIdle()
+        compose.onNodeWithText("Ask AI").assertDoesNotExist()
+        compose.onNodeWithTag("chatBubble").assertDoesNotExist()
+        compose.runOnUiThread { vm.verseSheet = null; vm.chat.newChat(); vm.chat.changeKey(""); vm.chat.service = com.biblestudy.app.data.AiChat.claude }
+        compose.waitForIdle()
+    }
+
+    @Test
+    fun theAiCommentaryComesFirstAndOpensWithTheVerse() {
+        // First in the menus; the stored order (which files writing on commentaries) is unchanged.
+        assertEquals(com.biblestudy.app.data.Commentaries.AI, com.biblestudy.app.data.Commentaries.menu.first().id)
+        assertEquals(com.biblestudy.app.data.Commentaries.CONCISE, com.biblestudy.app.data.Commentaries.all.first().id)
+        // As for a new reader: the AI Commentary, and the pop-up on its Commentary tab.
+        compose.runOnUiThread { vm.chooseCommentary(com.biblestudy.app.data.Commentaries.AI); vm.showVerseCommentary(true); vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+        waitFor(60_000) { compose.onAllNodesWithTag("verseCommentary").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Ink & Word AI Commentary").assertExists()
+        snap("155-ai-commentary-first")
+        // Its menu lists the AI Commentary first.
+        compose.onNodeWithContentDescription("Choose a commentary").performClick()
+        val first = compose.onAllNodesWithText("Whole Bible", substring = true).fetchSemanticsNodes().first()
+        val aiRow = compose.onAllNodesWithText("Ink & Word AI Commentary").fetchSemanticsNodes().last()
+        assertTrue(aiRow.boundsInRoot.top <= first.boundsInRoot.top)
+        compose.runOnUiThread { vm.verseSheet = null; vm.chooseCommentary(com.biblestudy.app.data.Commentaries.CONCISE); vm.showVerseCommentary(false) }
+        compose.waitForIdle()
+    }
+
+    @Test
+    fun theVersePopUpShowsWhatACommentarySaysOnTheVerse() {
+        compose.runOnUiThread { vm.chooseCommentary(com.biblestudy.app.data.Commentaries.CONCISE); vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+        compose.waitForIdle()
+        // Cross-references first; the Commentary tab shows Matthew Henry's note on the verse (STD-20).
+        compose.onNodeWithText("Cross-references (", substring = true).assertExists()
+        compose.onNodeWithTag("verseCommentaryTab").performClick()
+        waitFor(10_000) { compose.onAllNodesWithTag("verseCommentary").fetchSemanticsNodes().isNotEmpty() }
+        assertTrue(vm.verseCommentary)
+        compose.onNodeWithText("Verses 1\u201321").assertExists()
+        snap("131-verse-commentary")
+
+        // Another commentary is chosen right here, and remembered.
+        compose.onNodeWithContentDescription("Choose a commentary").performClick()
+        compose.onNodeWithText("Jamieson-Fausset-Brown").performClick()
+        waitFor(60_000) {
+            vm.lastCommentary == "jfb" && compose.onAllNodesWithTag("verseCommentary").fetchSemanticsNodes().isNotEmpty()
+        }
+        compose.onNodeWithText("Jamieson-Fausset-Brown", substring = true).assertExists()
+
+        // A New Testament verse in an Old Testament commentary says so.
+        compose.runOnUiThread { vm.chooseCommentary("kd") }
+        compose.waitForIdle()
+        compose.onNodeWithText("Choose another commentary for John", substring = true).assertExists()
+        compose.runOnUiThread { vm.chooseCommentary("jfb") }
+        waitFor(10_000) { compose.onAllNodesWithTag("verseCommentary").fetchSemanticsNodes().isNotEmpty() }
+
+        // The whole chapter opens beside the text, at this verse.
+        compose.onNodeWithText("Whole chapter beside the text").performClick()
+        compose.waitForIdle()
+        assertNull(vm.verseSheet)
+        assertEquals(PaneKind.COMMENTARY, vm.sidePane)
+        assertEquals("jfb", vm.commentaryAt(0))
+        compose.runOnUiThread { vm.sidePane = null; vm.showVerseCommentary(false); vm.chooseCommentary(com.biblestudy.app.data.Commentaries.CONCISE) }
+        compose.waitForIdle()
     }
 
     @Test
@@ -849,12 +1235,12 @@ class FeatureTest {
         assertEquals(2, vm.tab.shown)
         compose.onNodeWithTag("verseDetails").assertExists()
         compose.onNodeWithText("John 3:16 (KJV)").assertExists()
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("Word study: \u201cloved\u201d").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithText("Word study: \u201cloved\u201d").fetchSemanticsNodes().isNotEmpty() }
         snap("130-verse-panel")
 
         // Its word study opens in the same panel, with Back to the verse.
         compose.onNodeWithText("Word study: \u201cloved\u201d").performClick()
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("Used in", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithText("Used in", substring = true).fetchSemanticsNodes().isNotEmpty() }
         assertNull(vm.wordStudy)
         assertEquals("G25", vm.verseWordStudy?.strong)
         compose.onNodeWithContentDescription("Back to the verse").performClick()
@@ -862,10 +1248,11 @@ class FeatureTest {
         assertNull(vm.verseWordStudy)
 
         // A typed note is kept when another verse is tapped; the panel moves to that verse.
+        compose.onNodeWithTag("addNote").performClick()
         compose.onNodeWithText("Typed note", substring = true).performTextInput("Written in the panel")
         compose.runOnUiThread { vm.openVerse(43, 3, 17) }
         compose.waitForIdle()
-        compose.waitUntil(5_000) { vm.user.noteCovering(43, 3, 16)?.text == "Written in the panel" }
+        waitFor(5_000) { vm.user.noteCovering(43, 3, 16)?.text == "Written in the panel" }
         compose.onNodeWithText("John 3:17 (KJV)").assertExists()
         assertNull(vm.verseSheet)
         assertEquals(1, vm.tab.studies.size)
@@ -892,6 +1279,7 @@ class FeatureTest {
     fun aNoteCanCoverSeveralVerses() {
         compose.runOnUiThread { vm.setNote(VerseTarget(43, 3, 16), "") }
         compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+        compose.onNodeWithTag("addNote").performClick()
         compose.onNodeWithText("Typed note", substring = true).performTextInput("God's love for the world")
         compose.onNodeWithContentDescription("Note on one more verse").performClick()
         compose.onNodeWithContentDescription("Note on one more verse").performClick()
@@ -899,7 +1287,7 @@ class FeatureTest {
         snap("46-range-note")
         compose.onNodeWithContentDescription("Close").performClick()
         compose.waitForIdle()
-        compose.waitUntil(5_000) { vm.user.noteCovering(43, 3, 17) != null }
+        waitFor(5_000) { vm.user.noteCovering(43, 3, 17) != null }
         val n = vm.user.noteCovering(43, 3, 18)!!
         assertEquals(16, n.verse)
         assertEquals(18, n.endVerse)
@@ -914,16 +1302,65 @@ class FeatureTest {
     }
 
     @Test
-    fun oldBookmarksBecomeWholeVerseHighlights() {
-        // A bookmark saved by 0.8, in a folder.
-        vm.user.addBookmark(com.biblestudy.app.model.Bookmark(77L, 43, 3, 16, 1L, "Gospel"))
-        compose.runOnUiThread { vm.convertBookmarks(); vm.dataGeneration++ }
-        assertTrue(vm.user.bookmarks().isEmpty())
-        val h = vm.user.allHighlights().single { it.book == 43 && it.chapter == 3 }
-        val verse = vm.text("KJV").verseText(43003016)!!
-        assertEquals(verse.length, h.end - h.start) // the whole verse, without its number
-        assertEquals(setOf("bookmark", "Gospel"), vm.user.tags()["h:${h.id}"])
-        compose.runOnUiThread { vm.removeHighlight(h) }
+    fun bookmarksAndRecentlyReadAreInTheBookPicker() {
+        compose.runOnUiThread {
+            vm.bookmarks.toList().forEach { vm.removeBookmark(it) }
+            vm.clearRecent()
+            vm.goTo(0, 43, 3, 16, remember = false)
+        }
+        waitForLoaded()
+        // Bookmark John 3:16 from its pop-up (NOTE-3); a ribbon shows beside it.
+        compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+        compose.onNodeWithTag("bookmarkChip").performClick()
+        compose.onNodeWithText("Bookmarked").assertExists()
+        assertEquals(listOf(Triple(43, 3, 16)), vm.bookmarks.map { Triple(it.book, it.chapter, it.verse) })
+        vm.awaitSaves()
+        assertEquals(1, vm.user.bookmarks().size)
+        compose.runOnUiThread { vm.verseSheet = null }
+        waitForLoaded()
+        snap("150-bookmark-ribbon")
+
+        // Reading John 3, then Romans 8 from verse 28 (READ-8).
+        var t = 20_000_000L
+        compose.runOnUiThread {
+            vm.foreground = true
+            vm.startReadingClock(t); vm.userActive(t)
+            repeat(2) { t += 10_000; vm.userActive(t); vm.readingTick(t) }
+            vm.goTo(0, 45, 8, 28, remember = false)
+        }
+        waitForLoaded()
+        compose.runOnUiThread { repeat(2) { t += 10_000; vm.userActive(t); vm.readingTick(t) } }
+        assertEquals(listOf(45 to 8, 43 to 3), vm.recent.map { it.book to it.chapter })
+        val romans = vm.recent.first().verse
+        assertTrue("Romans 8 at $romans", romans in 27..28)
+
+        // Back to Genesis, then the picker's Recently read tab takes you to Romans 8 where you were.
+        compose.runOnUiThread { vm.goTo(0, 1, 1, remember = false) }
+        waitForLoaded()
+        compose.onNodeWithText("Genesis 1").performClick()
+        compose.onNodeWithTag("pickerTab1").performClick()
+        compose.onNodeWithTag("recentList").assertExists()
+        snap("151-recently-read")
+        compose.onNodeWithText("Romans 8:$romans").performClick()
+        waitForLoaded()
+        assertEquals(45 to 8, vm.panels[0].book to vm.panels[0].chapter)
+        compose.onNodeWithText("Choose a book").assertDoesNotExist()
+
+        // Bookmarks tab: open one, or take it off.
+        compose.onNodeWithText("Romans 8").performClick()
+        compose.onNodeWithTag("pickerTab2").performClick()
+        compose.onNodeWithText("For God so loved the world", substring = true).assertExists()
+        snap("152-bookmarks")
+        compose.onNodeWithText("John 3:16").performClick()
+        waitForLoaded()
+        assertEquals(43 to 3, vm.panels[0].book to vm.panels[0].chapter)
+        compose.onNodeWithText("John 3").performClick()
+        compose.onNodeWithTag("pickerTab2").performClick()
+        compose.onNodeWithContentDescription("Remove bookmark on John 3:16").performClick()
+        compose.onNodeWithText("No bookmarks yet", substring = true).assertExists()
+        assertTrue(vm.bookmarks.isEmpty())
+        compose.onNodeWithContentDescription("Close").performClick()
+        compose.runOnUiThread { vm.clearRecent(); vm.foreground = false }
     }
 
     @Test
@@ -948,7 +1385,7 @@ class FeatureTest {
         waitForLoaded()
         compose.onNodeWithTag("reader0").assertExists()
         compose.onNodeWithTag("pane").assertExists()
-        compose.waitUntil(15_000) { compose.onAllNodesWithText("Romans 5:8").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(15_000) { compose.onAllNodesWithText("Romans 5:8").fetchSemanticsNodes().isNotEmpty() }
         snap("49-pane-crossrefs")
         // Opening a cross-reference moves the Bible panel; the pane stays.
         // A cross-reference opens its passage pop-over (LINK-5); Go to moves the Bible panel.
@@ -974,7 +1411,7 @@ class FeatureTest {
 
         // Search results kept beside the text.
         compose.runOnUiThread { vm.paneSearch = "\"only begotten\""; vm.sidePane = PaneKind.SEARCH }
-        compose.waitUntil(15_000) { compose.onAllNodesWithText("verses in", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        waitFor(15_000) { compose.onAllNodesWithText("verses in", substring = true).fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("John 1:14").performClick()
         waitForLoaded()
         assertEquals(1, vm.panels[0].chapter)
@@ -1047,7 +1484,7 @@ class FeatureTest {
         assertEquals("BOOK", before.font)
         compose.runOnUiThread { vm.fingerDraw = false; vm.changeTextFont(com.biblestudy.app.model.TextFont.SANS) }
         waitForLoaded()
-        compose.waitUntil(5_000) { vm.textStrokesFor("KJV", 43, 3).isNotEmpty() }
+        waitFor(5_000) { vm.textStrokesFor("KJV", 43, 3).isNotEmpty() }
         val after = vm.textStrokesFor("KJV", 43, 3).single()
         assertEquals(before.id, after.id)
         assertEquals("SANS", after.font)
@@ -1055,10 +1492,42 @@ class FeatureTest {
         // Back to the book font: the stroke comes back to (about) where it was drawn.
         compose.runOnUiThread { vm.changeTextFont(com.biblestudy.app.model.TextFont.BOOK) }
         waitForLoaded()
-        compose.waitUntil(5_000) { vm.textStrokesFor("KJV", 43, 3).isNotEmpty() }
+        waitFor(5_000) { vm.textStrokesFor("KJV", 43, 3).isNotEmpty() }
         val back = vm.textStrokesFor("KJV", 43, 3).single()
         assertEquals(before.points[0], back.points[0], 6f)
         assertEquals(before.points[1], back.points[1], 0.05f)
+    }
+
+    @Test
+    fun changingTheTextSizeKeepsInkOnTheWordsAndResizesIt() {
+        // READ-3: a bigger text size reflows the lines; ink on the words moves with them and grows.
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        val z = zoom()
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset((Page.COL_PAD + 200f) * z, 620f))
+            repeat(6) { moveBy(Offset(15f, 0f)) }
+            up()
+        }
+        compose.waitForIdle()
+        val before = vm.textStrokesFor("KJV", 43, 3).single()
+        fun width(p: FloatArray) = (p.indices step 3).maxOf { p[it] } - (p.indices step 3).minOf { p[it] }
+        compose.runOnUiThread { vm.fingerDraw = false; vm.changeTextSize(com.biblestudy.app.model.TextSize.LARGER) }
+        waitForLoaded()
+        waitFor(5_000) { vm.textStrokesFor("KJV", 43, 3).isNotEmpty() }
+        val after = vm.textStrokesFor("KJV", 43, 3).single()
+        assertEquals(before.id, after.id)
+        assertEquals("BOOK|s145", after.font)
+        assertEquals(width(before.points) * 1.45f, width(after.points), 1f)
+        snap("187-text-size-larger")
+        // Back to normal: the stroke comes back to (about) where and how big it was.
+        compose.runOnUiThread { vm.changeTextSize(com.biblestudy.app.model.TextSize.NORMAL) }
+        waitForLoaded()
+        waitFor(5_000) { vm.textStrokesFor("KJV", 43, 3).isNotEmpty() }
+        val back = vm.textStrokesFor("KJV", 43, 3).single()
+        assertEquals("BOOK", back.font)
+        assertEquals(before.points[0], back.points[0], 6f)
+        assertEquals(before.points[1], back.points[1], 0.05f)
+        assertEquals(width(before.points), width(back.points), 1f)
     }
 
     // ---------- screen sizes (ADP-6): small 8" and large 14.6" tablets, both ways round ----------
@@ -1107,6 +1576,8 @@ class FeatureTest {
         val width = compose.activity.window.decorView.width
         assertTrue("More button at ${more.boundsInRoot.right} of $width", more.boundsInRoot.right <= width)
         snap("70-toolbar")
+        // Everything fits on the tablet, so no scroll arrows (PH-15).
+        assertTrue(compose.onAllNodesWithTag("toolbarScrollRight").fetchSemanticsNodes().isEmpty())
 
         // Colours and sizes open from one button.
         compose.onNodeWithContentDescription("Pen colour and size").performClick()
@@ -1146,7 +1617,7 @@ class FeatureTest {
         val box = vm.textsFor(43, 3).single()
         assertEquals("Compare Rom 8:28 and Ps 23", box.text)
         assertEquals(2, com.biblestudy.app.data.RefLinks.find(box.text, vm.bible.books).size)
-        compose.waitUntil(5_000) { vm.user.searchNotes("Compare", 1, 66).isNotEmpty() } // in note search too
+        waitFor(5_000) { vm.user.searchNotes("Compare", 1, 66).isNotEmpty() } // in note search too
 
         // A finger tap on the box selects it; the bar offers its options.
         val z = zoom()
@@ -1297,7 +1768,7 @@ class FeatureTest {
             vm.setMeaning(HIGHLIGHT_COLORS[0], "Promises")
         }
         compose.onNodeWithContentDescription("My notes").performClick()
-        compose.waitUntil(5_000) { compose.onAllNodesWithText("God so loved").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(5_000) { compose.onAllNodesWithText("God so loved").fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("The Lord is my shepherd").assertExists()
 
         // Tag one note, then filter by the tag.
@@ -1387,7 +1858,7 @@ class FeatureTest {
         }
         waitForLoaded()
         compose.onNodeWithContentDescription("Panels").performClick()
-        compose.onNodeWithText("Save this layout\u2026").performClick()
+        compose.onNodeWithText("Save this layout\u2026").performScrollTo().performClick()
         compose.onNodeWithText("e.g. Gospels side by side").performTextInput("Baptism of Jesus")
         compose.onNodeWithText("Save").performClick()
         compose.waitForIdle()
@@ -1431,6 +1902,10 @@ class FeatureTest {
         // The panel menu turns the Bible panel into a dictionary (SPLIT-7).
         compose.onNodeWithContentDescription("Panel view").performClick()
         snap("130-panel-menu")
+        // Short: the study views fold under This verse and Study.
+        compose.onNodeWithText("Dictionary").assertDoesNotExist()
+        compose.onNodeWithTag("folder:Study").performClick()
+        snap("130b-panel-menu-study")
         compose.onNodeWithText("Dictionary").performClick()
         waitForLoaded()
         assertEquals(listOf<Slot>(Slot.Study(PaneKind.DICTIONARY)), vm.tab.slots())
@@ -1450,6 +1925,7 @@ class FeatureTest {
         snap("132-top-and-bottom")
         // The Bible panel becomes topics: two study views, the passage kept out of sight.
         compose.onNodeWithContentDescription("Panel view").performClick()
+        compose.onNodeWithTag("folder:Study").performClick()
         compose.onNodeWithText("Topics").performClick()
         waitForLoaded()
         assertEquals(listOf<Slot>(Slot.Study(PaneKind.DICTIONARY, 0), Slot.Study(PaneKind.TOPICS, 1)), vm.tab.slots())
@@ -1519,7 +1995,8 @@ class FeatureTest {
         val id = vm.study.dictionarySearch("Nicodemus").first().id
         compose.runOnUiThread { vm.openDictionary(id) }
         waitForLoaded()
-        compose.onNodeWithTag("inkable").assertExists()
+        // The article loads in the background.
+        waitFor(10_000) { compose.onAllNodesWithTag("inkable").fetchSemanticsNodes().isNotEmpty() }
         val doc = com.biblestudy.app.ui.StudyInk.DICTIONARY
         // Write across the first lines with the pen (a finger here, with Draw with finger on).
         compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
@@ -1597,7 +2074,7 @@ class FeatureTest {
         compose.onNodeWithContentDescription("Choose a commentary").performClick()
         snap("140-commentary-menu")
         compose.onNodeWithText("Jamieson-Fausset-Brown").performClick()
-        runCatching { compose.waitUntil(60_000) { compose.onAllNodesWithText("Verse 3").fetchSemanticsNodes().isNotEmpty() } }
+        runCatching { waitFor(60_000) { compose.onAllNodesWithText("Verse 3").fetchSemanticsNodes().isNotEmpty() } }
             .onFailure { snap("141-jfb-failed"); throw AssertionError("message=${vm.message} commentary=${vm.commentaryAt(0)}", it) }
         assertEquals("jfb", vm.commentaryAt(0))
         assertEquals("jfb", vm.lastCommentary)
@@ -1612,7 +2089,7 @@ class FeatureTest {
         // Linked (STD-18): the Bible at verse 16 brings the commentary to its note on 14-16...
         compose.runOnUiThread { vm.goTo(0, 43, 3, 16, remember = false) }
         waitForLoaded()
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("Verses 14\u201316").fetchSemanticsNodes().any { n ->
+        waitFor(10_000) { compose.onAllNodesWithText("Verses 14\u201316").fetchSemanticsNodes().any { n ->
             n.boundsInRoot.top < 600f } }
         // Following the Bible never moves the Bible itself.
         assertTrue("Bible at ${vm.panels[0].topVerse}", vm.panels[0].topVerse >= 16)
@@ -1624,6 +2101,14 @@ class FeatureTest {
         waitForLoaded()
         assertTrue("Bible at ${vm.panels[0].topVerse}", vm.panels[0].topVerse > 16)
         snap("144-commentary-leads")
+        // A link's New tab opens at its passage, not where the commentary last led the Bible.
+        compose.runOnUiThread { vm.followCommentary(43, 3, 30); vm.newTab(40, 13, 12, "WEB") }
+        waitForLoaded()
+        assertEquals(2, vm.tabs.size)
+        assertEquals(40 to 13, vm.panels[0].book to vm.panels[0].chapter)
+        assertTrue("New tab at ${vm.panels[0].topVerse}", vm.panels[0].topVerse in 11..12)
+        compose.runOnUiThread { vm.closeTab(1) }
+        waitForLoaded()
         // Unlinked, the two scroll on their own.
         compose.onNodeWithContentDescription("Unlink from the Bible").performClick()
         assertFalse(vm.commentaryLinked(0))
@@ -1634,15 +2119,80 @@ class FeatureTest {
 
         // Two commentaries side by side in one tab, each with its own choice.
         compose.onNodeWithContentDescription("Panel view").performClick()
+        compose.onNodeWithTag("folder:Study").performClick()
         compose.onAllNodesWithText("Commentary").onLast().performScrollTo().performClick()
         waitForLoaded()
         assertEquals(listOf(PaneKind.COMMENTARY, PaneKind.COMMENTARY), vm.tab.studies.toList())
         // The left panel (the Bible's) became the first commentary; JFB is now the second.
         assertEquals("jfb", vm.commentaryAt(1))
         compose.runOnUiThread { vm.setCommentary(0, "wesley") }
-        compose.waitUntil(60_000) { compose.onAllNodesWithText("Wesley's Notes").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(60_000) { compose.onAllNodesWithText("Wesley's Notes").fetchSemanticsNodes().isNotEmpty() }
         assertEquals("jfb", vm.commentaryAt(1))
         snap("143-two-commentaries")
+        compose.runOnUiThread { vm.sidePane = null }
+    }
+
+    @Test
+    fun aLinkedCommentaryFollowsThePageAfterAVerseWasTapped() {
+        // Reported: at Matthew 25:1 the AI Commentary stayed on verse 29, tapped earlier (STD-18).
+        compose.runOnUiThread { vm.setCommentary(0, com.biblestudy.app.data.Commentaries.AI); vm.sidePane = PaneKind.COMMENTARY; vm.goTo(0, 40, 25, 29, remember = false) }
+        waitForLoaded()
+        compose.runOnUiThread { vm.openVerse(40, 25, 29) }
+        compose.waitForIdle()
+        compose.runOnUiThread { vm.verseSheet = null }
+        fun headingNearTop(text: String) = compose.onAllNodesWithText(text).fetchSemanticsNodes().any { it.boundsInRoot.top in 0f..700f }
+        compose.waitUntil(60_000) { headingNearTop("Verse 29") }
+        // Back up to verse 1 on the page: the commentary follows the page, not the earlier tap.
+        compose.runOnUiThread { vm.goTo(0, 40, 25, 1, remember = false) }
+        waitForLoaded()
+        runCatching { compose.waitUntil(10_000) { headingNearTop("Verse 1") } }
+            .onFailure { snap("156-commentary-follow-failed"); throw AssertionError("top=${vm.panels[0].topVerse} tapTop=${vm.paneVerseTop}", it) }
+        compose.runOnUiThread { vm.sidePane = null; vm.setCommentary(0, com.biblestudy.app.data.Commentaries.CONCISE) }
+        compose.waitForIdle()
+    }
+
+    @Test
+    fun aiCommentaryHasASourcedNoteOnEachVerse() {
+        // The AI commentary (STD-21) is one of the choices, with a plain-English note on each verse.
+        compose.runOnUiThread { vm.goTo(0, 8, 1, 16, remember = false); vm.setCommentary(0, com.biblestudy.app.data.Commentaries.CONCISE); vm.sidePane = PaneKind.COMMENTARY }
+        waitForLoaded()
+        compose.onNodeWithContentDescription("Choose a commentary").performClick()
+        compose.onNodeWithText("Ink & Word AI Commentary").performClick()
+        runCatching { waitFor(60_000) { compose.onAllNodesWithText("Verse 16").fetchSemanticsNodes().isNotEmpty() } }
+            .onFailure { snap("148-ai-commentary-failed"); throw AssertionError("message=${vm.message} commentary=${vm.commentaryAt(0)}", it) }
+        assertEquals(com.biblestudy.app.data.Commentaries.AI, vm.commentaryAt(0))
+        // Every note names its sources.
+        val notes = com.biblestudy.app.data.Commentaries.chapter(vm.getApplication(), com.biblestudy.app.data.Commentaries.AI, 8, 1)
+        assertTrue(notes.size >= 15)
+        assertTrue(notes.all { "(Sources: " in it.body })
+        assertEquals(22, notes.flatMap { (it.start % 1000)..(it.end % 1000) }.toSet().size)
+        snap("148-ai-commentary")
+        // About says it is written by AI, and how other views are kept apart.
+        compose.onNodeWithContentDescription("About this commentary").performClick()
+        assertTrue(compose.onAllNodesWithText("Written by AI", substring = true).fetchSemanticsNodes().isNotEmpty())
+        assertTrue(compose.onAllNodesWithText("Where Christians differ").fetchSemanticsNodes().isNotEmpty())
+        snap("149-ai-commentary-about")
+        compose.onNodeWithText("Close").performClick()
+        compose.runOnUiThread { vm.sidePane = null }
+    }
+
+    @Test
+    fun reflectionsFollowTheReadingAndNameTheirDevotionals() {
+        // Reflections (REF-1): a Study view of its own, on Psalm 23, each drawn from named devotionals.
+        compose.runOnUiThread { vm.goTo(0, 19, 23, 1, remember = false); vm.sidePane = PaneKind.REFLECTIONS }
+        waitForLoaded()
+        runCatching { waitFor(60_000) { compose.onAllNodesWithText("Ask yourself", substring = true).fetchSemanticsNodes().isNotEmpty() } }
+            .onFailure { snap("150-reflections-failed"); throw AssertionError("message=${vm.message}", it) }
+        val r = com.biblestudy.app.data.Commentaries.chapter(vm.getApplication(), com.biblestudy.app.data.Commentaries.REFLECTIONS, 19, 23)
+        assertTrue(r.isNotEmpty())
+        assertTrue(r.all { "Written by AI from: " in it.body && "\nPray\n" in it.body && "Read: [[" in it.body })
+        // Not in the commentary menu: it has a view of its own.
+        assertTrue(com.biblestudy.app.data.Commentaries.menu.none { it.id == com.biblestudy.app.data.Commentaries.REFLECTIONS })
+        snap("150-reflections")
+        compose.onNodeWithContentDescription("About Reflections").performClick()
+        assertTrue(compose.onAllNodesWithText("Written by AI", substring = true).fetchSemanticsNodes().isNotEmpty())
+        snap("151-reflections-about")
+        compose.onNodeWithText("Close").performClick()
         compose.runOnUiThread { vm.sidePane = null }
     }
 
@@ -1661,16 +2211,17 @@ class FeatureTest {
         // Greek word by word, and a word study in the panel beside it.
         compose.runOnUiThread { vm.sidePane = PaneKind.ORIGINAL }
         compose.onNodeWithContentDescription("Panel view").performClick()
+        compose.onNodeWithTag("folder:This verse").performClick()
         compose.onNodeWithText("Word study").performScrollTo().performClick()
         waitForLoaded()
         assertEquals(listOf(PaneKind.WORDSTUDY, PaneKind.ORIGINAL), vm.tab.studies.toList())
         compose.onNodeWithText("Tap a word in the Bible", substring = true).assertExists()
-        compose.waitUntil(10_000) { compose.onAllNodesWithTag("originalVerse").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithTag("originalVerse").fetchSemanticsNodes().isNotEmpty() }
         val firstWord = compose.onAllNodesWithTag("originalVerse").onFirst()
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("Greek. Tap a word", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithText("Greek. Tap a word", substring = true).fetchSemanticsNodes().isNotEmpty() }
         compose.onAllNodes(androidx.compose.ui.test.hasClickAction() and androidx.compose.ui.test.hasAnyAncestor(androidx.compose.ui.test.hasTestTag("originalVerse")))[1].performClick()
         compose.onNodeWithText("Word study").let { compose.onAllNodesWithText("Word study").onLast().performClick() }
-        compose.waitUntil(10_000) { compose.onAllNodesWithTag("lemma").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithTag("lemma").fetchSemanticsNodes().isNotEmpty() }
         assertTrue(vm.studyWord != null)
         assertTrue(vm.wordStudy == null) // in the panel, not a window
         snap("146-greek-and-word-study")
@@ -1689,7 +2240,7 @@ class FeatureTest {
 
         // A cross-reference's pop-over opens its passage in a new tab.
         compose.runOnUiThread { vm.paneVerse = VerseTarget(43, 3, 16); vm.sidePane = PaneKind.CROSSREFS }
-        compose.waitUntil(15_000) { compose.onAllNodesWithText("Romans 5:8").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(15_000) { compose.onAllNodesWithText("Romans 5:8").fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("Romans 5:8").performClick()
         compose.onNodeWithText("New tab").performClick()
         waitForLoaded()
@@ -1701,7 +2252,7 @@ class FeatureTest {
         compose.onNodeWithContentDescription("Search").performClick()
         compose.onNodeWithText("Words", substring = true).performTextInput("\"charity suffereth long\"")
         compose.onNodeWithText("Words", substring = true).performImeAction()
-        compose.waitUntil(15_000) { compose.onAllNodesWithText("1 Corinthians 13:4", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        waitFor(15_000) { compose.onAllNodesWithText("1 Corinthians 13:4", substring = true).fetchSemanticsNodes().isNotEmpty() }
         compose.onAllNodesWithText("1 Corinthians 13:4", substring = true).onFirst().performTouchInput { longClick() }
         waitForLoaded()
         assertEquals(3, vm.tabs.size)
@@ -1773,7 +2324,7 @@ class FeatureTest {
         for (pdf in listOf(false, true)) {
             val out = File(dir, if (pdf) "john3.pdf" else "john3.png").apply { delete() }
             compose.runOnUiThread { vm.exportRequest = com.biblestudy.app.ui.ExportRequest(android.net.Uri.fromFile(out), pdf) }
-            compose.waitUntil(10_000) { vm.exportRequest == null }
+            waitFor(10_000) { vm.exportRequest == null }
             compose.waitForIdle()
             // Robolectric's PdfDocument writes nothing, so only the picture's bytes can be checked here.
             if (!pdf) {
@@ -1791,10 +2342,10 @@ class FeatureTest {
         waitForLoaded()
         // As if "loved" in John 3:16 was tapped ("For God so loved"): word 3.
         compose.runOnUiThread { vm.openVerse(43, 3, 16, word = 3) }
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("Word study: \u201cloved\u201d").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithText("Word study: \u201cloved\u201d").fetchSemanticsNodes().isNotEmpty() }
         snap("84-verse-word")
         compose.onNodeWithText("Word study: \u201cloved\u201d").performClick()
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("Used in", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithText("Used in", substring = true).fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("\u1f00\u03b3\u03b1\u03c0\u03ac\u03c9").assertExists() // agapaō
         compose.onNodeWithText("Greek \u00b7 Strong's G25", substring = true).assertExists()
         val count = compose.onNodeWithTag("useCount").fetchSemanticsNode().config[androidx.compose.ui.semantics.SemanticsProperties.Text].first().text
@@ -1816,13 +2367,57 @@ class FeatureTest {
     }
 
     @Test
+    fun anImportedBibleHasWordStudiesWordsOfJesusAndParagraphs() {
+        // The ESV test passages (src/test/resources/import/esv), imported as the user would.
+        val files = File(javaClass.classLoader!!.getResource("import/esv")!!.toURI()).listFiles()!!.sorted()
+        compose.runOnUiThread {
+            vm.importBible(files.map { it.name }, { i -> files[i].inputStream() }, "ESV", "English Standard Version", "ESV test passages")
+        }
+        waitFor(180_000) { !vm.importing }
+        assertEquals("ESV added, with word studies. Pick it from the version menu.", vm.message)
+        try {
+            compose.runOnUiThread {
+                vm.setVersion(0, "ESV")
+                vm.goTo(0, 43, 3, remember = false)
+                vm.redLetters = true
+                vm.changeParagraphs(true)
+            }
+            waitForLoaded()
+            snap("87-imported-esv")
+            val john3 = vm.text("ESV").chapter(43, 3).associate { it.verse to it.text }
+            assertTrue(vm.study.redLetters("ESV", 43, 3, john3)[16]!!.isNotEmpty())
+            assertTrue(16 in vm.study.paragraphStarts("ESV", 43, 3))
+            // "For God so loved": word 3 opens the word study for agapaō, with its uses in the ESV.
+            compose.runOnUiThread { vm.openVerse(43, 3, 16, word = 3) }
+            waitFor(10_000) { compose.onAllNodesWithText("Word study: \u201cloved\u201d").fetchSemanticsNodes().isNotEmpty() }
+            compose.onNodeWithText("Word study: \u201cloved\u201d").performClick()
+            waitFor(10_000) { compose.onAllNodesWithText("Used in 2 verses of the ESV", substring = true).fetchSemanticsNodes().isNotEmpty() }
+            compose.onNodeWithText("Greek \u00b7 Strong's G25", substring = true).assertExists()
+            assertTrue(vm.study.occurrences("ESV", "G25", { vm.text("ESV").verseText(it) }).any { it.id == 43003016 })
+            snap("88-imported-word-study")
+        } finally {
+            // Back to the KJV and settled before the ESV goes, so nothing is still loading from it.
+            compose.runOnUiThread {
+                vm.wordStudy = null
+                vm.verseSheet = null
+                vm.redLetters = false
+                vm.changeParagraphs(false)
+                vm.setVersion(0, "KJV")
+            }
+            waitForLoaded(30_000)
+            compose.runOnUiThread { vm.removeBible("ESV") }
+            waitForLoaded(30_000)
+        }
+    }
+
+    @Test
     fun searchingAStrongsNumberFindsEveryUseOfTheWord() {
         compose.onNodeWithContentDescription("Search").performScrollTo().performClick()
         compose.onNodeWithText("Words, \"exact phrase\", or a reference like John 3:16").performTextInput("G26")
         compose.onAllNodesWithContentDescription("Search").onLast().performClick()
-        compose.waitUntil(15_000) { compose.onAllNodesWithText("verses in", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        waitFor(15_000) { compose.onAllNodesWithText("verses in", substring = true).fetchSemanticsNodes().isNotEmpty() }
         // The header with the Greek word loads just after the results.
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("\u1f00\u03b3\u03ac\u03c0\u03b7", substring = true).fetchSemanticsNodes().isNotEmpty() } // agapē
+        waitFor(10_000) { compose.onAllNodesWithText("\u1f00\u03b3\u03ac\u03c0\u03b7", substring = true).fetchSemanticsNodes().isNotEmpty() } // agapē
         val inJohn = vm.study.occurrences("KJV", "G26", { vm.text("KJV").verseText(it) }).count { it.id / 1_000_000 == 43 }
         compose.onNodeWithText("John $inJohn").performScrollTo().performClick()
         compose.onNodeWithText("John 13:35").assertExists()
@@ -1839,34 +2434,35 @@ class FeatureTest {
         // The pane's one menu picks what it shows.
         compose.onNodeWithContentDescription("Choose what the pane shows").performClick()
         snap("86b-pane-menu")
+        compose.onNodeWithTag("folder:Study").performClick()
         compose.onNodeWithText("Dictionary").performClick()
         assertEquals(PaneKind.DICTIONARY, vm.sidePane)
         // Easton's: names in the chapter are suggested.
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("Nicodemus").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithText("Nicodemus").fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("Nicodemus").performClick()
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("Pharisee", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithText("Pharisee", substring = true).fetchSemanticsNodes().isNotEmpty() }
         snap("87-dictionary")
         compose.onNodeWithContentDescription("Back to the list").performClick()
 
         // Nave's: search for a topic and open it.
         compose.runOnUiThread { vm.sidePane = PaneKind.TOPICS; vm.topicOpen = null }
         compose.onNodeWithText("Find a topic, e.g. Prayer or Faith").performTextInput("Prayer")
-        compose.waitUntil(10_000) { compose.onAllNodesWithTag("entry").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithTag("entry").fetchSemanticsNodes().isNotEmpty() }
         compose.onAllNodesWithTag("entry").onFirst().performClick()
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("Daily, in the morning", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithText("Daily, in the morning", substring = true).fetchSemanticsNodes().isNotEmpty() }
         snap("88-topic")
         compose.runOnUiThread { vm.topicOpen = null }
 
         // Matthew Henry on the chapter.
         compose.runOnUiThread { vm.setCommentary(0, com.biblestudy.app.data.Commentaries.CONCISE); vm.sidePane = PaneKind.COMMENTARY }
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("Nicodemus was afraid", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithText("Nicodemus was afraid", substring = true).fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("Matthew Henry (Concise)").assertExists()
         snap("89-commentary")
 
         // Cross-references end with topics, parallel accounts and related passages.
         compose.runOnUiThread { vm.goTo(0, 40, 3, remember = false); vm.paneVerse = VerseTarget(40, 3, 13); vm.sidePane = PaneKind.CROSSREFS }
         waitForLoaded()
-        compose.waitUntil(15_000) { compose.onAllNodesWithText("Parallel accounts").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(15_000) { compose.onAllNodesWithText("Parallel accounts").fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("Parallel accounts").performScrollTo()
         assertTrue(compose.onAllNodesWithText("Mark 1:9", substring = true).fetchSemanticsNodes().isNotEmpty())
         snap("90-related")
@@ -1882,7 +2478,8 @@ class FeatureTest {
         compose.onNodeWithText("50%").performClick()
         compose.waitForIdle()
         assertEquals(0.5f, vm.layers.first().opacity, 0.001f)
-        assertEquals(0.5f, vm.user.layers().first().opacity, 0.001f) // saved
+        // Saved on the database thread.
+        waitFor(5_000) { kotlin.math.abs(vm.user.layers().first().opacity - 0.5f) < 0.001f }
         compose.runOnUiThread { vm.setLayerColor(vm.layers.first().id, com.biblestudy.app.ui.LAYER_COLORS[2]) }
         vm.awaitSaves()
         assertEquals(com.biblestudy.app.ui.LAYER_COLORS[2], vm.user.layers().first().color)
@@ -1891,7 +2488,9 @@ class FeatureTest {
 
     @Test
     fun readingIsCountedAndShownInReadingStats() {
-        compose.runOnUiThread { vm.clearReadingStats(); vm.trackReading = true; vm.foreground = true }
+        // The activity's own 15-second reading clock keeps running; only the ticks below should count,
+        // so the app counts as in the background except while they're given.
+        compose.runOnUiThread { vm.clearReadingStats(); vm.trackReading = true; vm.foreground = false }
         waitForLoaded()
         // Scroll through John 3.
         // Down to the end of John 3.
@@ -1903,12 +2502,15 @@ class FeatureTest {
         // Five quarter-minutes of reading, touching now and then: the chapter counts as read.
         var t = 10_000_000L
         compose.runOnUiThread {
+            vm.foreground = true
             vm.startReadingClock(t); vm.userActive(t)
             repeat(5) { t += 15_000; vm.userActive(t - 5_000); vm.readingTick(t) }
+            // Three idle minutes later nothing more is counted.
+            vm.readingTick(t + 180_000)
+            vm.foreground = false
         }
-        // Three idle minutes later nothing more is counted.
-        compose.runOnUiThread { vm.readingTick(t + 180_000) }
-        runCatching { compose.waitUntil(10_000) { vm.user.readingChapters().any { it.book == 43 && it.chapter == ch && it.timesRead == 1 } } }
+        // "Read" is saved after the fourth tick, before the fifth tick's seconds: wait for both.
+        runCatching { waitFor(10_000) { vm.user.readingChapters().any { it.book == 43 && it.chapter == ch && it.timesRead == 1 && it.seconds >= 75 } } }
             .onFailure { throw AssertionError("${vm.user.readingChapters()} at ${vm.panels[0].chapter} seen ${vm.panels[0].seenTo}", it) }
         val john3 = vm.user.readingChapters().single { it.book == 43 && it.chapter == ch }
         assertEquals(75, john3.seconds)
@@ -1916,7 +2518,7 @@ class FeatureTest {
 
         compose.onNodeWithContentDescription("More").performClick()
         compose.onNodeWithText("Reading stats").performClick()
-        compose.waitUntil(30_000) { compose.onAllNodesWithText("1 of 1189 chapters").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(30_000) { compose.onAllNodesWithText("1 of 1189 chapters").fetchSemanticsNodes().isNotEmpty() }
         assertTrue(compose.onAllNodesWithText("1 min", substring = true).fetchSemanticsNodes().isNotEmpty())
         snap("92-reading-stats")
         compose.onNodeWithContentDescription("Close").performClick()
@@ -1930,7 +2532,7 @@ class FeatureTest {
                 .config[androidx.compose.ui.semantics.SemanticsProperties.StateDescription],
         )
         snap("93-picker-read")
-        compose.runOnUiThread { vm.clearReadingStats() }
+        compose.runOnUiThread { vm.clearReadingStats(); vm.foreground = true }
     }
 
     @Test
@@ -1939,9 +2541,9 @@ class FeatureTest {
         waitForLoaded()
         // The verse window lists the people in the verse; one opens in the study pane.
         compose.runOnUiThread { vm.openVerse(43, 3, 1) }
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("Nicodemus").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithText("Nicodemus").fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("Nicodemus").performClick()
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("Pharisee who visited Jesus").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithText("Pharisee who visited Jesus").fetchSemanticsNodes().isNotEmpty() }
         assertEquals(PaneKind.NAMES, vm.sidePane)
         assertNull(vm.verseSheet)
         compose.onNodeWithText("Mentioned in 5 verses").performScrollTo().assertExists()
@@ -1950,16 +2552,16 @@ class FeatureTest {
         // A family: Aaron's brother opens from his entry.
         compose.onNodeWithContentDescription("Back to the list").performClick()
         compose.onNodeWithText("Find a person or place").performTextInput("Aaron")
-        compose.waitUntil(10_000) { compose.onAllNodesWithTag("nameRow").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithTag("nameRow").fetchSemanticsNodes().isNotEmpty() }
         compose.onAllNodesWithTag("nameRow").onFirst().performClick()
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("Brothers and sisters").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithText("Brothers and sisters").fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("Moses").performScrollTo().performClick()
         // The family member is looked up in the background, then opens.
-        compose.waitUntil(10_000) { vm.nameOpen?.let { vm.study.nameById(it)?.name } == "Moses" }
+        waitFor(10_000) { vm.nameOpen?.let { vm.study.nameById(it)?.name } == "Moses" }
 
         // A place on the offline map.
         compose.runOnUiThread { vm.nameOpen = vm.study.nameSearch("Bethlehem").first().id }
-        compose.waitUntil(10_000) { compose.onAllNodesWithTag("placeMap").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithTag("placeMap").fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("Place \u00b7 Tribe of Judah").assertExists()
         snap("95-place-map")
         compose.runOnUiThread { vm.nameOpen = null; vm.sidePane = null }
@@ -1992,7 +2594,7 @@ class FeatureTest {
         compose.onNodeWithContentDescription("Insert").performScrollTo().performClick()
         compose.onNodeWithText("Verse card\u2026").performClick()
         compose.onNodeWithText("Reference, e.g. John 3:16-18").performTextInput("John 3:16")
-        compose.waitUntil(10_000) { compose.onAllNodesWithTag("cardPreview").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithTag("cardPreview").fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("Add card").performClick()
         compose.waitForIdle()
         assertTrue(vm.textsFor(sk.book, 1).any { it.text.startsWith("John 3:16 (KJV)\nFor God so loved") })
@@ -2001,7 +2603,7 @@ class FeatureTest {
         compose.onNodeWithContentDescription("Insert").performScrollTo().performClick()
         compose.onNodeWithText("Person or place card\u2026").performClick()
         compose.onNodeWithText("Find a person or place").performTextInput("Nicodemus")
-        compose.waitUntil(10_000) { compose.onAllNodesWithTag("nameRow").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithTag("nameRow").fetchSemanticsNodes().isNotEmpty() }
         compose.onAllNodesWithTag("nameRow").onFirst().performClick()
         compose.waitForIdle()
         assertTrue(vm.textsFor(sk.book, 1).any { it.text.startsWith("Nicodemus\nPharisee") })
@@ -2051,7 +2653,7 @@ class FeatureTest {
         assertTrue(vm.paragraphMode)
         assertTrue(!vm.verseNumbers)
         waitForLoaded()
-        compose.waitUntil(5_000) { vm.textStrokesFor("BSB", 43, 3).isNotEmpty() }
+        waitFor(5_000) { vm.textStrokesFor("BSB", 43, 3).isNotEmpty() }
         val after = vm.textStrokesFor("BSB", 43, 3).single()
         assertEquals(before.id, after.id)
         assertEquals("BOOK|p|n", after.font) // moved onto the paragraph layout
@@ -2070,11 +2672,11 @@ class FeatureTest {
         waitForLoaded()
         assertTrue(vm.fitGaps["KJV|43|3"].isNullOrEmpty()) // off by default
         compose.runOnUiThread { vm.expandToFit = true }
-        compose.waitUntil(10_000) { (vm.fitGaps["KJV|43|3"]?.get(2) ?: 0f) > 400f }
+        waitFor(10_000) { (vm.fitGaps["KJV|43|3"]?.get(2) ?: 0f) > 400f }
         snap("99-expand-to-fit")
         // Turned off: the text closes up again.
         compose.runOnUiThread { vm.expandToFit = false }
-        compose.waitUntil(10_000) { vm.fitGaps["KJV|43|3"]?.isEmpty() == true }
+        waitFor(10_000) { vm.fitGaps["KJV|43|3"]?.isEmpty() == true }
         compose.runOnUiThread { vm.undo() }
 
         // Margins only in the first panel.
@@ -2093,7 +2695,7 @@ class FeatureTest {
         compose.runOnUiThread {
             vm.importBible(listOf("tst.usfm"), { file.inputStream() }, "tst", "Test Version", "Test copyright.")
         }
-        compose.waitUntil(15_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "TST" } && !vm.importing }
+        waitFor(15_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "TST" } && !vm.importing }
         assertEquals("Imported words about lovingkindness.", vm.text("TST").verseText(43003016))
         assertEquals(1, vm.text("TST").search("lovingkindness", com.biblestudy.app.model.SearchScope.ALL, 43).size)
         // Read it like any version, and it's listed in Settings with its copyright.
@@ -2132,7 +2734,7 @@ class FeatureTest {
         // The verse window shows the Greek word by word; a word gives its grammar and a word study.
         compose.runOnUiThread { vm.openVerse(43, 3, 16) }
         compose.onNodeWithTag("originalChip").performClick()
-        compose.waitUntil(10_000) { compose.onAllNodesWithTag("originalWord").fetchSemanticsNodes().size > 10 }
+        waitFor(10_000) { compose.onAllNodesWithTag("originalWord").fetchSemanticsNodes().size > 10 }
         compose.onNodeWithText("\u0113gap\u0113sen").performClick()
         compose.onNodeWithTag("grammar").assertTextEquals("verb, aorist active indicative, 3rd person singular")
         snap("102-greek")
@@ -2143,7 +2745,7 @@ class FeatureTest {
 
         // Hebrew reads right to left, with its grammar in plain words.
         compose.runOnUiThread { vm.openVerse(1, 1, 1) }
-        compose.waitUntil(10_000) { compose.onAllNodesWithTag("originalWord").fetchSemanticsNodes().size == 7 }
+        waitFor(10_000) { compose.onAllNodesWithTag("originalWord").fetchSemanticsNodes().size == 7 }
         compose.onNodeWithText("ba.Ra'").performClick()
         compose.onNodeWithTag("grammar").assertTextEquals("verb, Qal perfect, 3rd person masculine singular")
         snap("103-hebrew")
@@ -2160,10 +2762,10 @@ class FeatureTest {
         waitForLoaded()
         // From Moses's entry in Names & places.
         compose.runOnUiThread { vm.openName(vm.study.nameSearch("Moses").first().id) }
-        compose.waitUntil(10_000) { compose.onAllNodesWithTag("nameView").fetchSemanticsNodes().isNotEmpty() }
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("Family tree").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithTag("nameView").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithText("Family tree").fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("Family tree").performScrollTo().performClick()
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("Family of Moses").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithText("Family of Moses").fetchSemanticsNodes().isNotEmpty() }
         // Parents, grandparents, brother and sister, wife and sons.
         for (n in listOf("Amram", "Jochebed", "Kohath", "Aaron", "Miriam", "Zipporah", "Gershom", "Eliezer")) {
             assertTreeNode(n)
@@ -2171,7 +2773,7 @@ class FeatureTest {
         snap("104-family-tree")
         // Tap Aaron to see his family.
         compose.onAllNodesWithTag("treeNode").filter(hasText("Aaron")).onFirst().performClick()
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("Family of Aaron").fetchSemanticsNodes().isNotEmpty() }
+        waitFor(10_000) { compose.onAllNodesWithText("Family of Aaron").fetchSemanticsNodes().isNotEmpty() }
         assertTreeNode("Elisheba")
         assertTreeNode("Nadab")
         // Copied onto a new sketch page as text boxes and lines.
@@ -2256,7 +2858,7 @@ class FeatureTest {
     fun wordDifferencesViewsAndOneLayerExport() {
         // Compare versions marks words that differ from the version being read.
         compose.runOnUiThread { vm.compareVersions = true; vm.openVerse(43, 3, 16) }
-        compose.waitUntil(5_000) { compose.onAllNodesWithTag("compare_WEB", useUnmergedTree = true).fetchSemanticsNodes().isNotEmpty() }
+        waitFor(5_000) { compose.onAllNodesWithTag("compare_WEB", useUnmergedTree = true).fetchSemanticsNodes().isNotEmpty() }
         val web = compose.onNodeWithTag("compare_WEB", useUnmergedTree = true).fetchSemanticsNode()
             .config[androidx.compose.ui.semantics.SemanticsProperties.Text].first()
         assertTrue(web.spanStyles.map { web.text.substring(it.start, it.end) }.toString(), web.spanStyles.any { web.text.substring(it.start, it.end) == "born" })
@@ -2291,7 +2893,7 @@ class FeatureTest {
         val sizes = vm.layers.map { l ->
             val out = File(dir, "layer${l.id}.png").apply { delete() }
             compose.runOnUiThread { vm.exportRequest = com.biblestudy.app.ui.ExportRequest(android.net.Uri.fromFile(out), false, l.id) }
-            compose.waitUntil(10_000) { vm.exportRequest == null }
+            waitFor(10_000) { vm.exportRequest == null }
             compose.waitForIdle()
             out.readBytes().contentHashCode()
         }
@@ -2339,27 +2941,93 @@ class FeatureTest {
         val file = File(dir, "bak.usfm")
         file.writeText("\\id JHN\n\\c 3\n\\p\n\\v 16 Backed up words.\n")
         compose.runOnUiThread { vm.importBible(listOf("bak.usfm"), { file.inputStream() }, "BAK", "Backup Test", "Test.") }
-        compose.waitUntil(15_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "BAK" } && !vm.importing }
+        waitFor(15_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "BAK" } && !vm.importing }
         val zip = File(dir, "backup.zip").apply { delete() }
         compose.runOnUiThread { vm.backup(android.net.Uri.fromFile(zip)) }
-        compose.waitUntil(15_000) { zip.length() > 0 && vm.message?.contains("ack") == true }
+        waitFor(15_000) { zip.length() > 0 && vm.message?.contains("ack") == true }
         val names = java.util.zip.ZipFile(zip).use { z -> z.entries().toList().map { it.name } }
         assertTrue(names.toString(), "bibles/imported.json" in names && names.any { it.startsWith("bibles/") && it.endsWith(".db") })
         compose.runOnUiThread { vm.removeBible("BAK") }
         assertTrue(com.biblestudy.app.data.BibleRepository.ALL.none { it.code == "BAK" })
         compose.runOnUiThread { vm.restore(android.net.Uri.fromFile(zip)) }
-        compose.waitUntil(15_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "BAK" } }
+        waitFor(15_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "BAK" } }
         assertEquals("Backed up words.", vm.text("BAK").verseText(43003016))
         compose.runOnUiThread { vm.removeBible("BAK") }
+    }
+
+    @Test
+    fun syncBringsTheOtherDevicesNotesHereAndSendsThisOnes() {
+        val store = MemoryStore()
+        compose.runOnUiThread { vm.testSyncStore = store }
+        // The phone has notes, ink, a bookmark and a sketch page, and has synced already.
+        val phone = com.biblestudy.app.data.UserDb(compose.activity, "phone-device.db")
+        val phoneImages = File(compose.activity.cacheDir, "phone-images").apply { mkdirs() }
+        val engine = com.biblestudy.app.data.SyncEngine(phone, store, "phonedevice", phoneImages)
+        try {
+            val now = System.currentTimeMillis()
+            phone.setNote(43, 3, 16, "Written on the phone")
+            phone.insert(
+                com.biblestudy.app.model.InkStroke(
+                    now * 1000, 1L, "KJV", 43, 3, com.biblestudy.app.model.Region.TEXT, 16, false, 0xFFB71C1C.toInt(), 3f,
+                    floatArrayOf(0f, 0f, 0.5f, 40f, 0f, 0.5f),
+                )
+            )
+            phone.addBookmark(com.biblestudy.app.model.Bookmark(now * 1000 + 1, 19, 23, 1, now, ""))
+            phone.saveSketch(com.biblestudy.app.model.Sketch(1, "From the phone", com.biblestudy.app.model.Paper.LINED, 0, 0, 0, 1840f, now, uid = "phonepage"))
+            engine.sync()
+
+            // This tablet bookmarks a verse, then turns sync on in Settings.
+            compose.runOnUiThread { vm.toggleBookmark(1, 1, 1) }
+            compose.onNodeWithContentDescription("More").performClick()
+            compose.onNodeWithText("Settings").performClick()
+            compose.onNodeWithText("Sync with Google Drive").performScrollTo()
+            snap("188-settings-sync-off")
+            compose.onNodeWithText("Sync with Google Drive").performClick()
+            waitFor(15_000) { vm.syncOn && !vm.syncing && vm.lastSync > 0 }
+            assertEquals(null, vm.syncError)
+            compose.onNodeWithTag("syncNow").performScrollTo()
+            snap("189-settings-sync-on")
+            compose.onNodeWithContentDescription("Close").performClick()
+            waitForLoaded()
+
+            // The phone's notes are here, on screen.
+            assertTrue(vm.bookmarks.any { it.book == 19 && it.chapter == 23 })
+            assertTrue(vm.sketches.any { it.name == "From the phone" })
+            waitFor(10_000) { compose.runOnIdle { vm.notesFor(43, 3)[16]?.text } == "Written on the phone" }
+            waitFor(10_000) { vm.textStrokesFor("KJV", 43, 3).any { it.id == now * 1000 } }
+            snap("190-synced-from-phone")
+
+            // And the phone gets the tablet's, with the ready-made pages once each.
+            engine.sync()
+            assertTrue(phone.bookmarks().any { it.book == 1 && it.chapter == 1 && it.verse == 1 })
+            val ready = phone.sketches().filter { it.uid.startsWith("ready-") }
+            assertEquals(vm.sketches.count { it.readyMade }, ready.size)
+            assertEquals(ready.size, ready.map { it.uid }.toSet().size)
+            val tab = ready.first { it.name == "The tabernacle" }
+            assertTrue(phone.loadTexts(tab.book, 1).all { it.id >= 8_000_000_000_000_000_000L })
+
+            // A change on the phone arrives with the next sync.
+            phone.setNote(43, 3, 16, "Changed on the phone")
+            engine.sync()
+            compose.runOnUiThread { vm.syncNow() }
+            waitFor(15_000) { compose.runOnIdle { vm.notesFor(43, 3)[16]?.text } == "Changed on the phone" }
+
+            // Turning sync off leaves the notes here.
+            compose.runOnUiThread { vm.turnOffSync() }
+            assertTrue(!vm.syncOn && vm.sketches.any { it.name == "From the phone" })
+        } finally {
+            compose.runOnUiThread { vm.turnOffSync(); vm.testSyncStore = null; vm.toggleBookmark(1, 1, 1) }
+            phone.close()
+        }
     }
 
     @Test
     fun anySketchPageOpensBesideTheText() {
         compose.runOnUiThread { vm.addReadyMadePages() }
         waitForLoaded()
-        // Panels \u2192 Beside the text: Sketch pages lists every page.
+        // Panels \u2192 Beside the text \u2192 Sketch pages lists every page.
         compose.onNodeWithContentDescription("Panels").performClick()
-        compose.onNodeWithText("Beside the text: Sketch pages").performClick()
+        compose.onNodeWithText("Sketch pages").performClick()
         compose.onNodeWithTag("sketchesPane").assertExists()
         snap("121-sketches-pane")
         compose.onNodeWithText("The tabernacle").performClick()
@@ -2377,6 +3045,68 @@ class FeatureTest {
         assertEquals(43, vm.panels[0].book)
         assertEquals(vm.sketches.first { it.name == "The feasts of Israel" }.book, vm.panels[1].book)
         compose.runOnUiThread { vm.closePanel(1) }
+    }
+
+    @Test
+    fun bothListsOfSketchPagesMakeANewPage() {
+        compose.runOnUiThread { vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        // My notes \u2192 Sketch pages: the new page opens in the panel and My notes closes.
+        compose.onNodeWithContentDescription("My notes").performClick()
+        compose.onNodeWithText("Sketch pages").performClick()
+        compose.onNodeWithTag("newSketchPage").assertIsDisplayed()
+        snap("198-sketch-list-new-button")
+        compose.onNodeWithTag("newSketchPage").performClick()
+        assertEquals(2, compose.onAllNodesWithText("New sketch page").fetchSemanticsNodes().size) // the button and the window
+        compose.onNode(androidx.compose.ui.test.hasSetTextAction()).performTextInput("Timeline of Acts")
+        compose.onNodeWithText("Create").performClick()
+        waitForLoaded()
+        val first = vm.sketches.single { it.name == "Timeline of Acts" }
+        assertEquals(first.book, vm.panels[0].book)
+        assertTrue(compose.onAllNodesWithText("Ready-made pages").fetchSemanticsNodes().isEmpty())
+
+        // The Sketch pages panel: the new page opens beside the Bible.
+        compose.runOnUiThread { vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        compose.onNodeWithContentDescription("Panels").performClick()
+        compose.onNodeWithText("Sketch pages").performClick()
+        compose.onNodeWithTag("sketchesPane").assertExists()
+        compose.onNodeWithTag("newSketchPage").performClick()
+        compose.onNode(androidx.compose.ui.test.hasSetTextAction()).performTextInput("Map of Paul's journeys")
+        compose.onNodeWithText("Create").performClick()
+        waitForLoaded()
+        val second = vm.sketches.single { it.name == "Map of Paul's journeys" }
+        assertEquals(2, vm.panels.size)
+        assertEquals(43, vm.panels[0].book) // the Bible stays where it was
+        assertEquals(second.book, vm.panels[1].book)
+        snap("199-new-sketch-beside")
+        compose.runOnUiThread { vm.closePanel(1); vm.deleteSketch(first); vm.deleteSketch(second) }
+        waitForLoaded()
+    }
+
+    @Test
+    fun theVerseWindowCopiesTheReferenceOrTheVerse() {
+        compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        compose.runOnUiThread { vm.verseSheet = com.biblestudy.app.model.VerseTarget(43, 3, 16) }
+        compose.waitForIdle()
+        val clip = compose.activity.getSystemService(android.content.ClipboardManager::class.java)
+        fun copied() = clip.primaryClip?.getItemAt(0)?.text?.toString()
+        compose.onNodeWithContentDescription("Copy verse").performClick()
+        snap("200-copy-verse-menu")
+        compose.onNodeWithText("Copy reference").performClick()
+        compose.waitForIdle()
+        assertEquals("John 3:16", copied())
+        compose.onNodeWithContentDescription("Copy verse").performClick()
+        compose.onNodeWithText("Copy verse").performClick()
+        compose.waitForIdle()
+        assertEquals(
+            "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, " +
+                "but have everlasting life. \u2014 John 3:16 (KJV)",
+            copied(),
+        )
+        compose.onNodeWithContentDescription("Close").performClick()
+        compose.runOnUiThread { vm.verseSheet = null }
     }
 
     @Test
@@ -2424,7 +3154,7 @@ class FeatureTest {
 
         // A tap on the verse opens the verse window, as on the page.
         compose.onNodeWithTag("reader0").performTouchInput { click(sketchPoint(card.x + 120f, card.y + 50f)) }
-        compose.waitUntil(5_000) { vm.verseSheet != null }
+        waitFor(5_000) { vm.verseSheet != null }
         assertEquals(VerseTarget(43, 3, 16, vm.verseSheet!!.word), vm.verseSheet)
         compose.runOnUiThread { vm.verseSheet = null }
         compose.mainClock.advanceTimeBy(600)
@@ -2492,7 +3222,7 @@ class FeatureTest {
         assertEquals(1, vm.marginStrokesFor(note.book, 1).size)
         snap("128-note-full-screen")
         // Back on John 3 it shows shrunk beside verse 2; tapping it opens it again.
-        compose.runOnUiThread { vm.goBack(0) }
+        compose.runOnUiThread { vm.back() }
         waitForLoaded()
         assertEquals(43, vm.panels[0].book)
         snap("129-note-in-margin")
@@ -2528,5 +3258,936 @@ class FeatureTest {
         assertTrue("x ${far.points[0]}", far.points[0] > 2500f)
         snap("135-sketch-far-side")
         compose.runOnUiThread { vm.deleteSketch(vm.sketches.first { it.id == sk.id }) }
+    }
+
+    @Test
+    fun chapterAtAGlanceOpensToWhoWhereAndTheKeyVerse() {
+        // STD-22: a slim bar under the header says what the chapter is about; tapping opens the card.
+        compose.runOnUiThread { vm.showGlance = true; vm.glanceOpen = false; vm.goTo(0, 43, 3, 1, remember = false) }
+        waitForLoaded()
+        waitFor(10_000) { compose.onAllNodesWithTag("glance0").fetchSemanticsNodes().isNotEmpty() }
+        assertTrue(compose.onAllNodesWithText("Nicodemus", substring = true).fetchSemanticsNodes().isNotEmpty())
+        compose.onNodeWithTag("glance0").performClick()
+        waitFor(10_000) { compose.onAllNodesWithText("Key verse").fetchSemanticsNodes().isNotEmpty() }
+        assertTrue(compose.onAllNodesWithText("John 3:16").fetchSemanticsNodes().isNotEmpty())
+        assertTrue(compose.onAllNodesWithText("Where it fits").fetchSemanticsNodes().isNotEmpty())
+        runCatching { waitFor(10_000) { compose.onAllNodesWithText("Who").fetchSemanticsNodes().isNotEmpty() } }
+            .onFailure { throw AssertionError("names=${vm.study.namesInChapter(43, 3, 12).map { it.name }}", it) }
+        snap("157-chapter-at-a-glance")
+        // The key verse opens the verse pop-up.
+        compose.onNodeWithTag("glanceKey").performClick()
+        compose.waitForIdle()
+        assertEquals(Triple(43, 3, 16), vm.verseSheet?.let { Triple(it.book, it.chapter, it.verse) })
+        compose.runOnUiThread { vm.verseSheet = null; vm.glanceOpen = false; vm.showGlance = false }
+        compose.waitForIdle()
+        assertTrue(compose.onAllNodesWithTag("glance0").fetchSemanticsNodes().isEmpty())
+        compose.runOnUiThread { vm.showGlance = true }
+    }
+
+    @Test
+    fun oldTestamentVersesPointToChrist() {
+        // AID-13: a gold line under Old Testament verses that point to Christ; tap one for how.
+        val app: android.content.Context = vm.getApplication()
+        assertEquals((1..12).toSet(), com.biblestudy.app.data.Christ.verses(app, 23, 53))
+        assertEquals(setOf(14), com.biblestudy.app.data.Christ.verses(app, 23, 7))
+        assertTrue(com.biblestudy.app.data.Christ.verses(app, 43, 3).isEmpty()) // never in the New Testament
+        compose.runOnUiThread { vm.aidChrist = true; vm.setVersion(0, "KJV"); vm.goTo(0, 23, 53, 1, remember = false) }
+        waitForLoaded()
+        compose.waitForIdle()
+        snap("201-points-to-christ-isaiah-53")
+        // Tapping verse 5: the card says how it points to Christ, with the New Testament as links.
+        compose.runOnUiThread { vm.openVerse(23, 53, 5, -1) }
+        waitFor(10_000) { compose.onAllNodesWithTag("christCard").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Wounded for our transgressions").assertExists()
+        compose.onNodeWithText("Points to Christ \u00b7 Prophecy \u00b7 Isaiah 53:4-6").assertExists()
+        snap("202-points-to-christ-card")
+        compose.onNodeWithText("Fulfilled in", substring = true).performClick()
+        compose.waitForIdle()
+        compose.onNodeWithContentDescription("Close passage").assertExists()
+        compose.onNodeWithContentDescription("Close passage").performClick()
+        compose.runOnUiThread { vm.verseSheet = null }
+        // A picture of Christ: the bronze serpent.
+        compose.runOnUiThread { vm.openVerse(4, 21, 9, -1) }
+        waitFor(10_000) { compose.onAllNodesWithTag("christCard").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Points to Christ \u00b7 Picture of Christ \u00b7 Numbers 21:8-9").assertExists()
+        compose.runOnUiThread { vm.verseSheet = null }
+        // Switched off in Settings: no card.
+        compose.runOnUiThread { vm.aidChrist = false; vm.openVerse(23, 53, 5, -1) }
+        compose.waitForIdle()
+        assertTrue(compose.onAllNodesWithTag("christCard").fetchSemanticsNodes().isEmpty())
+        compose.runOnUiThread { vm.verseSheet = null; vm.aidChrist = true }
+        // Every one, in Bible order, as a panel view; tapping one goes there.
+        compose.runOnUiThread { vm.sidePane = PaneKind.CHRIST }
+        waitFor(10_000) { compose.onAllNodesWithText("The first promise of the gospel").fetchSemanticsNodes().isNotEmpty() }
+        snap("203-points-to-christ-pane")
+        compose.onNodeWithText("Pictures of Christ").performClick()
+        compose.onNodeWithText("The first promise of the gospel").assertDoesNotExist()
+        compose.onNodeWithText("Covered by a sacrifice").performClick()
+        waitForLoaded()
+        assertEquals(1 to 3, vm.panels[0].book to vm.panels[0].chapter)
+        compose.runOnUiThread { vm.sidePane = null; vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+    }
+
+    @Test
+    fun hardWordsAreMarkedAndExplained() {
+        // STD-23: hard words get a dotted line the first time they come; tapping one explains it.
+        val app: android.content.Context = vm.getApplication()
+        val kjv = vm.text("KJV").chapter(43, 3).map { it.verse to it.text }
+        val marks = com.biblestudy.app.data.HardWords.marks(app, "KJV", kjv)
+        val marked = marks.flatMap { (v, rs) -> rs.map { r -> kjv.first { it.first == v }.second.substring(r).lowercase() } }
+        assertTrue(marked.toString(), "pharisees" in marked && "verily" in marked)
+        assertEquals("each word once a chapter", marked.size, marked.toSet().size)
+        // Old English words count in the KJV only; Bible words in every version.
+        assertNull(com.biblestudy.app.data.HardWords.lookup(app, "BSB", "verily"))
+        assertNotNull(com.biblestudy.app.data.HardWords.lookup(app, "BSB", "Pharisees"))
+        // (Customs off here: "Pharisees" is also a custom, whose card would take the hard word's place.)
+        compose.runOnUiThread { vm.aidCustoms = false; vm.setVersion(0, "KJV"); vm.goTo(0, 43, 3, 1, remember = false) }
+        waitForLoaded()
+        compose.waitForIdle()
+        snap("158-hard-words")
+        // Tapping "Pharisees" in verse 1: the verse pop-up opens with its meaning on top.
+        val v1 = kjv.first { it.first == 1 }.second
+        val word = com.biblestudy.app.data.StudyRepository.words(v1).indexOfFirst { v1.substring(it) == "Pharisees" }
+        compose.runOnUiThread { vm.openVerse(43, 3, 1, word) }
+        waitFor(10_000) { compose.onAllNodesWithTag("hardWord").fetchSemanticsNodes().isNotEmpty() }
+        assertTrue(compose.onAllNodesWithText("strict Jewish group", substring = true).fetchSemanticsNodes().isNotEmpty())
+        snap("159-hard-word-meaning")
+        // Read more opens the Bible dictionary.
+        waitFor(10_000) { compose.onAllNodesWithText("Read more").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Read more").performClick()
+        compose.waitForIdle()
+        assertNull(vm.verseSheet)
+        assertEquals(PaneKind.DICTIONARY, vm.sidePane)
+        compose.runOnUiThread { vm.sidePane = null; vm.dictionaryOpen = null }
+        // Switched off in Settings: no meaning.
+        compose.runOnUiThread { vm.hardWords = false; vm.openVerse(43, 3, 1, word) }
+        compose.waitForIdle()
+        assertTrue(compose.onAllNodesWithTag("hardWord").fetchSemanticsNodes().isEmpty())
+        compose.runOnUiThread { vm.verseSheet = null; vm.hardWords = true; vm.aidCustoms = true }
+        compose.waitForIdle()
+    }
+
+    @Test
+    fun onlineBiblesComeFromYouVersionAndStayOnTheTablet() {
+        // BIB-12: an online Bible (here the NIV, served from saved YouVersion replies) works like any other.
+        fun res(n: String) = javaClass.getResource("/youversion/$n")!!.readText()
+        val calls = java.util.Collections.synchronizedList(ArrayList<String>())
+        val offlineFlag = java.util.concurrent.atomic.AtomicBoolean(false)
+        val realHttp = com.biblestudy.app.data.YouVersion.http
+        val realKey = com.biblestudy.app.data.YouVersion.key
+        com.biblestudy.app.data.YouVersion.key = "test"
+        com.biblestudy.app.data.YouVersion.http = { url ->
+            calls += url
+            when {
+                offlineFlag.get() -> throw java.io.IOException("offline")
+                "/passages/JHN.3?" in url -> 200 to res("niv-JHN.3.json")
+                "/passages/PSA.23?" in url -> 200 to res("niv-PSA.23.json")
+                "/passages/" in url -> 404 to "{\"message\":\"not found\"}"
+                "/search-verses" in url -> 200 to "{\"verses\":[{\"reference\":\"JHN.3.7\"}],\"next_page_token\":null}"
+                "/bibles/111" in url -> 200 to res("niv.json")
+                "/bibles?" in url -> 200 to "{\"data\":[${res("niv.json")}],\"next_page_token\":null}"
+                else -> 404 to "{}"
+            }
+        }
+        try {
+            // The version menu lists the online Bibles not added yet; tapping one adds it and shows it.
+            compose.runOnUiThread { vm.goTo(0, 43, 3, 16, remember = false) }
+            waitForLoaded()
+            compose.onAllNodesWithContentDescription("Change Bible version")[0].performClick()
+            waitFor(10_000) { compose.onAllNodesWithTag("addOnline-NIV").fetchSemanticsNodes().isNotEmpty() }
+            snap("186-version-menu-online")
+            compose.onNodeWithTag("addOnline-NIV").performClick()
+            waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "NIV" } && vm.panels[0].version == "NIV" }
+            val version = com.biblestudy.app.data.BibleRepository.ALL.single { it.code == "NIV" }
+            assertTrue(version.copyright, "Biblica" in version.copyright)
+            // Once added, it's with the others at the top of the menu, not in the online list.
+            compose.onAllNodesWithContentDescription("Change Bible version")[0].performClick()
+            compose.waitForIdle()
+            assertTrue(compose.onAllNodesWithTag("addOnline-NIV").fetchSemanticsNodes().isEmpty())
+            compose.onAllNodesWithText("NIV", substring = true)[0].assertExists()
+            compose.activity.onBackPressedDispatcher.onBackPressed()
+            compose.waitForIdle()
+            // Reading it downloads the chapter.
+            compose.runOnUiThread { vm.goTo(0, 43, 3, 16, remember = false) }
+            waitForLoaded()
+            val repo = vm.text("NIV")
+            waitFor(20_000) { repo.online!!.isSaved(43, 3) }
+            waitForLoaded()
+            snap("160-online-bible")
+            assertEquals(36, repo.chapter(43, 3).size)
+            val v16 = repo.verseText(com.biblestudy.app.model.VerseId.of(43, 3, 16))!!
+            assertTrue(v16.startsWith("For God so loved the world that he gave his one and only Son"))
+            // Every feature: words of Jesus, paragraphs, word studies, hard words, search, the verse pop-up.
+            val verses = repo.chapter(43, 3).associate { it.verse to it.text }
+            assertTrue(vm.study.redLetters("NIV", 43, 3, verses)[3]!!.isNotEmpty())
+            assertTrue(vm.study.paragraphStarts("NIV", 43, 3).containsAll(listOf(1, 3)))
+            assertTrue(vm.study.strongs("NIV", com.biblestudy.app.model.VerseId.of(43, 3, 16)).filterNotNull().size >= 5)
+            val app: android.content.Context = vm.getApplication()
+            val hard = com.biblestudy.app.data.HardWords.marks(app, "NIV", verses.toList())
+            assertTrue(hard.isNotEmpty())
+            var hits = emptyList<com.biblestudy.app.model.SearchHit>()
+            val t = Thread { hits = repo.search("one and only Son", com.biblestudy.app.model.SearchScope.ALL, 43) }
+            t.start(); t.join()
+            assertTrue(hits.any { it.verse == 16 })
+            compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+            waitFor(10_000) { compose.onAllNodesWithText("one and only Son", substring = true).fetchSemanticsNodes().isNotEmpty() }
+            snap("161-online-verse")
+            compose.runOnUiThread { vm.verseSheet = null }
+            // Kept on the tablet: going away and back doesn't download it again.
+            val before = calls.count { "/passages/JHN.3?" in it }
+            compose.runOnUiThread { vm.goTo(0, 1, 1, 1, remember = false) }
+            waitForLoaded()
+            compose.runOnUiThread { vm.goTo(0, 43, 3, 1, remember = false) }
+            waitForLoaded()
+            assertEquals(1, before)
+            assertEquals(1, calls.count { "/passages/JHN.3?" in it })
+            // Offline: a chapter not saved yet says so, and comes when the tablet is back online.
+            offlineFlag.set(true)
+            compose.runOnUiThread { vm.message = null; vm.goTo(0, 19, 23, 1, remember = false) }
+            waitFor(20_000) { vm.message?.contains("no internet") == true }
+            assertTrue(!repo.online!!.isSaved(19, 23))
+            offlineFlag.set(false)
+            compose.runOnUiThread { vm.retryOnline() }
+            waitFor(20_000) { repo.online!!.isSaved(19, 23) }
+            assertEquals("The LORD is my shepherd, I lack nothing.", repo.verseText(com.biblestudy.app.model.VerseId.of(19, 23, 1)))
+            waitForLoaded()
+            snap("162-online-psalm")
+        } finally {
+            com.biblestudy.app.data.YouVersion.http = realHttp
+            com.biblestudy.app.data.YouVersion.key = realKey
+            compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.removeBible("NIV") }
+            compose.waitForIdle()
+        }
+    }
+
+    @Test
+    fun theEsvComesFromCrosswayAndIsKeptLikeTheOthers() {
+        // BIB-12: the ESV, from Crossway's API, works and is kept on the tablet like every other
+        // online Bible (from 1.21 the same cache for all).
+        val esvJohn3 = javaClass.getResource("/youversion/esv-JHN.3.json")!!.readText()
+        val calls = java.util.Collections.synchronizedList(ArrayList<String>())
+        val realHttp = com.biblestudy.app.data.Esv.http
+        val realKey = com.biblestudy.app.data.Esv.key
+        val realYv = com.biblestudy.app.data.YouVersion.http
+        com.biblestudy.app.data.Esv.key = "test"
+        com.biblestudy.app.data.YouVersion.http = { _ -> throw java.io.IOException("offline") }
+        com.biblestudy.app.data.Esv.http = { url ->
+            calls += url
+            val q = Regex("q=(\\d{8})").find(url)?.groupValues?.get(1)?.toInt()
+            when {
+                "/passage/search/" in url -> 200 to "{\"results\":[{\"reference\":\"John 3:7\",\"content\":\"Do not marvel that I said to you, \u2018You must be born again.\u2019\"}]}"
+                q == 43003001 -> 200 to esvJohn3
+                q != null -> {
+                    // Any other chapter: 30 made-up verses.
+                    val verses = (1..30).joinToString(" ") { v -> "<b class=\\\"verse-num\\\" id=\\\"v${q + v - 1}-1\\\">$v&nbsp;</b>Verse $v of the chapter." }
+                    200 to "{\"passages\":[\"<p>$verses</p>\"]}"
+                }
+                else -> 404 to "{}"
+            }
+        }
+        try {
+            compose.runOnUiThread { vm.loadOnlineBibles() }
+            waitFor(10_000) { vm.onlineBibles?.any { it.code == "ESV" } == true }
+            compose.runOnUiThread { vm.addOnlineBible(vm.onlineBibles!!.single { it.code == "ESV" }) }
+            waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "ESV" } }
+            assertTrue("Crossway" in com.biblestudy.app.data.BibleRepository.ALL.single { it.code == "ESV" }.copyright)
+            compose.runOnUiThread { vm.setVersion(0, "ESV"); vm.goTo(0, 43, 3, 1, remember = false) }
+            waitForLoaded()
+            val repo = vm.text("ESV")
+            waitFor(20_000) { repo.online!!.isSaved(43, 3) }
+            waitForLoaded()
+            snap("163-esv")
+            val verses = repo.chapter(43, 3).associate { it.verse to it.text }
+            assertEquals(36, verses.size)
+            assertTrue(vm.study.redLetters("ESV", 43, 3, verses)[3]!!.isNotEmpty())
+            assertTrue(vm.study.strongs("ESV", com.biblestudy.app.model.VerseId.of(43, 3, 16)).filterNotNull().size >= 5)
+            // Search uses Crossway's results (with their text) for chapters not on the tablet.
+            var hits = emptyList<com.biblestudy.app.model.SearchHit>()
+            Thread { hits = repo.search("marvel", com.biblestudy.app.model.SearchScope.ALL, 43) }.apply { start(); join() }
+            assertTrue(hits.any { it.verse == 7 })
+            // Reading on through John keeps every chapter (no 500-verse window), and reading one
+            // again, or searching again, doesn't go to Crossway.
+            val o = repo.online!!
+            Thread { for (c in 4..21) repo.chapter(43, c) }.apply { start(); join() }
+            assertTrue((3..21).all { o.isSaved(43, it) })
+            assertTrue("kept ${o.savedVerses()}", o.savedVerses() > 500)
+            val asked = calls.size
+            Thread { repo.chapter(43, 3); repo.search("marvel", com.biblestudy.app.model.SearchScope.ALL, 43) }.apply { start(); join() }
+            assertEquals(calls.drop(asked).toString(), asked, calls.size)
+            // Kept for the days chosen, as the others: let go when not read for longer.
+            assertTrue(o.expire(30, System.currentTimeMillis() + 40 * 86_400_000L) >= 19) // and chapters fetched ahead
+            assertEquals(0, o.savedChapters())
+            // The search index and word tags go with the chapters.
+            var again = emptyList<com.biblestudy.app.model.SearchHit>()
+            com.biblestudy.app.data.Esv.http = { 503 to "" }
+            Thread { again = repo.search("Nicodemus", com.biblestudy.app.model.SearchScope.ALL, 43) }.apply { start(); join() }
+            assertTrue(again.isEmpty())
+            assertTrue(vm.study.strongs("ESV", com.biblestudy.app.model.VerseId.of(43, 3, 16)).filterNotNull().isEmpty())
+        } finally {
+            com.biblestudy.app.data.Esv.http = realHttp
+            com.biblestudy.app.data.Esv.key = realKey
+            com.biblestudy.app.data.YouVersion.http = realYv
+            compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.removeBible("ESV") }
+            compose.waitForIdle()
+        }
+    }
+
+    @Test
+    fun theNltComesFromTyndale() {
+        // BIB-12: the NLT from Tyndale's API, read and kept like every other online Bible.
+        val john3 = javaClass.getResource("/youversion/nlt-JHN.3.html")!!.readText()
+        val realHttp = com.biblestudy.app.data.Nlt.http
+        val realKey = com.biblestudy.app.data.Nlt.key
+        val realYv = com.biblestudy.app.data.YouVersion.http
+        com.biblestudy.app.data.Nlt.key = "test"
+        com.biblestudy.app.data.YouVersion.http = { _ -> throw java.io.IOException("offline") }
+        val calls = java.util.Collections.synchronizedList(ArrayList<String>())
+        // Every chapter is served John 3's verses, relabelled, so reading a few passes 500 verses.
+        com.biblestudy.app.data.Nlt.http = { url ->
+            calls += url
+            val ch = Regex("ref=[^.&]+\\.(\\d+)&").find(url)?.groupValues?.get(1)
+            when {
+                "/search?" in url -> 200 to javaClass.getResource("/youversion/nlt-search.html")!!.readText()
+                ch != null -> 200 to john3.replace("ch=\"3\"", "ch=\"$ch\"")
+                else -> 200 to "<html><body>No passage</body></html>"
+            }
+        }
+        try {
+            compose.runOnUiThread { vm.loadOnlineBibles() }
+            waitFor(10_000) { vm.onlineBibles?.any { it.code == "NLT" } == true }
+            compose.runOnUiThread { vm.addOnlineBible(vm.onlineBibles!!.single { it.code == "NLT" }) }
+            waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "NLT" } }
+            assertTrue("Tyndale" in com.biblestudy.app.data.BibleRepository.ALL.single { it.code == "NLT" }.copyright)
+            compose.runOnUiThread { vm.setVersion(0, "NLT"); vm.goTo(0, 43, 3, 16, remember = false) }
+            waitForLoaded()
+            val repo = vm.text("NLT")
+            waitFor(20_000) { repo.online!!.isSaved(43, 3) }
+            waitForLoaded()
+            snap("164-nlt")
+            // Kept like the other online Bibles (users bring their own keys): no 500-verse window.
+            val o = repo.online!!
+            for (b in 1..15) assertTrue(o.fetch(b, 1))
+            assertTrue(o.isSaved(43, 3))
+            assertTrue("${o.savedVerses()} verses", o.savedVerses() > 500)
+            val asked = calls.size
+            assertTrue(o.fetch(43, 3)); assertTrue(o.fetch(1, 1))
+            assertEquals(asked, calls.size)
+            // A search is asked once, then kept with its verses' text.
+            val first = o.searchRemote("eternal life", vm.bible.books)
+            assertTrue(first.isNotEmpty() && first.all { it.second != null })
+            assertEquals(first, o.searchRemote("Eternal life ", vm.bible.books))
+            assertEquals(1, calls.count { "/search?" in it })
+            val verses = repo.chapter(43, 3).associate { it.verse to it.text }
+            assertEquals(36, verses.size)
+            assertTrue(vm.study.redLetters("NLT", 43, 3, verses)[3]!!.isNotEmpty())
+            assertTrue(vm.study.strongs("NLT", com.biblestudy.app.model.VerseId.of(43, 3, 16)).filterNotNull().size >= 4)
+            // Chapters kept empty before 2.5.3 (1 Thessalonians asked for as "1Thess", Hebrews 4 when
+            // Tyndale was busy) download again; John 3 stays.
+            val file = com.biblestudy.app.data.BibleRepository.ALL.single { it.code == "NLT" }.asset
+            android.database.sqlite.SQLiteDatabase.openDatabase(file, null, android.database.sqlite.SQLiteDatabase.OPEN_READWRITE).use { db ->
+                db.execSQL("DELETE FROM meta WHERE key = 'nltEmptyFixed'")
+                db.execSQL("INSERT OR REPLACE INTO fetched(book, chapter, at, read_at) VALUES(52, 1, 1, 1)")
+                db.execSQL("INSERT OR REPLACE INTO fetched(book, chapter, at, read_at) VALUES(58, 4, 1, 1)")
+                val old = com.biblestudy.app.data.OnlineBible("NLT", com.biblestudy.app.data.Nlt.ID, db)
+                assertFalse(old.isSaved(52, 1))
+                assertFalse(old.isSaved(58, 4))
+                assertTrue(old.isSaved(43, 3))
+            }
+        } finally {
+            com.biblestudy.app.data.Nlt.http = realHttp
+            com.biblestudy.app.data.Nlt.key = realKey
+            com.biblestudy.app.data.YouVersion.http = realYv
+            compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.removeBible("NLT") }
+            compose.waitForIdle()
+        }
+    }
+
+    @Test
+    fun aVerseCardOnASketchPageBesideUsesTheVersionBeingRead() {
+        // Reported: after switching to the NIV and back, verse cards sometimes came out in the
+        // earlier version. A sketch page opened beside the text kept the version its panel had.
+        compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.goTo(0, 43, 3, 1, remember = false) }
+        waitForLoaded()
+        lateinit var sk: com.biblestudy.app.model.Sketch
+        compose.runOnUiThread { sk = vm.createSketch("Cards", com.biblestudy.app.model.Paper.BLANK, open = false); vm.openSketchBeside(sk) }
+        waitForLoaded()
+        assertTrue(com.biblestudy.app.model.Sketch.isSketch(vm.panels[1].book))
+        // Switch the Bible to the BSB, then add a card on the sketch page.
+        compose.runOnUiThread { vm.setVersion(0, "BSB"); vm.activePanel = 1 }
+        waitForLoaded()
+        assertEquals("BSB", vm.activeVersion)
+        compose.onNodeWithContentDescription("Insert").performScrollTo().performClick()
+        compose.onNodeWithText("Verse card\u2026").performClick()
+        compose.onNodeWithText("Reference, e.g. John 3:16-18").performTextInput("John 3:16")
+        waitFor(10_000) { compose.onAllNodesWithTag("cardPreview").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Add card").performClick()
+        compose.waitForIdle()
+        assertTrue(vm.textsFor(sk.book, 1).map { it.text }.toString(), vm.textsFor(sk.book, 1).any { it.text.startsWith("John 3:16 (BSB)") })
+        // And back to the KJV.
+        compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.activePanel = 1 }
+        assertEquals("KJV", vm.activeVersion)
+        compose.runOnUiThread { vm.deleteSketch(sk); vm.closePanel(1) }
+        compose.waitForIdle()
+    }
+    @Test
+    fun nltVerseCardsWorkLikeOtherOnlineBibles() {
+        // Reported: some NLT verse cards didn't appear. A card shows the verses saved with it until
+        // its chapter is on the tablet, asks for the chapter once (not on every redraw), and then
+        // works like the page; the chapter stays like any online Bible's.
+        val john3 = javaClass.getResource("/youversion/nlt-JHN.3.html")!!.readText()
+        val realHttp = com.biblestudy.app.data.Nlt.http
+        val realKey = com.biblestudy.app.data.Nlt.key
+        val realYv = com.biblestudy.app.data.YouVersion.http
+        var online = false
+        val requests = java.util.Collections.synchronizedList(ArrayList<String>())
+        com.biblestudy.app.data.Nlt.key = "test"
+        com.biblestudy.app.data.YouVersion.http = { _ -> throw java.io.IOException("offline") }
+        // Every chapter is served John 3's 36 verses, relabelled.
+        com.biblestudy.app.data.Nlt.http = { url ->
+            requests += url
+            if (!online) throw java.io.IOException("offline")
+            val ch = Regex("ref=[^.&]+\\.(\\d+)").find(url)?.groupValues?.get(1)
+            if (ch != null) 200 to john3.replace("ch=\"3\"", "ch=\"$ch\"") else 200 to "<html><body>No passage</body></html>"
+        }
+        lateinit var sk: com.biblestudy.app.model.Sketch
+        try {
+            compose.runOnUiThread { vm.loadOnlineBibles() }
+            waitFor(10_000) { vm.onlineBibles?.any { it.code == "NLT" } == true }
+            compose.runOnUiThread { vm.addOnlineBible(vm.onlineBibles!!.single { it.code == "NLT" }) }
+            waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "NLT" } }
+            val nlt = vm.text("NLT").online!!
+            compose.runOnUiThread { sk = vm.createSketch("Cards", com.biblestudy.app.model.Paper.BLANK, open = false); vm.openSketchBeside(sk); vm.activePanel = 1 }
+            waitForLoaded()
+            // Offline: a new card shows the verses saved with it, and asks for its chapter only once.
+            compose.runOnUiThread { vm.insertCard("John 3:16 (NLT)\nFor this is how God loved the world.", 0) }
+            vm.awaitSaves()
+            val card = vm.textsFor(sk.book, 1).single { it.text.startsWith("John 3:16 (NLT)") }
+            val spec = vm.cardSpec(card)!!
+            lateinit var shown: com.biblestudy.app.ui.CardText
+            compose.runOnUiThread { shown = vm.cardText(card, spec) }
+            assertTrue(shown.text.text, "For this is how God loved the world." in shown.text.text)
+            waitFor(10_000) { requests.isNotEmpty() }
+            compose.runOnUiThread { repeat(5) { vm.cardText(card, spec) } }
+            Thread.sleep(500)
+            assertEquals(requests.toString(), 1, requests.size)
+
+            // Back online: the chapter comes, and the card is live.
+            online = true
+            compose.runOnUiThread { vm.retryOnline(); vm.cardText(card, spec) }
+            waitFor(20_000) { nlt.isSaved(43, 3) }
+            compose.waitForIdle()
+            compose.runOnUiThread { shown = vm.cardText(card, spec) }
+            assertEquals(1, shown.verses.size)
+            assertTrue(shown.verses.single().text, "loved the world" in shown.verses.single().text)
+
+            // Reading 15 more chapters (over 500 verses) lets nothing go: the card keeps working.
+            for (b in 1..15) nlt.fetch(b, 1)
+            assertTrue(nlt.isSaved(43, 3))
+            assertTrue(nlt.savedVerses() > 500)
+            val asked = requests.size
+            compose.runOnUiThread { shown = vm.cardText(card, spec) }
+            assertEquals(1, shown.verses.size)
+            assertEquals(asked, requests.size)
+        } finally {
+            com.biblestudy.app.data.Nlt.http = realHttp
+            com.biblestudy.app.data.Nlt.key = realKey
+            com.biblestudy.app.data.YouVersion.http = realYv
+            compose.runOnUiThread {
+                vm.sketches.filter { it.name == "Cards" }.forEach { vm.deleteSketch(it) }
+                vm.closePanel(1)
+                vm.setVersion(0, "KJV"); vm.removeBible("NLT")
+            }
+            compose.waitForIdle()
+        }
+    }
+
+    @Test
+    fun onlineChaptersStayForTheChosenDaysAndCanBeCleared() {
+        // Online Bibles are kept on the tablet to spare the servers: for as long as Settings says
+        // after they were last read (Always at first), searches included, and can be cleared.
+        fun res(n: String) = javaClass.getResource("/youversion/$n")!!.readText()
+        val calls = java.util.Collections.synchronizedList(ArrayList<String>())
+        val realHttp = com.biblestudy.app.data.YouVersion.http
+        val realKey = com.biblestudy.app.data.YouVersion.key
+        com.biblestudy.app.data.YouVersion.key = "test"
+        com.biblestudy.app.data.YouVersion.http = { url ->
+            calls += url
+            when {
+                "/passages/JHN.3?" in url -> 200 to res("niv-JHN.3.json")
+                "/passages/PSA.23?" in url -> 200 to res("niv-PSA.23.json")
+                "/passages/" in url -> 404 to "{\"message\":\"not found\"}"
+                "/search-verses" in url -> 200 to "{\"verses\":[{\"reference\":\"JHN.3.7\"}],\"next_page_token\":null}"
+                "/bibles/111" in url -> 200 to res("niv.json")
+                "/bibles?" in url -> 200 to "{\"data\":[${res("niv.json")}],\"next_page_token\":null}"
+                else -> 404 to "{}"
+            }
+        }
+        val day = 86_400_000L
+        try {
+            compose.runOnUiThread { vm.loadOnlineBibles() }
+            waitFor(10_000) { vm.onlineBibles != null }
+            compose.runOnUiThread { vm.addOnlineBible(vm.onlineBibles!!.single { it.code == "NIV" }) }
+            waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "NIV" } }
+            val o = vm.text("NIV").online!!
+            assertEquals(0, vm.cacheDays) // Always, at first
+            assertTrue(o.fetch(43, 3)); assertTrue(o.fetch(19, 23))
+            val now = System.currentTimeMillis()
+            // Read again: no new request.
+            val before = calls.size
+            assertTrue(o.fetch(43, 3))
+            assertEquals(before, calls.size)
+            // Kept always: nothing goes, however long ago.
+            assertEquals(0, o.expire(0, now + 1000 * day))
+            // Kept 30 days: still there after 10, let go after 40 (and download again when read).
+            assertEquals(0, o.expire(30, now + 10 * day))
+            assertTrue(o.isSaved(43, 3))
+            assertEquals(2, o.expire(30, now + 40 * day))
+            assertFalse(o.isSaved(43, 3)); assertFalse(o.isSaved(19, 23))
+            assertEquals(0, o.savedVerses())
+            // A Bible saved for offline stays.
+            assertTrue(o.fetch(43, 3))
+            o.savedForOffline = true
+            assertEquals(0, o.expire(30, now + 40 * day))
+            assertTrue(o.isSaved(43, 3))
+            o.savedForOffline = false
+
+            // A search is asked once, then kept; it's asked again once it's older than the days kept.
+            val searches = { calls.count { "/search-verses" in it } }
+            val books = vm.bible.books
+            assertEquals(listOf(43_003_007), o.searchRemote("Born Again", books).map { it.first })
+            assertEquals(listOf(43_003_007), o.searchRemote("born again ", books).map { it.first })
+            assertEquals(1, searches())
+            o.expire(30, now + 40 * day)
+            o.searchRemote("born again", books)
+            assertEquals(2, searches())
+
+            // The setting is remembered.
+            compose.runOnUiThread { vm.changeCacheDays(30) }
+            assertEquals(30, vm.cacheDays)
+
+            // Settings → Bibles → Clear downloaded text: everything goes, the search index too.
+            assertTrue(o.fetch(19, 23))
+            compose.runOnUiThread { vm.clearOnlineCache() }
+            waitFor(10_000) { o.savedVerses() == 0 }
+            assertFalse(o.isSaved(43, 3)); assertFalse(o.isSaved(19, 23))
+            assertEquals(0, o.savedChapters())
+            com.biblestudy.app.data.YouVersion.http = { _ -> throw java.io.IOException("offline") }
+            assertTrue(vm.text("NIV").search("shepherd", com.biblestudy.app.model.SearchScope.ALL, 19).isEmpty())
+        } finally {
+            com.biblestudy.app.data.YouVersion.http = realHttp
+            com.biblestudy.app.data.YouVersion.key = realKey
+            compose.runOnUiThread { vm.changeCacheDays(0); vm.setVersion(0, "KJV"); vm.removeBible("NIV") }
+            compose.waitForIdle()
+        }
+    }
+    @Test
+    fun crossReferencesShowTheOnlineBibleBeingRead() {
+        // Reported: cross-references showed the KJV's words while reading an online Bible. Their
+        // previews are now in that Bible: "…" while a chapter downloads, then its own words.
+        val john3 = javaClass.getResource("/youversion/nlt-JHN.3.html")!!.readText()
+        val realHttp = com.biblestudy.app.data.Nlt.http
+        val realKey = com.biblestudy.app.data.Nlt.key
+        val realYv = com.biblestudy.app.data.YouVersion.http
+        com.biblestudy.app.data.Nlt.key = "test"
+        com.biblestudy.app.data.YouVersion.http = { _ -> throw java.io.IOException("offline") }
+        // Every chapter is served John 3's verses, relabelled, so each preview is easy to check.
+        com.biblestudy.app.data.Nlt.http = { url ->
+            val ch = Regex("ref=[^.&]+\\.(\\d+)").find(url)?.groupValues?.get(1)
+            if (ch != null) 200 to john3.replace("ch=\"3\"", "ch=\"$ch\"") else 200 to "<html><body>No passage</body></html>"
+        }
+        try {
+            compose.runOnUiThread { vm.loadOnlineBibles() }
+            waitFor(10_000) { vm.onlineBibles?.any { it.code == "NLT" } == true }
+            compose.runOnUiThread { vm.addOnlineBible(vm.onlineBibles!!.single { it.code == "NLT" }) }
+            waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "NLT" } }
+            val id = com.biblestudy.app.model.VerseId.of(43, 3, 16)
+            val kjv = vm.bible.crossRefs(id)
+            assertTrue(kjv.size >= 5)
+            val shown = ArrayList<List<com.biblestudy.app.model.CrossRef>>()
+            kotlinx.coroutines.runBlocking { vm.crossRefsIn("NLT", id) { shown += it } }
+            // First nothing is on the tablet: "…", never the KJV's words.
+            assertTrue(shown.first().all { it.preview == "\u2026" })
+            // Then each preview is the NLT's own text.
+            val nlt = vm.text("NLT")
+            val last = shown.last()
+            val filled = last.filter { it.preview != "\u2026" }
+            assertTrue("${filled.size} of ${last.size}", filled.size >= minOf(last.size, 20))
+            for (r in filled) {
+                assertEquals(nlt.savedVerseText(r.toStart), r.preview)
+                assertFalse(r.preview, kjv.any { it.toStart == r.toStart && it.preview == r.preview })
+            }
+            // Opened again: straight from the tablet, in one go.
+            shown.clear()
+            kotlinx.coroutines.runBlocking { vm.crossRefsIn("NLT", id) { shown += it } }
+            assertEquals(last, shown.first())
+        } finally {
+            com.biblestudy.app.data.Nlt.http = realHttp
+            com.biblestudy.app.data.Nlt.key = realKey
+            com.biblestudy.app.data.YouVersion.http = realYv
+            compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.removeBible("NLT") }
+            compose.waitForIdle()
+        }
+    }
+    @Test
+    fun aMarginSketchStaysInOnePieceInEveryVersion() {
+        // Reported: margin sketches got jumbled when changing versions. Each stroke was pinned to
+        // the verse the pen came down at, and verses sit at different heights in each version.
+        compose.runOnUiThread { vm.marginRight = true; vm.marginLeft = false; vm.goTo(0, 43, 3, 1, remember = false) }
+        waitForLoaded()
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        val z = zoom()
+        val x = vm.panels[0].panX + Page.COL_W * z + 90f
+        // A long stroke, then one starting where it ends (lower down, beside a later verse).
+        compose.onNodeWithTag("reader0").performTouchInput { down(Offset(x, 150f)); repeat(35) { moveBy(Offset(0f, 20f)) }; up() }
+        compose.waitForIdle()
+        compose.onNodeWithTag("reader0").performTouchInput { down(Offset(x + 4f, 855f)); repeat(5) { moveBy(Offset(3f, 10f)) }; up() }
+        compose.waitForIdle()
+        val (a, b) = vm.marginStrokesFor(43, 3).toList().also { assertEquals(2, it.size) }
+        // Pinned to one verse, so the drawing moves as one in every version.
+        assertEquals("h=${readerSize().height}", a.verse, b.verse)
+        // A stroke far below keeps its own verse.
+        val low = readerSize().height - 120f
+        assertTrue("screen $low", low > 900f)
+        compose.onNodeWithTag("reader0").performTouchInput { down(Offset(x, low)); repeat(5) { moveBy(Offset(10f, 4f)) }; up() }
+        compose.waitForIdle()
+        val c = vm.marginStrokesFor(43, 3).single { it.id != a.id && it.id != b.id }
+        assertTrue("${c.verse} vs ${a.verse}", c.verse > a.verse)
+        compose.runOnUiThread { vm.fingerDraw = false; vm.marginStrokesFor(43, 3).toList().forEach { vm.removeItem(it) } }
+
+        // A sketch already split across verses: moving it with the lasso puts it back in one piece,
+        // pinned to its topmost verse, without moving it more than asked.
+        val measurer = TextMeasurer(createFontFamilyResolver(compose.activity), Density(1f, 1f), LayoutDirection.Ltr)
+        val font = FontFamily(Font(R.font.gentium_book_plus_regular), Font(R.font.gentium_book_plus_bold, FontWeight.Bold))
+        val layout = buildChapterLayout(
+            measurer, font, "John", ChapterData("KJV", 43, 3, vm.text("KJV").chapter(43, 3), vm.headings(43, 3)), vm.lineSpacing,
+        ) { RefLinks.parseList(it, vm.bible.books) }
+        val layer = vm.layers.first { it.visible }.id
+        fun stroke(id: Long, verse: Int) = com.biblestudy.app.model.InkStroke(
+            id, layer, null, 43, 3, Region.RIGHT, verse, false, 0xFF000000.toInt(), 3f, floatArrayOf(10f, 5f, 1f, 30f, 25f, 1f),
+        )
+        val split = listOf(stroke(9_100_001L, 2), stroke(9_100_002L, 6))
+        val before = split.associate { it.id to it.points[1] + layout.verseTop(it.verse) }
+        compose.runOnUiThread {
+            split.forEach { vm.addItem(it) }
+            vm.select(com.biblestudy.app.ui.Selection("KJV", 43, 3, split.map { it.id }.toSet()))
+            vm.moveSelection(Offset(5f, 0f), layout)
+        }
+        val moved = vm.marginStrokesFor(43, 3).filter { it.id in before }
+        assertEquals(listOf(2, 2), moved.map { it.verse })
+        for (m in moved) {
+            assertEquals(before[m.id]!!, m.points[1] + layout.verseTop(m.verse), 0.01f)
+            assertEquals(15f, m.points[0], 0.01f)
+        }
+        compose.runOnUiThread { vm.clearSelection(); vm.marginStrokesFor(43, 3).toList().forEach { vm.removeItem(it) } }
+        compose.waitForIdle()
+    }
+    @Test
+    fun bibleAidsMarkPeoplePlacesCustomsAndSymbols() {
+        // AID-1 to AID-12: people and places, customs and feasts, symbols and numbers, marked like
+        // hard words (first mention in a chapter) and explained at the top of the verse pop-up.
+        val app: android.content.Context = vm.getApplication()
+        val all = com.biblestudy.app.data.AidSwitches(hard = true, names = true, customs = true, symbols = true)
+        fun marked(version: String, b: Int, c: Int, on: com.biblestudy.app.data.AidSwitches = all): List<Pair<String, com.biblestudy.app.data.AidKind>> {
+            val verses = vm.text(version).chapter(b, c).map { it.verse to it.text }
+            return com.biblestudy.app.data.Aids.marks(app, vm.study, version, b, c, verses, on)
+                .flatMap { (v, l) -> l.map { m -> verses.first { it.first == v }.second.substring(m.range) to m.kind } }
+        }
+        val john3 = marked("KJV", 43, 3)
+        // John 3:1: the Pharisees (a group) and Nicodemus (a person); the hard word gives way to the custom.
+        assertTrue(john3.toString(), "Pharisees" to com.biblestudy.app.data.AidKind.CUSTOM in john3)
+        assertTrue(john3.toString(), "Nicodemus" to com.biblestudy.app.data.AidKind.NAME in john3)
+        assertEquals(john3.toString(), 1, john3.count { it.first == "Pharisees" })
+        // John 3:14: the bronze serpent, a symbol here; marked once.
+        assertTrue(john3.toString(), john3.any { it.first == "serpent" && it.second == com.biblestudy.app.data.AidKind.SYMBOL })
+        // Revelation 5: the Lamb and the number seven.
+        val rev5 = marked("KJV", 66, 5)
+        assertTrue(rev5.toString(), "Lamb" to com.biblestudy.app.data.AidKind.SYMBOL in rev5)
+        assertTrue(rev5.toString(), rev5.any { it.first.startsWith("seven") && it.second == com.biblestudy.app.data.AidKind.NUMBER })
+        // A lamb in an ordinary story isn't a symbol (Genesis 30 has no lamb marked; 1 Samuel 17:34 is literal).
+        assertTrue(marked("KJV", 9, 17).none { it.first.lowercase() == "lamb" })
+        // Psalm 23: the shepherd is a symbol; "LORD" is never taken for a person or place.
+        val ps23 = marked("KJV", 19, 23)
+        assertTrue(ps23.toString(), "shepherd" to com.biblestudy.app.data.AidKind.SYMBOL in ps23)
+        assertTrue(ps23.toString(), ps23.none { it.first == "LORD" })
+        // Each version's own wording: the Feast of Tabernacles is "Feast of Booths" in the BSB (John 7:2).
+        assertTrue(marked("BSB", 43, 7).toString(), marked("BSB", 43, 7).any { it.first == "Feast of Booths" || it.first == "Feast of Tabernacles" })
+        // A genealogy marks only the best-known names.
+        assertTrue(marked("KJV", 13, 1).count { it.second == com.biblestudy.app.data.AidKind.NAME } <= 10)
+        // Each kind can be switched off.
+        val noNames = marked("KJV", 43, 3, all.copy(names = false))
+        assertTrue(noNames.none { it.second == com.biblestudy.app.data.AidKind.NAME })
+        assertTrue(marked("KJV", 66, 5, all.copy(symbols = false)).none { it.second == com.biblestudy.app.data.AidKind.SYMBOL || it.second == com.biblestudy.app.data.AidKind.NUMBER })
+        // Every entry has text, key verses and sources; numbers and symbols are never marked "anywhere".
+        val entries = com.biblestudy.app.data.Aids.all(app)
+        assertTrue(entries.size >= 250)
+        assertTrue(entries.all { it.text.isNotBlank() && it.refs.isNotBlank() && it.sources.isNotBlank() })
+        assertTrue(entries.filter { it.kind != com.biblestudy.app.data.AidKind.CUSTOM }.none { it.anywhere })
+
+        // On the page: tapping "Pharisees" in John 3:1 explains the custom; More opens Customs & feasts.
+        compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.goTo(0, 43, 3, 1, remember = false) }
+        waitForLoaded()
+        compose.waitForIdle()
+        snap("170-bible-aids")
+        val v1 = vm.text("KJV").chapter(43, 3).first { it.verse == 1 }.text
+        val words = com.biblestudy.app.data.StudyRepository.words(v1)
+        compose.runOnUiThread { vm.openVerse(43, 3, 1, words.indexOfFirst { v1.substring(it) == "Pharisees" }) }
+        waitFor(10_000) { compose.onAllNodesWithTag("aid").fetchSemanticsNodes().isNotEmpty() }
+        assertTrue(compose.onAllNodesWithText("strictest religious party", substring = true).fetchSemanticsNodes().isNotEmpty())
+        assertTrue(compose.onAllNodesWithTag("hardWord").fetchSemanticsNodes().isEmpty())
+        snap("171-custom-card")
+        compose.onAllNodesWithText("More")[0].performClick()
+        compose.waitForIdle()
+        assertEquals(PaneKind.CUSTOMS, vm.sidePane)
+        waitFor(10_000) { compose.onAllNodesWithText("Key verses", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        snap("172-customs-view")
+        // Tapping "Nicodemus": who he was; More opens Names & places.
+        compose.runOnUiThread { vm.sidePane = null; vm.aidOpen = null; vm.openVerse(43, 3, 1, words.indexOfFirst { v1.substring(it) == "Nicodemus" }) }
+        waitFor(10_000) { compose.onAllNodesWithText("Pharisee who visited Jesus", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        compose.onAllNodesWithText("More")[0].performClick()
+        compose.waitForIdle()
+        assertEquals(PaneKind.NAMES, vm.sidePane)
+        // The Symbols & numbers view lists the chapter's symbols first.
+        // (The view follows the Bible panel in use, unless an earlier test pinned it to a passage.)
+        compose.runOnUiThread {
+            if (vm.tab.pinned != null) vm.togglePin()
+            vm.sidePane = PaneKind.SYMBOLS; vm.goTo(vm.activePanel.coerceIn(0, vm.panels.lastIndex), 66, 5, 1, remember = false)
+        }
+        waitForLoaded()
+        // (Only the rows that fit are laid out, so this waits for the list, not a particular entry.)
+        waitFor(10_000) { compose.onAllNodesWithTag("entry").fetchSemanticsNodes().isNotEmpty() }
+        // In the order they come in the chapter (in Revelation 5 in the KJV, the throne of verse 1 first).
+        val sp = vm.studyPanel()
+        assertEquals(66 to 5, sp.book to sp.chapter)
+        val firstHere = com.biblestudy.app.data.Aids.marks(
+            app, vm.study, sp.version, 66, 5, vm.text(sp.version).chapter(66, 5).map { it.verse to it.text },
+            com.biblestudy.app.data.AidSwitches(hard = false, names = false, customs = false, symbols = true),
+        ).toSortedMap().values.flatten().first().key
+        val expected = com.biblestudy.app.data.Aids.byId(app, firstHere)!!.title
+        waitFor(10_000) { runCatching { compose.onAllNodesWithTag("entry")[0].assertTextEquals(expected) }.isSuccess }
+        snap("173-symbols-view")
+        compose.runOnUiThread { vm.sidePane = null; vm.nameOpen = null; vm.goTo(0, 43, 3, 1, remember = false) }
+        compose.waitForIdle()
+    }
+    @Test
+    fun bibleAidsWorkInTheNltAndEsv() {
+        // AID-12: the aids in online Bibles, whose word tags are worked out on the tablet as each
+        // chapter comes: John 3 in the NLT (Tyndale) and the ESV (Crossway).
+        val nltJohn3 = javaClass.getResource("/youversion/nlt-JHN.3.html")!!.readText()
+        val esvJohn3 = javaClass.getResource("/youversion/esv-JHN.3.json")!!.readText()
+        val realNlt = com.biblestudy.app.data.Nlt.http
+        val realEsv = com.biblestudy.app.data.Esv.http
+        val realNltKey = com.biblestudy.app.data.Nlt.key
+        val realEsvKey = com.biblestudy.app.data.Esv.key
+        val realYv = com.biblestudy.app.data.YouVersion.http
+        com.biblestudy.app.data.Nlt.key = "test"
+        com.biblestudy.app.data.Esv.key = "test"
+        com.biblestudy.app.data.YouVersion.http = { _ -> throw java.io.IOException("offline") }
+        com.biblestudy.app.data.Nlt.http = { url -> if ("ref=John.3&" in url) 200 to nltJohn3 else 200 to "<html><body>No passage</body></html>" }
+        com.biblestudy.app.data.Esv.http = { url -> if ("q=43003001" in url) 200 to esvJohn3 else 404 to "{}" }
+        val app: android.content.Context = vm.getApplication()
+        val all = com.biblestudy.app.data.AidSwitches(hard = true, names = true, customs = true, symbols = true)
+        try {
+            compose.runOnUiThread { vm.loadOnlineBibles() }
+            waitFor(10_000) { vm.onlineBibles?.map { it.code }?.containsAll(listOf("NLT", "ESV")) == true }
+            compose.runOnUiThread { for (c in listOf("NLT", "ESV")) vm.addOnlineBible(vm.onlineBibles!!.single { it.code == c }) }
+            waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.map { it.code }.containsAll(listOf("NLT", "ESV")) }
+            for (version in listOf("NLT", "ESV")) {
+                assertTrue(vm.text(version).online!!.fetch(43, 3))
+                val verses = vm.text(version).chapter(43, 3).map { it.verse to it.text }
+                val marks = com.biblestudy.app.data.Aids.marks(app, vm.study, version, 43, 3, verses, all)
+                val marked = marks.flatMap { (v, l) -> l.map { m -> verses.first { it.first == v }.second.substring(m.range) to m.kind } }
+                val kinds = marked.groupBy({ it.second }, { it.first })
+                val say = "$version: $marked"
+                // A group of Jesus' day (John 3:1), people and places, and symbols.
+                assertTrue(say, kinds[com.biblestudy.app.data.AidKind.CUSTOM].orEmpty().any { it.startsWith("Pharisee") })
+                assertTrue(say, "Nicodemus" in kinds[com.biblestudy.app.data.AidKind.NAME].orEmpty())
+                assertTrue(say, "Moses" in kinds[com.biblestudy.app.data.AidKind.NAME].orEmpty())
+                val symbols = kinds[com.biblestudy.app.data.AidKind.SYMBOL].orEmpty().map { it.lowercase() }
+                assertTrue(say, "born again" in symbols)
+                assertTrue(say, "wind" in symbols)
+                assertTrue(say, "light" in symbols)
+                // The bronze serpent of John 3:14, in each version's words ("serpent", "bronze snake").
+                assertTrue(say, symbols.any { it == "serpent" || it == "snake" || it == "bronze" })
+                // The bridegroom's wedding vows (NLT, John 3:29) aren't vows to God.
+                assertTrue(say, kinds[com.biblestudy.app.data.AidKind.CUSTOM].orEmpty().none { it.startsWith("vow") })
+                // "LORD" or "God" is never taken for a person or place.
+                assertTrue(say, kinds[com.biblestudy.app.data.AidKind.NAME].orEmpty().none { it == "LORD" || it == "God" })
+                // Tapping "Nicodemus" explains who he was.
+                val (v1, t1) = verses.first { (_, t) -> "Nicodemus" in t }
+                val word = com.biblestudy.app.data.StudyRepository.words(t1).indexOfFirst { t1.substring(it) == "Nicodemus" }
+                val cards = com.biblestudy.app.data.Aids.at(app, vm.study, version, com.biblestudy.app.model.VerseId.of(43, 3, v1), t1, word, all)
+                assertTrue(say, cards.any { (it.second as? com.biblestudy.app.data.NameEntry)?.name == "Nicodemus" })
+            }
+        } finally {
+            com.biblestudy.app.data.Nlt.http = realNlt
+            com.biblestudy.app.data.Esv.http = realEsv
+            com.biblestudy.app.data.Nlt.key = realNltKey
+            com.biblestudy.app.data.Esv.key = realEsvKey
+            com.biblestudy.app.data.YouVersion.http = realYv
+            compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.removeBible("NLT"); vm.removeBible("ESV") }
+            compose.waitForIdle()
+        }
+    }
+    /** A phone (PH-1 to PH-14): the screen, the ⋮ menu in reach, Settings, panels and margins collapsed. */
+    private fun phoneChecks(name: String) {
+        waitForLoaded()
+        assertTrue(vm.phone)
+        // Phones start reading, and a finger draws once a tool is picked (PH-2, PH-3). (The test set-up
+        // resets both for every test, so they're set here as a phone starts.)
+        compose.runOnUiThread { vm.readMode = true; vm.fingerDraw = true; vm.changeTextSize(com.biblestudy.app.model.TextSize.LARGER) }
+        waitForLoaded()
+        // The app starts dark.
+        assertEquals(com.biblestudy.app.ui.PageTheme.DARK, vm.theme)
+        compose.onNodeWithText("John 3").assertIsDisplayed()
+        snap("180-phone-$name")
+        // The toolbar shows it has more buttons: an arrow at its edge slides it along (PH-15).
+        val more = compose.onAllNodesWithTag("toolbarScrollRight").fetchSemanticsNodes().isNotEmpty()
+        if (!vm.landscape) assertTrue("upright, the toolbar doesn't fit", more)
+        if (more) {
+        assertTrue(compose.onAllNodesWithTag("toolbarScrollLeft").fetchSemanticsNodes().isEmpty())
+        compose.onNodeWithTag("toolbarScrollRight").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithTag("toolbarScrollLeft").assertIsDisplayed()
+        snap("191-phone-$name-toolbar-slid")
+        while (compose.onAllNodesWithTag("toolbarScrollLeft").fetchSemanticsNodes().isNotEmpty()) {
+            compose.onNodeWithTag("toolbarScrollLeft").performClick()
+            compose.waitForIdle()
+        }
+        }
+        // The ⋮ menu stays on screen however many buttons don't fit; Settings fills the screen.
+        compose.onNodeWithContentDescription("More").assertIsDisplayed()
+        compose.onNodeWithContentDescription("More").performClick()
+        compose.onNodeWithText("Settings").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithText("Bible aids").assertExists()
+        snap("181-phone-$name-settings")
+        compose.onAllNodesWithContentDescription("Close")[0].performClick()
+        compose.waitForIdle()
+        // The book picker fits.
+        compose.onNodeWithText("John 3").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithText("Genesis").assertExists()
+        snap("182-phone-$name-picker")
+        compose.onAllNodesWithContentDescription("Close")[0].performClick()
+        compose.waitForIdle()
+        // Upright, a study view opens below the Bible (top and bottom); on its side, the study view
+        // comes to the front and the Bible is a bar to tap, and back again (PH-6).
+        compose.runOnUiThread { vm.sidePane = PaneKind.CROSSREFS }
+        waitForLoaded()
+        compose.onNodeWithTag("pane").assertIsDisplayed()
+        if (!vm.landscape) {
+            compose.onNodeWithTag("reader0").assertIsDisplayed()
+            assertTrue(vm.isStacked())
+            assertTrue(compose.onAllNodesWithTag("collapsedPanel").fetchSemanticsNodes().isEmpty())
+            snap("183-phone-$name-study")
+            compose.runOnUiThread { vm.sidePane = null }
+            waitForLoaded()
+            return
+        }
+        compose.onNodeWithTag("collapsedPanel").assertIsDisplayed()
+        compose.onNodeWithText("John 3 (KJV)", substring = true).assertExists()
+        snap("183-phone-$name-study")
+        compose.onNodeWithTag("collapsedPanel").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithTag("reader0").assertIsDisplayed()
+        compose.onNodeWithText("Cross-references", substring = true).assertExists()
+        compose.runOnUiThread { vm.sidePane = null }
+        waitForLoaded()
+        assertTrue(compose.onAllNodesWithTag("collapsedPanel").fetchSemanticsNodes().isEmpty())
+    }
+
+    @Test
+    @Config(qualifiers = "w393dp-h851dp-port-xxhdpi")
+    fun aPhoneShowsEverythingAndDrawsWithAFinger() {
+        phoneChecks("393")
+        // Margins are tucked away at the edge (PH-5).
+        compose.runOnUiThread { vm.marginRight = true }
+        waitForLoaded()
+        snap("184-phone-margin-drawer")
+        // Picking the pen ends read mode; one finger draws on the words.
+        compose.onNodeWithContentDescription("Pen").performClick()
+        assertFalse(vm.readMode)
+        val before = vm.textStrokesFor("KJV", 43, 3).size
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset(200f, 900f)); repeat(12) { moveBy(Offset(20f, 4f)) }; up()
+        }
+        compose.waitForIdle()
+        assertEquals(before + 1, vm.textStrokesFor("KJV", 43, 3).size)
+        // Two fingers scroll the page and draw nothing.
+        val panY = vm.panels[0].panY
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(0, Offset(300f, 1400f)); down(1, Offset(600f, 1400f))
+            repeat(10) { moveBy(0, Offset(0f, -60f)); moveBy(1, Offset(0f, -60f)) }
+            up(0); up(1)
+        }
+        compose.waitForIdle()
+        assertEquals(before + 1, vm.textStrokesFor("KJV", 43, 3).size)
+        assertTrue("panY $panY -> ${vm.panels[0].panY}", vm.panels[0].panY < panY - 100f)
+        snap("185-phone-finger-ink")
+        compose.runOnUiThread { vm.textStrokesFor("KJV", 43, 3).toList().forEach { vm.removeItem(it) }; vm.readMode = true }
+        compose.waitForIdle()
+    }
+
+    @Test
+    @Config(qualifiers = "w360dp-h640dp-port-xhdpi")
+    fun aSmallPhoneShowsEverything() = phoneChecks("360")
+
+    @Test
+    @Config(qualifiers = "w851dp-h393dp-land-xxhdpi")
+    fun aPhoneOnItsSideShowsEverything() = phoneChecks("851")
+
+    /** A few weeks of reading, as someone working through Matthew and Romans would have. */
+    private fun seedReading() {
+        compose.runOnUiThread { vm.foreground = false }
+        val u = vm.user
+        u.clearReading() // here and now, not in the background where it could clear what's added below
+        val today = java.time.LocalDate.now()
+        val minutes = listOf(25, 40, 0, 18, 32, 55, 12, 0, 30, 45, 22, 38, 50, 27)
+        for ((i, m) in minutes.withIndex()) {
+            val day = today.minusDays((minutes.size - 1 - i).toLong()).toString()
+            if (m > 0) u.addReading(day, 40, (i % 28) + 1, m * 60, false)
+        }
+        for (ch in 1..28) { u.addOpen(40, ch); u.markRead(40, ch, 1L) }
+        for (ch in 1..16) { u.addReading(today.toString(), 45, ch, 120 + ch * 30, false); u.markRead(45, ch, 1L) }
+        repeat(3) { u.markRead(45, 8, 1L) }
+        repeat(5) { u.markRead(40, 5, 1L) }
+        u.addReading(today.toString(), 43, 3, 900, false); u.markRead(43, 3, 1L)
+        u.addReading(today.toString(), 19, 23, 300, false); u.markRead(19, 23, 1L)
+    }
+
+    private fun readingStatsShowcase(name: String) {
+        seedReading()
+        compose.onNodeWithContentDescription("More").performClick()
+        compose.onNodeWithText("Reading stats").performClick()
+        waitFor(30_000) { compose.onAllNodesWithText("46 of 1189 chapters").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("days in a row").assertExists()
+        compose.onNodeWithText("Milestones · 3 of 11").assertExists()
+        compose.onNodeWithText("Read on 12 of 30 days", substring = true).assertExists()
+        // A whole book is earned (Matthew, Romans); the next aim is the one nearest done.
+        compose.onNodeWithContentDescription("A whole book, earned").assertExists()
+        compose.onNodeWithContentDescription("A hundred chapters, 46 of 100").assertExists()
+        snap("194-$name-stats-top")
+        compose.onNodeWithText("Most read chapters").performScrollTo()
+        snap("195-$name-stats-middle")
+        compose.onNodeWithText("Every chapter").performScrollTo()
+        snap("196-$name-stats-grid")
+        compose.onNodeWithText("Revelation").performScrollTo()
+        snap("197-$name-stats-grid-end")
+        // Tapping a locked milestone says what it takes.
+        compose.onNodeWithContentDescription("The whole Bible, 46 of 1189").performScrollTo().performClick()
+        compose.onNodeWithText("Read every chapter of the Bible").assertExists()
+        compose.onNodeWithContentDescription("Close").performClick()
+        compose.runOnUiThread { vm.clearReadingStats(); vm.foreground = true }
+    }
+
+    @Test
+    fun readingStatsOnATablet() = readingStatsShowcase("tablet")
+
+    @Test
+    @Config(qualifiers = "w393dp-h851dp-port-xxhdpi")
+    fun readingStatsOnAPhone() {
+        waitForLoaded()
+        readingStatsShowcase("phone")
     }
 }

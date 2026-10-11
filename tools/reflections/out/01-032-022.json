@@ -1,0 +1,82 @@
+{
+ "id": "01-032-022",
+ "title": "Jacob Wrestles with God",
+ "refs": [
+  "Genesis 32:22-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1032022,
+   "end": 1032032,
+   "ref": "Genesis 32:22-32",
+   "ranges": [
+    [
+     1032022,
+     1032032
+    ]
+   ],
+   "title": "Broken to Be Blessed",
+   "key_verse": [
+    1032028,
+    1032028
+   ],
+   "reflect": [
+    {
+     "text": "When Jacob was left alone in the dark, God wrestled with him to break his self-reliance. By striking Jacob's hip, God brought weakness to his body so that his spirit might become strong. Jacob could no longer fight in his own human strength. Instead of fighting back, he held fast to the Lord and refused to let go until he was blessed.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Before blessing him, God asked for his name. Speaking the name Jacob meant admitting who he had always been: a deceiver. By confessing his guilt and yielding his self-will, Jacob surrendered completely. God showed great mercy by forgiving him and giving him a new name, Israel, refusing to let his past failures define him any longer.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jacob walked away with a limp, but his heart was changed. As F. B. Meyer notes, this physical weakness served to guard Jacob against pride and arrogance after prevailing with God. Prevailing did not mean overpowering God; it meant clinging to Him in helpless trust. The injury slowed Jacob down, turning his focus away from earthly strength to rely completely on the unseen God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What areas of self-reliance or past guilt do you need to confess and surrender to God?",
+    "How can a painful weakness help you cling more closely to the Lord instead of trusting your own strength?"
+   ],
+   "prayer": "Lord God, forgive us for trying to fight our battles in our own strength. Thank You for Your mercy that does not define us by our past sins. Teach us to cling to You in humble trust, even through painful trials, knowing You use our weakness for our good.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 32:25",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "From Jacob to Israel",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jacob-israel"
+    },
+    "D3": {
+     "author": "Warren Gage",
+     "work": "The God of Peniel",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-of-peniel"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

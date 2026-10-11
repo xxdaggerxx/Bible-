@@ -1,0 +1,81 @@
+{
+ "id": "49-005-001",
+ "title": "Imitators of God",
+ "refs": [
+  "Ephesians 5:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 49005001,
+   "end": 49005002,
+   "ref": "Ephesians 5:1-2",
+   "ranges": [
+    [
+     49005001,
+     49005002
+    ]
+   ],
+   "title": "\"Be Imitators of God\"",
+   "key_verse": [
+    49005001,
+    49005001
+   ],
+   "reflect": [
+    {
+     "text": "Children often resemble their parents in how they look and act. In the same way, we are called to copy our heavenly Father. As His beloved children, we are meant to show His moral character, including His love, goodness, and holiness. We will never be infinite like God, but the Holy Spirit helps us mirror His ways in our everyday human lives. We learn what true love and goodness look like from God's Word rather than from the changing standards around us.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Imitating God is a continuous, daily practice. It means turning away immediately from our old sinful habits and putting on the holy way of life that Jesus prepared for us when He rose from the grave. Our minds need constant contact with God through prayer and Scripture to stay renewed, keeping us from slipping back into the world's ways.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "To truly reflect God's heart, we must also step away from frantic hurry. Taking time for quiet rest is an essential practice that restores our perspective and emotional health. When we slow down, we are much better prepared to walk in gentle, self-giving love just as Christ loved us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of your life do you need to slow down so you can show God's love more clearly?",
+    "How can setting aside time for Scripture and prayer today help you put away old habits?"
+   ],
+   "prayer": "Heavenly Father, thank You for accepting us as Your beloved children. Please quiet our hurried hearts and restore our minds as we spend time with You in Your Word. Teach us by Your Holy Spirit to put away selfish habits and walk in the sacrificial love of Christ.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ephesians 5:1",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Be Still",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/be-still?ga=testimonial-resources"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "God's Communicable Attributes",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-communicable-attributes"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

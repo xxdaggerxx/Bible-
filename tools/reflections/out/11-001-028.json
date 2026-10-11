@@ -1,0 +1,66 @@
+{
+ "id": "11-001-028",
+ "title": "David Renews His Oath to Bathsheba",
+ "refs": [
+  "1 Kings 1:28-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11001028,
+   "end": 11001031,
+   "ref": "1 Kings 1:28-31",
+   "ranges": [
+    [
+     11001028,
+     11001031
+    ]
+   ],
+   "title": "David Keeps His Promise",
+   "key_verse": [
+    11001030,
+    11001030
+   ],
+   "reflect": [
+    {
+     "text": "Earlier, Nathan showed he was a true prophet by confronting past sin and stepping in to protect David, Bathsheba, and Solomon. Bathsheba then approached David to warn him about the danger facing the royal succession. Even though David was old and ailing, this urgent need moved him to act. The king gathered the strength he needed to carry out the will of God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "David called Bathsheba back into his presence to speak directly with her. As both her ruler and her husband, he swore an oath that Solomon would sit on the throne in his place that very day. He anchored his promise in the living God, who had redeemed him, rescuing his life through every trial.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Bathsheba responded by bowing facedown to the ground in humble homage. She showed deep respect and honored the king for being true to his word. Even in his weakness, David chose to be faithful to what God had called him to do.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel tired or weak, how can you look to God for the strength to do what is right?",
+    "How can you show appreciation to people who follow through on their promises?"
+   ],
+   "prayer": "Lord, grant us strength to do your will even when we feel weary or weak. Help us to be faithful to our word and keep the promises we make. Teach us to honor and encourage those who act with integrity. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 80: 1 Kings 1:11–31",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-80-1-kings-1-1131.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "10-006-005",
+ "title": "Uzzah Touches the Ark",
+ "refs": [
+  "2 Samuel 6:5-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10006005,
+   "end": 10006011,
+   "ref": "2 Samuel 6:5-11",
+   "ranges": [
+    [
+     10006005,
+     10006011
+    ]
+   ],
+   "title": "Reverence for a Holy God",
+   "key_verse": [
+    10006007,
+    10006007
+   ],
+   "reflect": [
+    {
+     "text": "David and the people were rejoicing with loud music and celebration. Yet in their excitement, they carried the sacred ark on a cart pulled by oxen. They copied the Philistines instead of having priests carry the ark on their shoulders as God had clearly commanded. When the oxen stumbled and Uzzah reached out to steady the ark, God struck him down. Even though Uzzah had good intentions, his actions did not excuse disobeying God's revealed law.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This sudden death shocked David and turned a joyful feast into a disaster. God was not acting with unfair harshness. Instead, His holy character never changes. Holiness means God is completely pure and set apart from evil. The surprising truth is not that God acted against disobedience here, but that He shows patient restraint toward our daily sins so often.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Later, when the ark stayed with Obed-edom, God poured out blessings on his whole home. God truly desires to bless His people. Yet to receive His blessing, we need genuine reverence, which is deep honor and respect for who He is, along with careful obedience to His Word.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can we show true reverence for God's holiness in the way we worship and live?",
+    "Are there areas where good intentions have replaced careful obedience to God's Word in our lives?"
+   ],
+   "prayer": "Lord God, You are holy, pure, and worthy of our deepest respect. Thank You for Your great patience toward our daily sins. Teach us to listen to Your Word and honor You with sincere, obedient hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Uzzah’s Error",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/uzzahs-error"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 46: 2 Samuel 6:1–11",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-46-2-samuel-6-111.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "24-032-026",
+ "title": "The LORD Answers Jeremiah",
+ "refs": [
+  "Jeremiah 32:26-35"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 24032027,
+   "end": 24032027,
+   "ref": "Jeremiah 32:27",
+   "ranges": [
+    [
+     24032027,
+     24032027
+    ]
+   ],
+   "title": "\"Is Anything Too Difficult for Me?\"",
+   "key_verse": [
+    24032027,
+    24032027
+   ],
+   "reflect": [
+    {
+     "text": "Life can bring overwhelming storms and obstacles that seem completely impossible to overcome. When troubles pile up, we are often tempted to panic or doubt God's care. From a human perspective, our own strength and resources are never enough to win every battle. Yet God steps in to remind us of who He is. He is the Lord of all creation, and nothing is ever too hard for Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Throughout the Bible, God has brought deliverance through seemingly impossible means, just as He did when Gideon won an improbable victory. The Lord stays entirely in control of every circumstance. No illness, addiction, or broken relationship is beyond His power to heal and restore. We can rest with steady confidence, knowing that all things are possible with Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When severe crises shake our lives, remembering how great God is changes our whole outlook. Instead of repeating words of fear and despair, we can choose to speak declarations of faith in our heavenly Father.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What difficult burden in your life feels too big for you to handle on your own right now?",
+    "How can trusting that nothing is too hard for God help you replace anxious words with faith today?"
+   ],
+   "prayer": "Lord God, when life feels overwhelming and our trials look impossible, remind us that nothing is too hard for You. Forgive us for the times we panic and let fear guide our words. Please give us peace to rest in Your great power and love today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Pastor Jeff Schreve",
+     "work": "How Big is Your Daddy?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/how-big-is-your-daddy-from-his-heart-week-of-april-17.html"
+    },
+    "D2": {
+     "author": "Poh Fang Chia",
+     "work": "Empty Fort Strategy",
+     "site": "Our Daily Bread",
+     "url": "https://military.odb.org/empty-fort-strategy/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,68 @@
+{
+ "id": "08-001-019",
+ "title": "The Return to Bethlehem",
+ "refs": [
+  "Ruth 1:19-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 8001019,
+   "end": 8001022,
+   "ref": "Ruth 1:19-22",
+   "ranges": [
+    [
+     8001019,
+     8001022
+    ]
+   ],
+   "title": "Bitter Days and Quiet Hope",
+   "key_verse": [
+    8001021,
+    8001021
+   ],
+   "reflect": [
+    {
+     "text": "When Naomi returned to Bethlehem, she did not hide her deep sorrow behind a false front. She told the town to call her Mara, meaning bitter, because she felt completely empty. She knew her pain was not random misfortune, but that God's sovereign hand was at work in her life. Even in her complaint, she called on the Almighty, the God who gives strength and care when we are at our lowest point.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "At that moment, Naomi could only see her loss, but she could not see God's whole plan. As F. B. Meyer noted, we cannot judge how God deals with us until the entire plan is allowed to work out. Naomi felt alone, yet God had given her Ruth, and she had returned under the shelter of the Lord's wings. God had even brought her home right at the start of the barley harvest, already quietly preparing food, hope, and new life for her future.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face sorrow, how can you be completely honest with God while still trusting his sovereign care?",
+    "What quiet mercies or provisions might God be giving you today, even if you feel empty?"
+   ],
+   "prayer": "Lord God, thank you that we can bring our grief and pain honestly before you. Help us remember that you see the whole plan of our lives when we can only see our losses. Keep us safe under the shelter of your wings, and help us trust your quiet provision. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ruth 1:20",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "A Theology of Grief",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-may-14-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

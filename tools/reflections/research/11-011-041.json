@@ -1,0 +1,19 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://utmost.org/",
+  "https://www.biblegateway.com/passage/?search=1+Kings+11%3A41-43&version=ESV",
+  "https://www.biblegateway.com/passage/?search=1+Kings+11%3A41-43&version=NIV",
+  "https://www.biblegateway.com/passage/?search=1+Kings+11%3A42-43&version=ESV",
+  "https://www.biblegateway.com/passage/?search=1+Kings+11%3A43&version=NIV",
+  "https://www.biblegateway.com/resources/asbury-bible-commentary/f-solomons-wives-and-adversaries-11-1-43",
+  "https://www.biblegateway.com/resources/matthew-henry/1Kgs.11.41-1Kgs.11.43",
+  "https://www.biblegateway.com/verse/en/1%20Kings%2011:41",
+  "https://www.crosswalk.com/",
+  "https://www.gty.org/",
+  "https://www.ligonier.org/"
+ ],
+ "cost": 0.030953,
+ "model": "google/gemini-3.8-flash"
+}

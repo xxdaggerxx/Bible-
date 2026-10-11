@@ -1,0 +1,152 @@
+{
+ "book": 19,
+ "chapter": 82,
+ "first": 1,
+ "last": 8,
+ "ref": "Psalms 82",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "God stands as the supreme Judge over all human courts and rulers. Earthly judges and magistrates are called gods because God appointed them to represent His authority and enforce justice on earth. Even the most powerful rulers must answer to Him, because He watches everything they do.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals believe the gods here are angelic beings or spiritual rulers rather than human judges.",
+     "sources": [
+      "https://www.desiringgod.org/articles/putting-the-gods-in-their-place",
+      "https://bible.org/seriespage/psalm-82"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some modern scholars view this scene as a heavenly council where Israel's God confronts and condemns the pagan gods of the nations.",
+     "sources": [
+      "https://classic.net.bible.org/bible.php?book=Psa&chapter=82"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "God directly confronts corrupt leaders for handing down dishonest rulings. Instead of defending the right, they show favoritism to the wicked and help them get away with wrong. The musical pause calls on the guilty judges to stop and think about their sins.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "God reminds rulers of what their real duty has always been. They are called to defend the weak and orphans, who lack money or influence to hire help. Upholding the rights of helpless people reflects the character of God Himself.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Rulers must do more than listen to cases; they must step in and rescue the needy. Greedy and powerful people often use dishonest legal tricks to trap the poor. A godly government acts as a shield to deliver victims from cruel oppressors.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Unjust judges refuse to learn God's truth and choose to stumble in moral darkness. When those in charge of the law are corrupt, the basic order of human society falls apart. Injustice in high places shakes a whole country like an earthquake shakes a building.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals understand this verse as describing corrupt spiritual beings whose misrule brings chaos across the entire world.",
+     "sources": [
+      "https://www.desiringgod.org/articles/putting-the-gods-in-their-place",
+      "https://bible.org/seriespage/psalm-82"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "God gave magistrates a noble title to remind them of their sacred task. They were called gods and children of the Most High because they were appointed to carry out His justice on earth. The high title belongs to their office, not to their personal nature.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Calvin"
+   ],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals believe these titles describe created heavenly beings or angels appointed over the nations rather than human rulers.",
+     "sources": [
+      "https://www.desiringgod.org/articles/putting-the-gods-in-their-place",
+      "https://bible.org/seriespage/psalm-82"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "No title or public honor can keep these judges from facing physical death. In the grave, they will be stripped of their offices and laid low just like ordinary men. Because they misused their authority, God will bring them down in judgment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals argue that being told they will die like men shows the beings addressed are supernatural powers rather than humans.",
+     "sources": [
+      "https://bible.org/seriespage/psalm-82",
+      "https://www.desiringgod.org/articles/putting-the-gods-in-their-place"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "Because human courts fail, the psalmist asks God to step forward and rule the earth Himself. Every nation belongs to the Lord, so He has the right to set all wrongs right. This prayer ultimately points to Jesus Christ coming to reign over all people in perfect justice.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

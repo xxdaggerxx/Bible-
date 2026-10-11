@@ -1,0 +1,128 @@
+{
+ "id": "02-022-001",
+ "title": "Property Laws",
+ "refs": [
+  "Exodus 22:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2022006,
+   "end": 2022006,
+   "ref": "Exodus 22:6",
+   "ranges": [
+    [
+     2022006,
+     2022006
+    ]
+   ],
+   "title": "\"He Who Started the Fire\"",
+   "key_verse": [
+    2022006,
+    2022006
+   ],
+   "reflect": [
+    {
+     "text": "In biblical times, dry brush was always near the fields. If someone lit a small brushfire carelessly, the sparks could catch the thorns and quickly destroy an entire harvest of grain. God's law required the person who started the blaze to pay back everything that was lost. Physical crops could be replaced, but spiritual damage is far more dangerous. As Charles Spurgeon noted, when bad influences are spread, \"the result is irretrievable.\" While burned grain can be repaid, spiritual harm done to someone's soul cannot easily be undone.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Careless words and jealousy can spread through a church just like a wildfire. Envy quickly burns away peace and destroys the good fruit of God's work among His people. While those who feed an argument share in the guilt, the greatest blame belongs to the person who lit the first spark. Because of this danger, we must examine our own hearts and pray to be peacemakers who put out strife rather than helping it spread.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Have any of your words or attitudes recently risked sparking conflict or bad habits among others?",
+    "How can you actively protect peace and unity in your church this week?"
+   ],
+   "prayer": "Lord, search our hearts and keep us from lighting fires of conflict or jealousy. Guard our tongues so that we do not cause spiritual harm to those around us. Help us to be peacemakers who bring calm and protect the unity of Your people. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 24",
+     "on": "Exodus 22:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "Make Restitution - Truth For Life - August 24",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-august-24-2022.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 2022001,
+   "end": 2022015,
+   "ref": "Exodus 22:1-15",
+   "ranges": [
+    [
+     2022001,
+     2022015
+    ]
+   ],
+   "title": "Making Things Right",
+   "key_verse": [
+    2022005,
+    2022005
+   ],
+   "reflect": [
+    {
+     "text": "F. B. Meyer observed that in daily life there is often \"far too little\" true restitution. When we damage someone's property or hurt them through carelessness, we often try to smooth things over with extra politeness instead of admitting our fault. God calls us to care for our neighbor's interests as our own. We must take good care of borrowed goods and be willing to confess and repair the harm we cause.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "These legal demands also remind us that God's justice is never set aside. In our spiritual lives, our sin created a debt that we could never pay back on our own. The clear demand that justice must be satisfied points directly to the cross of Jesus Christ, where He paid the full penalty to satisfy God's justice on our behalf.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there someone you have harmed through carelessness whom you need to approach and make amends with?",
+    "How does knowing that Jesus fully satisfied God's justice encourage you today?"
+   ],
+   "prayer": "Father, help us to love our neighbors by respecting what belongs to them and acting responsibly. Give us humble hearts to confess our mistakes and make things right when we cause harm. Thank You for Jesus, who paid our full debt and satisfied Your justice for us. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 22:5",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D4": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Exodus 22, John 1, Job 40, 2 Corinthians 10",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/exodus-22-john-1-job-40-2-corinthians-10/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "God's law for Israel treated property with great seriousness. If someone stole livestock, let their animals wander into a neighbor's vineyard, or ruined a borrowed tool, they could not simply offer an apology. They were required to make full restitution, which meant paying back what was damaged plus an extra penalty to make up for the loss. If a thief had no money, he had to work off his debt. These laws preserved true justice by making sure wrongs were actively made right.",
+     "problem": "The text states that someone who let animals wander into a vineyard or ruined a borrowed item had to make full restitution by 'paying back what was damaged plus an extra penalty.' However, neither Exodus 22 nor the devotionals teach an extra penalty for straying animals (v. 5) or borrowed property (v. 14); D4 specifies that the extra penalty applied to thieves."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

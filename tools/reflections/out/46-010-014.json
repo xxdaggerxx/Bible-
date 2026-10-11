@@ -1,0 +1,73 @@
+{
+ "id": "46-010-014",
+ "title": "Flee from Idolatry",
+ "refs": [
+  "1 Corinthians 10:14-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46010014,
+   "end": 46010022,
+   "ref": "1 Corinthians 10:14-22",
+   "ranges": [
+    [
+     46010014,
+     46010022
+    ]
+   ],
+   "title": "Fleeing Every Kind of Idol",
+   "key_verse": [
+    46010014,
+    46010014
+   ],
+   "reflect": [
+    {
+     "text": "When the apostle Paul tells us to run from idolatry, he warns that false worship is dangerous. The gods that people invent do not really exist, but false religions are tied to real demonic deception. When we come to the Lord's table to share the bread and the cup, we have true fellowship with Christ. Because of this bond, we cannot take part in rites or worship services of other faiths. Sharing in them provokes the Lord to jealousy, because He deserves our complete devotion.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Running from idols is not just about avoiding false religions or physical statues. It also means looking at the quiet idols hidden inside our own hearts. We often turn good things into false masters when we crave human approval, insist on always being right, or demand control over our lives. These secondary things easily begin to ask for the love and adoration that belong to God alone.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The power of these false masters weakens when our hearts are captivated by the beauty and love of Jesus. Knowing we are secure children of God gives us the strength to put away our idols and rest in His grace. At the same time, we pray against the spiritual powers that keep others trapped in false religions, asking God to help our lives point clearly to Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What hidden desires, such as needing control or human praise, might be trying to take God's place in your heart today?",
+    "How does remembering your close fellowship with Christ help you stay completely loyal to Him?"
+   ],
+   "prayer": "Lord, thank You for bringing us into close fellowship with Jesus and making us Your secure children. Please show us the hidden idols of our hearts, like our desire for control and approval, and help us turn away from them. Guard us from spiritual deception, and keep our eyes fixed on Your great love.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Demons and Idols",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/demons-and-idols"
+    },
+    "D2": {
+     "author": "Scotty Smith",
+     "work": "A Prayer for Not Being Idle about Our Idols",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/scotty-smith/a-prayer-for-not-being-idle-about-our-idols/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

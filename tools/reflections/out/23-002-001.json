@@ -1,0 +1,75 @@
+{
+ "id": "23-002-001",
+ "title": "The Mountain of the House of the LORD",
+ "refs": [
+  "Isaiah 2:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23002001,
+   "end": 23002004,
+   "ref": "Isaiah 2:1-4",
+   "ranges": [
+    [
+     23002001,
+     23002004
+    ]
+   ],
+   "title": "Going Up to the Mountain of the Lord",
+   "key_verse": [
+    23002003,
+    23002003
+   ],
+   "reflect": [
+    {
+     "text": "Daily life can feel like living in a low, foggy valley filled with worry and earthly cares. These worries can choke out what is good in us, leaving us feeling anxious and gloomy. God invites us to rise higher, like people leaving damp lowlands to climb into the clear, bracing air of a mountain summit. When we seek communion with God—which means spending quiet time close to Him—the Holy Spirit cuts the cords keeping our spirits bound to worldly fears.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When people gather to learn from the Lord, true peace follows. In our world, nations invent terrible weapons and train for conflict. Human trade, treaties, and clever rules cannot heal our anger. As Charles Spurgeon wrote, \"only the Lord Jesus can turn this lion into a lamb.\" Real peace comes only when the Prince of Peace changes human hearts by His grace, which is His undeserved kindness.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When God changes our hearts, destructive anger is taken away and turned into useful tools for good, just like swords beaten into plowshares. We are invited both to climb up to God in prayer and to ask Him to bring His lasting peace to every nation.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly cares or anxieties are keeping your thoughts trapped in the valley today?",
+    "How can you ask the Prince of Peace to soften your heart toward others right now?"
+   ],
+   "prayer": "Lord, lift our hearts above the anxious mists of this world into close fellowship with You. Renew our hearts by Your grace and remove any harsh feelings that harm others. Please work in our world, end war, and teach all people to walk in Your peaceful ways. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 4",
+     "on": "Isaiah 2:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Dec. 15",
+     "on": "Isaiah 2:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

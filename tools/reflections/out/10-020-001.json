@@ -1,0 +1,73 @@
+{
+ "id": "10-020-001",
+ "title": "Sheba’s Rebellion",
+ "refs": [
+  "2 Samuel 20:1-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10020001,
+   "end": 10020026,
+   "ref": "2 Samuel 20:1-26",
+   "ranges": [
+    [
+     10020001,
+     10020026
+    ]
+   ],
+   "title": "Standing Firm in Times of Division",
+   "key_verse": [
+    10020002,
+    10020002
+   ],
+   "reflect": [
+    {
+     "text": "When trouble broke out, many people deserted David to follow a rebel, but the men of Judah stayed close to their king. In our own lives, we often come to places where the path divides. The true test of our faith and love is whether we choose to stay. Like Ruth choosing to cling to Naomi, we are called to hold fast to Jesus, even when the crowd turns away or our own selfish desires tempt us to stray.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Internal bickering leaves communities weak and open to troublemakers who want to stir up harm. When danger threatened her town, an unnamed wise woman refused to sit back as a passive bystander. Instead of giving in to panic, she took the initiative to speak with Joab and find a peaceful way out of the crisis.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Her courage and practical counsel preserved an entire city from ruin, even though she never sought praise or recognition for herself. When division and conflict threaten to cause damage around us, stepping forward with wise words and quiet courage can protect others and bring peace.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When it feels easy to drift with the crowd, what helps you stay faithful to Jesus?",
+    "Is there a situation of conflict around you where you can speak up with calm wisdom instead of staying on the sidelines?"
+   ],
+   "prayer": "Lord, give us faithful hearts that cling to You even when others walk away. Grant us the courage and wisdom to pursue peace rather than staying passive in times of trouble. Use our words and actions to protect and build up the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Samuel 20:2",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 71: 2 Samuel 20:14–22",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-71-2-samuel-20-1422.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

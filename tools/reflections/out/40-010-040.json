@@ -1,0 +1,82 @@
+{
+ "id": "40-010-040",
+ "title": "The Reward of Service",
+ "refs": [
+  "Matthew 10:40-42"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40010040,
+   "end": 40010042,
+   "ref": "Matthew 10:40-42",
+   "ranges": [
+    [
+     40010040,
+     40010042
+    ]
+   ],
+   "title": "Serving God in the Small Things",
+   "key_verse": [
+    40010042,
+    40010042
+   ],
+   "reflect": [
+    {
+     "text": "We often imagine that serving God requires grand missions in distant places. Many of us worry that following Jesus demands extreme or dangerous sacrifices. Yet God usually calls us to humble unselfishness right where we live. Our first mission field begins with the specific people placed directly in our care, such as our family and neighbors. Simple, everyday tasks at home are genuine ministry in the eyes of God.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jesus promises that even giving a cup of cold water in His name has eternal value. As Charles Spurgeon noted, the Lord looks not at our cost or skill, but at our motive. When we show kindness to a disciple simply because they belong to Christ, the Lord observes it. He does not reward us based on how impressive our deed was, but according to His grace, which means His free and unearned kindness.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "We must learn faithfulness in small, local duties before seeking larger platforms. Anyone can offer a kind word or a helping hand to God's people, no matter how poor or lowly we feel. When we cheerfully welcome and serve others for Jesus' sake, we are welcoming Christ Himself, and our reward is secure.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Who has God placed in your daily life right now who needs a simple act of care?",
+    "How does knowing that Jesus values the smallest gesture change the way you view your everyday routines?"
+   ],
+   "prayer": "Lord Jesus, thank You for noticing even the smallest acts of love done in Your name. Help us to serve our families and neighbors with cheerful hearts. Teach us to be faithful in ordinary duties, trusting in Your grace and certain reward. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 16",
+     "on": "Matthew 10:42",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Noelle Dey",
+     "work": "Standing On Your Mission Field",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/encouragement-caf-june-27-2016.html"
+    },
+    "D3": {
+     "author": "Chuck Swindoll",
+     "work": "What Serving God Must Be",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/church-leaders/what-serving-god-must-be"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "07-006-033",
+ "title": "The Sign of the Fleece",
+ "refs": [
+  "Judges 6:33-40"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7006033,
+   "end": 7006040,
+   "ref": "Judges 6:33-40",
+   "ranges": [
+    [
+     7006033,
+     7006040
+    ]
+   ],
+   "title": "Patience for a Hesitant Faith",
+   "key_verse": [
+    7006040,
+    7006040
+   ],
+   "reflect": [
+    {
+     "text": "When enemy armies gathered against Israel, the Spirit of the Lord came upon Gideon to lead. Even so, Gideon struggled with doubt. Asking God for signs with a fleece of wool showed that his faith was hesitant, even though God had already shown His power in the past. Yet God was kind and patient. Instead of scolding Gideon, He met him in his weakness and gave him the signs he asked for.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God can still use everyday circumstances or the wise words of Christian friends and leaders to confirm His direction for our lives. But we should not expect special physical signs to be the normal way God guides us today. Big decisions should never rest on signs alone.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Today, God primarily guides us through the wisdom found in the Bible. Any direction we receive through life's circumstances will always agree with His Word. As we follow what the Scriptures teach, we can make wise choices with peace, knowing we do not have to live in fear of missing God's will.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you leaning on God's Word for guidance, or are you waiting for special signs before you act?",
+    "How does knowing God was patient with Gideon encourage you when you struggle with doubt?"
+   ],
+   "prayer": "Lord God, thank You for Your gentle patience when our faith is weak and full of questions. Help us not to depend on extra signs, but to trust the clear wisdom of Your Word. Give us confidence to make wise choices that honor You each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Gideon and the Fleece",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gideon-and-fleece"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "The Voice of Circumstance",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/harvest-daily-devotional-02-or-18-or-03-1239693.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

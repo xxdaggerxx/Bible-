@@ -1,0 +1,60 @@
+{
+ "id": "01-027-001",
+ "title": "Isaac Blesses Jacob",
+ "refs": [
+  "Genesis 27:1-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1027001,
+   "end": 1027029,
+   "ref": "Genesis 27:1-29",
+   "ranges": [
+    [
+     1027001,
+     1027029
+    ]
+   ],
+   "title": "Trusting God Without Deceit",
+   "key_verse": [
+    1027019,
+    1027019
+   ],
+   "reflect": [
+    {
+     "text": "Jacob wanted his father Isaac's special blessing, but he chose to secure it through deceit. He dressed in Esau's finest clothes, covered his hands with goatskins, and lied directly to his blind father. When Jacob hesitated before the scheme, he was not worried about honoring his father or doing what was right before God. He was merely afraid of getting caught. Even though Jacob received the words of blessing, the Bible makes it clear that God did not approve of his deceitful ways.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Dishonesty always leads to painful consequences. Jacob's lies broke his family apart and forced him to flee into exile right away. Later in life, he would feel the sting of deceit himself when his uncle Laban tricked him. God is sovereign, which means He is in complete control and His plans cannot be stopped by human weakness. Even so, God's caring guidance never gives us an excuse to sin. We do not need to use dishonest schemes to bring about what God has promised.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When are you tempted to take dishonest shortcuts instead of waiting on God?",
+    "How does knowing that God is in control help you choose honesty even in difficult situations?"
+   ],
+   "prayer": "Heavenly Father, forgive us for the times we try to take matters into our own hands through deceit or selfish fear. Help us to trust Your good purposes and honor You with truthful hearts. Teach us to wait on Your timing rather than taking sinful shortcuts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Jacob Deceives Isaac",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jacob-deceives-isaac"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

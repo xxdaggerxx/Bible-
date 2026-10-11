@@ -1,0 +1,142 @@
+{
+ "id": "42-015-011",
+ "title": "The Parable of the Prodigal Son",
+ "refs": [
+  "Luke 15:11-32"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 42015020,
+   "end": 42015020,
+   "ref": "Luke 15:20",
+   "ranges": [
+    [
+     42015020,
+     42015020
+    ]
+   ],
+   "title": "\"His Father Saw Him\"",
+   "key_verse": [
+    42015020,
+    42015020
+   ],
+   "reflect": [
+    {
+     "text": "When we chase after our own selfish pleasures, we eventually end up in deep spiritual emptiness. Guilt and regret can easily trick us into believing we only qualify for partial forgiveness. We might think God will keep us at arm's length or treat us like hired workers. But our heavenly Father looks upon us with tender compassion. When we turn back to Him, He does not offer half-hearted acceptance. He receives us with joy and fully restores us as His beloved children.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "It is also deeply painful when we have to watch a child, family member, or friend wander away from faith. That waiting brings heavy heartbreak and weariness to our souls. Jesus gave us this story to reassure grieving families that God sees our sorrow and shares our tears. God continuously scans the horizon, eagerly watching for the lost to return home. As we wait, He gives us spiritual courage and faith to keep trusting His mercy.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you holding back from God because you feel you only qualify for partial forgiveness?",
+    "Who in your life has wandered from faith, and how can you rest in the truth that God shares your grief for them?"
+   ],
+   "prayer": "Father, thank You for watching for us with tender compassion whenever we lose our way. Give us the faith to believe that You welcome repentant sinners completely and without hesitation. Strengthen our weary hearts as we pray for loved ones who have drifted, trusting that You desire to bring them home. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Jessica Van Roekel",
+     "work": "Lost But Found",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/lost-but-found-the-crosswalk-devotional.html"
+    },
+    "D4": {
+     "author": "Sarah Geringer",
+     "work": "Watching the Horizon for Your Prodigal",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-august-31-2020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 42015011,
+   "end": 42015032,
+   "ref": "Luke 15:11-32",
+   "ranges": [
+    [
+     42015011,
+     42015032
+    ]
+   ],
+   "title": "Welcomed Home and Called to Rejoice",
+   "key_verse": [
+    42015032,
+    42015032
+   ],
+   "reflect": [
+    {
+     "text": "Hard times and suffering can tempt us to doubt God's goodness and wander away. When we realize our need, we often feel completely unworthy to return to Him. Yet Jesus shows us that God receives us as a loving Father, not a harsh judge. As Charles Spurgeon wrote, \"the Father's bosom is the place for penitent confessions.\" Because Christ has already taken away our condemnation, we can run to God with honest sorrow for our daily sins. He meets our repentance with lavish grace and joyous welcome.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    },
+    {
+     "text": "Jesus also warns us through the older brother, who stayed home but had a cold and distant heart. F. B. Meyer pointed out that while the younger son fell into sins of the body, the older brother was trapped by sins of disposition, including jealousy, bitterness, and self-righteous pride. Under a respectable surface, he resented his father's kindness. His rule-keeping led him to demand harsh judgment rather than rejoice over a brother who had been rescued from death.",
+     "sources": [
+      "D2",
+      "D6"
+     ]
+    },
+    {
+     "text": "This parable asks us to examine our own attitudes toward others. It is easy to look down on people who have lived recklessly and begrudge the mercy they receive. But God calls us to put away all resentment and celebrate alongside Him. When someone who was lost comes home to the Father, our calling is to open our arms and share in His generous love.",
+     "sources": [
+      "D2",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you approach God as a frightened criminal or as a beloved child who comes to a loving Father?",
+    "Is there any bitterness or self-righteous judgment in your heart toward someone who has received God's mercy?"
+   ],
+   "prayer": "Heavenly Father, thank You for receiving us with lavish grace whenever we turn to You in repentance. Search our hearts and clear away any quiet pride, jealousy, or resentment toward others. Teach us to share Your joy and welcome returning wanderers with open arms. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 18",
+     "on": "Luke 15:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Luke 15:28",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D5": {
+     "author": "Vivian Bricker",
+     "work": "Coming Home to the Father",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/coming-home-to-the-father-the-crosswalk-devotional.html"
+    },
+    "D6": {
+     "author": "Mike DeVries",
+     "work": "The Embrace",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-sept-28-2007-11555380.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

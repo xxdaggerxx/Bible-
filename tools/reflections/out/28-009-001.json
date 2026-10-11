@@ -1,0 +1,67 @@
+{
+ "id": "28-009-001",
+ "title": "Israel’s Punishment",
+ "refs": [
+  "Hosea 9:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 28009001,
+   "end": 28009017,
+   "ref": "Hosea 9:1-17",
+   "ranges": [
+    [
+     28009001,
+     28009017
+    ]
+   ],
+   "title": "A Watchman Along with God",
+   "key_verse": [
+    28009008,
+    28009008
+   ],
+   "reflect": [
+    {
+     "text": "Hosea speaks of the prophet standing as a watchman with God. F. B. Meyer notes that watching with God is a rare and special privilege. It means standing quietly on the watchtower to see what God is doing and warning others when danger approaches. It also means sharing in God's own heart, feeling some of His sorrow and tears over people who drift into rebellion.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Israel lost its place of honor because the people fell into deep corruption and refused to listen. Meyer reminds us that we must watch our own hearts while we watch with God. Spiritual decay is always around us in this world. We can easily stumble into the same mistakes unless we keep close to the Holy Spirit and let His grace protect us from sin.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Watching also leads directly into prayer. Meyer points out that prayer is not about forcing God to act against His will. Instead, it is stepping into God's willingness to bless, like launching a heavy boat onto a flowing stream and letting His own power carry us along.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you need to watch your heart more closely against temptation?",
+    "How can you pray today in a way that trusts God's willingness to help and guide you?"
+   ],
+   "prayer": "Lord God, thank You for inviting us to walk with You and notice what You are doing in the world. Guard our minds and hearts against sin by the power of Your Holy Spirit. Teach us to rest our prayers upon Your willing love and let Your strength carry us forward today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hosea 9:8",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

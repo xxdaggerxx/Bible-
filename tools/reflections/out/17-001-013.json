@@ -1,0 +1,67 @@
+{
+ "id": "17-001-013",
+ "title": "Queen Vashti Deposed",
+ "refs": [
+  "Esther 1:13-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 17001013,
+   "end": 17001022,
+   "ref": "Esther 1:13-22",
+   "ranges": [
+    [
+     17001013,
+     17001022
+    ]
+   ],
+   "title": "True Authority in the Home",
+   "key_verse": [
+    17001022,
+    17001022
+   ],
+   "reflect": [
+    {
+     "text": "King Xerxes sent an edict across his empire declaring that every man should be master of his own home. Yet real authority in a family is not built on proud commands or selfish control. It is given by Christ to be used in godly care. When household leadership reflects God's own love, it does not clash with what is right, but brings peace and order.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "True leadership must be earned through character rather than demands. As F. B. Meyer writes, \"love is the source of the truest authority.\" If we want honor and respect from those in our care, we must first show them love and a spirit of sacrifice. We follow Christ by treating others as we wish to be treated.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even in the middle of these worldly decrees, God was quietly preparing his plan to protect his people. Though his name is not mentioned on the page, his presence is woven through every event. We can rest patiently in him, knowing that God works behind the scenes and prepares help for his people before trouble even arrives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you show Christ's love and sacrifice to the people in your home or care today?",
+    "How does knowing that God prepares help behind the scenes give you peace when facing uncertain times?"
+   ],
+   "prayer": "Lord, teach us to lead and serve others with gentle love and humble sacrifice, just as Jesus did. Help us to treat those around us with the honor and patience we hope to receive. When life feels uncertain, remind us that you are quietly working all things for our good. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Esther 1:22",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

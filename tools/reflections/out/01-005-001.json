@@ -1,0 +1,66 @@
+{
+ "id": "01-005-001",
+ "title": "The Descendants of Adam",
+ "refs": [
+  "Genesis 5:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1005001,
+   "end": 1005017,
+   "ref": "Genesis 5:1-17",
+   "ranges": [
+    [
+     1005001,
+     1005017
+    ]
+   ],
+   "title": "God's Sacred Gift of Marriage",
+   "key_verse": [
+    1005002,
+    1005002
+   ],
+   "reflect": [
+    {
+     "text": "At the very beginning of human history, God made mankind in His own likeness. When He created male and female, He gave them His special blessing. From the very start, marriage was not an accidental human idea. It was a sacred gift designed and blessed directly by God as a foundation for human life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Today, the world around us often treats marriage very lightly. Modern culture can reduce this sacred bond to a shallow prize or a casual agreement that people discard when things get difficult. Over time, even couples who love God can find that their relationship has grown distant or neglected under the pressures of daily life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet God offers hope to relationships that have lost their closeness. Spouses whose marriage has grown dry or shallow can pursue a genuine fresh start through Christ. By setting aside dedicated time to speak honestly, face areas of neglect, and pray together, couples can invite the Lord to renew and strengthen their sacred bond.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways might you be viewing marriage more like the culture does rather than as God's sacred gift?",
+    "What is one practical step you can take to communicate more honestly and bring renewal to your relationship?"
+   ],
+   "prayer": "Lord, thank You for creating marriage as a holy and blessed gift from the very beginning. Help us to value our relationships as You value them, rather than following the casual habits of the world. Give couples the grace to talk honestly, heal past neglect, and find fresh strength in Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jennifer Waddle",
+     "work": "The Gift of Marriage",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-couples-devotional/crosswalk-couples-devotional-march-18.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

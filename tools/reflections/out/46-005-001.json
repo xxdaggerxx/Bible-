@@ -1,0 +1,83 @@
+{
+ "id": "46-005-001",
+ "title": "Immorality Rebuked",
+ "refs": [
+  "1 Corinthians 5:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46005006,
+   "end": 46005008,
+   "ref": "1 Corinthians 5:6-8",
+   "ranges": [
+    [
+     46005006,
+     46005008
+    ]
+   ],
+   "title": "\"Christ, Our Passover Lamb, Has Been Sacrificed\"",
+   "key_verse": [
+    46005007,
+    46005007
+   ],
+   "reflect": [
+    {
+     "text": "A tiny pinch of yeast works its way quietly through a whole lump of dough. In the same way, small compromises and hidden sins do not stay small. If we leave them alone, they grow, spreading through our personal lives and hurting our Christian community. That is why Scripture urges us to take sin seriously rather than excusing it.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Before the first Passover in Egypt, God's people cleared every speck of yeast from their homes. Paul explains that Jesus is our true Passover Lamb. He gave His pure, blemish-free life on the cross to pay completely for our sins. Because of His sacrifice, God already sees us as cleansed and new. Letting ongoing sin linger in our lives contradicts what Jesus died to accomplish.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because Christ has made us clean, we are invited to live out that holiness every day. F. B. Meyer encourages us to search our hearts as if with a \"lighted candle\" to uncover any hidden faults. Through regular confession, God's grace, and the Holy Spirit's help, we can put away bitterness and live in sincerity and truth as we look forward to the Lord's return.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there any small compromises or bad attitudes you have tolerated that need to be confessed to God today?",
+    "How does remembering that Christ is your Passover Lamb encourage you to live with sincerity and truth?"
+   ],
+   "prayer": "Lord Jesus, thank You for dying as our Passover Lamb to wash our sins away. Search our hearts and show us any hidden faults or compromises we have excused. By Your Holy Spirit, give us the grace to turn from what is wrong and walk with You in truth and sincerity. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Corinthians 5:7-8",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Celebrating the New Passover",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/celebrating-the-new-passover"
+    },
+    "D3": {
+     "author": "Whitney Hopler",
+     "work": "Little Sins Can Lead to Big Problems",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/little-sins-can-lead-to-big-problems-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

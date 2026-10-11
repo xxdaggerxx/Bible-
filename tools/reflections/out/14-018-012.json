@@ -1,0 +1,66 @@
+{
+ "id": "14-018-012",
+ "title": "Micaiah Prophesies against Ahab",
+ "refs": [
+  "2 Chronicles 18:12-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14018012,
+   "end": 14018027,
+   "ref": "2 Chronicles 18:12-27",
+   "ranges": [
+    [
+     14018012,
+     14018027
+    ]
+   ],
+   "title": "Listening to the God of Truth",
+   "key_verse": [
+    14018022,
+    14018022
+   ],
+   "reflect": [
+    {
+     "text": "When King Ahab and King Jehoshaphat asked for advice before going into battle, Ahab called for the prophet Micaiah. Micaiah described an unseen scene in heaven. In this vision, the Lord allowed a deceitful spirit to lead Ahab toward his downfall through his flattering prophets.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God Himself never lies. Even so, in His sovereign judgment—His complete authority as the righteous ruler of all things—God sometimes hands persistent rejecters of the truth over to their own deception. Ahab had pushed away God's warnings for years. Later, even though Ahab disguised himself in battle to stay safe, he could not undo the disaster God had decreed.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This sobering story calls us to take God's Word seriously. Rather than persisting in disobedience like Ahab, we are invited to fear the Lord, submit to His guidance, and practice repentance, which means turning away from our sin and returning to Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there times when we are tempted to ignore God's truth because it challenges what we want to do?",
+    "How can we practice quick repentance when God's Word shows us that we are heading in the wrong direction?"
+   ],
+   "prayer": "Heavenly Father, You are holy and Your Word is always true. Keep our hearts from becoming stubborn when You correct us. Give us the grace to fear You, submit to Your voice, and walk humbly in Your ways each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "A Lying Spirit from the Lord",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lying-spirit-from-the-lord"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

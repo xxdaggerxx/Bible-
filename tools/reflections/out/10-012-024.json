@@ -1,0 +1,73 @@
+{
+ "id": "10-012-024",
+ "title": "Solomon’s Birth",
+ "refs": [
+  "2 Samuel 12:24-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10012024,
+   "end": 10012025,
+   "ref": "2 Samuel 12:24-25",
+   "ranges": [
+    [
+     10012024,
+     10012025
+    ]
+   ],
+   "title": "God Brings Hope After the Storm",
+   "key_verse": [
+    10012024,
+    10012024
+   ],
+   "reflect": [
+    {
+     "text": "Facing the painful aftermath of a crisis can feel lonely and overwhelming, but hard seasons do not last forever. Instead of giving in to despair or self-pity, David accepted reality and placed his trust in God's sovereignty, which means God's supreme rule over all things. Healing began when David chose to move forward and rely on the Lord for daily strength.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This painful loss forced David out of relying on himself and brought him back into humble dependence on God. Our Lord is not distant from our grief; He deeply feels our sorrow and responds to our cries. Restored in his fellowship with God, David was empowered to comfort his grieving wife, Bathsheba, and return to worship.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Even when God's discipline is severe, He never abandons His children, because He always seeks our restoration. In His gracious mercy, God blessed David and Bathsheba with a son named Solomon. The Lord even sent word to call the child Jedidiah, showing that he was loved by God. In the middle of their sorrow, God gave them a fresh start wrapped in His love.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life do you need to move past despair and rely on God for daily strength?",
+    "How does knowing that God seeks your restoration give you comfort when you face hard times?"
+   ],
+   "prayer": "Lord, thank you that you never abandon us, even when we walk through painful storms. Help us to turn away from self-pity and trust in your daily care and mercy. Give us the strength to comfort those who are hurting around us, just as you have loved and restored us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 60: 2 Samuel 12:24–25",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-60-2-samuel-12-2425.html"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Riding Out the Storm",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/riding-out-the-storm"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

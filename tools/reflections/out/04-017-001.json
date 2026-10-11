@@ -1,0 +1,67 @@
+{
+ "id": "04-017-001",
+ "title": "Aaron’s Staff Buds",
+ "refs": [
+  "Numbers 17:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4017001,
+   "end": 4017013,
+   "ref": "Numbers 17:1-13",
+   "ranges": [
+    [
+     4017001,
+     4017013
+    ]
+   ],
+   "title": "God's Appointed Leader and Priest",
+   "key_verse": [
+    4017008,
+    4017008
+   ],
+   "reflect": [
+    {
+     "text": "Many of us naturally resist rules and authority. Yet without orderly leadership, our lives quickly slip into chaos. When the Israelites complained against Moses and Aaron, God saw their grumbling as rebellion against Himself. Choosing our own way and ignoring God leads to spiritual ruin. To settle the dispute, God performed a miracle. He made Aaron's dry wooden rod sprout with buds, flowers, and almonds. The piece of wood was not special on its own, but God chose it to clearly confirm His appointed leader.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Seeing the blossoming staff terrified the people. They realized they had defied the living God, but their reaction was one of cringing fear rather than genuine love or true repentance. Deep spiritual moments can easily fade away without lasting change in our hearts. Their fear also proved that we cannot safely approach God on our own terms. We need a mediator, someone God appoints to bring us near. Aaron's priesthood points forward to Jesus, our ultimate High Priest, who forgives our sins and gives us safe access to God.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of life do you find yourself resisting God's authority?",
+    "How does knowing Jesus is our true High Priest bring you peace?"
+   ],
+   "prayer": "Lord God, forgive us when we grumble against Your ways and try to live on our own terms. Thank You for providing Jesus as our great High Priest to forgive our sins. Help us to draw near to You with genuine love and trust today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "God and Authority",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/god-and-authority-one-year-devotions-for-men-july-26.html"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Numbers 17–18",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/numbers-17-18-psalm-55-isaiah-7-james-1/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

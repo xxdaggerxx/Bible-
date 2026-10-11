@@ -1,0 +1,114 @@
+{
+ "id": "39-003-013",
+ "title": "The Book of Remembrance",
+ "refs": [
+  "Malachi 3:13-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 39003016,
+   "end": 39003017,
+   "ref": "Malachi 3:16-17",
+   "ranges": [
+    [
+     39003016,
+     39003017
+    ]
+   ],
+   "title": "\"They Will Be Mine\"",
+   "key_verse": [
+    39003017,
+    39003017
+   ],
+   "reflect": [
+    {
+     "text": "Building meaningful memories does not happen by accident. The shared moments that sustain our souls through difficult seasons require deliberate choices. We must intentionally step away from daily distractions to focus on what matters most.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "In Malachi's day, people who feared the Lord made time to speak with one another. God paid close attention to their talk and treasured it, recording their names in His book. As Charles Spurgeon wrote, God views His people as His \"crown jewels\" whom He bought and protects. When the Lord is precious to us, we are deeply precious to Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What intentional choices can you make this week to build memories centered on God?",
+    "If the Lord listened to your conversations today, would He hear that He is precious to you?"
+   ],
+   "prayer": "Lord God, thank You for counting us as Your treasured possession. Help us to step away from distractions and use our time wisely. May our words and memories honor You every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 4",
+     "on": "Malachi 3:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Making Memories",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-july-10-2015.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 39003013,
+   "end": 39003018,
+   "ref": "Malachi 3:13-18",
+   "ranges": [
+    [
+     39003013,
+     39003018
+    ]
+   ],
+   "title": "Conversations That Keep Us Faithful",
+   "key_verse": [
+    39003016,
+    39003016
+   ],
+   "reflect": [
+    {
+     "text": "When evil seems to prosper, we may feel tempted to believe that serving God is pointless. In Malachi's day, harsh doubts arose among the people. Standard accountability checklists often fall short because they do not heal cold or discouraged hearts in seasons of doubt.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God's people need regular, open conversations about spiritual reality. Ordinary Christians guard and support each other by sharing personal struggles and speaking of God's kindness. Talking candidly about the Lord warms cold affections, gives us endurance, and strengthens our hope in the gospel.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Who can you talk with openly about your personal struggles and spiritual life?",
+    "How can sharing God's kindness with another believer help both of you keep going when serving Him feels hard?"
+   ],
+   "prayer": "Lord, when we feel discouraged, give us faithful companions to walk beside us. Help us to speak openly about our struggles and Your mercies. Warm our hearts through honest fellowship so we remain steadfast in Your service. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ryan Griffith",
+     "work": "The Missing Conversation in Our Accountability",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-missing-conversation-in-our-accountability"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

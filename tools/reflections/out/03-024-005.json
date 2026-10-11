@@ -1,0 +1,66 @@
+{
+ "id": "03-024-005",
+ "title": "The Showbread",
+ "refs": [
+  "Leviticus 24:5-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3024005,
+   "end": 3024009,
+   "ref": "Leviticus 24:5-9",
+   "ranges": [
+    [
+     3024005,
+     3024009
+    ]
+   ],
+   "title": "The Bread that Sustains Our Lives",
+   "key_verse": [
+    3024008,
+    3024008
+   ],
+   "reflect": [
+    {
+     "text": "God commanded the priests to set out twelve loaves of bread before Him every Sabbath. These loaves were placed there continuously to remind His people that God and His Word sustain our lives. The fine flour used to make the loaves points forward to Jesus Christ, the pure and sinless One who feeds and strengthens our souls.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Baking the bread in the fire and presenting it before the Lord pictures the suffering Jesus underwent before He became the Bread of Life for us. The priests also placed pure frankincense beside the loaves. This sweet incense represents prayer and praise, teaching us that worship should always accompany the spiritual food we receive from God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Inside the holy place, the light from the lampstand shone upon the table of bread. In the same way, the Holy Spirit shines light on the scriptures, helping us understand God's truth and guiding our steps every day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does spending time in God's Word give you the spiritual strength you need each day?",
+    "How can you combine praise and prayer with your daily Bible reading?"
+   ],
+   "prayer": "Lord God, thank You for giving us Jesus as the true Bread of Life who sustains our souls. Please send Your Holy Spirit to open our eyes and help us understand the Scriptures. May our hearts respond with thankful prayer and praise as You guide our lives each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - February 10",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-feb-10-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

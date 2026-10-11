@@ -1,0 +1,75 @@
+{
+ "id": "48-003-010",
+ "title": "Christ Has Redeemed Us",
+ "refs": [
+  "Galatians 3:10-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 48003010,
+   "end": 48003014,
+   "ref": "Galatians 3:10-14",
+   "ranges": [
+    [
+     48003010,
+     48003014
+    ]
+   ],
+   "title": "Christ Became a Curse for Us",
+   "key_verse": [
+    48003013,
+    48003013
+   ],
+   "reflect": [
+    {
+     "text": "God's covenants promise blessings for obedience and curses for disobedience. When humanity fell through Adam's sin, we lost God's original blessing and came under a curse. The law shows God's justice and the penalty we deserve for our sin. If we try to rely on our own works, we face judgment and the terrifying reality of being cut off from God's presence.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet Jesus came to rescue us. As the second Adam, He took the full weight of the curse upon Himself. On the cross, Jesus was forsaken in our place and bore the wrath meant for sinners so that the penalty against us would be paid.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because Jesus became a curse for us, believers receive God's eternal blessing and justification, which means being counted righteous before Him. We no longer need to carry the guilt of our failures. Instead, we can rest in Christ's finished work, confident that God will never abandon us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you trying to earn God's favor by your own efforts, or are you resting in Christ's finished work?",
+    "How does knowing that Jesus took your judgment give you confidence that God will never abandon you?"
+   ],
+   "prayer": "Lord Jesus, thank You for bearing the curse on the cross in our place. Thank You for taking the judgment we deserved so that we could receive the blessing of eternal life. Teach us to rest in Your love and never doubt Your presence with us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Nicholas Batzig",
+     "work": "A Life of Blessing and Rest",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/life-blessing-and-rest"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Curse of the Cross",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/curse-cross"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

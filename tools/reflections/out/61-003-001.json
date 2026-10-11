@@ -1,0 +1,75 @@
+{
+ "id": "61-003-001",
+ "title": "The Coming Judgment",
+ "refs": [
+  "2 Peter 3:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 61003001,
+   "end": 61003007,
+   "ref": "2 Peter 3:1-7",
+   "ranges": [
+    [
+     61003001,
+     61003007
+    ]
+   ],
+   "title": "Kept by His Word",
+   "key_verse": [
+    61003007,
+    61003007
+   ],
+   "reflect": [
+    {
+     "text": "Some people mock the promise of Jesus' return. They look at how steady and regular nature seems every day and assume nothing will ever change. Skeptics use this consistency to claim that God does not step into our world, making excuses to follow their own desires. Yet the present order of our world is only temporary.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Peter reminds us of history. God spoke the universe into being, and He later judged human disobedience through a great flood. The God who created the world has the full authority to end it. Today, the universe remains intact solely because God upholds it by His powerful word, preserving it for a coming day of judgment by fire.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Knowing that God sustains all creation should lead us to daily humility and quiet reverence. Because this coming judgment is certain, this truth should also stir our love for others. It moves us to pray faithfully for those who are lost and to tell them about Christ before that day comes.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God holds the universe together encourage you to live with humility and respect toward Him?",
+    "Who in your life needs your prayers and the good news of Jesus before that day of judgment arrives?"
+   ],
+   "prayer": "Lord God, You made the world and uphold all things by Your powerful word. Keep us humble and watchful as we wait for Christ's return. Give us caring hearts to pray for those who do not know You and courage to share Your truth with them. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "By the Same Word",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/same-word"
+    },
+    "D2": {
+     "author": "Time with God",
+     "work": "Time with God - Oct. 14, 2009",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/timewithgod/time-with-god-oct-14-2009-11609737.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

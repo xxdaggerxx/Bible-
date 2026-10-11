@@ -1,0 +1,74 @@
+{
+ "id": "35-001-001",
+ "title": "Habakkuk’s First Complaint",
+ "refs": [
+  "Habakkuk 1:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 35001001,
+   "end": 35001004,
+   "ref": "Habakkuk 1:1-4",
+   "ranges": [
+    [
+     35001001,
+     35001004
+    ]
+   ],
+   "title": "Bringing Our Honest Questions to God",
+   "key_verse": [
+    35001002,
+    35001002
+   ],
+   "reflect": [
+    {
+     "text": "Habakkuk looked around and saw violence, fighting, and injustice everywhere. He cried out for help, wondering why the Lord seemed silent and appeared to tolerate wrongdoing. Like the prophet, we may feel deep confusion when we pray during painful times and do not see quick answers. Watching moral decline around us, and even in the church, can leave us feeling troubled and heavy-hearted.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The Bible shows us that having unanswered questions is a normal part of walking with God. We are encouraged to bring our pain, sorrow, and honest complaints straight to Him. God has not forgotten us when He delays His rescue. His delays have a purpose, working in His perfect timing to protect us and help our faith mature.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Even when circumstances feel confusing and unjust, we do not have to remain stuck in our doubts. Instead, we can move forward by choosing to anchor our trust in God's character. We can rest in knowing that God is faithful, even when we cannot understand what He is doing.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What honest questions or painful situations do you need to bring directly to God today?",
+    "How can remembering God's character help you trust Him when His answers seem delayed?"
+   ],
+   "prayer": "Lord, thank You that we can bring our honest pain and questions to You. When we see wrongdoing and wonder why You seem silent, help us to remember that Your timing has a purpose. Teach us to anchor our trust in Your good character instead of our doubts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jack Graham",
+     "work": "Stop Wrestling with God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-mar-16-2010-11627421.html"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "How Long, Lord? Why?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-september-13-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

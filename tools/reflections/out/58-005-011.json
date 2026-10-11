@@ -1,0 +1,79 @@
+{
+ "id": "58-005-011",
+ "title": "Milk and Solid Food",
+ "refs": [
+  "Hebrews 5:11-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58005011,
+   "end": 58005014,
+   "ref": "Hebrews 5:11-14",
+   "ranges": [
+    [
+     58005011,
+     58005014
+    ]
+   ],
+   "title": "Growing into Spiritual Maturity",
+   "key_verse": [
+    58005014,
+    58005014
+   ],
+   "reflect": [
+    {
+     "text": "Growing up in the faith is not just about gaining head knowledge. As we walk with God, we need solid food rather than only basic milk. Digesting deeper biblical truth is mainly a moral matter rather than an academic one. When we make compromises in areas like money, entertainment, or everyday honesty, our hearing becomes dull, and we struggle to understand God's truth.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Spiritual maturity means training our inner senses to tell good from evil. F. B. Meyer compared this to our physical sense of smell, which warns us of danger before harm arrives. Just as someone in trade sharpens their senses through daily practice, we can sharpen our spiritual senses by constant use. When we practice obedience, we learn to spot temptation early and turn away before evil takes hold.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Human logic and clever reasoning alone cannot show us spiritual realities. Good theology is an essential foundation, but correct teaching without the Holy Spirit becomes lifeless. True maturity comes as we learn to recognize the Holy Spirit's guidance and test our choices by his leading every day.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of your daily life might a small compromise be dulling your spiritual hearing?",
+    "How can you practice noticing and following the Holy Spirit's promptings today?"
+   ],
+   "prayer": "Lord, help us move beyond spiritual milk into mature faith. Train our senses through your word and Spirit so we can quickly spot temptation and choose what is good. Give us willing hearts to obey your truth in every part of our lives.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hebrews 5:14",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "John Piper",
+     "work": "The Key to Spiritual Maturity",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/the-key-to-spiritual-maturity"
+    },
+    "D3": {
+     "author": "Neil T. Anderson",
+     "work": "Spiritually Aware",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/dailyinchrist/daily-in-christ-8-25.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,82 @@
+{
+ "id": "48-003-026",
+ "title": "Sons through Faith in Christ",
+ "refs": [
+  "Galatians 3:26-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 48003026,
+   "end": 48003029,
+   "ref": "Galatians 3:26-29",
+   "ranges": [
+    [
+     48003026,
+     48003029
+    ]
+   ],
+   "title": "Children and Heirs in Christ",
+   "key_verse": [
+    48003026,
+    48003026
+   ],
+   "reflect": [
+    {
+     "text": "Many of us struggle with feeling unworthy. We wonder if our past mistakes, our status in life, or our weak faith keep us from being truly accepted. Yet Scripture shows that through faith in Jesus, every believer is made a full child of God. As Charles Spurgeon wrote, \"the weak Christian is as much a child of God as the strong one.\" Our Father has the same tender heart toward every member of His family.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "In Christ, earthly labels and human differences do not decide our worth. We do not have to work to earn our place at God's table. Because we belong to Jesus, we share in the promise given to Abraham. Earthly family inheritances quickly fade, but our eternal inheritance as children of the King is certain and secure forever.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Knowing that God holds us securely helps drive away our fear. While even small faith brings us safely into His family, we can ask Him to strengthen our trust so we can live with greater joy and peace. As we rest in this secure love, we are also called to reach out and share the good news so others may join God's family too.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever feel too weak or unworthy to be God's child, and how does His promise answer that doubt?",
+    "How can knowing that your place in God's family is secure help you share His love with someone else?"
+   ],
+   "prayer": "Heavenly Father, thank You for making us Your children through faith in Christ Jesus. Thank You that our place in Your family does not depend on our earthly status or past failures. Strengthen our faith each day, and give us courage to share Your good news with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 18",
+     "on": "Galatians 3:26",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Karen Wingate",
+     "work": "You Are Worthy",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-march-13-2026.html"
+    },
+    "D3": {
+     "author": "Kristen Terrette",
+     "work": "I Belong to Christ",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wholly-loved/i-belong-to-christ-wholly-loved-july-30.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

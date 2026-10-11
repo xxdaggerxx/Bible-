@@ -1,0 +1,68 @@
+{
+ "id": "45-014-013",
+ "title": "The Law of Love",
+ "refs": [
+  "Romans 14:13-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45014013,
+   "end": 45014023,
+   "ref": "Romans 14:13-23",
+   "ranges": [
+    [
+     45014013,
+     45014023
+    ]
+   ],
+   "title": "Walking in Love Toward One Another",
+   "key_verse": [
+    45014017,
+    45014017
+   ],
+   "reflect": [
+    {
+     "text": "Christians can easily get caught up in disagreements over everyday choices like what to eat or drink. In the early church, believers let arguments about food take their attention away from Jesus. Those who understood their freedom failed to act in love toward weaker believers. Authentic Christian living is not about strict lists of rules, nor is it about careless indulgence. Both extremes come from putting ourselves first instead of loving others.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God's kingdom is not about what we eat or drink, but about righteousness, peace, and joy in the Holy Spirit. True Christian freedom means being freed from self-centeredness so we can protect and build up fellow believers. When we choose love over our own rights, we avoid causing spiritual harm to others. As we put others first, petty differences fade away, and the peace and joy of the Spirit can flourish in our church.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there personal rights or habits you should lay aside so you do not harm another believer's faith?",
+    "How can you focus on building up others and keeping peace in your church community?"
+   ],
+   "prayer": "Lord Jesus, forgive us when we focus more on our own rights than on loving one another. Free us from selfishness so we can protect and serve our brothers and sisters. Give our church family your righteousness, peace, and joy in the Holy Spirit. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Righteousness, Peace, and Joy",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/righteousness-peace-and-joy"
+    },
+    "D2": {
+     "author": "Alex Crain",
+     "work": "\"Liberty, Lists, or Love\"",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/liberty-lists-or-love-crosswalk-the-devotional-aug-25-2010-11636026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

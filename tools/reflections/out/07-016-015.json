@@ -1,0 +1,76 @@
+{
+ "id": "07-016-015",
+ "title": "Delilah Learns the Secret",
+ "refs": [
+  "Judges 16:15-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 7016020,
+   "end": 7016020,
+   "ref": "Judges 16:20",
+   "ranges": [
+    [
+     7016020,
+     7016020
+    ]
+   ],
+   "title": "\"The LORD Had Departed\"",
+   "key_verse": [
+    7016020,
+    7016020
+   ],
+   "reflect": [
+    {
+     "text": "Samson thought he could shake himself free just as before, but he did not realize the Lord had left him. His fall did not happen all at once. F. B. Meyer warns of \"unconscious deterioration,\" which happens slowly like damp ruining a musical instrument. Samson drifted away by neglecting his special calling from God. He gave in to worldly desires and took God's patience for granted, completely unaware of the danger closing in around him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Sin slowly dulls our senses and blinds our eyes to evil. Like Samson, we can make excuses for our bad choices and call our sins by softer names. We might continue going through the motions of our religious habits, convincing ourselves that everything is still fine. But spiritual compromise quietly drains our strength, leading toward painful loss and captivity.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "To protect our hearts, we must stay alert and pray. Rather than wasting the gifts God gave us on our own selfish pleasures, we need to put His kingdom first. When we remember that we are a home for God's Holy Spirit, His peace can stand guard over our thoughts and actions.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there small compromises in your life that you have been excusing or ignoring?",
+    "How can you stay watchful in prayer so that you do not take God's patience for granted?"
+   ],
+   "prayer": "Lord, keep us watchful so we do not drift away from You through slow compromises. Forgive us for making excuses for our sins and taking Your patience for granted. Help us to honor You with our lives and seek Your kingdom above all else. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Judges 16:20",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - March 28",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-mar-28-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

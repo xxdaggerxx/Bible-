@@ -1,0 +1,75 @@
+{
+ "id": "43-017-006",
+ "title": "Prayer for the Disciples",
+ "refs": [
+  "John 17:6-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43017006,
+   "end": 43017019,
+   "ref": "John 17:6-19",
+   "ranges": [
+    [
+     43017006,
+     43017019
+    ]
+   ],
+   "title": "Kept in the World and Made Holy",
+   "key_verse": [
+    43017006,
+    43017006
+   ],
+   "reflect": [
+    {
+     "text": "When life is painful, we often want to escape our struggles and go straight to heaven. But Jesus did not pray for his followers to be taken out of this world right away. He wants us to stay here until our work is finished and our lives have honored God. While we remain in the world, he prays that the Father will keep us safe from the evil one.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus also asks God to sanctify us by the truth. Sanctification means being made holy and growing more like Christ. This work begins when the Holy Spirit gives us new life, and it continues each day as God puts down sinful desires and helps us do good. God shapes our hearts and actions through his Word, the Bible.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We are called to live for God right where we are, even in difficult seasons. As Charles Spurgeon wrote, our care should be \"to glorify God by your life here as long as he pleases.\" When we read and hold on to God's truth, the Spirit guards our minds and strengthens us to serve others until God calls us home.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face hard times, do you find yourself wanting to escape, or asking how you can honor God right where you are?",
+    "How can spending regular time reading God's truth help you grow in holiness each day?"
+   ],
+   "prayer": "Father, thank You for keeping us safe in this world and for guiding us by Your Word. Help us not to run from hardship, but to honor You with patient and holy lives. Teach us Your truth each day so that our actions may bring glory to Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 2",
+     "on": "John 17:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 4",
+     "on": "John 17:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

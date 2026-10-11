@@ -1,0 +1,129 @@
+{
+ "id": "01-020-001",
+ "title": "Abraham, Sarah, and Abimelech",
+ "refs": [
+  "Genesis 20:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1020001,
+   "end": 1020002,
+   "ref": "Genesis 20:1-2",
+   "ranges": [
+    [
+     1020001,
+     1020002
+    ]
+   ],
+   "title": "\"She Is My Sister\"",
+   "key_verse": [
+    1020002,
+    1020002
+   ],
+   "reflect": [
+    {
+     "text": "Growing in faith is a gradual journey. In this earthly life, we never reach sinless perfection. Even heroes of faith like Abraham had moments of weakness. When Abraham entered Gerar and faced a foreign ruler, fear got the better of him. Instead of trusting God, he slipped back into an old habit of deceit and claimed Sarah was only his sister.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Abraham's dishonest scheme backfired, yet human lapses in faith cannot overturn God's sovereign plan. God graciously stepped in to protect Sarah and Abraham, remaining faithful to His covenant promises. He even revealed Himself to the foreign king. When we stumble into old sins, we do not need to despair. We can return to God in repentance, confident that His purposes stand firm and that He still chooses to use us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or old habits tempt you to stop trusting God?",
+    "How does knowing God's plans cannot be overturned give you hope when you make a mistake?"
+   ],
+   "prayer": "Lord, thank You that our weakness cannot break Your good promises. Forgive us when fear leads us back into old sins. Help us to turn to You in honest repentance, trusting that You are always faithful to guide and use us. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "A Cycle of Sin",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-september-7-2024.html"
+    },
+    "D3": {
+     "author": "Michael A. Youssef, Ph.D.",
+     "work": "God’s Plans for Us Stand",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-january-23-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1020001,
+   "end": 1020018,
+   "ref": "Genesis 20:1-18",
+   "ranges": [
+    [
+     1020001,
+     1020018
+    ]
+   ],
+   "title": "Kept by God's Grace",
+   "key_verse": [
+    1020006,
+    1020006
+   ],
+   "reflect": [
+    {
+     "text": "When King Abimelech took Sarah into his palace, he did not know she was already married. God warned him in a dream that he was in danger of judgment. Abimelech appealed to God's justice, explaining that his heart was sincere and his hands were innocent. God confirmed the king's integrity and revealed that His own providence had kept Abimelech from touching her.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "This shows how God watches over people and restrains them from harm. In life, doors may open where doing wrong seems easy. Yet having the opportunity to sin never means we have permission to do it. God withheld Abimelech from taking that fatal step, showing that He guards the path of those who seek to act uprightly.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "When we look back on our own lives, we can often see moments where our feet almost slipped. We were spared from ruin only because God's grace held us back, even when we did not notice it. If God protected a king who was not seeking Him, we can be sure He will keep those who look to Him. Our Good Shepherd is strong enough to hold every trembling sheep secure.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Can you remember a time when God kept you from making a harmful decision?",
+    "How does knowing God is strong enough to guard you bring peace when temptation appears?"
+   ],
+   "prayer": "Father, thank You for Your quiet protection in our lives. Keep our hearts sincere, and restrain our steps whenever sin looks easy. We trust You, our Good Shepherd, to hold us close and keep us safe each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 20:6",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "God Comes to Abimelech",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-comes-abimelech"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

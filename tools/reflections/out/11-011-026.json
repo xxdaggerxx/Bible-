@@ -1,0 +1,67 @@
+{
+ "id": "11-011-026",
+ "title": "Jeroboam’s Rebellion",
+ "refs": [
+  "1 Kings 11:26-40"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11011026,
+   "end": 11011040,
+   "ref": "1 Kings 11:26-40",
+   "ranges": [
+    [
+     11011026,
+     11011040
+    ]
+   ],
+   "title": "God's Discipline and the Call to Obey",
+   "key_verse": [
+    11011038,
+    11011038
+   ],
+   "reflect": [
+    {
+     "text": "When Solomon turned away from God to worship other gods, God brought serious discipline upon his family. Taking ten tribes away was a deep wound, and it came directly from the Lord because of unholy choices. Even so, God gave a comforting promise that this discipline would not last forever. For His children, God's correction is meant to bring us back to repentance. As Charles Spurgeon wrote, \"the rod may make us smart, but the sword shall not make us die.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "To Jeroboam, God gave an amazing promise. If Jeroboam would walk in God's ways and keep His commands, God promised to build him a lasting dynasty. While God's love is unconditional, His blessings require our obedient surrender. Sadly, Jeroboam later let fear overtake his faith, turning to idols and forfeiting God's blessing. Each day, we face that same challenge. We must choose whether to walk David's path of faithful obedience or Jeroboam's path of compromise.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where you need to receive God's loving correction and turn back to Him?",
+    "Are you choosing to walk in faithful obedience today, or are you letting fear lead you toward compromise?"
+   ],
+   "prayer": "Lord, thank You that Your discipline is meant to restore us and that Your mercy does not end. Help us not to let fear push us into compromise. Give us willing hearts to walk in Your ways and faithfully obey Your commands every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 14",
+     "on": "1 Kings 11:39",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Pastor Jeff Schreve",
+     "work": "Conditional Promises",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-week-of-may-1-11603054.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

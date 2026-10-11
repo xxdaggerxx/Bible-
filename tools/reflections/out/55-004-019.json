@@ -1,0 +1,66 @@
+{
+ "id": "55-004-019",
+ "title": "Final Greetings",
+ "refs": [
+  "2 Timothy 4:19-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 55004019,
+   "end": 55004022,
+   "ref": "2 Timothy 4:19-22",
+   "ranges": [
+    [
+     55004019,
+     55004022
+    ]
+   ],
+   "title": "Faithful Friends and Urgent Service",
+   "key_verse": [
+    55004021,
+    55004021
+   ],
+   "reflect": [
+    {
+     "text": "Paul closes his letter by naming trusted friends like Prisca, Aquila, and Onesiphorus. These believers formed a vital network of support that helped Paul advance the gospel. Their lives model dedicated discipleship and practical care for God's servants.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul also urges Timothy to make every effort to visit him before winter. Sailing and overland travel across the Mediterranean became dangerous and closed down during the cold months. If Timothy delayed his journey, he risked arriving too late to see his dear mentor before Paul died.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This shows us the danger of putting things off. Believers are called to carry out their commitments promptly rather than delay opportunities to serve God and care for others. When we have the chance to support someone, we should act without waiting.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an opportunity to encourage or help someone that you have been putting off?",
+    "How can you faithfully support other believers who are serving God?"
+   ],
+   "prayer": "Lord, thank you for the faithful brothers and sisters you place in our lives. Help us not to delay when we have an opportunity to show love and support. Give us willing hearts to serve you and care for others promptly. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Come before Winter",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/come-before-winter"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

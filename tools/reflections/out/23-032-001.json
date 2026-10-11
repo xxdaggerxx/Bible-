@@ -1,0 +1,67 @@
+{
+ "id": "23-032-001",
+ "title": "A Righteous King",
+ "refs": [
+  "Isaiah 32:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23032001,
+   "end": 23032008,
+   "ref": "Isaiah 32:1-8",
+   "ranges": [
+    [
+     23032001,
+     23032008
+    ]
+   ],
+   "title": "A Safe Shelter in the Storm",
+   "key_verse": [
+    23032002,
+    23032002
+   ],
+   "reflect": [
+    {
+     "text": "Isaiah tells us of a righteous king who protects his people like a shelter from a fierce storm. As Charles Spurgeon points out, this ruler is Jesus, the Lord who came down to rescue us. Life brings strong winds of trouble, fear, and daily worry that can knock down everything we rely on. Yet Jesus took the full force of the storm on Himself so that we can find true safety in Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Things in this world that look strong often fall apart when hard trials blow through. But our Lord is a hiding place that will never be blown down. When we run to Him instead of facing the wind alone, we can watch the tempest pass while resting in calm peace. He shields us from God's wrath, calms our dread of death, and carries our heavy cares.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "There is no reason for us to keep standing out in the wind when a safe place is right in front of us. We can bring our worries to Christ today and place ourselves under His care. Tucked safely inside His shelter, we can be glad and at peace, knowing our protector will never fail.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What storms or heavy worries are you trying to face on your own today?",
+    "How does remembering that Jesus took the storm for you help you rest in Him?"
+   ],
+   "prayer": "Lord Jesus, thank you for taking the full force of the storm so we could be safe. Forgive us when we try to stand alone in the wind instead of running to you. Keep us close in your steady shelter and fill our hearts with quiet peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 15",
+     "on": "Isaiah 32:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

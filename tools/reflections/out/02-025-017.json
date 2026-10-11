@@ -1,0 +1,75 @@
+{
+ "id": "02-025-017",
+ "title": "The Mercy Seat",
+ "refs": [
+  "Exodus 25:17-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2025017,
+   "end": 2025022,
+   "ref": "Exodus 25:17-22",
+   "ranges": [
+    [
+     2025017,
+     2025022
+    ]
+   ],
+   "title": "Where God Meets His People",
+   "key_verse": [
+    2025022,
+    2025022
+   ],
+   "reflect": [
+    {
+     "text": "God told Moses to make the mercy seat of pure gold to rest atop the ark. This sacred place served as an earthly copy of the Lord's heavenly throne room. In ancient times, kings kept their laws at their feet, and God had the tablets of the Law placed inside the chest beneath His throne. Above this chest, between the two winged cherubim, God promised to meet and speak with His people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Placing the mercy seat over the Law showed God's gracious plan to cover the sins of His people. When priests sprinkled sacrificial blood upon the mercy seat, God's wrath was turned away. This ceremony pointed ahead to Jesus. Later, two angels sat at the head and feet of Jesus' empty tomb, echoing the two cherubim who stood at the ends of the mercy seat.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus is the true place where God meets and redeems us. His shed blood fully covered our guilt and satisfied God's wrath against sin. Because of Christ's finished work, we no longer have to stand far off in fear. We can now draw near to God's presence in reverent worship.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus covered your sin change the way you come to God in prayer?",
+    "What does it mean for your daily life that God desires to meet with you through Christ?"
+   ],
+   "prayer": "Lord God, thank You for providing Jesus as the true mercy seat to cover our sins. Thank You that His blood turns away wrath and brings us near to You. Help us to approach Your presence every day with thankful and reverent hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Ark of the Covenant",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/ark-covenant"
+    },
+    "D2": {
+     "author": "Stephen Nichols",
+     "work": "What Is the Mercy Seat?",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/mercy-seat-connecting-dots"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

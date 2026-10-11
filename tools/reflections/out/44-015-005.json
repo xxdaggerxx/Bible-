@@ -1,0 +1,119 @@
+{
+ "id": "44-015-005",
+ "title": "The Council at Jerusalem",
+ "refs": [
+  "Acts 15:5-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44015011,
+   "end": 44015011,
+   "ref": "Acts 15:11",
+   "ranges": [
+    [
+     44015011,
+     44015011
+    ]
+   ],
+   "title": "\"Through the Grace of the Lord Jesus\"",
+   "key_verse": [
+    44015011,
+    44015011
+   ],
+   "reflect": [
+    {
+     "text": "When the early church leaders faced a difficult dispute, they did not ignore the hard questions. They gathered to talk openly, bringing courage, kindness, and spiritual discernment to the table. At the center of their discussion stood one clear truth: we are saved entirely through the grace of the Lord Jesus. His undeserved gift of mercy settled their deepest theological debate. It also showed them how to walk together in peace and mutual love.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Divine grace offers favor to people who have done nothing to earn it. Think of a mighty king who steps down from his throne to show kindness to an ordinary citizen. That picture helps us understand God's heart. Being saved is the opposite of relying on our own good works or personal merit. We can never earn our place before God. Our acceptance rests solely on the generous goodness of the Giver, who welcomes us through Jesus.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering that you are saved by grace alone help you treat other believers with kindness?",
+    "Are you tempted to rely on your own good deeds instead of resting in God's generous gift?"
+   ],
+   "prayer": "Lord Jesus, thank You for saving us by Your grace and not by our own works. Help us to rest in Your undeserved kindness each day. Teach us to speak with courage and love when we face disagreements with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Today's Insight: Undeserved Kindness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-march-19-2013.html"
+    },
+    "D4": {
+     "author": "Paul Carter",
+     "work": "What Can We Learn from the Jerusalem Council?",
+     "site": "The Gospel Coalition",
+     "url": "https://ca.thegospelcoalition.org/columns/ad-fontes/what-can-we-learn-from-the-jerusalem-council/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 44015005,
+   "end": 44015021,
+   "ref": "Acts 15:5-21",
+   "ranges": [
+    [
+     44015005,
+     44015021
+    ]
+   ],
+   "title": "Turning to God Without Extra Burdens",
+   "key_verse": [
+    44015019,
+    44015019
+   ],
+   "reflect": [
+    {
+     "text": "The early apostles looked at the Old Testament scriptures in light of what God had done through Jesus Christ. They realized that welcoming Gentile believers without requiring circumcision was the fulfillment of the promise to rebuild the fallen tent of David. The council at Jerusalem decided that ancient ceremonial laws must never be made a requirement for salvation. Christians are still called to obey God's enduring moral standards, but our main calling is to be faithful witnesses so people from every nation can seek the Lord.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Putting extra demands on others makes turning to God far harder than it should be. When we turn our personal experiences into universal rules, we place an unbearable yoke on our brothers and sisters. That kind of legalism drains our spiritual life and causes painful divisions among believers. Expecting moral perfection from others forgets our own need for mercy. We must always keep the cross of Christ at the very center of the message we share.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever made it harder for someone to follow Jesus by expecting them to follow your own personal preferences?",
+    "How can our church share the message of the cross while also living by God's moral standards?"
+   ],
+   "prayer": "Father, thank You for welcoming people from every nation into Your family through Christ. Keep us from placing unfair rules or heavy burdens on other believers. Help us live according to Your holy ways while pointing everyone to the cross of Your Son. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 250: Acts 15:1–21",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-250-acts-15-121.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Amos' Prophecy Fulfilled",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/amos-prophecy-fulfilled"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

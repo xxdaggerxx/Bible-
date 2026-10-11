@@ -1,0 +1,69 @@
+{
+ "id": "33-002-006",
+ "title": "Reproof of False Prophets",
+ "refs": [
+  "Micah 2:6-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 33002010,
+   "end": 33002010,
+   "ref": "Micah 2:10",
+   "ranges": [
+    [
+     33002010,
+     33002010
+    ]
+   ],
+   "title": "\"Arise and depart\"",
+   "key_verse": [
+    33002010,
+    33002010
+   ],
+   "reflect": [
+    {
+     "text": "A day is coming for each of us when we will hear the call to leave this world behind. We will step away from our familiar homes, our daily work, and the people we love most. This final journey through death is unknown to us, and we cannot see all that awaits us on the other side. Yet we do not have to be afraid. God has promised to walk with us through that dark valley, so we can face it with peace and courage.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When believers depart from this earth, we are not wandering into an empty void. We are going home to our heavenly Father's house, where we will live forever in the presence of Jesus. As Charles Spurgeon reminded readers, this life is merely \"the pathway to the better country.\" Meditating often on the beauty and safety of heaven gives us strength today. It helps us endure our present hardships and keep moving forward until we reach our true home.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing God will be with you in death help ease your fears about the future?",
+    "In what ways can thinking about your eternal home with Jesus give you endurance during hard times today?"
+   ],
+   "prayer": "Lord, thank You for promising to be with us when our time comes to leave this earthly life. Help us to keep our eyes on our true home in heaven where Jesus is. When our days feel heavy, give us peace and strength to keep pressing forward with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 7",
+     "on": "Micah 2:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Truth For Life",
+     "work": "Our Final Journey",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-february-7-2021.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

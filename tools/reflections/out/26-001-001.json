@@ -1,0 +1,73 @@
+{
+ "id": "26-001-001",
+ "title": "Ezekiel’s Vision by the River Kebar",
+ "refs": [
+  "Ezekiel 1:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26001001,
+   "end": 26001003,
+   "ref": "Ezekiel 1:1-3",
+   "ranges": [
+    [
+     26001001,
+     26001003
+    ]
+   ],
+   "title": "God Meets Us in Broken Plans",
+   "key_verse": [
+    26001003,
+    26001003
+   ],
+   "reflect": [
+    {
+     "text": "Ezekiel grew up expecting to serve as a priest in the temple when he reached age thirty. But around age twenty-five, he was carried away into Babylonian exile. His expected future and career were completely shattered. Yet right in his thirtieth year, while sitting among the captives by the Kebar River, God opened the heavens. In the middle of deep heartbreak, God redirected Ezekiel's life and gave him a new calling as a prophet.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In the ancient world, people thought gods had power only in their own geographic territories. But when the Lord spoke to Ezekiel and laid His hand upon him in Babylon, He showed that His presence has no borders. He is the universal ruler over all creation. While other exiles held onto false hopes of an immediate return home, Ezekiel was sent to speak God's hard truth to them.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When our own expectations collapse, we might wonder if God has forgotten us. Ezekiel's story reminds us that the Lord is not limited by our location or our troubles. Even when our plans fall apart, God's sovereign purpose remains strong, and He can create a fresh beginning.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can knowing that God rules everywhere comfort you when your own plans fall apart?",
+    "Are you willing to listen to God's direction even when it looks different from what you expected?"
+   ],
+   "prayer": "Lord God, thank You that Your presence and authority are never limited by our circumstances. When our plans break down, help us remember that You are sovereign over all the earth. Give us ears to hear Your truth and faith to follow where You lead. Amen.",
+   "sources": {
+    "D1": {
+     "author": "David Jeremiah",
+     "work": "New Beginnings: Ezekiel",
+     "site": "Turning Point",
+     "url": "https://www.davidjeremiah.org/mapp/devo_xml?date=2020-01-25&id=1767"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Word of the Lord to the Exiles",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/word-lord-exiles"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "04-014-040",
+ "title": "The Defeat at Hormah",
+ "refs": [
+  "Numbers 14:40-45"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4014040,
+   "end": 4014045,
+   "ref": "Numbers 14:40-45",
+   "ranges": [
+    [
+     4014040,
+     4014045
+    ]
+   ],
+   "title": "Moving in God's Strength, Not Our Own",
+   "key_verse": [
+    4014042,
+    4014042
+   ],
+   "reflect": [
+    {
+     "text": "Believers can easily swing between paralyzing fear and reckless self-reliance when facing difficult times. After refusing to enter the promised land because of unbelief and fear, the Israelites presumptuously decided to attack in their own strength. They said they were sorry, but their rush into battle showed pride rather than genuine repentance.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Moses warned the people that acting contrary to the Lord's command was doomed to fail. Because they had turned away from God, he was not with them, and marching into battle without his presence guaranteed defeat. Depending on independent human reasoning or personal skill rather than God's guidance always leads to loss.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Real victory never comes from pushing forward in our own strength or ignoring what God has said. Spiritual prosperity requires that we yield our own understanding and faithfully obey God's Word. We find safety only when we stop relying on ourselves, trust the Lord continually, and move forward in his power.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you trying to handle any situation in your own power right now instead of following God's guidance?",
+    "How can you practice genuine repentance by yielding your plans to God's Word today?"
+   ],
+   "prayer": "Lord, forgive us for the times we rush ahead in pride and rely on our own strength. Help us to listen to your Word and yield our understanding to your will. Teach us to trust you completely and move only where your presence leads. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jana Kelley",
+     "work": "Whose Power?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wholly-loved/wholly-loved-jan-29.html"
+    },
+    "D2": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - Feb. 19, 2009",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-feb-19-2009-11599753.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

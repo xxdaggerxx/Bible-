@@ -1,0 +1,160 @@
+{
+ "book": 66,
+ "chapter": 8,
+ "first": 1,
+ "last": 13,
+ "ref": "Revelation 8",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "When the Lamb opens the seventh seal, all of heaven suddenly becomes silent. Heaven is usually filled with songs of praise, so a half hour of silence is striking and solemn. This stillness shows deep reverence and breathless waiting as the angels and redeemed saints prepare for the judgments God is about to unleash on the earth.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "John sees seven angels who have the high honor of standing directly in God's presence. Each angel receives a trumpet to announce the next set of judgments. In the Bible, trumpets were blown to call assemblies together, to sound a battle alarm, or to herald the arrival of a king.",
+   "meaning_sources": [
+    "Barnes",
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Another angel steps up to the heavenly altar holding a golden censer, which is a small metal pan used for burning fragrant spices. He is given a large supply of incense to burn along with the prayers of all God's people on the golden altar. This picture reminds believers that their cries for help in times of distress are deeply precious to God.",
+   "meaning_sources": [
+    "Barnes",
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholics point to the angel presenting the prayers of the saints as biblical support for asking angels and saints in heaven to pray on their behalf.",
+     "sources": [
+      "https://www.catholic.com/bible-navigator/intercession-of-the-saints/revelation83-4"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The fragrant smoke of the incense rises directly before God from the hand of the angel, carrying the prayers of the saints with it. This ascending cloud proves that the prayers of God's people are welcomed and accepted in heaven. Not a single prayer offered in true faith is ignored or forgotten by the Lord.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Matthew Henry",
+    "Barnes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The angel takes the censer, fills it with blazing coals from the altar, and throws them down to the earth. Immediately, loud rumblings, thunders, flashes of lightning, and an earthquake break out. This shows that the coming judgments on the wicked world are God's direct answer to the cries of his suffering people.",
+   "meaning_sources": [
+    "Barnes",
+    "Jamieson-Fausset-Brown",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "After the fiery coals strike the earth, the seven angels lift their trumpets and get ready to sound them. They stand in order, waiting for God's command to blow each blast. Everything is now arranged for God's righteous warnings to go forth across the world.",
+   "meaning_sources": [
+    "Barnes",
+    "Geneva Notes",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The first angel sounds his trumpet, and a terrifying storm of hail and fire mixed with blood falls upon the land. A third of the earth is burned, along with a third of the trees and all the green grass. This judgment strikes the basic resources of human life, yet God limits the destruction to a third to show mercy while calling people to repent.",
+   "meaning_sources": [
+    "Barnes",
+    "Jamieson-Fausset-Brown",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 9,
+   "meaning": "At the sound of the second trumpet, a huge blazing mass that looks like a burning mountain is thrown into the sea. One third of the ocean turns into blood, causing a third of the sea creatures to die and destroying a third of all ships. This blow brings ruin to ocean life, sea travel, and international trade.",
+   "meaning_sources": [
+    "Barnes",
+    "Jamieson-Fausset-Brown",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 11,
+   "meaning": "The third angel blows his trumpet, and a blazing star named Wormwood falls like a flaming torch onto a third of the rivers and fresh springs. Wormwood is a bitter desert plant used in Scripture to describe extreme grief and poison. The fresh water becomes so bitter and contaminated that many people die from drinking it.",
+   "meaning_sources": [
+    "Barnes",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Popular modern teaching",
+     "view": "Some popular prophecy teachers have claimed that this star was fulfilled by the 1986 Chernobyl nuclear disaster, because the Ukrainian plant name has been linked to the word wormwood.",
+     "sources": [
+      "https://biblehub.com/q/what_event_explains_wormwood's_bitter_waters.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "When the fourth trumpet sounds, a third of the sun, moon, and stars are struck and lose their shine. As a result, a third part of both the day and the night is plunged into darkness. This partial loss of light spreads deep gloom and dread, proving that God rules over the heavenly bodies.",
+   "meaning_sources": [
+    "Barnes",
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
+   "end": 13,
+   "meaning": "John sees an eagle flying high across the middle of the sky, shouting a loud warning of three woes to the people on earth. The eagle cries out because the final three trumpet blasts will bring far greater pain and misery than the first four did. God sends this visible herald so that everyone on earth knows that even heavier judgments are about to fall.",
+   "meaning_sources": [
+    "Barnes",
+    "Jamieson-Fausset-Brown",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

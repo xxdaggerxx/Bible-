@@ -1,0 +1,74 @@
+{
+ "id": "11-021-017",
+ "title": "Elijah Denounces Ahab and Jezebel",
+ "refs": [
+  "1 Kings 21:17-24"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 11021020,
+   "end": 11021022,
+   "ref": "1 Kings 21:20-22",
+   "ranges": [
+    [
+     11021020,
+     11021022
+    ]
+   ],
+   "title": "\"You Have Sold Yourself to Do Evil\"",
+   "key_verse": [
+    11021020,
+    11021020
+   ],
+   "reflect": [
+    {
+     "text": "Ahab finally took the garden he wanted, but he could not enjoy it in peace. Elijah met him right at the gate like a living conscience. When people gain something by doing wrong, their guilt spoils the pleasure they hoped to find. Ahab viewed God's prophet as an enemy, yet the real problem was inside Ahab's own heart. As F. B. Meyer notes, the sun that softens wax hardens clay; our own inner condition decides whether God's truth feels like a faithful friend or a threatening foe.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Elijah told the king that he had sold himself to do evil. Sin promises great rewards, but it gives only empty illusions that end in ruin. Ahab and Jezebel carried out their wicked plans for a season without interruption, but unchecked evil does not last forever. God is remarkably patient and merciful, but His patience has a definite limit. No earthly title or power can shield anyone when God steps in to hold them accountable.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "A delay in justice does not mean God fails to notice what happens. The Lord always fulfills His word. Because He loves His people deeply, He will firmly discipline those who stubbornly persist in disobedience rather than turn back to Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever treated God's truth like an enemy because it challenged something you wanted?",
+    "How can remembering that God's patience has a limit help you turn away from persistent sin today?"
+   ],
+   "prayer": "Lord, search our hearts and keep us from chasing things that lead us away from you. When your word convicts us of wrong choices, help us receive it with humility rather than resistance. Thank you for your patience with us, and teach us to walk in obedience to your truth.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Kings 21:20",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Charles Swindoll",
+     "work": "Two Solemn Reminders",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-february-27-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

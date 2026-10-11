@@ -1,0 +1,74 @@
+{
+ "id": "14-031-011",
+ "title": "Hezekiah Organizes the Priests",
+ "refs": [
+  "2 Chronicles 31:11-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 14031021,
+   "end": 14031021,
+   "ref": "2 Chronicles 31:21",
+   "ranges": [
+    [
+     14031021,
+     14031021
+    ]
+   ],
+   "title": "\"He did it with all his heart\"",
+   "key_verse": [
+    14031021,
+    14031021
+   ],
+   "reflect": [
+    {
+     "text": "King Hezekiah threw his whole heart into his service to God, and God caused him to succeed. In ordinary life, we know that people rarely do well when they leave half their hearts behind. God desires that same deep diligence when we follow him. As Charles Spurgeon reminds us, the Holy Spirit helps our weaknesses, but \"he does not encourage our idleness.\" True heart-work stays faithful and perseveres even when the task feels hard.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Sometimes the duties placed before us do not feel pleasant or exciting. Even so, love can transform how we handle the hardest chores, much like a mother lovingly tends to her sick child. When we realize our daily place in life is appointed by God, we can do our work directly for Jesus. Hearing him ask us to do each task for his sake turns the plainest chore into something precious and bright.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Our devotion grows even more when we look at Jesus. His life and sacrifice were never half-hearted. He carried a heavy burden with burning zeal and poured out his life to save us. Because his whole heart was given for our sake, we are called to bring our full energy and love to him instead of offering what is lukewarm.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there duties in your daily routine where you have been holding back half of your heart?",
+    "How can remembering Christ's wholehearted love for you change the way you face difficult tasks today?"
+   ],
+   "prayer": "Lord God, thank you for the complete love Jesus showed in giving his life for us. Forgive our lukewarm efforts, and help us do our daily work gladly as service to you. Grant us willing and diligent hearts to finish what you have given us to do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 15",
+     "on": "2 Chronicles 31:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 31:21",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

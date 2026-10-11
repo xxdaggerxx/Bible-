@@ -1,0 +1,150 @@
+{
+ "id": "19-033-001",
+ "title": "Praise to the Creator",
+ "refs": [
+  "Psalms 33:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19033021,
+   "end": 19033021,
+   "ref": "Psalms 33:21",
+   "ranges": [
+    [
+     19033021,
+     19033021
+    ]
+   ],
+   "title": "\"Our Hearts Rejoice in Him\"",
+   "key_verse": [
+    19033021,
+    19033021
+   ],
+   "reflect": [
+    {
+     "text": "True joy does not always appear instantly when troubles arrive, but it grows from quiet faith in God. As Charles Spurgeon wrote, \"the root of faith produces the flower of heart-joy.\" While doubt brings distress, trusting God leads to joy in the long run. When we choose to rely on the Lord during sad moments, He answers our confidence in His good time. Thinking carefully about His holy name and character—that He is faithful, just, all-wise, and unchanging—gives us solid ground to lean on Him without reserve.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Because Christ is near, believers can experience joy even in deep suffering. Hardship on its own does not bring peace, but the presence of Jesus in our trials changes everything. Like birds that still sing in a cage, Christians can hold onto hope amid storms. When we face sickness, grief, or the fear of death, Jesus stays right beside us to whisper that we need not fear. His comforting presence lifts our spirits and proves to be all the comfort we need.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What helps you trust God's character when you are waiting for joy to return?",
+    "How has knowing that Jesus is with you brought you peace during a difficult time?"
+   ],
+   "prayer": "Lord, help us to trust Your holy name even when our hearts feel heavy. Thank You for being near us in every sorrow and sickness. Fill us with Your peace, and let our confidence in You turn into lasting joy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 2",
+     "on": "Psalms 33:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 9",
+     "on": "Psalms 33:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19033001,
+   "end": 19033022,
+   "ref": "Psalms 33:1-22",
+   "ranges": [
+    [
+     19033001,
+     19033022
+    ]
+   ],
+   "title": "Praise to the Creator",
+   "key_verse": [
+    19033001,
+    19033001
+   ],
+   "reflect": [
+    {
+     "text": "Worship invites us to turn our attention away from ourselves and look to God. True contentment comes when we forget ourselves and focus on His greatness, setting aside arguments over musical styles. God welcomes new songs as well as old, giving musical skill so His people can enjoy Him together. Anchored in His truth, we can praise Him with gladness because we are clothed in Christ's righteousness.",
+     "sources": [
+      "D4",
+      "D6",
+      "D7"
+     ]
+    },
+    {
+     "text": "The psalm shows us why God deserves our praise. Merely by speaking and by the breath of His mouth, He created the starry heavens. Nothing in all creation is outside His sovereign control. While human armies fail and nations see their plans frustrated, God's purposes stand firm for all generations. The boundless Creator who spoke the universe into being also gives breath to each of us every day.",
+     "sources": [
+      "D5",
+      "D7"
+     ]
+    },
+    {
+     "text": "Even though God is the exalted King, He does not ignore us. As Charles Spurgeon observed, our Lord graciously stoops to \"attend to the wants and to behold the woes of mankind.\" He marks our path, hears our quiet prayers, and notices every tear. Even when life is confusing, we can rest knowing His unfailing love guides our steps and cares for both our daily needs and our souls.",
+     "sources": [
+      "D2",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "How does focusing on God's greatness help you let go of self-centered thoughts during worship?",
+    "What comfort do you find in knowing that the Creator of the universe sees and cares about your daily struggles?"
+   ],
+   "prayer": "Almighty God, You spoke the heavens into being, yet You tenderly watch over each one of us. Forgive us when we focus too much on ourselves instead of Your glory. Teach us to praise You with joyful hearts, trusting Your wise and everlasting plans. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 28",
+     "on": "Psalms 33:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Stuart Briscoe",
+     "work": "New Songs of Praise",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/new-songs-of-praise-one-year-devotions-for-men-april-2.html"
+    },
+    "D5": {
+     "author": "Crosswalk.com",
+     "work": "Wisdom from the Psalms 3/29",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-3-or-29-552234.html"
+    },
+    "D6": {
+     "author": "Scotty Smith",
+     "work": "We Can Trust God and Everything He Does: Praying through Psalm 33:1-5",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/scotty-smith/we-can-trust-god-and-everything-he-does-praying-through-psalm-331-5/"
+    },
+    "D7": {
+     "author": "Stephen Witmer",
+     "work": "Sunday Morning Is Not About Me: The Joy of Self-Forgetfulness",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/sunday-morning-is-not-about-me"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

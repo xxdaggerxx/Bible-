@@ -1,0 +1,66 @@
+{
+ "id": "16-006-015",
+ "title": "Completion of the Wall",
+ "refs": [
+  "Nehemiah 6:15-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 16006015,
+   "end": 16006019,
+   "ref": "Nehemiah 6:15-19",
+   "ranges": [
+    [
+     16006015,
+     16006019
+    ]
+   ],
+   "title": "Work That Only God Can Do",
+   "key_verse": [
+    16006016,
+    16006016
+   ],
+   "reflect": [
+    {
+     "text": "Rebuilding the broken walls of Jerusalem seemed impossible. Yet, under Nehemiah's leadership, the people completed the entire project in just fifty-two days. When their enemies heard the news, they felt afraid and disheartened. The work was so clearly supernatural that even those who opposed God's people had to admit that God had done it.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jack Graham notes that believers should want to join in works that cannot be explained apart from God. It can be easy to rely on our own strength or planning. But when the work of God's kingdom is empowered by the Holy Spirit, it becomes clear that human skill is not the true cause. In that moment, Jesus Christ receives all the glory.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God invites each of us to ask for the filling of His Holy Spirit. When we pray for His help, He can use us to take part in great things that we could never accomplish on our own. His power turns difficult tasks into clear signs of His presence.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you involved in any work that depends completely on God's power rather than your own strength?",
+    "How can you ask the Holy Spirit to guide and empower your service this week?"
+   ],
+   "prayer": "Lord God, thank You that You can accomplish what seems impossible to us. Fill us with Your Holy Spirit so we may serve You faithfully. Please work through our lives in ways that bring all the honor and glory to Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jack Graham",
+     "work": "Power Point - Sept. 26, 2006",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-sept-26-2006-1428904.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

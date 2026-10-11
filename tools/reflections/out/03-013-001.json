@@ -1,0 +1,133 @@
+{
+ "id": "03-013-001",
+ "title": "Laws about Skin Diseases",
+ "refs": [
+  "Leviticus 13:1-46"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 3013013,
+   "end": 3013013,
+   "ref": "Leviticus 13:13",
+   "ranges": [
+    [
+     3013013,
+     3013013
+    ]
+   ],
+   "title": "\"He Shall Pronounce Him Clean\"",
+   "key_verse": [
+    3013013,
+    3013013
+   ],
+   "reflect": [
+    {
+     "text": "At first, this ancient rule sounds very surprising. If a skin disease spread over someone's whole body from head to foot, the priest declared him clean. Yet this law gives us a wonderful picture of God's mercy. Hidden and unconfessed sin is the real sickness of the soul. Trying to hide our faults or pretending we are good enough on our own is deadly to spiritual life.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When we finally see our ruined state and admit our complete failure, everything changes. As Charles Spurgeon wrote, we must confess that we are \"nothing else but sin\" before the Lord. Having an honest awareness and deep sorrow for our wrongdoing is a healthy sign that the Holy Spirit is at work in our hearts. Stripping away our pride comes before God clothes us in His kindness.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "No matter how bad our past has been, an honest confession will never keep us away from Jesus. He promised that anyone who comes to Him will never be turned away. When we stop trusting in our own goodness and come to Jesus just as we are, God cleanses us through the blood of Christ.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever try to hide your faults from God instead of openly confessing them?",
+    "How does knowing Jesus will never turn away a broken heart give you comfort today?"
+   ],
+   "prayer": "Lord Jesus, thank You that You welcome us even when we feel completely ruined by our sin. Help us lay aside all self-righteous pride and come to You with honest hearts. Thank You for the promise that You will never cast us out, but will wash us clean by Your grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 26",
+     "on": "Leviticus 13:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 29",
+     "on": "Leviticus 13:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "Lessons from Leprosy - Truth For Life - September 29",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-september-29-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 3013001,
+   "end": 3013046,
+   "ref": "Leviticus 13:1-46",
+   "ranges": [
+    [
+     3013001,
+     3013046
+    ]
+   ],
+   "title": "Living Outside the Camp",
+   "key_verse": [
+    3013046,
+    3013046
+   ],
+   "reflect": [
+    {
+     "text": "In ancient Israel, a person diagnosed with a severe skin disease faced a heartbreaking reality. They had to tear their clothes, cover their faces, and live in lonely isolation outside the camp. This painful separation shows us what unchecked sin does. Sin often starts as a small, harmless-looking spot in our lives, but it spreads and causes deep spiritual damage. Left on its own, it leads to spiritual death and cuts off our fellowship with God.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Looking at the deep sorrow of people put outside the camp reminds us of our call as believers. When we see people hurting and afflicted, we are called to reach out and minister to them rather than turning away. Most of all, these laws point us to our own need for spiritual rescue. We cannot cure our own condition, but full cleansing from the defilement of sin comes when we confess our wrongs and put our faith in Jesus Christ.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a small, unchecked sin in your life that is growing and hurting your walk with God?",
+    "How can you show care this week to someone who feels lonely or is suffering?"
+   ],
+   "prayer": "Heavenly Father, show us any hidden sins that are growing in our lives before they cause deep harm. Give us compassionate hearts to reach out to those around us who are hurting and alone. We thank You that through confession and faith in Christ, You wash us completely clean. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - February 6",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-feb-6-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

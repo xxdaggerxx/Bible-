@@ -1,0 +1,75 @@
+{
+ "id": "42-002-025",
+ "title": "The Prophecy of Simeon",
+ "refs": [
+  "Luke 2:25-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42002025,
+   "end": 42002035,
+   "ref": "Luke 2:25-35",
+   "ranges": [
+    [
+     42002025,
+     42002035
+    ]
+   ],
+   "title": "Seeing God's Promised Salvation",
+   "key_verse": [
+    42002030,
+    42002030
+   ],
+   "reflect": [
+    {
+     "text": "Simeon was an ordinary layman rather than an official temple priest, yet he lived with extraordinary devotion to God. His hope was firmly anchored in the promises of Scripture. Like Simeon, we are reminded of what it looks like to wait eagerly on God. He spent his life with a clear focus, longing to see the promised Savior with his own eyes.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When Simeon finally held the infant Jesus in his arms, he was filled with complete peace. He recognized that earthly remedies, well-meaning help, and changes in our settings cannot heal deep grief or spiritual pain. Lasting rescue comes only through Jesus Christ. Looking to Him brings God's light, peace, and hope even into our darkest times.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Simeon's words also remind us that Jesus reveals what is hidden within our hearts. How we choose to respond to Him exposes who we truly are and determines our eternal destiny. When we turn to Jesus as our only source of salvation, we discover the peace and comfort God has prepared for all people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you tend to look for comfort when you face deep sorrow or spiritual pain?",
+    "How does holding onto God's promises in Scripture help you wait on Him with hope?"
+   ],
+   "prayer": "Lord God, thank You for sending Jesus as the light and rescue we truly need. Forgive us when we look to earthly remedies to heal our deep hurt instead of turning to You. Help us to wait on Your promises with faithful hearts and to rest in the peace of Your salvation. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Samantha Evilsizer",
+     "work": "A Light in the Dark",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/a-light-in-the-dark-encouragement-for-today-december-25-2013.html"
+    },
+    "D2": {
+     "author": "Mike Pohlman",
+     "work": "Will You See The Lord's Christ this Christmas?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-dec-11-2008-11596812.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

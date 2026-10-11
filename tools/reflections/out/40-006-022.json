@@ -1,0 +1,71 @@
+{
+ "id": "40-006-022",
+ "title": "The Lamp of the Body",
+ "refs": [
+  "Matthew 6:22-24",
+  "Luke 11:33-36"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40006022,
+   "end": 40006024,
+   "ref": "Matthew 6:22-24; Luke 11:33-36",
+   "ranges": [
+    [
+     40006022,
+     40006024
+    ],
+    [
+     42011033,
+     42011036
+    ]
+   ],
+   "title": "The Lamp of the Body",
+   "key_verse": [
+    40006022,
+    40006022
+   ],
+   "reflect": [
+    {
+     "text": "Jesus talks about the eye right between teachings on storing up treasure in heaven and choosing which master to serve. The eye acts like a window into our soul. When Jesus mentions a bad eye, he points to a heart that is stingy and blind to God's grace, which is God's undeserved kindness. A bad eye looks greedily at worldly wealth instead of taking joy in how generous God is.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we fix our attention on gaining money, we become spiritually blind. That kind of focus tricks us and pulls us into deep darkness, making us serve wealth rather than God. In contrast, a healthy eye clearly sees that heavenly treasure in Christ is worth far more than anything this world offers.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of this, we need God to heal our spiritual sight. When he opens our eyes, we can value Christ above every earthly possession and let his light fill our entire life.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly possessions are you tempted to focus on rather than God's generosity?",
+    "How can you train your spiritual sight to value Christ more than money today?"
+   ],
+   "prayer": "Lord, heal our spiritual vision and clear away any greed in our hearts. Help us to see your grace and to treasure Christ far above earthly wealth. Fill our whole lives with your light so that we serve only you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "John Piper",
+     "work": "What Is the \"Bad Eye\" in Matthew 6:23?",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/what-is-the-bad-eye-in-matthew-6-23"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

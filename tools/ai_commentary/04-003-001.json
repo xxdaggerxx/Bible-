@@ -1,0 +1,153 @@
+{
+ "book": 4,
+ "chapter": 3,
+ "first": 1,
+ "last": 26,
+ "ref": "Numbers 3:1-26",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "God records the family line of Aaron and Moses starting from the time He spoke at Mount Sinai. Aaron is listed before Moses here because this chapter focuses on the priests, who all came from Aaron's family. Moses held great personal honor as Israel's leader, but his own sons were not priests and remained ordinary Levites.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 4,
+   "meaning": "Aaron had four sons who were all anointed and set apart as priests to serve God. The two oldest sons, Nadab and Abihu, died before the Lord when they offered unauthorized fire that God had not commanded. Because they died childless, only the younger sons, Eleazar and Ithamar, remained to carry on the priestly work under their father's guidance.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 6,
+   "meaning": "God commands Moses to bring the tribe of Levi forward and present them to Aaron the priest. The word used for presenting them is the same word used for presenting an offering, showing that the whole tribe was dedicated completely to God. They were not priests themselves, but their entire calling was to assist the priests in the Lord's house.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 8,
+   "meaning": "The Levites were given the duty of caring for and guarding the Tent of Meeting on behalf of Aaron and the whole nation. They looked after all the holy furniture, curtains, and tools, keeping them clean, safe, and ready for worship. By doing this practical work, they performed the sanctuary service that the rest of the people owed to God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 10,
+   "meaning": "Moses was instructed to assign the Levites entirely to Aaron and his sons as helpers. Only Aaron and his direct descendants were permitted to carry out the sacred duties of the priesthood, such as offering sacrifices at the altar. Anyone else who tried to perform these priestly acts was considered an intruder and was to be put to death.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars hold that limiting the priesthood strictly to Aaron's line developed late in Israel's history, noting earlier passages where non-priests and kings offered sacrifices.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/pfc/numbers-3.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 11,
+   "end": 13,
+   "meaning": "God explained that He chose the Levites to take the place of every firstborn male in Israel. During the first Passover, when God struck down Egypt's firstborn but spared Israel, He claimed all the firstborn of Israel as His own special possession. By substituting the Levites for the firstborn sons, God provided a full-time tribe dedicated entirely to His service.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 14,
+   "end": 16,
+   "meaning": "God commanded Moses to count every male Levite who was at least one month old. While the other tribes were counted from age twenty for the army, the Levites were counted as infants because their lives were dedicated to God as substitutes for the firstborn. Moses carefully obeyed the Lord and completed the census.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 17,
+   "end": 20,
+   "meaning": "The tribe of Levi was divided under Levi's three sons: Gershon, Kohath, and Merari. These three sons had eight sons of their own, who became the leaders of the eight family clans within the tribe. From these small beginnings, God grew a large community dedicated to serving Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 21,
+   "end": 22,
+   "meaning": "The family of Gershon consisted of two clans, named after his sons Libni and Shimei. When Moses counted every male who was at least one month old, the Gershonites totaled 7,500. This group made up the second largest of the three Levitical divisions.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://mail.biblehub.com/commentaries/gill/numbers/3.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 23,
+   "end": 24,
+   "meaning": "God ordered the Gershonite clans to set up their tents on the west side, directly behind the tabernacle. Their appointed family leader was Eliasaph, the son of Lael. Placing them here formed a protective guard around God's holy dwelling place.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 25,
+   "end": 26,
+   "meaning": "The Gershonites were responsible for the cloth and woven parts of the sanctuary whenever the camp traveled. They packed, transported, and set up the inner curtains, the outer tent of goat hair, the protective leather coverings, the courtyard hangings, and the ropes that held them. God gave each family clear responsibilities so that His house would be treated with reverence and order.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,68 @@
+{
+ "id": "59-001-001",
+ "title": "A Greeting from James",
+ "refs": [
+  "James 1:1"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 59001001,
+   "end": 59001001,
+   "ref": "James 1:1",
+   "ranges": [
+    [
+     59001001,
+     59001001
+    ]
+   ],
+   "title": "A Servant in Every Season",
+   "key_verse": [
+    59001001,
+    59001001
+   ],
+   "reflect": [
+    {
+     "text": "James was the earthly brother of Jesus, a man devoted to prayer, and a leader in the church. Yet when he begins his letter, he does not boast about family ties or high positions. Instead, he simply calls himself a servant of God and the Lord Jesus Christ. James understood that his true identity and main purpose in life came from serving his Master, not from worldly status.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "He wrote this greeting to believers scattered far from home because of persecution. When life gets disrupted and routines break down, we might feel like we have lost our way or our purpose. But Christians live as exiles on this earth, away from our true home. James reminds us that our calling as servants does not change when our circumstances shift. We do not need perfect conditions to live out our faith. Even in hard times and ordinary daily tasks, we can reflect Christ right where we are.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering that you are a servant of Jesus give you steady purpose when life feels disrupted?",
+    "What is one ordinary daily duty where you can serve God right now?"
+   ],
+   "prayer": "Lord Jesus, thank you that our true purpose is found in serving you. When our lives feel scattered or difficult, help us remember who we belong to. Give us your wisdom to serve you faithfully in our everyday duties today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "James, A Servant of God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/james-servant-god"
+    },
+    "D2": {
+     "author": "Olivia Barnes",
+     "work": "Purpose Filled - Encouragement Café - June 25",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/purpose-filled-encouragement-cafe-june-25.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

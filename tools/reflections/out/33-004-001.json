@@ -1,0 +1,82 @@
+{
+ "id": "33-004-001",
+ "title": "The Mountain of the House of the LORD",
+ "refs": [
+  "Micah 4:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 33004001,
+   "end": 33004005,
+   "ref": "Micah 4:1-5",
+   "ranges": [
+    [
+     33004001,
+     33004005
+    ]
+   ],
+   "title": "The Mountain of Peace and Restoration",
+   "key_verse": [
+    33004002,
+    33004002
+   ],
+   "reflect": [
+    {
+     "text": "Micah looked past coming judgment and exile to a day of great hope. In the ancient world, temples built on high mountains represented a ruler's power. God promised that His house would be exalted above every hill, displaying His complete victory over evil and chaos throughout creation. In part, this has already begun through the gospel, as people from many different nations have turned away from their old ways to worship the Lord and stream into His kingdom.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Human organizations like the United Nations have repeatedly tried and failed to end war on earth. Micah showed that true global peace comes from God alone, not through an earthly political empire. Jesus taught that this complete restoration belongs to His eternal, spiritual kingdom. When Christ returns, weapons will be reshaped into farming tools, schools of war will be forgotten, and all fear will vanish under His loving rule.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "While we wait for that day to arrive in full, we should never treat anyone as beyond God's redemption. We are called to support the spread of Christ's kingdom and pray for the nations to seek Him. We cannot personally stop every conflict across the globe, but God asks us to pursue peace with the people we meet every day.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Who is someone in your life you might be tempted to view as far from God, and how can you pray for them?",
+    "Since Christ promises ultimate peace, how can you choose to make peace in your daily relationships today?"
+   ],
+   "prayer": "Lord God, thank You for the promise that Your kingdom will triumph over evil and bring an end to all conflict. Help us to share Your word gladly and remember that no one is beyond Your reach. Give us grace to live at peace with others today as we look forward to the return of Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Micah 4:1",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Stuart Briscoe",
+     "work": "When Wars Will Stop",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/when-wars-will-stop-one-year-devotions-for-men-july-7.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Exaltation of God's Mountain",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/exaltation-gods-mountain"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

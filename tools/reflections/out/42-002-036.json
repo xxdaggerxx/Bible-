@@ -1,0 +1,75 @@
+{
+ "id": "42-002-036",
+ "title": "The Prophecy of Anna",
+ "refs": [
+  "Luke 2:36-38"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42002036,
+   "end": 42002038,
+   "ref": "Luke 2:36-38",
+   "ranges": [
+    [
+     42002036,
+     42002038
+    ]
+   ],
+   "title": "A Lifetime of Faithful Worship",
+   "key_verse": [
+    42002038,
+    42002038
+   ],
+   "reflect": [
+    {
+     "text": "After suffering early loss and becoming a widow, Anna chose worship instead of bitterness. She spent decades in the temple, serving God night and day through prayer and fasting. By giving up ordinary comforts, she focused completely on close fellowship with the Lord.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Her long season of devotion was not wasted. All those quiet years prepared her heart to recognize the Christ child the moment He arrived. When we seek God with that same steady diligence in our daily lives and work, we learn to hear His voice and recognize His presence around us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Seeing Jesus brought spontaneous thanksgiving from Anna, with no complaints about the long years of waiting. God honored her devotion by choosing her to announce the Redeemer to everyone waiting for Him. Anna shows us how to keep Jesus as our first love all through the year and openly share Him with others.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you seek closer fellowship with God in your normal daily routine?",
+    "Are you ready to thank God and speak about Jesus to the people around you?"
+   ],
+   "prayer": "Lord, help us choose worship and prayer when life brings sorrow or waiting. Teach us to seek You faithfully each day so we learn to recognize Your presence. Keep our hearts full of thanks, and give us courage to share Jesus with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Liz Curtis Higgs",
+     "work": "Lord, I Want to be Like This Woman - Encouragement for Today - December 18, 2015",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/lord-i-want-to-be-like-this-woman-encouragement-for-today-december-18-2015.html"
+    },
+    "D2": {
+     "author": "God's Love at Work",
+     "work": "Diligence - God's Love at Work - Week of November 10",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/a-womans-walk/a-womans-walk-week-of-october-24-11610242.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

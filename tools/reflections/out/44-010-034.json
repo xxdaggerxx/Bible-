@@ -1,0 +1,67 @@
+{
+ "id": "44-010-034",
+ "title": "Good News for the Gentiles",
+ "refs": [
+  "Acts 10:34-43"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44010034,
+   "end": 44010043,
+   "ref": "Acts 10:34-43",
+   "ranges": [
+    [
+     44010034,
+     44010043
+    ]
+   ],
+   "title": "Following Jesus in Doing Good",
+   "key_verse": [
+    44010038,
+    44010038
+   ],
+   "reflect": [
+    {
+     "text": "When Peter tells Cornelius about Jesus, he sums up the Savior's earthly life in a simple phrase: Jesus went around doing good. As Charles Spurgeon points out, Jesus did this good personally. He did not keep a safe distance from hurting people. He went directly to sickbeds, touched lepers with His own hands, and cared for those who were suffering.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus also did not wait for needs to come knocking on His door. He traveled across villages and towns, actively looking for people who needed mercy. Difficulties and dangers never stopped Him. Spurgeon notes that Jesus showed an \"incessant activity\" in His work, never growing tired of helping people and freeing those who were oppressed.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Peter reminds us that Jesus is Lord of all, and His life leaves us a clear pattern to follow. Doing good is not something we should do from afar or with half a heart. We are called to step into people's lives ourselves, offering a warm word, a helping hand, and persistent love just as Jesus did.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Who in your life might need a personal word of hope or a direct act of kindness from you this week?",
+    "What might it look like for you to go out of your way to serve someone rather than waiting for them to ask?"
+   ],
+   "prayer": "Lord Jesus, thank You for coming near to us and spending Your earthly life doing good. Give us willing hearts to follow Your steps and serve people with our own hands. Help us not to grow weary in showing Your mercy to those around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 28",
+     "on": "Acts 10:38",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,19 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://billygraham.org/devotions",
+  "https://utmost.org/",
+  "https://www.biblegateway.com/passage/?search=Matthew+28%3A11-15&version=KJV",
+  "https://www.biblegateway.com/passage/?search=Matthew+28%3A11-15&version=NASB",
+  "https://www.biblegateway.com/passage/?search=Matthew+28%3A11-15&version=NASB1995",
+  "https://www.biblegateway.com/passage/?search=Matthew+28%3A11-15&version=NKJV",
+  "https://www.biblegateway.com/passage/?search=Matthew+28%3A11-15&version=NLT",
+  "https://www.biblegateway.com/verse/en/Matthew%2028%3A11",
+  "https://www.crosswalk.com/devotionals/a-womans-walk/gods-love-at-work-week-of-may-10.html",
+  "https://www.davidjeremiah.org/",
+  "https://www.ligonier.org/"
+ ],
+ "cost": 0.04817225,
+ "model": "google/gemini-3.8-flash"
+}

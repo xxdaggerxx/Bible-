@@ -1,0 +1,94 @@
+{
+ "id": "19-038-001",
+ "title": "Do Not Rebuke Me in Your Anger",
+ "refs": [
+  "Psalms 38:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19038001,
+   "end": 19038022,
+   "ref": "Psalms 38:1-22",
+   "ranges": [
+    [
+     19038001,
+     19038022
+    ]
+   ],
+   "title": "Do Not Forsake Me, O Lord",
+   "key_verse": [
+    19038021,
+    19038021
+   ],
+   "reflect": [
+    {
+     "text": "David opens his heart to God with complete honesty. He describes crushing physical pain, deep sadness, friends who turn away, and enemies plotting his ruin. Instead of pretending to be innocent, David confesses his guilt and asks for redeeming mercy. Even when grief leaves him groaning without words, God knows every quiet ache. As F. B. Meyer explains, our secret desires \"lie open to Him,\" and God hears what we cannot speak aloud.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "Long seasons of suffering can make us wonder if the pain will ever end. Losing hope can paralyze the soul in deep darkness, but God sees our trials and will step in. Hope will revive in us just as surely as spring follows winter. While David remained silent before his enemies, trials also remind us not to stay quiet about our faith, but to boldly live out God's truth.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "In all these struggles, we cannot survive on our own strength. Charles Spurgeon observes that a child learning to walk always needs a guide's aid. We need God to uphold us whether we are grieving, confessing sin, or enjoying peaceful days. Our daily cry must be for the Lord to stay close and never leave us to fall.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy burdens or hidden desires do you need to lay honestly before God today?",
+    "How does knowing God will revive your hope help you endure prolonged trials?"
+   ],
+   "prayer": "Lord God, You know our secret groaning and see every trial that crushes our hearts. Forgive our sins and show us Your tender mercy when we are weak. Hold us up each day like a caring Father, and revive our hope when the darkness feels long. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 25",
+     "on": "Psalms 38:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 38:9",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "Hope Revived",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-may-14-2013.html"
+    },
+    "D4": {
+     "author": "Crosswalk.com",
+     "work": "Wisdom from the Psalms 4/10",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-4-or-10-552258.html"
+    },
+    "D5": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Psalm 38",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/numbers-4-psalm-38-song-of-songs-2-hebrews-2/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "23-037-021",
+ "title": "Sennacherib’s Fall Prophesied",
+ "refs": [
+  "Isaiah 37:21-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23037021,
+   "end": 23037035,
+   "ref": "Isaiah 37:21-35",
+   "ranges": [
+    [
+     23037021,
+     23037035
+    ]
+   ],
+   "title": "Safe in the King's Hands",
+   "key_verse": [
+    23037022,
+    23037022
+   ],
+   "reflect": [
+    {
+     "text": "King Sennacherib had threatened Jerusalem with terrifying power, and the people were full of fear. But when God gave His word through Isaiah, everything changed. Hearing God's promise gave His trembling people new boldness. They could shake their heads at the proud king, because they knew he could never defeat the God who protects them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Faith helps us see our enemies and fears for what they truly are. Those who rage against God and His people are only frail human beings. As Charles Spurgeon noted, \"the kingdom is safe in the King's hands.\" Foes may roar like loud waves, but they are powerless against the Almighty. When God rises to act, their boastful threats blow away like dust.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "That is why we do not need to give in to fear. Whatever threatens your peace today cannot overcome the Lord. God has planned all things, and the Most High is with us. When we rest in His promise, we can face loud threats with quiet trust, knowing that our King reigns over all.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What big fear or loud problem is making you feel weak right now?",
+    "How does knowing that God is with you help you face things that seem too powerful to beat?"
+   ],
+   "prayer": "Lord, forgive us when loud threats make us forget how strong You are. Remind us each day that our lives and Your church are safe in Your care. Give us simple faith to trust Your Word and rest in Your mighty protection. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 21",
+     "on": "Isaiah 37:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

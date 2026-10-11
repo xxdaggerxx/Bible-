@@ -1,0 +1,67 @@
+{
+ "id": "43-015-009",
+ "title": "No Greater Love",
+ "refs": [
+  "John 15:9-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43015009,
+   "end": 43015017,
+   "ref": "John 15:9-17",
+   "ranges": [
+    [
+     43015009,
+     43015017
+    ]
+   ],
+   "title": "Loved as the Father Loves the Son",
+   "key_verse": [
+    43015009,
+    43015009
+   ],
+   "reflect": [
+    {
+     "text": "Jesus tells his disciples to remain in his love, a love that mirrors the Father's love for him. Charles Spurgeon points out that Jesus loves his people \"without measure, without change, without beginning, and without end.\" While we can easily pinpoint when our love for God began, Christ's love for us has no starting point in human history; it flows from eternity.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because this love is divine, it never changes. On days when you feel joyful and close to God, Christ loves you. On difficult days when you feel down or overwhelmed, like deep waves crashing over your head, he loves you just the same. His heart remains completely faithful to his people through every high and low.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Finally, his love has no end and no limits. Christ holds on to his people through life and even down into the grave, guiding us safely home to heaven. He devoted his entire heart to his followers by giving his life for us, offering a love that is too great for us to fully measure.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus loves you without change help you on difficult days?",
+    "Since Christ loves you without end, how can you rest more fully in his care today?"
+   ],
+   "prayer": "Lord Jesus, thank you for loving us with an unending and perfect love. Help us to rest in your care when our feelings and circumstances change. Keep us close to you each day, and teach us to share your faithful love with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 18",
+     "on": "John 15:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

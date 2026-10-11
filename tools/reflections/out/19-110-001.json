@@ -1,0 +1,114 @@
+{
+ "id": "19-110-001",
+ "title": "God’s Faithful Messiah",
+ "refs": [
+  "Psalms 110:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19110001,
+   "end": 19110003,
+   "ref": "Psalms 110:1-3",
+   "ranges": [
+    [
+     19110001,
+     19110003
+    ]
+   ],
+   "title": "\"Sit at My Right Hand\"",
+   "key_verse": [
+    19110001,
+    19110001
+   ],
+   "reflect": [
+    {
+     "text": "When David calls his future royal descendant \"Lord,\" he points to the Messiah's greatness and divine nature. After finishing His work on earth, Jesus ascended to the highest place of honor beside the Father. That ascension began the final overthrow of every power opposing His kingdom. Having His enemies placed under His feet shows complete royal victory. Because Jesus cannot fail, everyone joined to Him by faith stays safe from every spiritual foe.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This victorious King also calls forth a willing people. By nature, our human desires are stubborn and bent away from God. Yet when His power touches us, His grace changes our hearts without force. As Charles Spurgeon observed, God \"does not break the lock,\" but opens it gently with His own key. He turns our hearts so that we are glad to turn from sin, trust Him, and gladly obey His commands.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that King Jesus cannot fail give you comfort when you face trials?",
+    "In what area of your life is God asking you to willingly follow Him today?"
+   ],
+   "prayer": "Lord Jesus, You rule over all things and hold every enemy beneath Your feet. Thank You for softening our stubborn hearts by Your grace and making us glad to follow You. Help us to serve You with willing and joyful hearts today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 20",
+     "on": "Psalms 110:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The King's All-Encompassing Reign",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/kings-all-encompassing-reign"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19110001,
+   "end": 19110007,
+   "ref": "Psalms 110:1-7",
+   "ranges": [
+    [
+     19110001,
+     19110007
+    ]
+   ],
+   "title": "Our Eternal King and Priest",
+   "key_verse": [
+    19110004,
+    19110004
+   ],
+   "reflect": [
+    {
+     "text": "In this psalm, David overhears the LORD speaking directly to David's Master. This conversation reveals the Messiah, who is both a physical descendant of David and the eternal Son of God. His place at the Father's right hand confirms His supreme royal rule over all the nations.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Even more, this passage unites two offices that were kept separate in Israel: the king and the priest. Jesus does not come from the ordinary family of Levi. Instead, God confirmed Him with an unchangeable oath as a priest in the pattern of Melchizedek. Earthly priests were mortal men who eventually died, but Jesus ministers forever by the power of an endless, indestructible life. Because His priesthood never ends, He guarantees a superior and unbreakable covenant between God and His people.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Why is it encouraging to know that Jesus lives forever as your high priest?",
+    "How does resting in an unbreakable covenant with God change the way you pray?"
+   ],
+   "prayer": "Father, thank You for providing Your Son to be our King and our everlasting Priest. We are grateful that His life can never end and that His covenant of peace is completely secure. Teach us to rest quietly in His eternal care today. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Justin Dillehay",
+     "work": "Jesus According to the New Testament’s Most Quoted Psalm",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/psalm-110/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

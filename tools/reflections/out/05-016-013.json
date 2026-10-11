@@ -1,0 +1,66 @@
+{
+ "id": "05-016-013",
+ "title": "The Feast of Tabernacles",
+ "refs": [
+  "Deuteronomy 16:13-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5016013,
+   "end": 5016017,
+   "ref": "Deuteronomy 16:13-17",
+   "ranges": [
+    [
+     5016013,
+     5016017
+    ]
+   ],
+   "title": "Joyful Worship and Grateful Giving",
+   "key_verse": [
+    5016017,
+    5016017
+   ],
+   "reflect": [
+    {
+     "text": "God told his people to gather together three times each year for major festivals. Gathering as one body united the whole community in shared worship and joy. Nobody was left out of the feast. Families, workers, foreigners, and widows all joined together to celebrate how God had blessed them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "During these celebrations of harvest, the people remembered that the Lord is the true source of every provision. Knowing that everything comes from God opens our hands in generosity toward him and toward others who are in need. These Old Testament harvest festivals also pointed ahead to God's greater gift, when he poured out the Holy Spirit on his people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The passage also reminds us that no one was to come before the Lord empty-handed. We should never approach God presumptuously, taking his goodness for granted. Instead, we bring our gifts according to how he has blessed our work, offering our lives and resources with deeply thankful hearts.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering that God provides everything you have change the way you share with others?",
+    "In what ways can you approach God with a thankful heart rather than taking his blessings for granted?"
+   ],
+   "prayer": "Lord, thank you for providing every good gift and for blessing the work of our hands. Teach us to gather with your people in true joy and generosity. Guard us from coming to you with proud hearts, and help us gladly share what you have given. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Importance of Pentecost",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/importance-pentecost"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

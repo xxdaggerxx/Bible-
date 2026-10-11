@@ -1,0 +1,67 @@
+{
+ "id": "65-001-001",
+ "title": "A Greeting from Jude",
+ "refs": [
+  "Jude 1:1-2"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 65001001,
+   "end": 65001002,
+   "ref": "Jude 1:1-2",
+   "ranges": [
+    [
+     65001001,
+     65001002
+    ]
+   ],
+   "title": "Called, Loved, and Kept",
+   "key_verse": [
+    65001001,
+    65001001
+   ],
+   "reflect": [
+    {
+     "text": "Jude introduces himself as a servant of Jesus Christ. He moved from merely being a relative of Jesus to worshiping Him as his Lord and Savior. When Jude writes to fellow believers, he immediately reminds them of who they are in God. They are called by God, awakened from spiritual death into Christ's life. They are dearly loved by the Father, which frees them from old labels and shame, and they are safely kept in Jesus.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Letters in the early church used intentional greetings to build up Christians who were facing deceptive teachers and spiritual battles. Jude prays for mercy, peace, and love to abound toward them. God's mercy gives unearned compassion and pardon through the cross. His peace stays steady even in hardship, and His love values people unconditionally. Knowing that Christ keeps us safe frees us from self-absorption so we can use our words to uplift others in faith.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing you are called, loved, and kept by God give you peace today?",
+    "Who can you encourage this week with a thoughtful, faith-filled message?"
+   ],
+   "prayer": "Lord God, thank You for calling us into life, loving us unconditionally, and keeping us secure in Christ. Please multiply Your mercy, peace, and love in our hearts when trials surround us. Free us from self-absorption so we can encourage and bless those around us today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Laura Bailey",
+     "work": "The Biblical Purpose for Holy Greetings - The Crosswalk Devotional - May 16",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/the-biblical-purpose-for-holy-greetings-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Scotty Smith",
+     "work": "Called, Beloved, and Kept",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/scotty-smith/called-beloved-and-kept/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

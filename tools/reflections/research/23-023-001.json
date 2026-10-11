@@ -1,0 +1,17 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "https://www.biblegateway.com/passage/?search=Isaiah%2023&version=AMP",
+  "https://www.biblegateway.com/passage/?search=Isaiah%2023&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+23%3A1-14&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+23&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+23&version=KJV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+23&version=NASB",
+  "https://www.biblegateway.com/passage/?search=Isaiah+23&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+23&version=NKJV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+23&version=NLT",
+  "https://www.biblegateway.com/passage/?search=Isaiah+23&version=NLT%3BAMP%3BNKJV"
+ ],
+ "cost": 0.032935775,
+ "model": "google/gemini-3.8-flash"
+}

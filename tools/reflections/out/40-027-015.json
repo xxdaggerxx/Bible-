@@ -1,0 +1,101 @@
+{
+ "id": "40-027-015",
+ "title": "The Crowd Chooses Barabbas",
+ "refs": [
+  "Matthew 27:15-23",
+  "Mark 15:6-11",
+  "Luke 23:13-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40027015,
+   "end": 40027023,
+   "ref": "Matthew 27:15-23; Mark 15:6-11; Luke 23:13-25",
+   "ranges": [
+    [
+     40027015,
+     40027023
+    ],
+    [
+     41015006,
+     41015011
+    ],
+    [
+     42023013,
+     42023025
+    ]
+   ],
+   "title": "An Innocent Savior in Our Place",
+   "key_verse": [
+    42023025,
+    42023025
+   ],
+   "reflect": [
+    {
+     "text": "Pilate knew Jesus had done nothing wrong and that the religious leaders handed Him over out of envy. Even so, the leaders stirred up the crowd to ask for Barabbas, a guilty rebel and murderer. Pilate gave in to keep peace and protect his own position, choosing political safety over true justice.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Barabbas was sitting in prison facing certain death when he heard the shouts outside. Instead of being led away to die, he was suddenly set completely free. Jesus likely took the very cross meant for him. This historical moment gives us a clear picture of substitution, where an innocent person dies in place of a guilty one.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "We should not look down on Barabbas, because we are in the exact same place. We were guilty before God and facing condemnation, but Jesus took our punishment upon Himself. We receive unearned pardon because He died in our place. Knowing God's righteous character also calls us to stand against unfairness and injustice in our world.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How does seeing yourself in Barabbas's place change the way you view what Jesus did on the cross?",
+    "In what ways can you stand for justice and truth when others give in to pressure?"
+   ],
+   "prayer": "Lord Jesus, thank You for taking the punishment that belonged to us. We were guilty and deserved condemnation, but You willingly took our place on the cross. Help us to live with thankful hearts and to stand up for what is right in our world. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Our Substitute",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-july-1-2025.html"
+    },
+    "D2": {
+     "author": "Will Graham",
+     "work": "Will Graham Devotion: Jesus Condemned, a Murderer Set Free",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/articles/will-graham-devotion-jesus-condemned-a-murderer-set-free"
+    },
+    "D3": {
+     "author": "David Mathis",
+     "work": "Barabbas and Me",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/barabbas-and-me"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Jesus Stands Before Pilate",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jesus-stands-pilate?mobile=off"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

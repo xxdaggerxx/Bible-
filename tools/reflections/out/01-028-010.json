@@ -1,0 +1,136 @@
+{
+ "id": "01-028-010",
+ "title": "Jacob’s Ladder",
+ "refs": [
+  "Genesis 28:10-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1028016,
+   "end": 1028017,
+   "ref": "Genesis 28:16-17",
+   "ranges": [
+    [
+     1028016,
+     1028017
+    ]
+   ],
+   "title": "\"Surely the Lord Is in This Place\"",
+   "key_verse": [
+    1028016,
+    1028016
+   ],
+   "reflect": [
+    {
+     "text": "Jacob was running away from his brother, tired and alone in the wilderness. He did not plan a special worship service or search for a holy location. Yet right there in the dark, God met him. We sometimes speak as if God is distant and needs to travel from far away to visit us. But Scripture shows that God is already present everywhere. He remains as close to us as our own breath.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Jacob did nothing to earn or cause this encounter. He was simply exhausted, but God reached out in gracious love. The ground was not a magical spot; God was already right there before Jacob ever closed his eyes. Through Christ, we are constantly held and surrounded by God in every moment. Our daily challenge is not trying to find where God is hiding. Instead, it is learning to stay awake and pay attention to his loving presence in our ordinary lives.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What parts of your everyday routine feel too ordinary for God to be there?",
+    "How can you remind yourself today that God is already close to you?"
+   ],
+   "prayer": "Lord God, thank you for being near us even when we do not notice you. Help us to stay awake to your loving presence in our normal, everyday moments. Give us quiet hearts so we can recognize that you are already holding our lives. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Rev. Kyle Norman",
+     "work": "How Awesome Is This Place",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/how-awesome-is-this-place-the-crosswalk-devotional.html"
+    },
+    "D5": {
+     "author": "Mike DeVries",
+     "work": "Living Fully Awake",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/living-fully-awake-homeword-july-25.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1028010,
+   "end": 1028017,
+   "ref": "Genesis 28:10-17",
+   "ranges": [
+    [
+     1028010,
+     1028017
+    ]
+   ],
+   "title": "Earth and Heaven Joined Together",
+   "key_verse": [
+    1028015,
+    1028015
+   ],
+   "reflect": [
+    {
+     "text": "When Jacob slept on the cold ground, he saw a ladder reaching from earth into heaven with angels moving up and down. This vision showed that our world is not cut off from God. As F. B. Meyer explains, earth and heaven are linked by God's daily care and especially by Jesus Christ, who unites God and humanity. Heaven is not far away in the distant future; God's loving help reaches right down into our present days.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Jacob was leaving his family home for the first time, traveling with almost nothing. Yet God promised to be with him and protect him wherever he went. When we follow God's calling, we never walk alone. We may feel like strangers traveling in unfamiliar places, but God acts as our royal guard. In every place, the Lord himself is our dwelling place and keeps us safe from real danger.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God also gave Jacob a wonderful promise about the land where he rested. Charles Spurgeon reminds us that every promise of God belongs to all believers in Christ. Just as Jacob used a stone for a pillow, we can rest our weary hearts upon God's sure words. We can lie down in peace, knowing that God will fulfill every good word he has spoken to us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Which promise from God can you rest on like a pillow today?",
+    "How does knowing that Jesus connects you to heaven change how you view your daily journey?"
+   ],
+   "prayer": "Lord, thank you for sending Jesus to unite earth and heaven and bring us to you. As we travel through each day, guide our steps and protect us with your faithful care. Help us to rest our weary minds on your promises and trust your constant presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 3",
+     "on": "Genesis 28:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 30",
+     "on": "Genesis 28:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 28:12",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

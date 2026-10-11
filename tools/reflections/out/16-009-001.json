@@ -1,0 +1,91 @@
+{
+ "id": "16-009-001",
+ "title": "The People Confess Their Sins",
+ "refs": [
+  "Nehemiah 9:1-38"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 16009001,
+   "end": 16009038,
+   "ref": "Nehemiah 9:1-38",
+   "ranges": [
+    [
+     16009001,
+     16009038
+    ]
+   ],
+   "title": "Returning to a Gracious and Patient God",
+   "key_verse": [
+    16009017,
+    16009017
+   ],
+   "reflect": [
+    {
+     "text": "When God's people listened to the Scriptures, they gathered in humility to confess their sins and turn away from what was false and evil. True spiritual life often begins with this kind of separation, choosing what is holy so that we belong wholly to the Lord. Looking back at our own sins and personal failures can make us feel as though we are staring at piles of rubble. Yet when we bring our brokenness honestly to God, He meets us with tender mercy and unfailing patience. His grace does not merely wipe away guilt; it rebuilds our shattered lives.",
+     "sources": [
+      "D3",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "The story of Israel reveals just how faithful and long-suffering God is. Even when His people rebelled, He gave them His good Spirit to instruct them. As Charles Spurgeon noted, this patient Spirit tenderly bears with us, \"training us for the skies as a loving nurse fosters her child.\" Remembering God's generous provision and loving guidance prompts us to renew our devotion to Him. Whether we are recovering from trouble, repenting of sin, or receiving new blessings, we can respond to His goodness by offering our hearts afresh to His service.",
+     "sources": [
+      "D1",
+      "D2",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "When you look at past mistakes, how does knowing God's forgiving patience encourage you to come back to Him?",
+    "In what area of your life is the Lord inviting you to renew your commitment to walk faithfully with Him?"
+   ],
+   "prayer": "Gracious Father, thank You for Your deep compassion and patience when we fail and lose our way. Thank You for giving us Your good Spirit to teach, guide, and sustain us each day. Rebuild what is broken in our lives, and help us gladly dedicate ourselves to follow You in faithful obedience. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 16",
+     "on": "Nehemiah 9:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 24",
+     "on": "Nehemiah 9:38",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Nehemiah 9:2",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D4": {
+     "author": "Christine Hoover",
+     "work": "From Rubble to Restoration",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/from-rubble-to-restoration"
+    },
+    "D5": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - June 9, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-june-9-2010-11632875.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

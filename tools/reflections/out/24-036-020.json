@@ -1,0 +1,83 @@
+{
+ "id": "24-036-020",
+ "title": "Jehoiakim Burns the Scroll",
+ "refs": [
+  "Jeremiah 36:20-26"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 24036022,
+   "end": 24036024,
+   "ref": "Jeremiah 36:22-24",
+   "ranges": [
+    [
+     24036022,
+     24036024
+    ]
+   ],
+   "title": "\"Cut Them Off with a Scribe's Knife\"",
+   "key_verse": [
+    24036023,
+    24036023
+   ],
+   "reflect": [
+    {
+     "text": "King Jehoiakim sat warm by his winter fire while God's words were read to him. Instead of listening, he took a small knife, cut the scroll piece by piece, and threw it into the flames. Neither he nor his servants showed any grief or fear over God's warnings. Yet destroying the paper could not cancel the danger. \"The criminal may tear up the warrant,\" as F. B. Meyer observed, but doing so never overturns God's truth.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "We might never throw a Bible into a fire, but we can treat it the same way in our hearts. We take a knife to God's Book whenever we push aside verses that confront our cherished sins. If we explain away hard teachings or leave our Bibles unread on a shelf, we reject God's voice just as the king did.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Earthly rulers can never destroy what God has spoken, for His truth always outlasts human rebellion. God asks us to come to Scripture with an honest mind instead of our own preconceptions. When we read with humility, we can hear what the Lord truly wants to say to us and turn from our wrong ways before it is too late.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there parts of the Bible you tend to avoid because they challenge your habits or ideas?",
+    "How can you approach God's Word with an open and humble heart this week?"
+   ],
+   "prayer": "Lord, forgive us for the times we ignore or explain away the parts of Scripture that make us uncomfortable. Give us humble hearts to hear Your truth without trying to cut out what challenges us. Teach us to respect Your warnings and gladly follow Your ways. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 36:22-23",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Jehoiakim Burns the Word of God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jehoiakim-burns-word-god"
+    },
+    "D3": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 08/24/04",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-08-or-24-or-04-1277343.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

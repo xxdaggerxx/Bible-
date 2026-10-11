@@ -1,0 +1,66 @@
+{
+ "id": "10-019-024",
+ "title": "Mephibosheth Excused",
+ "refs": [
+  "2 Samuel 19:24-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10019024,
+   "end": 10019030,
+   "ref": "2 Samuel 19:24-30",
+   "ranges": [
+    [
+     10019024,
+     10019030
+    ]
+   ],
+   "title": "Treasuring the King Above All",
+   "key_verse": [
+    10019030,
+    10019030
+   ],
+   "reflect": [
+    {
+     "text": "When Mephibosheth went to meet King David, his unwashed clothes and untrimmed beard showed that he had truly grieved while the king was in exile. He shared the painful truth with David: his servant Ziba had taken advantage of his disability, left him behind, and slandered him with false reports.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "King David suggested dividing the family land between Mephibosheth and Ziba. This offer tested Mephibosheth's true motives. He showed genuine integrity by gladly giving up all of his inheritance. He did not care about the land as long as his king had returned home in peace and safety.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Mephibosheth's pure devotion reminds us of how we should follow Christ our King. We are called to love and honor Jesus above every earthly treasure or reward. When we value being close to our King more than our worldly possessions, our hearts find true peace and contentment.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do we care more about our status and belongings, or about honoring Jesus our King?",
+    "How can we show that knowing Christ matters more to us than earthly rewards?"
+   ],
+   "prayer": "Lord Jesus, teach us to love you more than any earthly possession. Help us to serve you with honest hearts that seek your honor rather than personal gain. May our greatest joy simply be that you are our King. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 70: 2 Samuel 19:14–30",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-70-2-samuel-19-1430.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

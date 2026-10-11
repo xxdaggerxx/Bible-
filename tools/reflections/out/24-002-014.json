@@ -1,0 +1,67 @@
+{
+ "id": "24-002-014",
+ "title": "The Consequence of Israel’s Sin",
+ "refs": [
+  "Jeremiah 2:14-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24002014,
+   "end": 24002022,
+   "ref": "Jeremiah 2:14-22",
+   "ranges": [
+    [
+     24002014,
+     24002022
+    ]
+   ],
+   "title": "Leaving the Muddy River",
+   "key_verse": [
+    24002018,
+    24002018
+   ],
+   "reflect": [
+    {
+     "text": "God showed Israel time after time that He was worthy of their trust. Through great deliverances and quiet mercies, He protected them like a treasured garden. Yet the people broke through those boundaries and turned away from the living God. They looked to foreign lands like Egypt, hoping those places would satisfy and protect them instead.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God asked them why they would abandon clear, fresh water just to drink from a muddy river. We make that same mistake whenever we turn from God to chase the empty pleasures of this world. Believers have already tasted the goodness of Christ and experienced His kindness and fellowship. As Charles Spurgeon warned, running to worldly waters will bring \"only bitterness to thee.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Nothing on earth can truly satisfy a soul that belongs to God. When we wander, the Lord gently asks us what we hope to gain from things that cannot save us. He calls us to return right away to the one living fountain, where we find real peace and lasting joy in Jesus.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What hollow comforts are you tempted to turn to when you feel restless or dissatisfied?",
+    "How has knowing Christ shown you that this world's pleasures can never truly satisfy?"
+   ],
+   "prayer": "Lord, forgive us for wandering away from You to seek satisfaction in empty things. Thank You for Your faithful care and for giving us living water in Christ. Help us to rest in Your presence and find our full joy in knowing You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 20",
+     "on": "Jeremiah 2:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,110 @@
+{
+ "id": "19-045-001",
+ "title": "My Heart Is Stirred by a Noble Theme",
+ "refs": [
+  "Psalms 45:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19045001,
+   "end": 19045017,
+   "ref": "Psalms 45:1-17",
+   "ranges": [
+    [
+     19045001,
+     19045017
+    ]
+   ],
+   "title": "The Forever King and His Bride",
+   "key_verse": [
+    19045006,
+    19045006
+   ],
+   "reflect": [
+    {
+     "text": "Psalm 45 began as a song for an earthly royal wedding, but it points forward to Jesus, the ultimate King whose throne lasts forever. In him, every virtue comes together in complete beauty. He rules with unmatched power, truth, and humility, and his deep love for righteousness led him to the cross to conquer the power of sin once and for all.",
+     "sources": [
+      "D2",
+      "D3",
+      "D7"
+     ]
+    },
+    {
+     "text": "This joyful royal song also pictures Christ's tender love for his people, the church, who are presented as his bride. Just as the bride was asked to leave her old home behind, we are invited to turn away from worldly idols and submit our lives wholly to Jesus. Any royal beauty we carry is not our own; it is a gift from Christ, who robes us in his righteousness. Though our love often feels faint, Charles Spurgeon reminds us that it is \"very sweet to Christ,\" and our everyday praise, generous gifts, and acts of kindness bring true joy to our Savior's heart.",
+     "sources": [
+      "D1",
+      "D4",
+      "D6"
+     ]
+    },
+    {
+     "text": "Knowing we are cherished by the King allows us to walk with humble confidence as we prepare for his return. Human monuments and earthly achievements will fade away, but the highest legacy we can leave is honoring God's name. By living faithfully for Jesus, our lives become a lasting testimony of praise for generations to come.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly habits or loyalties might Jesus be inviting you to leave behind for his sake?",
+    "How can you bring joy to Christ today through your love, your praise, or your kindness to others?"
+   ],
+   "prayer": "Lord Jesus, you are the glorious King whose righteous throne endures forever. Thank you for welcoming us into your royal household and clothing us in your beauty. Help us forsake the idols of this world and offer our lives to you in glad obedience. May our praise honor your name and point future generations to your goodness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 15",
+     "on": "Psalms 45:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 29",
+     "on": "Psalms 45:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 21",
+     "on": "Psalms 45:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Gwen Smith",
+     "work": "A Beautiful Bride",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-june-2-2022.html"
+    },
+    "D5": {
+     "author": "Barbour Publishing",
+     "work": "Wisdom from the Psalms 4/19",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-4-or-19-552276.html"
+    },
+    "D6": {
+     "author": "Ligonier Ministries",
+     "work": "The King's Glorious Bride",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/kings-glorious-bride"
+    },
+    "D7": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Psalm 45",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/1-samuel-28-1-corinthians-9-ezekiel-7-psalm-45/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "23-056-001",
+ "title": "Salvation for Foreigners",
+ "refs": [
+  "Isaiah 56:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23056001,
+   "end": 23056008,
+   "ref": "Isaiah 56:1-8",
+   "ranges": [
+    [
+     23056001,
+     23056008
+    ]
+   ],
+   "title": "A Place and a Name for All",
+   "key_verse": [
+    23056007,
+    23056007
+   ],
+   "reflect": [
+    {
+     "text": "God opens His house to people who once felt far away and left out. We were once strangers, but God in His kindness lifts us into closeness with Himself. He gathers those who were outcast and welcomes us to His holy mountain. Here He gives us true rest in our hearts, joyful prayer, and a place above the worries and dust of this world.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In God's family, our past labels and weaknesses no longer define who we are. In Scripture, God looked at weak people like Gideon and Simon and saw them as a warrior and a rock. Instead of relying on our own strength or believing false things about our worth, we receive daily renewal from God. He gives us an enduring name and purpose in His house.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God invites us to hold fast to Him, love His name, and serve Him faithfully. He brings us near by His own grace, not by our own power. When we trust Him each day, we can let go of old fears of being excluded and rejoice that we truly belong among His people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What old labels or feelings of being left out do you need to let go of today?",
+    "How can you seek God's inner rest and joy in prayer this week?"
+   ],
+   "prayer": "Lord, thank You for welcoming us into Your family when we were far away. Help us to find our true worth in You rather than in our past weaknesses. Teach us to love Your name, hold fast to Your word, and serve You with joyful hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 56:7",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "MaryBeth Whalen",
+     "work": "What You’re Called",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-oct-17-2007-11556955.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

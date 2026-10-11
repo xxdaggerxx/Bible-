@@ -1,0 +1,67 @@
+{
+ "id": "58-013-020",
+ "title": "Benediction and Farewell",
+ "refs": [
+  "Hebrews 13:20-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58013020,
+   "end": 58013025,
+   "ref": "Hebrews 13:20-25",
+   "ranges": [
+    [
+     58013020,
+     58013025
+    ]
+   ],
+   "title": "The God of Peace and Our Shepherd",
+   "key_verse": [
+    58013020,
+    58013020
+   ],
+   "reflect": [
+    {
+     "text": "Hebrews closes with a blessing rooted in Scripture, pointing our hearts to the God of peace and Jesus our Great Shepherd. Calling Jesus our Shepherd gives us absolute confidence that our salvation is safe. As our Shepherd, Christ teaches us, offered His own blood to seal God's eternal covenant, and watches over us to keep us secure. Because God brought Him back from the dead, we can pray with deep comfort, knowing our Shepherd will never let any of His sheep wander away or be lost.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The immense power that raised Jesus from the grave is the very guarantee that God will care for us. God would never give the Shepherd full victory only to abandon the sheep He died for. Instead, the God of peace works gently within us to equip us. He fits our lives into close connection with Christ, adjusting our wills so that we can do what pleases Him. When our hearts yield to Him, His purpose is carried out through us with quiet peace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus is your living, resurrected Shepherd give you peace today?",
+    "In what areas of your life do you need God to gently adjust your heart to do His will?"
+   ],
+   "prayer": "Lord God, thank You for raising our Great Shepherd Jesus and keeping us secure in His eternal covenant. Please shape our hearts and equip us with every good thing to do what pleases You. Lead us gently each day to follow our Shepherd in peace and trust.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hebrews 13:21",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "May the God of Peace",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/may-god-peace"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

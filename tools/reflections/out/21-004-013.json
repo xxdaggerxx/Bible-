@@ -1,0 +1,66 @@
+{
+ "id": "21-004-013",
+ "title": "The Futility of Power",
+ "refs": [
+  "Ecclesiastes 4:13-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 21004013,
+   "end": 21004016,
+   "ref": "Ecclesiastes 4:13-16",
+   "ranges": [
+    [
+     21004013,
+     21004016
+    ]
+   ],
+   "title": "The Vanity of Earthly Power",
+   "key_verse": [
+    21004013,
+    21004013
+   ],
+   "reflect": [
+    {
+     "text": "Worldly power and political influence can seem very attractive to us. Many people spend their whole lives chasing status, but seeking power for its own sake is completely empty. The passage shows us that it is far better to be poor and wise than to hold a high office while refusing to listen to correction. Having authority means very little if someone becomes too stubborn to take advice or heed warnings.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even when a new leader rises from poverty and wins the crowd, that popularity never lasts. The passage shows that even the most successful leaders eventually lose their authority when they die. In time, new generations arrive and completely forget those who ruled before. Chasing after worldly influence is as pointless as running after the wind.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Recognizing that human power is temporary brings great freedom. It protects us from putting our ultimate trust in earthly rulers or in our own status. Seeing how quickly worldly influence fades helps us remain steadfast and loyal to God's unshakable, eternal kingdom.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where you chase after recognition or control instead of seeking wisdom?",
+    "How does knowing that human influence quickly fades help you stay loyal to God's kingdom?"
+   ],
+   "prayer": "Lord, teach us to value true wisdom over worldly status and influence. Help us to keep a humble heart that welcomes correction. When earthly power tempts us or lets us down, keep our eyes fixed on your unshakable kingdom. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Vanity of Political Power",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/vanity-political-power"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

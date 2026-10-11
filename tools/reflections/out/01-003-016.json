@@ -1,0 +1,68 @@
+{
+ "id": "01-003-016",
+ "title": "The Punishment of Mankind",
+ "refs": [
+  "Genesis 3:16-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1003016,
+   "end": 1003020,
+   "ref": "Genesis 3:16-20",
+   "ranges": [
+    [
+     1003016,
+     1003020
+    ]
+   ],
+   "title": "Dust and the Promise of Grace",
+   "key_verse": [
+    1003019,
+    1003019
+   ],
+   "reflect": [
+    {
+     "text": "God created humanity from the ground, but sin brought pain, toil, and physical death into our world. When God told Adam that he would return to dust, it revealed our deep human weakness. In Scripture, dust and ashes often stand for deep sorrow over sin and true repentance, which means turning back to God. Remembering that our days on earth are short humbles our human pride and encourages us to live with wisdom.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Facing our mortality also shows us that we cannot save ourselves by our own good deeds. Our weakness directs us to depend completely on God's mercy rather than our own self-righteousness. Jesus entered our human weakness and died on the cross to rescue us from the curse of sin. Through His resurrection victory, believers receive the promise of eternal life instead of permanent death, filling our hearts with grateful praise.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering that your life is brief help you depend on God rather than yourself?",
+    "What helps you feel thankful for Christ's victory over sin and death today?"
+   ],
+   "prayer": "Lord God, remind us of our need for Your mercy as we face our human weakness. Keep us from pride, and teach us to live wisely in the days You give us. Thank You for sending Jesus to bear the cross and for giving us eternal life through His resurrection. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Sarah Jennings",
+     "work": "Ashes to Ashes",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-feb-23-2009-11599907.html"
+    },
+    "D2": {
+     "author": "Sophia Bricker",
+     "work": "Dust and Grace",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/dust-and-grace.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

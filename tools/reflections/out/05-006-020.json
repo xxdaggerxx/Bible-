@@ -1,0 +1,66 @@
+{
+ "id": "05-006-020",
+ "title": "Teach Your Children",
+ "refs": [
+  "Deuteronomy 6:20-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5006020,
+   "end": 5006025,
+   "ref": "Deuteronomy 6:20-25",
+   "ranges": [
+    [
+     5006020,
+     5006025
+    ]
+   ],
+   "title": "Remembering Why We Obey",
+   "key_verse": [
+    5006021,
+    5006021
+   ],
+   "reflect": [
+    {
+     "text": "When children ask why they must obey God's commands, it is tempting to demand only outward good behavior. But the Bible shows us that obedience goes much deeper. Before God gave His people His laws, He first rescued them with great mercy from slavery in Egypt. His rescue always comes before His commands.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God gives us His rules to protect us, give us life, and lead us into what is truly good. His laws are not meant to harm us or hold us back. Yet we know that none of us can keep all of God's rules completely on our own.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "That is why we point one another to Jesus Christ. He alone kept the law perfectly and earned the righteousness, the right standing with God, that we could never achieve. Because Jesus has rescued us from sin, our obedience is not a heavy burden. Instead, it is a joyful and thankful answer to God's grace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering God's rescue through Jesus change the way you view His commands?",
+    "When you talk to others about obedience, do you focus on outward rules or on God's love and grace?"
+   ],
+   "prayer": "Heavenly Father, thank You for saving us through Jesus when we could not save ourselves. Help us to remember that Your commands are given for our protection and good. May our obedience each day be a glad response to Your mercy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jason DeRouchie",
+     "work": "Dad, Why Must I Obey?",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/dad-why-must-i-obey"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

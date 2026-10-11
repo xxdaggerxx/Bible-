@@ -1,0 +1,67 @@
+{
+ "id": "26-032-001",
+ "title": "A Lament for Pharaoh King of Egypt",
+ "refs": [
+  "Ezekiel 32:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26032001,
+   "end": 26032016,
+   "ref": "Ezekiel 32:1-16",
+   "ranges": [
+    [
+     26032001,
+     26032016
+    ]
+   ],
+   "title": "Listening When God Speaks",
+   "key_verse": [
+    26032001,
+    26032001
+   ],
+   "reflect": [
+    {
+     "text": "We often spend plenty of time bringing our own words and requests to God, yet we are not always eager to pause and receive what He wants to say to us. In our busy routines, filled with competing voices and endless tasks, we can easily fail to catch His quiet whisper speaking to our hearts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Ezekiel carefully noted the exact day the Lord gave him this message. In the same way, we do well to mark the memorable times when God speaks to our souls. We should cherish the days when He rescues us from deep trouble, calls us to a new duty, or draws us close in faith.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "If we want to hear God, we must approach Him with stillness and humility. Most of all, we must be ready to put what He says into practice. As F. B. Meyer reminds us, \"Humility and obedience are essential.\" When we listen with a willing heart, we learn to recognize His voice and follow Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you taking time to be still and listen to God, or are you doing all the talking?",
+    "Is there something God has spoken to your heart recently that you still need to obey?"
+   ],
+   "prayer": "Lord, forgive us for being so busy that we fail to hear Your voice. Quiet our restless hearts and teach us to listen carefully whenever You speak. Give us humble minds and willing spirits to obey whatever You ask of us today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 32:1",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

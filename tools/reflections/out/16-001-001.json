@@ -1,0 +1,84 @@
+{
+ "id": "16-001-001",
+ "title": "Nehemiah’s Prayer",
+ "refs": [
+  "Nehemiah 1:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 16001001,
+   "end": 16001011,
+   "ref": "Nehemiah 1:1-11",
+   "ranges": [
+    [
+     16001001,
+     16001011
+    ]
+   ],
+   "title": "Turning Heartbreak into Prayer and Action",
+   "key_verse": [
+    16001004,
+    16001004
+   ],
+   "reflect": [
+    {
+     "text": "When Nehemiah heard about the broken walls and the trouble in Jerusalem, he faced the hard reality instead of ignoring it. He did not hide his pain. He felt the distress of his people deeply and wept before the Lord. Deep heartbreak should direct us straight into earnest prayer and fasting.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Nehemiah made prayer his very first priority. He spent long periods in private fellowship with God, combining honest confession with pleas for others and clinging to God's ancient promises. Nehemiah was only a cupbearer, not a soldier or a prince. Yet he had faith that God often chooses to work through frail, ordinary people.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Nehemiah's tears and prayers were joined with a growing purpose. True spiritual leadership means offering ourselves to help meet the need. Nehemiah surrendered himself to God's plans, trusting Him to overcome fear and open doors. When we bring our helplessness to God and make ourselves available, He can work through our small lives to bring help to others.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you see trouble or pain around you, do you bring it straight to God in honest prayer?",
+    "How can you make yourself available for God to use you in meeting someone else's need?"
+   ],
+   "prayer": "Lord God, thank You that we can bring our honest grief and burdens to You in prayer. Forgive our sins and help us remember Your faithful promises. Take our weakness and use our lives to help the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Nehemiah 1:11",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "Four Marks of a Spiritual Leader",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/four-marks-of-a-spiritual-leader"
+    },
+    "D3": {
+     "author": "Gwen Smith",
+     "work": "When Life Seems Broken",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-august-23-2016.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

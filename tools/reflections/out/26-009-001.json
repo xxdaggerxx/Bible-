@@ -1,0 +1,67 @@
+{
+ "id": "26-009-001",
+ "title": "Execution of the Idolaters",
+ "refs": [
+  "Ezekiel 9:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26009001,
+   "end": 26009011,
+   "ref": "Ezekiel 9:1-11",
+   "ranges": [
+    [
+     26009001,
+     26009011
+    ]
+   ],
+   "title": "Marked and Kept Safe by God",
+   "key_verse": [
+    26009004,
+    26009004
+   ],
+   "reflect": [
+    {
+     "text": "Ezekiel was already living in exile in Babylon when God gave him this vision of Jerusalem. The vision showed executioners bringing judgment, but it also showed a man in linen sent to mark God's people. This reveals how careful and fair God is in His judgments. God commanded that the judgment start right at His sanctuary, beginning with the leaders. Those who teach and lead God's people know better, so when they live in sin, judgment falls on them first and most heavily.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even in times of severe judgment, God always protects a remnant, a small group of faithful people. Just as God spared Lot in Sodom and Rahab in Jericho, He places His mark on those who belong to Him. We can tell we are marked by Jesus when our hearts truly grieve over the evil around us, recognizing that we too would fall without God's grace, His undeserved kindness. This sorrow shows the humbling, purifying work of the Holy Spirit inside us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's judgment is serious, but turning away from sin always turns away the sword. When we repent and leave behind what is wrong, God keeps us safe in the middle of trouble. He never forgets those who mourn over sin and depend on His mercy.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Does your heart grieve over the sin around you, or have you grown comfortable with it?",
+    "How does remembering your need for God's grace help you turn away from sin today?"
+   ],
+   "prayer": "Lord, soften our hearts so that we grieve over evil rather than accept it. Forgive us for our sins and remind us of our daily need for Your grace. Keep us faithful and secure in Your care as we follow You.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 9:6",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

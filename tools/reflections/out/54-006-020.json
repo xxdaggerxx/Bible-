@@ -1,0 +1,73 @@
+{
+ "id": "54-006-020",
+ "title": "Guard the Faith",
+ "refs": [
+  "1 Timothy 6:20-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 54006020,
+   "end": 54006021,
+   "ref": "1 Timothy 6:20-21",
+   "ranges": [
+    [
+     54006020,
+     54006021
+    ]
+   ],
+   "title": "Guarding What God Has Given Us",
+   "key_verse": [
+    54006020,
+    54006020
+   ],
+   "reflect": [
+    {
+     "text": "God has given us something very precious. The gospel is a sacred deposit entrusted to the entire church body. We are called to keep this truth safe and never water it down just to please the world around us. Along with the good news of Jesus, God has also given each of us our own testimony to share with others.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When we realize that everything we have is entrusted to us by God, it roots out our pride. It helps us live with humility and serve others well. Like the shepherds who heard the good news of Christ, we should respond to God's truth with quick obedience and bold faith.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Guarding the faith also means turning away from empty chatter and foolish arguments that pull people off course. We cannot protect this treasure in our own strength. We need total dependence on God's sustaining grace—his undeserved help and kindness—to keep us standing firm.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What has God entrusted to you that he wants you to care for and share?",
+    "How can relying on God's grace help you avoid empty arguments that pull you away from truth?"
+   ],
+   "prayer": "Heavenly Father, thank you for entrusting us with the precious truth of the gospel. Keep us humble and give us courage to obey your word. Please guard our hearts by your grace so we do not drift into empty chatter, but remain faithful to you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Chelsey DeMatteis",
+     "work": "A Prayer for “Guarding What’s Been Entrusted to You”",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-guarding-whats-been-entrusted-to-you.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Guarding the Deposit",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/guarding-deposit"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

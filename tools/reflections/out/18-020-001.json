@@ -1,0 +1,74 @@
+{
+ "id": "18-020-001",
+ "title": "Zophar: Destruction Awaits the Wicked",
+ "refs": [
+  "Job 20:1-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18020001,
+   "end": 18020029,
+   "ref": "Job 20:1-29",
+   "ranges": [
+    [
+     18020001,
+     18020029
+    ]
+   ],
+   "title": "Restraint, Truth, and God's Justice",
+   "key_verse": [
+    18020029,
+    18020029
+   ],
+   "reflect": [
+    {
+     "text": "Zophar spoke with an intense conviction that sin always brings bitter punishment. He insisted that the joy of the wicked is short and that ill-gotten wealth will be lost. Yet as F. B. Meyer observed, Zophar spoke in \"cold-blooded and unfeeling words.\" He wrongly assumed that Job's deep suffering proved he had committed secret, terrible sins.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Harsh and cutting words are often disguised in religious, eloquent speech. Zophar lost all restraint and wounded his friend by launching reckless, false accusations. Self-control means carefully weighing our words, our tone, and the truth before we speak. When rumors and hurtful gossip arise, we ought to test them at their source so truth can stand.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "It is true that God's moral law does not change. Wicked people will eventually reap what they sow, and we have no reason to envy their temporary success. But God does not call us to use His truth as a weapon against those in pain. Instead, we must speak with care, resist slander, and leave final judgment in God's hands.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you pause to weigh your words and your tone before speaking to someone who is hurting?",
+    "How can remembering that evil will face God's justice keep you from envying the proud?"
+   ],
+   "prayer": "Lord, grant us self-control so that our words are honest, careful, and kind. Forgive us when we speak harshly or hide our anger behind religious language. Help us stand against false accusations, and teach us to trust your righteous justice.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 20:29",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Silencing Lies - Today's Insight - May 7, 2024",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-may-7-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,124 @@
+{
+ "id": "19-017-001",
+ "title": "Hear My Righteous Plea",
+ "refs": [
+  "Psalms 17:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19017015,
+   "end": 19017015,
+   "ref": "Psalms 17:15",
+   "ranges": [
+    [
+     19017015,
+     19017015
+    ]
+   ],
+   "title": "\"Satisfied in Your Presence\"",
+   "key_verse": [
+    19017015,
+    19017015
+   ],
+   "reflect": [
+    {
+     "text": "Many people look to material things for happiness, but worldly wealth is temporary. Our true worth can never be measured by what we own or achieve. While culture urges us to constantly collect more possessions, earthly riches cannot give us a real purpose for living. Lasting satisfaction is found only in belonging to God and resting peacefully in his presence.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "This present life is like a shadowy dream, and entering eternity is the true awakening. When we awake, we will see God's holy character face to face. As Charles Spurgeon wrote, \"Faith sees God with a transforming look.\" Gazing upon the Lord changes us into his likeness, satisfying our minds with his truth and our hearts with his love. To know God and be made like him leaves nothing more to be desired.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you most often look for satisfaction when you feel empty or stressed?",
+    "How does the promise of seeing God face to face change how you value material things today?"
+   ],
+   "prayer": "Lord God, remind us that the things of this world will never truly satisfy our souls. Help us to find our identity in belonging to you rather than in what we own. Fix our eyes on your beauty, and shape us into your likeness each day. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 3",
+     "on": "Psalms 17:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 17:15",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "Rick Warren",
+     "work": "Do Your Possessions Possess You?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-august-26-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19017001,
+   "end": 19017015,
+   "ref": "Psalms 17:1-15",
+   "ranges": [
+    [
+     19017001,
+     19017015
+    ]
+   ],
+   "title": "Wonders of God's Loving Devotion",
+   "key_verse": [
+    19017007,
+    19017007
+   ],
+   "reflect": [
+    {
+     "text": "In times of deep trouble, David called out to God to show the wonders of his loving devotion. When our Lord answers our prayers, he never gives grudgingly or tosses us leftover scraps from a distant table. Instead, every gift he provides comes directly from the deep love of his heart. He treats us as welcomed guests, sharing his best provisions and seasoning every blessing with genuine affection.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God does not look down on us or act like a cold visitor entering a poor cottage. He sits beside us in our weakness, never scolding us or hinting that we are an unwanted burden. As Charles Spurgeon observed, \"there is a bleeding heart stamped upon the face of all his benefactions.\" God takes delight in showing mercy, drawing us close and giving generously with warm smiles and words of grace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever hold back from praying because you worry you are being a burden to God?",
+    "How does knowing that God gives to you with warm affection change the way you approach him?"
+   ],
+   "prayer": "Heavenly Father, thank you for giving to us with such a loving and open heart. When we feel weak or needy, remind us that you never view our prayers as a burden. Help us to rest in your gentle kindness and trust your wonderful mercy every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 20",
+     "on": "Psalms 17:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,126 @@
+{
+ "id": "12-023-021",
+ "title": "Josiah Restores the Passover",
+ "refs": [
+  "2 Kings 23:21-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 12023024,
+   "end": 12023025,
+   "ref": "2 Kings 23:24-25",
+   "ranges": [
+    [
+     12023024,
+     12023025
+    ]
+   ],
+   "title": "\"Turned to the Lord With All His Heart\"",
+   "key_verse": [
+    12023025,
+    12023025
+   ],
+   "reflect": [
+    {
+     "text": "Josiah took drastic steps to remove every trace of false worship from the land. He tested everything by God's Word to clear away idols and corrupt practices. In our daily lives, wrong habits and worldly ways can quietly creep in without us noticing. F. B. Meyer notes that we need times when we turn to God and use His Word as a standard to review and cleanse our lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Scripture honors Josiah's unmatched devotion, placing his obedience above every king before or after him. Yet even his wholehearted reforms could not turn away God's coming judgment against Judah. Josiah's inability to save his nation shows us the true weight and seriousness of God's holy wrath against sin.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This points us directly to Jesus. Jesus lived with the same perfect, wholehearted devotion that Josiah showed. But unlike Josiah, Jesus was able to bear the full wrath of God on the cross and successfully save His people from their sins.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there habits or attitudes in your life that you need to examine in the light of God's Word?",
+    "How does knowing that Jesus fully bore God's judgment give you comfort and peace today?"
+   ],
+   "prayer": "Lord, help us to search our hearts and lives in the light of Your Word. Show us anything that does not belong, and help us turn away from it. Thank You for Jesus, who loved You completely and bore Your wrath to rescue us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 23:24-25",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Peter Orr",
+     "work": "No King Like Him (no, not Him)",
+     "site": "The Gospel Coalition",
+     "url": "https://au.thegospelcoalition.org/article/no-king-like-him-no-not-him/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 12023021,
+   "end": 12023027,
+   "ref": "2 Kings 23:21-27",
+   "ranges": [
+    [
+     12023021,
+     12023027
+    ]
+   ],
+   "title": "Restoring the Lord's Passover",
+   "key_verse": [
+    12023021,
+    12023021
+   ],
+   "reflect": [
+    {
+     "text": "Josiah grew up surrounded by the wicked examples of earlier kings, but he chose to walk with God from a young age. Rather than turning to ungodly alliances for protection, he relied fully on the Lord and guided his nation back to the covenant.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "When Josiah commanded the people to keep the Passover, he brought back a celebration that had been neglected for generations. This sacred feast reminded Israel of God's deliverance, but it also pointed forward. It foreshadowed Jesus Christ, the true Lamb who delivers believers from death.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Josiah's wholehearted dedication surpassed even great kings like David, Solomon, and Hezekiah. His example challenges us to examine our own lives and ask whether we are giving God our complete devotion or holding parts of ourselves back.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to rely on worldly security rather than on God?",
+    "How does remembering Jesus as the true Passover Lamb encourage you to follow Him more closely?"
+   ],
+   "prayer": "Father, thank You for Jesus Christ, the true Lamb who rescues us from sin and death. Give us the courage to follow You faithfully, even when others around us turn away. Teach us to trust in Your care and love You with all our heart. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - May 10",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-may-10-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

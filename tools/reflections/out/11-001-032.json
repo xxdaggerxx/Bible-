@@ -1,0 +1,73 @@
+{
+ "id": "11-001-032",
+ "title": "Solomon Anointed King",
+ "refs": [
+  "1 Kings 1:32-40"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11001032,
+   "end": 11001040,
+   "ref": "1 Kings 1:32-40",
+   "ranges": [
+    [
+     11001032,
+     11001040
+    ]
+   ],
+   "title": "God Establishes Solomon as King",
+   "key_verse": [
+    11001039,
+    11001039
+   ],
+   "reflect": [
+    {
+     "text": "When King David learned of a threat to the throne, he acted without delay. He did not passively wait for a mystical sign from heaven. Instead, he quickly gave orders to Zadok the priest, Nathan the prophet, and Benaiah the commander. In our own lives, God calls us to step forward and obey His Word instead of waiting for extra signs to tell us what to do.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Solomon was not the obvious human choice to lead, but he showed God's grace and the gift of second chances. David gathered a prophet, a priest, and a warrior to crown him, which points forward to Jesus, who holds all authority. Escorting Solomon to the fresh waters of the Gihon spring symbolized a bursting forth of new leadership and security for God's people.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even in his old age and physical weakness, David responded to this coronation with humble praise. The priest poured sacred oil, horns blew, and the people rejoiced with great joy. While God uses our faithful obedience, the final success and safety of His kingdom always depends on the Lord Himself.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an area in your life where you are waiting for a special sign instead of simply obeying what God has already said?",
+    "How does remembering that God's kingdom depends on Him give you peace when circumstances feel uncertain?"
+   ],
+   "prayer": "Lord, give us the courage to obey your Word promptly instead of waiting for signs. Thank you for your grace and for providing the true King, Jesus, who holds all authority. Help us to rest in the comfort that your kingdom and its future always depend on you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Solomon Anointed King",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/solomon-anointed-king"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 81: 1 Kings 1:32–48",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-81-1-kings-1-3248.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

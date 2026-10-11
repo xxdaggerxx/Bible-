@@ -1,0 +1,144 @@
+{
+ "book": 22,
+ "chapter": 6,
+ "first": 1,
+ "last": 13,
+ "ref": "Song of Solomon 6",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The daughters of Jerusalem ask the bride where her beloved has gone so they can help look for him. Her glowing description of his beauty has convinced them to seek him as well. In the Christian life, speaking warmly of Christ stirs up other believers to seek Him together in the church.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The bride knows exactly where her beloved can be found. He has gone down to his garden to care for his flock and gather sweet lilies. This represents Christ visiting His church, delighting in His people, and gathering believers to Himself.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The bride joyfully declares that she belongs to her beloved, and he belongs to her. Even after a painful time of distance, her trust in their union is fully restored. Believers are comforted to know that Christ's covenant of love with His people never breaks, even when feelings falter.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The beloved returns and praises his bride, comparing her beauty to Tirzah and Jerusalem, two of the fairest royal cities. He also calls her awe-inspiring, like a mighty army marching under banners. To Christians, this shows that the church is both lovely and spiritually strong against her enemies through Christ.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The bridegroom tenderly tells his bride to turn her eyes away because her gaze completely overwhelms his heart. He also admires her hair, comparing it to a healthy flock of goats moving down Mount Gilead. This poetic picture shows how deeply Christ delights in the loving faith and sincere prayers of His people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "He praises her teeth, comparing them to a flock of freshly washed sheep where every one has a twin and none is missing. By repeating words he spoke on their wedding day, he assures her that his love has not cooled at all. Christ looks on His forgiven people with the same full love and delight as when they first came to Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "He describes her brow behind her veil as lovely and blush-red, like a cut slice of pomegranate. Repeating this praise reassures her of her lasting place in his heart. It reminds believers that Christ still sees spiritual beauty in His church, even after seasons of weakness.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 9,
+   "meaning": "Though royal palaces might hold dozens of queens and countless maidens, the bridegroom declares that his bride stands entirely alone in his heart. She is cherished like an only child, and even the royal women praise her surpassing beauty. In the same way, Christ prizes His one true church above all the kingdoms, riches, and societies of the world.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "The onlookers gaze in wonder, asking who this bride is who shines like the dawn, the bright sun, and the moon. She is both radiant and commanding, like an army with banners raised. For believers, this shows the church reflecting the light of Christ into a dark world while growing into heavenly beauty.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "The speaker walks down into the walnut grove to watch for the first signs of spring growth in the valley. The goal is to see whether the vines are budding and the pomegranates are blooming. This portrays Christ watching tenderly over His church to notice and welcome the very first fruits of grace in a believer's heart.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "Suddenly, before realizing it, the speaker feels swept away as if carried by swift royal chariots. When applied to Christ, it shows His loving desire carrying Him swiftly back to comfort and restore His seeking church. When applied to the bride, it describes her joy at being lifted suddenly into royal honor with her beloved.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
+   "end": 13,
+   "meaning": "The daughters of Jerusalem urgently plead for the Shulammite bride to return so they can delight in seeing her. When asked what makes her so special, the answer compares her to two armies or a majestic camp dance. Her title points to peace, showing that the church enjoys Christ's peace while also fighting the good fight of faith on earth.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 7: removed sources ['Jamieson-Fausset-Brown']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

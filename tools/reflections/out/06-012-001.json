@@ -1,0 +1,67 @@
+{
+ "id": "06-012-001",
+ "title": "The Kings Defeated East of the Jordan",
+ "refs": [
+  "Joshua 12:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6012001,
+   "end": 6012006,
+   "ref": "Joshua 12:1-6",
+   "ranges": [
+    [
+     6012001,
+     6012006
+    ]
+   ],
+   "title": "Holding Our Inheritance in Christ",
+   "key_verse": [
+    6012006,
+    6012006
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, Moses and the Israelites defeated the kings east of the Jordan River. Moses gave that land to the tribes of Reuben, Gad, and half of Manasseh. Yet as F. B. Meyer notes, these tribes settled outside the main land of Canaan, focused on their own material wealth, and eventually lost their inheritance. They were soon absorbed by the surrounding nations.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This history gives us a picture of our own spiritual life. Whatever we try to gain or hold through human effort and willpower will eventually slip away. Meyer points out that what comes through Moses and the law is like tablets of stone that easily fall and break. Our own human energy and earnest resolutions simply cannot secure the deepest blessings of God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We cannot keep God's spiritual gifts in our own strength. As Meyer explains, we can only hold our true inheritance by abiding in Jesus Christ and receiving from Him through faith. When we stay in close fellowship with Jesus, the Holy Spirit reveals the lasting blessings God has prepared for those who love Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you relying on your own willpower rather than depending on Christ?",
+    "What helps you stay in close, daily fellowship with Jesus?"
+   ],
+   "prayer": "Lord, help us not to trust in our own energy or settle for mere earthly comforts. Teach us to abide in Christ every day and receive all we need from Him by faith. By Your Holy Spirit, show us the wonderful life You have prepared for those who love You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joshua 12:6",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

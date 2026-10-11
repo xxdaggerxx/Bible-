@@ -1,0 +1,133 @@
+{
+ "book": 19,
+ "chapter": 46,
+ "first": 1,
+ "last": 11,
+ "ref": "Psalms 46",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "God is described as a safe shelter, a source of power, and a helper who is always close at hand. His people have tested Him in hard times and found that He never fails to show up right when they need Him most. We can run directly to Him instead of trusting in human strength.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 3,
+   "meaning": "The writer imagines the worst disasters possible, like the earth giving way and mountains tumbling into the crashing sea. Even if the whole world seems to fall apart and roar in chaos, believers do not need to panic. When our security is anchored in God rather than the physical world, no earthly storm can destroy our peace.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "In contrast to the noisy, raging seas, a calm and steady river brings joy to Jerusalem, the city where God lives among His people. Jerusalem had no giant natural river, so this stream pictures God's gentle, never-ending supply of grace and peace. His quiet presence brings deep comfort even when enemies surround us.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The holy city cannot be knocked down or destroyed because God Himself lives in the middle of it. He arrives to rescue His people at the break of dawn, right at the critical moment when darkness gives way to light. Our lasting safety never depends on our own walls, but on God's presence.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Foreign nations shout in anger, and powerful earthly kingdoms shake and fall apart. Yet God only has to speak a single word, and the entire earth melts before His authority. Human rulers may look terrifying, but their power vanishes instantly when God raises His voice.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The Lord commands all the armies of heaven, yet He chooses to stand right beside His people. Calling Him the God of Jacob reminds us of His covenant—His solemn promise to protect an imperfect family. He serves as our high mountain fortress where no enemy can reach us.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The psalmist invites everyone to come and look at what the Lord has done on the earth. God has brought down violent empires and ruined the plans of those who attacked His people. Seeing how God has judged evil in the past helps us trust His justice today.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "God puts an end to fighting across the whole earth by destroying the tools of war. He snaps bows in half, splinters spears, and burns war chariots in the fire so they can never harm anyone again. True and lasting peace comes only through the power of God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "God Himself speaks, ordering the raging nations to drop their weapons and stop fighting His rule. He commands the world to recognize that He alone is God, and He promises to be honored across all the earth. Believers can rest quietly knowing that God will certainly win the final victory.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/psalm-46/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Popular modern teaching",
+     "view": "Many Christians read 'be still' as a personal call to silent prayer or quiet meditation, rather than God's command for rebel nations to drop their weapons.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/psalm-46/"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "The psalm closes by repeating its joyful chorus of trust. The commander of heaven's armies remains with His people, and the God who guided Jacob is their safe hiding place. We can face any future trouble with calm courage because this almighty God is on our side.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 9: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 10: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 11: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "47-006-001",
+ "title": "Paul’s Hardships and God’s Grace",
+ "refs": [
+  "2 Corinthians 6:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 47006001,
+   "end": 47006013,
+   "ref": "2 Corinthians 6:1-13",
+   "ranges": [
+    [
+     47006001,
+     47006013
+    ]
+   ],
+   "title": "Standing Firm Through Every Storm",
+   "key_verse": [
+    47006006,
+    47006006
+   ],
+   "reflect": [
+    {
+     "text": "Difficulties and painful seasons are a part of life that none of us can avoid. Yet each trouble we meet is also an opportunity to trust that God will provide for us. In these hard times, God often works to uncover hidden sin in our lives, clean our character, and give us genuine spiritual understanding.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul reminds us that servants of God stand firm through purity, patience, and kindness. A pure heart gives us deep stability and honesty, acting like an anchor that keeps us from falling apart when storms strike. When we accept our trials with patience, we give God room to mature our faith instead of remaining weak.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Joy in suffering is a deliberate choice. It does not depend on easy circumstances, but on the certainty that God remains in sovereign control over every crisis. When we rest in his care, we can hold steady no matter what comes against us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What trial are you facing right now that offers you a chance to trust God's provision?",
+    "How can choosing patience today help your faith grow more mature?"
+   ],
+   "prayer": "Lord, thank you that you are in control of every storm we walk through. Purify our hearts and teach us to be patient when life is painful. Help us choose joy each day as we rely on your steady care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Mary Southerland",
+     "work": "Standing Firm in the Storms of Life, Part 1",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/standing-firm-in-the-storms-of-life-part-1-girlfriends-in-god-october-22-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

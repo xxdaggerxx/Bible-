@@ -1,0 +1,73 @@
+{
+ "id": "23-025-001",
+ "title": "Praise to the Victorious God",
+ "refs": [
+  "Isaiah 25:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23025001,
+   "end": 23025012,
+   "ref": "Isaiah 25:1-12",
+   "ranges": [
+    [
+     23025001,
+     23025012
+    ]
+   ],
+   "title": "God's Faithful Plan and Final Victory",
+   "key_verse": [
+    23025001,
+    23025001
+   ],
+   "reflect": [
+    {
+     "text": "God directs history with deliberate purpose. Events that seem confusing or accidental to us are actually part of His ancient plans formed long ago. From human rulers to the humble birth of Christ in a stable, nothing happens by chance. When we face hard times, we can rest knowing that God understands everything and works with good purpose for our salvation.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God will also bring this faithful plan to a glorious finish. As Isaiah foretold, death itself will be swallowed up forever. In the return of Jesus, our mortal bodies will be changed and made new. Every tear will be wiped away in the glad embrace of eternity. Knowing that our trials will end and that God keeps His word, our long patience will turn into pure joy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Until that day comes, we do not need to let worry and dark thoughts trouble our hearts. As F. B. Meyer reminds us, we have the privilege to live inside \"the double doors of God's loving care.\" When we keep our minds fixed on God instead of our fearful imaginations, He gives us His deep peace. We can trust His hand to lead us safely home.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God directs all of history help you trust Him with your current struggles?",
+    "When you feel anxious, how can you practice fixing your thoughts on God's care rather than on fearful imaginations?"
+   ],
+   "prayer": "Father, thank You for Your faithful plans that have guided history from the very beginning. Help us to fix our minds on Your care instead of our fearful thoughts. We look forward with joy to the day when You wipe away every tear and swallow up death forever. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 25:8",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Charles F. Stanley",
+     "work": "Jesus’ First Appearance",
+     "site": "In Touch Ministries",
+     "url": "https://www.intouch.org/read/daily-devotions/jesus-first-appearance"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

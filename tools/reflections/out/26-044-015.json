@@ -1,0 +1,61 @@
+{
+ "id": "26-044-015",
+ "title": "The Duties of the Priests",
+ "refs": [
+  "Ezekiel 44:15-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26044015,
+   "end": 26044031,
+   "ref": "Ezekiel 44:15-31",
+   "ranges": [
+    [
+     26044015,
+     26044031
+    ]
+   ],
+   "title": "God Is Our Inheritance",
+   "key_verse": [
+    26044028,
+    26044028
+   ],
+   "reflect": [
+    {
+     "text": "Ezekiel describes the duties of the faithful priests who stayed true when others went astray. They were given the privilege of drawing near to God's table and serving Him in His sanctuary. Yet, whenever they came near, they still needed a sin offering. As F. B. Meyer explains, even the most devoted person still needs to shelter beneath the blood that was shed. When we see how holy God is, we realize we can never stand before Him in our own strength.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God also gave these priests a surprising gift. They did not inherit a plot of farmland like the other tribes, because God Himself was their inheritance. Meyer points out that we, too, have God as our greatest treasure. Just as a flower takes in light from the sun, or a baby receives care from its mother, we can draw every help we need from fellowship with God. By prayer and faith, His rich supplies are always ready to make us gentle, pure, and strong.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways do you try to rely on your own goodness rather than resting in God's mercy?",
+    "How can you draw upon God's strength and love today instead of depending only on earthly things?"
+   ],
+   "prayer": "Lord God, thank You that You welcome us into Your presence through the sacrifice of Jesus. Help us remember that our lives depend completely on Your mercy and not our own good deeds. Teach us to find our joy in You, knowing that You are our greatest treasure and the source of everything we need. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 44:28",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

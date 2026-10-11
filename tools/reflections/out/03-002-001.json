@@ -1,0 +1,73 @@
+{
+ "id": "03-002-001",
+ "title": "Laws for Grain Offerings",
+ "refs": [
+  "Leviticus 2:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3002001,
+   "end": 3002016,
+   "ref": "Leviticus 2:1-16",
+   "ranges": [
+    [
+     3002001,
+     3002016
+    ]
+   ],
+   "title": "A Life Seasoned for God",
+   "key_verse": [
+    3002013,
+    3002013
+   ],
+   "reflect": [
+    {
+     "text": "The grain offering gives us a picture of a life pleasing to God, which is seen most fully in Jesus Christ. Like the fine flour that had no rough grains, our character is meant to be even and gentle when pressure comes against us, showing grace instead of anger. The oil poured over the flour reminds us that we need the Holy Spirit working deep in our hearts, because nothing we do in service has lasting value without Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our everyday thoughts, words, and actions should also rise to God like sweet-smelling frankincense, full of love and thanksgiving. God told His people to leave out leaven, which points to the rising of pride and self. Instead, our words should carry the purity of salt, turning people away from evil and pointing them toward goodness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God commanded that every grain offering include the salt of His covenant, an unbreakable promise of divine loyalty and friendship. Salt cleanses and brings out flavor. Remembering that God keeps His enduring promises to us gives us confidence to live seasoned lives that magnify and honor Him in the world.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you rely on the Holy Spirit to respond with gentleness rather than pride when facing pressure today?",
+    "How does knowing God's unbreakable covenant of friendship encourage you to honor Him with your words?"
+   ],
+   "prayer": "Lord God, thank You for Your unbreakable covenant of love and loyalty toward us. Fill our inner lives with Your Holy Spirit, so our actions and words may be gentle and pleasing to You. Help us to live seasoned lives that bring You praise every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 2:1",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Luann Prater",
+     "work": "Savor the Salt",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/savor-the-salt-encouragement-cafe-december-25-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,61 @@
+{
+ "id": "24-044-001",
+ "title": "Judgment on the Jews in Egypt",
+ "refs": [
+  "Jeremiah 44:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24044001,
+   "end": 24044014,
+   "ref": "Jeremiah 44:1-14",
+   "ranges": [
+    [
+     24044001,
+     24044014
+    ]
+   ],
+   "title": "Do Not Do What God Hates",
+   "key_verse": [
+    24044004,
+    24044004
+   ],
+   "reflect": [
+    {
+     "text": "Sin is not just breaking a distant rule. As the Lord warned His people in Egypt, sin harms our own souls, but even more, it touches God personally. F. B. Meyer writes that sin \"hurts the holy, loving nature of God.\" When the people kept turning away to idols, God sent prophets again and again with a pleading cry: do not do this detestable thing that I hate. God's pure and holy nature is deeply sensitive to evil, like a weary person who pleads gently with a child because the noise hurts too much to bear.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We see the full depth of God's hatred for evil at the cross. To take sin away, the Father gave up His only Son to die, and Jesus felt the bitter weight of our guilt in the garden of Gethsemane. The Holy Spirit also makes our bodies His dwelling place and grieves when we defile them. The whole Trinity calls to us when we think about doing wrong. God asks us to stop so that we do not wound His infinite love, and He invites us to share His own hatred for sin.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering that sin grieves God's loving heart change how you view temptation?",
+    "Where in your life do you need to ask God to help you hate sin the way He does?"
+   ],
+   "prayer": "Lord, help us remember that our sin causes pain to Your loving heart and brings ruin to our own lives. Teach us to hate what is evil, just as You do. Give us ears to listen to Your warnings and hearts that desire to walk closely with You.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 44:4",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

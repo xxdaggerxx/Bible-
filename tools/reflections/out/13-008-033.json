@@ -1,0 +1,67 @@
+{
+ "id": "13-008-033",
+ "title": "The Family of Saul",
+ "refs": [
+  "1 Chronicles 8:33-40"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13008033,
+   "end": 13008040,
+   "ref": "1 Chronicles 8:33-40",
+   "ranges": [
+    [
+     13008033,
+     13008040
+    ]
+   ],
+   "title": "Faithfulness in the Family",
+   "key_verse": [
+    13008034,
+    13008034
+   ],
+   "reflect": [
+    {
+     "text": "In this list of names, we catch a glimpse of Saul's family history and where their hearts turned. Early in his reign, Saul was devoted to the Lord, naming his eldest son Jonathan, which means gift of the Lord. Over time, however, Saul grew proud and self-sufficient. He turned his heart toward the false god Baal, even naming a younger son Esh-baal. Because Saul turned away, the Spirit of the Lord departed from him, and Saul's personal unfaithfulness brought deep trouble to his household and nation.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Saul's son Jonathan chose a different path. Jonathan named his own child Merib-baal, a name meaning one who opposes Baal. Even while living under the dark shadow of his father's decline, Jonathan remained quietly devoted to God. He took a stand against the idol worship that was ruining his father's character and kingdom.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As F. B. Meyer pointed out, shared devotion to God is essential for peace in any household. When parents remain loyal to the Lord, it brings blessings to the whole home. Even when people around us drift into pride and compromise, we can choose to stand firm and stay faithful to God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where pride might be tempting you to rely on yourself rather than on God?",
+    "How can you choose to stand faithfully for the Lord even when others around you turn away?"
+   ],
+   "prayer": "Lord, keep our hearts humble and faithful to you today. Guard us from pride and self-reliance, and help us not to follow the false values of the world. Give us courage to stand for your truth, and grant peace to our homes as we honor you together. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 8:33-34",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

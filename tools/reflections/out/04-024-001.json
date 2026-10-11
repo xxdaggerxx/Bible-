@@ -1,0 +1,67 @@
+{
+ "id": "04-024-001",
+ "title": "Balaam’s Third Oracle",
+ "refs": [
+  "Numbers 24:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4024001,
+   "end": 4024009,
+   "ref": "Numbers 24:1-9",
+   "ranges": [
+    [
+     4024001,
+     4024009
+    ]
+   ],
+   "title": "Gifts Without Grace",
+   "key_verse": [
+    4024002,
+    4024002
+   ],
+   "reflect": [
+    {
+     "text": "Balaam saw a wonderful sight. The Spirit of God came upon him, and he spoke true words about God's people and their coming blessings. Yet, as F. B. Meyer reminds us, this story stands as a solemn warning. Balaam heard God's words and saw clear visions of the Almighty, but in the end he died away from God because he loved evil gain. Having spiritual insight or speaking true words does not help us if our hearts remain far from the Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We need to learn the difference between having spiritual gifts and having true grace, which is God's transforming kindness in our lives. A person may have great knowledge, a gift for speaking, or an important position, and yet still lack genuine love. As Meyer points out, the most gifted people are not always the most gracious. God looks beyond outward ability and desires our hearts to be firmly established in His grace.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It is also not enough simply to admire God's blessings from a distance. Balaam looked out over the camps and described the beauty and strength of Israel, but he never truly entered into that life himself. Seeing God's truth with our minds is only the start. We must personally step into God's promises through faith and humility, making His salvation our own.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you relying on spiritual knowledge and abilities, or are you asking God for a heart changed by grace?",
+    "How can you move from just knowing about God's promises to truly trusting Him with your everyday life?"
+   ],
+   "prayer": "Lord, help us not to settle for just knowing about your truth or having outward gifts. Guard our hearts from admiring your blessings from a distance while staying unchanged inside. Give us humble faith so that we may walk closely with you and live in your grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 24:2",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

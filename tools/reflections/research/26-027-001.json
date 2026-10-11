@@ -1,0 +1,13 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "https://www.biblegateway.com/passage/?search=Ezekiel+27%3A28-30&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+27&version=CSB",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+27&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+27&version=NIV%3BNASB%3BWEB%3BESV",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+27&version=NKJV",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+27-28&version=NLT"
+ ],
+ "cost": 0.033200375,
+ "model": "google/gemini-3.8-flash"
+}

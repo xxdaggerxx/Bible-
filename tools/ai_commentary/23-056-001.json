@@ -1,0 +1,177 @@
+{
+ "book": 23,
+ "chapter": 56,
+ "first": 1,
+ "last": 12,
+ "ref": "Isaiah 56",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "God calls His people to act justly and do what is right because His salvation is near. When the Lord promises rescue, His people should prepare by turning from evil and living in obedience.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "A special blessing belongs to anyone who stays faithful to God by keeping the Sabbath holy and refusing to do evil. Honoring God's day of rest represents true devotion to Him, and keeping oneself from evil shows love for others.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Sabbath-keeping in this passage represents the whole spiritual worship of God and a life of holy obedience.",
+     "sources": [
+      "https://www.studylight.org/commentary/isaiah/56-6.html"
+     ]
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "The Old Testament Sabbath was a temporary sign fulfilled by Christ, so Christians now find their spiritual rest in Him and gather on Sunday.",
+     "sources": [
+      "https://www.studylight.org/commentary/isaiah/56-6.html"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Foreigners who turn to the Lord and eunuchs who cannot have children should not worry that God will reject them. The Lord promises that physical limitations and foreign birth will not keep sincere believers out of His covenant family.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "God speaks directly to eunuchs who keep His Sabbaths, choose what pleases Him, and remain loyal to His covenant. Even though they may feel cut off from ordinary family blessings, God values their obedience and sincere devotion.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The Lord promises these faithful believers an enduring place in His house and a name far better than that of having sons and daughters. Earthly family lines eventually end, but God gives His people an eternal inheritance and a lasting place in His presence.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "God promises believers who remain single blessings and honors in Christ that surpass the earthly joys of marriage and parenthood.",
+     "sources": [
+      "https://www.desiringgod.org/messages/single-in-christ"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Choosing a life of consecrated virginity or celibacy for God is higher than marriage and brings greater heavenly honor.",
+     "sources": [
+      "https://www.studylight.org/commentary/isaiah/56-4.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Foreigners who join themselves to the Lord to love and serve Him are fully welcomed when they honor His Sabbath and keep His covenant. True faith is shown when people turn from idols to worship the one true God and live according to His ways.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "God promises to bring faithful foreigners to His holy mountain and fill their hearts with joy in His house of prayer. Their worship and offerings are pleasing to Him, because His temple was meant to be a place of prayer for all nations.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The Lord God gathers the scattered outcasts of Israel, but He also promises to bring in many other people beside them. This points to the day when Gentiles and Jews are united together into one spiritual flock under one Shepherd.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "The prophet calls on wild beasts of the field and forest to come and feast greedily. Because the people have turned away from God, enemy nations will be allowed to invade the land like predators attacking defenseless sheep.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "Israel's leaders and prophets are compared to blind watchmen who cannot spot danger, and mute guard dogs that cannot bark to warn the household. Instead of warning the people about their sins and coming judgment, they lie around sleeping and enjoying their comfort.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "These spiritual leaders are described as greedy dogs that are never satisfied, looking out only for their own profit. They are like bad shepherds who lack understanding, abandoning the care of the flock to pursue their own selfish gain.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "The unfaithful leaders invite one another to indulge in wine and strong drink without restraint. They boast that tomorrow will be just as carefree and even more plentiful, completely ignoring God's coming judgment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

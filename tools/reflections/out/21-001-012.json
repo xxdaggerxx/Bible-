@@ -1,0 +1,82 @@
+{
+ "id": "21-001-012",
+ "title": "With Wisdom Comes Sorrow",
+ "refs": [
+  "Ecclesiastes 1:12-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 21001013,
+   "end": 21001014,
+   "ref": "Ecclesiastes 1:13-14",
+   "ranges": [
+    [
+     21001013,
+     21001014
+    ]
+   ],
+   "title": "\"A pursuit of the wind\"",
+   "key_verse": [
+    21001014,
+    21001014
+   ],
+   "reflect": [
+    {
+     "text": "King Solomon had the wealth, peace, and freedom to test everything this world could offer. Yet when he lived a horizontal life focused only on what happens under the sun, without keeping God at the center, he found every worldly pursuit empty. He explored human pleasures and achievements to the full, but he discovered that chasing peace in earthly things alone is simply chasing the wind.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Solomon tested these paths so that we do not have to make the same painful experiment ourselves. He had magnificent palaces, fine music, and every luxury, but none of them could fill his soul. Earthly possessions can never satisfy our deepest needs, and trying to rely on them only brings weariness. Only a life devoted to God allows us to enjoy His gifts in the right way.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "As Charles Spurgeon observed, \"Nothing can satisfy the entire man but the Lord's love and the Lord's own self.\" Lasting hope cannot be found in visible things around us. True satisfaction comes only when we surrender our hearts to Jesus Christ and rest in His unchanging love.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what earthly things do you sometimes look for lasting satisfaction instead of looking to God?",
+    "How does resting in the love of Jesus change the way you view the possessions and pleasures of this world?"
+   ],
+   "prayer": "Lord, forgive us for looking to the things of this world to satisfy our souls. Thank You for showing us that chasing earthly fulfillment without You is like chasing the wind. Teach us to place our hope in Jesus Christ and find our full joy in Your love.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 2",
+     "on": "Ecclesiastes 1:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "Chasing the Wind",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/chasing-the-wind"
+    },
+    "D3": {
+     "author": "Greg Laurie",
+     "work": "Solomon the Searcher",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-january-5-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

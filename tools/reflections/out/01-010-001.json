@@ -1,0 +1,89 @@
+{
+ "id": "01-010-001",
+ "title": "The Table of Nations",
+ "refs": [
+  "Genesis 10:1-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1010001,
+   "end": 1010032,
+   "ref": "Genesis 10:1-32",
+   "ranges": [
+    [
+     1010001,
+     1010032
+    ]
+   ],
+   "title": "God and the Nations of the Earth",
+   "key_verse": [
+    1010032,
+    1010032
+   ],
+   "reflect": [
+    {
+     "text": "Genesis 10 might look like just a long list of unfamiliar names, but it shows us something vital. After the flood, God told humanity to multiply and fill the earth, and here we see that command coming to pass. These families spread out and became the nations of the world. This list also introduces places like Egypt, Canaan, Babylon, and Assyria, preparing us to understand the struggles God's people would face throughout biblical history.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Among these lines, Cush's son Nimrod sought his own greatness, building kingdoms in human pride and chasing earthly dominance. Yet earthly power cannot bring true peace. Instead, the whole table reminds us of our shared family line: every human being shares a common origin and basic human heart, whether king or outcast. We all share the same inner yearnings, fears, and need for redemption.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "Because all people come from this shared beginning, God's saving plan embraces every tribe and nation, not just one group. Jesus gave Himself for all, and only He can satisfy human hearts and bring lasting unity. When we see God's care for every nation, we are called to look beyond ourselves and share the good news of Christ with people everywhere.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that every person shares a common origin change the way you see people from other cultures or backgrounds?",
+    "Are you pursuing your own pride like Nimrod, or are you serving God's eternal kingdom?"
+   ],
+   "prayer": "Lord God, thank You for Your love that reaches every nation, language, and people on earth. Forgive us when we chase earthly prestige or look down on others who share our common human frame. Fill our hearts with Your love for the world, and help us point others to Jesus Christ.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 10:5",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "God's Concern for the Nations",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-concern-nations"
+    },
+    "D3": {
+     "author": "Meredith van der Klip",
+     "work": "In Praise of Genesis 10",
+     "site": "The Gospel Coalition",
+     "url": "https://au.thegospelcoalition.org/article/in-praise-of-genesis-10/"
+    },
+    "D4": {
+     "author": "Bible Pathways Ministries",
+     "work": "Bible Pathways - Jan. 4, 2009",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-jan-4-2009-11597646.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

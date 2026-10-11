@@ -1,0 +1,117 @@
+{
+ "id": "19-140-001",
+ "title": "Rescue Me from Evil Men",
+ "refs": [
+  "Psalms 140:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19140006,
+   "end": 19140007,
+   "ref": "Psalms 140:6-7",
+   "ranges": [
+    [
+     19140006,
+     19140007
+    ]
+   ],
+   "title": "\"You Shield My Head\"",
+   "key_verse": [
+    19140007,
+    19140007
+   ],
+   "reflect": [
+    {
+     "text": "In hard seasons, life can feel like a fierce fight where harsh words and sudden troubles fly at us like arrows. David did not depend on his own physical strength or earthly weapons when war arose around him. Instead, he gave his burdens to the Lord, trusting God to be an unseen shield that covered his head in the day of battle.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "David had seen God rescue him before, and this firsthand experience gave him deep confidence. When we look back at how the Lord has already preserved us, our trust grows stronger for our present difficulties. We do not need to be afraid, because God has a proven history of deliverance and will sustain those who stay on His side.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What past times of God's faithfulness can you remember when you feel overwhelmed today?",
+    "How can you hand your worries over to God instead of relying on your own strength?"
+   ],
+   "prayer": "Lord God, You are my strength and shield in every struggle. When fears and painful words press in on me, help me to release my worries into Your care. Thank You for Your past faithfulness, and teach me to rest quietly under Your protection. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 140:7",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Greg Laurie",
+     "work": "The Burden Giveaway",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-august-28-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19140001,
+   "end": 19140013,
+   "ref": "Psalms 140:1-13",
+   "ranges": [
+    [
+     19140001,
+     19140013
+    ]
+   ],
+   "title": "Dwelling in the King's Presence",
+   "key_verse": [
+    19140013,
+    19140013
+   ],
+   "reflect": [
+    {
+     "text": "When unkind or dishonest people oppose us, doing what is right can feel costly. We might feel shaken for a moment when our integrity leads to severe hardship. Yet we are called to resist evil advice and avoid shifty shortcuts, knowing that in the long run we will praise God for leading us in the right way.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God gives a rich promise to those who walk uprightly before Him. While the wicked face judgment, the upright are welcomed to dwell in God's presence like favored guests before a great King. Standing accepted before Him and enjoying His close fellowship fills our days with lasting gratitude.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you felt tempted to use dishonest shortcuts when doing the right thing caused you trouble?",
+    "How does the promise of standing accepted in God's presence encourage you today?"
+   ],
+   "prayer": "Heavenly Father, keep my heart honest and true when trials tempt me to turn aside. Thank You for welcoming me into Your presence and sharing Your gracious favor with me. Help me to walk uprightly and give thanks to Your holy name each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 27",
+     "on": "Psalms 140:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

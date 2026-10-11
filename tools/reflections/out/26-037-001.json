@@ -1,0 +1,131 @@
+{
+ "id": "26-037-001",
+ "title": "The Valley of Dry Bones",
+ "refs": [
+  "Ezekiel 37:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 26037013,
+   "end": 26037014,
+   "ref": "Ezekiel 37:13-14",
+   "ranges": [
+    [
+     26037013,
+     26037014
+    ]
+   ],
+   "title": "\"I Will Open Your Graves\"",
+   "key_verse": [
+    26037013,
+    26037013
+   ],
+   "reflect": [
+    {
+     "text": "God promised to open the graves of His people and bring them out. A skeleton resting in the dust cannot put itself back together or breathe on its own. In the same way, human beings are spiritually dead in sin and entirely unable to revive themselves. Only the living God has the power to bring life to what is dead.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "Charles Spurgeon called this rescue \"the greatest and most remarkable of all changes that a man can undergo.\" God brings this change through the preaching of His Word and the work of His Holy Spirit. When God wakes our hearts to trust in Jesus Christ, we know that He alone gave us life. That same promise assures us of a future bodily resurrection, when all who belong to Christ will live with Him in a renewed creation.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How has God shown His power by giving you new spiritual life in Christ?",
+    "How does the promise of a future bodily resurrection give you comfort today?"
+   ],
+   "prayer": "Lord God, You alone have the power to bring life out of death. Thank You for sending Your Word and Spirit to awaken our hearts to trust in Jesus. Help us to praise You each day as we look forward to the resurrection You have promised. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 3",
+     "on": "Ezekiel 37:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Resurrected and Reunified",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/resurrected-and-reunified"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 26037001,
+   "end": 26037014,
+   "ref": "Ezekiel 37:1-14",
+   "ranges": [
+    [
+     26037001,
+     26037014
+    ]
+   ],
+   "title": "Hope in the Dry Valley",
+   "key_verse": [
+    26037003,
+    26037003
+   ],
+   "reflect": [
+    {
+     "text": "God brought Ezekiel into a valley filled with scattered, dry bones to picture the condition of Israel in exile. The people felt cut off, withered in faith, and completely stripped of hope. We often face similar dry seasons in our own lives, where distractions and heavy trials make us feel distant from God and tempted to doubt His faithfulness.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "Even though the valley looked like a hopeless scene, God told Ezekiel to prophesy to the bones. Speaking promises over dry ground can feel strange to human eyes, yet God's Word brings life where nothing else can. God has the power to work in our most exhausted circumstances, repairing broken relationships and awakening things we thought were gone. Instead of giving up on difficult situations, we can listen to God's Word, repent of our doubts, and keep praying in faith.",
+     "sources": [
+      "D2",
+      "D3",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What dry season or difficult circumstance are you facing that makes it hard to see hope?",
+    "How can listening to God's Word help you persist in prayer instead of giving up?"
+   ],
+   "prayer": "Heavenly Father, You see every dry and weary place in our lives. When we feel overwhelmed and stripped of hope, remind us that nothing is beyond Your reach. Give us faith to listen to Your Word and keep praying, trusting that You remain faithful to all Your promises. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Laura Bailey",
+     "work": "Trusting God in the Dry Seasons",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-decermber-24-2019.html"
+    },
+    "D3": {
+     "author": "Sharon Jaynes",
+     "work": "When a Dream Dies",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-february-1-2017.html"
+    },
+    "D5": {
+     "author": "Jared Kennedy",
+     "work": "Renewed Hope from Dead Circumstances",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/hope-dead-circumstances/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

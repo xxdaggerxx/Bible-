@@ -1,0 +1,65 @@
+{
+ "id": "11-021-001",
+ "title": "Naboth’s Vineyard",
+ "refs": [
+  "1 Kings 21:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11021001,
+   "end": 11021007,
+   "ref": "1 Kings 21:1-7",
+   "ranges": [
+    [
+     11021001,
+     11021007
+    ]
+   ],
+   "title": "Standing Firm for God's Inheritance",
+   "key_verse": [
+    11021003,
+    11021003
+   ],
+   "reflect": [
+    {
+     "text": "King Ahab wanted Naboth's vineyard to turn it into a vegetable garden. He offered money or a different piece of land in exchange. But Naboth said no. He did not refuse out of pride or greed. He refused because the land was a sacred inheritance handed down through his family from God. To give it away would mean giving up something holy that God had entrusted to his care.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Wicked rulers thought they had won when they put Jesus to death, just as Ahab and Jezebel thought they had won by killing Naboth. But evil did not have the last word. By rising from the dead, Jesus overturned their plans and broke the devil's schemes. Because Jesus stood firm, we now share in an inheritance that can never be stolen or destroyed.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What truths or gifts from God are you tempted to compromise when pressure comes?",
+    "How does knowing that Jesus secured your eternal inheritance give you courage to do what is right?"
+   ],
+   "prayer": "Lord, thank You for the precious inheritance You give us in Christ. Give us courage to stand firm for what is holy, even when others oppose us. Thank You that Jesus refused to give up on us and destroyed the power of evil forever. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Erik Raymond",
+     "work": "Fresh Gospel Wine in Naboth’s Vineyard",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/erik-raymond/finding-fresh-gospel-wine-in-naboths-vineyard/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "When Naboth stood firm, Ahab went home sullen and angry, lying on his bed and refusing to eat. His wife Jezebel then stepped in, determined to take the vineyard through wicked schemes. Naboth's faithfulness would soon cost him his life. In this way, Naboth points us forward to Jesus. Christ also refused to forfeit His covenant inheritance, which is the family of believers promised to Him by the Father.",
+     "problem": "While [D1] states that Jesus would not forfeit His covenant inheritance, neither [D1] nor the passage teaches that this inheritance is the family of believers promised to Him by the Father."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

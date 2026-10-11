@@ -1,0 +1,144 @@
+{
+ "id": "27-012-001",
+ "title": "The End Times",
+ "refs": [
+  "Daniel 12:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 27012003,
+   "end": 27012003,
+   "ref": "Daniel 12:3",
+   "ranges": [
+    [
+     27012003,
+     27012003
+    ]
+   ],
+   "title": "\"Shine like the stars forever\"",
+   "key_verse": [
+    27012003,
+    27012003
+   ],
+   "reflect": [
+    {
+     "text": "When we gaze up into the night sky, the vast field of stars shows us the majesty and order of God. The sheer scale of the cosmos is not an accident. Looking at that breathtaking beauty humbles us and draws our hearts into quiet worship and prayer.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "God promises that those who are wise and lead others to righteousness will shine like those very stars forever. True wisdom is a gift from God that teaches us how to live in His truth. We often want God to map out every detail of our career or where we live. But His main calling is simpler: wherever we are right now, we are to love the people around us and help them know God.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "As Charles Spurgeon wrote, \"To be a winner of souls is a glorious attainment.\" Instead of waiting for every answer about the future before we act, we can simply shine God's light today. Sharing Christ with others gives our lives an eternal purpose that outlasts everything in this world.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Who is one person in your daily life you can point toward God's goodness this week?",
+    "Are you waiting for detailed plans before serving God, or are you willing to shine His light right where you are?"
+   ],
+   "prayer": "Lord God, thank You for the beauty of Your creation and the eternal life You offer us. Give us Your wisdom to live faithfully each day. Help us to share Your truth and love with others so they may come to know You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 21",
+     "on": "Daniel 12:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Van Walton",
+     "work": "SHINE",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-july-13-2009-11605893.html"
+    },
+    "D5": {
+     "author": "Charles R. Swindoll",
+     "work": "Lie Back and Look Up",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-january-1-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 27012013,
+   "end": 27012013,
+   "ref": "Daniel 12:13",
+   "ranges": [
+    [
+     27012013,
+     27012013
+    ]
+   ],
+   "title": "\"Go on your way until the end\"",
+   "key_verse": [
+    27012013,
+    27012013
+   ],
+   "reflect": [
+    {
+     "text": "Trying to understand everything God has planned for history can leave our minds tired and confused. We cannot untangle every mystery, but we do not need to be afraid. Nothing in God's plan should cause His children alarm. He tells us to leave His vast purposes in His hands and simply focus on the path set before us today.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Each of us has a personal road to walk. While our lives bring hard work, suffering, and temptation, God's kindness and help are always enough for each step. Our calling is to learn our lessons, carry out our duties, and walk steadily without turning aside or giving up.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God also gives us a wonderful promise: rest is coming. When our earthly work is finished, the Lord will preserve us and grant us our place in heaven. There, as F. B. Meyer reminds us, the weary will find rest and the troubled will find peace in the presence of Christ. We can walk forward in confidence because our future is completely safe in Him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What future worries can you hand over to God today so you can focus on following Him faithfully?",
+    "How does the promise of eternal rest in Christ give you strength to face current hardships?"
+   ],
+   "prayer": "Heavenly Father, when the future feels confusing or overwhelming, help us to trust Your wise hands. Give us strength to walk our daily road with patience and courage. Thank You for the sure hope of eternal rest and peace with You. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 25",
+     "on": "Daniel 12:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Daniel 12:13",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

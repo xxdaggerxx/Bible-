@@ -1,0 +1,66 @@
+{
+ "id": "05-015-001",
+ "title": "The Seventh Year",
+ "refs": [
+  "Deuteronomy 15:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5015001,
+   "end": 5015006,
+   "ref": "Deuteronomy 15:1-6",
+   "ranges": [
+    [
+     5015001,
+     5015006
+    ]
+   ],
+   "title": "Canceling Debts and Caring for the Poor",
+   "key_verse": [
+    5015004,
+    5015004
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God gave Israel a clear command to cancel debts every seven years. God designed this regular release along with his covenant blessing to keep his people from falling into destructive traps of poverty. The Lord promised that if they truly listened and obeyed all his commands, there would be no poor people living among them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "However, human greed and broken systems prevent fallen societies from reaching that ideal state. Even with God's good laws, self-centered hearts stand in the way. This creates a painful tension between the wonderful promise of ending all poverty and the harsh reality of ongoing human need.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Still, the continuing presence of poverty should never make us give up in despair. It is not an excuse to do nothing. Instead, it serves as a direct summons for God's people to practice openhanded generosity. God calls us to share what we have and help lift burdens from those who struggle.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you avoid feeling discouraged by the ongoing need in our broken world?",
+    "What is one practical way you can show openhanded generosity to someone carrying a heavy burden?"
+   ],
+   "prayer": "Lord God, thank you for your generous heart and your deep care for those in need. Forgive us when selfishness makes us hold tightly to our resources instead of sharing them. Please give us open hands and willing spirits to bring relief to others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Deut. 15",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/deut-15-psalm-102-isaiah-42-revelation-12/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "09-003-015",
+ "title": "Samuel Shares the Vision",
+ "refs": [
+  "1 Samuel 3:15-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9003015,
+   "end": 9003021,
+   "ref": "1 Samuel 3:15-21",
+   "ranges": [
+    [
+     9003015,
+     9003021
+    ]
+   ],
+   "title": "Available to God, Trusting His Will",
+   "key_verse": [
+    9003019,
+    9003019
+   ],
+   "reflect": [
+    {
+     "text": "Samuel was ready to listen and answer whenever God spoke. The Lord stayed with Samuel and backed up his words because Samuel was always available to serve Him. Following God means being ready to answer His call at any hour. The Lord values our availability even more than our ability. He loves to display His power through ordinary, humble people who stay alert to daily chances to serve others.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When Eli heard God's hard message, he did not fight it. He placed the honor of God's name above his own reputation and family future. Eli accepted that God is completely good and that whatever He chooses to do is right. As created beings, we must bow before our Creator. We often struggle when we crave our own glory or demand explanations during painful times. But like Eli, we are called to face hard situations with reverent trust and complete submission to God's authority.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you making yourself available each day for God to use you in simple ways?",
+    "How can you respond with trust in God's goodness when you face painful trials?"
+   ],
+   "prayer": "Lord, make us ready to answer Your call at any time, even in small daily tasks. Help us trust Your goodness and authority when painful trials come. May we honor Your name above our own reputation. Amen.",
+   "sources": {
+    "D1": {
+     "author": "John Starke",
+     "work": "“Let Him Do What Seems Good to Him”",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/let-him-do-what-seems-good-to-him/"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "The Lord Was with Him",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/the-lord-was-with-him.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

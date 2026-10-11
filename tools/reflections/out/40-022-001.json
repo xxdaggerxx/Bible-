@@ -1,0 +1,85 @@
+{
+ "id": "40-022-001",
+ "title": "The Parable of the Banquet",
+ "refs": [
+  "Matthew 22:1-14",
+  "Luke 14:15-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40022001,
+   "end": 40022014,
+   "ref": "Matthew 22:1-14; Luke 14:15-24",
+   "ranges": [
+    [
+     40022001,
+     40022014
+    ],
+    [
+     42014015,
+     42014024
+    ]
+   ],
+   "title": "An Invitation to the King's Banquet",
+   "key_verse": [
+    42014023,
+    42014023
+   ],
+   "reflect": [
+    {
+     "text": "God graciously prepared a great feast for His Son and called people to celebrate. Tragically, those who received the first invitations took them lightly. People let everyday business, fields, and routines crowd out time with the master. When earthly comfort blinds us to our deep need for God, we risk taking His grace—His kindness that we do not deserve—for granted and missing out on His blessings.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because the original guests made excuses and refused to come, the king opened his doors to outsiders. The poor, the weak, and anyone found in the streets were gathered into the hall. Those who realize their spiritual poverty and hunger gladly run to be filled by Christ. They know they have nothing to boast about, so they receive God's gift with humble joy.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "God desires a full house for His eternal feast in heaven. As followers of Jesus, we share the servant's task to go out and invite others. We are called to share the message of salvation with deliberate urgency, urging everyone we can find to accept God's call instead of clinging to worldly excuses.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What daily concerns or comforts tempt you to make excuses instead of seeking God?",
+    "Who in your life needs to hear the welcoming invitation of Jesus this week?"
+   ],
+   "prayer": "Lord God, thank You for graciously welcoming us to Your heavenly banquet through Christ. Keep us from letting daily routines and worldly comforts crowd out our love for You. Give us eager hearts to share Your invitation with others so that Your house may be full. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Deidre Braley",
+     "work": "Who Will Eat Bread in God’s Kingdom?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/who-will-eat-bread-in-gods-kingdom-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Rick Warren",
+     "work": "A Christian’s Job Description: Go and Tell",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-september-8-2017.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Wedding Feast",
+     "site": "Ligonier Ministries",
+     "url": "https://www.ligonier.org/learn/devotionals/wedding-feast"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

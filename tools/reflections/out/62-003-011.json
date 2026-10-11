@@ -1,0 +1,143 @@
+{
+ "id": "62-003-011",
+ "title": "Love One Another",
+ "refs": [
+  "1 John 3:11-24"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 62003016,
+   "end": 62003018,
+   "ref": "1 John 3:16-18",
+   "ranges": [
+    [
+     62003016,
+     62003018
+    ]
+   ],
+   "title": "\"Let Us Love in Action and Truth\"",
+   "key_verse": [
+    62003018,
+    62003018
+   ],
+   "reflect": [
+    {
+     "text": "Jesus showed us what true love is when He laid down His life on the cross. While we cannot pay for anyone's sins like He did, His sacrifice sets the standard for how we live. We are called to give up our own selfishness and comfort to serve other believers. Mere head knowledge and religious talk are empty if we do not back them up with practical obedience.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "Genuine love is not found in nice words or online messages alone. It means being Christ's hands and feet by entering into another person's pain. That takes vulnerability, personal time, and emotional energy. When we step forward with quiet, caring presence and share our earthly goods with those in need, our actions speak much louder than our words.",
+     "sources": [
+      "D3",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "We must guard our hearts against holding onto material comfort while ignoring a hurting brother or sister. When we visibly share what we have, we show that God's love really lives in us. Even small, deliberate deeds of kindness can bring hope to a struggling believer. The Holy Spirit living inside us supplies all the strength we need to love like this.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Who around you is carrying a heavy burden that you could help carry this week?",
+    "Are there material goods or personal time you are holding back from someone in need?"
+   ],
+   "prayer": "Lord Jesus, thank You for laying down Your life for us. Help us not to stop at kind words, but give us strength by Your Spirit to share our lives, time, and resources with others. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "In Deed and Truth",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/deed-and-truth"
+    },
+    "D3": {
+     "author": "Meg Bucher",
+     "work": "Compassion Is Love in Action",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/compassion-is-love-in-action-the-crosswalk-devotional.html"
+    },
+    "D4": {
+     "author": "Leslie Snyder",
+     "work": "Actions Speak Louder Than Words",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-june-19-2009-11604958.html"
+    },
+    "D5": {
+     "author": "Charles R. Swindoll",
+     "work": "The Good Samaritan",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/the-good-samaritan-today-s-insight-may-25-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 62003011,
+   "end": 62003024,
+   "ref": "1 John 3:11-24",
+   "ranges": [
+    [
+     62003011,
+     62003024
+    ]
+   ],
+   "title": "Asking in the Name of Jesus",
+   "key_verse": [
+    62003022,
+    62003022
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, we are reminded that we can come to God with great confidence and receive what we ask. But learning to pray in the name of Jesus is more than adding His name onto the end of our requests. As Charles Spurgeon explains, asking in His name means praying \"as authorized by Him.\" We would never dare to ask for things that dishonor our Lord or go against His will.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "True prayer seeks the Father's glory through the Son. When we bring requests that are clearly right, God delights to answer them because doing so highlights His truth, faithfulness, power, and grace. The blessing we receive flows from the goodness of Jesus, bringing honor back to the Father.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because the Father loves the Son, our prayers offered in Jesus' name are certain to succeed. God and His people share a joyful fellowship together in Christ. Knowing that our answered prayers bring glory to God gives us confidence to keep praying without giving up.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you pray, are you seeking your own desires or asking for what honors Jesus?",
+    "How does knowing that Jesus authorizes your prayers give you confidence before God?"
+   ],
+   "prayer": "Heavenly Father, thank You for the privilege of coming to You in the name of Your Son. Teach us to ask for things that bring honor to Jesus and reveal Your faithfulness. May our prayers bring glory to Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 15",
+     "on": "1 John 3:22-23",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,128 @@
+{
+ "id": "27-005-013",
+ "title": "Daniel Interprets the Handwriting",
+ "refs": [
+  "Daniel 5:13-31"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 27005026,
+   "end": 27005028,
+   "ref": "Daniel 5:26-28",
+   "ranges": [
+    [
+     27005026,
+     27005028
+    ]
+   ],
+   "title": "\"Weighed and Found Deficient\"",
+   "key_verse": [
+    27005027,
+    27005027
+   ],
+   "reflect": [
+    {
+     "text": "Babylon had repeatedly witnessed the true God's power, yet King Belshazzar persisted in worshiping idols. He even used the sacred temple vessels to praise gods made of gold and silver. But earthly powers are never invincible. The sovereign Lord rules over every earthly kingdom, and He used a humble servant to announce that the king had been weighed and his days numbered.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Belshazzar was found deficient because his heart was full of pride. Charles Spurgeon noted that \"it is well frequently to weigh ourselves in the scale of God's Word.\" When we hold our lives up against the Bible, we see our own spiritual failures and lack of righteousness. Belshazzar hardened himself against the truth, but God calls us to seek genuine humility and a faith that rests in His mercy.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "God's warning reminds us that our very breath belongs to Him. Instead of pretending we are sufficient on our own, we can ask the Lord to grant us true sorrow for our sins and conform us to the likeness of Jesus.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you examine your life in the light of Scripture, where do you see your need for God's mercy?",
+    "How can you guard your heart against pride when things seem to be going well?"
+   ],
+   "prayer": "Lord God, You hold my breath and all my ways in Your hands. Forgive me for the pride and self-reliance that take root in my heart. Weigh me by Your Word and grant me a humble spirit that depends fully on Your grace through Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 12",
+     "on": "Daniel 5:27",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Handwriting on the Wall",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/handwriting-wall"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 27005013,
+   "end": 27005031,
+   "ref": "Daniel 5:13-31",
+   "ranges": [
+    [
+     27005013,
+     27005031
+    ]
+   ],
+   "title": "A Steady Voice in the Crisis",
+   "key_verse": [
+    27005016,
+    27005016
+   ],
+   "reflect": [
+    {
+     "text": "When life is full of celebration and ease, worldly people often ignore God's servants. As Belshazzar feasted, Daniel was forgotten. Yet when a mysterious hand wrote upon the wall and terror gripped the banquet hall, the troubled king sent for Daniel. The world may ignore faith in comfortable times, but in hours of sudden distress, people look for someone who possesses genuine spiritual wisdom.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "While everyone else was filled with panic, Daniel remained in perfect peace. He was not tempted by offers of purple robes or royal gold. Daniel recognized his Father's handwriting and trusted completely in His care, even while an entire empire was about to collapse.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Do not be discouraged if you feel overlooked or face trying seasons. God uses difficult experiences to teach us His truth and deepen our trust in Him. When you rely on the Holy Spirit, God gives you steady peace and the right words to help others when their world falls apart.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you maintain God's peace when those around you are filled with fear?",
+    "In what ways might God be using your current trials to prepare you to help someone else later?"
+   ],
+   "prayer": "Heavenly Father, help me not to be discouraged when the world neglects or misjudges me. Fill me with Your Holy Spirit so that I may walk in peace and recognize Your hand in every circumstance. Give me wisdom and courage to point others to You when they are shaken. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Daniel 5:16",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,72 @@
+{
+ "id": "49-002-001",
+ "title": "Alive with Christ",
+ "refs": [
+  "Ephesians 2:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 49002001,
+   "end": 49002010,
+   "ref": "Ephesians 2:1-10",
+   "ranges": [
+    [
+     49002001,
+     49002010
+    ]
+   ],
+   "title": "Made Alive and Shaped for Good",
+   "key_verse": [
+    49002008,
+    49002008
+   ],
+   "reflect": [
+    {
+     "text": "Before God stepped in, we were spiritually dead. A dead person cannot seek God, please Him, or fulfill any conditions to earn life. Just as someone in a grave cannot raise themselves, we could do nothing to save ourselves. But because God is rich in mercy, He freely chose to awaken our hearts to the glory of Christ. Salvation is an unconditional and completely free gift, bringing us to life when we had no power of our own.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Once God gives us this new life, our story does not stop there. We are His workmanship, deliberately crafted to carry out good works and fulfill a higher purpose. Remembering that we are made in God's image helps keep us from feeling hopeless when hard times come. We are still works in progress, and the Lord continues to refine us as we walk with Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Growing as God's workmanship requires us to keep a humble and teachable heart. When we seek God every day and ask Him for wisdom, He continues to shape our lives. We did not earn our salvation by our own effort, but we are now invited to live out the good works God prepared for us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that salvation is a completely free gift change how you view your daily effort to please God?",
+    "Where in your life do you need a humble, teachable attitude so God can continue refining you?"
+   ],
+   "prayer": "Lord God, thank You for Your rich mercy in bringing us to life when we were completely unable to save ourselves. Remind us that our salvation is Your free gift and that we are crafted as Your workmanship. Give us humble and teachable hearts each day as You refine us for the good works You have planned. Amen.",
+   "sources": {
+    "D1": {
+     "author": "John Piper",
+     "work": "The Freeness of Grace",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/the-freeness-of-grace"
+    },
+    "D2": {
+     "author": "Aaron D'Anthony Brown",
+     "work": "Do You Recognize His Workmanship?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/do-you-recognize-his-workmanship-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

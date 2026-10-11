@@ -1,0 +1,66 @@
+{
+ "id": "13-022-001",
+ "title": "Preparations for the Temple",
+ "refs": [
+  "1 Chronicles 22:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13022001,
+   "end": 13022005,
+   "ref": "1 Chronicles 22:1-5",
+   "ranges": [
+    [
+     13022001,
+     13022005
+    ]
+   ],
+   "title": "Preparing with a Humble Heart",
+   "key_verse": [
+    13022005,
+    13022005
+   ],
+   "reflect": [
+    {
+     "text": "David identified the place where God's house would be built, a place where sacrifice had turned away God's anger. True worship is never just an outward religious ritual. Instead, it is about being reconciled to God, which means being brought back into peaceful relationship with Him. Because we are sinful, we cannot simply approach a holy God without the atonement He provides, which means the payment that covers our wrongdoing. By setting apart this sacred site, King David pointed forward to Jesus Christ, who unites the roles of King and Priest for us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "David also showed deep humility in how he served. God had said no to David's personal dream of building the temple, but David did not become bitter. He understood that God had a better plan. Instead of giving up, David gladly gathered cedar, iron, and stone to help his son Solomon, who was young and inexperienced. Mature believers can follow this example by unselfishly preparing resources to support younger leaders. When we surrender our broken dreams to God in willing obedience, He fills our hands with good work for His kingdom.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When God says no to a personal dream, do you hold on to bitterness or look for ways to cooperate with His plan?",
+    "How can you unselfishly help prepare and encourage younger believers who are stepping into leadership?"
+   ],
+   "prayer": "Heavenly Father, thank You for providing a way for us to be reconciled to You through Jesus Christ. Help us to accept Your guidance with humility whenever You say no to our personal plans. Give us generous hearts to support the next generation and prepare them to serve You faithfully.",
+   "sources": {
+    "D1": {
+     "author": "Charles Swindoll",
+     "work": "Helpful Hope for Broken Dreams",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-january-18-2024.html"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Devotional: 1 Chronicles 22",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/1-chronicles-22-1-peter-3-micah-1-luke-10/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "01-043-001",
+ "title": "The Return to Egypt with Benjamin",
+ "refs": [
+  "Genesis 43:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1043001,
+   "end": 1043015,
+   "ref": "Genesis 43:1-15",
+   "ranges": [
+    [
+     1043001,
+     1043015
+    ]
+   ],
+   "title": "Learning to Trust Again",
+   "key_verse": [
+    1043014,
+    1043014
+   ],
+   "reflect": [
+    {
+     "text": "Jacob had plenty of reasons to doubt his sons. Years earlier, they had deceived him, and Joseph had vanished without an explanation. Now a severe famine threatened the family, but Jacob was still terrified of losing Benjamin. His painful past made it hard to trust his sons with his youngest boy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet Judah showed real evidence of a changed heart. He offered to take the blame and give his own life as a pledge for Benjamin's safety. Seeing this genuine repentance, Jacob chose to let Benjamin go. Instead of clinging to fear, Jacob placed the matter into the hands of God Almighty, relying on God's covenant faithfulness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When others have hurt us, it is natural to protect ourselves. Yet when someone shows true fruit of repentance, God calls us to take the risk of trusting again. We can take that step because our ultimate security rests not in people, but in the mercy of our faithful God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there someone who has hurt you who is showing signs of genuine change?",
+    "How does trusting in God's faithfulness help you take the risk of forgiving and trusting others?"
+   ],
+   "prayer": "Lord God Almighty, thank you for your faithful care over our lives. Give us wisdom to see genuine repentance in others, and grant us grace to take the risk of trusting again. Help us release our fears into your merciful hands. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Jacob Trusts His Sons",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jacob-trusts-his-sons"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

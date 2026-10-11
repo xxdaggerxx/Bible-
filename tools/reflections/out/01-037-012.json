@@ -1,0 +1,90 @@
+{
+ "id": "01-037-012",
+ "title": "Joseph Sold into Egypt",
+ "refs": [
+  "Genesis 37:12-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1037012,
+   "end": 1037030,
+   "ref": "Genesis 37:12-30",
+   "ranges": [
+    [
+     1037012,
+     1037030
+    ]
+   ],
+   "title": "Betrayed Brother and God's Hidden Plan",
+   "key_verse": [
+    1037028,
+    1037028
+   ],
+   "reflect": [
+    {
+     "text": "Jacob sent Joseph on a long journey to check on his brothers. Even though Joseph showed honest integrity, his brothers hated him out of deep jealousy. When they saw him coming, they plotted to kill him. Reuben tried to save his life by telling them to throw him into an empty pit instead. So they stripped off Joseph's special robe and dropped him into the dry ground.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "The brothers showed cold, hardened hearts by sitting down to eat a meal while Joseph was trapped in the pit. When a caravan of traders passed by, Judah saw a chance to make money. The brothers agreed to sell Joseph as a slave for twenty pieces of silver. They thought they were ending his dreams forever, but God was using even their cruel actions to preserve their family line.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "This painful moment points ahead to Jesus Christ. Like Joseph, Jesus was sent by His Father and came to His own people, yet they rejected Him. In the words of F. B. Meyer, we see the foreshadowing of \"the thirty pieces of silver for which He was betrayed.\" Jesus also suffered innocently, and God used that terrible suffering to bring salvation and redeem His people.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How does Joseph's innocent suffering help you understand what Jesus endured for us?",
+    "When other people mistreat us, how does knowing that God is still in control bring you comfort?"
+   ],
+   "prayer": "Lord God, thank You that even when people do evil things, You are still working out Your good purposes. Thank You for sending Jesus, who suffered innocently and was betrayed so that He could save us. Help us to trust Your caring hand during our hardest moments. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 37:24",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Off to Egypt",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/egypt"
+    },
+    "D3": {
+     "author": "R.C. Sproul",
+     "work": "A Sin Concealed",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/a-sin-concealed"
+    },
+    "D4": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Jan. 13, 2011",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-jan-13-2011-11644032.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

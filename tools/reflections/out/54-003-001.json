@@ -1,0 +1,66 @@
+{
+ "id": "54-003-001",
+ "title": "Qualifications for Overseers",
+ "refs": [
+  "1 Timothy 3:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 54003001,
+   "end": 54003007,
+   "ref": "1 Timothy 3:1-7",
+   "ranges": [
+    [
+     54003001,
+     54003007
+    ]
+   ],
+   "title": "The Calling and Character of an Elder",
+   "key_verse": [
+    54003001,
+    54003001
+   ],
+   "reflect": [
+    {
+     "text": "God cares deeply about how His church is guided and cared for. In the New Testament, the words for overseer and elder describe the same office of church leadership. While God honors all honest, everyday work, He also sets apart elders with distinct responsibilities to serve His people. Aspiring to this office is a noble desire to care for God's flock.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because this calling is so important, the Bible focuses on a leader's character and daily life. An elder must be a person of integrity, showing self-control, respectability, and faithful care for his own household. This work is not about personal power or wealth. Instead, spiritual oversight centers on steady prayer, careful study, and teaching the truth of God's Word according to the Scriptures.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Elders are given as God's gift to shepherd the church with love and truth. As church members, we are called to encourage them, pray for their spiritual strength, and follow their lawful direction. When godly leaders guide the flock, the whole church family is strengthened in Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you regularly pray for the elders and leaders of your church?",
+    "Why is personal character so important for those who teach and lead God's people?"
+   ],
+   "prayer": "Heavenly Father, thank You for providing faithful elders to shepherd Your people. Grant our church leaders wisdom, self-control, and deep love as they study and teach Your Word. Help us to pray for them and follow their guidance with willing hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Vocation of Elder",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/vocation-of-elder"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

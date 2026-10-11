@@ -1,0 +1,66 @@
+{
+ "id": "44-023-023",
+ "title": "Paul Sent to Felix",
+ "refs": [
+  "Acts 23:23-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44023023,
+   "end": 44023035,
+   "ref": "Acts 23:23-35",
+   "ranges": [
+    [
+     44023023,
+     44023035
+    ]
+   ],
+   "title": "Unexpected Ways and Faithful Prayers",
+   "key_verse": [
+    44023024,
+    44023024
+   ],
+   "reflect": [
+    {
+     "text": "Paul was in serious danger, but God provided a surprising way out. The Roman commander ordered hundreds of soldiers, spearmen, and horsemen to guard Paul as he traveled in the middle of the night. God often uses creative and unexpected means to protect His servants, even turning to a foreign army to keep the apostle safe.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "While the cavalry rode beside Paul, another strength supported him on the road. Paul was carried by the intercessory prayers of the believers, which means prayers offered on behalf of someone else. The Lord does not need our help to deliver anyone, yet He kindly invites us to take part in His work by praying for our brothers and sisters.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Praying for each other allows us to take part in the story. When God brings rescue and answers those prayers, we get to share in the joy and thanksgiving. Paul reached Caesarea safely, protected not only by Roman armor, but by the faithful prayers of God's people.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Who in your life needs God's protection and strength today?",
+    "How can you join in God's work by praying for that person right now?"
+   ],
+   "prayer": "Lord, thank You for the unexpected ways You protect and care for Your servants. Thank You for the gift of prayer and for inviting us to be part of what You are doing. Help us faithfully lift up others so that we may share in the joy of Your deliverance. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 286: Acts 23:23–35",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-286-acts-23-2335.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

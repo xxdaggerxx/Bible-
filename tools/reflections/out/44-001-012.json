@@ -1,0 +1,68 @@
+{
+ "id": "44-001-012",
+ "title": "Matthias Replaces Judas",
+ "refs": [
+  "Acts 1:12-26"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44001012,
+   "end": 44001014,
+   "ref": "Acts 1:12-14",
+   "ranges": [
+    [
+     44001012,
+     44001014
+    ]
+   ],
+   "title": "\"With One Accord in Prayer\"",
+   "key_verse": [
+    44001014,
+    44001014
+   ],
+   "reflect": [
+    {
+     "text": "After Jesus went up to heaven, His followers walked back to Jerusalem from the Mount of Olives. They gathered in an upstairs room where they were staying. The apostles, the women, Mary the mother of Jesus, and His brothers came together as one family. They were not alone in their waiting. Instead, they joined with one heart, one spirit, and a common purpose.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Together, they waited faithfully and spent time in steady prayer. Sharing silence before God quiets our hearts and welcomes the Holy Spirit's guidance. God often uses small, humble gatherings like this one to do extraordinary things. This peaceful waiting was essential preparation before they stepped out into difficult ministry. When we pray together with patient trust, we place ourselves where God can fill us with His power.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can taking time for quiet prayer with other believers help prepare you for daily challenges?",
+    "Where in your life do you need to wait patiently and ask for the Holy Spirit's leading?"
+   ],
+   "prayer": "Lord, help us to join together with one heart and quiet our spirits in Your presence. Teach us to wait patiently in prayer and listen for the Holy Spirit. Prepare our hearts in the quiet, and lead us into the work You have for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "István Csernák",
+     "work": "Our Mission Begins in Silence",
+     "site": "The Upper Room",
+     "url": "https://www.upperroom.org/devotionals/blog-posts/2605"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 228: Acts 1:12–14, 2:1–8",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-228-acts-1-1214-2-18.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

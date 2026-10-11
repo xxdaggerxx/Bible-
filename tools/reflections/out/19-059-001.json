@@ -1,0 +1,66 @@
+{
+ "id": "19-059-001",
+ "title": "Deliver Me from My Enemies",
+ "refs": [
+  "Psalms 59:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19059001,
+   "end": 19059017,
+   "ref": "Psalms 59:1-17",
+   "ranges": [
+    [
+     19059001,
+     19059017
+    ]
+   ],
+   "title": "A Song in Hard Times",
+   "key_verse": [
+    19059016,
+    19059016
+   ],
+   "reflect": [
+    {
+     "text": "Busy schedules, deep exhaustion, and negative thoughts can quickly weigh us down. They cloud our perspective and drain away our spiritual strength. David wrote this psalm during a time of deadly danger, when enemies watched his home to attack him. While our struggles may look different, we often face daily pressures that leave us feeling threatened and weary.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even while facing real peril, David made a choice to trust God. He did not wait until his troubles disappeared or until he felt cheerful. Rejoicing is a deliberate step of faith. It is not built on our shifting emotions, but anchored firmly in God's unchanging character and loving devotion.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God acts as our fortress, a secure shelter that protects us in distress and gives us the strength we lack. When we turn to worship Him during hard times, our hearts are reoriented. Turning our attention to the Lord eases our daily pressures and brings true rest.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What negative thoughts or pressures are draining your energy right now?",
+    "How can choosing to praise God today help shift your focus to His strength?"
+   ],
+   "prayer": "Lord, thank You for being our strong fortress when life feels heavy and exhausting. Help us to choose faith over our changing feelings, and teach us to sing of Your loving devotion. Give rest to our weary hearts as we place our trust in You today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jessica Van Roekel",
+     "work": "A Song for the Hard Days",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/a-song-for-the-hard-days.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

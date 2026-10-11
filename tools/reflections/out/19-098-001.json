@@ -1,0 +1,76 @@
+{
+ "id": "19-098-001",
+ "title": "Sing to the LORD a New Song",
+ "refs": [
+  "Psalms 98:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19098001,
+   "end": 19098009,
+   "ref": "Psalms 98:1-9",
+   "ranges": [
+    [
+     19098001,
+     19098009
+    ]
+   ],
+   "title": "Sing to the Lord a New Song",
+   "key_verse": [
+    19098001,
+    19098001
+   ],
+   "reflect": [
+    {
+     "text": "Psalm 98 calls us to celebrate God for His great victory. It is easy to dwell on old disappointments, losses, or past regrets. Yet God invites us to wake up and sing a new song instead of staying downcast. He has revealed His salvation to the world, and Christ has come as the victorious King who defeats sin.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We see reasons to praise God in His daily kindness. He gives us fresh mercies every morning, providing our food, our rest, and everyday comforts. The psalm reminds us of Jesus' past rescue, His present reign, and His future return to set all things right. Creation itself, from the roaring seas to the clapping rivers, joins in this glad praise.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Even when our souls feel sluggish or dull, we do not have to let heaviness master us. We can stir ourselves to praise God for His redeeming grace, which is His loving rescue that sets us free. Gathering our voices to worship Him now is a small foretaste of the unending praise we will one day share before His throne.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What past regrets or sadness do you need to lay aside so you can see God's fresh mercies today?",
+    "How can remembering that Jesus is our reigning King lift your spirit when you feel weary?"
+   ],
+   "prayer": "Lord God, thank You for Your mighty victory over sin and for the new mercies You give us each day. When our spirits feel dull or heavy, help us choose praise over regret. We look forward with joy to the day when You return to judge the world in righteousness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 98:1",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Randall Van Meggelen",
+     "work": "Christmas Carols: Joy to the World",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/christmas-carols-joy-world"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

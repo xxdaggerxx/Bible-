@@ -1,0 +1,73 @@
+{
+ "book": 19,
+ "chapter": 134,
+ "first": 1,
+ "last": 3,
+ "ref": "Psalms 134",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The psalm opens with a call to the priests and Levites who kept watch in the temple during the night. Instead of falling asleep or passing the time in idle chatter, they are urged to praise and thank the Lord. Just guarding the building was not enough; God wanted their sincere, heartfelt worship.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Traditional Catholic translations include an extra phrase from the ancient Greek and Latin Bibles, 'in the courts of the house of our God,' which Augustine interpreted as having a wide heart that can love even enemies.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801134.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Those on duty are told to raise their hands toward the holy place as they bless the Lord. Raising hands was a standard posture of prayer, showing that the worshipper was reaching out to God and lifting up their heart to Him. Their main duty during the silent night was not just watching the doors, but giving active praise and honor to God.",
+   "meaning_sources": [
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine explained that blessing God by night represents remaining faithful during seasons of sorrow and trial, when praise is much harder than in prosperous times.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801134.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "A prayer of blessing is spoken in return, echoing the blessing God commanded the priests to give His people. It points to the Lord as both the Maker of the whole world who has all power, and the caring God who dwells among His people in Zion. The word 'you' is singular, showing that God's grace is promised to each believer personally.",
+   "meaning_sources": [
+    "Calvin",
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine taught that God addresses 'you' in the singular because He unites all the many individual worshippers into one single body.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801134.htm"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

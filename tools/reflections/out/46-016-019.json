@@ -1,0 +1,67 @@
+{
+ "id": "46-016-019",
+ "title": "Signature and Final Greetings",
+ "refs": [
+  "1 Corinthians 16:19-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46016019,
+   "end": 46016024,
+   "ref": "1 Corinthians 16:19-24",
+   "ranges": [
+    [
+     46016019,
+     46016024
+    ]
+   ],
+   "title": "Love for the Lord",
+   "key_verse": [
+    46016022,
+    46016022
+   ],
+   "reflect": [
+    {
+     "text": "Paul writes the end of this letter with his own hand. Along with warm greetings from fellow believers, he gives a solemn warning. Anyone who does not love the Lord faces God's judgment, which Christ Himself has the authority to carry out when He returns. True love for Jesus is more than a feeling. It shows itself through repentance—turning away from sin—and obeying what God has taught through His apostles. Paul shares this hard truth alongside his own deep affection for the Corinthians, proving that correcting others in truth can be an act of genuine care.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "How do our hearts grow in this kind of deep love for Jesus? As writer Samuel Rutherford noted, we cultivate love by delighting in prayer, reading Scripture, and spending time in fellowship with other believers. As we seek Him in these ways, we slowly taste the goodness of Christ. Our hearts are turned away from old worldly desires and drawn upward to marvel at the sheer greatness of His love for us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Does your daily life show real love for Jesus through simple obedience and repentance?",
+    "What holy habits, such as reading Scripture or praying with others, can you practice to grow closer to Christ?"
+   ],
+   "prayer": "Lord Jesus, please give us deeper thoughts to wonder at Your great love for us. Help us to obey Your word and turn away from things that draw our hearts from You. May our daily habits lead us into sweet fellowship with You and Your people. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Corinthians 16:22",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Closing Greetings to Corinth",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/closing-greetings-to-corinth"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

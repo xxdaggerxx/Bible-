@@ -1,0 +1,75 @@
+{
+ "id": "44-009-026",
+ "title": "Saul in Jerusalem",
+ "refs": [
+  "Acts 9:26-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44009026,
+   "end": 44009030,
+   "ref": "Acts 9:26-30",
+   "ranges": [
+    [
+     44009026,
+     44009030
+    ]
+   ],
+   "title": "Standing with a New Believer",
+   "key_verse": [
+    44009027,
+    44009027
+   ],
+   "reflect": [
+    {
+     "text": "When Saul came to Jerusalem, the believers were afraid of him instead of giving him a warm welcome. They did not believe he was truly a follower of Jesus, leaving him isolated and rejected. Even today, new believers can face coldness or judgment when they enter a church while still rough around the edges. We must remember to show patience and grace, God's kindness we do not deserve, rather than holding newcomers to unfair expectations.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Barnabas stepped into this gap to help Saul. He took a risk, putting his own reputation on the line to stand alongside a discouraged brother. Barnabas spoke up for Saul before the apostles, sharing how Saul had met the Lord and had spoken boldly for Jesus. By championing Saul, Barnabas offered him a second chance and brought him into fellowship.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Saul then preached fearlessly in Jerusalem until threats against his life forced the believers to send him to Tarsus for safety. God calls us to follow the example of Barnabas today. Our churches need believers who comfort, support, and lift up others so that the whole body of Christ is built up.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you show patience and welcome to someone who is new to the faith?",
+    "Who in your life needs you to stand with them and offer encouragement today?"
+   ],
+   "prayer": "Lord, thank you for the grace you show us when we turn to you. Help us to welcome others with open hearts rather than fear or suspicion. Give us courage to stand alongside newcomers and build up your church with love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "The Son of Encouragement - Greg Laurie Daily Devotion - November 3, 2016",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/the-son-of-encouragement-greg-laurie-daily-devotion-november-3-2016.html"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 238: Acts 9:27–31",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-238-acts-9-2731.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

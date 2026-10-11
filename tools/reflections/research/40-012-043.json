@@ -1,0 +1,19 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://billygraham.org/devotions",
+  "https://www.biblegateway.com/passage/?search=Luke+11%3A24&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Luke+11%3A24-26&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Luke+11%3A24-26&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Matthew+12%3A43&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Matthew+12%3A43&version=ESV%3BNIV%3BKJV%3BNASB",
+  "https://www.biblegateway.com/passage/?search=Matthew+12%3A43-45&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Matthew+12%3A43-45&version=NASB",
+  "https://www.davidjeremiah.org/",
+  "https://www.desiringgod.org/",
+  "https://www.intouch.org/"
+ ],
+ "cost": 0.03929465,
+ "model": "google/gemini-3.8-flash"
+}

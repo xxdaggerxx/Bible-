@@ -1,0 +1,68 @@
+{
+ "id": "23-020-001",
+ "title": "A Sign against Egypt and Cush",
+ "refs": [
+  "Isaiah 20:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23020001,
+   "end": 23020006,
+   "ref": "Isaiah 20:1-6",
+   "ranges": [
+    [
+     23020001,
+     23020006
+    ]
+   ],
+   "title": "Where We Place Our Hope",
+   "key_verse": [
+    23020006,
+    23020006
+   ],
+   "reflect": [
+    {
+     "text": "God gave Isaiah a difficult task. The prophet had to walk stripped and barefoot for three years as a visible sign to the people. He was showing what would soon happen to Egypt and Cush under the army of Assyria. The surrounding nations had leaned on these mighty empires for safety. Yet trusting in worldly strength always fails. As Stephen Witmer notes, sin makes sweet promises it cannot keep, and relying on anything other than the Lord leaves us empty and ashamed.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When the great powers fell, the people realized their shelter was gone and wondered how they could ever escape. F. B. Meyer points out that true rescue from judgment cost \"blood and tears and heart-break\" from God Himself. Isaiah's public humiliation pointed forward to Jesus, who bore our deepest shame on the cross to save us. If even the strongest earthly kingdoms cannot withstand disaster, we cannot hope to find rescue anywhere apart from Christ.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly things are you most tempted to rely on instead of trusting God?",
+    "How does Jesus bearing your shame on the cross give you true security today?"
+   ],
+   "prayer": "Lord, forgive us for the times we put our confidence in human strength and false promises. Thank You for Jesus, who took our shame upon Himself to rescue us from judgment. Teach us to rest our lives completely in Your salvation. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 20:6",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Stephen Witmer",
+     "work": "Sin Never Keeps Its Promises",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/sin-never-keeps-its-promises"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

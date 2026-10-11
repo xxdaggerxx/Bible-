@@ -1,0 +1,74 @@
+{
+ "id": "29-002-012",
+ "title": "Return with All Your Heart",
+ "refs": [
+  "Joel 2:12-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 29002012,
+   "end": 29002017,
+   "ref": "Joel 2:12-17",
+   "ranges": [
+    [
+     29002012,
+     29002017
+    ]
+   ],
+   "title": "Return to the Lord with Your Whole Heart",
+   "key_verse": [
+    29002013,
+    29002013
+   ],
+   "reflect": [
+    {
+     "text": "God asks for real inward change rather than just an outward show of grief. Tearing clothes or performing religious rituals is easy, but it can quickly become empty. As Charles Spurgeon observed, outward forms appeal to human pride, but \"true religion is too humbling\" because it requires an honest examination of the soul. God desires true sorrow over sin that is quietly and deeply worked in our hearts by the Holy Spirit.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The summons to turn back to God is urgent and includes everyone. The entire community, from the elderly down to nursing babies and newlyweds, is called to gather and seek the Lord together. We can step forward with confidence because God is gentle, patient, and full of faithful love. At the same time, we approach Him with deep humility, trusting His mercy without presuming upon it.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "By ourselves, our hearts are as hard as stone. We cannot break them open on our own strength, but we can look to the cross. When we see the sacrifice of Jesus, God softens our stubborn hearts so that we can truly turn back to Him and receive His comfort.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you relying on outward church habits, or has your heart genuinely turned toward God?",
+    "How does knowing that God is patient and compassionate encourage you to bring your sins to Him honestly?"
+   ],
+   "prayer": "Lord God, soften our stubborn hearts and grant us genuine repentance. Keep us from settling for empty outward ceremonies, and teach us to seek You with our whole being. Thank You for being slow to anger and abounding in faithful love toward us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 18",
+     "on": "Joel 2:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Call for Repentance",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/call-repentance"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

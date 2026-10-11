@@ -1,0 +1,66 @@
+{
+ "id": "07-006-001",
+ "title": "Midian Oppresses Israel",
+ "refs": [
+  "Judges 6:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7006001,
+   "end": 7006010,
+   "ref": "Judges 6:1-10",
+   "ranges": [
+    [
+     7006001,
+     7006010
+    ]
+   ],
+   "title": "Crying Out in Our Helplessness",
+   "key_verse": [
+    7006006,
+    7006006
+   ],
+   "reflect": [
+    {
+     "text": "The people of Israel repeatedly turned away from God and fell into disobedience. Because of their sin, their enemies overwhelmed them for years, destroying their harvest and leaving them completely empty-handed. Stripped of their food and security, they were brought to deep helplessness and finally cried out to the Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We often learn genuine trust in God only when our own self-reliance runs out. When we can no longer fix things ourselves, we are ready to listen to Him. God does not always give immediate comfort. He often walks with us through difficult seasons, teaching us patient waiting and true dependence.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God used Israel's hardship and the message of His prophet to show them their wrong choices and bring them back to Himself. Even when we bring trouble on ourselves, God does not abandon us. Instead of giving us only the judgment we deserve, He responds with grace, which is His undeserved kindness, offering mercy and the comfort of His presence.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What situations in your life have shown you the limits of relying on your own strength?",
+    "How might God be using your current challenges to draw you closer to Him?"
+   ],
+   "prayer": "Lord, forgive us for turning away from You and trusting in our own strength. Thank You that when we reach the end of ourselves, Your mercy is ready to meet us. Teach us to wait patiently on You and to rest in Your loving presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg",
+     "work": "Crying Out for Help",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-march-31-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

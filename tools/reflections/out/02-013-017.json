@@ -1,0 +1,73 @@
+{
+ "id": "02-013-017",
+ "title": "The Pillars of Cloud and Fire",
+ "refs": [
+  "Exodus 13:17-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2013021,
+   "end": 2013021,
+   "ref": "Exodus 13:21",
+   "ranges": [
+    [
+     2013021,
+     2013021
+    ]
+   ],
+   "title": "\"The LORD Went Before Them\"",
+   "key_verse": [
+    2013021,
+    2013021
+   ],
+   "reflect": [
+    {
+     "text": "When the Israelites left Egypt, God did not hand them a written map. Instead, He gave them Himself. A living guide is far better than a static roadmap because God understands the future and sees what lies ahead. The people did not need complicated navigation tools. God walked right before them, providing real-time guidance and encouragement at just the right moment.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We often wear ourselves out searching for obvious signs or total clarity before we make a choice. Striving for that kind of certainty can make us anxious and exhausted. God actually led Israel along the longer, harder desert path to protect their hearts and teach them to depend on Him. Even though we do not see a physical pillar of cloud or fire today, God is still walking beside us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "You can release the urge to control every detail of your future. You do not need to know the entire route before you begin. God walks with you in your own wilderness, and He will gently redirect your steps as you trust Him for what comes next.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you wearing yourself out trying to find complete clarity instead of trusting God for the next step?",
+    "How can remembering that God walks with you help you rest today?"
+   ],
+   "prayer": "Lord, thank You for guiding us with Your presence rather than leaving us to figure out the way alone. Forgive us when we become anxious and try to control our own path. Help us trust You in the wilderness and follow You one step at a time. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Whitney Hopler",
+     "work": "A Guide Is Better Than a Map",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/a-guide-is-better-than-a-map.html"
+    },
+    "D2": {
+     "author": "Tracie Miles",
+     "work": "Dear God: I Want a Cloud, Too",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-february-10-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

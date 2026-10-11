@@ -1,0 +1,66 @@
+{
+ "id": "15-004-017",
+ "title": "The Decree of Artaxerxes",
+ "refs": [
+  "Ezra 4:17-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 15004017,
+   "end": 15004024,
+   "ref": "Ezra 4:17-24",
+   "ranges": [
+    [
+     15004017,
+     15004024
+    ]
+   ],
+   "title": "Standing Firm When Work Stops",
+   "key_verse": [
+    15004024,
+    15004024
+   ],
+   "reflect": [
+    {
+     "text": "When God's people returned from exile in Babylon, it was only a modest beginning rather than a full restoration. They started rebuilding the temple, but compromised neighbors tried to disrupt their efforts after being turned away. The persistent hostility of these enemies eventually succeeded in bringing the construction of God's house to a complete standstill.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This part of Israel's story shows us what to expect in our own lives today. As Christians serving God and working to build His kingdom, we must anticipate sustained opposition from His enemies. Resistance should not catch us off guard when we seek to do the Lord's work.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because hostility is real, believers are called to stay watchful and alert to the enemy's schemes. Rather than giving up when obstacles arise, we should pray faithfully that adverse plans will fail and trust the Lord to carry out His purposes.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What challenges or opposition have you encountered while trying to serve the Lord?",
+    "How can you pray more alertly against plans that seek to hinder God's kingdom work?"
+   ],
+   "prayer": "Lord God, help us remember that serving Your kingdom brings opposition from the enemy. Give us discernment to stay alert to schemes that seek to halt Your work. We ask You to cause adverse plans to fail and keep our trust firmly in You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Work on the Temple Ceases",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/work-on-the-temple-ceases"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

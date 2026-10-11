@@ -1,0 +1,66 @@
+{
+ "id": "10-015-030",
+ "title": "David Weeps at the Mount of Olives",
+ "refs": [
+  "2 Samuel 15:30-37"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10015030,
+   "end": 10015037,
+   "ref": "2 Samuel 15:30-37",
+   "ranges": [
+    [
+     10015030,
+     10015037
+    ]
+   ],
+   "title": "God Answers Better Than We Ask",
+   "key_verse": [
+    10015031,
+    10015031
+   ],
+   "reflect": [
+    {
+     "text": "David faced tragic betrayal and deadly peril as he fled weeping from Jerusalem. Yet instead of crumbling under the pain, his first reaction was to turn to God in desperate prayer. Prayer is designed for these dire moments when human strength and resources fail. When we cannot fix the situation ourselves, only God's intervention can turn the tide.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "David did not simply pray and do nothing. He combined his honest plea with faithful action by sending his loyal friend Hushai back into the city. Hushai could work from within to counteract Ahithophel's dangerous influence. David took practical, obedient steps while leaving the final outcome in the hands of the Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God answered David's prayer, but not in the exact way David described. As David Mathis notes, God answers our prayers \"far better than they know how to ask.\" The Lord did not make Ahithophel act foolishly; instead, he moved Absalom to reject Ahithophel's sound advice. God frees us from having to script our own deliverance, because he works out our help in his own perfect way.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When trouble catches you by surprise, do you tend to crumble or do you instinctively turn to God in prayer?",
+    "Are you trying to script how God must rescue you, or can you trust him to answer in his own better way?"
+   ],
+   "prayer": "Lord, when we face deep trouble and our own strength fails, teach us to cry out to you in prayer. Help us to take faithful steps while trusting your sovereign care. Thank you that you answer our prayers far better than we know how to ask. Amen.",
+   "sources": {
+    "D1": {
+     "author": "David Mathis",
+     "work": "God Answers Better Than We Ask",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/god-answers-better-than-we-ask"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

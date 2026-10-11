@@ -1,0 +1,15 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "https://www.biblegateway.com/passage/?search=Ezekiel+35%3A5-15&version=NKJV",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+35&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+35&version=KJV",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+35&version=MSG%3BNIV",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+35&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+35&version=NKJV",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+35&version=NLT%3BYLT",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+35&version=RSVCE"
+ ],
+ "cost": 0.030803675000000003,
+ "model": "google/gemini-3.8-flash"
+}

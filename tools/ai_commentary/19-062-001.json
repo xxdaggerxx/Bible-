@@ -1,0 +1,155 @@
+{
+ "book": 19,
+ "chapter": 62,
+ "first": 1,
+ "last": 12,
+ "ref": "Psalms 62",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David begins by quieting his spirit before God. The rest he speaks of is a quiet submission that stops complaining and waits for God's perfect timing. True faith trusts only in the Lord for rescue rather than turning to worldly help.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "David pictures God as a massive rock and a secure mountain fortress where enemies cannot reach him. Because his life is anchored in the Lord, he will not be ruined or overthrown by his trials. He may be shaken by sudden trouble, but he will not fall completely.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "David turns to question his enemies about their relentless attacks against him. He warns them that despite their proud threats, they are like a cracked stone wall or broken fence about to collapse. Those who plot against God's servant will bring sudden destruction upon themselves.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The enemies scheme together to pull David down from the royal place of honor God gave him. They use dishonest flattery to his face while secretly plotting evil in their hearts. The musical pause, Selah, invites readers to stop and ponder the futility of such wickedness.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "David speaks directly to his own inner self, telling his soul to remain calm and submissive before God. Even when fresh fears or troubles arise, he reminds himself to look only to the Lord for what he needs. True peace comes from expecting help from God rather than earthly sources.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "David repeats the words of confidence he spoke earlier, but with even firmer conviction. This time he declares that he will not be shaken at all, leaving behind his earlier hesitation. As faith is practiced during hard times, it grows stronger and drives away lingering fears.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "David entrusts both his safety and his royal honor entirely to God. He does not take revenge or fight for his own reputation, knowing the Lord is his true protector. He heaps up comforting titles for God because he has experienced His faithfulness in many different ways.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "Having found peace himself, David urges everyone to place continuous trust in the Lord. Pouring out one's heart means speaking openly to God in prayer about every sorrow, fear, and desire. God is always an open shelter and a safe place for His people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Ordinary people are fragile and quickly vanish like a puff of breath, while powerful leaders often make promises they cannot keep. If you placed all humanity on a balance scale, they would weigh less than a breath compared to God. It is foolish to depend on human beings instead of the Lord for ultimate help.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "People must not try to find security in ill-gotten gains like robbery or unfair oppression. Even when wealth comes honestly through hard work, a believer must never love money or rely on it for safety. Worldly riches quickly pass away, and trusting in them draws our affection away from God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "The phrase 'once ... twice' is a Hebrew way of showing that a truth is sure, solid, and repeated often. God has made it abundantly clear through His word and works that all real power belongs to Him alone. Because all power is His, no earthly creature can stand against Him or save without Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "Alongside infinite power, God is full of steadfast love and mercy toward His people. His power ensures that He can carry out justice, while His mercy graciously accepts and rewards those who trust Him. He will judge righteously in the end, giving each person what their actions deserve.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)', 'Adam Clarke']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 9: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 10: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 11: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 12: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

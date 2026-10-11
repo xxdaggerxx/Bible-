@@ -1,0 +1,67 @@
+{
+ "id": "26-040-001",
+ "title": "The Man with a Measuring Rod",
+ "refs": [
+  "Ezekiel 40:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26040001,
+   "end": 26040004,
+   "ref": "Ezekiel 40:1-4",
+   "ranges": [
+    [
+     26040001,
+     26040004
+    ]
+   ],
+   "title": "Sharing What God Shows Us",
+   "key_verse": [
+    26040004,
+    26040004
+   ],
+   "reflect": [
+    {
+     "text": "In this vision, God brought Ezekiel to a high mountain to see a man ready to measure a new temple. Ezekiel was told to watch closely, listen with both ears, and pay attention to everything. God did not give him this remarkable sight just for his own benefit. He was brought there so he could return and report everything to God's people. Like an artist who climbs above the mist to capture beautiful scenes and show them to the world, we are called to witness to others about what God shows us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God often teaches us deep truths during difficult seasons. He may lead us through unexpected trials, such as sickness, loss, or being treated unfairly. When we walk through these hard times, we should pay close attention to how God is guiding and comforting us. We are brought into these experiences to learn how faithful He is, so that we can pass on that comfort to others who are struggling.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As F. B. Meyer wrote, \"No vision is for private advantage and jubilation only; declare it all.\" Everything the Lord reveals to us, whether in moments of great joy or in painful valleys, is meant to be shared. When we speak honestly of God's wisdom and care, we help our brothers and sisters see His goodness clearly.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What has God shown you about His comfort during a painful or difficult time?",
+    "Who can you encourage this week by sharing what God has taught you?"
+   ],
+   "prayer": "Lord, help us to look, listen, and pay attention to everything You want to teach us. Remind us of Your comfort when we face hard seasons, and show us how You are working. Give us willing hearts to share what we have learned with others who need Your hope. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 40:4",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

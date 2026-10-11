@@ -1,0 +1,132 @@
+{
+ "id": "38-006-009",
+ "title": "The Crown and the Temple",
+ "refs": [
+  "Zechariah 6:9-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 38006013,
+   "end": 38006013,
+   "ref": "Zechariah 6:13",
+   "ranges": [
+    [
+     38006013,
+     38006013
+    ]
+   ],
+   "title": "\"He Will Build the Temple\"",
+   "key_verse": [
+    38006013,
+    38006013
+   ],
+   "reflect": [
+    {
+     "text": "Jesus Christ is the great builder of God's spiritual temple. Just as Solomon built with cedar wood and cut stone, God builds His dwelling out of living people. Left to ourselves, we are like rough timber cut from the forest or unworked rocks pulled from a quarry. We are not yet shaped for our place in God's holy house. That is why Jesus takes us into His own hands, working carefully to polish and fit each one of us for His kingdom.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "All of this preparation work happens right now during our earthly lives. Our struggles and heartaches cannot change us by themselves, but Jesus uses them like tools to reshape our hearts and sanctify us, which means making us holy for God. As Charles Spurgeon wrote, \"the making ready is all done on earth.\" When His work in us is complete, Christ will carry us safely into the heavenly Jerusalem, where we will stand as eternal pillars in His presence.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus is shaping you change the way you see your present trials?",
+    "In what areas of your life is Christ smoothing your rough edges today?"
+   ],
+   "prayer": "Lord Jesus, thank You for choosing us and building us into Your house. Please use the challenges we face today to make our hearts more like Yours. We trust Your wise hands to finish the good work You have begun in us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 22",
+     "on": "Zechariah 6:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Truth For Life (adapted by Alistair Begg from C. H. Spurgeon)",
+     "work": "Christ the Builder",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-june-22-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 38006009,
+   "end": 38006015,
+   "ref": "Zechariah 6:9-15",
+   "ranges": [
+    [
+     38006009,
+     38006015
+    ]
+   ],
+   "title": "The Priest on the Throne",
+   "key_verse": [
+    38006012,
+    38006012
+   ],
+   "reflect": [
+    {
+     "text": "When travelers arrived from Babylon bearing silver and gold, the prophet Zechariah received a surprising command. He was told to make a crown and place it upon the head of Joshua, the high priest. In ancient Israel, priests and kings held separate roles, and no single person filled both offices. This unusual act served as a living sign pointing forward to the coming Messiah, whom God calls \"the Branch.\"",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Jesus fulfills this picture completely. Coming from the family line of David, He sprouted forth in Bethlehem as our true Priest-King. He rules over His people with majesty, and He also represents us before God by offering Himself on the cross and interceding for us, which means speaking to the Father on our behalf. In Christ, the offices of king and priest live together in perfect peace.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Zechariah also foretold that people from far away would come to help build the Lord's house. This promise pointed toward the Gentiles, people outside the nation of Israel, being welcomed into the church. Jesus laid the foundation of this living temple in His own blood, with Himself as the chief cornerstone. Age after age, believers from every nation are gathered into His growing kingdom.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What comfort do you find in knowing that Jesus is both your ruling King and your loving Priest?",
+    "How does God's promise to gather people from far away encourage your view of the church worldwide?"
+   ],
+   "prayer": "Lord God, we praise You for sending Jesus as our Priest and King. Thank You that He rules our lives with wisdom and prays for us with deep love. Help us rejoice as You continue to gather people from every nation into Your kingdom. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Zechariah 6:12",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "The Priestly Branch on the Throne",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/priestly-branch-throne"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

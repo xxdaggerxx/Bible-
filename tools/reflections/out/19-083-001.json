@@ -1,0 +1,66 @@
+{
+ "id": "19-083-001",
+ "title": "O God, Be Not Silent",
+ "refs": [
+  "Psalms 83:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19083001,
+   "end": 19083018,
+   "ref": "Psalms 83:1-18",
+   "ranges": [
+    [
+     19083001,
+     19083018
+    ]
+   ],
+   "title": "Seeking Peace in the Midst of Conflict",
+   "key_verse": [
+    19083018,
+    19083018
+   ],
+   "reflect": [
+    {
+     "text": "In Psalm 83, the writer sees enemies gathering for battle and calls out to God. He pictures intense judgment, like flames sweeping across dry mountains. When we see displays of fire or hear about war, it reminds us of how terribly destructive human fighting is. The damage caused by violence shows the heavy cost of human hatred and makes our hearts long for lasting peace.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Facing moments of danger or deep fear can sometimes clear our minds and bring us back to our senses. A healthy fear of the Lord helps us see things clearly. When we respect and revere God, we are encouraged to take a careful look at how we are living and draw closer to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even when nations plot together in hostility, God remains over all the earth. Because of this, we are called to pray faithfully for freedom and peace. We especially remember people today who live in terror in the middle of active fighting, asking that they might find safety and seek God's name.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering the painful results of conflict encourage you to pray for peace today?",
+    "In what ways does having a healthy reverence for God help bring your priorities back into focus?"
+   ],
+   "prayer": "Lord, we pray for those who are living in fear amidst war today. Please grant them your peace and bring an end to destructive conflict. Help us to revere you and draw closer to your presence each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Crosswalk.com",
+     "work": "Wisdom from the Psalms 7/4",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-7-or-4-552426.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "59-002-014",
+ "title": "Faith and Works",
+ "refs": [
+  "James 2:14-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 59002014,
+   "end": 59002026,
+   "ref": "James 2:14-26",
+   "ranges": [
+    [
+     59002014,
+     59002026
+    ]
+   ],
+   "title": "Faith That Shows in Action",
+   "key_verse": [
+    59002026,
+    59002026
+   ],
+   "reflect": [
+    {
+     "text": "What does real faith look like? James teaches us that genuine trust in Christ always bears fruit in loving action and service. We must understand that our good deeds do not earn right standing before God. Rather, our works simply demonstrate that our faith is genuine.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Sometimes people think the apostles Paul and James disagree, but they are in complete agreement about salvation. Paul describes our legal standing before God, while James describes the visible proof of that gift. Look at Rahab in the Scriptures. Her sheltering of the spies showed everyone that her trust in God was real and active.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "James gives us a clear picture: faith without deeds is as lifeless as a physical body without breath. True faith cannot stay completely silent or inactive. When we truly rely on Christ, that living trust naturally flows out into real, daily acts of obedience and care for others.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How do your daily actions show the living faith you have in Christ?",
+    "In what practical ways can you show loving service to others this week?"
+   ],
+   "prayer": "Lord, thank you for giving us living faith in Christ. Help our trust in you to be seen clearly in how we love and serve others. Guide us into active obedience each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Living Faith",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/living-faith"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

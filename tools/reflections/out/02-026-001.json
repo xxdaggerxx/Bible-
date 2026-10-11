@@ -1,0 +1,66 @@
+{
+ "id": "02-026-001",
+ "title": "The Ten Curtains for the Tabernacle",
+ "refs": [
+  "Exodus 26:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2026001,
+   "end": 2026006,
+   "ref": "Exodus 26:1-6",
+   "ranges": [
+    [
+     2026001,
+     2026006
+    ]
+   ],
+   "title": "God Dwelling Among His People",
+   "key_verse": [
+    2026001,
+    2026001
+   ],
+   "reflect": [
+    {
+     "text": "When the Israelites were traveling in the wilderness, God gave Moses exact instructions to build a portable tent called the tabernacle. God designed this special tent so He could dwell right in the middle of His people. The inside of the sanctuary was patterned after God's heavenly throne room, decorated with carefully woven cherubim, representing the angels of the heavenly host.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "These skillfully crafted figures of cherubim show that God's command against making idols was not a ban on using art in worship. Beautiful artistry can be used to honor the Lord. Yet all these carefully joined curtains also emphasized a solemn boundary. They showed the real separation between a completely holy God and sinful humanity.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Sin kept people from drawing close to God's holy presence on their own. But the good news of the gospel is that Jesus has bridged this great separation. Through Him, believers are given full and intimate access to God the Father.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does the care put into the tabernacle help you appreciate God's holiness?",
+    "In what ways can you thank Jesus today for opening the way for you to draw close to God?"
+   ],
+   "prayer": "Lord God, thank You for wanting to dwell among Your people and for revealing Your holy glory. Thank You for Jesus, who removed the barrier of our sin so we can know You personally. Help us to come near to You today with reverence and joy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Plans for the Tabernacle",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/plans-tabernacle"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

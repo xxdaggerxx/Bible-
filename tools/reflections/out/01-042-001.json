@@ -1,0 +1,81 @@
+{
+ "id": "01-042-001",
+ "title": "Joseph’s Brothers Sent to Egypt",
+ "refs": [
+  "Genesis 42:1-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1042001,
+   "end": 1042024,
+   "ref": "Genesis 42:1-24",
+   "ranges": [
+    [
+     1042001,
+     1042024
+    ]
+   ],
+   "title": "Known and Provided For by God",
+   "key_verse": [
+    1042008,
+    1042008
+   ],
+   "reflect": [
+    {
+     "text": "A severe famine forced Jacob to send his ten older sons to Egypt to buy food, though he kept Benjamin safe at home out of fear. What seemed like a routine search for grain was entirely guided by God's providence, His wise rule over all events. When the brothers bowed before the ruler of Egypt, Joseph's childhood dreams began to come true. We can take comfort knowing that God governs every circumstance to carry out His good purposes, even when hard times come upon us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Long before Jacob felt the pinch of hunger, God had already prepared a granary in Egypt to preserve his family. God provides for us in our greatest needs, often from places we would never expect. Just as all the grain was placed under Joseph's control, all the riches of God's care belong to the Lord Jesus. We do not need to sit in despair, because we can come straight to Him in prayer and receive His generous help.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When the brothers stood before Joseph, he knew who they were, but they did not recognize him. In a far greater way, Jesus knew and cared for us long before we knew anything of Him. As Charles Spurgeon wrote, \"before we had a being in the world we had a being in his heart.\" Even when we were full of fear and misunderstood Him, His faithful love for us remained steadfast.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God directs all circumstances comfort you in your current struggles?",
+    "Since Jesus knows you completely and provides what you need, what burden can you bring to Him in prayer today?"
+   ],
+   "prayer": "Lord, thank You for ruling over every part of our lives and preparing help for us before we even ask. We praise You that Jesus loved and knew us long before we turned to Him. Forgive our doubts, and grant us faith to rest quietly in Your sovereign care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 4",
+     "on": "Genesis 42:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 21",
+     "on": "Genesis 42:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Lord Over His Brothers",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lord-over-his-brothers"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

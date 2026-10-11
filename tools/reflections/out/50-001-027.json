@@ -1,0 +1,81 @@
+{
+ "id": "50-001-027",
+ "title": "Worthy of the Gospel",
+ "refs": [
+  "Philippians 1:27-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 50001027,
+   "end": 50001030,
+   "ref": "Philippians 1:27-30",
+   "ranges": [
+    [
+     50001027,
+     50001030
+    ]
+   ],
+   "title": "Living Worthy of the Gospel of Christ",
+   "key_verse": [
+    50001027,
+    50001027
+   ],
+   "reflect": [
+    {
+     "text": "Paul calls us to live as citizens of heaven in a way that fits the good news of Jesus. This means our daily conduct should match the message we believe. As Charles Spurgeon noted, the gospel is fearless, so our lives should be bold and unflinching. At the same time, because Jesus is gentle and loving, our speech and actions must be marked by kindness, honesty, and a desire to turn away from sin.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Living worthily also means standing united with other believers. The early Christians faced heavy civic pressure to call Caesar their lord rather than Jesus. When God's people stand together as one family, fear loses its grip. Hostility from the world is actually a sign of our opponents' future ruin and proof that God is truly saving us. We do not need to fear our enemies, because God sovereignly rules over them.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Paul reminds us that believing in Christ and suffering for His sake are both gifts from God. God does not always offer a quick way out of hard times. Instead, through the sacrifice of Christ, He gives us the faith and strength we need to endure our struggles faithfully for our eternal good.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily routine can you show more of the gentleness, honesty, and love of Christ?",
+    "How can leaning on other believers help you stay calm and courageous when people oppose your faith?"
+   ],
+   "prayer": "Lord God, thank You for the gift of faith in Your Son. When we face pressure or hardship for following Jesus, grant us the strength to stand firm alongside our brothers and sisters. Help our words and actions to reflect the truth, holiness, and gentleness of the gospel each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 24",
+     "on": "Philippians 1:27",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "John Piper",
+     "work": "God-Given Foes and God-Given Faith",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/god-given-foes-and-god-given-faith"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "A Sign of Destruction and Salvation",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/a-sign-of-destruction-and-salvation"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

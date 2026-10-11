@@ -1,0 +1,75 @@
+{
+ "id": "10-011-026",
+ "title": "David Marries Bathsheba",
+ "refs": [
+  "2 Samuel 11:26-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10011026,
+   "end": 10011027,
+   "ref": "2 Samuel 11:26-27",
+   "ranges": [
+    [
+     10011026,
+     10011027
+    ]
+   ],
+   "title": "Nothing Is Hidden from God",
+   "key_verse": [
+    10011027,
+    10011027
+   ],
+   "reflect": [
+    {
+     "text": "David arranged the death of Uriah and quickly brought Bathsheba into his palace as his wife. On the outside, life went on as usual. David seemed to carry on without any public sorrow or guilt. Sin has a way of tricking us into thinking our quiet choices can stay hidden, and it is very easy for us to make excuses for wrong things we have done.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "David may have thought his plan worked, but the Lord saw his wicked actions plainly. God does not ignore our hidden wrongdoing. Because He loved David, He refused to let that sin remain buried in the dark. In His grace, God stepped in to confront him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Fear of what other people might think can trap us in secrecy and heavy guilt. Yet God confronts our wrongs so we can face the truth. When we stop hiding and honestly confess our sins to Him, we receive His cleansing and the wonderful relief of His forgiveness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there hidden wrongs or excuses in your life that you have tried to keep buried?",
+    "What keeps you from bringing your secrets honestly before God today?"
+   ],
+   "prayer": "Lord, You see everything we do, and nothing is hidden from Your sight. Thank You for loving us too much to let us stay trapped in our secrets. Help us to confess our sins honestly and receive Your cleansing and peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jim Liebelt",
+     "work": "God Pursues Us When We've Sinned",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/god-pursues-us-when-weve-sinned-homeword-april-24.html"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "Confession and Relief",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-december-20-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

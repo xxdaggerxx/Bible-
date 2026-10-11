@@ -1,0 +1,66 @@
+{
+ "id": "11-005-013",
+ "title": "Solomon’s Labor Force",
+ "refs": [
+  "1 Kings 5:13-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11005013,
+   "end": 11005018,
+   "ref": "1 Kings 5:13-18",
+   "ranges": [
+    [
+     11005013,
+     11005018
+    ]
+   ],
+   "title": "Laboring for the House of God",
+   "key_verse": [
+    11005018,
+    11005018
+   ],
+   "reflect": [
+    {
+     "text": "King Solomon took on a massive task to prepare for building the temple. He partnered with King Hiram of Tyre to gather the needed materials and skilled craftsmen from neighboring lands. Tens of thousands of workers united to quarry large foundation stones from the mountains and shape the timber according to God's plan.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet this huge construction effort came at a real cost to the people. Solomon conscripted thousands of Israelites into forced labor to finish the work. This heavy demand mirrored the warnings the prophet Samuel had given years earlier about earthly rulers. It also foreshadowed unrest and division that would later fracture the kingdom.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Building the house of the Lord required great sacrifice and physical endurance. Believing in God's faithful promises is what truly empowers his people to undertake arduous work in service to his kingdom. When we remember that God keeps his word, we can persevere through difficult tasks as we labor for his glory.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What hard tasks has God called you to do in service to his kingdom?",
+    "How does trusting in God's promises help you keep going when the work feels heavy?"
+   ],
+   "prayer": "Lord, thank you for your faithful promises that never fail. Help us to serve your kingdom with willing hearts, even when the work is demanding. Give us strength to persevere for your glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Solomon Prepares for the Temple",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/solomon-prepares-for-the-temple"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

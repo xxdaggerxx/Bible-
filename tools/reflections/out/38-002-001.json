@@ -1,0 +1,66 @@
+{
+ "id": "38-002-001",
+ "title": "The Vision of the Measuring Line",
+ "refs": [
+  "Zechariah 2:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 38002001,
+   "end": 38002005,
+   "ref": "Zechariah 2:1-5",
+   "ranges": [
+    [
+     38002001,
+     38002005
+    ]
+   ],
+   "title": "A Wall of Fire Around You",
+   "key_verse": [
+    38002005,
+    38002005
+   ],
+   "reflect": [
+    {
+     "text": "We often wake up feeling fragile, weak, and weighed down by worry about what lies ahead. In those vulnerable moments, God sustains us when we cry out for His help and seek out the specific promises He gives us in His Word.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In this passage, Zechariah sees a young man setting out to measure Jerusalem with a measuring line. But God reveals that His blessing will be far too large for ordinary stone walls to contain. The city will overflow with people and animals. While living without walls sounds dangerous and exposed, God has a much better defense in mind.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord promises that He Himself will be an impenetrable wall of fire surrounding His people. He defends us from every harm outside, and He also fills our lives with the comforting joy of His presence inside. When we feel weak, God is both our fierce protector and our inner peace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel fragile or worried, what promise of God can you hold onto today?",
+    "How does knowing that God is both a shield around you and a comforting presence within bring you peace?"
+   ],
+   "prayer": "Lord, when we wake up feeling fragile and afraid, help us to turn to Your Word for strength. Thank You for surrounding us like a wall of fire to keep us safe from harm. Please fill our hearts with the peace of Your presence today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "John Piper",
+     "work": "What to Do If You Wake Up Feeling Fragile",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/what-to-do-if-you-wake-up-feeling-fragile"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

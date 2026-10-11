@@ -1,0 +1,68 @@
+{
+ "id": "01-025-029",
+ "title": "Esau Sells His Birthright",
+ "refs": [
+  "Genesis 25:29-34"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1025032,
+   "end": 1025034,
+   "ref": "Genesis 25:32-34",
+   "ranges": [
+    [
+     1025032,
+     1025034
+    ]
+   ],
+   "title": "\"What Good Is a Birthright to Me?\"",
+   "key_verse": [
+    1025032,
+    1025032
+   ],
+   "reflect": [
+    {
+     "text": "Esau came in from the field exhausted and focused only on his empty stomach. In that culture, the birthright carried leadership of the family and God's covenant promises of redemption. Yet Esau brushed all of that aside simply to satisfy his immediate hunger. He lived entirely in the moment, deciding that a warm bowl of stew was worth more than his lasting inheritance.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Believers must stay watchful so that temporary desires do not quietly erode what matters most. We dishonor God when we treat His spiritual gifts with contempt instead of treasuring them. Rather than acting on hasty impulses, we are called to choose gratitude and steward His blessings with wisdom.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What temporary comforts or cravings tempt you to lose sight of God's lasting promises?",
+    "How can you practice active gratitude today for the spiritual gifts God has given you?"
+   ],
+   "prayer": "Lord, forgive us for the moments when we value short-lived pleasures more than Your eternal blessings. Keep our hearts watchful against selfish impulses that distract us from Your gifts. Grant us wisdom and gratitude to cherish the spiritual inheritance You have provided. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Victoria Riollano",
+     "work": "A Prayer to Appreciate God’s Blessings",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-to-appreciate-gods-blessings.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "A Despised Birthright",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/despised-birthright"
+    }
+   },
+   "dropped": 1,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,89 @@
+{
+ "id": "20-003-013",
+ "title": "The Blessings of Wisdom",
+ "refs": [
+  "Proverbs 3:13-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 20003013,
+   "end": 20003035,
+   "ref": "Proverbs 3:13-35",
+   "ranges": [
+    [
+     20003013,
+     20003035
+    ]
+   ],
+   "title": "The Safe and Peaceful Path of Wisdom",
+   "key_verse": [
+    20003026,
+    20003026
+   ],
+   "reflect": [
+    {
+     "text": "Walking in God's wisdom brings safety to our daily steps. In our daily callings, our biggest danger is often our own carelessness and moral weakness. Yet God gives us grace to see tempting traps and avoid them. When unexpected troubles shake the world, we can keep our presence of mind. The Lord defends His people, so we do not have to live in fear of sudden ruin.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "This quiet trust carries us right into the night. When we put aside our worries and selfish ambitions, God guards our rest. We cannot protect ourselves while we sleep, but He watches over us. A life lived in love and gentle peace with God leads to sweet, untroubled rest, even during seasons of sickness or hardship.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God's blessing also rests upon our homes. Whether we live in a small cottage or a large house, the Lord cares about the character of the people inside. As Charles Spurgeon wrote, \"A just God cannot bless unjust transactions.\" When we welcome Christ, treat our neighbors fairly, and honor God together, His peace fills our home.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What worries or selfish ambitions do you need to hand over to God before you sleep tonight?",
+    "How can you show honesty and Christ's love to your family and neighbors today?"
+   ],
+   "prayer": "Lord, thank You for being our confidence and keeping our feet from stumbling. Help us to deal honestly with others and to fill our homes with Your love. When sudden troubles arise, give us quiet minds that rest securely in Your watchful care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 5",
+     "on": "Proverbs 3:33",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 21",
+     "on": "Proverbs 3:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 25",
+     "on": "Proverbs 3:24",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 31",
+     "on": "Proverbs 3:25-26",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "51-004-007",
+ "title": "Greetings from Paul’s Fellow Workers",
+ "refs": [
+  "Colossians 4:7-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 51004007,
+   "end": 51004014,
+   "ref": "Colossians 4:7-14",
+   "ranges": [
+    [
+     51004007,
+     51004014
+    ]
+   ],
+   "title": "Partners in God's Kingdom",
+   "key_verse": [
+    51004012,
+    51004012
+   ],
+   "reflect": [
+    {
+     "text": "Paul closes his letter by naming friends who worked alongside him. While it is easy to skip over lists of names, these greetings give us a rich look at the early church. Most of these believers served away from the spotlight, yet their work was essential and lasting. Friends like Tychicus and Onesimus brought news and comfort, showing how the gospel makes any person spiritually useful to God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "These ministry partners cared for one another in different ways. Aristarchus stayed with Paul in prison, Mark showed how God can restore someone who stumbled, and Epaphras wrestled in fervent prayer for his church. Epaphras showed deep pastoral love by praying hard for his people to grow mature. We should value and thank the leaders and friends who pray for us in this way.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Paul also mentions Luke, the beloved doctor. Luke's medical background shows that our ordinary jobs and daily skills matter in God's kingdom. God does not only use preachers. He honors everyday callings, quiet intercessory prayer, and faithful encouragement to build up his people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Who is someone serving quietly or praying for you whom you can thank this week?",
+    "How can you use your daily job or skills to serve God's people?"
+   ],
+   "prayer": "Lord, thank you for the many faithful believers who serve you outside the spotlight. Help us to appreciate and encourage those who wrestle in prayer for our church. Teach us to use our everyday work and resources to love others and honor your kingdom. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Epaphras and Luke",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/epaphras-and-luke"
+    },
+    "D2": {
+     "author": "Trevin Wax",
+     "work": "Learning from the Bible’s Unsung Heroes",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/trevin-wax/learning-from-the-bibles-unsung-heroes/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

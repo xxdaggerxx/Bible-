@@ -1,0 +1,127 @@
+{
+ "id": "11-018-016",
+ "title": "Elijah on Mount Carmel",
+ "refs": [
+  "1 Kings 18:16-35"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 11018021,
+   "end": 11018021,
+   "ref": "1 Kings 18:21",
+   "ranges": [
+    [
+     11018021,
+     11018021
+    ]
+   ],
+   "title": "\"If the LORD is God, follow Him\"",
+   "key_verse": [
+    11018021,
+    11018021
+   ],
+   "reflect": [
+    {
+     "text": "Elijah stood before the people of Israel and asked how long they would waver between two opinions. The crowd stayed completely silent. They were trying to keep their spiritual options open rather than taking a clear stand. Barry Cooper warns that \"hedging one's bets leads to paralysis and spiritual ruin.\" Delaying our decision to obey God shows that we do not truly trust His sovereign control over our lives.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Trying to walk both sides makes us double-minded and lukewarm. When our loyalty is divided, the world easily sways us away from truth. Elijah showed bold confidence in God and called the people to stop making compromises and repair their neglected devotion.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God does not leave us guessing about His own commitment. He proved His ultimate love for us through the sacrifice of Jesus Christ on the cross. Because of what He has done, we are called to lay aside our excuses, turn away from compromise, and follow the Lord with our whole heart every day.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where you hesitate to commit fully to God?",
+    "How does remembering the sacrifice of Jesus help you follow Him without holding back?"
+   ],
+   "prayer": "Lord, forgive us when we waver and try to keep our options open. Thank You for proving Your ultimate love for us through Jesus Christ. Give us faith to trust You completely and follow You with undivided hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Dr. Michael Youssef",
+     "work": "Unwavering Obedience",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-week-of-october-24.html"
+    },
+    "D2": {
+     "author": "Barry Cooper",
+     "work": "Beware the god of Open Options",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/god-open-options/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 11018016,
+   "end": 11018035,
+   "ref": "1 Kings 18:16-35",
+   "ranges": [
+    [
+     11018016,
+     11018035
+    ]
+   ],
+   "title": "The Altar on Mount Carmel",
+   "key_verse": [
+    11018030,
+    11018030
+   ],
+   "reflect": [
+    {
+     "text": "Elijah stepped forward to confront the mixed worship that had poisoned Israel. The people had tried to combine worship of the Lord with worship of Baal. God will never share our devotion with worldly idols or accept halfhearted commitment from His people.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Even though he was completely outnumbered by hundreds of false prophets, Elijah rested calmly on God's word. When his turn came, he rebuilt the altar of the Lord. He ordered four large jars of water to be poured over the offering three times until the trench was full. Soaking the wood and the sacrifice made it clear that only the power of God could ignite the fire.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "The prophets of Baal cried out for hours, but their idol gave no answer. Worldly idols can never answer or satisfy our souls. True life and lasting satisfaction are found only in our Creator, and we are called to look to Him alone.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly things are you sometimes tempted to trust instead of the Lord?",
+    "How does Elijah's quiet confidence in God encourage you when you feel outnumbered?"
+   ],
+   "prayer": "Heavenly Father, You alone are the living God and our Creator. Keep our hearts from seeking satisfaction in the empty promises of this world. Teach us to rest on Your word and give You our undivided worship. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Elijah and the Prophets of Baal",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/elijah-and-prophets-baal"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

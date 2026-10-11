@@ -1,0 +1,74 @@
+{
+ "id": "19-143-001",
+ "title": "I Stretch Out My Hands to You",
+ "refs": [
+  "Psalms 143:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19143001,
+   "end": 19143012,
+   "ref": "Psalms 143:1-12",
+   "ranges": [
+    [
+     19143001,
+     19143012
+    ]
+   ],
+   "title": "Starting the Day in God's Grace",
+   "key_verse": [
+    19143008,
+    19143008
+   ],
+   "reflect": [
+    {
+     "text": "David begins with an honest admission: no one living is righteous before God. By nature, we like to think we can justify ourselves and prove our goodness. But God's deep holiness shows our weakness and inability to stand before Him on our own. Thankfully, believers are joined to Christ by faith. Because Christ took our judgment as our substitute, we are accepted in His righteousness and will never face condemnation.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Each new morning, we wake up into real pressures and spiritual battles, just as David did. Every day involves taking things in and putting things out. David shows us that our first step should be taking in the good news of God's steadfast love. Letting gospel grace fill us early in the morning anchors our hearts against the enemy's lies and strengthens our spirits before the day's work begins.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "After hearing God's love, we are ready to ask Him to direct our steps. Asking God to teach us the way to walk helps us surrender our self-reliance. As F. B. Meyer observed, it is \"Christ Himself that we all need,\" not just rules or thoughts about Him. When we stretch out our hands in faith, God's good Spirit leads us along safe and steady ground.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you pause tomorrow morning to receive God's steadfast love before you begin your tasks?",
+    "Where are you tempted to rely on yourself rather than asking God to show you the way to walk?"
+   ],
+   "prayer": "Lord, thank You that I am justified through Christ and fully accepted in Your sight. Help me to hear Your steadfast love each morning so my soul is anchored in Your grace. Teach me to do Your will today, and lead me by Your Spirit on level ground.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 143:2",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Jonathan Parnell",
+     "work": "The Best Way to Start Your Everyday",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-best-way-to-start-your-everyday"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

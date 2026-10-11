@@ -1,0 +1,72 @@
+{
+ "id": "01-024-015",
+ "title": "Rebekah Is Chosen",
+ "refs": [
+  "Genesis 24:15-61"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1024015,
+   "end": 1024061,
+   "ref": "Genesis 24:15-61",
+   "ranges": [
+    [
+     1024015,
+     1024061
+    ]
+   ],
+   "title": "Trusting God with the Next Step",
+   "key_verse": [
+    1024027,
+    1024027
+   ],
+   "reflect": [
+    {
+     "text": "Abraham's servant watched God answer his prayer in the ordinary details of the day. As we walk in close fellowship with God, we do not need to live with constant anxiety about whether we are being guided. Instead, spiritual maturity walks in simple, childlike obedience. When we look back on our journey, we can clearly see how God's providential care was leading us all along.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Spiritual discipline trains us to notice God's appointed plan in everyday events rather than seeing things as mere chance. If we sense an inner spiritual conflict, the Holy Spirit is prompting us to pause and discern God's will. Being consistent as a Christian does not mean clinging stubbornly to our own ideas, but remaining devoted to God in every circumstance.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When Rebekah was asked if she would leave home, she showed immediate, courageous faith by saying yes. Trusting God often means stepping out into unfamiliar situations before we know how everything will turn out. Rebekah rested in God's sovereignty, which is His complete and loving control over our relationships and circumstances. When she was willing to step forward in faith, family blessings and fruitfulness followed.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where can you look back on your life and see God's quiet guidance in ordinary details?",
+    "Is God asking you to step forward in faith into an unfamiliar situation right now?"
+   ],
+   "prayer": "Lord God, thank You for guiding our steps even when we cannot see the whole road ahead. Give us childlike hearts that obey You without anxiety or delay. Help us rest in Your loving control and step forward with courage wherever You lead. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Oswald Chambers",
+     "work": "Discovering Divine Design",
+     "site": "My Utmost for His Highest",
+     "url": "https://utmost.org/updated/discovering-divine-design/"
+    },
+    "D2": {
+     "author": "Lysa TerKeurst",
+     "work": "Follow the Leader",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-february-8-2006-1377027.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

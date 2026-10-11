@@ -1,0 +1,67 @@
+{
+ "id": "18-018-001",
+ "title": "Bildad: God Punishes the Wicked",
+ "refs": [
+  "Job 18:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18018001,
+   "end": 18018021,
+   "ref": "Job 18:1-21",
+   "ranges": [
+    [
+     18018001,
+     18018021
+    ]
+   ],
+   "title": "No Longer the King of Terrors",
+   "key_verse": [
+    18018014,
+    18018014
+   ],
+   "reflect": [
+    {
+     "text": "In this chapter, Bildad paints a grim picture of a person being dragged away to the king of terrors. In ancient times, people lived with a constant dread of the unknown. They feared lonely, distant places, and the grave was the most frightening thing of all. Without the full light of God's promises, death felt like a dark, crushing ruler over every human life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "For believers today, there is a wonderful contrast. Jesus went through the grave Himself and came out alive forever. As F. B. Meyer writes, the grave is now simply \"the back door into our Father's house.\" Jesus holds the keys of death. Instead of facing terror, each dying Christian is escorted safely by the Lord Jesus into His own bright home.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We also have the promise that when Jesus returns, many will not taste death at all. In an instant, believers will be caught up to meet Him, and our mortal bodies will be changed. Because our Redeemer lives and has won the victory, death has lost its power to terrify us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing Jesus holds the keys of death help take away your fear of the future?",
+    "In what ways does viewing the grave as a door to the Father's house bring you comfort?"
+   ],
+   "prayer": "Lord Jesus, thank You for going through the grave and breaking the power of death. When we feel afraid of the unknown, remind us that You hold the keys and will guide us safely to our Father's house. Help us to live each day in the joyful hope of Your return. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 18:14",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "06-019-049",
+ "title": "Joshua’s Inheritance",
+ "refs": [
+  "Joshua 19:49-51"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6019049,
+   "end": 6019051,
+   "ref": "Joshua 19:49-51",
+   "ranges": [
+    [
+     6019049,
+     6019051
+    ]
+   ],
+   "title": "A Servant's True Reward",
+   "key_verse": [
+    6019049,
+    6019049
+   ],
+   "reflect": [
+    {
+     "text": "Joshua led the people of Israel through years of hard battles and helped divide the Promised Land among the tribes. Even though he was the leader, he did not rush to take the first and best share. Instead, Joshua showed true humility by waiting until every family received their portion before taking anything for himself. He put God's people before his own comfort.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When the time finally came to choose, Joshua did not use his power to claim rich, prime fields. He asked for an obscure and rugged place called Timnath-serah. For Joshua, location mattered for a spiritual reason. This town kept him close to Shiloh, where the Tent of Meeting stood. He valued staying near God's presence far more than having easy wealth.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Joshua's life teaches us what godly leadership really looks like. The greatest reward is never found in earthly riches, fame, or praise from other people. Instead, lasting honor comes from obeying God, putting others first, and quietly seeking to please him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you have the chance to choose first, do you think of other people's needs before your own?",
+    "What matters more to you in your daily choices: material comfort, or staying close to God?"
+   ],
+   "prayer": "Lord, thank you for Joshua's example of a humble servant. Help us not to seek honor or riches for ourselves, but to put others first. Teach us to value your presence more than any earthly gain. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Mar. 19, 2012",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-mar-19-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

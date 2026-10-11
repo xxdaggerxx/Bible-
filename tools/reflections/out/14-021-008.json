@@ -1,0 +1,67 @@
+{
+ "id": "14-021-008",
+ "title": "Edom and Libnah Rebel",
+ "refs": [
+  "2 Chronicles 21:8-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14021008,
+   "end": 14021011,
+   "ref": "2 Chronicles 21:8-11",
+   "ranges": [
+    [
+     14021008,
+     14021011
+    ]
+   ],
+   "title": "Staying Connected to the Source of Power",
+   "key_verse": [
+    14021010,
+    14021010
+   ],
+   "reflect": [
+    {
+     "text": "When King Jehoram walked away from the Lord and led Judah into sin, Edom and Libnah rebelled against him. As F. B. Meyer observed, the kings of Judah kept control over other nations only while they stayed loyal to God. God was their true source of strength. When Jehoram broke his link with God, his own authority fell apart.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This truth touches our everyday lives as well. When our inner desires or bad habits begin to rule over us, it often points to a break in our devotion to the Lord. In the same way, the influence we have in our homes and among other people depends on our walk with God. When we step away from Him, we lose the spiritual strength that keeps things in order.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Real spiritual power does not come from our own force or cleverness. It flows from Christ when we remain close to Him and obey Him completely. As Meyer wrote, \"Our Libnahs will not revolt, unless we forsake the Lord God of our fathers.\" When we surrender ourselves to Jesus and trust Him daily, He gives us the grace and power we need to stand firm.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an area in your life, such as your habits or relationships, where you are struggling because you have drifted from God?",
+    "How can you surrender yourself more fully to Jesus today so that His strength works through you?"
+   ],
+   "prayer": "Lord God, please forgive us for the times we turn away from You and try to rely on our own strength. Help us to stay completely devoted to Jesus every day. Fill us with Your grace and power so that our lives and homes may honor You.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 21:10",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

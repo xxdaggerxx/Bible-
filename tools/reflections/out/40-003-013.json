@@ -1,0 +1,86 @@
+{
+ "id": "40-003-013",
+ "title": "The Baptism of Jesus",
+ "refs": [
+  "Matthew 3:13-17",
+  "Luke 3:21-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40003013,
+   "end": 40003017,
+   "ref": "Matthew 3:13-17; Luke 3:21-22",
+   "ranges": [
+    [
+     40003013,
+     40003017
+    ],
+    [
+     42003021,
+     42003022
+    ]
+   ],
+   "title": "Jesus Stands with His People",
+   "key_verse": [
+    40003017,
+    40003017
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus came to the Jordan River, John the Baptist felt stunned and completely unworthy to baptize Him. John knew Jesus had no personal sins to confess or turn from, yet God had arranged their meeting for a greater purpose. By stepping into the waters, Jesus showed complete obedience to the Father's plan to save us. He began His public work by willingly identifying Himself with the needs and struggles of His people.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Where human leaders and Israel had repeatedly fallen short, Jesus stood as the true, faithful Son. When we face trials, we can take great comfort knowing our Savior entered our world and understands what we go through. Just as Jesus yielded fully to God's purpose, yielding our own lives completely to the Lord allows Him to do amazing things in and through us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "As Jesus prayed after His baptism, the Holy Spirit came down upon Him like a dove, bringing peace, gentleness, and purity. Spurgeon observed that as the Spirit rested on Jesus, \"so he also, in measure, descends upon the members\" of His body. The Holy Spirit works quietly to drive away sin, giving us new life and filling our hearts with love for God and others.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus stepped into our world to share in our trials bring you comfort today?",
+    "In what area of your life is God asking you to yield to His plan with gentle obedience?"
+   ],
+   "prayer": "Heavenly Father, thank You for sending Your beloved Son to stand with us and obey Your will perfectly. Holy Spirit, rest upon us with Your gentleness, peace, and purity. Help us to yield our lives fully to You and to love others as Christ loves us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 3",
+     "on": "Matthew 3:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "One with His People",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/one-his-people"
+    },
+    "D3": {
+     "author": "Beth Moore",
+     "work": "Day 96: Matthew 3:13–15",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-96-matthew-3-1315.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

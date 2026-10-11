@@ -1,0 +1,134 @@
+{
+ "id": "12-005-001",
+ "title": "Naaman Cured of Leprosy",
+ "refs": [
+  "2 Kings 5:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 12005010,
+   "end": 12005012,
+   "ref": "2 Kings 5:10-12",
+   "ranges": [
+    [
+     12005010,
+     12005012
+    ]
+   ],
+   "title": "\"Wash and Be Clean\"",
+   "key_verse": [
+    12005010,
+    12005010
+   ],
+   "reflect": [
+    {
+     "text": "Naaman was a powerful and wealthy commander, but neither his high position nor his royal friendships could cure his disease. When Elisha sent a simple instruction to wash seven times in the Jordan River, Naaman became furious. He expected Elisha to put on a grand, dramatic performance by waving his hand and calling aloud on God. Our human nature often craves showy spectacles and mistakenly assumes that true spiritual power must look impressive.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Naaman's illness illustrates the serious problem of human sin, which our own wealth or good deeds can never cure. God often works His grace through quiet, humble means rather than theatrical demonstrations. Like the centurion in the Gospels who understood that God's authority operates through a simple word, we must put aside our pride. Finding spiritual healing means humbling ourselves and receiving the cleansing that Christ won for us on the cross.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever find yourself looking for dramatic signs instead of trusting God's quiet, simple word?",
+    "What personal pride might you need to set aside to receive the cleansing Jesus offers?"
+   ],
+   "prayer": "Lord, forgive us when we look for flashy displays instead of trusting Your gentle promises. Help us lay down our pride and receive the cleansing that Jesus provides. Teach us to trust Your word each day with humble hearts. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "You Shall Be Clean",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-april-7-2024.html"
+    },
+    "D4": {
+     "author": "Ken Jones",
+     "work": "Demonstrations of Power",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/demonstrations-of-power"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 12005001,
+   "end": 12005014,
+   "ref": "2 Kings 5:1-14",
+   "ranges": [
+    [
+     12005001,
+     12005014
+    ]
+   ],
+   "title": "Restored Like a Little Child",
+   "key_verse": [
+    12005014,
+    12005014
+   ],
+   "reflect": [
+    {
+     "text": "Even though Naaman was an honored military leader, he was completely helpless against his sickness. In His mercy, God chose a captive, unnamed young girl from Israel to share the way to healing. Although she had been taken from her homeland, she did not give in to bitterness or despair. She spoke faithfully about the true God, showing us that God can use us in our hardest trials to guide other people to Christ.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Naaman would have eagerly undertaken a difficult or heroic task to earn his health, but he looked down on a simple dip in the river. His servants helped him realize that true restoration meant surrendering his self-reliance to simple obedience. Today, many people turn away from salvation because trusting a crucified Savior seems unimpressive to human wisdom. Our spiritual life is built not through exciting feats, but through everyday habits of prayer and reading God's word.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "When Naaman finally obeyed, God restored his skin until it was as clean and fresh as a young child's. When we bring our sin to Jesus, He gives us far more than mere pardon. He makes us clean and shapes within us the humble, unselfish, and trusting heart of a child who clings happily to a loving Father.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can God use you to point someone toward Christ, even when your own circumstances are difficult?",
+    "What ordinary habits, such as prayer or reading Scripture, can help you walk in daily obedience to God?"
+   ],
+   "prayer": "Father, thank You for using ordinary voices and simple acts of obedience to bring us to Yourself. Wash our hearts clean from sin and give us a gentle, childlike trust. Guide us to point others toward the hope found in Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 5:14",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D3": {
+     "author": "Heather Bleier",
+     "work": "An Unlikely Hero",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/an-unlikely-hero-encouragement-caf-january-29-2016.html"
+    },
+    "D5": {
+     "author": "Greg Morse",
+     "work": "The Unimpressive Path to Immortality",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-unimpressive-path-to-immortality"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

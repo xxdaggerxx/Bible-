@@ -1,0 +1,74 @@
+{
+ "id": "44-009-036",
+ "title": "The Raising of Tabitha",
+ "refs": [
+  "Acts 9:36-43"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44009036,
+   "end": 44009037,
+   "ref": "Acts 9:36-37",
+   "ranges": [
+    [
+     44009036,
+     44009037
+    ]
+   ],
+   "title": "\"Always Occupied with Works of Kindness\"",
+   "key_verse": [
+    44009036,
+    44009036
+   ],
+   "reflect": [
+    {
+     "text": "Tabitha was known as a disciple who quietly helped others. She did not need an official church title or a pulpit to do meaningful work. Instead, she used her everyday gifts and personal skills to care for people who were vulnerable and in need. Her life shows that God places great value on practical kindness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Dorcas did not wait for perfect circumstances to start serving. She made humble service an immediate priority in her daily life. When we give our time and simple talents to others, God can take our quiet acts of charity and expand their impact far beyond what we might expect.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Simple acts of kindness done in the name of Jesus leave an enduring legacy of love. By investing in loving relationships and caring for those around us, our everyday conduct becomes a living testimony for God. Her faithful example still encourages us today to notice needs and meet them with love.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What everyday skills or talents can you use right now to serve someone in need?",
+    "How can your daily acts of kindness point others to the love of Jesus?"
+   ],
+   "prayer": "Lord, thank you for the example of Tabitha and her faithful care for others. Teach us to use our everyday skills to serve those who are hurting and vulnerable. Help us not to wait for better moments, but to show your love through quiet, practical kindness today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Heather Adams",
+     "work": "5 Inspiring Lessons from the Life (and Death) of Dorcas",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/women/inspiring-lessons-from-the-life-and-death-of-dorcas.html"
+    },
+    "D2": {
+     "author": "Rebekah Montgomery",
+     "work": "How One Woman Built a Church that Lasted",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/church/pastors-or-leadership/how-one-woman-built-a-church-that-lasted-11575389.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

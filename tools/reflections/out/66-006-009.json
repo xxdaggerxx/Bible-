@@ -1,0 +1,66 @@
+{
+ "id": "66-006-009",
+ "title": "The Fifth Seal: The Martyrs",
+ "refs": [
+  "Revelation 6:9-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66006009,
+   "end": 66006011,
+   "ref": "Revelation 6:9-11",
+   "ranges": [
+    [
+     66006009,
+     66006011
+    ]
+   ],
+   "title": "Resting in God's Justice and Care",
+   "key_verse": [
+    66006011,
+    66006011
+   ],
+   "reflect": [
+    {
+     "text": "When faithful believers die for their testimony, physical death does not break their close and living relationship with Christ. In heaven, they bring their honest cries straight to Him. It can often feel like God is taking a long time to bring justice to the earth, but He has not overlooked the trials of His people. History is unfolding according to His exact plan, and the hardships of His witnesses play an appointed part in reaching the nations with His truth.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God gives these martyrs white robes and tells them to rest for a little while longer. Rather than staying gripped by worry or demanding immediate revenge, they are invited into a soul-refreshing rest. This peaceful calm is not uncaring apathy toward ongoing evil. Instead, it is a quiet, tear-filled trust in God. They can truly rest because God is fully in control of everything, even the exact number of their brothers and sisters who have yet to suffer.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face unfair suffering or delay, what helps you trust that God has not forgotten you?",
+    "How does knowing that God is in complete control help you find rest instead of bitterness?"
+   ],
+   "prayer": "Lord, thank You that death cannot separate us from Your love. When we feel troubled by unfair suffering in this world, help us to trust Your goodness and Your perfect timing. Grant us quiet rest in You as we wait for Your complete justice. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Cry of the Martyrs",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-cry-of-the-martyrs"
+    },
+    "D2": {
+     "author": "John Piper",
+     "work": "How Do We Rest in the Face of Horrible Calamity?",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/how-do-we-rest-in-the-face-of-horrible-calamity"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

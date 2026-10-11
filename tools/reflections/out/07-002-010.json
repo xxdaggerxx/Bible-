@@ -1,0 +1,73 @@
+{
+ "id": "07-002-010",
+ "title": "Israel’s Unfaithfulness",
+ "refs": [
+  "Judges 2:10-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 7002010,
+   "end": 7002010,
+   "ref": "Judges 2:10",
+   "ranges": [
+    [
+     7002010,
+     7002010
+    ]
+   ],
+   "title": "\"Who Did Not Know the LORD\"",
+   "key_verse": [
+    7002010,
+    7002010
+   ],
+   "reflect": [
+    {
+     "text": "Long ago, God's people set up stone markers to remember how the Lord rescued them, but they failed to explain those stones to their children. When we keep quiet about our struggles and how God carried us through, we hide His faithfulness from others. Without hearing those real stories of rescue, a new generation can grow up without knowing who God is or learning how to place their hope in Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Churches can also look successful on the outside while quietly drifting away from the Lord. We can run busy programs and rely on human effort, yet treat traditions as a replacement for knowing God. When we turn away from true devotion, modern forms of idolatry—things we put in place of God—easily take over. Our repeated human failures show how much we need the rule of Christ in our daily lives.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Passing on faith requires more than keeping up outward appearances. God calls us to actively talk about what He has done and to stay anchored in Jesus, so that those who come after us learn to trust Him for themselves.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What story of God's help in your own life could you share with someone younger?",
+    "Are you relying on outward church routines, or are you seeking to know Jesus personally each day?"
+   ],
+   "prayer": "Lord God, help us to speak openly about the times you have rescued us. Keep us from relying on our own routines or chasing modern idols, and anchor our hearts in knowing Jesus. May the next generation hear of your goodness and put their trust in you.",
+   "sources": {
+    "D1": {
+     "author": "Sharon Jaynes",
+     "work": "The Reason for the Rocks",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-january-28-2021.html"
+    },
+    "D2": {
+     "author": "Chara Donahue",
+     "work": "What the Book of Judges Can Teach the Church Today",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/what-the-book-of-judges-can-teach-the-church-today-bible-study-minute-june-26-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

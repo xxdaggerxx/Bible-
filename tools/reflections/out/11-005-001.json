@@ -1,0 +1,61 @@
+{
+ "id": "11-005-001",
+ "title": "Preparations for the Temple",
+ "refs": [
+  "1 Kings 5:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11005001,
+   "end": 11005006,
+   "ref": "1 Kings 5:1-6",
+   "ranges": [
+    [
+     11005001,
+     11005006
+    ]
+   ],
+   "title": "Building from God's Rest",
+   "key_verse": [
+    11005004,
+    11005004
+   ],
+   "reflect": [
+    {
+     "text": "Solomon remembered the troubles his father David faced. David was surrounded by constant fighting, so he could not build the temple. But now God had given Solomon peace on every side. As F. B. Meyer explains, God is the true \"Rest-Giver.\" When God protects us with His care, like clear glass shielding a candle flame from the wind, no enemy can destroy our peace. Outside troubles spend their force against God, leaving a quiet shelter within our souls.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Solomon used this peaceful season to begin a great task. Because God had given him quiet, he set out to build a house for the Lord's name. As Meyer writes, our finest work springs out of this kind of quietness. We might think that people who are always rushing and moving are the strongest, but they often wear themselves out. The deepest resolves come from hearts that know how to wait peacefully on God before stepping forward into action.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you wearing yourself out with constant rushing, or are you resting in God's care?",
+    "How can having a quiet heart in God help you do the work He gives you?"
+   ],
+   "prayer": "Lord, thank You for being our protector and the giver of true rest. Keep our hearts quiet in Your care even when difficulties surround us. Teach us to wait on You so that our daily work comes from a peaceful spirit. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Kings 5:4",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

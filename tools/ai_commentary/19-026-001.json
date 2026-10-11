@@ -1,0 +1,155 @@
+{
+ "book": 19,
+ "chapter": 26,
+ "first": 1,
+ "last": 12,
+ "ref": "Psalms 26",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David asks God to act as his judge and clear his name against false accusations. He has lived with an honest, sincere heart and kept his trust firmly fixed on the Lord. Because God upholds him, he is confident his feet will not slip.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "David welcomes God to look into his deepest thoughts, feelings, and motives. He uses words that describe testing precious metals with fire to burn away any impurities. He has nothing to hide and wants God to show him if anything is wrong inside.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "God's faithful love is always in David's thoughts, serving as his guide for daily living. Remembering the Lord's constant kindness keeps him eager to obey God's word and follow His truth.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "David proves his sincerity by refusing to make close companions of liars and phonies. A hypocrite is someone who acts holy on the outside while hiding wickedness on the inside. David avoids their deceitful schemes and empty talk.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "David has a strong disgust for groups of people who join together to plot evil. He loves what God loves and hates the harmful things rebellious people do. He refuses to take his seat among those who oppose God's ways.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Priests washed their hands before serving at God's altar, and David uses this picture to describe coming to worship with a clean conscience and pure actions. Worshiping God requires genuine inner purity rather than just going through the motions. He wants to join the circle of believers gathered around the altar in true devotion.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "David's main purpose in coming to worship is to thank God out loud. He wants to tell everyone about the wonderful things the Lord has done to deliver His people. Real worship overflows into joyful praise that encourages others.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "David expresses a deep love for the place where God's people assemble to worship. In his day, this was the sacred tent where the ark was kept and where God's glory was revealed. While evil men love wicked gatherings, David finds his greatest joy in being close to the Lord.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "David pleads that God will not sweep his life away when judgment falls on violent sinners. Since he refused to take part in their cruel lifestyle, he asks not to share in their terrible end. When death gathers souls, he desires to be gathered with God's people instead of murderers.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "David describes the kind of wicked people he stays away from: corrupt rulers and plotters whose hands are full of evil plans. Instead of upholding justice, they accept dishonest money to harm innocent people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "Unlike the corrupt men around him, David resolves to keep walking in honesty and obedience. At the same time, he knows his own efforts cannot save him, so he asks God to rescue him and show him mercy. Even the most faithful person must lean entirely on God's grace.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "The psalm ends with calm assurance and joy. David feels as safe and secure as someone standing on flat, solid ground because God protects him from falling. He looks forward to joining the public assembly of believers to praise the Lord openly.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)', 'Geneva Notes']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 9: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 10: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 11: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 12: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

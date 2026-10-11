@@ -1,0 +1,73 @@
+{
+ "id": "02-033-007",
+ "title": "The Tent of Meeting",
+ "refs": [
+  "Exodus 33:7-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2033007,
+   "end": 2033011,
+   "ref": "Exodus 33:7-11",
+   "ranges": [
+    [
+     2033007,
+     2033011
+    ]
+   ],
+   "title": "Meeting with God as a Friend",
+   "key_verse": [
+    2033011,
+    2033011
+   ],
+   "reflect": [
+    {
+     "text": "Moses carried heavy leadership duties, but he made it a regular habit to seek God at the Tent of Meeting. This tent was not kept as an exclusive privilege just for Moses. Anyone who wanted to seek the Lord was welcome to go there. When Moses went inside, the Lord spoke with him as a person speaks with a friend. This shows us what prayer can be like. We can come to God with total honesty, bringing our real needs and thoughts right to Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Today, our knowledge of science and the universe has grown rapidly, yet people often know very little about God personally. Material wealth and technology easily tempt us to focus on created things instead of our Creator. When we take time to build a close friendship with God, our hearts are filled, and that helps our relationships with the people around us to flourish as well.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because we are mortal humans, God gently limits how much of His full majesty He reveals to us right now, since we could not bear it all. Our deep longing to know Him completely is a reminder of what is to come. It points us forward to eternity, when believers will finally see Him face to face.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What daily distractions pull your focus toward created things rather than toward God?",
+    "How might being completely honest with God in prayer change the way you relate to others?"
+   ],
+   "prayer": "Lord God, thank You for inviting us to speak with You openly as a friend. Forgive us for the times we let material things distract us from knowing You. Fill our hearts with Your presence each day, and remind us of the joyful hope of seeing You face to face in eternity. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "Understanding God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/understanding-god-one-year-devotions-for-men-june-23.html"
+    },
+    "D2": {
+     "author": "Jill Briscoe",
+     "work": "Face to Face with a Friend",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-women/face-to-face-with-a-friend-one-year-devotions-for-women-january-18.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

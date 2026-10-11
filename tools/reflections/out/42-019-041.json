@@ -1,0 +1,73 @@
+{
+ "id": "42-019-041",
+ "title": "Jesus Weeps over Jerusalem",
+ "refs": [
+  "Luke 19:41-44"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42019041,
+   "end": 42019044,
+   "ref": "Luke 19:41-44",
+   "ranges": [
+    [
+     42019041,
+     42019044
+    ]
+   ],
+   "title": "The Tears of Jesus",
+   "key_verse": [
+    42019041,
+    42019041
+   ],
+   "reflect": [
+    {
+     "text": "As Jesus rode toward Jerusalem, crowds shouted praises, but Jesus stopped and wept. He was not emotionally detached from the scene. Without caring what anyone thought, He openly wept over the city. Jesus knew the shallow praise of the crowd would soon turn into shouts for His crucifixion. Their fickle worship and hard hearts brought deep sorrow to His soul.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus also wept because He saw what was coming. The people failed to recognize God coming to them in grace, God's kindness we do not deserve. In His omniscience, Jesus foresaw the tragic destruction of the city. God does not force anyone to receive Him, but human unbelief and sin carry devastating, painful consequences both in this world and forever.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Christ's tears call us to stop and look at His heart. Instead of simply rushing to think about judgment, we see a Savior whose heart broke over lost people heading for ruin. His holy grief challenges us to examine our own hearts and ask if we share His deep compassion for the people around us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you see people who reject God, do you feel cold judgment or the sorrow of Jesus?",
+    "How can you show Christ's tender compassion to people who are far from Him in your own town or city?"
+   ],
+   "prayer": "Lord Jesus, thank You for Your deep love and sorrow for lost people. Soften our hearts when we become uncaring toward those who do not know You. Give us Your compassion for our neighbors and help us share Your peace with them. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "What Makes God Cry",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-march-19-2024.html"
+    },
+    "D2": {
+     "author": "Erik Raymond",
+     "work": "Jesus Wept Over the City [Passion Week Devotions]",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/erik-raymond/passion-week-devotions-jesus-wept-over-the-city/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

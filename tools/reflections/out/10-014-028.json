@@ -1,0 +1,66 @@
+{
+ "id": "10-014-028",
+ "title": "Absalom Reconciled to David",
+ "refs": [
+  "2 Samuel 14:28-33"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10014028,
+   "end": 10014033,
+   "ref": "2 Samuel 14:28-33",
+   "ranges": [
+    [
+     10014028,
+     10014033
+    ]
+   ],
+   "title": "The Danger of Halfway Reconciliation",
+   "key_verse": [
+    10014028,
+    10014028
+   ],
+   "reflect": [
+    {
+     "text": "David's past sin had harmed his family relationships and clouded his spiritual judgment. Even though he allowed his son Absalom to return home to Jerusalem, he kept him banished from his presence for two whole years. David brought Absalom back physically, but he kept an emotional wall between them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Absalom grew desperate to break this long silence. To force an audience with the king, he took extreme action and ordered his servants to burn Joab's barley field. His plan worked, and Joab arranged for Absalom to stand before David. The king greeted his son and kissed him, but their reunion did not go deep enough.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This surface-level peace left the real wounds untouched. Because their reconciliation was incomplete, Absalom's bitterness continued to fester and later grew into full rebellion. When someone is willing to make peace, we should seek complete and honest healing rather than settling for half-measures.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you holding someone at a distance instead of working toward full peace?",
+    "What steps can you take to ensure that your reconciliations are genuine and not just on the surface?"
+   ],
+   "prayer": "Lord, protect us from settling for halfway peace when relationships are broken. Give us the humility to address hard issues honestly so bitterness does not take root. Help us pursue genuine, complete healing with one another. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "An Imperfect Reconciliation",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/imperfect-reconciliation"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

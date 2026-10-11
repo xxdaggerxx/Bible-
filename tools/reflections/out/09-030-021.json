@@ -1,0 +1,66 @@
+{
+ "id": "09-030-021",
+ "title": "The Spoils Are Divided",
+ "refs": [
+  "1 Samuel 30:21-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9030021,
+   "end": 9030031,
+   "ref": "1 Samuel 30:21-31",
+   "ranges": [
+    [
+     9030021,
+     9030031
+    ]
+   ],
+   "title": "Equal Honor for Unseen Service",
+   "key_verse": [
+    9030024,
+    9030024
+   ],
+   "reflect": [
+    {
+     "text": "When David and his troops returned victorious, some soldiers thought their frontline combat made them far more deserving of the plunder. They wanted to leave out the two hundred men who had stayed behind with the supplies. David refused their selfish thinking. He established a lasting rule that the one who stays with the supplies receives the exact same share as the one who goes into battle.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This principle shows us how God views our work. In our churches and communities, some people have visible leadership roles that everyone sees. Others serve quietly behind the scenes in support roles. God places equal value on both. Supporting ministries are just as important to the Lord as the work on the front lines.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Unnoticed service can sometimes feel small or insignificant to us on earth. Yet God never overlooks what is done for Him. He sees every quiet act of faithful obedience, and He will reward that service in heaven.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever feel that unseen service is less valuable than public leadership?",
+    "How can David's principle encourage you when your faithful work goes unnoticed by others?"
+   ],
+   "prayer": "Lord, thank You for valuing every role in Your kingdom, whether seen or unseen. Guard our hearts from pride when we are in front and from discouragement when we serve behind the scenes. Help us to serve You faithfully, trusting that You notice and will reward our obedience.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "You Serve",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/you-serve.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

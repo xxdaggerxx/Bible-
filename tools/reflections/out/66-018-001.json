@@ -1,0 +1,75 @@
+{
+ "id": "66-018-001",
+ "title": "Babylon Is Fallen",
+ "refs": [
+  "Revelation 18:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 66018004,
+   "end": 66018005,
+   "ref": "Revelation 18:4-5",
+   "ranges": [
+    [
+     66018004,
+     66018005
+    ]
+   ],
+   "title": "\"Come Out of Her, My People\"",
+   "key_verse": [
+    66018004,
+    66018004
+   ],
+   "reflect": [
+    {
+     "text": "God knows that His people often live right in the middle of corrupt places. Even so, heaven gives an urgent call to step away so that we do not share in Babylon's sins or receive her punishment. Scripture reminds us that every earthly power opposed to God will face complete ruin. We might hope to reform corrupt systems from the inside, but when evil takes over, God tells His followers to separate themselves and stand apart.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This call to come out is also a matter of the heart. Life in an easy, wealthy culture can quietly blind us to our true spiritual poverty. It is easy to absorb the selfish habits and greed of the world without even noticing. Believers need constant vigilance to avoid taking on the mindset around them. Instead of clinging to worldly comforts that will not last, we are called to examine our loyalties and walk closely with God.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways might the comforts and values of the world around you be quietly shaping your desires?",
+    "What is one area where God might be asking you to step back and choose faithfulness over fitting in?"
+   ],
+   "prayer": "Lord, show us where we have grown too comfortable with the ways of this world. Protect our hearts from loving luxury and ease more than we love You. Give us the courage to stand apart from evil and to stay faithful to Your truth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Revelation 18:4",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Coming Out of Babylon",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/coming-out-of-babylon"
+    },
+    "D3": {
+     "author": "Wyatt Graham",
+     "work": "Will We Mourn for the Harlot Or Rejoice with Heaven?",
+     "site": "The Gospel Coalition",
+     "url": "https://ca.thegospelcoalition.org/columns/detrinitate/will-we-mourn-for-the-harlot-or-rejoice-with-heaven/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

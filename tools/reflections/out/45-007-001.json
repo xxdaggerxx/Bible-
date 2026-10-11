@@ -1,0 +1,72 @@
+{
+ "id": "45-007-001",
+ "title": "Release from the Law",
+ "refs": [
+  "Romans 7:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45007001,
+   "end": 45007006,
+   "ref": "Romans 7:1-6",
+   "ranges": [
+    [
+     45007001,
+     45007006
+    ]
+   ],
+   "title": "Free to Belong to Christ",
+   "key_verse": [
+    45007004,
+    45007004
+   ],
+   "reflect": [
+    {
+     "text": "Paul uses marriage to show how death changes our obligations. When a spouse dies, the legal bond is broken. In the same way, when we died with Christ, we were set free from the Law and its condemnation. On its own, the Law could only convict us of sin, and sin used it to stir up even more rebellion.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We do not earn eternal life by keeping rules. Eternal life comes only by grace, God's free kindness given through Christ's righteousness. We can truly grow in holiness only when we are rescued from sin's rule and placed under this grace.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because we have died to the Law, we now belong to the risen Jesus. Real love does not come from keeping an outside checklist of rules. Instead, true love grows from a renewed heart and sincere faith in Christ. United to Him, we are free to live for God and bear good fruit.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas are you still tempted to rely on a checklist of rules rather than resting in Christ?",
+    "How does belonging to the living Jesus help you love others from the heart?"
+   ],
+   "prayer": "Lord Jesus, thank You for setting us free from the condemnation of the Law through Your death and resurrection. Help us to stop relying on our own rule-keeping and instead rest in Your grace. Renew our hearts so that we may love others sincerely and bear fruit for God. Amen.",
+   "sources": {
+    "D1": {
+     "author": "John Piper",
+     "work": "If You Want to Love, You Must Die to the Law",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/if-you-want-to-love-you-must-die-to-the-law"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Free from the Law",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/free-law"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

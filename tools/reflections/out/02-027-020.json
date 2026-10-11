@@ -1,0 +1,74 @@
+{
+ "id": "02-027-020",
+ "title": "The Oil for the Lamps",
+ "refs": [
+  "Exodus 27:20-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2027020,
+   "end": 2027021,
+   "ref": "Exodus 27:20-21",
+   "ranges": [
+    [
+     2027020,
+     2027021
+    ]
+   ],
+   "title": "Keeping the Lamp Burning in the Darkness",
+   "key_verse": [
+    2027020,
+    2027020
+   ],
+   "reflect": [
+    {
+     "text": "God told His people to bring pure, pressed olive oil so the lamps would burn without going out. Like that lampstand in the holy tent, believers are called to carry the light of Jesus into the darkness. We cannot shine by our own strength. The oil pictures the Holy Spirit living in us, who is the only source that enables us to shine before the world.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The oil used in the sanctuary was beaten and crushed out of olives. F. B. Meyer notes that our clearest witness often comes through hardship, discipline, and a broken spirit. When believers walk through pain or sickness, God uses that pressure to produce tender words and genuine love. In our weakness, His pure light shines most clearly to those around us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The priests had to tend the lamps every morning and evening. In the same way, we need constant spiritual refueling so our flame does not grow dim. We receive this fresh fuel by praying, resting in Christ, and reading the Scriptures. With our hearts renewed, God calls us to step courageously into dark places so His light can guide others to Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face difficult trials, how can God use your struggles to show His love to others?",
+    "What daily habits of prayer or Bible reading can help you stay spiritually refueled?"
+   ],
+   "prayer": "Lord, thank You for giving us Your Holy Spirit to shine Your light in this world. When we feel pressed by trials, use our weakness to reveal Your love and grace to others. Give us courage to step into dark places and keep our lamps burning brightly for You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 27:20",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Amy Carroll",
+     "work": "A Light in the Darkness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/a-light-in-the-darkness-encouragement-for-today-apr-24-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

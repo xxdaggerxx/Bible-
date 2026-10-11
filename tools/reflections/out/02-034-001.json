@@ -1,0 +1,73 @@
+{
+ "id": "02-034-001",
+ "title": "New Stone Tablets",
+ "refs": [
+  "Exodus 34:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2034006,
+   "end": 2034007,
+   "ref": "Exodus 34:6-7",
+   "ranges": [
+    [
+     2034006,
+     2034007
+    ]
+   ],
+   "title": "\"Slow to Anger and Abounding in Love\"",
+   "key_verse": [
+    2034006,
+    2034006
+   ],
+   "reflect": [
+    {
+     "text": "We often make the mistake of thinking God is quick-tempered like we are. When God spoke to Moses on Mount Sinai, however, He revealed His true character. He showed that He is remarkably patient and overflowing with faithful love. Throughout history, God holds back His anger to give people time to turn back to Him. His enduring patience is an open door, inviting us back into fellowship with Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At the same time, this passage sets two deep truths side by side. God offers lavish mercy and forgives our sins, yet He also promises that evil will not go unpunished. We feel this tension in our own hearts. We long for unconditional love, but we also want true justice when people do wrong. The cross of Jesus brings these two together, satisfying God's justice while offering us complete pardon.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Moses only caught a glimpse of this glory on the mountain, but we see it clearly in Jesus. Christ embodied this divine patience through His earthly ministry and His sacrificial death. Seeing both God's rich mercy and His holy justice gives us confidence in our forgiveness, and it helps us explain to others why Jesus died for us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever catch yourself imagining that God is impatient or quick to anger with you?",
+    "How does looking at the cross of Jesus help you see both God's perfect justice and His tender mercy?"
+   ],
+   "prayer": "Father, thank You for being patient with us and holding open the door of fellowship when we fail. Thank You for Jesus, who satisfied Your justice and gave us full pardon on the cross. Help us trust Your steadfast love today and share that good news with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Scott Hubbard",
+     "work": "Slow to Anger: The Beauty of God’s Perfect Patience",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/slow-to-anger"
+    },
+    "D2": {
+     "author": "Randy Newman",
+     "work": "Abounding in Love, Punishing Sin: Resolving Exodus 34",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/resolving-exodus-34/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

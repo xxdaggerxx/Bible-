@@ -1,0 +1,75 @@
+{
+ "id": "09-012-001",
+ "title": "Samuel’s Farewell Address",
+ "refs": [
+  "1 Samuel 12:1-25"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 9012022,
+   "end": 9012022,
+   "ref": "1 Samuel 12:22",
+   "ranges": [
+    [
+     9012022,
+     9012022
+    ]
+   ],
+   "title": "\"The Lord will not abandon His people\"",
+   "key_verse": [
+    9012022,
+    9012022
+   ],
+   "reflect": [
+    {
+     "text": "When God promises never to leave His people, that promise rests entirely on who He is. He chose us simply out of His own love and good pleasure. He did not choose us by mistake, nor does His love shift like ours does. If He were to give up on us, it would dishonor His great name, as if He were fickle or had made an error. Because His own reputation is at stake, we can be confident He will never walk away.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God also knew every weakness we would have before He brought us to Himself. As F. B. Meyer wrote, God already knew how much \"forbearance, pity, consolation, and tenderness\" we would need. He counted the full cost ahead of time and still chose to make us His people. Because He has all power and knows everything, no trouble or failure of ours can ever take Him by surprise or make Him change His plan.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We can look back on His kindness with quiet confidence. God did not do such great things for us, or give His Son to die for us, only to leave us behind in the end. Jesus is not a changeable savior who loves us one day and turns away the next. Because He was pleased to save us, it remains His pleasure to keep us and love us to the very end.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God's love never changes give you peace when you feel weak?",
+    "Why is it comforting to remember that God already knew all your faults before He chose to make you His own?"
+   ],
+   "prayer": "Lord God, thank You for choosing us and making us Your own out of pure grace. We praise You that Your promise to stay with us rests on Your great name and unchanging love, not on our strength. Help us to rest each day in the certainty that You will never leave us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 14",
+     "on": "1 Samuel 12:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 12:22",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

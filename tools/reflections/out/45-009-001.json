@@ -1,0 +1,75 @@
+{
+ "id": "45-009-001",
+ "title": "Paul’s Concern for the Jews",
+ "refs": [
+  "Romans 9:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45009001,
+   "end": 45009005,
+   "ref": "Romans 9:1-5",
+   "ranges": [
+    [
+     45009001,
+     45009005
+    ]
+   ],
+   "title": "Deep Sorrow for the Lost",
+   "key_verse": [
+    45009002,
+    45009002
+   ],
+   "reflect": [
+    {
+     "text": "Paul writes with a heavy sorrow that never seems to leave him. He is aching over his fellow Jews, who have turned away from Jesus as their Messiah. Even though God gave Israel adoption, the covenants, and the promises, most of them did not believe. Paul's grief echoes the old prophets who wept over their people when they wandered from God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Paul goes so far as to wish he could be cut off from Christ if it would save his brothers and sisters. This radical self-denial mirrors the very heart of Jesus, who wept over Jerusalem and laid down his life for sinners. Even though Paul was confident in God's faithful and sovereign plan, his theology did not take away his tears for those who were missing out on salvation.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "As we mature in Christ, we learn to hold both triumphant praise and honest grief together. Knowing the gospel brings great joy, but it should also soften our hearts toward those who reject it. We are called to love our family, friends, and neighbors with this same persistent care, mourning for those who turn away from God's grace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When friends or family members turn away from Jesus, do you feel genuine sorrow for them, or do you tend to become indifferent?",
+    "How can you cultivate a more selfless, persistent love in your prayers for people who do not yet know the Lord?"
+   ],
+   "prayer": "Lord, give us a tender heart that truly cares for people who do not know you. Help us to balance our joy in your salvation with a genuine grief for those who reject the gospel. Teach us to love our friends, family, and neighbors with the same sacrificial compassion that Christ showed to us.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Paul's Love for His Kinsmen",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/pauls-love-his-kinsmen"
+    },
+    "D2": {
+     "author": "Jared Compton",
+     "work": "Apostle of Tears: Lessons from Paul’s Great Sorrow",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/apostle-of-tears"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

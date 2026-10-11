@@ -1,0 +1,68 @@
+{
+ "id": "53-003-006",
+ "title": "A Warning against Idleness",
+ "refs": [
+  "2 Thessalonians 3:6-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 53003006,
+   "end": 53003015,
+   "ref": "2 Thessalonians 3:6-15",
+   "ranges": [
+    [
+     53003006,
+     53003015
+    ]
+   ],
+   "title": "Do Not Grow Weary in Doing Good",
+   "key_verse": [
+    53003013,
+    53003013
+   ],
+   "reflect": [
+    {
+     "text": "Some believers in Thessalonica stopped working and began meddling in other people's business because of mistaken ideas about Jesus' return. Paul reminded the church of his own hard work so they would have an example to follow. He made a clear difference between those who truly cannot work and able-bodied people who are simply unwilling to labor. Refusing to work harms the church family by using up shared resources and disrupting peace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Seeing others abandon their responsibilities can make it tempting to give up as well. That is why Paul tells us not to grow weary in doing what is right. This instruction does not forbid natural physical tiredness, but it warns us against losing heart. God notices our quiet, daily faithfulness and will reward it. The Holy Spirit lives within us to help free us from laziness and give us strength to keep serving others through honest work.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an area of daily work or service where you feel tempted to lose heart?",
+    "How does remembering that God sees your daily faithfulness help you keep doing good?"
+   ],
+   "prayer": "Lord, thank you for the daily work you give us to do. When we feel tired or discouraged by what others are doing, protect our hearts from giving up. Please guide us by your Holy Spirit to work faithfully and care for our church family. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Never Give Up",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/never-give-up"
+    },
+    "D2": {
+     "author": "David Mathis",
+     "work": "Laziness Is Profoundly Unchristian",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/laziness-is-profoundly-unchristian"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

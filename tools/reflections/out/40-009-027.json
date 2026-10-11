@@ -1,0 +1,71 @@
+{
+ "id": "40-009-027",
+ "title": "Jesus Heals the Blind and Mute",
+ "refs": [
+  "Matthew 9:27-34",
+  "Mark 7:31-37"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40009027,
+   "end": 40009034,
+   "ref": "Matthew 9:27-34; Mark 7:31-37",
+   "ranges": [
+    [
+     40009027,
+     40009034
+    ],
+    [
+     41007031,
+     41007037
+    ]
+   ],
+   "title": "Compassion and Guidance in Jesus' Healing",
+   "key_verse": [
+    41007037,
+    41007037
+   ],
+   "reflect": [
+    {
+     "text": "When the two blind men came after Jesus, they showed persistent faith. They kept following Him and asking for mercy without giving up. Jesus did not rush to act on His own. He served people in total dependence on the guidance and timing of the Holy Spirit. We often run ahead with our own ideas and ask God to bless our work, but true spiritual fruit happens when we learn to wait on the Spirit's direction.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus also showed tender compassion when He healed the man who could not hear or speak well. Instead of turning the man into a public spectacle, Jesus gently led him away from the crowd. This preserved the man's dignity and showed that Jesus values each hurting person as an individual. When Jesus asked people not to spread the news, He showed that He was moved by pure love rather than a desire for popularity or praise.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas where you have rushed ahead with your own plans instead of waiting for the Holy Spirit to direct you?",
+    "How can you follow Jesus' example of treating hurting people with personal dignity and love?"
+   ],
+   "prayer": "Lord Jesus, thank You for Your gentle care and for treating each hurting person with deep dignity. Teach us to follow You with persistent faith and to wait quietly for the Holy Spirit's guidance. Help us to serve others out of genuine love instead of seeking human praise. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jennifer Slattery",
+     "work": "Christ’s Tender Love for the Wounded",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/christs-tender-love-for-the-wounded-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Rick Renner",
+     "work": "Being Led by the Holy Spirit",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/sparkling-gems/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

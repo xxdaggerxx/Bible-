@@ -1,0 +1,89 @@
+{
+ "id": "58-002-005",
+ "title": "Jesus like His Brothers",
+ "refs": [
+  "Hebrews 2:5-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58002005,
+   "end": 58002018,
+   "ref": "Hebrews 2:5-18",
+   "ranges": [
+    [
+     58002005,
+     58002018
+    ]
+   ],
+   "title": "Made Like Us to Save Us",
+   "key_verse": [
+    58002017,
+    58002017
+   ],
+   "reflect": [
+    {
+     "text": "God made human beings to care for creation, but our sin brought ruin and separated us from that calling. To rescue us, Jesus entered our world and was made lower than the angels for a time, taking on real human flesh and blood. He chose to taste death for everyone. Because He suffered and rose again, Jesus is now crowned with glory and honor. United with Him, we are lifted to a high dignity that even angels do not share.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "As our faithful high priest, Jesus became like us in every way so He could carry our needs and take away our sins. By dying on the cross, He destroyed the devil's power over death and set us free from lifelong fear. Dying is no longer a punishment or an exile for God's children. As Charles Spurgeon noted, it is simply \"a going home\" into the peaceful presence of the Lord without delay.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because our Savior shared our human life, He knows what it feels like to struggle. He faced the very same temptations we encounter, yet He stood firm and never sinned. Jesus does not turn away from us when we feel weak. He understands our trials and gives us power to overcome temptation. Whenever you feel tested, you can turn safely to Him, knowing your Brother and Priest stands ready to help you.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus truly understands your temptations change the way you pray when you are struggling?",
+    "Since Jesus has taken away the power and dread of death, how can that bring you peace today?"
+   ],
+   "prayer": "Lord Jesus, thank You for sharing in our human life and taking away our fear of death. When we face temptation and trials, remind us that You understand our struggles and have already won the victory. Help us to run to You each day as our merciful high priest. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 20",
+     "on": "Hebrews 2:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 3",
+     "on": "Hebrews 2:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hebrews 2:17",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Made Lower to Be Crowned with Glory",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/made-lower-to-be-crowned-with-glory"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

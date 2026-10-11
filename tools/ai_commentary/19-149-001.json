@@ -1,0 +1,151 @@
+{
+ "book": 19,
+ "chapter": 149,
+ "first": 1,
+ "last": 9,
+ "ref": "Psalms 149",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "God's people are called to gather and praise the Lord with fresh gratitude. A new song fits the fresh mercies God gives every day and the great gift of salvation. Praising God together in the congregation brings believers special joy and strength.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Israel has double reason to be glad in God, both as their Creator and as their King. He not only gave them breath, but He also formed them into His own special people. Believers rejoice that God guides, protects, and rules over them with perfect justice and love.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Worshipers are invited to express their delight with music and celebration, just as Israel did after crossing the Red Sea. Joy in God is so great that it calls for every form of glad expression, using both instruments and bodily movement. The whole person joins in honoring the Lord.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Some hold that Old Testament dancing and musical instruments were temporary ceremonial shadows, so Christian worship today should focus simply on singing with the heart and understanding.",
+     "sources": [
+      "Matthew Henry",
+      "Calvin"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "The Hebrew word usually translated as dancing may instead refer to a wind instrument, such as a pipe or flute, played alongside the tambourine and harp.",
+     "sources": [
+      "Adam Clarke",
+      "https://www.studylight.org/commentaries/eng/ebc/psalms-149.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The Lord takes genuine pleasure in His people and looks on them with deep love. He takes the afflicted and humble, who feel their weakness, and crowns them with victory and salvation. In His kindness, He clothes them with the beauty of His own holiness.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "God's faithful people can rejoice boldly in the honor He has given them. Even when lying on their beds at night, their resting places become rooms of praise rather than places of fear and tears. Their quiet hours are sweet because they rest securely in God's care.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Praise and battle are joined together here, with loud songs in the throat and a sharp weapon in hand. Ancient Israel was called to defend God's kingdom while keeping His praise on their lips. For Christians, the double-edged sword is the word of God, used to fight spiritual battles against evil.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [
+    {
+     "tradition": "Pentecostal",
+     "view": "High praise is seen as an active weapon of spiritual warfare that works alongside the word of God to break demonic strongholds.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/psalm-149/"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "Old Testament Israel was appointed to execute God's righteous justice on wicked nations around them. Under the New Testament, believers do not fight human enemies with physical weapons, but battle against sin and Satan through the gospel. Final punishment against all unrepentant evil belongs to the Lord at the end of time.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "These verses may reflect the historical battles of the Maccabean period, when Jewish fighters went out against their Syrian oppressors while praying and chanting praises to God.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ebc/psalms-149.html",
+      "Adam Clarke"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "Powerful rulers who set themselves against God and persecute His people will eventually be brought down. In Israel's history, God delivered hostile kings into their hands as prisoners. Spiritually, it shows that Christ will bind every power of darkness and bring all opposing forces under His control.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "The judgment carried out against evil follows the written word and decrees of God, not personal malice or private revenge. Sharing in the triumph of God's kingdom is an honor given to every one of His saints. Because God delivers and vindicates His own, the song closes with another joyful call to praise the Lord.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)', 'Jamieson-Fausset-Brown']",
+  "v. 9: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

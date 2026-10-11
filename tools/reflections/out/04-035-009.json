@@ -1,0 +1,89 @@
+{
+ "id": "04-035-009",
+ "title": "Six Cities of Refuge",
+ "refs": [
+  "Numbers 35:9-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4035009,
+   "end": 4035034,
+   "ref": "Numbers 35:9-34",
+   "ranges": [
+    [
+     4035009,
+     4035034
+    ]
+   ],
+   "title": "Our Refuge and Living High Priest",
+   "key_verse": [
+    4035028,
+    4035028
+   ],
+   "reflect": [
+    {
+     "text": "God provided six cities of refuge to stop revenge and protect anyone who killed someone accidentally. In these safe towns, a person could await a fair trial before the community. Willful murderers received no protection, because unpunished murder defiles the land where God dwells among His people. But those innocent of intentional hatred could stay safely within the borders of the city.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "The accidental manslayer had to remain in the city of refuge until the high priest died. Only then was the person set free to go home. Old Testament high priests died one after another. Their passing pointed ahead to Jesus Christ, who offered His life once for all to rescue us from judgment. As F. B. Meyer notes, Christ now has an \"unchangeable priesthood\" because He lives forever. He is our true shelter, welcoming everyone who turns to Him.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Scripture also required multiple witnesses to establish the truth and protect life. Today, followers of Jesus are not sacrificing priests, but witnesses to what He has done. When we spend time with Christ and look to Him, His Spirit helps us share His truth with others, beginning in our own homes and reaching outward.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing Jesus is your living refuge bring you peace today?",
+    "In what ways can you witness to Christ's grace among your family and neighbors?"
+   ],
+   "prayer": "Lord Jesus, thank You for being our permanent refuge and our living High Priest. Forgive us when we fail, and keep us safe in Your care. Fill us with Your Spirit so we may be faithful witnesses of Your love to the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 35:25",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 35:30",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "D.A. Carson",
+     "work": "Read the Bible: Numbers 35, Psalm 79, Isaiah 27, 1 John 5",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/numbers-35-psalm-79-isaiah-27-1-john-5/"
+    },
+    "D4": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways - Feb. 28, 2008",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-feb-28-2008-11569369.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

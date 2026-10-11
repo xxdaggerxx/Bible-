@@ -1,0 +1,66 @@
+{
+ "id": "12-011-001",
+ "title": "Athaliah and Joash",
+ "refs": [
+  "2 Kings 11:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12011001,
+   "end": 12011003,
+   "ref": "2 Kings 11:1-3",
+   "ranges": [
+    [
+     12011001,
+     12011003
+    ]
+   ],
+   "title": "God Preserves His Promise",
+   "key_verse": [
+    12011002,
+    12011002
+   ],
+   "reflect": [
+    {
+     "text": "When Queen Athaliah learned that her son Ahaziah had died, she acted with terrible cruelty. To seize the throne and secure power for herself, she tried to destroy the entire royal family. It seemed as though the line of King David might be wiped out completely, threatening the promises God had made about an everlasting kingdom.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet God stepped in through the courage and quick thinking of Joash's aunt, Jehosheba. While the other royal children were being killed, she took baby Joash and his nurse and hid them in a bedroom. She then kept him safely hidden in the house of the Lord for six years. Athaliah ruled the land, but she did not know that the true heir was safe in the temple under God's protection.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This story shows how God uses ordinary people to fulfill His plans. Later, the priest Jehoiada would help crown Joash and lead a renewal of God's covenant, showing that evil cannot overthrow what God has decreed. Through Jehosheba's brave actions, God preserved the family line leading to Christ, proving that His promises never fail.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God keeps His promises encourage you when evil seems powerful?",
+    "In what faithful ways might God be calling you to act courageously in your own life today?"
+   ],
+   "prayer": "Lord God, thank you for your faithfulness to keep your promises even in the darkest times. Help us to be brave and faithful like Jehosheba, trusting that you use ordinary people to do your work. Remind us each day that your everlasting kingdom in Christ will never fail. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Reign of a Wicked Queen",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/Reign-of-a-Wicked-Queen"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

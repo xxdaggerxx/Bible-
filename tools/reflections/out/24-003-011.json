@@ -1,0 +1,114 @@
+{
+ "id": "24-003-011",
+ "title": "A Call to Repentance",
+ "refs": [
+  "Jeremiah 3:11-25"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 24003014,
+   "end": 24003014,
+   "ref": "Jeremiah 3:14",
+   "ranges": [
+    [
+     24003014,
+     24003014
+    ]
+   ],
+   "title": "\"Return, O Faithless Children\"",
+   "key_verse": [
+    24003014,
+    24003014
+   ],
+   "reflect": [
+    {
+     "text": "God speaks to His wandering people with the deep love of a faithful husband. When we turn away, it might feel as though the relationship is broken beyond repair. Outward religious habits cannot take the place of a true change of heart. Yet God calls back those who have strayed to show that restoration is always possible. He welcomes everyone who turns back to Him with honest sorrow, giving us confidence in His grace, which is His undeserved kindness toward us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Charles Spurgeon wrote that Jesus is joined to His people like a devoted husband who has paid all their debts. Even when we feel weak and wander through a hard world, Christ provides for all our needs and gives us His own name. Human marriage ends at death, but the union between Christ and His church lasts forever. He holds us close to His heart and will never abandon the people He has bound to Himself.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you relying on outward religious routines, or is your heart truly turned toward God?",
+    "How does knowing that Jesus will never abandon you give you courage to return to Him?"
+   ],
+   "prayer": "Lord Jesus, thank You for loving us faithfully even when we stray. Forgive us for wandering, and give us sincere hearts that turn to You in trust. Help us rest in the peace of knowing You have paid our debts and will never let us go. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 22",
+     "on": "Jeremiah 3:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "A Call to Repentance",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/call-to-repentance"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 24003011,
+   "end": 24003025,
+   "ref": "Jeremiah 3:11-25",
+   "ranges": [
+    [
+     24003011,
+     24003025
+    ]
+   ],
+   "title": "Healing for the Wayward Heart",
+   "key_verse": [
+    24003015,
+    24003015
+   ],
+   "reflect": [
+    {
+     "text": "Many people wander far from God because of painful childhood wounds or hypocrisy they saw in other believers. When we look for fulfillment away from the Lord, we can easily slip into a false sense of peace that ignores His quiet conviction. These long detours promise comfort, but they only lead to deeper pain and disappointment.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God does not abandon those who have lost their way. Instead, He promises to send caring shepherds who understand His heart and guide wandering people back to safety. True healing is a steady process of replacing old lies with the truth found in God's Word. Rather than criticizing friends who have drifted from faith, we can pray faithfully for them and show them Christ's patient love.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What lies from past hurts might you need God's truth to heal today?",
+    "Who in your life has wandered away from God that you can support with prayer and love?"
+   ],
+   "prayer": "Father, thank You for sending caring guides into our lives when we drift away. Heal our quiet hurts with Your truth and give us peace in Your presence. Teach us to show gentle love and faithful prayer to those who are currently far from You. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Andrea",
+     "work": "Reclaiming Life",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/reclaiming-life-encouragement-caf-apr-10-2015.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

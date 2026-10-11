@@ -1,0 +1,67 @@
+{
+ "id": "06-011-016",
+ "title": "Joshua Takes the Whole Land",
+ "refs": [
+  "Joshua 11:16-23"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 6011023,
+   "end": 6011023,
+   "ref": "Joshua 11:23",
+   "ranges": [
+    [
+     6011023,
+     6011023
+    ]
+   ],
+   "title": "\"The Land Had Rest from War\"",
+   "key_verse": [
+    6011023,
+    6011023
+   ],
+   "reflect": [
+    {
+     "text": "When we read about tribal borders and property divisions, it can easily seem like boring trivia. Yet these specific allotments fulfilled a promise God made to Abraham six hundred years earlier. God guides the great story of salvation without ever losing track of the smallest details. Because Scripture records these concrete facts, we can be confident that God keeps every promise He makes. He still directs and cares for the routine details of our everyday lives.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Joshua dividing the land also points ahead to Jesus. F. B. Meyer wrote, \"The whole land of spiritual blessing is now in the hand of Jesus.\" Christ has defeated the enemy and received every blessing from the Father so He can share it with us. Because the land finally rested from battle, we are called to stop our own anxious striving. We do not win God's favor through exhausting self-effort. Instead, we can rest and gratefully receive what Jesus gives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What routine detail of your life can you place in God's hands today, knowing He cares for it?",
+    "Where are you tempted to strive in your own strength rather than resting in what Christ provides?"
+   ],
+   "prayer": "Lord God, thank You for keeping every promise You make, down to the smallest detail. Remind us that You care for our everyday routines just as much as the big moments in life. Teach us to lay down our exhausting self-effort and rest in the spiritual gifts Jesus has won for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joshua 11:23",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Katherine Britton",
+     "work": "Don't Bother Me with Details!",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/don-t-bother-me-with-details-crosswalk-the-devotional-march-24-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

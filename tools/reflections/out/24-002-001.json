@@ -1,0 +1,135 @@
+{
+ "id": "24-002-001",
+ "title": "Israel Has Forsaken God",
+ "refs": [
+  "Jeremiah 2:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 24002011,
+   "end": 24002013,
+   "ref": "Jeremiah 2:11-13",
+   "ranges": [
+    [
+     24002011,
+     24002013
+    ]
+   ],
+   "title": "\"Broken Cisterns That Cannot Hold Water\"",
+   "key_verse": [
+    24002013,
+    24002013
+   ],
+   "reflect": [
+    {
+     "text": "God is the only fountain that can truly satisfy our deepest emotional and spiritual thirst. Yet we often seek security, importance, and fulfillment in human relationships and worldly success. Trying to live independently from God and trading Him for powerless substitutes shows tragic ingratitude and foolishness.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Preferring cracked cisterns begins whenever we put our own desires ahead of God's word. Disobedience leaves us drinking bitter, polluted water rather than pure refreshment. Turning away from the Lord is not just a minor slip; it is real sin that we must face and name honestly.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Human wisdom and worldly ideas can never take the place of Scripture's life-giving truth. When we confess our reliance on worldly substitutes, we are directed back to Jesus, the true living water. Choosing obedience restores that vital connection, helping us stand firm even when the culture around us compromises.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to look for satisfaction instead of turning to Jesus, the living water?",
+    "What personal desire or worldly substitute do you need to confess today so you can walk in obedience again?"
+   ],
+   "prayer": "Lord Jesus, forgive us for turning away from You to dig our own broken cisterns that hold no water. Help us recognize our sin whenever we put our desires above Your word. Keep us standing firm in Your truth, and refresh our hearts each day with Your living water. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Gwen Smith",
+     "work": "Broken Cisterns",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-february-4-2021.html"
+    },
+    "D3": {
+     "author": "Jill Briscoe",
+     "work": "The Long Road of Obedience",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-women/the-long-road-of-obedience-one-year-devotions-for-women-may-31.html"
+    },
+    "D4": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - Aug. 14, 2008",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-aug-14-2008-11580455.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 24002001,
+   "end": 24002013,
+   "ref": "Jeremiah 2:1-13",
+   "ranges": [
+    [
+     24002001,
+     24002013
+    ]
+   ],
+   "title": "God Remembers His People",
+   "key_verse": [
+    24002002,
+    24002002
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God speaks tenderly of remembering His people. As Charles Spurgeon noted, \"Christ delights to think upon his Church, and to look upon her beauty.\" Just as a bird returns to its nest or a traveler hastens home, the Lord's mind continually rests on those He loves. From eternity, He viewed His people in foreknowledge and wrote their names in His book.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Throughout history, even before taking on human flesh, Christ visited His people during times of hardship. He holds us so close that our names are like sparkling jewels worn on a high priest's breastplate, engraved on His hands and side. He longs after His people and never stops remembering them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "While our Lord never forgets us, we often fail to keep Him in our thoughts. Our minds easily wander from His goodness. When we see our forgetfulness, we can ask for grace—God's undeserved kindness—to help our souls keep the love and beauty of Christ constantly in view.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does it comfort you to know that Christ never stops thinking about you with delight?",
+    "What practical habits can help you keep the Lord in your thoughts throughout a busy day?"
+   ],
+   "prayer": "Lord Jesus, thank You for loving us from before the world began and keeping our names written on Your heart. Forgive us for the many times we forget You and chase after distractions. Give us grace to remember Your goodness and fix our eyes on You today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 17",
+     "on": "Jeremiah 2:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

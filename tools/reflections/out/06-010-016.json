@@ -1,0 +1,75 @@
+{
+ "id": "06-010-016",
+ "title": "The Victory at Makkedah",
+ "refs": [
+  "Joshua 10:16-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6010016,
+   "end": 6010028,
+   "ref": "Joshua 10:16-28",
+   "ranges": [
+    [
+     6010016,
+     6010028
+    ]
+   ],
+   "title": "Feet on the Necks of Kings",
+   "key_verse": [
+    6010025,
+    6010025
+   ],
+   "reflect": [
+    {
+     "text": "Five kings formed an alliance against God's people, but their rebellion was completely foolish. After trapping them, Joshua told his army leaders to come forward and put their feet on the necks of these rulers. In the ancient world, putting your foot on a defeated king was a clear sign of total victory and coming judgment. This powerful picture showed Israel that the Lord would surely defeat every enemy before them.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This event looks forward to Jesus Christ. Earthly rulers may try to fight against God, but Jesus is the promised Savior who crushed our greatest enemies through His cross and resurrection. The Father has promised that all hostile powers will eventually be placed under the feet of Jesus.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because Jesus has already won the battle, we do not have to live in fear. We can step forward each day with courage to stand against sin, lies, and spiritual darkness, knowing that sin has lost its power over us. Everyone will one day bow to Christ, so we are invited to trust and submit to Him with glad hearts today.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or stubborn sins do you need to face today with confidence in the victory of Jesus?",
+    "In what area of your life can you submit more fully to Christ's leadership today?"
+   ],
+   "prayer": "Lord God, thank You that no enemy can stand against Your power. Thank You for Jesus, who crushed sin and death on the cross for us. Help us to walk in courage today, resisting temptation and gladly following Christ as our King. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jonathan Parnell",
+     "work": "Put Your Foot on It",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/put-your-foot-on-it"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Facing the Alliance",
+     "site": "Ligonier Ministries",
+     "url": "https://www.ligonier.org/learn/devotionals/facing-alliance/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

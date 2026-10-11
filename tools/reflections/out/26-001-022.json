@@ -1,0 +1,73 @@
+{
+ "id": "26-001-022",
+ "title": "The Divine Glory",
+ "refs": [
+  "Ezekiel 1:22-28"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 26001026,
+   "end": 26001028,
+   "ref": "Ezekiel 1:26-28",
+   "ranges": [
+    [
+     26001026,
+     26001028
+    ]
+   ],
+   "title": "\"The Glory of the Lord\"",
+   "key_verse": [
+    26001028,
+    26001028
+   ],
+   "reflect": [
+    {
+     "text": "When Ezekiel saw the throne above the expanse, he was given a glimpse of God's majestic rule. The vision shows that the Lord is the Creator and King, entirely set apart from everything He made. Taking time to think about this exalted glory reminds us of God's sovereign authority over all things.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Facing such overwhelming power and fiery light naturally stirs up fear and trembling in human beings. Ezekiel collapsed facedown in awe and helplessness before the radiant rainbow encircling the throne. Yet even while we revere His holy power, we are welcomed to rejoice in His steadfast love.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The holy Lord did not abandon Ezekiel to his fear. Instead, God lifted him up and called him to serve as a prophet. While the Lord's supreme holiness inspires holy awe, we can rest knowing that He is deeply compassionate and good to us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God is both holy King and full of compassion comfort you when you feel weak?",
+    "In what ways can you show reverence for God's majesty in your daily prayers?"
+   ],
+   "prayer": "Lord God, You are the holy Creator and King, exalted in brilliance and power. Forgive us for taking Your majesty lightly or being paralyzed by fear. Thank You for lifting us up by Your grace and caring for us with tender love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Sophia Bricker",
+     "work": "A Prayer for the One Who Is Afraid of God’s Glory and Power",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-the-one-who-is-afraid-of-gods-glory-and-power.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Ezekiel's Vision of God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/ezekiels-vision-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

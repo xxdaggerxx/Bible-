@@ -1,0 +1,66 @@
+{
+ "id": "39-001-001",
+ "title": "The LORD’s Love for Israel",
+ "refs": [
+  "Malachi 1:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 39001001,
+   "end": 39001005,
+   "ref": "Malachi 1:1-5",
+   "ranges": [
+    [
+     39001001,
+     39001005
+    ]
+   ],
+   "title": "Resting in God's Unchanging Love",
+   "key_verse": [
+    39001002,
+    39001002
+   ],
+   "reflect": [
+    {
+     "text": "When the people of Israel questioned whether God truly cared for them, the Lord reminded them of Jacob and Esau. In Scripture, God speaking of love and hate does not point to shifting human emotions. Rather, it speaks of His sovereign choice, which means His supreme authority to choose and act for His own plans. Esau represents those who push away spiritual realities for worldly desires, while Jacob represents God's covenant people whom He chose.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This passage teaches us that our salvation does not come from our own efforts or human will. It rests completely on God's mercy, which is His undeserved compassion toward us. We did not earn His favor by working hard enough. Instead, God initiated our redemption by reaching out to us first.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because our relationship with God begins with His choice and not our own strength, we can have deep peace. Believers can rest with total assurance, knowing that the God who called us holds us safely in His grip. Even when life makes us wonder about God's care, His faithful commitment remains sure.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that salvation depends on God's mercy rather than your own efforts give you peace?",
+    "In what ways are you tempted to chase worldly desires instead of resting in God's promises?"
+   ],
+   "prayer": "Lord God, thank You for choosing to set Your love upon us out of Your deep mercy. Help us to rest in the assurance that You hold us securely in Your hands. When we are tempted to doubt Your care, remind us of Your faithful promises. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jack Graham (PowerPoint Ministries)",
+     "work": "Knowing God’s Assured Calling on Your Life",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-apr-4-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

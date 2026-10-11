@@ -1,0 +1,143 @@
+{
+ "id": "58-004-001",
+ "title": "The Sabbath Rest",
+ "refs": [
+  "Hebrews 4:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 58004009,
+   "end": 58004010,
+   "ref": "Hebrews 4:9-10",
+   "ranges": [
+    [
+     58004009,
+     58004010
+    ]
+   ],
+   "title": "\"There Remains a Sabbath Rest\"",
+   "key_verse": [
+    58004009,
+    58004009
+   ],
+   "reflect": [
+    {
+     "text": "God invites us to share in His own rest. When God finished creating the world, He rested, yet He still cares for His creation. In the same way, Jesus finished His work on the cross, yet He still prays for us in heaven. Entering God's rest today does not mean sitting idle. Instead, as F. B. Meyer notes, we can \"abandon your restless planning and striving\" to find deep peace in Christ while doing our daily work.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "To enter this rest, we must stop trying to earn God's favor through our own good deeds. We rest when we trust completely in what Jesus has already done for us on the cross. God's rest is not empty sleep; it is full of joy and delight in His finished salvation. Each week as we gather for worship, we taste this peace together and look forward to what is coming.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "Here on earth, we still grow tired and struggle with hardship. But God has promised a final, unending rest in heaven. There, all exhaustion and sorrow will be gone forever. We will be freed from our trials, and our hearts will be filled with endless joy as we worship and serve our King without growing weary.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you trying to earn God's acceptance by your own efforts instead of resting in what Jesus has done?",
+    "How does the hope of God's eternal rest bring you comfort when you feel tired today?"
+   ],
+   "prayer": "Lord Jesus, thank You for finishing the work to save us so we can truly rest. Help us to stop relying on our own striving and to cast our burdens on You. Keep our eyes on the eternal joy and rest You have prepared for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 18",
+     "on": "Hebrews 4:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 28",
+     "on": "Hebrews 4:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hebrews 4:9",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "Rest for God's People",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/rest-gods-people"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 58004001,
+   "end": 58004011,
+   "ref": "Hebrews 4:1-11",
+   "ranges": [
+    [
+     58004001,
+     58004011
+    ]
+   ],
+   "title": "The Promise of God's Rest",
+   "key_verse": [
+    58004001,
+    58004001
+   ],
+   "reflect": [
+    {
+     "text": "Our life as Christians is an earthly journey, much like a long pilgrimage. We are traveling toward a lasting, eternal home with God. Long ago, God promised the people of Israel a place of rest in the land of Canaan. Yet that earthly land was only a temporary picture pointing to a far greater heavenly city that God is preparing for His people.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Sadly, the generation wandering in the wilderness failed to reach God's rest because of their unbelief. They heard the good news, but they did not trust God's promise. Today, the same warning and promise come to us. We do not want to fall short through unbelief. Instead, we can be confident because Christ has secured this true rest for all who put their faith in Him.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "We enter God's rest right now when we stop relying on our own works and put our whole trust in Jesus alone. We do not have to wait until the end of our journey to experience His peace. Each Lord's Day, when we rest from our regular work and worship God, we receive a weekly foretaste of the perfect, eternal Sabbath that awaits us.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you trusting in Jesus alone for your salvation, or are you tempted to rely on your own works?",
+    "How can setting aside time for worship on the Lord's Day help you remember your eternal destination?"
+   ],
+   "prayer": "Father, thank You for the promise of eternal rest with You in Your heavenly city. Guard our hearts from unbelief, and help us to place our complete trust in Christ. Give us joy as we worship You each week, anticipating the unending rest to come. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Kim Riddlebarger",
+     "work": "The Sabbath Now and Not Yet",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/sabbath-now-and-not-yet"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

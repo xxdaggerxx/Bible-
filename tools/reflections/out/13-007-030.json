@@ -1,0 +1,66 @@
+{
+ "id": "13-007-030",
+ "title": "The Descendants of Asher",
+ "refs": [
+  "1 Chronicles 7:30-40"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13007030,
+   "end": 13007040,
+   "ref": "1 Chronicles 7:30-40",
+   "ranges": [
+    [
+     13007030,
+     13007040
+    ]
+   ],
+   "title": "Known by Name to God",
+   "key_verse": [
+    13007040,
+    13007040
+   ],
+   "reflect": [
+    {
+     "text": "A long list of ancient names can feel hard to read at first glance. Yet these detailed family records show us something wonderful about how the Lord cares for us. God does not view people as an anonymous crowd. He knows every single person individually, just as He recorded each name in Asher's family line long ago.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "These family lists also remind us that our choices leave a lasting mark. Scripture shows contrasting legacies between those who faithfully served God and those who turned away and lost their calling. God will one day evaluate each of our lives based on our personal loyalty and devotion to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Just as God remembered each leader and soldier in Asher's tribe, He knows your name today. You are never an invisible face in a crowd to your Heavenly Father. He sees your daily walk with Him, and He values every quiet act of faithful service you offer.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God sees and knows you by name change the way you live each day?",
+    "What kind of faithful legacy do you want to leave behind for others to see?"
+   ],
+   "prayer": "Lord, thank You for knowing me by name and caring about my life. Help me to be loyal to You in all that I do each day. Give me grace to leave a faithful legacy of love and obedience. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 05/13/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-05-or-13-or-2002-1133428.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

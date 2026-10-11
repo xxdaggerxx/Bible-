@@ -1,0 +1,84 @@
+{
+ "id": "40-024-001",
+ "title": "Temple Destruction and Other Signs",
+ "refs": [
+  "Matthew 24:1-8",
+  "Mark 13:1-8",
+  "Luke 21:5-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40024001,
+   "end": 40024008,
+   "ref": "Matthew 24:1-8; Mark 13:1-8; Luke 21:5-9",
+   "ranges": [
+    [
+     40024001,
+     40024008
+    ],
+    [
+     41013001,
+     41013008
+    ],
+    [
+     42021005,
+     42021009
+    ]
+   ],
+   "title": "Birth Pains and Faithful Watchfulness",
+   "key_verse": [
+    41013007,
+    41013007
+   ],
+   "reflect": [
+    {
+     "text": "When the disciples pointed out the great stones of the temple, Jesus told them it would all be thrown down. That destruction marked the end of the old animal sacrifices and showed that God had brought in the new covenant, His promised way of saving people through Jesus. The disciples knew this would change the world, so they asked when these things would happen. Jesus warned them not to be tricked by people claiming to be the Messiah or saying the time had arrived.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus said that before the end comes, the world will see wars, famines, and earthquakes. Between His resurrection and the fall of Jerusalem in AD 70, false leaders arose and great troubles shook the nations. Jesus called these troubles the beginning of birth pains, which become more frequent and intense over time. These troubles, along with moral confusion and false teaching, remind us that God's judgment is real. Yet Jesus told His followers not to panic or assume every disaster means the end is instantly here.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead of living in fear or trying to predict the exact moment Christ will return, we are called to stay spiritually alert. When we see a troubled world, it should move us to action. Our task is to hold closely to biblical truth and faithfully share the good news of Jesus with others while there is still time.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can knowing that Jesus is in control keep you from being afraid when you hear bad news in the world?",
+    "Who is one person you can encourage with the good news of Christ this week?"
+   ],
+   "prayer": "Lord Jesus, thank You for warning us about the troubles in this world and telling us not to fear. Guard our hearts from spiritual deception and help us stand firm on Your truth. Give us courage to share Your good news faithfully with those around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "False Messiahs, Wars, and Natural Disasters",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/false-messiahs-wars-and-natural-disasters"
+    },
+    "D2": {
+     "author": "Jack Graham",
+     "work": "Power Point - August 2, 2005",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-august-2-2005-1343339.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

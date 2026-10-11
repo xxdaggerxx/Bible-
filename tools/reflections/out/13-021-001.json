@@ -1,0 +1,66 @@
+{
+ "id": "13-021-001",
+ "title": "David’s Military Census",
+ "refs": [
+  "1 Chronicles 21:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13021001,
+   "end": 13021006,
+   "ref": "1 Chronicles 21:1-6",
+   "ranges": [
+    [
+     13021001,
+     13021006
+    ]
+   ],
+   "title": "Trusting God Instead of Human Numbers",
+   "key_verse": [
+    13021001,
+    13021001
+   ],
+   "reflect": [
+    {
+     "text": "King David commanded Joab to count the fighting men across Israel. This census showed that David was leaning on human military power instead of trusting the Lord. Satan actively incited David toward pride and disobedience by urging him to take the count. While God sovereignly rules over all events, the moral guilt belonged only to Satan and David.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even Joab recognized that this order was wrong. He warned David that the census would bring guilt on Israel, but the king refused to listen. Joab eventually carried out the count, yet he omitted the tribes of Levi and Benjamin. Joab left out the Levites because God's law barred them from being counted for military conscription.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "David's choice reminds us how easily we can fall into relying on our own strength. Even so, God was still at work. In His sovereign care, the Lord ultimately used David's sinful failure to accomplish His greater purposes, which led to choosing the site for the future temple.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to put your confidence in human strength instead of depending on God?",
+    "How can you stay humble and open when others warn you about a wrong choice?"
+   ],
+   "prayer": "Lord God, forgive us for the times we put our trust in numbers and human strength instead of relying on you. Guard our hearts against pride and temptation, and give us ears to hear wise warnings. Thank you that even when we fail, you remain sovereign and bring about your good purposes. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "David’s Census",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/davids-census"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

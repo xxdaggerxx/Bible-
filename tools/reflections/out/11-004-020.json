@@ -1,0 +1,66 @@
+{
+ "id": "11-004-020",
+ "title": "Solomon’s Prosperity",
+ "refs": [
+  "1 Kings 4:20-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11004020,
+   "end": 11004028,
+   "ref": "1 Kings 4:20-28",
+   "ranges": [
+    [
+     11004020,
+     11004028
+    ]
+   ],
+   "title": "Solomon's Glory and a Greater King",
+   "key_verse": [
+    11004021,
+    11004021
+   ],
+   "reflect": [
+    {
+     "text": "In Solomon's day, the people of Israel were as numerous as the sand on the seashore, enjoying abundant food and peace. Solomon ruled over a vast territory with secure borders. This golden era was a major fulfillment of God's covenant promises—His sacred, binding pledges to Abraham centuries earlier in Genesis. God showed that He is faithful to give His people their promised inheritance.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even with all this splendor, Solomon's earthly kingship had flaws. His accumulation of thousands of chariot horses showed the clear limits of an earthly king. Human rulers and military power cannot bring complete or permanent rest.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God intended this prosperous kingdom to point ahead to something far greater. The ultimate and perfect fulfillment of God's ancient promises arrives only through Jesus Christ and the growth of His church. Jesus is the king who brings true peace and an everlasting kingdom to His people.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you sometimes look to human leaders or earthly strength instead of trusting in Christ?",
+    "How does God's faithfulness to His promises encourage you to rely on Jesus today?"
+   ],
+   "prayer": "Lord, thank You for being faithful to keep every promise You have made to Your people. Forgive us when we put our hope in worldly strength or flawed human leaders. Teach us to rest in Jesus Christ and to rejoice in His eternal kingdom. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Glory of Solomon",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/glory-of-solomon"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

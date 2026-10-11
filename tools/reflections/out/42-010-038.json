@@ -1,0 +1,83 @@
+{
+ "id": "42-010-038",
+ "title": "Martha and Mary",
+ "refs": [
+  "Luke 10:38-42"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42010038,
+   "end": 42010042,
+   "ref": "Luke 10:38-42",
+   "ranges": [
+    [
+     42010038,
+     42010042
+    ]
+   ],
+   "title": "Choosing What Matters Most",
+   "key_verse": [
+    42010042,
+    42010042
+   ],
+   "reflect": [
+    {
+     "text": "Martha wanted to honor Jesus by preparing a good meal. There was nothing wrong with working hard to welcome Him. Yet as the chores piled up, she became distracted and frustrated. She was so busy doing things for Jesus that she forgot to enjoy being with Him. Her crowded schedule left her feeling stressed and worn out.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Mary, on the other hand, sat quietly at Jesus' feet to listen to His words. We often tie our value to long to-do lists, thinking we must prove ourselves through endless self-effort. But Jesus showed that drawing close to Him is the one thing most needed. When we let our tasks take over, our spirits run on empty and we can easily become resentful toward others.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "As Charles Spurgeon wrote, \"We ought to be Martha and Mary in one.\" Good deeds and daily responsibilities are important, but our service must flow from time spent with the Lord. Taking time to slow down and rest in His presence fills our hearts. Then we are truly ready to serve others with patience and joy.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When has a busy schedule kept you from resting and listening to Jesus?",
+    "How might spending quiet time with the Lord change the way you help others this week?"
+   ],
+   "prayer": "Lord Jesus, help us not to lose sight of You in the middle of our daily work. Teach us to slow down and sit at Your feet to receive Your truth and rest. Fill our hearts so that our service to others comes from love rather than frustration. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 24",
+     "on": "Luke 10:40",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Candice Lucey",
+     "work": "Choosing the Better Portion",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/choosing-the-better-portion.html"
+    },
+    "D3": {
+     "author": "Doug Fields",
+     "work": "Busyness Doesn’t Satisfy",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/busyness-doesnt-satisfy-homeword-september-10.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

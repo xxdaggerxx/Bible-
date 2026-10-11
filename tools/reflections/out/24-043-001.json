@@ -1,0 +1,67 @@
+{
+ "id": "24-043-001",
+ "title": "Jeremiah Taken to Egypt",
+ "refs": [
+  "Jeremiah 43:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24043001,
+   "end": 24043013,
+   "ref": "Jeremiah 43:1-13",
+   "ranges": [
+    [
+     24043001,
+     24043013
+    ]
+   ],
+   "title": "Facing God's Truth",
+   "key_verse": [
+    24043003,
+    24043003
+   ],
+   "reflect": [
+    {
+     "text": "When the leaders of Judah heard God's message through Jeremiah, they refused to accept it. Instead of admitting they were disobeying God, they blamed Jeremiah's helper, Baruch. They claimed Baruch was turning the prophet against them. As F. B. Meyer notes, when people dislike God's word, they often imagine someone has \"set the speaker on against them.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It is easy for us to do something similar. When God's truth makes us uncomfortable, our natural reaction is often to make excuses. We try to blunt the sharp edge of the message. We might convince ourselves that the preacher is prejudiced or that the Bible is unfair to us. In reality, God's word feels sharp only because we are heading in the wrong direction.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Meyer explains that we can only grow in our walk with God by letting His word search and correct us. When scripture points out our wrong paths, we should not look for someone else to blame or run away like the people who fled to Egypt. Instead, we can welcome God's correction and give His truth the weight it deserves.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you usually react when a passage of scripture or a sermon challenges your choices?",
+    "Is there an area in your life where you have made excuses instead of accepting God's correction?"
+   ],
+   "prayer": "Lord, help us to receive Your truth even when it makes us uncomfortable. Forgive us for making excuses or blaming others when Your word corrects us. Teach us to listen humbly and let Your guidance shape our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 43:3",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

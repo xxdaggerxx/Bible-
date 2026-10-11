@@ -1,0 +1,74 @@
+{
+ "id": "52-005-001",
+ "title": "The Day of the Lord",
+ "refs": [
+  "1 Thessalonians 5:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 52005001,
+   "end": 52005011,
+   "ref": "1 Thessalonians 5:1-11",
+   "ranges": [
+    [
+     52005001,
+     52005011
+    ]
+   ],
+   "title": "Staying Awake and Encouraging One Another",
+   "key_verse": [
+    52005011,
+    52005011
+   ],
+   "reflect": [
+    {
+     "text": "As children of the light, we are called to stay awake and alert. Walking alone can make a Christian spiritually sleepy, but staying in close company keeps our hearts refreshed. When we talk with one another about the Lord Jesus and all He has done, we help keep each other from drifting into slumber on the road to heaven.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Scripture tells us to actively encourage and build one another up. Just as cheers in a race give runners strength, simple kindness lifts weary spirits. Meaningful encouragement does not require grand gestures. A thoughtful word or a gentle glance can share God's love and remind someone of their worth in His family.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Charles Spurgeon urged believers to \"live near to the cross\" so we do not sleep. When we center our conversations on Christ and cheer each other onward, we stay ready for His return. Together, we can guard our hearts and finish our journey with joy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Who in your church family can you cheer on today with a thoughtful word or small kindness?",
+    "How does talking about Jesus with other believers help keep you alert and hopeful?"
+   ],
+   "prayer": "Lord Jesus, thank You for making us children of the day and placing us in a family of faith. Teach us to build one another up with gentle words, steady prayers, and sincere kindness. Keep our hearts alert and near to Your cross until the day You return. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 5",
+     "on": "1 Thessalonians 5:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Stacy LS Siegele",
+     "work": "An Encouraging Community",
+     "site": "The Upper Room",
+     "url": "https://www.upperroom.org/devotionals/blog-posts/3868"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

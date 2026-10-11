@@ -1,0 +1,66 @@
+{
+ "id": "17-009-018",
+ "title": "The Feast of Purim Instituted",
+ "refs": [
+  "Esther 9:18-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 17009018,
+   "end": 17009032,
+   "ref": "Esther 9:18-32",
+   "ranges": [
+    [
+     17009018,
+     17009032
+    ]
+   ],
+   "title": "Remembering God's Deliverance with Joyful Thanks",
+   "key_verse": [
+    17009022,
+    17009022
+   ],
+   "reflect": [
+    {
+     "text": "God rescued the Jewish people from Haman's evil plot to destroy them. Because of this great deliverance, Mordecai and Esther established the yearly feast of Purim. God turned their deep sorrow into joy and their mourning into a holiday. The people set aside these days so that future generations would always remember how God protected them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Scripture shows us that it is right to set aside special occasions to thank God for His specific mercies. Weekly worship is essential, but marking special times of thanksgiving helps us focus on what God has done. While many people fail to give God honor, believers should build lives and worship services marked by genuine gratitude.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we think about God's sovereign grace—His loving control and unearned kindness to us in Christ—we find the greatest reason of all to celebrate. Thinking about our rescue through Jesus leads us to thank the Lord continually, both in our private prayers and when we worship together as a church family.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What specific mercies has God shown you that you can thank Him for today?",
+    "How can you make gratitude a bigger part of your daily prayers and your church worship?"
+   ],
+   "prayer": "Lord God, thank You for rescuing us and turning our sorrow into joy through Jesus Christ. Help us never to forget Your kindness or take Your daily mercies for granted. Teach us to live with thankful hearts and to praise You together with Your people. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Thanksgiving in Worship",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/thanksgiving-in-worship"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

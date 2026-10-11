@@ -1,0 +1,66 @@
+{
+ "id": "24-037-011",
+ "title": "Jeremiah Imprisoned",
+ "refs": [
+  "Jeremiah 37:11-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24037011,
+   "end": 24037021,
+   "ref": "Jeremiah 37:11-21",
+   "ranges": [
+    [
+     24037011,
+     24037021
+    ]
+   ],
+   "title": "Remaining Faithful to God's Word",
+   "key_verse": [
+    24037017,
+    24037017
+   ],
+   "reflect": [
+    {
+     "text": "In this story, Jeremiah was locked away in a dark dungeon, yet King Zedekiah sent for him in secret to ask if God had spoken. Even through terrible suffering, Jeremiah remained faithful to God. He did not soften the message to please the king or save himself. Instead, he honestly delivered God's warning that the king would be captured by Babylon.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Just as God spoke through Jeremiah, He speaks to us through the Bible today. Scripture is God's inspired message, given to instruct us, correct us when we go wrong, and guide our daily steps. Today, many people brush aside biblical truth, calling it old and outdated. But as Christians, we are called to embrace the whole Bible and trust what God has said.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's Word does not hide our faults; it clearly shows us our sin. Yet it also points us to the greatest news of all, which is the gift of salvation in Jesus Christ. When we read the Scriptures, we find both the truth about ourselves and the grace that rescues us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever struggle to accept parts of the Bible that feel hard or unpopular?",
+    "How can God's Word guide your choices when people around you ignore what it says?"
+   ],
+   "prayer": "Lord, thank You for giving us Your Word to teach, correct, and guide us every day. Help us not to turn away from hard truths, but to hold fast to all of Scripture. Use Your Word to show us our sin and keep our eyes fixed on Jesus Christ, our Savior. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - August 25",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-aug-25-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

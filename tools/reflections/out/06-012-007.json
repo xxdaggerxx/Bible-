@@ -1,0 +1,66 @@
+{
+ "id": "06-012-007",
+ "title": "The Kings Defeated West of the Jordan",
+ "refs": [
+  "Joshua 12:7-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6012007,
+   "end": 6012024,
+   "ref": "Joshua 12:7-24",
+   "ranges": [
+    [
+     6012007,
+     6012024
+    ]
+   ],
+   "title": "Counting God's Faithful Deliverances",
+   "key_verse": [
+    6012024,
+    6012024
+   ],
+   "reflect": [
+    {
+     "text": "At first glance, a long list of thirty-one ancient kings and cities can seem easy to skip over. Yet this passage serves as an intentional pause for God's people. Before they divided the land among the tribes, Israel stopped to look back on what God had already done. Each conquered city represented a real, tangible fulfillment of the covenant promises God had made to them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Rehearsing all thirty-one victories was like taking an inventory of God's blessings. It was an offering of praise that highlighted the Lord's unwavering faithfulness. The people could look at every named place and remember the exact moment God delivered them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In the same way, we are encouraged to pause and deliberately name God's blessings in our own lives. It is easy to move through our days and take His care for granted. When we take time to count the specific ways God has helped us, our hearts learn to trust Him more.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What specific blessings or answers to prayer can you name and thank God for today?",
+    "How does taking time to remember God's past faithfulness help you trust Him with what lies ahead?"
+   ],
+   "prayer": "Lord God, thank You for Your faithfulness and for keeping every promise You have made. Forgive us for the times we take Your kindness for granted. Teach us to pause and name Your blessings, offering our praise to You for all You have done. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "A Counting of Blessings",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/a-counting-of-blessings"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

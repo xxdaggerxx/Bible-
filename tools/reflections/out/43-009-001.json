@@ -1,0 +1,67 @@
+{
+ "id": "43-009-001",
+ "title": "Jesus Heals the Man Born Blind",
+ "refs": [
+  "John 9:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43009001,
+   "end": 43009012,
+   "ref": "John 9:1-12",
+   "ranges": [
+    [
+     43009001,
+     43009012
+    ]
+   ],
+   "title": "Working Together with Jesus",
+   "key_verse": [
+    43009001,
+    43009001
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus saw the blind man, He told His disciples that they had work to do while it was day. Jesus was sent by the Father for a special purpose, yet He did not carry it out alone. Instead, He included His friends. As F. B. Meyer wrote, Jesus says, \"We must do it, you and I, together.\" He does not merely order us to go, but invites us to come and labor beside Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This kind of partnership is the way God's kingdom works. In nature, a farmer must work with God's laws to gather a harvest. In the same way, Jesus calls us into fellowship, which means close sharing and partnership, with Himself. His great desire is to bring glory to the Father and draw people back to God. He invites us to take part in that mission, contributing in our own small way to what He has set His heart on.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our service also relies on fellowship with the Holy Spirit. When we step forward to witness and care for others, we are not on our own; the Holy Spirit works alongside us. Remembering that Jesus invites us into this divine partnership gives our daily efforts real purpose. It stirs us to seek clean hearts and pure hands so we can walk worthily with Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what parts of your daily life can you remember that Jesus invites you to work together with Him?",
+    "How does knowing the Holy Spirit works alongside you encourage you when serving others?"
+   ],
+   "prayer": "Lord Jesus, thank You for inviting us into fellowship with You instead of leaving us to work alone. Teach us to labor gladly beside You today for the Father's glory. Give us clean hearts and pure hands as we rely on the Holy Spirit in all we do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "John 9:4",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

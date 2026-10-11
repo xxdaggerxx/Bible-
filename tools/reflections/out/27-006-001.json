@@ -1,0 +1,66 @@
+{
+ "id": "27-006-001",
+ "title": "The Plot against Daniel",
+ "refs": [
+  "Daniel 6:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 27006001,
+   "end": 27006009,
+   "ref": "Daniel 6:1-9",
+   "ranges": [
+    [
+     27006001,
+     27006009
+    ]
+   ],
+   "title": "A Life of Faithful Integrity",
+   "key_verse": [
+    27006004,
+    27006004
+   ],
+   "reflect": [
+    {
+     "text": "Daniel served in a pagan government, yet he stood out because of his exceptional character and deep integrity. His everyday work matched his private devotion to God. When King Darius planned to place him over the entire kingdom, his fellow leaders became jealous and closely inspected his conduct. They searched for any laziness, dishonesty, or failure in his duties, but they could find no fault in him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because Daniel lived such a blameless life, his rivals realized their only chance to bring him down was through his obedience to God. They devised a scheme and persuaded the king to sign a law that forbade praying to anyone else. As Alistair Begg observes, living a faithful life with firm conviction often stirs up hostility from the surrounding world.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Daniel's example reminds us to care deeply about integrity in all that we do. Even when others may resent our faith or try to cause trouble, we are called to remain fully devoted to the Lord and trustworthy in our daily responsibilities.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Does your daily conduct at work or school reflect your private faith in God?",
+    "How can you respond with quiet faithfulness when people oppose your commitment to the Lord?"
+   ],
+   "prayer": "Lord God, help us to live with honesty and integrity in everything we do. Keep our daily actions consistent with our love for you, even when we face opposition or misunderstanding. Give us steady hearts that remain faithful to you above all else. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg",
+     "work": "A Distinguished Life",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-october-7-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

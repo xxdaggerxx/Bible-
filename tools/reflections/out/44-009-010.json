@@ -1,0 +1,127 @@
+{
+ "id": "44-009-010",
+ "title": "Ananias Baptizes Saul",
+ "refs": [
+  "Acts 9:10-19"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44009015,
+   "end": 44009016,
+   "ref": "Acts 9:15-16",
+   "ranges": [
+    [
+     44009015,
+     44009016
+    ]
+   ],
+   "title": "\"This Man Is My Chosen Instrument\"",
+   "key_verse": [
+    44009015,
+    44009015
+   ],
+   "reflect": [
+    {
+     "text": "Saul was well known for attacking believers, so it was completely natural for Christians to be suspicious and afraid of him. Ananias struggled to understand how such a violent enemy of the church could ever become an ambassador for Christ. Yet when God gave the command, Ananias put aside his hesitation and chose simple obedience.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God often accomplishes great things through ordinary believers rather than famous leaders. Instead of sending a well-known apostle to pray for Saul and disciple him, God chose Ananias. Everyday servants who follow the Lord faithfully behind the scenes leave a lasting mark in God's kingdom.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God also made it clear that Saul would face deep hardship for His name. Suffering would become God's classroom to build Saul's character, teach him humility, and give him deeper grace. Those difficult trials prepared him to bring Christ's mercy to a broken and hurting world.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is God asking you to obey Him in a quiet way that nobody else might notice?",
+    "How might the hard times you face help you show mercy to others?"
+   ],
+   "prayer": "Lord, help us to trust You when Your plans surprise us. Give us willing hearts to obey quietly behind the scenes, even when we feel ordinary. Use our difficult seasons to teach us humility and make us gentle instruments of Your love. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "Simple Obedience",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/harvest-daily-devotional-11-or-11-or-03-1230866.html"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "A Chosen Instrument",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-september-12-2020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 44009010,
+   "end": 44009019,
+   "ref": "Acts 9:10-19",
+   "ranges": [
+    [
+     44009010,
+     44009019
+    ]
+   ],
+   "title": "The Lord Hears the Broken Heart",
+   "key_verse": [
+    44009011,
+    44009011
+   ],
+   "reflect": [
+    {
+     "text": "When Saul sat blind in Damascus and began to pray, heaven noticed immediately. God heard him the very moment he reached out. This brings deep comfort to anyone whose heart is heavy. Even when fear or sorrow leaves us with only sighs and tears, God understands what our trembling spirits are trying to say.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We sometimes worry that our prayers are too weak or broken to make a difference. Yet God does not look for proud displays, royal pomp, or high-sounding words. As Charles Spurgeon observed, \"prayer is the falling of a tear.\" The Lord catches our tears like treasures, and the quiet groans of a hurting soul are heard in heaven.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "You do not need a dramatic sign from the sky to know your prayers are accepted. God does not forget the cry of the humble; He truly loves to hear it. Our weakest prayers lean upon Christ and rise straight to the throne of grace, kept safely in God's memory.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What keeps you from praying honestly when you feel weak or brokenhearted?",
+    "How does knowing that God treasures your quiet sighs change the way you pray today?"
+   ],
+   "prayer": "Lord, thank You that You hear our prayers the moment we call on You. When words fail us and we can only offer tears or sighs, remind us that You are listening with love. Teach us to come to You in humility, trusting that Christ carries our prayers to Your throne. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 3",
+     "on": "Acts 9:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

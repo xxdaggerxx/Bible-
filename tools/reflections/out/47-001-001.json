@@ -1,0 +1,66 @@
+{
+ "id": "47-001-001",
+ "title": "Paul Greets the Corinthians",
+ "refs": [
+  "2 Corinthians 1:1-2"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 47001001,
+   "end": 47001002,
+   "ref": "2 Corinthians 1:1-2",
+   "ranges": [
+    [
+     47001001,
+     47001002
+    ]
+   ],
+   "title": "Grace and Peace for Every Believer",
+   "key_verse": [
+    47001002,
+    47001002
+   ],
+   "reflect": [
+    {
+     "text": "Growing in faith can often feel slow. We stumble and face setbacks along the way, but God promises to finish the work He began in our lives. The Apostle Paul understood this when writing to Corinth. Even though the church there was struggling and relationships were strained and painful, Paul still opened his letter by speaking words of grace and peace to them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Grace means God's undeserved kindness and favor, shown most clearly in sending Jesus Christ to rescue sinners. Through trusting in Jesus, we also receive true peace with God. This is not a fragile, temporary break from conflict. It is a lasting peace that will never fade away or be broken.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Knowing that we have this lasting peace changes how we live. Since God has welcomed us into His family through Christ, our response is to dedicate our whole lives to loving and serving Him each day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that your peace with God is permanent bring you comfort during difficult times?",
+    "What is one way you can dedicate your life to serving God today?"
+   ],
+   "prayer": "Father, thank you for your grace in sending Jesus to rescue us. We are grateful that the peace we have with you is secure and everlasting. Please help us to trust your work in our lives and give ourselves fully to serving you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Grace and Peace from the Father and the Son",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/grace-and-peace-from-the-father-and-the-son"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

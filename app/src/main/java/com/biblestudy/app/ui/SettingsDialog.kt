@@ -18,11 +18,14 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
@@ -66,6 +69,7 @@ fun SettingsDialog(
     var meaningsOpen by remember { mutableStateOf(false) }
     var confirmClearStats by remember { mutableStateOf(false) }
     var removing by remember { mutableStateOf<String?>(null) }
+    var addingOnline by remember { mutableStateOf(false) }
     var picked by remember { mutableStateOf<List<android.net.Uri>>(emptyList()) }
     val pickBible = rememberLauncherForActivityResult(ActivityResultContracts.OpenMultipleDocuments()) { uris -> picked = uris }
     val context = LocalContext.current
@@ -97,12 +101,14 @@ fun SettingsDialog(
                 Group("Reading")
                 Choices("Page", PageTheme.entries, vm.theme, { it.label }) { vm.theme = it }
                 Choices("Font", TextFont.entries, vm.textFont, { it.label }) { vm.changeTextFont(it) }
+                Choices("Text size", com.biblestudy.app.model.TextSize.entries, vm.textSize, { it.label }) { vm.changeTextSize(it) }
                 Choices("Line spacing", LineSpacing.entries, vm.lineSpacing, { it.label }) { vm.lineSpacing = it }
                 Choices("Layout", listOf(false, true), vm.paragraphMode, { if (it) "Paragraphs" else "Verse per line" }) { vm.changeParagraphs(it) }
                 Toggle("Verse numbers", null, vm.verseNumbers) { vm.changeVerseNumbers(it) }
                 Toggle("Mark word differences", "When two versions are side by side", vm.markDifferences) { vm.markDifferences = it }
-                Toggle("Words of Jesus in red", "In the KJV, BSB and WEB", vm.redLetters) { vm.redLetters = it }
+                Toggle("Words of Jesus in red", "In every version, imported ones too", vm.redLetters) { vm.redLetters = it }
                 Toggle("Section headings", "Headings and parallel-passage links from the BSB", vm.showHeadings) { vm.showHeadings = it }
+                Toggle("Chapter at a glance", "A short card under the header: what's happening, who and where, the key verse", vm.showGlance) { vm.showGlance = it }
                 Choices(
                     "New panels open in", listOf<String?>(null) + BibleRepository.ALL.map { it.code }, vm.newPanelVersion,
                     { it ?: "Same version" },
@@ -112,8 +118,16 @@ fun SettingsDialog(
                     TextButton(onClick = { confirmClearStats = true }) { Text("Clear reading statistics\u2026") }
                 }
 
+                Group("Bible aids")
+                Toggle("Hard words explained", "A dotted line under hard and old words; tap one for its meaning", vm.hardWords) { vm.hardWords = it }
+                // Bible aids (AID-10): marked the same way; each can be switched off.
+                Toggle("People & places", "Who someone was, or where a place is, from a dotted line under the name", vm.aidNames) { vm.aidNames = it }
+                Toggle("Customs & feasts", "Jewish customs, feasts and holy days explained", vm.aidCustoms) { vm.aidCustoms = it }
+                Toggle("Symbols & numbers", "What a symbol or number stands for, where the Bible uses it so", vm.aidSymbols) { vm.aidSymbols = it }
+                Toggle("Points to Christ", "A dotted gold line under Old Testament verses that point to Jesus; tap one to see where it's fulfilled", vm.aidChrist) { vm.aidChrist = it }
+
                 Group("Pen & ink")
-                Toggle("Draw with finger", "Off: fingers scroll and tap; only the pen draws", vm.fingerDraw) { vm.fingerDraw = it }
+                Toggle("Draw with finger", "On: one finger draws, two fingers scroll. Off: only the pen draws", vm.fingerDraw) { vm.fingerDraw = it }
                 Choices("S Pen button", SideButton.entries, vm.sideButton, { it.label }) { vm.sideButton = it }
                 Choices("Eraser", listOf(false, true), vm.partialEraser, { if (it) "Partial" else "Whole strokes" }) { vm.partialEraser = it }
                 Toggle("Snap highlighter to words", "Highlights follow the lines of text", vm.snapHighlights) { vm.snapHighlights = it }
@@ -155,33 +169,140 @@ fun SettingsDialog(
                 Toggle("Link panels", "Panels scroll together, verse by verse", vm.linkPanels) { vm.linkPanels = it }
 
                 Group("Verse details")
-                Toggle("Verse details in a panel", "Tapping a verse shows it beside the text. Off: in a window", vm.verseInPanel) { vm.verseInPanel = it }
+                Toggle("Verse details in a panel", "Tapping a verse shows it beside the text. Off: in a pop-up (simplest)", vm.verseInPanel) { vm.verseInPanel = it }
                 Toggle("Compare versions", "Show the verse in every version when it opens", vm.compareVersions) { vm.compareVersions = it }
+
+                Group("AI chat (online)")
+                Toggle("AI chat", "The chat bubble and Ask AI buttons. Off: the app never goes online", vm.chat.enabled) { vm.chat.changeEnabled(it) }
+                if (vm.chat.enabled) Matches("AI chat", "API key", "Claude", "sites", "websites", "search") {
+                    AiChatSettings(vm)
+                }
 
                 Group("Bibles")
                 // The version manager (BIB-5) and importing (BIB-4).
                 Matches("Bibles", "versions", "import a Bible", "translations", *BibleRepository.ALL.map { it.code + " " + it.name }.toTypedArray()) {
                 for (v in BibleRepository.ALL) {
-                    val size = remember(v.code) { BibleRepository.fileOf(context, v).length() }
+                    val size = remember(v.code, vm.onlineArrivals) { BibleRepository.fileOf(context, v).length() }
                     Row(Modifier.fillMaxWidth().padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
                         Column(Modifier.weight(1f)) {
                             Text("${v.code} \u2014 ${v.name}")
+                            if (v.online > 0) {
+                                // An online Bible (BIB-12): how much is on the tablet, and saving it all.
+                                val saved = remember(v.code, vm.onlineArrivals) { vm.onlineSaved(v.code) }
+                                val progress = vm.onlineDownloads[v.code]
+                                val source = when (v.online) { com.biblestudy.app.data.Esv.ID -> "Crossway"; com.biblestudy.app.data.Nlt.ID -> "Tyndale"; else -> "YouVersion" }
+                                Text(
+                                    when {
+                                        progress != null -> "Saving for offline\u2026 ${(progress * 100).toInt()}%"
+                                        saved != null && saved.first >= saved.second -> "Online, from $source \u00b7 saved on this tablet, works offline"
+                                        saved != null -> "Online, from $source \u00b7 ${saved.first} of ${saved.second} chapters on this tablet"
+                                        else -> "Online, from $source"
+                                    },
+                                    style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.primary,
+                                )
+                                if (progress != null) androidx.compose.material3.LinearProgressIndicator(progress = { progress }, modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp))
+                            }
                             Text(
                                 (if (size > 0) "%.1f MB \u00b7 ".format(size / 1e6) else "") + v.copyright,
                                 style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                                maxLines = 3, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                             )
+                        }
+                        if (v.online > 0) {
+                            if (v.code in vm.onlineDownloads) TextButton(onClick = { vm.stopSavingForOffline(v.code) }) { Text("Stop") }
+                            else if (vm.onlineSaved(v.code)?.let { it.first < it.second } == true) TextButton(onClick = { vm.saveForOffline(v.code) }) { Text("Save for offline") }
                         }
                         if (v.imported) TextButton(onClick = { removing = v.code }) { Text("Remove") }
                         else Text("Built in", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.outline)
                     }
                 }
-                OutlinedButton(onClick = { runCatching { pickBible.launch(arrayOf("*/*")) } }, enabled = !vm.importing) {
-                    Text(if (vm.importing) "Importing\u2026" else "Import a Bible\u2026")
+                // Online Bibles (BIB-12): versions that can't be built in, read from YouVersion.
+                OutlinedButton(onClick = { addingOnline = true; vm.loadOnlineBibles() }, modifier = Modifier.padding(bottom = 4.dp)) {
+                    Text("Add an online Bible\u2026")
                 }
                 Text(
-                    "USFM files (or a .zip of them), OSIS XML, or this app's own database. Only import versions you have the right to use.",
+                    "NIV, ESV, NLT, NASB, Amplified and more, read online from YouVersion (the ESV from Crossway, the NLT from Tyndale). Each chapter is kept on this tablet once read, so it opens instantly next time, also offline. Every feature works with them.",
                     style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
                 )
+                // How long downloaded chapters stay, and clearing them (1.19).
+                if (BibleRepository.ALL.any { it.online > 0 }) {
+                    Choices("Keep downloaded chapters", CACHE_DAYS, vm.cacheDays, { if (it == 0) "Always" else "$it days" }) { vm.changeCacheDays(it) }
+                    Text(
+                        "Chapters you haven't read for this long are removed and download again when you read them. Bibles saved for offline always stay.",
+                        style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                    )
+                    var clearing by remember { mutableStateOf(false) }
+                    OutlinedButton(onClick = { clearing = true }, modifier = Modifier.padding(vertical = 4.dp)) { Text("Clear downloaded text\u2026") }
+                    if (clearing) AlertDialog(
+                        onDismissRequest = { clearing = false },
+                        title = { Text("Clear downloaded text?") },
+                        text = { Text("The text of every online Bible is removed from this tablet, including Bibles saved for offline. Your notes, highlights and ink stay. Chapters download again when you read them, so you'll need the internet.") },
+                        confirmButton = { TextButton(onClick = { clearing = false; vm.clearOnlineCache() }) { Text("Clear") } },
+                        dismissButton = { TextButton(onClick = { clearing = false }) { Text("Cancel") } },
+                    )
+                }
+                if (com.biblestudy.app.BuildConfig.NLT_KEY.isEmpty() || vm.nltKey.isNotEmpty()) {
+                    var nlt by remember { mutableStateOf(vm.nltKey) }
+                    OutlinedTextField(
+                        value = nlt, onValueChange = { nlt = it; vm.changeNltKey(it) }, singleLine = true,
+                        label = { Text("NLT API key (Tyndale)") },
+                        supportingText = { Text(if (com.biblestudy.app.BuildConfig.NLT_KEY.isEmpty()) "For the NLT: from api.nlt.to" else "Leave empty to use the one built in") },
+                        modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
+                    )
+                }
+                if (com.biblestudy.app.BuildConfig.ESV_KEY.isEmpty() || vm.esvKey.isNotEmpty()) {
+                    var esv by remember { mutableStateOf(vm.esvKey) }
+                    OutlinedTextField(
+                        value = esv, onValueChange = { esv = it; vm.changeEsvKey(it) }, singleLine = true,
+                        label = { Text("ESV API key (Crossway)") },
+                        supportingText = { Text(if (com.biblestudy.app.BuildConfig.ESV_KEY.isEmpty()) "For the ESV: from api.esv.org" else "Leave empty to use the one built in") },
+                        modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
+                    )
+                }
+                if (com.biblestudy.app.BuildConfig.YOUVERSION_KEY.isEmpty() || vm.youVersionKey.isNotEmpty()) {
+                    var key by remember { mutableStateOf(vm.youVersionKey) }
+                    OutlinedTextField(
+                        value = key, onValueChange = { key = it; vm.changeYouVersionKey(it) }, singleLine = true,
+                        label = { Text("YouVersion app key") },
+                        supportingText = { Text(if (com.biblestudy.app.BuildConfig.YOUVERSION_KEY.isEmpty()) "Needed for online Bibles: from platform.youversion.com" else "Leave empty to use the one built in") },
+                        modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
+                    )
+                }
+                OutlinedButton(onClick = { runCatching { pickBible.launch(arrayOf("*/*")) } }, enabled = !vm.importing) {
+                    Text(if (vm.importing) vm.importStatus ?: "Importing\u2026" else "Import a Bible\u2026")
+                }
+                Text(
+                    "USFM files (or a .zip of them), OSIS XML, or this app's own database. Word studies, words of Jesus in red and paragraphs work in it too. Only import versions you have the right to use.",
+                    style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                )
+                }
+
+                Group("Sync")
+                // Notes on all the user's devices, through their own Google Drive (SYNC-1).
+                val signIn = rememberLauncherForActivityResult(ActivityResultContracts.StartIntentSenderForResult()) { r ->
+                    if (r.resultCode == android.app.Activity.RESULT_OK) vm.onSyncSignIn(r.data) else vm.onSyncSignIn(null)
+                }
+                val launchSignIn: (android.content.IntentSender) -> Unit = { sender ->
+                    signIn.launch(androidx.activity.result.IntentSenderRequest.Builder(sender).build())
+                }
+                Toggle(
+                    "Sync with Google Drive",
+                    when {
+                        !vm.syncOn -> "Your notes, ink, highlights, pictures, bookmarks and sketch pages on all your devices, through your own Google Drive. Each device keeps its own panels and settings."
+                        vm.syncError != null -> vm.syncError
+                        vm.syncing -> "Syncing\u2026"
+                        else -> listOfNotNull(
+                            vm.syncAccount,
+                            if (vm.lastSync > 0) "last synced " + java.text.DateFormat.getTimeInstance(java.text.DateFormat.SHORT).format(java.util.Date(vm.lastSync)) else null,
+                        ).joinToString(" \u00b7 ").ifEmpty { "On" }
+                    },
+                    vm.syncOn,
+                ) { on -> if (on) vm.turnOnSync(launchSignIn) else vm.turnOffSync() }
+                if (vm.syncOn) Matches("Sync now", "Google Drive", "sign in") {
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(vertical = 4.dp)) {
+                        if (vm.syncNeedsSignIn) Button(onClick = { vm.turnOnSync(launchSignIn) }) { Text("Sign in again") }
+                        OutlinedButton(onClick = { vm.syncNow(announce = true) }, enabled = !vm.syncing, modifier = Modifier.testTag("syncNow")) { Text("Sync now") }
+                    }
                 }
 
                 Group("Backup")
@@ -214,7 +335,7 @@ fun SettingsDialog(
 
                 Group("About")
                 Matches("About", "version", "credits", "licences") {
-                Text("Ink & Word, version ${BuildConfig.VERSION_NAME}. Works completely offline.")
+                Text("Ink & Word, version ${BuildConfig.VERSION_NAME}. Works offline; only online Bibles and the AI chat use the internet.")
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(vertical = 4.dp)) {
                     TextButton(onClick = { versions = true }) { Text("About these versions") }
                     TextButton(onClick = onAbout) { Text("Credits") }
@@ -231,6 +352,7 @@ fun SettingsDialog(
         }
     }
     if (versions) VersionsDialog { versions = false }
+    if (addingOnline) OnlineBiblesDialog(vm) { addingOnline = false }
     if (meaningsOpen) {
         AlertDialog(
             onDismissRequest = { meaningsOpen = false },
@@ -349,6 +471,9 @@ private fun Toggle(title: String, detail: String?, checked: Boolean, onChange: (
     }
 }
 
+/** Choices for how long online Bibles' chapters are kept, in days (0 = always). */
+private val CACHE_DAYS = listOf(7, 30, 90, 365, 0)
+
 @Composable
 private fun <T> Choices(title: String, options: List<T>, selected: T, label: (T) -> String, onPick: (T) -> Unit) =
     Matches(title, *options.map(label).toTypedArray()) {
@@ -367,3 +492,93 @@ private fun displayName(context: android.content.Context, uri: android.net.Uri):
             if (c.moveToFirst()) c.getString(0) else null
         }
     }.getOrNull() ?: uri.lastPathSegment?.substringAfterLast('/') ?: "file"
+
+/** The AI chat's key and the sites it may search (AI-4, AI-5). */
+@Composable
+private fun AiChatSettings(vm: StudyViewModel) {
+    val chat = vm.chat
+    var key by remember { mutableStateOf("") }
+    var sites by remember(chat.sites.toList()) { mutableStateOf(chat.sites.joinToString("\n")) }
+    Column(Modifier.fillMaxWidth().padding(vertical = 6.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        Text(
+            if (chat.apiKey.isBlank()) "No Claude API key yet." else "Claude API key saved (ends \u2026${chat.apiKey.takeLast(4)}).",
+            style = MaterialTheme.typography.bodyMedium,
+        )
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            OutlinedTextField(
+                value = key, onValueChange = { key = it }, singleLine = true,
+                label = { Text(if (chat.apiKey.isBlank()) "API key" else "New API key") },
+                visualTransformation = androidx.compose.ui.text.input.PasswordVisualTransformation(),
+                modifier = Modifier.weight(1f),
+            )
+            TextButton(onClick = { chat.changeKey(key); key = "" }, enabled = key.isNotBlank()) { Text("Save key") }
+            if (chat.apiKey.isNotBlank()) TextButton(onClick = { chat.changeKey("") }) { Text("Forget key") }
+        }
+        Row(Modifier.fillMaxWidth().clickable { chat.changeOnlySites(!chat.onlySites) }, verticalAlignment = Alignment.CenterVertically) {
+            Column(Modifier.weight(1f)) {
+                Text("Only search my sites")
+                Text("Off: the whole web, with your sites searched first", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+            }
+            androidx.compose.material3.Switch(checked = chat.onlySites, onCheckedChange = { chat.changeOnlySites(it) })
+        }
+        Text("Your sites, one per line. ${if (chat.onlySites) "The AI answers only from these." else "The AI searches these first."}", style = MaterialTheme.typography.bodyMedium)
+        OutlinedTextField(
+            value = sites, onValueChange = { sites = it },
+            minLines = 4, maxLines = 10,
+            modifier = Modifier.fillMaxWidth().testTag("chatSites"),
+        )
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            TextButton(onClick = { chat.changeSites(sites.lines()) }) { Text("Save sites") }
+            TextButton(onClick = { chat.changeSites(com.biblestudy.app.data.AiChat.DEFAULT_SITES) }) { Text("Use the suggested sites") }
+        }
+    }
+}
+
+/**
+ * The Bibles YouVersion offers (BIB-12), to add as online Bibles. Ones already added are ticked.
+ */
+@Composable
+private fun OnlineBiblesDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
+    val list = vm.onlineBibles
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Add an online Bible") },
+        text = {
+            Column(Modifier.heightIn(max = 520.dp).verticalScroll(rememberScrollState())) {
+                Text(
+                    "Read online from YouVersion. Chapters download as you read them and stay on this tablet. Show its copyright with any text you share.",
+                    style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                )
+                when {
+                    vm.onlineListError != null -> {
+                        Text(vm.onlineListError!!, color = MaterialTheme.colorScheme.error, modifier = Modifier.padding(vertical = 8.dp))
+                        TextButton(onClick = { vm.loadOnlineBibles() }) { Text("Try again") }
+                    }
+                    list == null -> Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(vertical = 12.dp)) {
+                        androidx.compose.material3.CircularProgressIndicator(Modifier.size(20.dp), strokeWidth = 2.dp)
+                        Text("Looking up the Bibles\u2026", modifier = Modifier.padding(start = 12.dp))
+                    }
+                    else -> for (info in list) {
+                        val added = BibleRepository.ALL.any { it.online == info.id }
+                        Row(
+                            Modifier.fillMaxWidth().padding(vertical = 4.dp).testTag("online-${info.code}"),
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            Column(Modifier.weight(1f)) {
+                                Text(info.title)
+                                Text(
+                                    info.code + if (info.books.size < 66) " \u00b7 ${info.books.size} books" else "",
+                                    style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                                )
+                            }
+                            if (added) Icon(androidx.compose.material.icons.Icons.Filled.Check, contentDescription = "Added")
+                            else TextButton(onClick = { vm.addOnlineBible(info) }) { Text("Add") }
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = { TextButton(onClick = onDismiss) { Text("Done") } },
+    )
+}
+

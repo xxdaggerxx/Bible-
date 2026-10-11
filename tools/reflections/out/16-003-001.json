@@ -1,0 +1,80 @@
+{
+ "id": "16-003-001",
+ "title": "The Builders of the Walls",
+ "refs": [
+  "Nehemiah 3:1-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 16003001,
+   "end": 16003032,
+   "ref": "Nehemiah 3:1-32",
+   "ranges": [
+    [
+     16003001,
+     16003032
+    ]
+   ],
+   "title": "Rebuilding Together Behind the Broad Wall",
+   "key_verse": [
+    16003008,
+    16003008
+   ],
+   "reflect": [
+    {
+     "text": "In Nehemiah 3, we see people from all walks of life working side by side. Goldsmiths, perfume makers, priests, and rulers stood shoulder to shoulder to repair the broken wall. Instead of arguing or complaining, they united behind God's mission. When we put aside selfish bickering and work together as team players, God strengthens our churches and families to accomplish great things.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "The builders fortified the city as far as the broad wall. God calls His people to maintain a clear boundary between the church and the sinful ways of the world. Obeying God's commands does not lock us up. As Charles Spurgeon wrote, \"we walk at liberty\" when we keep His ways. God's truth gives us a secure place to walk in close friendship and prayer with Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Along the wall lay the king's garden. This brings to mind how Christ's agony in the garden of Gethsemane redeemed us from the curse of sin. Today, our own hearts and the church are gardens belonging to the King. God calls us to tend our inner lives, pulling out sinful weeds and inviting the Lord to bring fruitful life to what was once broken down.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you be a better team player in your church or home to help build up God's work?",
+    "Are there worldly habits or sinful weeds you need God to clear out of your heart?"
+   ],
+   "prayer": "Lord, thank You for calling us to work together in love to build up Your people. Help us to keep a clear boundary from the world and walk freely in Your commands. Tend our hearts by Your Spirit so our lives may flourish as a garden for Your glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 12",
+     "on": "Nehemiah 3:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 20",
+     "on": "Nehemiah 3:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Jack Graham",
+     "work": "Power Point - Aug. 23, 2006",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-aug-23-2006-1417506.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

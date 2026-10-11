@@ -1,0 +1,87 @@
+{
+ "id": "18-036-001",
+ "title": "Elihu Describes God’s Power",
+ "refs": [
+  "Job 36:1-33"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18036001,
+   "end": 18036033,
+   "ref": "Job 36:1-33",
+   "ranges": [
+    [
+     18036001,
+     18036033
+    ]
+   ],
+   "title": "The Mighty God Who Despises No One",
+   "key_verse": [
+    18036005,
+    18036005
+   ],
+   "reflect": [
+    {
+     "text": "Elihu stepped forward claiming he had more to say on God's behalf. We are called not to hide God's truth, but to share it gently with others. Yet Elihu showed pride when he claimed his words were completely free from error. He failed to listen carefully and wrongly assumed Job's pain came from personal sin. Real wisdom does not boast or speak rashly. It stays humble, listens to those who came before us, and uses its voice to bless instead of harm.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Even with his faults, Elihu spoke a beautiful truth: God is mighty, yet he despises no one. Because God is infinite, he never overlooks a single person he has made. People often push away the weak or needy, but God chooses to be the protector and savior of the friendless. When we come to him in quiet prayer, we can know that the One who has all strength is listening to our smallest whisper.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Elihu also looked up at the sky to remind Job of God's wonder. We often treat rain and wind as simple daily nuisances, but the clouds, thunder, and lightning are guided by God's hand. Watching the power of a storm shows us how small we are compared to the Almighty. Seeing his control over nature quiets our proud debates and turns our hearts to worship.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When others are walking through difficult seasons, are you quick to listen with humility before you speak?",
+    "How does knowing that God never despises or overlooks you bring peace to your heart today?"
+   ],
+   "prayer": "Lord God, thank you that in all your great strength you never overlook the weak or needy. Forgive us for the times we speak proudly or rush to judge others without truly listening. Open our eyes to your majesty in creation, and help us speak of your kindness with humble hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 12",
+     "on": "Job 36:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 36:5",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Elihu's Arrogance",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/elihus-arrogance"
+    },
+    "D4": {
+     "author": "David Mathis",
+     "work": "The Wonders of His Weather: Sensing God’s Majesty in the Storm",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-wonders-of-his-weather"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -63,6 +63,7 @@ class InkStroke(
         lineAnchored: Boolean = this.lineAnchored,
         font: String = this.font,
         width: Float = this.width,
+        verse: Int = this.verse,
     ) = InkStroke(id, layerId, version, book, chapter, region, verse, highlighter, color, width, points, lineAnchored, font)
 
     fun withPoints(p: FloatArray) = copyAs(points = p)
@@ -73,19 +74,38 @@ class InkStroke(
 /** The typeface for the Bible text (READ-3). */
 enum class TextFont(val label: String) { BOOK("Gentium Book"), SERIF("Serif"), SANS("Sans-serif") }
 
+/** The Bible text's size (READ-3), as a percentage of the normal size. Larger text wraps onto more lines. */
+enum class TextSize(val label: String, val percent: Int) {
+    SMALL("Small", 85), NORMAL("Normal", 100), LARGE("Large", 120), LARGER("Larger", 145), LARGEST("Largest", 175);
+
+    companion object {
+        fun of(percent: Int) = entries.firstOrNull { it.percent == percent } ?: NORMAL
+    }
+}
+
 /**
  * How the text is laid out: the font, verses as paragraphs, and verse numbers shown (READ-3,
  * READ-6). Ink on the words records the layout it was drawn in ("BOOK", "BOOK|p|n"), so it can
  * be moved onto another layout's lines.
  */
-data class TextStyleKey(val font: TextFont = TextFont.BOOK, val paragraphs: Boolean = false, val numbers: Boolean = true) {
-    fun encode() = font.name + (if (paragraphs) "|p" else "") + (if (!numbers) "|n" else "")
+data class TextStyleKey(
+    val font: TextFont = TextFont.BOOK,
+    val paragraphs: Boolean = false,
+    val numbers: Boolean = true,
+    /** The text size, in percent (READ-3): "BOOK|s145". */
+    val size: Int = 100,
+) {
+    fun encode() = font.name + (if (paragraphs) "|p" else "") + (if (!numbers) "|n" else "") + (if (size != 100) "|s$size" else "")
+
+    /** How much bigger the text is than at the normal size. */
+    val scale: Float get() = size / 100f
 
     companion object {
         fun decode(s: String) = TextStyleKey(
             runCatching { TextFont.valueOf(s.substringBefore('|')) }.getOrDefault(TextFont.BOOK),
             paragraphs = "|p" in s,
             numbers = "|n" !in s,
+            size = Regex("\\|s(\\d+)").find(s)?.groupValues?.get(1)?.toIntOrNull() ?: 100,
         )
     }
 }
@@ -274,6 +294,8 @@ data class Sketch(
     val created: Long,
     /** A full-screen margin note for its verse (MRG-15): shown shrunk beside the verse. */
     val note: Boolean = false,
+    /** The same on every device, for sync (SYNC-1): "ready-<n>" for ready-made pages, otherwise random. */
+    val uid: String = "",
 ) {
     val book get() = SKETCH_BOOK + id.toInt()
 
@@ -291,6 +313,9 @@ data class Sketch(
 
         fun isSketch(book: Int) = book >= SKETCH_BOOK
         fun idOf(book: Int) = (book - SKETCH_BOOK).toLong()
+
+        /** A shared id for a new page: ready-made pages ([created] 1 to 999) have the same one on every device. */
+        fun newUid(created: Long) = if (created in 1..999) "ready-$created" else java.util.UUID.randomUUID().toString().replace("-", "")
     }
 }
 

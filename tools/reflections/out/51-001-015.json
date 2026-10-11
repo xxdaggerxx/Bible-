@@ -1,0 +1,73 @@
+{
+ "id": "51-001-015",
+ "title": "The Supremacy of the Son",
+ "refs": [
+  "Colossians 1:15-23"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 51001017,
+   "end": 51001018,
+   "ref": "Colossians 1:17-18",
+   "ranges": [
+    [
+     51001017,
+     51001018
+    ]
+   ],
+   "title": "\"He Is the Head of the Body\"",
+   "key_verse": [
+    51001018,
+    51001018
+   ],
+   "reflect": [
+    {
+     "text": "We often need reminders of who Jesus really is. The Bible gives Him great titles because He meets all our spiritual needs. He conquered sin, made peace through His sacrifice, and rose first from the dead to lead us through suffering into eternal life. Because He existed before all things and holds everything together, we can hold on to Him in any circumstance.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Since Jesus holds all things together, He alone is the true head of the church. Sometimes human leaders or religious groups demand blind loyalty and try to control people. But true Christian servanthood respects human dignity. Healthy faith allows us to think, ask honest questions, and serve God willingly rather than out of pressure.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Good leaders never take the place of Christ. They always point our worship and trust away from themselves and back to Him. Jesus alone guides His people and deserves first place in everything. When life feels uncertain, we do not need to depend on human control, because our Lord holds the whole world in His hands.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there people or leaders you look to for security instead of trusting Jesus as your true head?",
+    "How does knowing that Jesus holds all things together give you peace in difficult circumstances?"
+   ],
+   "prayer": "Lord Jesus, You are before all things, and You hold our lives together. Keep our eyes fixed on You as the true head and guide of the church. Help us to follow You freely and place our deepest trust in You alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Blind Loyalty Is Not Servanthood",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/blind-loyalty-is-not-servanthood"
+    },
+    "D2": {
+     "author": "John UpChurch",
+     "work": "There's a Title for That",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-october-3-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

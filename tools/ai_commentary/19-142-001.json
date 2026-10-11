@@ -1,0 +1,107 @@
+{
+ "book": 19,
+ "chapter": 142,
+ "first": 1,
+ "last": 7,
+ "ref": "Psalms 142",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David hides in a dark cave while running for his life from King Saul. Instead of giving up in fear, he calls out loudly and honestly to the Lord. He asks for mercy as a humble beggar rather than demanding help as a right.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "David tells God the whole story of his pain without holding anything back. He does this not because God lacks knowledge, but because pouring out his heart brings relief and peace. Bringing our troubles directly to God keeps our worries from eating away at our hearts.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "David feels completely worn out and crushed by sorrow. Even though he does not know which way to go, he finds deep comfort that God sees every step of his path. His enemies have hidden traps for him along the road, but God knows where each danger lies.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "In an ancient court of law, a defender stood at a person's right side to speak up for them. David looks to his right side and finds nobody willing to help him or even admit knowing him. He feels utterly deserted by earthly friends and has nowhere left on earth to run.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "When all human help fails, David lifts his eyes and speaks directly to God. He declares that the Lord Himself is his secure shelter and his portion, which means his greatest treasure and reward. David trusts God to care for him not just in the future, but right here in this present life.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "David admits that he has reached rock bottom and has no strength left. King Saul and his army have great power, while David and his few men are weak and helpless on their own. He uses his total weakness as a plea for God to step in and rescue him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "David describes his cave and his heavy distress as a dark prison. He begs to be set free so that he can spend his life praising God, not just living in comfort. He looks forward to the day when other believers will crowd around him to rejoice and thank God for His generous kindness.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Some older Catholic writers explained the prison in this verse as purgatory, a place where souls are purified before entering heaven.",
+     "sources": [
+      "https://biblehub.com/commentaries/gill/psalms/142.htm"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [
+  "v. 1: removed sources ['Spurgeon']",
+  "v. 2: removed sources ['Spurgeon']",
+  "v. 3: removed sources ['Spurgeon']",
+  "v. 4: removed sources ['Spurgeon']",
+  "v. 5: removed sources ['Spurgeon']",
+  "v. 6: removed sources ['Spurgeon']",
+  "v. 7: removed sources ['Spurgeon']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

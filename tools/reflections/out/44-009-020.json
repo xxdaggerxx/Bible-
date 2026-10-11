@@ -1,0 +1,74 @@
+{
+ "id": "44-009-020",
+ "title": "Saul Preaches at Damascus",
+ "refs": [
+  "Acts 9:20-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44009020,
+   "end": 44009022,
+   "ref": "Acts 9:20-22",
+   "ranges": [
+    [
+     44009020,
+     44009022
+    ]
+   ],
+   "title": "Proving That Jesus Is the Christ",
+   "key_verse": [
+    44009022,
+    44009022
+   ],
+   "reflect": [
+    {
+     "text": "When Saul met Jesus, his life completely flipped. Right away, he went into the synagogues to preach that Jesus is the Son of God. The people listening were completely amazed. They knew Saul had come to Damascus to arrest believers and drag them away. Now, we see this former persecutor openly lifting up the very name he had tried to destroy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Saul's world-changing ministry began after the quiet, brave obedience of Ananias. The Holy Spirit gave Saul spiritual power that went far beyond his normal human ability. Day by day, he grew steadily stronger. He skillfully wove Old Testament promises together with their fulfillment, proving to his listeners that Jesus is indeed the promised Messiah.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Even when faced with mockery and dangerous plots against his life, Saul did not back down. He was no longer hunting down believers. Instead, he lived as a willing prisoner of Christ, showing you and me what it looks like to follow Jesus with an unstoppable faith.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How has following Jesus shifted your own purpose and daily direction?",
+    "When have you relied on God's strength to speak about Jesus even when people around you were surprised or opposed?"
+   ],
+   "prayer": "Lord God, thank You for the power of Your grace to turn a life completely around. Fill us with Your Holy Spirit so that we can speak about Jesus with courage and clarity. Help us to stand firm in truth no matter what opposition we face. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "A Forgotten Hero",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-june-17-2024.html"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 236: Acts 9:10–22",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-236-acts-9-1022.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

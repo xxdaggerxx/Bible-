@@ -1,0 +1,76 @@
+{
+ "id": "40-005-013",
+ "title": "Salt and Light",
+ "refs": [
+  "Matthew 5:13-16",
+  "Mark 9:49-50",
+  "Luke 14:34-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40005013,
+   "end": 40005016,
+   "ref": "Matthew 5:13-16; Mark 9:49-50; Luke 14:34-35",
+   "ranges": [
+    [
+     40005013,
+     40005016
+    ],
+    [
+     41009049,
+     41009050
+    ],
+    [
+     42014034,
+     42014035
+    ]
+   ],
+   "title": "Shining Light in the Real World",
+   "key_verse": [
+    40005016,
+    40005016
+   ],
+   "reflect": [
+    {
+     "text": "Jesus gives his followers an amazing name. He calls us the light of the world, which is the same title he gave to himself. The main purpose of light is very simple: it drives away darkness just by shining. It does not need loud noise, catchy slogans, or big shows to do its work. Instead, light works quietly and naturally draws people's attention. Christ places us in regular workplaces, schools, and neighborhoods so we can be visible beacons. Our faithful daily choices speak a clear direction to others even before we say a word.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Following Jesus is not meant to be kept safe within the quiet walls of church culture. Our faith actually grows stronger when we take it out into the real world, even when that feels risky. Jesus showed us this pattern by spending time with people outside religious comfort zones. Shining our light means actively building friendships, showing love, and serving the neighbors and coworkers we meet every day.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where has God placed you during the week where your quiet actions can point others to him?",
+    "How can you step outside your comfort zone to serve a neighbor or coworker this week?"
+   ],
+   "prayer": "Lord, thank you for placing us in our neighborhoods, schools, and jobs to reflect your light. Help us not to keep our faith locked inside safe and comfortable spaces. Give us courage to step out, befriend others, and show your love through quiet, faithful service. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "The Light of the World",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-may-24-2023.html"
+    },
+    "D2": {
+     "author": "Jim Liebelt",
+     "work": "Living Out Faith in the Real World",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/living-out-faith-in-the-real-world-homeword-october-13.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

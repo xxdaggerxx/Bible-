@@ -1,0 +1,147 @@
+{
+ "id": "40-026-036",
+ "title": "Jesus Prays at Gethsemane",
+ "refs": [
+  "Matthew 26:36-46",
+  "Mark 14:32-42",
+  "Luke 22:39-46"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40026039,
+   "end": 40026039,
+   "ref": "Matthew 26:39",
+   "ranges": [
+    [
+     40026039,
+     40026039
+    ]
+   ],
+   "title": "\"Not as I Will, but as You Will\"",
+   "key_verse": [
+    40026039,
+    40026039
+   ],
+   "reflect": [
+    {
+     "text": "In the quiet darkness of the olive garden, Jesus fell facedown in deep distress. It is completely natural for us to tell God our honest feelings when facing painful or overwhelming trials. Jesus stepped away from His companions to be alone with God in deep humility. He did not come proudly. Instead, He approached God as a tender Father, trusting in a child's claim on a Father's love and protection.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    },
+    {
+     "text": "Jesus honestly asked if there was any other way to avoid this suffering, yet He never stopped trusting the Father. He prayed repeatedly and placed His own wishes entirely into God's hands. As Charles Spurgeon wrote, \"Yield, and God yields.\" God always knows what is best to give and what to hold back. When we walk through difficult days, Christ invites us to bring our cries to God, laying down our own plans to trust His perfect wisdom.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy burden or fear do you need to bring honestly to your heavenly Father today?",
+    "In what area of your life is God asking you to lay down your own desires and trust His will?"
+   ],
+   "prayer": "Father, thank You that I can come to You with all my sorrow and weakness. Teach me to pray with honesty and true humility. When my path is hard, help me trust Your good purposes and gladly say, \"Not as I will, but as You will.\" Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 22",
+     "on": "Matthew 26:39",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "Lynette Kittle",
+     "work": "The Garden of Surrender",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/the-garden-of-surrender.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40026036,
+   "end": 40026046,
+   "ref": "Matthew 26:36-46; Mark 14:32-42; Luke 22:39-46",
+   "ranges": [
+    [
+     40026036,
+     40026046
+    ],
+    [
+     41014032,
+     41014042
+    ],
+    [
+     42022039,
+     42022046
+    ]
+   ],
+   "title": "Watch and Pray in Gethsemane",
+   "key_verse": [
+    42022046,
+    42022046
+   ],
+   "reflect": [
+    {
+     "text": "In Gethsemane, Jesus bore the crushing weight of human sin and divine judgment. His inner struggle was so intense that His sweat fell to the earth like great drops of blood. This blood flowed freely before any whip struck Him or nails pierced His hands, demonstrating His willing love. While His closest friends fell asleep and left Him alone in His sorrow, the Savior offered Himself up completely for us.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "While Jesus wrestled in earnest prayer, His disciples slept. We are often in the greatest danger of spiritual slumber not during hard trials, but when life feels calm and easy. When troubles fade, we easily let down our guard and forget to watch. Jesus warned that a careless heart soon falls into temptation, making continuous prayer essential for our souls.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Although the Father's answer meant drinking the bitter cup of suffering, prayer brought Jesus quiet peace and resolve. He rose to meet His betrayer with courage. Prayer shows us that God's purpose is supreme. When we stay watchful in prayer, God gives us the strength we need to face our hardest hours without giving up.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Has a season of comfort or ease caused you to become spiritually drowsy and neglect prayer?",
+    "How does the depth of Jesus' willing suffering for you motivate you to stand guard against sin?"
+   ],
+   "prayer": "Lord Jesus, thank You for willingly bearing the crushing agony of our sin on that dark night. Forgive us for the times we grow spiritually lazy and fall asleep. Keep our hearts alert and prayerful, so that we may stand firm against temptation and follow You with courage. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 23",
+     "on": "Luke 22:44",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 23",
+     "on": "Luke 22:46",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Greg Laurie",
+     "work": "Jesus Prays",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-april-10-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

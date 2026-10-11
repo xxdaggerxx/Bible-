@@ -1,0 +1,81 @@
+{
+ "id": "27-010-001",
+ "title": "Daniel’s Vision by the Tigris",
+ "refs": [
+  "Daniel 10:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 27010001,
+   "end": 27010021,
+   "ref": "Daniel 10:1-21",
+   "ranges": [
+    [
+     27010001,
+     27010021
+    ]
+   ],
+   "title": "Greatly Loved in the Battle",
+   "key_verse": [
+    27010019,
+    27010019
+   ],
+   "reflect": [
+    {
+     "text": "When Daniel prayed and humbled himself, God heard him from the very first day. Yet Daniel waited three weeks for the visible answer to arrive. A heavenly messenger was held up in an unseen spiritual battle until Michael came to assist him. An apparent delay in prayer is not a denial from God, so we can keep praying with patience.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Twice the heavenly messenger reminded Daniel that he was precious and deeply loved by God. We might sometimes doubt our own worth, but the cross proves how much God cares for us. As Charles Spurgeon reminded believers, you were \"bought with the precious blood of Christ.\" God does not treat us like strangers. He gave His only Son for us and welcomed us as His children.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because God loves us so completely, we do not need to live in fear. We often feel afraid when we focus on difficult circumstances instead of looking toward God. Even when we face mysteries or troubles we cannot understand, we can rest safely in His hands. Knowing how much He loves us gives us peace and the strength to endure.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When an answer to prayer seems delayed, what helps you remember that God has already heard you?",
+    "How can focusing on God's love give you peace when your circumstances feel overwhelming?"
+   ],
+   "prayer": "Father, thank You for hearing our prayers the moment we call on You. When answers seem slow in coming, give us the patience to keep trusting You. Remind us that we are deeply loved in Christ, and grant us Your peace and strength today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 2",
+     "on": "Daniel 10:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Daniel 10:19",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Greg Laurie",
+     "work": "A Behind-the-Scenes Look",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/harvest-daily-03-or-14-or-05-1315174.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

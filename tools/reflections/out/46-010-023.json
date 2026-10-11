@@ -1,0 +1,114 @@
+{
+ "id": "46-010-023",
+ "title": "All to God’s Glory",
+ "refs": [
+  "1 Corinthians 10:23-33"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46010031,
+   "end": 46010031,
+   "ref": "1 Corinthians 10:31",
+   "ranges": [
+    [
+     46010031,
+     46010031
+    ]
+   ],
+   "title": "\"Do It All to the Glory of God\"",
+   "key_verse": [
+    46010031,
+    46010031
+   ],
+   "reflect": [
+    {
+     "text": "Bringing glory to God must be our highest goal across every area of life. God can use any ordinary believer in meaningful ways that go far beyond human expectations. When we place our ambitions and everyday choices under His direction, any honest job or routine chore can become an active witness for Jesus. Being faithful in our small, everyday duties allows God to accomplish His greater purposes through us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Living for God's glory also protects our spiritual integrity. When we reach a big goal or experience success, our spiritual guard often drops. Resting on past victories can easily open the door to temptation, moral compromise, and spiritual decline. We must stay alert and continue walking carefully before God, keeping His honor as our central focus every single day.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you turn your ordinary daily chores or work into a witness for Jesus today?",
+    "Are you resting on past spiritual victories rather than staying watchful right now?"
+   ],
+   "prayer": "Lord, help us to live for Your honor in every decision we make today. Keep our hearts humble and watchful, especially when things go well. May our everyday work point others toward You. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "Useful to the Lord",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-september-7-2026.html"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "Beware of Heights!",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-mar-29-2010-11628123.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 46010023,
+   "end": 46010033,
+   "ref": "1 Corinthians 10:23-33",
+   "ranges": [
+    [
+     46010023,
+     46010033
+    ]
+   ],
+   "title": "Seeking the Good of Many",
+   "key_verse": [
+    46010033,
+    46010033
+   ],
+   "reflect": [
+    {
+     "text": "The apostle Paul was driven by a deep desire to help people find salvation in Christ. Wherever he went and whatever happened to him, this remained his constant goal. Making tents beside other workers, sitting in a dark prison cell, speaking before a judge, or living under house arrest, he looked for every opportunity to share the good news. This single passion guided how he lived each day.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because Paul cared so much about others being saved, he was willing to let go of his own comfort and preferences whenever his conscience allowed it. He did not chase after his own profit, but sought the good of many people. Throughout history, other believers have shown this same devotion, giving up their comforts and even shortening their lives to tell others about Jesus. We are called to hold our own rights loosely so that others might come to know the Savior.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What personal comforts or preferences are you holding onto that might get in the way of helping others?",
+    "How can you put the spiritual good of someone else ahead of your own convenience this week?"
+   ],
+   "prayer": "Father, give us a genuine love for the people around us who need to know Jesus. Teach us to yield our own comfort and rights so we can serve them well. Use our lives to guide others toward Your grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Corinthians 10:33",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,81 @@
+{
+ "id": "10-018-019",
+ "title": "David Mourns for Absalom",
+ "refs": [
+  "2 Samuel 18:19-33"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10018019,
+   "end": 10018033,
+   "ref": "2 Samuel 18:19-33",
+   "ranges": [
+    [
+     10018019,
+     10018033
+    ]
+   ],
+   "title": "Grief for a Rebellious Son",
+   "key_verse": [
+    10018033,
+    10018033
+   ],
+   "reflect": [
+    {
+     "text": "Absalom rebelled against his father, and that rebellion cost him his life so the kingdom could be preserved. David loved his son deeply, but his past failure to discipline Absalom left a painful mark. When the messengers arrived with news of Absalom's death, David wept in agony, wishing he had died in his son's place. Grieving someone we love is especially painful when broken relationships and conflict were left unresolved.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "This tragedy reminds us not to let anger linger in our relationships, but to resolve conflicts daily and share God's good news while people are still alive to hear it. In the passage, Ahimaaz outran the Cushite by choosing the level plain. Charles Spurgeon noted that \"straightforward makes the best runner.\" Instead of laboring in our own strength or taking roundabout paths, we run best when we take the plain path of faith and go straight to God in prayer.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "David's sorrow also warns us about the danger of blind spots. Personal love must never cause us to overlook sin or excuse rebellion against God's authority.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an unresolved conflict in your life that you need to settle today?",
+    "Are you taking the direct path of running straight to God in prayer with your needs?"
+   ],
+   "prayer": "Lord, help us not to let personal feelings blind us to sin or keep us from doing what is right. Give us grace to resolve conflicts quickly and speak your truth to those around us. Teach us to run straight to you in faith whenever we are weighed down. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 31",
+     "on": "2 Samuel 18:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "David Laments Absalom’s Death",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/david-laments-absaloms-death"
+    },
+    "D3": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - April 17",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-april-17-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

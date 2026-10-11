@@ -1,0 +1,66 @@
+{
+ "id": "44-007-020",
+ "title": "The Birth and Adoption of Moses",
+ "refs": [
+  "Acts 7:20-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44007020,
+   "end": 44007022,
+   "ref": "Acts 7:20-22",
+   "ranges": [
+    [
+     44007020,
+     44007022
+    ]
+   ],
+   "title": "Powerful in Speech and Action",
+   "key_verse": [
+    44007022,
+    44007022
+   ],
+   "reflect": [
+    {
+     "text": "When God called Moses, Moses did not feel ready. He focused on his own struggles and tangled words. Moses felt so inadequate that he fled to an obscure place and resisted what God asked him to do. Yet years later, Stephen looked back at Moses' life and described him as a man who was powerful in speech and action.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In hindsight, Moses' words carried lasting weight because God was the one working through them. God used Moses to deliver freedom, offer justice, and bring life to His people. Moses did not need natural eloquence or self-sufficiency. He only needed to rely on the Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We often react the same way when God nudges us outside our comfort zone. We quickly point out our limitations, feeling like we lack the right skills or words. But God does not demand our perfection. He simply asks for our willingness to trust Him and obey.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What personal weaknesses make you hesitate when God asks you to step out in faith?",
+    "How can you choose simple obedience today instead of focusing on what you lack?"
+   ],
+   "prayer": "Lord, forgive us when we focus on our weaknesses instead of Your strength. Help us not to shrink back when You call us into unfamiliar places. Give us willing hearts to trust You and step forward in obedience.",
+   "sources": {
+    "D1": {
+     "author": "Suzie Eller",
+     "work": "I Can't Find the Words",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-november-26-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

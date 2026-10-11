@@ -1,0 +1,74 @@
+{
+ "id": "19-007-001",
+ "title": "I Take Refuge in You",
+ "refs": [
+  "Psalms 7:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19007001,
+   "end": 19007017,
+   "ref": "Psalms 7:1-17",
+   "ranges": [
+    [
+     19007001,
+     19007017
+    ]
+   ],
+   "title": "Taking Refuge in the Righteous Judge",
+   "key_verse": [
+    19007017,
+    19007017
+   ],
+   "reflect": [
+    {
+     "text": "When others hurt us or spread false accusations, it brings deep pain. In Psalm 7, David faced specific lies that someone brought against him. Though David knew he was a sinner in general before God, he was completely innocent of these particular charges. Instead of lashing out in revenge, he turned his pain and his reputation over to the Lord, trusting the righteous Judge to take action.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This invites us to examine our own walk with God. Having integrity means being wholehearted, living with an undivided heart that seeks to obey God. If you are striving to walk faithfully before Him, you do not have to panic over what critics say about your character. You can speak the truth calmly, and then trust God to vindicate you, which means He will show you were right in His own time.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "David also shows us that evil will not win. Wicked schemes often recoil on those who invent them, like someone falling into a trap they dug for someone else. Our hope for justice does not rest on good luck or wishful thinking, but on God's holy character. Even when evil causes terrible damage in this world, God will settle every wrong at the final judgment. Knowing He is righteous allows us to finish our prayers with thankful praise.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When people misunderstand or falsely accuse you, do you try to fight back, or do you entrust your reputation to God?",
+    "How does knowing that God will settle all wrongs at the final judgment give you comfort today?"
+   ],
+   "prayer": "Lord God, thank You for being our shield and our righteous judge. When people accuse us falsely, help us to keep a whole heart before You and leave our defense in Your hands. Remind us that You see everything and will make all things right in the end. We give You our trust and our thankful praise today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 7:8-9",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Psalms 7–8",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/leviticus-7-psalms-7-8-proverbs-22-1-thess-1/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

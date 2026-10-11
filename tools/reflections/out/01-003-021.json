@@ -1,0 +1,67 @@
+{
+ "id": "01-003-021",
+ "title": "The Expulsion from Paradise",
+ "refs": [
+  "Genesis 3:21-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1003021,
+   "end": 1003024,
+   "ref": "Genesis 3:21-24",
+   "ranges": [
+    [
+     1003021,
+     1003024
+    ]
+   ],
+   "title": "Consequences and the Way Home",
+   "key_verse": [
+    1003024,
+    1003024
+   ],
+   "reflect": [
+    {
+     "text": "When Adam and Eve sinned, death entered God's good creation for the first time. Sin always brings painful, long-term consequences that we do not foresee. Our first parents tried to hide their guilt with leaves they stitched together, but human effort cannot cover our wrongs. Instead, God provided clothes of animal skins for them. This showed that covering sin requires the shedding of innocent blood, pointing forward to Jesus, the Lamb who takes away the sin of the world.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "After this, God sent them out of the garden and placed angels and a flaming sword to guard the tree of life. Yet God did not leave humanity without hope. He prepared a way of holiness that leads back to true life and removes the curse. As F. B. Meyer noted, this highway is kept open for anyone who will come. Jesus Himself walks this road with us as our companion, guiding us safely until we arrive home.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways do you sometimes try to cover your own mistakes instead of bringing them honestly to God?",
+    "How does knowing that Jesus walks beside you encourage you on the path of following Him?"
+   ],
+   "prayer": "Lord God, thank You for covering our guilt through Jesus, who gave His life for us. Help us to face the consequences of our choices with trust in Your mercy. Keep our feet on Your holy path each day, and walk with us until we reach our eternal home with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 3:24",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "Long-Term Effects",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-daily-devotion-oct-26-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

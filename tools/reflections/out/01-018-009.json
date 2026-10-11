@@ -1,0 +1,66 @@
+{
+ "id": "01-018-009",
+ "title": "Sarah Laughs at the Promise",
+ "refs": [
+  "Genesis 18:9-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1018009,
+   "end": 1018015,
+   "ref": "Genesis 18:9-15",
+   "ranges": [
+    [
+     1018009,
+     1018015
+    ]
+   ],
+   "title": "Is Anything Too Hard for the Lord?",
+   "key_verse": [
+    1018014,
+    1018014
+   ],
+   "reflect": [
+    {
+     "text": "Abraham and Sarah faced a situation that felt completely impossible. They were both very old, and by human rules, Sarah could no longer have children. When she overheard the Lord promise that she would have a son within a year, she laughed in disbelief. We also face moments in life when our own strength and human effort are not enough to solve our problems.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God heard Sarah and asked if anything was too difficult for Him. As author Sharon Jaynes notes, God is entirely sufficient and is never bound by natural laws or human limitations. What looks hopeless to our eyes is never too hard for God's power.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Sarah felt afraid and tried to deny her reaction, but God knew the truth. When we find ourselves facing situations we cannot handle, God does not ask us to pretend we are strong. Instead, He invites us to lay down our doubts and trust completely in His ability to keep His word.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What situation in your life right now feels too difficult for your own strength?",
+    "How can you hand your doubts over to God and trust His power instead of your own limits?"
+   ],
+   "prayer": "Lord, we often face needs and troubles that we cannot handle on our own. Forgive us when we look at our limitations and doubt what You can do. Please help us surrender our fears and rest in the truth that nothing is too hard for You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Sharon Jaynes",
+     "work": "Is Anything Too Hard For The Lord?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/is-anything-too-hard-for-the-lord-girlfriends-in-god-august-19-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

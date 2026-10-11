@@ -1,0 +1,122 @@
+{
+ "id": "19-011-001",
+ "title": "In the LORD I Take Refuge",
+ "refs": [
+  "Psalms 11:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19011005,
+   "end": 19011005,
+   "ref": "Psalms 11:5",
+   "ranges": [
+    [
+     19011005,
+     19011005
+    ]
+   ],
+   "title": "\"The LORD Tests the Righteous\"",
+   "key_verse": [
+    19011005,
+    19011005
+   ],
+   "reflect": [
+    {
+     "text": "When hard times come into our lives, we can remember that God has not abandoned us. Charles Spurgeon noted that trials come \"to prove and strengthen our graces.\" Just as a coach trains a young athlete, God allows trials to stretch our spiritual muscles. He wants our faith to take deep root, like a tree strengthened by blowing winds. While the enemy tempts us in order to make us fall, the Lord tests us to build our endurance, courage, and hope.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The verse also reminds us that the Lord carefully watches all people, and He hates the love of violence. The things we choose to watch and listen to shape who we are. Feeding on brutal entertainment can slowly harden our hearts, dull our compassion, and harm our closeness with God. Because the Lord cares about what shapes us, we need to protect our minds and our families from cultural influences that celebrate harm and cruelty.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How might a current trial or difficulty be helping your faith grow stronger?",
+    "What entertainment or media habits might you need to change so your heart remains tender toward God?"
+   ],
+   "prayer": "Heavenly Father, thank You for using hard times to train our faith and build our endurance. Help us to trust Your loving hand when we are tested. Guard our hearts and homes from violence, and keep us walking closely with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 3",
+     "on": "Psalms 11:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 11:5",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "Dr. James Dobson",
+     "work": "Killing Time",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-devotions-for-parents-by-dr-james-dobson/dr-dobsons-parenting-devotional-july-5.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19011001,
+   "end": 19011007,
+   "ref": "Psalms 11:1-7",
+   "ranges": [
+    [
+     19011001,
+     19011007
+    ]
+   ],
+   "title": "The Upright Will See His Face",
+   "key_verse": [
+    19011007,
+    19011007
+   ],
+   "reflect": [
+    {
+     "text": "In Psalm 11, David decides to take refuge in the Lord even when danger surrounds him and foundations seem shaken. The psalm concludes with a comforting promise: the upright will see God's face. Seeing God's face means enjoying genuine fellowship, or close friendship, with Him. True worship is not about going through empty religious motions or outward church habits. Real worship requires a genuine encounter with God that takes place deep within an honest heart.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "We easily risk losing that closeness when we accept the ways of the world around us. Small compromises, hidden sins, and little dishonesties slowly damage our spiritual integrity. God invites us to come to Him in complete openness, hiding nothing. When we are honest about our sins and turn away from them, we break through the barriers to true communion. In that transparency, we discover the peace of His presence and truly see His face.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there any hidden compromises or dishonest habits you need to bring into God's light today?",
+    "How can you move past empty religious motions to truly seek God's presence in your heart?"
+   ],
+   "prayer": "Lord God, You are righteous and love justice. Show us any areas in our lives where we have compromised or settled for empty routine. Give us the courage to confess our sins honestly, and grant us the joy of walking in fellowship with You. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Mary Southerland",
+     "work": "The Real Deal",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-oct-30-2006-1442436.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

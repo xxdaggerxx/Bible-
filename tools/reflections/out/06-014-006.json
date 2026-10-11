@@ -1,0 +1,116 @@
+{
+ "id": "06-014-006",
+ "title": "Caleb Requests Hebron",
+ "refs": [
+  "Joshua 14:6-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 6014012,
+   "end": 6014012,
+   "ref": "Joshua 14:12",
+   "ranges": [
+    [
+     6014012,
+     6014012
+    ]
+   ],
+   "title": "\"Give Me This Hill Country\"",
+   "key_verse": [
+    6014012,
+    6014012
+   ],
+   "reflect": [
+    {
+     "text": "At eighty-five years old, Caleb was not looking for an easy, comfortable spot. Instead of asking for a quiet valley, he boldly asked for the rugged hill country where giants lived and cities were strongly defended. In the Christian walk, there is no retirement from spiritual growth. Caleb chose not to settle into a passive retirement. Instead of dwelling on the past, he looked straight forward to what God had in store.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Hebron was a special place of sacred promise and deep fellowship with God. Caleb actively embraced this formidable challenge because he loved the Lord. His boldness did not just appear in old age. It came from a disciplined lifetime of following God with all his heart. Believers of every age are called to stay energetic in their faith, always ready to answer God's call to serve.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What challenge or step of faith might God be asking you to embrace right now instead of choosing the easy path?",
+    "How can you keep looking forward in your spiritual life rather than resting on past achievements?"
+   ],
+   "prayer": "Lord, help us to follow You with our whole hearts each day. Give us courage to step into difficult challenges rather than settling for an easy life. Keep our faith active and fresh as we look forward to what You will do in us. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Caleb's Can-Do Attitude, Part Two",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/caleb's-can-do-attitude-part-two"
+    },
+    "D3": {
+     "author": "Greg Laurie",
+     "work": "Looking Forward",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/harvest-daily-with-greg-laurie-oct-13-2006-1435829.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 6014006,
+   "end": 6014015,
+   "ref": "Joshua 14:6-15",
+   "ranges": [
+    [
+     6014006,
+     6014015
+    ]
+   ],
+   "title": "Caleb Wholly Followed the Lord",
+   "key_verse": [
+    6014014,
+    6014014
+   ],
+   "reflect": [
+    {
+     "text": "As people grow older, it is easy to lose heart and fear that physical energy, clear thinking, and usefulness will simply fade away. Yet the Bible reminds us that even when our bodies grow weak, our inner spirit can be renewed each day by God. Those who wait on the Lord find fresh strength for daily service, quiet fellowship, and every battle. The drain of passing years is met by God's endless supply of grace, His kindness to us that we do not earn. There is no reason why our usefulness or fruitfulness for God should decline with age.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The secret to Caleb's long life of strength was that he wholly followed the Lord. Even so, Caleb did not rely on his own power to win Hebron. He spoke with sweet humility, knowing that victory depended entirely on God being with him. As F. B. Meyer observed, the strongest people are those who recognize their own helplessness and \"put their weakness at the disposal of God's might.\" God promises that His grace is enough for us, because His strength is made perfect when we admit we are weak.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you feel weak or worn down today?",
+    "How can offering your weakness to God help you rely more on His strength instead of your own?"
+   ],
+   "prayer": "Lord, thank You that Your strength is made perfect in our weakness. When our energy fails or our bodies feel tired, renew our hearts day by day. Help us to follow You with humility, trusting Your grace to carry us through every season of life. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joshua 14:11",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

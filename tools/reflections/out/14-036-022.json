@@ -1,0 +1,66 @@
+{
+ "id": "14-036-022",
+ "title": "The Proclamation of Cyrus",
+ "refs": [
+  "2 Chronicles 36:22-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14036022,
+   "end": 14036023,
+   "ref": "2 Chronicles 36:22-23",
+   "ranges": [
+    [
+     14036022,
+     14036023
+    ]
+   ],
+   "title": "The Promise of True Restoration",
+   "key_verse": [
+    14036023,
+    14036023
+   ],
+   "reflect": [
+    {
+     "text": "When Israel was forced out of the Promised Land into exile, it looked back to an older tragedy. Long before, humanity was cast out of the Garden of Eden because of disobedience. God's law exposes our sin and proves that we cannot rescue ourselves. True restoration can only happen when we put our wholehearted trust in God's promises.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God proved faithful to his word through the prophet Jeremiah by stirring the heart of King Cyrus. Cyrus issued a royal decree allowing the exiles to return and rebuild God's house in Jerusalem. Even so, this homecoming was incomplete. The people continued to struggle with impenitence, which means refusing to turn from sin, and that delayed their spiritual renewal.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The prophets had promised a full and lasting restoration that no earthly ruler could ever deliver. That complete renewal finally began when Jesus Christ came into the world. Through Jesus, God welcomes us home, forgives our sins, and transforms our hearts from the inside out.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God keeps his promises give you hope when you face the consequences of sin?",
+    "In what ways are you trusting Jesus to bring true spiritual renewal to your heart today?"
+   ],
+   "prayer": "Lord God, thank you for being faithful to your promises even when we fail. We admit that we cannot fix our own sinful hearts. Help us to turn away from sin and put our whole trust in Jesus Christ, who brings us true and lasting life with you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Restoration Fulfilled?",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/restoration-fulfilled"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

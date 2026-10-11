@@ -1,0 +1,107 @@
+{
+ "book": 19,
+ "chapter": 124,
+ "first": 1,
+ "last": 8,
+ "ref": "Psalms 124",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The psalm opens with a sudden call for the entire nation of Israel to speak up. God's people are told to confess openly that their survival happened only because the Lord stood with them. Remembering that God took their side gives believers every reason to praise Him together.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "https://enduringword.com/bible-commentary/psalm-124/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many modern scholars hold that this psalm was composed after the exile in Babylon rather than by David, noting late language features and ancient translations that omit David's name.",
+     "sources": [
+      "Adam Clarke",
+      "Keil & Delitzsch",
+      "https://biblehub.com/commentaries/ellicott/psalms/124.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The opening words are repeated to make God's people stop and honestly reflect on their past danger. Human enemies had risen up against them with cruel force. Israel could never have survived the assault unless the Lord Himself had taken their side and fought for them.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/psalm-124/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The enemies burned with fiery anger and wanted to wipe out God's people completely. Like a ravenous beast or an earthquake opening up, they would have swallowed Israel alive in an instant. Believers are kept safe only because the living God steps in and blocks the enemy's fury.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 5,
+   "meaning": "The danger is compared to a violent flash flood that bursts over its banks and sweeps away everything in its path. Without God's intervention, these proud and raging waters would have drowned their lives and their hope. The picture reminds God's people that no human power can stand against such overwhelming hostility without the Lord.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The song turns to joyful praise, thanking the Lord for not abandoning His people. The enemies are pictured as wild beasts whose teeth were ready to rip their catch to pieces. Just when destruction seemed certain, God snatched His people right out of the predator's jaws.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The psalm compares the soul to a weak little bird trapped inside a hunter's net. A trapped bird cannot break the cords on its own, but the Lord suddenly shattered the trap and let His people fly free. Believers can rejoice that God breaks every trap of sin, Satan, and hostile enemies.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes",
+    "https://learn.ligonier.org/devotionals/our-help-is-in-the-name-of-the-lord"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The song concludes with a bold declaration of faith for whatever trials lie ahead. True help does not come from human power or false gods, but from the personal character and strength of the Lord. Since He created both heaven and earth from nothing, He has all the power needed to guard His people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/psalm-124/"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "14-010-001",
+ "title": "Rebellion against Rehoboam",
+ "refs": [
+  "2 Chronicles 10:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14010001,
+   "end": 14010015,
+   "ref": "2 Chronicles 10:1-15",
+   "ranges": [
+    [
+     14010001,
+     14010015
+    ]
+   ],
+   "title": "The Danger of Arrogant Advice",
+   "key_verse": [
+    14010013,
+    14010013
+   ],
+   "reflect": [
+    {
+     "text": "Rehoboam became king, but he stepped into leadership without turning to God in prayer or preparing his heart to seek the Lord. When the people came asking him to lighten their heavy burdens, he had a choice to make. Instead of seeking God first, he asked others what he should do.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Older, experienced leaders urged the king to be kind, speak gently, and serve the people. But Rehoboam rejected their seasoned counsel. Instead, he listened to his arrogant peers, who told him to threaten the people with harsher demands and crueler punishments. His proud words provoked the northern tribes to rebel, fracturing the kingdom.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Rehoboam's downfall shows us how pride blinds our judgment and leads to ruin. As believers, we must be careful about where we seek advice. When we face big choices, we need to ensure that the counsel we accept truly aligns with God's Word.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Whom do you turn to for advice, and does their counsel align with God's Word?",
+    "In what areas of your life do you need to pause and pray rather than act out of pride?"
+   ],
+   "prayer": "Lord, protect our hearts from pride so that we are not led astray by poor advice. Teach us to seek You first in prayer whenever we face difficult decisions. Give us humble hearts to listen to wise counsel that honors Your truth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - May 24, 2009",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-may-24-2009-11603910.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

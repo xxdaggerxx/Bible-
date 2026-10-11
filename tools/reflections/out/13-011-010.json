@@ -1,0 +1,74 @@
+{
+ "id": "13-011-010",
+ "title": "David’s Mighty Men",
+ "refs": [
+  "1 Chronicles 11:10-47"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13011010,
+   "end": 13011047,
+   "ref": "1 Chronicles 11:10-47",
+   "ranges": [
+    [
+     13011010,
+     13011047
+    ]
+   ],
+   "title": "Standing Together for the King",
+   "key_verse": [
+    13011018,
+    13011018
+   ],
+   "reflect": [
+    {
+     "text": "David longed for a drink from the well of Bethlehem, a place tied to sweet memories of his youth. Three of his mighty men showed great courage by breaking through enemy lines to fetch that water for him. When they returned, David refused to drink it. He was not being ungrateful; instead, he poured the water out before the Lord to honor the sacrifice of men who had risked their lives. As F. B. Meyer notes, this reminds us of Jesus, who won the river of life for us at the cost of His own blood.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "David's kingdom grew strong because these mighty warriors gathered with one purpose around their chosen leader. Meyer observes that the church finds true unity in the same way, as each heart surrenders to Jesus as King. Rather than trying to serve God entirely on our own, we are called to keep rank, standing shoulder to shoulder with our brothers and sisters in Christ.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Like David, we need to recognize and value those who make selfless sacrifices for God's kingdom today. We can honor and uphold those in ministry by volunteering our time and through intercessory prayer, which means praying to God on behalf of others.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways can you stand shoulder to shoulder with other believers instead of trying to follow God on your own?",
+    "Who is serving God's kingdom near you that you can encourage this week through prayer or practical help?"
+   ],
+   "prayer": "Lord Jesus, thank You for giving Your life to bring us the water of eternal life. Teach us to keep rank together in love and serve You faithfully as our one true King. Show us how to support and pray for those who sacrifice to share Your good news with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 11:17",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Bible Pathway",
+     "work": "Bible Pathway - May 15",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-may-15-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

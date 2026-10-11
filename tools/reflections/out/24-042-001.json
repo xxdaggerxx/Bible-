@@ -1,0 +1,66 @@
+{
+ "id": "24-042-001",
+ "title": "A Warning against Going to Egypt",
+ "refs": [
+  "Jeremiah 42:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24042001,
+   "end": 24042022,
+   "ref": "Jeremiah 42:1-22",
+   "ranges": [
+    [
+     24042001,
+     24042022
+    ]
+   ],
+   "title": "Trusting God Instead of Worldly Security",
+   "key_verse": [
+    24042010,
+    24042010
+   ],
+   "reflect": [
+    {
+     "text": "After Jerusalem fell, the small group of people left behind felt terrified. They asked the prophet Jeremiah to pray and ask God what they should do. Throughout their history, God's people often made the mistake of turning to worldly powers like Egypt to feel secure. Now, in their distress, they were tempted to look for help in the very same place instead of leaning on the Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God gave them a clear and comforting answer. If they stayed in Judah, He promised to protect them, build them up, and show them mercy. But He also gave a strong warning. If they chose to run to Egypt, the very danger and destruction they feared would catch up with them there. Even after seeing God's word come true in the fall of Jerusalem, the people still clung to their fears instead of trusting Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We can easily fall into the same trap when life feels unsafe. It is tempting to rely on worldly things for security rather than trusting God's voice. We are called to walk by faith rather than sight, finding true peace in God's faithfulness that is now fully revealed in Jesus Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel anxious about the future, do you look to worldly comforts or do you rest in God's promises?",
+    "How does knowing God's faithfulness in Jesus help you stay calm and obey Him today?"
+   ],
+   "prayer": "Heavenly Father, forgive us for the times we run to worldly things for safety instead of trusting You. Teach us to walk by faith rather than by sight when our fears arise. Thank You for Your unchanging love and protection shown to us in Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Warning to those Left Behind",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/warning-those-left-behind"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

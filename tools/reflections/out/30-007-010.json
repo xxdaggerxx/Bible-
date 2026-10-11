@@ -1,0 +1,66 @@
+{
+ "id": "30-007-010",
+ "title": "Amaziah Accuses Amos",
+ "refs": [
+  "Amos 7:10-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 30007010,
+   "end": 30007017,
+   "ref": "Amos 7:10-17",
+   "ranges": [
+    [
+     30007010,
+     30007017
+    ]
+   ],
+   "title": "Standing Firm in Who God Made You",
+   "key_verse": [
+    30007015,
+    30007015
+   ],
+   "reflect": [
+    {
+     "text": "Religious leaders and the world around us often push people to fit into a common mold. They expect everyone to act the same way and meet certain institutional standards. When Amos spoke God's truth, the priest Amaziah told him to leave and go earn his living somewhere else. Amos did not look like an official prophet or have formal training, so the religious authorities tried to silence him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Instead of backing down, Amos stayed true to his background and his calling. He openly admitted that he was just a simple shepherd who took care of fig trees. He did not rely on professional credentials or titles. He simply trusted that the Lord had taken him from following the flock and sent him to speak.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We do not need to change our God-given uniqueness just to blend in with the crowd. God does not ask you to copy others to serve him. The church needs authentic believers who are willing to remain themselves and stand firm in what God has called them to do.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you ever tempted to change who you are just to fit in with other people's expectations?",
+    "How can you serve God faithfully today using the simple background and gifts he has already given you?"
+   ],
+   "prayer": "Lord, thank you for making each of us unique and calling us to follow you. Help us not to fear pressure from others or feel like we must fit into an artificial mold. Give us courage to stand firm, be authentic, and obey your voice wherever you place us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Just Be You - Today's Insight - February 2, 2021",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-february-2-2021.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,61 @@
+{
+ "id": "03-019-009",
+ "title": "Love Your Neighbor",
+ "refs": [
+  "Leviticus 19:9-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3019009,
+   "end": 3019018,
+   "ref": "Leviticus 19:9-18",
+   "ranges": [
+    [
+     3019009,
+     3019018
+    ]
+   ],
+   "title": "Loving Our Neighbor with Our Words",
+   "key_verse": [
+    3019018,
+    3019018
+   ],
+   "reflect": [
+    {
+     "text": "God calls us to love our neighbor and guard our speech. Spreading gossip or rumors does serious harm. As Charles Spurgeon pointed out, carrying tales spreads a \"threefold poison\" that hurts the speaker, the listener, and the person being talked about. Whether a story is true or false, God tells us not to pass it along. Instead of tearing down others to lift ourselves up, we ought to protect their good name. One day we will need mercy and patience from others, so we should give that same kindness to those around us today.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Loving others does not mean ignoring sin, but Scripture shows us the right way to address it. Instead of whispering behind someone's back, we are to speak to them directly and privately. Jesus gave us this example when he warned Peter with patience and prayer. Approaching a friend with a wise, gentle warning can rescue them from serious mistakes and keeps us from sharing in their wrongdoing.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a story or rumor about someone else that you need to stop repeating?",
+    "How can you follow Christ's gentle example when you need to talk to a friend about a mistake?"
+   ],
+   "prayer": "Lord, set a guard over our mouths so that we do not tear down others with gossip. Help us to treat the reputation of our neighbors as precious. Give us humble courage to speak truth with gentleness and love when a friend needs a brotherly warning. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 29",
+     "on": "Leviticus 19:16-17",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

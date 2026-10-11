@@ -1,0 +1,127 @@
+{
+ "id": "12-009-014",
+ "title": "Jehu Kills Joram and Ahaziah",
+ "refs": [
+  "2 Kings 9:14-29"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 12009022,
+   "end": 12009022,
+   "ref": "2 Kings 9:22",
+   "ranges": [
+    [
+     12009022,
+     12009022
+    ]
+   ],
+   "title": "\"How Can There Be Peace?\"",
+   "key_verse": [
+    12009022,
+    12009022
+   ],
+   "reflect": [
+    {
+     "text": "When King Joram asked if Jehu came in peace, Jehu made it clear that peace was impossible while evil continued. We often think of peace simply as quiet surroundings, steady work, and the absence of trouble. Yet true peace is much deeper than avoiding unpleasant things. As F. B. Meyer observed, we cannot have true peace while we hold onto unholy habits and worldly desires in our hearts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God also takes sin seriously in the world around us. Our culture often focuses only on helping people reform, but the Bible teaches retributive justice, which means punishing wrongdoing because justice requires it. Ahab's royal house was guilty of murder, false worship, and witchcraft. Jehu's actions fulfilled God's promise that evil would be answered. Believers are called to show personal mercy, but genuine forgiveness never cancels God's righteous justice.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Real peace with God cannot exist alongside compromises with sin. When we stop clinging to what displeases the Lord and surrender ourselves entirely to Him, His peace guards our hearts and minds.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you seeking genuine peace with God, or merely a quiet life free from trouble?",
+    "Is there any sin you need to let go of so you can enjoy God's peace?"
+   ],
+   "prayer": "Lord God, help us never to settle for a false peace that ignores sin. Teach us to love your righteous ways and respect your holy justice. We surrender our lives to you today through Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 9:22",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Naboth Avenged",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/naboth-avenged"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 12009014,
+   "end": 12009029,
+   "ref": "2 Kings 9:14-29",
+   "ranges": [
+    [
+     12009014,
+     12009029
+    ]
+   ],
+   "title": "Casting Your Burdens on the Lord",
+   "key_verse": [
+    12009025,
+    12009025
+   ],
+   "reflect": [
+    {
+     "text": "When Jehu spoke of God's judgment on Ahab, he remembered the solemn burden, or message, the Lord had announced years before. F. B. Meyer told a story about a traveler who was offered a lift in a wagon, but kept carrying his heavy pack on his back. The man explained that he did not want to trouble the driver with his luggage. Many believers do the very same thing. We trust God with our eternal souls, yet we keep trying to carry all our daily worries ourselves.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "If God has already lifted the enormous weight of our sin, He can certainly handle our everyday griefs and pressures. The struggles of family life, church work, and caring for others are placed in our lives by our Father. He allows these burdens so that we will learn hourly patience and faith by handing them straight back to Him. We can either drag them around until we wear out, or cast them on the Lord.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When you give your load to God in prayer, trust that He really takes it. Refuse the temptation to pick the worry back up. The Lord promises not only to carry your heavy problems, but also to hold you up through each day.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy burden are you carrying right now that you need to give to God?",
+    "How can you remind yourself to leave that worry in God's hands after you pray?"
+   ],
+   "prayer": "Heavenly Father, you have already carried our sins through the sacrifice of Jesus. Help us trust you with our everyday loads, heartaches, and pressures. Teach us to leave our burdens in your hands and rest in your strength. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 9:25",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "58-012-014",
+ "title": "A Call to Holiness",
+ "refs": [
+  "Hebrews 12:14-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58012014,
+   "end": 58012017,
+   "ref": "Hebrews 12:14-17",
+   "ranges": [
+    [
+     58012014,
+     58012017
+    ]
+   ],
+   "title": "Pursuing Peace and Holiness",
+   "key_verse": [
+    58012014,
+    58012014
+   ],
+   "reflect": [
+    {
+     "text": "Running the Christian race well means chasing after two essential things: peace with other people and personal holiness. Believers are called to be peacemakers because Jesus came to restore the harmony between people that was lost when sin entered the world. Even so, true peace must always rest on God's truth. We should never set aside His word just to keep from upsetting someone or avoiding an argument.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Along with seeking peace, we must strive for holiness. God is holy, which means He is completely pure and cannot tolerate evil or sin. Because of this, no one can see the Lord or enter His presence without holiness. This growth in holiness, called sanctification, does not happen all at once. It is a steady journey where we learn to put sin to death each day, while resting completely in Jesus as our righteousness.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a relationship where you need to seek peace while still standing firmly on God's truth?",
+    "What is one sin you need to put away today as you rest in Jesus?"
+   ],
+   "prayer": "Lord Jesus, thank You for restoring peace and sharing Your righteousness with us. Help us to pursue peace with everyone without compromising Your truth. Teach us to put sin to death day by day so that we may grow in holiness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Our Need of Peace and Holiness",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/our-need-of-peace-and-holiness"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

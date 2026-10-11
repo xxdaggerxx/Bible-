@@ -1,0 +1,66 @@
+{
+ "id": "32-001-011",
+ "title": "Jonah Cast into the Sea",
+ "refs": [
+  "Jonah 1:11-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 32001011,
+   "end": 32001017,
+   "ref": "Jonah 1:11-17",
+   "ranges": [
+    [
+     32001011,
+     32001017
+    ]
+   ],
+   "title": "Turning Back to God's Plan",
+   "key_verse": [
+    32001017,
+    32001017
+   ],
+   "reflect": [
+    {
+     "text": "Jonah tried to run away from God's command, but his escape led to a storm and the dark belly of a giant fish. When we choose our own desires rather than following the Lord's leading, we often find ourselves feeling trapped, confused, and overwhelmed. God has an intentional, meaningful calling for your life, even when what He asks you to do feels difficult or unpleasant.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We never have to carry out God's plan in our own strength. The Lord actively prepares and equips believers with everything needed to do His will. Even when we make mistakes and run away like Jonah, our story is not finished. God offers us second chances, and we can cry out to Him honestly in prayer from wherever we are.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Finding restoration—being brought back into a right relationship with God—requires letting go of our stubborn ways. When we commit our daily steps and our future direction back to the Lord, He kindly guides us forward into His good plans.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever felt overwhelmed or stuck after following your own desires instead of God's leading?",
+    "What step can you commit to the Lord today to walk in His direction?"
+   ],
+   "prayer": "Lord, forgive us for the times we run from Your call and choose our own way instead. Thank You that You offer second chances and hear our prayers even when we feel trapped. We commit our steps and our future to You today, trusting You to guide us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Fred Alberti",
+     "work": "Are You in the Belly of a Big Fish?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-may-2-2008-11574679.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

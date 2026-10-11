@@ -1,0 +1,66 @@
+{
+ "id": "26-037-015",
+ "title": "One Nation with One King",
+ "refs": [
+  "Ezekiel 37:15-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26037015,
+   "end": 26037028,
+   "ref": "Ezekiel 37:15-28",
+   "ranges": [
+    [
+     26037015,
+     26037028
+    ]
+   ],
+   "title": "One People Under One King",
+   "key_verse": [
+    26037019,
+    26037019
+   ],
+   "reflect": [
+    {
+     "text": "God told Ezekiel to take two sticks, one for Judah and one for Joseph, and hold them together as one piece of wood. This picture showed that God would heal the deep split in His kingdom. He promised to gather His scattered people from far away and bring them back to life in His presence.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Rescuing northern tribes that were lost among foreign nations pointed forward to something even greater. It foreshadowed God calling Gentiles, people who are not Jewish, to trust in Jesus Christ. Jesus is the King from David's family who rules and leads this united flock.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The gifts of this restored kingdom are for those who show lasting faith and obedience under King Jesus. In the church we see today, there are both genuine followers and nominal believers, people who are Christian in name only. God alone knows who truly belongs to His invisible family.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you following Jesus with sincere, lasting faith, or are you Christian only in name?",
+    "How does knowing that God gathers people from all backgrounds encourage your trust in Him?"
+   ],
+   "prayer": "Lord God, thank You for sending Jesus to gather us and unite us as Your people. Help us to follow our King with steady faith and willing obedience. Keep our hearts true to You as we live in Your presence each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "One Stick in God's Hand",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/one-stick-gods-hand"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

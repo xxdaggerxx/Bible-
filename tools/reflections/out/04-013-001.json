@@ -1,0 +1,66 @@
+{
+ "id": "04-013-001",
+ "title": "The Spies Explore Canaan",
+ "refs": [
+  "Numbers 13:1-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4013001,
+   "end": 4013024,
+   "ref": "Numbers 13:1-24",
+   "ranges": [
+    [
+     4013001,
+     4013024
+    ]
+   ],
+   "title": "Trusting God When Facing Change",
+   "key_verse": [
+    4013002,
+    4013002
+   ],
+   "reflect": [
+    {
+     "text": "God commanded Moses to send leaders from each tribe to explore the land of Canaan. God had already promised to give this land to the Israelites. Moses sent the scouts to inspect the cities, the people, and the soil, telling them to be brave and bring back some fruit. The scouts found great abundance, including a single branch with a cluster of grapes so large that two men had to carry it on a pole.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Whenever we face change or new challenges, people respond in very different ways. As Michael A. Youssef notes, people range from visionary believers to skeptics who demand proof. Even though the scouts saw the rich blessing of the land with their own eyes, fear of the obstacles ahead caused most of them to doubt God's word.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As believers, we are called to trust God's sovereignty—His supreme power and control over everything—and His faithfulness. We do not need a guarantee of easy success before we decide to obey Him. When we face big obstacles, we can move forward knowing God is trustworthy to fulfill what He has promised.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face an unfamiliar challenge, do you tend to trust God or demand proof before taking a step?",
+    "What obstacle in your life is tempting you to doubt God's faithfulness today?"
+   ],
+   "prayer": "Lord God, thank You for Your faithful promises to care for us. Forgive us when fear makes us doubt Your good plans. Help us to rest in Your sovereignty and trust You, even when we see obstacles in front of us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Michael A. Youssef, Ph.D.",
+     "work": "All Things Are Possible in God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-january-28-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,80 @@
+{
+ "id": "40-012-038",
+ "title": "The Sign of Jonah",
+ "refs": [
+  "Matthew 12:38-42",
+  "Luke 11:29-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40012038,
+   "end": 40012042,
+   "ref": "Matthew 12:38-42; Luke 11:29-32",
+   "ranges": [
+    [
+     40012038,
+     40012042
+    ],
+    [
+     42011029,
+     42011032
+    ]
+   ],
+   "title": "The Sign of Jonah",
+   "key_verse": [
+    40012039,
+    40012039
+   ],
+   "reflect": [
+    {
+     "text": "The religious leaders asked Jesus to show them a miraculous sign, but their request was not an honest search for truth. Jesus saw straight through it. Demanding more proof came from stubborn unbelief and a heart that loved sin. When someone refuses to turn away from sin, no amount of supernatural evidence will convince them.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus refused to perform miracles on demand. Instead, He pointed to the prophet Jonah. Just as Jonah was delivered after three days in the belly of the fish, Jesus would rise from the grave after three days in death. The bodily resurrection of Christ is the ultimate sign. It fully proves that He is the Son of God and confirms everything He taught.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus warned that the people of Nineveh and the Queen of the South will stand at the judgment and condemn those who reject Him. They listened when Jonah preached and when Solomon spoke wisdom, yet Jesus is far greater than both. Turning away from the risen Savior is not a lack of evidence, but a willful choice to stay in unbelief.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever catch yourself waiting for extra signs from God instead of trusting what He has already done in raising Jesus?",
+    "Is there any sin or stubbornness in your heart that keeps you from fully obeying Christ?"
+   ],
+   "prayer": "Lord Jesus, thank You for rising from the dead and giving us clear proof that You are the Son of God. Soften our hearts so we do not make excuses or demand extra signs. Help us to turn away from sin and trust You with all our heart.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "The Sign of Jonah",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/the-sign-of-jonah-one-year-devotions-for-men-september-14.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Sign of Jonah",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/sign-jonah"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

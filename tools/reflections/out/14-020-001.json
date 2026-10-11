@@ -1,0 +1,75 @@
+{
+ "id": "14-020-001",
+ "title": "War against Jehoshaphat",
+ "refs": [
+  "2 Chronicles 20:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14020001,
+   "end": 14020004,
+   "ref": "2 Chronicles 20:1-4",
+   "ranges": [
+    [
+     14020001,
+     14020004
+    ]
+   ],
+   "title": "Seeking God When Fear Strikes",
+   "key_verse": [
+    14020003,
+    14020003
+   ],
+   "reflect": [
+    {
+     "text": "King Jehoshaphat received terrifying news. A massive enemy alliance was marching toward Judah, leaving the people hopelessly outnumbered. Feeling alarmed was a completely natural human emotion in the face of such danger. Yet, instead of letting fear control his actions or trying to fix the problem by his own power, the king chose to turn toward God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This quick turn to God was not an accident. Turning to the Lord in sudden danger comes from habits formed over time in everyday life. Because Jehoshaphat practiced seeking God in regular struggles, his natural reflex during a crisis was prayer. He openly admitted his helplessness and led the entire nation to fast and look to the Lord together.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When we face situations that feel impossible, fear does not have to push us away from our faith. Instead, our alarm can become the very thing that anchors our trust in God. When we confess that we cannot handle life on our own and keep our eyes on Him, we can trust the Lord to deliver us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When sudden trouble catches you off guard, what is usually your very first reaction?",
+    "How can turning to God in small daily struggles help prepare you for bigger crises?"
+   ],
+   "prayer": "Lord, when frightening news catches us off guard, remind us not to rely on our own strength. Teach us to seek You faithfully in ordinary moments so that turning to You becomes our first reflex. We bring our helplessness to You and choose to trust in Your care today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Lysa TerKeurst",
+     "work": "Alarmed and Resolved at the Same Time",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-november-7-2019.html"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "Against All Odds",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-daily-devotion-mar-7-2008-11570120.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

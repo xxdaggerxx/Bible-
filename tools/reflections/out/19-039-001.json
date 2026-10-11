@@ -1,0 +1,124 @@
+{
+ "id": "19-039-001",
+ "title": "I Will Watch My Ways",
+ "refs": [
+  "Psalms 39:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19039012,
+   "end": 19039012,
+   "ref": "Psalms 39:12",
+   "ranges": [
+    [
+     19039012,
+     19039012
+    ]
+   ],
+   "title": "\"A Stranger with You\"",
+   "key_verse": [
+    19039012,
+    19039012
+   ],
+   "reflect": [
+    {
+     "text": "When we put our faith in God, this world no longer feels like our true home. Human life here passes quickly, like a breath on a cold morning or a shadow fading from a hillside. Our eyes are set on God's eternal city, so our hearts cannot settle down in a world that ignores Him. When Jesus lived on earth, people did not welcome Him. When we follow in His footsteps, our choices and speech will naturally seem strange to the people around us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Yet we do not travel through this life alone. David says he is a stranger with God, not a stranger to God. His grace has taken away the distance that once separated us from Him, welcoming us into close friendship. God Himself walks beside us as our constant companion and protector. Because the Father is with us on the road, we do not need to feel lonely. We can journey with peace and joy, living lightly and ready to step into our true home.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways does following Jesus make you feel like a foreigner in the world around you?",
+    "How does knowing that God walks beside you bring comfort when you feel out of place?"
+   ],
+   "prayer": "Father, thank You for walking with us through this passing world. Remind us each day that our true home is with You. When we feel like outsiders here, help us find quiet joy in Your presence. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 16",
+     "on": "Psalms 39:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 39:12",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19039001,
+   "end": 19039013,
+   "ref": "Psalms 39:1-13",
+   "ranges": [
+    [
+     19039001,
+     19039013
+    ]
+   ],
+   "title": "I Will Watch My Ways",
+   "key_verse": [
+    19039001,
+    19039001
+   ],
+   "reflect": [
+    {
+     "text": "As we walk through this world, we cannot afford to let down our guard. It is easy to assume we are safe from stumbling, but spiritual danger is always near. The path is slippery, and hidden traps lie waiting around every corner. Even ordinary blessings and daily joys can become occasions for temptation if we are careless. Reaching heaven will not happen through our own strength; it will be entirely the work of God's power and grace.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of this, we must watch our steps, our thoughts, and our words with great care. Someone carrying dangerous explosives would never walk close to an open flame. In the same way, we must avoid putting ourselves in places where temptation burns. Our daily actions are like sharp tools that require careful handling. We need to stay alert and keep our spiritual shield ready at all times.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Watching our ways does not mean trusting in our own willpower. True vigilance always goes hand in hand with prayer. Our honest cry must be for God to hold us up so that we do not fall. As we look to Him for help and guard our lives, the Holy Spirit guides our steps in ways that please the Lord.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your daily life are you most likely to let your guard down and slip into sin?",
+    "How can you combine careful watchfulness over your words and actions with prayer each morning?"
+   ],
+   "prayer": "Lord, hold us up today so that our feet do not slide into sin. Give us wisdom to guard our words, our thoughts, and our choices. Lead us by Your Holy Spirit and keep us safe until our journey ends. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 14",
+     "on": "Psalms 39:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

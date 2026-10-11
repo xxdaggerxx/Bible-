@@ -1,0 +1,75 @@
+{
+ "id": "07-014-001",
+ "title": "Samson’s Marriage",
+ "refs": [
+  "Judges 14:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7014001,
+   "end": 7014007,
+   "ref": "Judges 14:1-7",
+   "ranges": [
+    [
+     7014001,
+     7014007
+    ]
+   ],
+   "title": "God at Work Through Flawed Choices",
+   "key_verse": [
+    7014004,
+    7014004
+   ],
+   "reflect": [
+    {
+     "text": "Samson chose to follow his own eyes instead of godly wisdom. He demanded a Philistine wife simply because she pleased him, showing a heart of self-reliance and rebellion. His parents failed to firmly restrain his rash choice, and Samson compromised the holy calling he had received from birth by seeking a marriage outside of God's people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Samson's actions were wrong, yet God never lost control. While God did not create Samson's sin, our moral failures never fall outside His sovereign rule. The Lord was already at work behind the scenes, using Samson's flawed choice to create an opportunity to move against the Philistine oppressors and rescue Israel.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "It is comforting to know that God can work through human weakness to fulfill His redemptive purposes. Still, this does not give us an excuse to disobey. Sin still brings painful consequences, and God calls us to walk in simple obedience rather than bringing avoidable sorrow into our lives through compromise.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to follow what pleases your eyes rather than God's wisdom?",
+    "How does knowing that God is in sovereign control encourage you when you see human weakness?"
+   ],
+   "prayer": "Lord, forgive us when we chase after our own selfish desires instead of trusting your wisdom. Thank you that you remain in control over all things even when people make foolish choices. Help us to walk in daily obedience so that we do not bring avoidable sorrow upon ourselves. Amen.",
+   "sources": {
+    "D1": {
+     "author": "David Mathis",
+     "work": "Samson’s Spectacular Sin",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/samsons-spectacular-sin"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Samson Breaks His Vow",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/samson-breaks-his-vow"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

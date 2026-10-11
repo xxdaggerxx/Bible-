@@ -1,0 +1,67 @@
+{
+ "id": "13-027-025",
+ "title": "David’s Various Overseers",
+ "refs": [
+  "1 Chronicles 27:25-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13027025,
+   "end": 13027031,
+   "ref": "1 Chronicles 27:25-31",
+   "ranges": [
+    [
+     13027025,
+     13027031
+    ]
+   ],
+   "title": "Serving the King with What We Have",
+   "key_verse": [
+    13027031,
+    13027031
+   ],
+   "reflect": [
+    {
+     "text": "King David had many different overseers looking after his property. One managed the farm fields, another the vineyards, others the olive trees, the camels, or the flocks. As F. B. Meyer points out, each person had a distinct sphere and the right skills for it. Someone skilled with olive trees would not have known how to handle camels. Yet despite their different jobs, they all worked together in the common service of the king.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's people today are given different gifts and tasks in the same way. We do not need to feel jealous of what others do or try to copy them. We will find genuine joy when we recognize the specific work God has assigned to us and stay faithful right there.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "None of David's managers owned the crops, the cellars, or the herds. Everything belonged to their master. In the same way, everything we hold has been entrusted to us by God. We are put in business with His capital, called to use all we have for His honor rather than treating it as our own.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What specific role or ability has God given you to use for Him right now?",
+    "Do you treat your time and belongings as your own, or as resources entrusted to you by God?"
+   ],
+   "prayer": "Lord God, thank You for giving each of us different gifts to serve You. Help us to be faithful in the specific work You have given us, without envying anyone else. Remind us that all we possess belongs to You, and teach us to use it for Your glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 27:31",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

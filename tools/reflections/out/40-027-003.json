@@ -1,0 +1,66 @@
+{
+ "id": "40-027-003",
+ "title": "Judas Hangs Himself",
+ "refs": [
+  "Matthew 27:3-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40027003,
+   "end": 40027010,
+   "ref": "Matthew 27:3-10",
+   "ranges": [
+    [
+     40027003,
+     40027010
+    ]
+   ],
+   "title": "Remorse, Despair, and God's Grace",
+   "key_verse": [
+    40027003,
+    40027003
+   ],
+   "reflect": [
+    {
+     "text": "Judas felt deep regret when he saw that Jesus was condemned. Yet feeling terrible about our sin is not the same as true repentance, which means turning back to God in faith. While Peter also failed Jesus, wept, and was later restored, Judas gave up hope. He chose despair and took his own life rather than seeking mercy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Meanwhile, the religious leaders showed terrible hypocrisy. They worried about ceremonial rules, refusing to put blood money into the sacred temple treasury, yet they gladly arranged the death of an innocent man. Even so, God remained in control. Buying the potter's field with that silver fulfilled old prophecies about Israel rejecting God's shepherd.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The tragic story of Judas reminds us that our guilt should never lead us away from God. Christ freely offers pardon and grace—God's kindness that we do not deserve—to everyone who seeks Him. When we face our deepest failures, we do not need to hide in despair. Instead, we can turn to Jesus and receive His complete forgiveness.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel guilty about your sins, do you turn away in despair or turn to Jesus for forgiveness?",
+    "In what areas of your life might you be tempted to focus on outward religious rules while ignoring God's heart?"
+   ],
+   "prayer": "Lord Jesus, thank You for offering us Your free pardon and grace when we fail. Keep us from giving in to despair when we see our own sin. Help us to always run to You with a repentant heart, trusting in Your mercy.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "A Tragic End for Judas",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/tragic-end-judas"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

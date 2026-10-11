@@ -1,0 +1,137 @@
+{
+ "id": "23-045-001",
+ "title": "God Calls Cyrus",
+ "refs": [
+  "Isaiah 45:1-25"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23045002,
+   "end": 23045003,
+   "ref": "Isaiah 45:2-3",
+   "ranges": [
+    [
+     23045002,
+     23045003
+    ]
+   ],
+   "title": "\"I Will Go Before You\"",
+   "key_verse": [
+    23045002,
+    23045002
+   ],
+   "reflect": [
+    {
+     "text": "When the Lord speaks in Scripture, He gives promises directly and personally to our hearts. Long ago, God promised to go before Cyrus to break down heavy bronze gates and cut through iron bars. This same promise belongs to God's people today. The Lord goes ahead of us to clear spiritual obstacles and break strongholds that we could never move on our own. As Charles Spurgeon wrote, \"the Lord Himself will do the impossible for us.\"",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "Because God says He will do this, we do not need to sit down in fear or worry about our lack of strength. We can boldly pray His promises back to Him to find true freedom. Even in dark and painful seasons, trusting the one true God uncovers hidden spiritual riches. When we step forward in faith and duty, the Lord straightens the crooked places before us.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What difficult barrier or obstacle in your life do you need God to clear away?",
+    "How can you pray God's promises back to Him instead of giving in to fear?"
+   ],
+   "prayer": "Lord, thank You for going before us and breaking down the barriers we cannot move. Help us not to fear, but to trust Your Word and step forward in faith. Please uncover Your spiritual riches for us even in dark seasons. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 20",
+     "on": "Isaiah 45:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D5": {
+     "author": "Daily Disciples Ministries",
+     "work": "A Message from Isaiah",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-devotional-october-15-11582940.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 23045001,
+   "end": 23045025,
+   "ref": "Isaiah 45:1-25",
+   "ranges": [
+    [
+     23045001,
+     23045025
+    ]
+   ],
+   "title": "Looking to Our Maker for Salvation",
+   "key_verse": [
+    23045022,
+    23045022
+   ],
+   "reflect": [
+    {
+     "text": "God is our Maker, shaping our lives just as a potter shapes soft clay. Sometimes we are tempted to quarrel with Him or question His timing and methods. We wonder if He knows what He is making with us. Questioning God's wise ways harms our peace of heart and spiritual growth. True peace comes when we stop resisting Him and trust that our Maker is doing what is best for us.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "If you ever fear that God has hidden Himself or shut you out from mercy, remember what He has not said. The Lord has never told any soul to seek Him in vain. He speaks openly and honestly in His Word. When our doubts make us feel hopeless, God reassures us that no sincere prayer is ignored. He invites us to call on Him with full confidence that He hears.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because He alone is God and Savior, the way of salvation is simple. He calls everyone from the ends of the earth to turn and look to Him. We do not need wealth, great wisdom, or special preparation. We simply look away from ourselves and look up to the Lord, trusting Him completely for the life and grace we need.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where you have been questioning God's shaping hand like clay questioning the potter?",
+    "What helps you remember that God never turns away anyone who honestly seeks Him?"
+   ],
+   "prayer": "Heavenly Father, forgive us for the times we quarrel with how You are shaping our lives. Help us to yield completely into Your hands, knowing You do all things well. We turn our eyes to You today, trusting Your promise to hear our prayers and save us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 21",
+     "on": "Isaiah 45:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 21",
+     "on": "Isaiah 45:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 45:9",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

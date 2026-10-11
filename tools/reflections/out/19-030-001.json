@@ -1,0 +1,136 @@
+{
+ "id": "19-030-001",
+ "title": "You Turned My Mourning into Dancing",
+ "refs": [
+  "Psalms 30:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19030005,
+   "end": 19030005,
+   "ref": "Psalms 30:5",
+   "ranges": [
+    [
+     19030005,
+     19030005
+    ]
+   ],
+   "title": "\"Joy Comes in the Morning\"",
+   "key_verse": [
+    19030005,
+    19030005
+   ],
+   "reflect": [
+    {
+     "text": "Hard seasons and painful losses can make us feel as though darkness will never end. David experienced both great triumphs and deep sorrows, and he learned firsthand that suffering is only temporary. Even when our sins bring God's fatherly displeasure, that correction lasts only a moment, while his kindness and love extend over our entire lifetime.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Our tears in the night can actually help us by clearing our vision to appreciate God's grace. In those times, God is not harsh; as Charles Spurgeon noted, \"brevity is the mark of mercy in the hour of the chastisement of believers.\" The Lord quickly sets aside our faults and brings new life to our hearts.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Because sorrow cannot last forever, we can wait through the dark hours with real hope. The promise of morning joy was proved when Jesus rose from the dead, overcoming grief and death. One day our troubles will feel light and distant, swallowed up in the eternal brightness of heaven.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What present sorrow do you need to surrender to God, trusting that joy will come?",
+    "How does the promise of Jesus' resurrection help you stay patient during painful nights?"
+   ],
+   "prayer": "Father, thank you that our dark nights will not last forever and that your favor remains with us. When sorrow weighs heavily on our hearts, remind us of the dawn that Jesus brings. Help us wait patiently for the joy you have promised. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 13",
+     "on": "Psalms 30:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 21",
+     "on": "Psalms 30:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Joel Ryan",
+     "work": "\"Joy Comes in the Morning\" Psalm 30:5 Meaning & Promise",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/joy-comes-in-the-morning-how-psalm-305-celebrates-resurrection.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19030001,
+   "end": 19030012,
+   "ref": "Psalms 30:1-12",
+   "ranges": [
+    [
+     19030001,
+     19030012
+    ]
+   ],
+   "title": "Danger in Easy Days",
+   "key_verse": [
+    19030006,
+    19030006
+   ],
+   "reflect": [
+    {
+     "text": "In this song of thanksgiving, David recalls a serious mistake he made when life was smooth. During seasons of peace, health, and abundance, he began to feel untouchable and boasted that he would never be moved. Ease has a subtle way of making even devoted believers proud and careless.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Unbroken success is a quiet trial because it tempts us to depend on our own strength. When everything goes well, we easily forget our frailty and dream that our security rests in our possessions or our achievements. But when God withdrew his felt presence, David quickly discovered how weak he was without his Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "For this reason, changes, losses, and afflictions are often gifts of God's mercy. Troubles shake us awake before we fall into dangerous presumption. By allowing trials into our lives, the Lord humbles us, draws us to cry out for help, and teaches us to rest safely in him alone.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Has a season of good health or comfort tempted you to rely on yourself rather than on God?",
+    "How can you thank God for the difficulties that reminded you of your need for him?"
+   ],
+   "prayer": "Lord God, forgive us for becoming proud and self-reliant when life feels comfortable. Thank you for loving us enough to send trials that wake us from false security. Teach us to depend on your mercy in both easy times and hard seasons. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 10",
+     "on": "Psalms 30:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

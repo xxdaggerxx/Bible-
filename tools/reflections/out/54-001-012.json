@@ -1,0 +1,83 @@
+{
+ "id": "54-001-012",
+ "title": "God’s Grace to Paul",
+ "refs": [
+  "1 Timothy 1:12-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 54001015,
+   "end": 54001015,
+   "ref": "1 Timothy 1:15",
+   "ranges": [
+    [
+     54001015,
+     54001015
+    ]
+   ],
+   "title": "\"Christ Jesus Came to Save Sinners\"",
+   "key_verse": [
+    54001015,
+    54001015
+   ],
+   "reflect": [
+    {
+     "text": "Paul gives us a clear summary of the good news. When scripture says Christ Jesus \"came into the world,\" it reminds us that He already existed as God before being born as a man. In Jesus, full deity and true humanity are united in one person. Our rescue does not come from our own goodness, but completely from who Jesus is and what He accomplished for us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Paul called himself the worst sinner because he had violently attacked the early church. As writer F. B. Meyer noted, if a bridge can carry an elephant, it can easily carry a smaller animal. If Christ can rescue someone like Paul, He can save anyone. When we grow closer to God and see His pure goodness, an honest look at our hearts helps us see our own deep need. Before the cross, we all stand on equal ground as people who need mercy.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Receiving this salvation means entering into a personal relationship with Christ alone. Through His work, Jesus reconciles former enemies and brings them together as a family. No matter what our past looks like, His great patience offers hope and life to all who put their trust in Him.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus came to save sinners change how you view your own past mistakes?",
+    "How does remembering that all believers stand on equal ground help you treat others with patience?"
+   ],
+   "prayer": "Lord Jesus, thank You for coming into our world to rescue sinners who could never save themselves. Help us to see our own need clearly and rest entirely in Your mercy. Teach us to love others as family, trusting that Your grace is big enough for anyone who turns to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Timothy 1:15",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Albert Martin",
+     "work": "The Unique Person of Jesus",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/unique-person-jesus"
+    },
+    "D3": {
+     "author": "The Gospel Coalition",
+     "work": "Of Whom I Am the Foremost",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/of-whom-i-am-the-foremost/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

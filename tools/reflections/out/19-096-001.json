@@ -1,0 +1,80 @@
+{
+ "id": "19-096-001",
+ "title": "Sing to the LORD, All the Earth",
+ "refs": [
+  "Psalms 96:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19096001,
+   "end": 19096013,
+   "ref": "Psalms 96:1-13",
+   "ranges": [
+    [
+     19096001,
+     19096013
+    ]
+   ],
+   "title": "Singing Praise to Our Reigning King",
+   "key_verse": [
+    19096001,
+    19096001
+   ],
+   "reflect": [
+    {
+     "text": "Familiar songs can bring great comfort, but God invites us to sing a new song to Him. Singing a new song happens when we meet God in fresh ways each day. We cannot control the hard things that happen around us. Yet when we face trials, we have opportunities to see God at work in our lives. As we trust Him through difficult times, He grows our faith, and that gives us fresh reasons to praise Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We also have good news to share with the world because the Lord reigns as King. As F. B. Meyer wrote, \"the message is too good to warrant silence.\" His rule brings fairness for the oppressed, justice for the poor, and peace among nations. If Christ is the King of your heart, you can speak up about His salvation in private praise and in public witness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Bible tells us that creation itself will rejoice when the Lord comes to judge the earth. For people who refuse to turn from their sin, God's judgment is a frightening thing. But for believers covered in the righteousness of Christ, His coming brings deep joy and assurance. God's judgment is not just a final verdict; it will completely renew creation and set it free from suffering. We can look forward to the day our King returns and makes all things right.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How have recent struggles given you fresh reasons to trust and praise God?",
+    "How does knowing that Jesus will return to renew creation bring you comfort today?"
+   ],
+   "prayer": "Lord God, thank You for meeting us each day and giving us new reasons to worship You. Help us to trust You in difficult times and to tell others about Your good and righteous reign. We look forward with joy to the day when You return and renew all of creation. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 96:10",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Brent Rinehart",
+     "work": "Sing a New Song (Psalm 96:1) - Your Daily Bible Verse - August 7",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-august-7.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Two Sides of Judgment",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/two-sides-judgment"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "44-008-009",
+ "title": "Simon the Sorcerer",
+ "refs": [
+  "Acts 8:9-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44008009,
+   "end": 44008025,
+   "ref": "Acts 8:9-25",
+   "ranges": [
+    [
+     44008009,
+     44008025
+    ]
+   ],
+   "title": "God's Free Gift Cannot Be Bought",
+   "key_verse": [
+    44008020,
+    44008020
+   ],
+   "reflect": [
+    {
+     "text": "Simon had amazed the people of Samaria with magic, but when he saw the Holy Spirit given through the apostles, he wanted that power for himself. He even offered money to buy it. Simon treated God's power like a trick he could purchase to make himself look important. His request revealed that his heart was not right with God and was still trapped by a desire for personal influence.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Peter confronted Simon with spiritual discernment, which means the ability to see the truth clearly through the Spirit. Peter warned him that God's gifts cannot be bought with money and urged him to repent, turning away from his sin to seek the Lord's forgiveness. Instead of showing true sorrow for his sin, Simon only feared the consequences.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This passage reminds us that the Holy Spirit gives spiritual gifts to build up the church in love, never for our own pride. We must be watchful, recognizing that some people may still try to use faith for selfish gain. It calls us to examine our own hearts and remember that God's grace—His kindness we do not deserve—is always a free gift.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever find yourself wanting God's blessings for your own reputation rather than to serve others?",
+    "How can you grow in spiritual discernment to recognize when someone is using faith for personal gain?"
+   ],
+   "prayer": "Lord, guard our hearts from seeking spiritual things for our own pride. Help us use whatever gifts you give to build up others in love. Give us discernment to recognize the truth and keep our eyes fixed on your grace.",
+   "sources": {
+    "D1": {
+     "author": "Vivian Bricker",
+     "work": "Encountering Modern Day Simon the Sorcerers",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/encountering-modern-day-simon-the-sorcerers-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Lust for Power",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lust-for-power"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,81 @@
+{
+ "id": "07-020-018",
+ "title": "Civil War against Benjamin",
+ "refs": [
+  "Judges 20:18-48"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7020018,
+   "end": 7020048,
+   "ref": "Judges 20:18-48",
+   "ranges": [
+    [
+     7020018,
+     7020048
+    ]
+   ],
+   "title": "Seeking God with Humbled Hearts",
+   "key_verse": [
+    7020026,
+    7020026
+   ],
+   "reflect": [
+    {
+     "text": "When a terrible crime happened in Gibeah, the tribe of Benjamin chose tribal loyalty over God's standards of righteousness. Instead of punishing the guilty, they shielded them. When shared moral truth breaks down, communities quickly fall into violence and ruin. Israel gathered to oppose this evil, but confronting wickedness came at an enormous cost for both sides.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Even though Israel stood against serious sin, their first two battles brought devastating defeats and heavy troop losses. They had rushed into battle with foolish strategies without first humbling themselves before the Lord. God is sovereign and sets limits on evil, but He also disciplined His people when they acted rashly instead of seeking Him rightly.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Victory arrived only after the people sat weeping, fasting, and presenting sacrifices before the Lord at Bethel. We must never take God's patience for granted or think He overlooks sin. God is committed to purifying His people, and when we turn to Him in genuine repentance, He gives us His mercy, direction, and complete forgiveness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there moments where you rush ahead in your own strength instead of humbling yourself before God in prayer?",
+    "How can we make sure our loyalty to friends or groups never comes before God's truth?"
+   ],
+   "prayer": "Lord, forgive us when we depend on our own wisdom or make excuses for sin. Teach us to humble our hearts before You in sincere repentance. Help us stand firmly for Your truth and trust Your sovereign care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - March 30",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-mar-30-2013.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "At War with Benjamin",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/war-with-benjamin"
+    },
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Judges 20, Acts 24, Jeremiah 34, and Psalms 5–6",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/judges-20-acts-24-jeremiah-34-psalms-5-6/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,72 @@
+{
+ "id": "07-003-001",
+ "title": "Nations Left to Test Israel",
+ "refs": [
+  "Judges 3:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7003001,
+   "end": 7003006,
+   "ref": "Judges 3:1-6",
+   "ranges": [
+    [
+     7003001,
+     7003006
+    ]
+   ],
+   "title": "Learning to Fight and Stay Faithful",
+   "key_verse": [
+    7003004,
+    7003004
+   ],
+   "reflect": [
+    {
+     "text": "We often wonder why God does not instantly remove every temptation, weakness, and trial from our lives. In Israel's day, God intentionally left enemy nations in the land so the next generation would learn how to fight. God leads us through struggles to teach us dependence on His grace, which is His unearned kindness and power. Battling daily against sin keeps us humble and guards our hearts from pride and self-righteousness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "These surrounding nations were also a test to see if Israel would obey God's commands. Instead of standing firm, the people slowly compromised. They moved from living alongside the pagan nations to marrying them and worshiping their idols. This quiet drift cost them God's protection and led to captivity. Yet even in their affliction, God remained merciful to hear them whenever they repented and turned back to Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Our struggles have a purpose. God calls us not to settle into comfort with sin, but to keep our eyes fixed on Christ's victory as we fight the spiritual battles before us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to make small compromises with sin instead of standing firm in God's commands?",
+    "How can your daily struggles help you rely more on God's grace rather than your own strength?"
+   ],
+   "prayer": "Lord, thank You for using our struggles to teach us to depend completely on You. Guard our hearts from small compromises that pull us away from Your commands. Keep our eyes fixed on Christ's victory, and draw us back to You whenever we fail. Amen.",
+   "sources": {
+    "D1": {
+     "author": "J.D. Greear",
+     "work": "Learning to Fight",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/learning-to-fight"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - March 23",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-mar-23-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

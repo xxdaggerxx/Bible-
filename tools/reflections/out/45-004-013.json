@@ -1,0 +1,139 @@
+{
+ "id": "45-004-013",
+ "title": "Abraham Receives the Promise",
+ "refs": [
+  "Romans 4:13-25"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 45004020,
+   "end": 45004020,
+   "ref": "Romans 4:20",
+   "ranges": [
+    [
+     45004020,
+     45004020
+    ]
+   ],
+   "title": "\"Strengthened in His Faith\"",
+   "key_verse": [
+    45004020,
+    45004020
+   ],
+   "reflect": [
+    {
+     "text": "Abraham did not pretend his difficulties were small. He looked at the hard facts before him, yet he did not stumble. Instead of letting distressing circumstances rule his feelings, he kept his mind centered on the boundless power of God. For every look we give to our problems, we need to take many more looks at who God is and what He has promised.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "Faith is our lifeline to the Lord. Charles Spurgeon called faith the wire that \"links earth and heaven\" so God's messages can travel to us. Without faith, we cannot receive what God longs to give. When we actively praise God and honor Him before we see the outcome, our trust in His power grows firm and steady.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face a difficult situation, do you focus more on the problem or on God's ability to help?",
+    "How can thanking God right now help calm your unsettled feelings?"
+   ],
+   "prayer": "Lord God, teach us to rest on Your promises when doubts try to shake us. Help us to praise You in all circumstances, knowing You have all the power needed to do what You said. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 19",
+     "on": "Romans 4:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Romans 4:20",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D5": {
+     "author": "Mark Altrogge",
+     "work": "Growing Strong in Your Faith",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/growing-strong-in-your-faith-bible-study-minute-march-26-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 45004013,
+   "end": 45004025,
+   "ref": "Romans 4:13-25",
+   "ranges": [
+    [
+     45004013,
+     45004025
+    ]
+   ],
+   "title": "The Promise Comes by Faith",
+   "key_verse": [
+    45004016,
+    45004016
+   ],
+   "reflect": [
+    {
+     "text": "God has always accepted people through faith alone, not by how well they keep religious rules. When Abraham had no human reason left to hope, his confidence was not a blind leap into the dark. It was a reasonable trust in the living God, who calls life out of dead places and creates what does not yet exist.",
+     "sources": [
+      "D3",
+      "D4",
+      "D6"
+     ]
+    },
+    {
+     "text": "We stumble into despair when we try to rely on ourselves or when our view of God is far too small. True biblical hope means turning away from our own strength and letting God work in His own timing. Because Jesus died for our sins and was raised to life, we can be sure our faith will endure and mature through every trial.",
+     "sources": [
+      "D3",
+      "D4",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "In what parts of your life are you tempted to rely on yourself instead of trusting God?",
+    "How does knowing that God brings life out of death give you patience while you wait for Him?"
+   ],
+   "prayer": "Father, forgive us for trying to depend on our own strength and making You seem small. Thank You for raising Jesus from the dead to make us right with You. Grant us an enduring hope that trusts You through every season. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Kelly Balarie",
+     "work": "Hoping Against All Hope",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/hoping-against-all-hope-the-crosswalk-devotional.html"
+    },
+    "D4": {
+     "author": "Adrian Rogers",
+     "work": "Do You Have a Small View of God?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-january-27-2024.html"
+    },
+    "D6": {
+     "author": "Ligonier Ministries",
+     "work": "Persevering, Strengthening Faith",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/persevering-strengthening-faith"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

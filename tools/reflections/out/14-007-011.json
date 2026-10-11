@@ -1,0 +1,82 @@
+{
+ "id": "14-007-011",
+ "title": "The LORD’s Response to Solomon",
+ "refs": [
+  "2 Chronicles 7:11-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 14007014,
+   "end": 14007014,
+   "ref": "2 Chronicles 7:14",
+   "ranges": [
+    [
+     14007014,
+     14007014
+    ]
+   ],
+   "title": "\"If My People Humble Themselves\"",
+   "key_verse": [
+    14007014,
+    14007014
+   ],
+   "reflect": [
+    {
+     "text": "God gives a clear path for spiritual renewal in any land, and it begins with His own people. Even though we are loved and called by His name, we often fail and wander into sin. True restoration does not begin with the wider culture, but in our own hearts as we humble ourselves, turn away from wrong, and ask for mercy. As salt and light, believers are called to model this repentance before a watching world.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Seeking God's face means setting aside quiet time to pray with honesty. As Charles Spurgeon noted, \"God cannot turn to us unless we turn from sin.\" In prayer, we do not need to persuade God or change His mind, because He already desires to give us what is best. When we take time to look inward at our faults and upward to God, the quiet habit of prayer shapes our character far more than worldly methods ever could.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When God's people turn back to Him, He answers with a wonderful triple promise to hear, forgive, and heal. Healing begins inside individual lives and then reaches outward to touch our communities. Whenever we realize we have drifted, we can come to God with confidence, trusting that He is ready to pardon and restore us.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you set aside quiet time this week to honestly examine your heart and seek God's face?",
+    "In what area of your life is God asking you to turn away from sin so that you can experience His healing?"
+   ],
+   "prayer": "Lord, forgive us for turning away after receiving so much of your love and grace. Help us humble ourselves, search our hearts, and turn completely away from sin. Thank you for your promise to hear our prayers, forgive our wrongdoing, and bring healing to our land.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 13",
+     "on": "2 Chronicles 7:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "A Prayer Checkup",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/a-prayer-checkup"
+    },
+    "D3": {
+     "author": "Greg Laurie",
+     "work": "A Healing in the Land",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-november-7-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

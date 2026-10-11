@@ -1,0 +1,121 @@
+{
+ "id": "46-007-017",
+ "title": "Live Your Calling",
+ "refs": [
+  "1 Corinthians 7:17-24"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46007017,
+   "end": 46007017,
+   "ref": "1 Corinthians 7:17",
+   "ranges": [
+    [
+     46007017,
+     46007017
+    ]
+   ],
+   "title": "\"Lead the Life Assigned to You\"",
+   "key_verse": [
+    46007017,
+    46007017
+   ],
+   "reflect": [
+    {
+     "text": "It is easy to think of a calling as an impressive career or an important title. Yet God views your calling as your whole life of loving and obeying him. Where you are right now is not an accident. Your current life situation is an intentional assignment given to you by the Lord. Even if your days are difficult or full of pain, your struggles do not disqualify you from serving God faithfully today. When we obsess over future possibilities, we can easily miss what God is asking us to do right now.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Real life rarely matches our neat, idealized expectations. Everyday duties can feel messy, ordinary, and very different from what we once planned. It is healthy to grieve those unmet dreams so that we can make room for God's grace today. True contentment means accepting where we are instead of constantly longing for something bigger. God is not asking you to achieve earthly greatness. He simply invites you to be persistently faithful in the place where he has put you.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What unmet expectations do you need to surrender so that you can see God's grace in your life today?",
+    "How can you show love and obedience to God in the specific place he has assigned to you right now?"
+   ],
+   "prayer": "Lord, thank you for placing me where I am today. Help me let go of unrealistic dreams and stop worrying about what might happen next. Teach me to be content and faithful in serving you right here. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Jon Bloom",
+     "work": "The Greatest Thing You Can Do with Your Life",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-greatest-thing-you-can-do-with-your-life"
+    },
+    "D4": {
+     "author": "Amanda Idleman",
+     "work": "Letting Go of Unrealistic Expectations and Embracing What Is",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/letting-go-of-unrealistic-expectations-and-embracing-what-is.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 46007017,
+   "end": 46007024,
+   "ref": "1 Corinthians 7:17-24",
+   "ranges": [
+    [
+     46007017,
+     46007024
+    ]
+   ],
+   "title": "Abide with God Where You Are",
+   "key_verse": [
+    46007024,
+    46007024
+   ],
+   "reflect": [
+    {
+     "text": "Some people believe that only pastors or missionaries can truly serve God, but that is not true. God is deeply honored in ordinary work when someone does their job with a heart full of love for Christ. It is not an official church title that pleases God, but his grace at work in us. Any honest job can be used for noble purposes. Charles Spurgeon urges us to \"embrace peaceful content\" rather than letting restless ambition pull us away from our daily duties.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When people in the early church became Christians, they felt tempted to walk away from their families, jobs, and social roles. Paul told them to stay where they were and walk closely with God. Doing everyday chores with prayer and love for God changes everything. Whether someone was an enslaved person or a free master, being united to Christ leveled the ground between them. When we keep God at the center of our minds, any humble task becomes a place to enjoy his presence.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you practice God's presence during your regular work or daily chores this week?",
+    "Are you tempted to think that serving God requires a different role, rather than doing your current work for him?"
+   ],
+   "prayer": "Heavenly Father, remind me that my ordinary work matters to you. Help me to do each task with prayer and a quiet heart instead of chasing after human recognition. Teach me to walk with you and glorify your name wherever you have placed me. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 27",
+     "on": "1 Corinthians 7:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Corinthians 7:24",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,121 @@
+{
+ "id": "19-047-001",
+ "title": "Clap Your Hands, All You Peoples",
+ "refs": [
+  "Psalms 47:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19047004,
+   "end": 19047004,
+   "ref": "Psalms 47:4",
+   "ranges": [
+    [
+     19047004,
+     19047004
+    ]
+   ],
+   "title": "\"He Chooses Our Inheritance for Us\"",
+   "key_verse": [
+    19047004,
+    19047004
+   ],
+   "reflect": [
+    {
+     "text": "Sometimes we wonder why our lot in life feels humble or heavy. Yet we can be at peace, knowing God in His perfect wisdom has chosen our portion. Just as a wise captain steers a ship through deep waters to keep it from running aground on sandbanks, God sometimes leads us through hard seasons to protect our faith. Some plants need shade rather than harsh sun to grow, and God places us exactly where we can flourish. If any other condition were better for you, His divine love would have placed you there.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our enemies might want a bleak life for us, but our lives are kept safely in God's hands. Because we recognize our own human foolishness, we should not desire to direct our own path. We can gladly lay our wishes at Jesus' feet and let Him guide us. As Charles Spurgeon wrote, \"It is my freest choice to let Him choose.\" We can cheerfully leave both our present troubles and our unknown future with our Father.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What parts of your current situation are difficult to accept as God's loving choice for you?",
+    "How can you lay down your own stubborn plans today and trust the Lord to steer your life?"
+   ],
+   "prayer": "Lord, thank You for choosing what is best and safest for my life. Forgive me for being stubborn and wanting my own way when trouble comes. Help me to trust Your wisdom and rest in Your loving care today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 11",
+     "on": "Psalms 47:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 14",
+     "on": "Psalms 47:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19047001,
+   "end": 19047009,
+   "ref": "Psalms 47:1-9",
+   "ranges": [
+    [
+     19047001,
+     19047009
+    ]
+   ],
+   "title": "The King Over All the Earth",
+   "key_verse": [
+    19047002,
+    19047002
+   ],
+   "reflect": [
+    {
+     "text": "When we climb to a high viewpoint, everything below looks small, giving us a clearer perspective. God is the Lord Most High, the sovereign King who rules over all the earth. When daily burdens and discouragement weigh us down, our eyes are easily dragged downward into defeat. To break free from that low view, we must make an intentional effort to look up. Coming to God in prayer and humility lifts our minds and reminds us of His great mercy and strength.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Recognizing God as our great King leads us to sing praise with childlike joy. Throughout Scripture, God's people sang even in the midst of battles and dark prisons. We are called to worship Him even when sorrow threatens to overwhelm us. Lifting our voices in song redirects our attention away from heavy feelings and anchors our hearts in God's presence. When we join together with other believers in praise, our songs also shine as a public witness to the truth of the gospel.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What earthly burdens are currently pulling your focus downward instead of upward toward God?",
+    "How might choosing to sing praise today help anchor your heart in God's presence during a hard time?"
+   ],
+   "prayer": "Lord Most High, You are the great King over all the earth. When heavy burdens pull my thoughts down into defeat, lift my eyes back to You. Give me a heart to sing Your praise with joy, trusting in Your mercy and strength. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Emma Danzey",
+     "work": "The Reason We Sing",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/the-reason-we-sing-crosswalk-the-devotional.html"
+    },
+    "D4": {
+     "author": "Gwen Smith",
+     "work": "The View from Here",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-august-30-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

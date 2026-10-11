@@ -1,0 +1,61 @@
+{
+ "id": "11-015-025",
+ "title": "Nadab Reigns in Israel",
+ "refs": [
+  "1 Kings 15:25-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11015025,
+   "end": 11015032,
+   "ref": "1 Kings 15:25-32",
+   "ranges": [
+    [
+     11015025,
+     11015032
+    ]
+   ],
+   "title": "A Foundation of Sand",
+   "key_verse": [
+    11015030,
+    11015030
+   ],
+   "reflect": [
+    {
+     "text": "Nadab reigned for only two short years before he was murdered, and his father Jeroboam's entire household was wiped out. King after king rose and fell quickly in Israel. As F. B. Meyer points out, Israel was already crumbling from within because of sin. Jeroboam had set up golden calves, thinking it was clever politics to keep his kingdom secure. Yet ignoring God's law never brings true success. As Meyer wrote, \"what is morally wrong can never be politically right.\" A life or a nation built on disobedience rests on a foundation of sand.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The destruction of Jeroboam's family reminds us that sin bears a bitter harvest over time. The evil seed Jeroboam planted eventually ruined his own house and weakened the whole nation. The Bible repeatedly names his father, Nebat, showing how deeply parents influence their children's path. When parents fail to guide their children toward God, the painful results can echo for generations. We are called to build our lives on God's truth and lead others toward His ways.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you ever tempted to compromise on what is right in order to solve a problem or get ahead?",
+    "What kind of example are you setting for the younger people who look up to you?"
+   ],
+   "prayer": "Lord God, help us to remember that nothing built on disobedience can truly last. Give us courage to follow Your word, even when worldly shortcuts seem easier. Teach us to live faithfully so that we leave a godly example for those who come after us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Kings 15:30",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

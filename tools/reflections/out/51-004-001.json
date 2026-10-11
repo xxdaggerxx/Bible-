@@ -1,0 +1,79 @@
+{
+ "id": "51-004-001",
+ "title": "Prayerful Speech and Actions",
+ "refs": [
+  "Colossians 4:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 51004002,
+   "end": 51004004,
+   "ref": "Colossians 4:2-4",
+   "ranges": [
+    [
+     51004002,
+     51004004
+    ]
+   ],
+   "title": "\"Devote Yourselves to Prayer\"",
+   "key_verse": [
+    51004002,
+    51004002
+   ],
+   "reflect": [
+    {
+     "text": "Scripture speaks about prayer from beginning to end because our need for God never stops. What God emphasizes throughout the Bible, He wants to be central in our everyday lives. As Charles Spurgeon wrote, \"A prayerless soul is a Christless soul.\" Prayer is like breathing for a believer; it brings us close to our heavenly Father and shows our total dependence on Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Talking to God is not a performance to impress other people. It is a daily habit born out of a real, two-way relationship. Just like loving parents who treasure hearing the voices of their children, God takes delight when we come to Him with our needs. When we pray honestly every day, our connection with Him grows deeper.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even the apostle Paul, with all his years of ministry experience, humbly asked other Christians to pray that he would speak God's message clearly. True spiritual impact comes from a thankful heart rather than pride. Difficult situations do not have to make us bitter, because Christ gives us the power to stay grateful and alert.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What keeps you from coming to God simply and honestly throughout your day?",
+    "In what difficult situation do you need Christ's help to remain thankful instead of bitter?"
+   ],
+   "prayer": "Heavenly Father, thank You for delighting to hear our voices when we speak to You. Help us to make prayer a steady habit each day rather than a duty. Give us humble hearts to ask others for prayer, and grant us grace to remain thankful in every situation. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 2",
+     "on": "Colossians 4:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Dr. James Dobson",
+     "work": "A Heavenly Relationship",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-devotions-for-parents-by-dr-james-dobson/dr-dobsons-parenting-devotional-apr-9.html"
+    },
+    "D3": {
+     "author": "Chuck Swindoll",
+     "work": "An Attitude of Genuine Thanksgiving",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-april-14-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

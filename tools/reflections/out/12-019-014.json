@@ -1,0 +1,85 @@
+{
+ "id": "12-019-014",
+ "title": "Hezekiah’s Prayer",
+ "refs": [
+  "2 Kings 19:14-19"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 12019014,
+   "end": 12019014,
+   "ref": "2 Kings 19:14",
+   "ranges": [
+    [
+     12019014,
+     12019014
+    ]
+   ],
+   "title": "\"Spread It Out Before the LORD\"",
+   "key_verse": [
+    12019014,
+    12019014
+   ],
+   "reflect": [
+    {
+     "text": "When bad news arrives, fear can quickly freeze us. King Hezekiah received a terrifying letter threatening his whole city, but he did not panic or scramble to make human plans. Instead, he carried the letter straight to God's house and spread it out before Him. Severe pain or frightening reports can leave us unsure of what to say, yet we can follow his example by taking our troubles directly to our heavenly Father.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The Lord already knows every detail of our crisis before we do, yet as F. B. Meyer wrote, He \"likes to read it again in the company of His child.\" In our quiet time, we can lay out all the distressing facts, whether they are hurtful words, sudden sickness, or deep heartaches. Because of what Jesus did on the cross, we have direct access to speak honestly with God about everything that hurts.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Bringing our fears to God anchors us in His supreme power and His promise to care for us. When we entrust our worries to Him, terror and bitterness lose their grip. In their place, the Lord gives us a deep and quiet peace that settles our hearts.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy news or distressing problem do you need to lay out before the Lord today?",
+    "How does remembering that God welcomes your prayers give you peace instead of panic?"
+   ],
+   "prayer": "Lord, when frightening news or heavy trials come, help us not to panic or rely on our own strength. We bring our honest pain to You and lay our troubles at Your feet. Thank You for welcoming us into Your presence and filling our hearts with Your peace.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 19:14",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Jill Briscoe",
+     "work": "Letting God Read Your Letters",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-women/letting-god-read-your-letters-one-year-devotions-for-women-february-19.html"
+    },
+    "D3": {
+     "author": "Glenna Marshall",
+     "work": "Make Your Requests Known to God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-august-10-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

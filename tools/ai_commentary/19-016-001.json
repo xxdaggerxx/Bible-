@@ -1,0 +1,155 @@
+{
+ "book": 19,
+ "chapter": 16,
+ "first": 1,
+ "last": 11,
+ "ref": "Psalms 16",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David begins with an earnest prayer asking God to guard and watch over his life. He does not ask for rescue from a single danger, but places his whole life into God's safe keeping because he has already trusted Him. Believers can run to God like chicks under a mother bird's wings and find safe shelter in His mighty power.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "David speaks to the Lord and gladly yields to His authority, confessing that God is his Master. He also recognizes that he can give nothing to God that God needs, because God is already completely happy and perfect in Himself. Any true good or blessing David enjoys comes entirely from the Lord, not from his own merit.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Since God needs nothing from human hands, David turns his love and care toward God's people on earth. He views believers as the true nobility of the land, finding deep delight in their company and seeking to share his blessings with them. Those who truly love God will also cherish the people who belong to God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Those who rush after false gods only pile up pain and misery for themselves. David refuses to take part in their cruel and bloody offerings, or even let the names of idols cross his lips. Turning away from idols protects the heart from the bitter grief that worshiping false things always brings.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "David declares that the Lord Himself is his greatest prize, his daily nourishment, and his lasting inheritance. Just as the priests of Israel received no plot of land because God was their portion, David finds complete contentment in having God as his wealth. God also promises to guard this spiritual treasure so that no enemy can ever snatch it away.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "In ancient times, measuring cords were used to mark out portions of land for each family. David rejoices that the boundaries God drew for his life have fallen in a wonderful and pleasant place. When a person is completely satisfied with God, every part of their lot in life becomes a reason for deep gratitude.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "David praises the Lord for guiding his steps and giving him wise direction through life. Even during the quiet hours of the night when the world is asleep, his inner thoughts and conscience remind him of God's truth. God's instruction shapes a believer's heart from the inside out, providing calm assurance in stillness.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "David makes a steady habit of keeping God in front of his eyes in everything he does. Having the Lord right beside him as his defender and helper gives him strength, so that he cannot be shaken by fear or trouble. When we walk in constant awareness of God's presence, our faith remains firm through every trial.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Experiencing God's unfailing protection fills David's heart with gladness and moves his tongue to sing joyful praise. Even when facing physical weakness and the reality of the grave, his body can rest in calm hope. A living faith in God brings deep peace of mind today and quiet confidence for tomorrow.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "David expresses the sure hope that God will not leave him in the realm of the dead or let His faithful one undergo decay. The New Testament apostles Peter and Paul explain that these words pointed ultimately to Jesus Christ, who rose bodily from the grave before His flesh could decompose. Because Christ conquered the grave, all who belong to Him have the guarantee that death will not have the final say over their bodies.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many modern scholars translate the phrase as not seeing 'the pit' rather than 'decay,' understanding the line originally as a prayer to be delivered from dying at that time.",
+     "sources": [
+      "Jamieson-Fausset-Brown",
+      "https://biblehub.com/commentaries/ellicott/psalms/16.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "God shows His servant the path that leads through death straight into endless life. In the presence of God there is complete and overflowing happiness, without any sorrow or lack. To be at God's right hand means enjoying eternal honor and pure delight that will never end.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 9: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 10: dropped differ point (Baptist): no checkable source",
+  "v. 10: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

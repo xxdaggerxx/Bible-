@@ -1,0 +1,122 @@
+{
+ "id": "19-054-001",
+ "title": "Save Me by Your Name",
+ "refs": [
+  "Psalms 54:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19054006,
+   "end": 19054007,
+   "ref": "Psalms 54:6-7",
+   "ranges": [
+    [
+     19054006,
+     19054007
+    ]
+   ],
+   "title": "\"I Will Praise Your Name\"",
+   "key_verse": [
+    19054006,
+    19054006
+   ],
+   "reflect": [
+    {
+     "text": "David wrote this psalm in haste while fleeing from enemies who betrayed his hiding place. Yet, even in a rushed moment of flight, he stopped to seek the Lord. He had already dedicated his entire life to God as a freewill offering. As F. B. Meyer observed, we can see ourselves \"as a stone before a carver\" so God can shape our lives according to His will.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yielding ourselves to God changes how we respond when others treat us badly. Biblical surrender is not admitting defeat to our enemies; it is trusting our divine ally. David overcame bitterness and refused revenge by putting his demand for justice into God's hands. He looked beyond the painful trouble to the Father who permitted it.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Choosing to give God voluntary praise brings tranquility even before our circumstances change. Faith does not pretend mistreatment never happened, but it chooses to focus on God's faithfulness rather than the wrongdoing of others. Resting in God's goodness allows our hearts to be at peace, knowing He will deliver us from every trouble.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What hurt or unfair situation do you need to place into God's hands instead of seeking revenge?",
+    "How can offering praise to God right now bring peace to your heart before your problems are solved?"
+   ],
+   "prayer": "Lord, I give my life freely to You and trust You to shape me. When others mistreat me, keep my heart from bitterness and help me leave justice in Your hands. Teach me to rest in Your faithfulness and praise Your good name even in the middle of trouble. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 54:6-7",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "Rest in God's Faithfulness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-july-23-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19054001,
+   "end": 19054007,
+   "ref": "Psalms 54:1-7",
+   "ranges": [
+    [
+     19054001,
+     19054007
+    ]
+   ],
+   "title": "Save Me by Your Name",
+   "key_verse": [
+    19054004,
+    19054004
+   ],
+   "reflect": [
+    {
+     "text": "In this psalm, David cried out to God for rescue when ruthless people sought to destroy him. In the middle of this danger, he remembered that the Lord was the true sustainer of his life. It is easy to trust our own abilities when life feels manageable. Yet, even when we are gifted, strong, or capable, we must guard against the trap of self-reliance. We cannot carry our lives or handle our troubles without God.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Believers remain completely dependent upon the Lord for His sustaining help in every daily task. The composer J. S. Bach practiced this quiet dependence by beginning his musical works with a prayer for Jesus to help him, and concluding them by giving God the glory. Intentionally starting our daily work with prayer and finishing it with thanksgiving keeps our hearts humble. It reminds us that every good thing we accomplish comes from our divine helper.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily routine are you most tempted to rely on your own ability rather than on God?",
+    "How might beginning your tasks with prayer and ending them with thanks change your attitude today?"
+   ],
+   "prayer": "Heavenly Father, You are my helper and the one who sustains my soul. Forgive me for the times I rely on my own strength instead of leaning on You. Help me to start each task by asking for Your guidance and to finish it by giving You all the praise. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Jim Liebelt",
+     "work": "Jesus Help me and to God be the Glory",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-june-27-2008-11578250.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

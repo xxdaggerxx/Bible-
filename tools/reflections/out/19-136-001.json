@@ -1,0 +1,66 @@
+{
+ "id": "19-136-001",
+ "title": "His Loving Devotion Endures Forever",
+ "refs": [
+  "Psalms 136:1-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19136001,
+   "end": 19136026,
+   "ref": "Psalms 136:1-26",
+   "ranges": [
+    [
+     19136001,
+     19136026
+    ]
+   ],
+   "title": "His Steadfast Love Endures Forever",
+   "key_verse": [
+    19136001,
+    19136001
+   ],
+   "reflect": [
+    {
+     "text": "Psalm 136 repeats the same comforting truth twenty-six times: God's faithful love endures forever. For believers, this unchanging love shown in Jesus is the most grounding and life-giving reality we have. When life feels shaky or overwhelming, God's steadfast love anchors our hearts and holds us secure.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Right now, we still live with pain, illness, and unfair divisions among people. Yet all of this present suffering is only temporary. God's eternal kingdom will overcome every hardship. A bright future is coming when God will remove all injustice, sin, and fighting, filling the entire creation with the beauty and glory of Jesus.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even our own struggles with selfishness, bad habits, and limited understanding will not last forever. They have an expiration date. One day, God will finish His work in us, and we will finally be made like Jesus. Earthly troubles will pass away, but His love for us never will.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that current hardships are only temporary bring you comfort today?",
+    "What difference does it make to remember that your personal struggles and flaws have an expiration date?"
+   ],
+   "prayer": "Lord God, thank You for Your steady love that anchors our souls each day. When we walk through sickness, sadness, or division, remind us that these troubles will not last forever. Help us to keep our eyes on Jesus as we wait for the day when Your glory fills the earth and all suffering is gone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Scotty Smith",
+     "work": "What Wondrous Love IS This?",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/scotty-smith/what-wondrous-love-is-this/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

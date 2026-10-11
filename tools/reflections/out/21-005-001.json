@@ -1,0 +1,68 @@
+{
+ "id": "21-005-001",
+ "title": "Approaching God with Awe",
+ "refs": [
+  "Ecclesiastes 5:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 21005001,
+   "end": 21005003,
+   "ref": "Ecclesiastes 5:1-3",
+   "ranges": [
+    [
+     21005001,
+     21005003
+    ]
+   ],
+   "title": "\"Let Your Words Be Few\"",
+   "key_verse": [
+    21005002,
+    21005002
+   ],
+   "reflect": [
+    {
+     "text": "When we gather for worship, we often feel the urge to do all the talking. We sing songs, bring our requests, and sometimes rush through our prayers without thinking. But God invites us to stop and guard our steps. Worship is not an empty routine where we just go through the motions. Because God is the majestic Lord of heaven and we are on earth, we need to stay spiritually alert and remember who He is.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Approaching God with true reverence means we come eager to listen rather than quick to speak. The living God speaks to us through His Word, and meaningful worship happens when our hearts are prepared to hear and obey His truth. Thoughtless speech and rushed prayers are like the sacrifices of fools. When we honor God's heavenly majesty, we make sure our words never outrun our careful thinking.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you tend to rush into prayer with many words, or do you take time to be quiet and listen?",
+    "How can you prepare your heart to pay closer attention to God's Word when you worship this week?"
+   ],
+   "prayer": "Heavenly Father, You are in heaven and we are on earth. Forgive us for rushing into Your presence with careless words and empty routines. Teach us to be still, to guard our steps, and to listen carefully to Your Word with humble hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Chuck Swindoll",
+     "work": "To Remember as You Worship",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/to-remember-as-you-worship"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Measured Speech",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/measured-speech"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

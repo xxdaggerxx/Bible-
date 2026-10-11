@@ -1,0 +1,124 @@
+{
+ "id": "66-005-001",
+ "title": "The Lamb Takes the Scroll",
+ "refs": [
+  "Revelation 5:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 66005006,
+   "end": 66005006,
+   "ref": "Revelation 5:6",
+   "ranges": [
+    [
+     66005006,
+     66005006
+    ]
+   ],
+   "title": "\"A Lamb as It Had Been Slain\"",
+   "key_verse": [
+    66005006,
+    66005006
+   ],
+   "reflect": [
+    {
+     "text": "John sees a wonderful sight in heaven: a Lamb standing right at the center of the throne. If we saw only the throne of power, we would be afraid to come near. If we saw only the Lamb, we might wonder if he had enough strength to save us. Yet here we see both together. In God's kingdom, the way to rule is not through earthly force. Jesus conquered by yielding to suffering and giving himself up as a sacrifice for us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even in glory, Jesus still carries the marks of his death. Charles Spurgeon called these scars \"the trophies of his love and of his victory.\" His wounds are not signs of defeat, but reminders of how deeply he loves us and how completely he bought us back from sin. He has all power and all knowledge, yet he rules as the gentle Savior who died in our place. We can trust him with our whole lives and every part of our future.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus rules from the throne with gentle, sacrificial love change how you approach him today?",
+    "Why is it comforting to remember that Jesus still carries the marks of his love for you?"
+   ],
+   "prayer": "Lord Jesus, thank you for conquering sin through your humble suffering on the cross. We praise you because you rule with complete power while showing us tender mercy. Help us to trust our lives to your loving and capable hands today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 23",
+     "on": "Revelation 5:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Revelation 5:6",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 66005001,
+   "end": 66005010,
+   "ref": "Revelation 5:1-10",
+   "ranges": [
+    [
+     66005001,
+     66005010
+    ]
+   ],
+   "title": "The Lion Who Triumphed to Open the Scroll",
+   "key_verse": [
+    66005005,
+    66005005
+   ],
+   "reflect": [
+    {
+     "text": "The scroll in God's right hand holds the unfolding purpose and destiny of human history. Like an ancient legal record, it could only be unsealed by someone with the proper authority. John wept with deep sorrow because no creature anywhere in heaven or on earth was worthy to look inside or carry out God's plan. God does not intend to hide his will from us, but only an authorized redeemer could take the scroll.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "John dried his tears when he learned that Jesus, the Lion of Judah, had triumphed. Christ won the divine right to guide history and lead his people by offering himself up in death. As the elders fall down in worship, they hold bowls of incense, which represent the prayers of God's people. Our prayers are never lost or ignored. They are gathered in heaven as a sweet aroma before the Savior who directs all things for our good.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus holds the future of history bring you peace when the world feels uncertain?",
+    "How does the truth that your prayers are kept as sweet incense in heaven encourage you to pray?"
+   ],
+   "prayer": "Father, we thank you that our future rests safely in the hands of Jesus, who triumphed over sin and death. Thank you for hearing our cries and valuing our prayers before your throne. Give us confidence each day as we trust your good plan for history and our lives. Amen.",
+   "sources": {
+    "D3": {
+     "author": "John Piper",
+     "work": "Let Us Adore the Lamb",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/let-us-adore-the-lamb"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "The Scroll with Seven Seals",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-scroll-with-seven-seals"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

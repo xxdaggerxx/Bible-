@@ -1,0 +1,81 @@
+{
+ "id": "11-017-008",
+ "title": "The Widow of Zarephath",
+ "refs": [
+  "1 Kings 17:8-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11017008,
+   "end": 11017016,
+   "ref": "1 Kings 17:8-16",
+   "ranges": [
+    [
+     11017008,
+     11017016
+    ]
+   ],
+   "title": "God's Faithful Care in Zarephath",
+   "key_verse": [
+    11017016,
+    11017016
+   ],
+   "reflect": [
+    {
+     "text": "God sent Elijah to Zarephath, an unexpected place of shelter during a severe drought. Elijah followed God's instructions in faith. Wherever God directs our steps, we never move beyond His reach or His presence. When we are where God wants us to be, He promises to care for us, whether through wild birds or a humble home in a quiet town.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "At the city gate, Elijah found a destitute widow gathering sticks to cook one last bite of food before she and her son died. God chose this struggling woman to play an important part in His plans. Elijah tested her faith by asking her to bake a small loaf for him first. In trusting obedience and sacrificial hospitality, she gave from her tiny supply.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God met her trust with daily help. The jar of flour and jug of oil never ran empty, feeding all three of them day after day. As Charles Spurgeon wrote, \"the infinite riches of God you can never exhaust.\" When daily necessities make us worry about running out, we can rest knowing God's mercy will supply our real needs.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you facing a daily need right now that makes you worry about tomorrow?",
+    "How can you practice trusting obedience with the resources God has given you today?"
+   ],
+   "prayer": "Lord, thank you that we are never outside your care wherever you place us. When our supplies seem small and our needs feel heavy, help us to trust your daily promises. Teach us to share generously with others, confident in your endless love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 28",
+     "on": "1 Kings 17:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Kings 17:9",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D3": {
+     "author": "Jason Soroski",
+     "work": "Why Is the Widow of Zarephath Important in the Bible?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/why-is-the-widow-of-zarephath-important-in-the-bible.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

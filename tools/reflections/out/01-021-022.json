@@ -1,0 +1,66 @@
+{
+ "id": "01-021-022",
+ "title": "The Covenant at Beersheba",
+ "refs": [
+  "Genesis 21:22-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1021022,
+   "end": 1021034,
+   "ref": "Genesis 21:22-34",
+   "ranges": [
+    [
+     1021022,
+     1021034
+    ]
+   ],
+   "title": "Peace and Faithfulness at Beersheba",
+   "key_verse": [
+    1021033,
+    1021033
+   ],
+   "reflect": [
+    {
+     "text": "King Abimelech could clearly see that God was with Abraham, so he asked for a peace agreement. Abraham agreed, but he also settled a dispute about a water well. By making this treaty, Abraham secured his first permanent foothold in the land God had promised. This shows us that God's people may make peace with others when appropriate. We are called to be active peacemakers as well, using forgiveness and repentance to guard harmony in the church.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "After making peace, Abraham planted a tamarisk tree and called upon the name of the Lord. Planting the tree was Abraham's way of claiming the land God promised to him. God granted him peace so he could openly worship the everlasting God in a land that was not yet his own. In the same way, we gather each week to praise the same faithful God, knowing His promises point forward to Jesus Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you actively pursue peace and forgiveness with someone in your community this week?",
+    "How does knowing that God keeps His promises help you worship Him with confidence today?"
+   ],
+   "prayer": "Lord God, thank You for Your unending faithfulness and for granting us peace. Teach us to be peacemakers who gladly forgive others and live in harmony. Give us courage to worship You openly, trusting that all Your promises are true in Jesus Christ.",
+   "sources": {
+    "D1": {
+     "author": "Erik Raymond",
+     "work": "The Day Abraham Planted a Tree",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/erik-raymond/the-day-abraham-planted-a-tree/"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Abimelech and Abraham",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/abimelech-and-abraham"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -34,6 +34,7 @@ import com.biblestudy.app.model.DrawnBox
 import com.biblestudy.app.model.DrawnLine
 import com.biblestudy.app.model.DrawnVerse
 import com.biblestudy.app.model.CrossHighlight
+import com.biblestudy.app.model.CrossRef
 import com.biblestudy.app.model.HighlightEntry
 import com.biblestudy.app.model.Edit
 import com.biblestudy.app.model.Heading
@@ -55,6 +56,7 @@ import com.biblestudy.app.model.VerseTarget
 import com.biblestudy.app.model.translated
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.asCoroutineDispatcher
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.io.File
@@ -81,7 +83,9 @@ class PanelState(book: Int, chapter: Int) {
     var pendingVerse by mutableStateOf<Int?>(null)
     var viewW by mutableFloatStateOf(0f)
     var viewH by mutableFloatStateOf(0f)
-    /** The verse at the top of the view (observable, so a cross-references pane can follow it). */
+    /** Where this panel was scrolled to, kept while its tab is out of view (not observable). */
+    var resume: ScrollPos? = null
+        /** The verse at the top of the view (observable, so a cross-references pane can follow it). */
     var topVerse by mutableIntStateOf(1)
     /** The last verse of the current chapter that has been in view (ANL-2); past the end means it was all seen. */
     var seenTo by mutableIntStateOf(0)
@@ -181,13 +185,31 @@ data class ExportRequest(val uri: Uri, val pdf: Boolean, val layer: Long? = null
 /** What the study pane beside the Bible panels shows (SPLIT-2). */
 enum class PaneKind(val label: String) {
     SEARCH("Search"), CROSSREFS("Cross-references"), NOTES("My notes"),
-    DICTIONARY("Dictionary"), TOPICS("Topics"), COMMENTARY("Commentary"), NAMES("Names & places"),
+    DICTIONARY("Dictionary"), TOPICS("Topics"), COMMENTARY("Commentary"), REFLECTIONS("Reflections"), NAMES("Names & places"),
+    CUSTOMS("Customs & feasts"), SYMBOLS("Symbols & numbers"), CHRIST("Points to Christ"),
     SKETCHES("Sketch pages"),
     VERSE("Verse details"), COMPARE("Compare versions"), ORIGINAL("Hebrew/Greek"), WORDSTUDY("Word study"), INTRO("About the book"),
+    CHAT("AI chat"),
+    ;
+
+    companion object {
+        /**
+         * How the panel menus list the views (SPLIT-7): the Bible and these few first, each on its
+         * own line, then the rest folded under two headings so the menu stays short.
+         */
+        val main: List<PaneKind> = listOf(SKETCHES, NOTES, SEARCH, CHAT)
+        val folders: List<Pair<String, List<PaneKind>>> = listOf(
+            "This verse" to listOf(VERSE, COMPARE, ORIGINAL, WORDSTUDY, CROSSREFS),
+            "Study" to listOf(COMMENTARY, REFLECTIONS, INTRO, DICTIONARY, TOPICS, NAMES, CUSTOMS, SYMBOLS, CHRIST),
+        )
+    }
 }
 
 /** A spot to return to with Back / Forward. */
 data class Place(val book: Int, val chapter: Int, val verse: Int)
+
+/** A chapter read lately (READ-8): where you were in it, and when. */
+data class RecentRead(val book: Int, val chapter: Int, val verse: Int, val at: Long)
 
 class StudyViewModel(app: Application) : AndroidViewModel(app) {
     private val prefs = app.getSharedPreferences("study", Context.MODE_PRIVATE)
@@ -200,7 +222,282 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     @Synchronized
     fun text(code: String): BibleRepository = texts.getOrPut(code) {
         val v = BibleRepository.ALL.firstOrNull { it.code == code } ?: BibleRepository.KJV
-        if (v.code == bible.code) bible else BibleRepository(getApplication(), v)
+        if (v.code == bible.code) bible else BibleRepository(getApplication(), v).also { r ->
+            // An online Bible's chapters get word tags, words of Jesus and paragraphs as they come (BIB-12).
+            r.online?.study = { db, parsed ->
+                com.biblestudy.app.data.ImportStudy.addChapter(db, r.code, parsed, study, onlineTagger, guessRed = !r.online.marksRed(), web = text(BibleRepository.WEB.code))
+            }
+        }
+    }
+
+    /** Tags the words of online Bibles' chapters for word studies; made the first time one comes. */
+    private val onlineTagger by lazy { com.biblestudy.app.data.ImportStudy.tagger(study, BibleRepository.BUNDLED.map { text(it.code) }) }
+
+    // ---------- online Bibles (BIB-12) ----------
+
+    /** Goes up when an online Bible's chapter has come, so pages waiting for it are laid out again. */
+    var onlineArrivals by mutableIntStateOf(0)
+        private set
+
+    /**
+     * A verse's text for the screen, without waiting: an online Bible's verse not downloaded yet
+     * shows "Loading…" (and comes in the background); else the KJV's when a version lacks it.
+     */
+    /**
+     * A verse to paste elsewhere (NOTE-7): its words, then the reference and version, e.g.
+     * "Jesus wept. — John 11:35 (KJV)". Null while an online Bible's verse is still downloading.
+     */
+    fun verseQuote(version: String, id: Int): String? {
+        val words = (text(version).verseText(id) ?: if (isOnline(version)) null else bible.verseText(id))?.trim()
+        if (words.isNullOrEmpty()) return null
+        return "$words \u2014 ${refLabel(id)} ($version)"
+    }
+
+    fun verseTextNow(version: String, id: Int): String =
+        text(version).verseText(id) ?: if (isOnline(version)) "Loading\u2026" else bible.verseText(id) ?: ""
+
+    /**
+     * The cross-references from verse [id] with their previews in [version], given to [show] as
+     * they're ready. An online Bible's previews come from the chapters on the tablet; the others
+     * show "…" while their chapters download (each once, then kept, at most [XREF_FETCH]), and
+     * [show] is called again as they come. Never another version's text.
+     */
+    suspend fun crossRefsIn(version: String, id: Int, show: (List<CrossRef>) -> Unit) {
+        val text = text(version)
+        val refs = background { bible.crossRefs(id) }
+        // A version that lacks a verse (not an online one) shows the KJV's, as before.
+        fun previews() = refs.map { r -> r.copy(preview = text.savedVerseText(r.toStart) ?: if (text.online != null) "\u2026" else r.preview) }
+        show(background { previews() })
+        val o = text.online ?: return
+        val missing = background {
+            refs.map { VerseId.book(it.toStart) to VerseId.chapter(it.toStart) }.distinct()
+                .filter { (b, c) -> !o.isSaved(b, c) }.take(XREF_FETCH)
+        }
+        for (batch in missing.chunked(6)) {
+            val ok = background { batch.all { (b, c) -> runCatching { o.fetch(b, c) }.isSuccess } }
+            show(background { previews() })
+            if (!ok) break // no internet: the rest show "…" until the list is opened again
+        }
+    }
+
+    /** Whether [code] is an online Bible. */
+    fun isOnline(code: String) = BibleRepository.ALL.any { it.code == code && it.online > 0 }
+
+    /** Chapters that couldn't be fetched (no internet): tried again when the tablet is back online. */
+    private var onlineFailed = false
+    private var lastOnlineWarning = 0L
+
+    private val onlineEvents = object : BibleRepository.OnlineEvents {
+        override fun arrived(code: String, book: Int, chapter: Int) {
+            viewModelScope.launch(Dispatchers.Main) { onlineArrivals++ }
+        }
+        override fun failed(code: String, book: Int, chapter: Int, error: Exception) {
+            viewModelScope.launch(Dispatchers.Main) {
+                onlineFailed = true
+                val now = System.currentTimeMillis()
+                if (now - lastOnlineWarning < 30_000) return@launch
+                lastOnlineWarning = now
+                val where = "$code ${bible.book(book).name} $chapter"
+                message = when {
+                    error is com.biblestudy.app.data.YouVersion.HttpException -> "Couldn't load $where: ${error.message}."
+                    error.message?.startsWith("No YouVersion key") == true -> error.message
+                    else -> "$where isn't on this tablet yet and there's no internet. It will show when you're back online."
+                }
+            }
+        }
+    }
+
+    init {
+        com.biblestudy.app.data.YouVersion.key = prefs.getString("youversionKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.BuildConfig.YOUVERSION_KEY
+        com.biblestudy.app.data.Esv.key = prefs.getString("esvKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.BuildConfig.ESV_KEY
+        com.biblestudy.app.data.Nlt.key = prefs.getString("nltKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.BuildConfig.NLT_KEY
+        BibleRepository.onlineEvents = onlineEvents
+        viewModelScope.launch(Dispatchers.Main) { expireOnline() } // posted: runs once the whole model is set up
+        // Back online: chapters that couldn't be fetched are tried again.
+        runCatching {
+            val cm = app.getSystemService(android.net.ConnectivityManager::class.java)
+            cm?.registerDefaultNetworkCallback(object : android.net.ConnectivityManager.NetworkCallback() {
+                override fun onAvailable(network: android.net.Network) {
+                    viewModelScope.launch(Dispatchers.Main) { retryOnline() }
+                }
+            })
+        }
+    }
+
+    /** Tries again the online chapters that couldn't be fetched: the pages waiting for them are laid out again. */
+    fun retryOnline() {
+        cardFetches.clear()
+        if (onlineFailed) { onlineFailed = false; onlineArrivals++ }
+    }
+
+    /** Online chapters verse cards have asked for this session (see [cardVerses]). */
+    internal val cardFetches = HashSet<String>()
+
+    /**
+     * How long downloaded chapters of online Bibles are kept after they were last read, in days
+     * (0 = always, the default). Chapters not read for that long are let go when the app starts
+     * and download again when read. Bibles saved for offline and verse cards' verses stay.
+     */
+    var cacheDays by mutableIntStateOf(prefs.getInt("cacheDays", 0))
+        private set
+
+    fun changeCacheDays(days: Int) {
+        cacheDays = days.coerceAtLeast(0)
+        prefs.edit { putInt("cacheDays", cacheDays) }
+        expireOnline()
+    }
+
+    /** Lets go of online chapters not read within [cacheDays] (in the background). */
+    fun expireOnline() {
+        val days = cacheDays
+        if (days <= 0) return
+        viewModelScope.launch {
+            val all = BibleRepository.ALL.filter { it.online > 0 }.mapNotNull { text(it.code).online }
+            val dropped = withContext(Dispatchers.IO) { all.sumOf { o -> runCatching { o.expire(days) }.getOrDefault(0) } }
+            if (dropped > 0) onlineArrivals++
+        }
+    }
+
+    /** Removes every online Bible's downloaded text (Settings → Bibles → Clear downloaded text). */
+    fun clearOnlineCache() {
+        for (code in downloadJobs.keys.toList()) stopSavingForOffline(code)
+        viewModelScope.launch {
+            val all = BibleRepository.ALL.filter { it.online > 0 }.mapNotNull { text(it.code).online }
+            withContext(Dispatchers.IO) { all.forEach { runCatching { it.clear() } } }
+            cardFetches.clear() // verse cards ask for their verses again
+            onlineArrivals++
+            message = "Downloaded Bible text cleared. Chapters download again as you read them."
+        }
+    }
+
+    /** The YouVersion key typed in Settings, or empty for the one built in. */
+    var youVersionKey by mutableStateOf(prefs.getString("youversionKey", "") ?: "")
+        private set
+
+    fun changeYouVersionKey(k: String) {
+        youVersionKey = k.trim()
+        prefs.edit { putString("youversionKey", youVersionKey) }
+        com.biblestudy.app.data.YouVersion.key = youVersionKey.ifEmpty { com.biblestudy.app.BuildConfig.YOUVERSION_KEY }
+        onlineBibles = null
+    }
+
+    /** The NLT key typed in Settings, or empty for the one built in. */
+    var nltKey by mutableStateOf(prefs.getString("nltKey", "") ?: "")
+        private set
+
+    fun changeNltKey(k: String) {
+        nltKey = k.trim()
+        prefs.edit { putString("nltKey", nltKey) }
+        com.biblestudy.app.data.Nlt.key = nltKey.ifEmpty { com.biblestudy.app.BuildConfig.NLT_KEY }
+        onlineBibles = null
+    }
+
+    /** The ESV key typed in Settings, or empty for the one built in. */
+    var esvKey by mutableStateOf(prefs.getString("esvKey", "") ?: "")
+        private set
+
+    fun changeEsvKey(k: String) {
+        esvKey = k.trim()
+        prefs.edit { putString("esvKey", esvKey) }
+        com.biblestudy.app.data.Esv.key = esvKey.ifEmpty { com.biblestudy.app.BuildConfig.ESV_KEY }
+        onlineBibles = null
+    }
+
+    /** The online Bibles YouVersion offers (English), once looked up; null until then. */
+    var onlineBibles by mutableStateOf<List<com.biblestudy.app.data.YouVersion.Info>?>(null)
+        private set
+    var onlineListError by mutableStateOf<String?>(null)
+        private set
+
+    fun loadOnlineBibles() {
+        onlineListError = null
+        viewModelScope.launch {
+            val r = withContext(Dispatchers.IO) { runCatching { com.biblestudy.app.data.YouVersion.bibles() } }
+            // The ESV comes from Crossway, not YouVersion, when there's a key for it.
+            val esv = listOfNotNull(
+                com.biblestudy.app.data.Esv.info.takeIf { com.biblestudy.app.data.Esv.key.isNotBlank() },
+                com.biblestudy.app.data.Nlt.info.takeIf { com.biblestudy.app.data.Nlt.key.isNotBlank() },
+            )
+            r.onSuccess { list ->
+                // Not the ones built in (the BSB and WEB are here already).
+                val builtIn = BibleRepository.BUNDLED.map { it.code }.toSet() + "WEBUS"
+                onlineBibles = (esv + list.filter { it.code !in builtIn }).sortedBy { it.title }
+            }.onFailure {
+                if (esv.isNotEmpty()) onlineBibles = esv
+                onlineListError = "Couldn't reach YouVersion: ${it.message ?: "no internet"}"
+            }
+        }
+    }
+
+    /**
+     * Adds online Bible [info] to the version list; its chapters download as they're read. Picked
+     * from a panel's version menu, that panel ([showIn]) switches to it once it's added.
+     */
+    fun addOnlineBible(info: com.biblestudy.app.data.YouVersion.Info, showIn: Int? = null) {
+        viewModelScope.launch {
+            val r = withContext(Dispatchers.IO) {
+                runCatching {
+                    val full = if (info.id >= com.biblestudy.app.data.Esv.ID) info // the ESV and NLT carry their own
+                        else com.biblestudy.app.data.YouVersion.bible(info.id) ?: info // with its copyright
+                    val v = com.biblestudy.app.data.OnlineBible.create(getApplication(), full, bible.books)
+                    synchronized(this@StudyViewModel) { texts.remove(v.code) }
+                    BibleRepository.addImported(getApplication(), v)
+                    v
+                }
+            }
+            r.onSuccess { v -> if (showIn != null) setVersion(showIn, v.code) }
+            message = r.fold(
+                { if (showIn != null) "${it.code} added. Chapters download as you read." else "${it.code} added. Pick it from the version menu; chapters download as you read." },
+                { "Couldn't add ${info.code}: ${it.message}" },
+            )
+        }
+    }
+
+    /** Save for offline: every chapter of an online Bible, downloading; [code] → done (0–1). */
+    val onlineDownloads = mutableStateMapOf<String, Float>()
+    private val downloadJobs = HashMap<String, kotlinx.coroutines.Job>()
+
+    fun saveForOffline(code: String) {
+        if (code in onlineDownloads) return
+        val repo = text(code)
+        val o = repo.online ?: return
+        viewModelScope.launch(Dispatchers.IO) { o.savedForOffline = true } // kept however long ago it was read
+        val chapters = bible.books.filter { it.id in o.books }.flatMap { b -> (1..b.chapters).map { b.id to it } }
+        onlineDownloads[code] = o.savedChapters().toFloat() / chapters.size
+        downloadJobs[code] = viewModelScope.launch {
+            var failed: Throwable? = null
+            withContext(Dispatchers.IO) {
+                var done = 0
+                for ((b, c) in chapters) {
+                    if (!isActive) break
+                    // Paced to the service's limits (Crossway: 60 a minute); chapters already here cost nothing.
+                    if (o.pace > 0 && !o.isSaved(b, c)) kotlinx.coroutines.delay(o.pace)
+                    val r = runCatching { o.fetch(b, c) }
+                    if (r.isFailure) { failed = r.exceptionOrNull(); break }
+                    if (++done % 10 == 0) withContext(Dispatchers.Main) { onlineDownloads[code] = done.toFloat() / chapters.size }
+                }
+            }
+            onlineDownloads.remove(code)
+            downloadJobs.remove(code)
+            onlineArrivals++
+            message = when {
+                failed != null -> "Saving $code stopped: ${failed?.message ?: "no internet"}. Tap Save for offline to carry on."
+                o.savedChapters() >= chapters.size -> "$code is saved on this tablet and works offline."
+                else -> null
+            }
+        }
+    }
+
+    fun stopSavingForOffline(code: String) {
+        downloadJobs.remove(code)?.cancel()
+        onlineDownloads.remove(code)
+        text(code).online?.let { o -> viewModelScope.launch(Dispatchers.IO) { o.savedForOffline = false } }
+    }
+
+    /** How much of online Bible [code] is on the tablet: saved chapters, out of all. */
+    fun onlineSaved(code: String): Pair<Int, Int>? {
+        val o = text(code).online ?: return null
+        return o.savedChapters() to bible.books.filter { it.id in o.books }.sumOf { it.chapters }
     }
     val user = UserDb(app)
     private val imagesDir = File(app.filesDir, "images").apply { mkdirs() }
@@ -215,7 +512,17 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var penSize by mutableIntStateOf(prefs.getInt("penSize", 1))
     var highlightSize by mutableIntStateOf(prefs.getInt("hlSize", 1))
     var snapHighlights by mutableStateOf(prefs.getBoolean("snap", true))
-    var fingerDraw by mutableStateOf(prefs.getBoolean("fingerDraw", false))
+    /**
+     * A phone (PH-1): the device's shorter side is under 600 dp. Kept up to date from the screen, so
+     * a foldable opened out becomes a tablet. Phones draw with a finger, start in read mode, and
+     * show margins and a second panel collapsed.
+     */
+    var phone by mutableStateOf(app.resources.configuration.smallestScreenWidthDp in 1 until 600)
+
+    /** On a phone, which of the tab's two panels is shown; the other is a bar to tap (PH-6). */
+    var phoneShown by mutableIntStateOf(0)
+
+    var fingerDraw by mutableStateOf(prefs.getBoolean("fingerDraw", phone))
     var showHeadings by mutableStateOf(prefs.getBoolean("headings", true))
     /** The tab's two Bible panels scroll together (SPLIT-3); each tab has its own setting. */
     var linkPanels: Boolean
@@ -236,7 +543,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     /** The snapping highlighter draws a line under the words instead of a fill (HL-4). */
     var underlineMode by mutableStateOf(prefs.getBoolean("underline", false))
     /** Read mode (PEN-4): the pen scrolls and taps like a finger, so nothing is marked by accident. */
-    var readMode by mutableStateOf(prefs.getBoolean("readMode", false))
+    var readMode by mutableStateOf(prefs.getBoolean("readMode", phone)) // phones start reading (PH-2)
     /** The version a new Bible panel opens in; null = the same as the panel it comes from. */
     var newPanelVersion by mutableStateOf(prefs.getString("newPanelVersion", null))
     /**
@@ -251,8 +558,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      * the open passages are not touched.
      */
     fun resetSettings() {
-        theme = PageTheme.LIGHT
+        theme = PageTheme.DARK
         changeTextFont(TextFont.BOOK)
+        changeTextSize(defaultTextSize())
         changeParagraphs(false)
         changeVerseNumbers(true)
         expandToFit = false
@@ -260,18 +568,18 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         lineSpacing = LineSpacing.NORMAL
         showHeadings = true
         newPanelVersion = null
-        fingerDraw = false
+        fingerDraw = phone // a phone draws with a finger (PH-3)
         sideButton = SideButton.entries.first()
         partialEraser = false
         snapHighlights = true
         fastInk = true
         underlineMode = false
-        readMode = false
+        readMode = phone // and starts reading (PH-2)
         penSize = 1; highlightSize = 1
         highlightsAllVersions = true
         marginLeft = false; marginRight = true
         linkPanels = false
-        compareVersions = false; originalView = false; redLetters = false; verseInPanel = true
+        compareVersions = false; originalView = false; redLetters = false; verseInPanel = false; verseCommentary = true; showGlance = true; hardWords = true; aidNames = true; aidCustoms = true; aidSymbols = true; aidChrist = true
         changeWritingSounds(true); changeSoundVolume(0.6f)
         savePrefs()
         message = "Settings reset to their defaults."
@@ -280,6 +588,21 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun changeTextFont(f: TextFont) {
         if (f == textFont) return
         textFont = f
+        relayout()
+    }
+
+    /**
+     * The Bible text's size (READ-3). Phones start larger, since the page is fitted to a narrow
+     * screen. Like the font, changing it reflows the lines; ink on the words moves and resizes with them.
+     */
+    var textSize by mutableStateOf(com.biblestudy.app.model.TextSize.of(prefs.getInt("textSize", defaultTextSize().percent)))
+        private set
+
+    private fun defaultTextSize() = if (phone) com.biblestudy.app.model.TextSize.LARGER else com.biblestudy.app.model.TextSize.NORMAL
+
+    fun changeTextSize(s: com.biblestudy.app.model.TextSize) {
+        if (s == textSize) return
+        textSize = s
         relayout()
     }
 
@@ -330,7 +653,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         private set
 
     /** Pen-on-paper sounds while writing (INK-15), and how loud (0..1). */
-    val sound = WritingSound()
+    val sound = WritingSound { WritingSound.loadLoops(getApplication<Application>().assets) }
     var writingSounds by mutableStateOf(prefs.getBoolean("writingSounds", true))
         private set
     var soundVolume by mutableFloatStateOf(prefs.getFloat("soundVolume", 0.6f))
@@ -350,6 +673,24 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         return panels.firstOrNull { it !== p && it.book == p.book && it.version != p.version }?.version
     }
 
+    /** Chapter at a glance (STD-22): the card under each Bible panel's header; on unless switched off. */
+    var showGlance by mutableStateOf(prefs.getBoolean("glance", true))
+    /** Whether the chapter cards are open (folded to one line to start with). */
+    var glanceOpen by mutableStateOf(false)
+
+    /** Hard words explained (STD-23): a dotted line under hard words; tap one for its meaning. */
+    var hardWords by mutableStateOf(prefs.getBoolean("hardWords", true))
+
+    /** Bible aids (AID-10): people and places, customs and feasts, symbols and numbers, marked like hard words. */
+    var aidNames by mutableStateOf(prefs.getBoolean("aidNames", true))
+    var aidCustoms by mutableStateOf(prefs.getBoolean("aidCustoms", true))
+    var aidSymbols by mutableStateOf(prefs.getBoolean("aidSymbols", true))
+    /** Points to Christ (AID-13): a dotted gold line under Old Testament verses that point to Jesus. */
+    var aidChrist by mutableStateOf(prefs.getBoolean("aidChrist", true))
+
+    /** What's marked in the text (STD-23, AID-10). */
+    fun aidSwitches() = com.biblestudy.app.data.AidSwitches(hardWords, aidNames, aidCustoms, aidSymbols)
+
     /** The words of Jesus in red (BIB-8); only colours change, so ink stays where it is. */
     var redLetters by mutableStateOf(prefs.getBoolean("redLetters", false))
 
@@ -357,7 +698,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun changeVerseNumbers(on: Boolean) { if (on != verseNumbers) { verseNumbers = on; relayout() } }
 
     /** The layout ink on the words is drawn in now. */
-    fun styleKey() = TextStyleKey(textFont, paragraphMode, verseNumbers)
+    fun styleKey() = TextStyleKey(textFont, paragraphMode, verseNumbers, textSize.percent)
 
     /** The words move to new lines: ink on them is reloaded and moved along (READ-3, READ-6). */
     private fun relayout() {
@@ -372,8 +713,11 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var compareVersions by mutableStateOf(prefs.getBoolean("compareVersions", false))
     /** The verse window shows the Hebrew or Greek word by word (STD-4). */
     var originalView by mutableStateOf(prefs.getBoolean("originalView", false))
-    /** Tapping a verse shows its details in a panel beside the text rather than a window (SPLIT-9). */
-    var verseInPanel by mutableStateOf(prefs.getBoolean("verseInPanel", true))
+    /**
+     * Tapping a verse shows its details in a panel beside the text rather than the pop-up window
+     * (SPLIT-9). Off by default from 1.7: the pop-up is simpler (a new key, so everyone starts off).
+     */
+    var verseInPanel by mutableStateOf(prefs.getBoolean("versePanel", false))
     var lineSpacing by mutableStateOf(
         runCatching { LineSpacing.valueOf(prefs.getString("lineSpacing", "NORMAL")!!) }.getOrDefault(LineSpacing.NORMAL)
     )
@@ -382,7 +726,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     )
     var marginLeft by mutableStateOf(prefs.getBoolean("marginLeft", false))
     var marginRight by mutableStateOf(prefs.getBoolean("marginRight", true))
-    var theme by mutableStateOf(runCatching { PageTheme.valueOf(prefs.getString("theme", "LIGHT")!!) }.getOrDefault(PageTheme.LIGHT))
+    var theme by mutableStateOf(runCatching { PageTheme.valueOf(prefs.getString("theme", "DARK")!!) }.getOrDefault(PageTheme.DARK)) // dark at first
     /** A tab holds at most two panels (SPLIT-8); more go in other tabs. */
     val maxPanels = 2
     /** The window's width class (ADP-1). */
@@ -398,6 +742,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var paneSearch by mutableStateOf<String?>(null)
     /** The verse the cross-references pane shows; null follows the top of the active panel. */
     var paneVerse by mutableStateOf<VerseTarget?>(null)
+    /** The verse at the top of the page when a verse was last tapped: a linked commentary follows the tap until the page moves (STD-18). */
+    var paneVerseTop by mutableStateOf(-1)
 
     /** Set by the UI; margin widths and zoom are remembered separately for landscape and portrait. */
     var landscape by mutableStateOf(true)
@@ -466,6 +812,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     val bitmaps = mutableStateMapOf<String, ImageBitmap>()
     private val requestedBitmaps = HashSet<String>()
     private var lastId = 0L
+    private val idSalt: Long = prefs.getLong("idSalt", -1L).takeIf { it >= 0 }
+        ?: kotlin.random.Random.nextLong(1000).also { prefs.edit { putLong("idSalt", it) } }
 
     init {
         val saved = prefs.getString("tabs", null)?.let { TabState.listFromJson(it, ::validPlace) }.orEmpty()
@@ -481,14 +829,17 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             layers.add(l); user.saveLayer(l)
         }
         if (layers.none { it.id == activeLayerId }) activeLayerId = layers.first().id
-        convertBookmarks()
         for (k in listOf("mw_L_land", "mw_R_land", "mw_L_port", "mw_R_port")) {
             if (prefs.contains(k)) marginWidths[k] = prefs.getFloat(k, Page.MARGIN_W)
         }
     }
 
+    /**
+     * A new item's id: the time in microseconds. The last three digits differ from device to device
+     * (SYNC-1), so two devices making an item in the same millisecond don't pick the same id.
+     */
     fun newId(): Long {
-        val t = System.currentTimeMillis() * 1000
+        val t = System.currentTimeMillis() * 1000 + idSalt
         lastId = if (t > lastId) t else lastId + 1
         return lastId
     }
@@ -501,7 +852,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("verseInPanel", verseInPanel)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putInt("textSize", textSize.percent); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("versePanel", verseInPanel); putBoolean("verseCommentary2", verseCommentary); putBoolean("glance", showGlance); putString("lastBibleVersion", lastBibleVersion); putBoolean("hardWords", hardWords); putBoolean("aidNames", aidNames); putBoolean("aidCustoms", aidCustoms); putBoolean("aidSymbols", aidSymbols); putBoolean("aidChrist", aidChrist)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             marginWidths.forEach { (k, v) -> putFloat(k, v) }
@@ -512,6 +863,149 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     fun currentWidth(highlighter: Boolean) =
         if (highlighter) HIGHLIGHT_SIZES[highlightSize.coerceIn(0, 2)] else PEN_SIZES[penSize.coerceIn(0, 2)]
+
+    // ---------- Back and Forward for the whole screen (NAV-1) ----------
+
+    /** The screen as it was: every tab, what its panels show and where, and the tab in front. */
+    class Screen(val tabs: String, val active: Int, val key: String)
+
+    /** Screens to go back to (newest last), and forward to after going back. */
+    val backSteps = mutableStateListOf<Screen>()
+    val forwardSteps = mutableStateListOf<Screen>()
+    private var stepDepth = 0
+    private var restoring = false
+
+    private fun screenNow(): Screen {
+        val json = TabState.listToJson(tabs)
+        // Jumps within a chapter change no saved field, so each panel's jump count is part of the key.
+        return Screen(json, activeTab, json + activeTab + tabs.joinToString { t -> t.panels.joinToString { "${it.navGen}" } })
+    }
+
+    /**
+     * Runs a change to what's on screen (a jump, a panel opened, closed or changed, a tab opened,
+     * switched or closed) as one step Back can undo. Changes made inside it are part of the same step.
+     */
+    private inline fun step(block: () -> Unit) {
+        val outer = stepDepth == 0 && !restoring
+        val before = if (outer) screenNow() else null
+        stepDepth++
+        try {
+            block()
+        } finally {
+            stepDepth--
+            if (before != null && screenNow().key != before.key) {
+                backSteps.add(before)
+                while (backSteps.size > MAX_HISTORY) backSteps.removeAt(0)
+                forwardSteps.clear()
+            }
+        }
+    }
+
+    /** Back: the screen as it was before the last change (NAV-1). */
+    fun back() {
+        val to = backSteps.removeLastOrNull() ?: return
+        forwardSteps.add(screenNow())
+        restore(to)
+    }
+
+    /** Forward: undoes Back. */
+    fun forward() {
+        val to = forwardSteps.removeLastOrNull() ?: return
+        backSteps.add(screenNow())
+        restore(to)
+    }
+
+    fun clearSteps() { backSteps.clear(); forwardSteps.clear() }
+
+    /** Back several steps at once, to [i] in [backSteps] (from the list under a held ←). */
+    fun backTo(i: Int) {
+        if (i !in backSteps.indices) return
+        forwardSteps.add(screenNow())
+        while (backSteps.size > i + 1) forwardSteps.add(backSteps.removeAt(backSteps.lastIndex))
+        restore(backSteps.removeAt(i))
+    }
+
+    /** Forward several steps at once, to [i] in [forwardSteps] (from the list under a held →). */
+    fun forwardTo(i: Int) {
+        if (i !in forwardSteps.indices) return
+        backSteps.add(screenNow())
+        while (forwardSteps.size > i + 1) backSteps.add(forwardSteps.removeAt(forwardSteps.lastIndex))
+        restore(forwardSteps.removeAt(i))
+    }
+
+    /** A screen in words, for the Back and Forward lists: "John 3 and Commentary · 2 tabs". */
+    fun screenLabel(s: Screen): String = runCatching {
+        val all = org.json.JSONArray(s.tabs)
+        val t = all.getJSONObject(s.active.coerceIn(0, all.length() - 1))
+        val parts = ArrayList<String>()
+        val hidden = t.optBoolean("hidden")
+        val ps = t.getJSONArray("panels")
+        if (!hidden) for (i in 0 until ps.length()) {
+            val p = ps.getJSONObject(i)
+            val b = p.optInt("b", 43)
+            parts += sketchOf(b)?.name ?: "${bible.book(b.coerceIn(1, 66)).name} ${p.optInt("c", 1)}"
+        }
+        val st = t.optJSONArray("studies") ?: org.json.JSONArray()
+        for (i in 0 until st.length()) PaneKind.entries.firstOrNull { it.name == st.optString(i) }?.let { parts += it.label }
+        parts.joinToString(" and ") + if (all.length() > 1) " \u00b7 ${all.length()} tabs" else ""
+    }.getOrDefault("Earlier screen")
+
+    /**
+     * Start fresh (NAV-2): one tab with one Bible panel, at the passage being read. Back undoes it.
+     */
+    fun startFresh() {
+        val p = panels.getOrNull(activePanel.coerceIn(0, panels.lastIndex)) ?: return
+        step {
+            selection = null; passagePop = null; linkPos = null; commentaryPos = null
+            chatWindow = false
+            val (b, c) = if (Sketch.isSketch(p.book)) biblePlaceBefore(p).let { it.first to it.second } else p.book to p.chapter
+            val t = TabState()
+            t.panels.add(PanelState(b, c).apply { version = p.version; pendingVerse = if (b == p.book) p.topVerse else null; navGen = p.navGen + 1 })
+            tabs.clear(); tabs.add(t)
+            activeTab = 0
+        }
+    }
+
+    /** A saved place made valid; sketch pages that still exist stay sketch pages. */
+    private fun screenPlace(book: Int, chapter: Int, version: String?): Triple<Int, Int, String> =
+        if (Sketch.isSketch(book) && sketchOf(book) != null) Triple(book, 1, validVersion(version)) else validPlace(book, chapter, version)
+
+    /** A tab's arrangement without where its panels are, to tell whether only the passages differ. */
+    private fun shapeOf(o: org.json.JSONObject): String {
+        val c = org.json.JSONObject(o.toString())
+        val ps = c.getJSONArray("panels")
+        for (i in 0 until ps.length()) ps.getJSONObject(i).let { p -> listOf("b", "c", "t", "v", "zl", "zland", "zport").forEach { p.remove(it) } }
+        return c.toString()
+    }
+
+    private fun restore(s: Screen) {
+        restoring = true
+        try {
+            selection = null; passagePop = null; linkPos = null; commentaryPos = null
+            val saved = org.json.JSONArray(s.tabs)
+            val now = org.json.JSONArray(TabState.listToJson(tabs))
+            val sameShape = saved.length() == now.length() && (0 until saved.length()).all { shapeOf(saved.getJSONObject(it)) == shapeOf(now.getJSONObject(it)) }
+            if (sameShape) {
+                // Only the passages differ: move the panels there, keeping everything else as it is.
+                for (t in 0 until saved.length()) {
+                    val ps = saved.getJSONObject(t).getJSONArray("panels")
+                    tabs[t].panels.forEachIndexed { i, p ->
+                        val j = ps.optJSONObject(i) ?: return@forEachIndexed
+                        val (b, c, v) = screenPlace(j.optInt("b", p.book), j.optInt("c", p.chapter), j.optString("v", p.version))
+                        val verse = j.optInt("t", 1)
+                        if (p.version != v) p.version = v
+                        if (p.book != b || p.chapter != c || p.topVerse != verse) jump(p, b, c, verse)
+                    }
+                }
+            } else {
+                val list = TabState.listFromJson(s.tabs, ::screenPlace)?.takeIf { it.isNotEmpty() } ?: return
+                tabs.clear(); tabs.addAll(list)
+            }
+            activeTab = s.active.coerceIn(0, tabs.lastIndex)
+        } finally {
+            restoring = false
+        }
+    }
 
     // ---------- navigation ----------
 
@@ -526,8 +1020,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             if (p.back.lastOrNull() != here) p.back.add(here)
             while (p.back.size > MAX_HISTORY) p.back.removeAt(0)
             p.forward.clear()
-        }
-        jump(p, book, chapter, verse)
+            step { jump(p, book, chapter, verse) }
+        } else jump(p, book, chapter, verse)
     }
 
     private fun jump(p: PanelState, book: Int, chapter: Int, verse: Int?) {
@@ -540,6 +1034,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             p.navGen++
             return
         }
+        // Going somewhere replaces any commentary position not yet followed (STD-18).
+        commentaryPos = null
         val b = book.coerceIn(1, 66)
         p.book = b
         p.chapter = chapter.coerceIn(1, bible.book(b).chapters)
@@ -557,13 +1053,23 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         selection = null
         p.pendingVerse = p.topVerse
         p.version = validVersion(code)
+        if (!Sketch.isSketch(p.book)) lastBibleVersion = p.version
     }
+
+    /** The version last chosen for a Bible panel: what a sketch page on its own uses for verse cards. */
+    var lastBibleVersion by mutableStateOf(prefs.getString("lastBibleVersion", null) ?: "KJV")
+        private set
 
     /** Section headings for a chapter. Only the BSB has them; being public domain, they are shown in every version. */
     fun headings(book: Int, chapter: Int): List<Heading> = text(BibleRepository.BSB.code).headings(book, chapter)
 
     /** The version shown in the active panel (used by search and the verse popup). */
-    val activeVersion: String get() = panels.getOrNull(activePanel)?.version ?: bible.code
+    val activeVersion: String get() {
+        val p = panels.getOrNull(activePanel) ?: return bible.code
+        if (!Sketch.isSketch(p.book)) return p.version
+        // A sketch page has no version of its own: the Bible beside it, else the one read last.
+        return panels.firstOrNull { !Sketch.isSketch(it.book) }?.version ?: validVersion(lastBibleVersion)
+    }
 
     /** The chapter before (dir = -1) or after (dir = 1), or null at either end of the Bible. */
     fun neighbor(book: Int, chapter: Int, dir: Int): Pair<Int, Int>? = when {
@@ -590,20 +1096,6 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun prevChapter(index: Int) {
         val p = panels.getOrNull(index) ?: return
         neighbor(p.book, p.chapter, -1)?.let { (b, c) -> goTo(index, b, c, remember = false) }
-    }
-
-    fun goBack(index: Int) {
-        val p = panels.getOrNull(index) ?: return
-        val to = p.back.removeLastOrNull() ?: return
-        p.forward.add(p.here())
-        jump(p, to.book, to.chapter, to.verse)
-    }
-
-    fun goForward(index: Int) {
-        val p = panels.getOrNull(index) ?: return
-        val to = p.forward.removeLastOrNull() ?: return
-        p.back.add(p.here())
-        jump(p, to.book, to.chapter, to.verse)
     }
 
     fun toggleSplit() {
@@ -679,20 +1171,22 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Opens another Bible panel in this tab, showing the active one's passage. */
     fun addPanel() {
-        if (tab.shown >= maxPanels) {
-            message = "A tab holds two panels. Open a new tab for more."
-            return
+        step {
+            if (tab.shown >= maxPanels) {
+                message = "A tab holds two panels. Open a new tab for more."
+                return
+            }
+            val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
+            if (tab.bibleHidden) {
+                // Both panels showed study views and one was closed: bring the Bible panel back.
+                tab.bibleHidden = false
+                tab.studyFirst = true // the study view stays where it was; the Bible comes in beside it
+                activePanel = 0
+                return
+            }
+            panels.add(PanelState(p.book, p.chapter).apply { version = validVersion(newPanelVersion ?: p.version) })
+            activePanel = panels.lastIndex
         }
-        val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
-        if (tab.bibleHidden) {
-            // Both panels showed study views and one was closed: bring the Bible panel back.
-            tab.bibleHidden = false
-            tab.studyFirst = true // the study view stays where it was; the Bible comes in beside it
-            activePanel = 0
-            return
-        }
-        panels.add(PanelState(p.book, p.chapter).apply { version = validVersion(newPanelVersion ?: p.version) })
-        activePanel = panels.lastIndex
     }
 
     /**
@@ -700,16 +1194,18 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      * is kept out of sight; a tab left with nothing is closed.
      */
     fun closePanel(index: Int) {
-        val t = tab
-        when {
-            t.panels.size > 1 && index in t.panels.indices -> {
-                t.panels.removeAt(index)
-                t.linked = false
+        step {
+            val t = tab
+            when {
+                t.panels.size > 1 && index in t.panels.indices -> {
+                    t.panels.removeAt(index)
+                    t.linked = false
+                }
+                t.studies.isNotEmpty() -> t.bibleHidden = true
+                tabs.size > 1 -> { closeTab(activeTab); return }
             }
-            t.studies.isNotEmpty() -> t.bibleHidden = true
-            tabs.size > 1 -> { closeTab(activeTab); return }
+            t.activePanel = 0
         }
-        t.activePanel = 0
     }
 
     /** The weights of the panels on screen. */
@@ -721,7 +1217,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     /** Top and bottom (true) or side by side (false), as chosen for the tab in front. */
-    fun isStacked(t: TabState = tab): Boolean = t.stacked ?: !landscape
+    /** Phones always split top and bottom when upright (PH-6). */
+    fun isStacked(t: TabState = tab): Boolean = if (phone) !landscape else t.stacked ?: !landscape
 
     fun setStacked(stacked: Boolean) { tab.stacked = stacked }
 
@@ -732,33 +1229,37 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      * the second panel. With two Bible panels, the one not in use makes way for it.
      */
     fun showStudy(kind: PaneKind) {
-        val t = tab
-        if (kind in t.studies) return
-        when {
-            t.studies.isNotEmpty() -> t.setStudyAt(0, kind)
-            t.panels.size >= 2 -> {
-                // The second panel makes way, unless the first is a sketch page beside Bible text.
-                val other = if (Sketch.isSketch(t.panels[0].book) && !Sketch.isSketch(t.panels[1].book)) 0 else 1
-                t.panels.removeAt(other)
-                t.linked = false
-                t.activePanel = 0
-                t.addStudy(kind)
-                t.studyFirst = other == 0
+        step {
+            val t = tab
+            if (kind in t.studies) return
+            when {
+                t.studies.isNotEmpty() -> t.setStudyAt(0, kind)
+                t.panels.size >= 2 -> {
+                    // The second panel makes way, unless the first is a sketch page beside Bible text.
+                    val other = if (Sketch.isSketch(t.panels[0].book) && !Sketch.isSketch(t.panels[1].book)) 0 else 1
+                    t.panels.removeAt(other)
+                    t.linked = false
+                    t.activePanel = 0
+                    t.addStudy(kind)
+                    t.studyFirst = other == 0
+                }
+                else -> { t.addStudy(kind); t.studyFirst = false }
             }
-            else -> { t.addStudy(kind); t.studyFirst = false }
+            t.normalize()
         }
-        t.normalize()
     }
 
     /** Closes study view [kind] in the tab in front. */
     fun closeStudy(kind: PaneKind) {
-        val t = tab
-        t.studies.indexOf(kind).takeIf { it >= 0 }?.let { t.removeStudyAt(it) }
-        if (t.studies.isEmpty()) {
-            t.bibleHidden = false
-            t.pinned = null
+        step {
+            val t = tab
+            t.studies.indexOf(kind).takeIf { it >= 0 }?.let { t.removeStudyAt(it) }
+            if (t.studies.isEmpty()) {
+                t.bibleHidden = false
+                t.pinned = null
+            }
+            t.normalize()
         }
-        t.normalize()
     }
 
     /** Closes the study views in the tab in front, leaving its Bible panel. */
@@ -773,59 +1274,63 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Turns the panel at [slot] into [view]: a study view, or (null) a Bible panel. */
     fun setSlotView(slot: Slot, view: PaneKind?) {
-        val t = tab
-        when (slot) {
-            is Slot.Bible -> {
-                if (view == null) return
-                if (view in t.studies && view != PaneKind.COMMENTARY) { message = "${view.label} is already open in this tab."; return }
-                if (t.panels.size >= 2) {
-                    t.panels.removeAt(slot.index)
-                    t.linked = false
-                    t.activePanel = 0
-                    t.addStudy(view)
-                    t.studyFirst = slot.index == 0
-                } else {
-                    // The tab's only Bible panel: it stays, out of sight, keeping the passage.
-                    if (t.studies.isEmpty()) t.addStudy(view)
-                    else if (t.studyFirst) t.addStudy(view) else t.addStudy(view, at = 0)
-                    t.bibleHidden = true
-                }
-            }
-            is Slot.Study -> {
-                val i = slot.pos.takeIf { it in t.studies.indices && t.studies[it] == slot.kind } ?: t.studies.indexOf(slot.kind)
-                if (i < 0) return
-                if (view != null) {
+        step {
+            val t = tab
+            when (slot) {
+                is Slot.Bible -> {
+                    if (view == null) return
                     if (view in t.studies && view != PaneKind.COMMENTARY) { message = "${view.label} is already open in this tab."; return }
-                    t.setStudyAt(i, view)
-                } else {
-                    // Back to a Bible panel at the passage the study view was working with.
-                    t.removeStudyAt(i)
-                    if (t.bibleHidden) {
-                        t.bibleHidden = false
-                        t.studyFirst = i == 1
+                    if (t.panels.size >= 2) {
+                        t.panels.removeAt(slot.index)
+                        t.linked = false
+                        t.activePanel = 0
+                        t.addStudy(view)
+                        t.studyFirst = slot.index == 0
                     } else {
-                        val p = t.panels[t.activePanel.coerceIn(0, t.panels.lastIndex)]
-                        t.panels.add(if (i == 0 && t.studyFirst) 0 else t.panels.size, PanelState(p.book, p.chapter).apply { version = p.version })
-                        t.activePanel = if (t.studyFirst) 0 else t.panels.lastIndex
+                        // The tab's only Bible panel: it stays, out of sight, keeping the passage.
+                        if (t.studies.isEmpty()) t.addStudy(view)
+                        else if (t.studyFirst) t.addStudy(view) else t.addStudy(view, at = 0)
+                        t.bibleHidden = true
+                    }
+                }
+                is Slot.Study -> {
+                    val i = slot.pos.takeIf { it in t.studies.indices && t.studies[it] == slot.kind } ?: t.studies.indexOf(slot.kind)
+                    if (i < 0) return
+                    if (view != null) {
+                        if (view in t.studies && view != PaneKind.COMMENTARY) { message = "${view.label} is already open in this tab."; return }
+                        t.setStudyAt(i, view)
+                    } else {
+                        // Back to a Bible panel at the passage the study view was working with.
+                        t.removeStudyAt(i)
+                        if (t.bibleHidden) {
+                            t.bibleHidden = false
+                            t.studyFirst = i == 1
+                        } else {
+                            val p = t.panels[t.activePanel.coerceIn(0, t.panels.lastIndex)]
+                            t.panels.add(if (i == 0 && t.studyFirst) 0 else t.panels.size, PanelState(p.book, p.chapter).apply { version = p.version })
+                            t.activePanel = if (t.studyFirst) 0 else t.panels.lastIndex
+                        }
                     }
                 }
             }
+            t.normalize()
         }
-        t.normalize()
     }
 
     /** Closes the panel at [slot]; the tab's last panel closes the tab (if there's another). */
     fun closeSlot(slot: Slot) {
-        when (slot) {
-            is Slot.Bible -> closePanel(slot.index)
-            is Slot.Study -> {
-                if (tab.shown == 1 && tabs.size > 1) closeTab(activeTab)
-                else if (tab.shown > 1) {
-                    val t = tab
-                    val i = slot.pos.takeIf { it in t.studies.indices && t.studies[it] == slot.kind } ?: t.studies.indexOf(slot.kind)
-                    if (i >= 0) t.removeStudyAt(i)
-                    if (t.studies.isEmpty()) { t.bibleHidden = false; t.pinned = null }
-                    t.normalize()
+        step {
+            when (slot) {
+                is Slot.Bible -> closePanel(slot.index)
+                is Slot.Study -> {
+                    if (tab.shown == 1 && tabs.size > 1) closeTab(activeTab)
+                    else if (tab.shown > 1) {
+                        val t = tab
+                        val i = slot.pos.takeIf { it in t.studies.indices && t.studies[it] == slot.kind } ?: t.studies.indexOf(slot.kind)
+                        if (i >= 0) t.removeStudyAt(i)
+                        if (t.studies.isEmpty()) { t.bibleHidden = false; t.pinned = null }
+                        t.normalize()
+                    }
                 }
             }
         }
@@ -862,49 +1367,58 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Opens a new tab after the one in front, on [book]:[chapter] (default: where you are). */
     fun newTab(book: Int? = null, chapter: Int = 1, verse: Int? = null, version: String? = null) {
-        val from = panels.getOrNull(activePanel)
-        val t = TabState()
-        val p = PanelState(from?.book ?: 43, from?.chapter ?: 3).apply { this.version = version ?: from?.version ?: bible.code }
-        t.panels.add(p)
-        tabs.add(activeTab + 1, t)
-        selectTab(activeTab + 1)
-        if (book != null) jump(p, book, chapter, verse) else p.pendingVerse = from?.topVerse
+        step {
+            val from = panels.getOrNull(activePanel)
+            val t = TabState()
+            val p = PanelState(from?.book ?: 43, from?.chapter ?: 3).apply { this.version = version ?: from?.version ?: bible.code }
+            t.panels.add(p)
+            tabs.add(activeTab + 1, t)
+            selectTab(activeTab + 1)
+            if (book != null) jump(p, book, chapter, verse) else p.pendingVerse = from?.topVerse
+        }
     }
 
     /** Opens the panel at [slot] in a new tab of its own (TAB-3). */
     fun openSlotInNewTab(slot: Slot) {
-        when (slot) {
-            is Slot.Bible -> {
-                val p = panels.getOrNull(slot.index) ?: return
-                newTab(p.book, p.chapter, p.topVerse, p.version)
-            }
-            is Slot.Study -> {
-                val from = tab
-                val p = studyPanel()
-                newTab(p.book, p.chapter, p.topVerse, p.version)
-                tab.addStudy(slot.kind, commentary = from.commentaries.getOrElse(slot.pos) { "" })
-                tab.bibleHidden = true
-                tab.normalize()
+        step {
+            when (slot) {
+                is Slot.Bible -> {
+                    val p = panels.getOrNull(slot.index) ?: return
+                    newTab(p.book, p.chapter, p.topVerse, p.version)
+                }
+                is Slot.Study -> {
+                    val from = tab
+                    val p = studyPanel()
+                    newTab(p.book, p.chapter, p.topVerse, p.version)
+                    tab.addStudy(slot.kind, commentary = from.commentaries.getOrElse(slot.pos) { "" })
+                    tab.bibleHidden = true
+                    tab.normalize()
+                }
             }
         }
     }
 
     fun selectTab(i: Int) {
+        commentaryPos = null // a commentary scrolled in the old tab doesn't move the new one
         if (i !in tabs.indices || i == activeTab) { activeTab = i.coerceIn(0, tabs.lastIndex); return }
-        selection = null
-        passagePop = null
-        linkPos = null
-        activeTab = i
+        step {
+            selection = null
+            passagePop = null
+            linkPos = null
+            activeTab = i
+        }
     }
 
     fun closeTab(i: Int) {
-        if (tabs.size <= 1 || i !in tabs.indices) return
-        selection = null
-        tabs.removeAt(i)
-        activeTab = when {
-            activeTab > i -> activeTab - 1
-            activeTab == i -> i.coerceAtMost(tabs.lastIndex)
-            else -> activeTab
+        step {
+            if (tabs.size <= 1 || i !in tabs.indices) return
+            selection = null
+            tabs.removeAt(i)
+            activeTab = when {
+                activeTab > i -> activeTab - 1
+                activeTab == i -> i.coerceAtMost(tabs.lastIndex)
+                else -> activeTab
+            }
         }
     }
 
@@ -941,13 +1455,15 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Opens a saved layout: its tabs replace the open ones. */
     fun openWorkspace(w: Workspace) {
-        val list = w.tabs(::validPlace).ifEmpty { return }
-        selection = null
-        passagePop = null
-        linkPos = null
-        tabs.clear()
-        tabs.addAll(list)
-        activeTab = w.active.coerceIn(0, tabs.lastIndex)
+        step {
+            val list = w.tabs(::validPlace).ifEmpty { return }
+            selection = null
+            passagePop = null
+            linkPos = null
+            tabs.clear()
+            tabs.addAll(list)
+            activeTab = w.active.coerceIn(0, tabs.lastIndex)
+        }
     }
 
     fun deleteWorkspace(w: Workspace) {
@@ -956,12 +1472,13 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     /**
-     * Shows a verse's details (SPLIT-9): in the tab's Verse details panel, opening it beside the
-     * text when the tab has room; or, when both panels are in use or it's turned off in Settings,
-     * in the verse window.
+     * Shows a verse's details (SPLIT-9): in the pop-up verse window; or, with *Verse details in a
+     * panel* on in Settings, in the tab's Verse details panel, opened beside the text when the tab
+     * has room (the window still opens when both panels are in use).
      */
     fun openVerse(book: Int, chapter: Int, verse: Int, word: Int = -1) {
         paneVerse = VerseTarget(book, chapter, verse, word)
+        paneVerseTop = panels.getOrNull(activePanel.coerceIn(0, panels.lastIndex))?.topVerse ?: -1
         verseWordStudy = null
         val t = tab
         if (verseInPanel && (PaneKind.VERSE in t.studies || (t.studies.isEmpty() && t.shown < 2))) {
@@ -992,28 +1509,68 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         if (c.isEmpty() || name.isBlank() || copyright.isBlank()) { message = "Give the version a short code, a name and its copyright line."; return }
         if (BibleRepository.BUNDLED.any { it.code == c }) { message = "$c is already built in. Choose another code."; return }
         importing = true
+        importStatus = "Importing\u2026"
         viewModelScope.launch {
             val result = withContext(Dispatchers.IO) {
                 runCatching {
+                    // A version being replaced is read from its new file afterwards.
+                    synchronized(this@StudyViewModel) { texts.remove(c) }
+                    val addStudy = { db: android.database.sqlite.SQLiteDatabase, parsed: com.biblestudy.app.data.BibleImport.Parsed? -> buildStudy(db, c, parsed) }
                     if (names.size == 1 && names[0].lowercase().endsWith(".db")) {
-                        open(0).use { com.biblestudy.app.data.BibleImport.saveAppDb(getApplication(), it, c, name.trim(), copyright.trim()) }
+                        open(0).use { com.biblestudy.app.data.BibleImport.saveAppDb(getApplication(), it, c, name.trim(), copyright.trim(), addStudy) }
                     } else {
                         val parsed = com.biblestudy.app.data.BibleImport.parse(names, open)
-                        com.biblestudy.app.data.BibleImport.save(getApplication(), parsed, c, name.trim(), copyright.trim(), bible.books)
+                        com.biblestudy.app.data.BibleImport.save(getApplication(), parsed, c, name.trim(), copyright.trim(), bible.books, addStudy)
                     }
                 }
             }
             importing = false
+            importStatus = null
             synchronized(this@StudyViewModel) { texts.remove(c) }
-            message = result.fold({ "${it.code} added. Pick it from the version menu." }, { "Couldn't import: ${it.message}" })
+            message = result.fold({ "${it.code} added, with word studies. Pick it from the version menu." }, { "Couldn't import: ${it.message}" })
         }
     }
 
     var importing by mutableStateOf(false)
         private set
 
+    /** What an import (or preparing word studies) is doing, shown on the import button. */
+    var importStatus by mutableStateOf<String?>(null)
+        private set
+
+    /** Word tags, words of Jesus and paragraphs for imported version [code] (see [ImportStudy]). */
+    private fun buildStudy(db: android.database.sqlite.SQLiteDatabase, code: String, parsed: com.biblestudy.app.data.BibleImport.Parsed?) {
+        com.biblestudy.app.data.ImportStudy.build(db, code, parsed, study, BibleRepository.BUNDLED.map { text(it.code) }) { f ->
+            val status = "Preparing word studies\u2026 ${(f * 100).toInt()}%"
+            viewModelScope.launch(Dispatchers.Main) { if (importing) importStatus = status }
+        }
+    }
+
+    /**
+     * Versions imported before word studies worked for them (or restored from such a backup) get
+     * their word tags, words of Jesus and paragraphs now, in the background.
+     */
+    fun prepareImported() {
+        val todo = BibleRepository.ALL.filter { it.imported && it.online == 0 }
+        if (todo.isEmpty() || importing) return
+        viewModelScope.launch {
+            withContext(Dispatchers.IO) {
+                for (v in todo) runCatching {
+                    android.database.sqlite.SQLiteDatabase.openDatabase(v.asset, null, android.database.sqlite.SQLiteDatabase.OPEN_READWRITE).use { db ->
+                        if (!com.biblestudy.app.data.ImportStudy.isBuilt(db)) {
+                            withContext(Dispatchers.Main) { importing = true }
+                            buildStudy(db, v.code, null)
+                        }
+                    }
+                }
+            }
+            if (importing) { importing = false; importStatus = null; dataGeneration++ }
+        }
+    }
+
     /** Removes an imported version; panels reading it go back to the KJV. */
     fun removeBible(code: String) {
+        stopSavingForOffline(code)
         panels.forEachIndexed { i, p -> if (p.version == code) setVersion(i, "KJV") }
         if (newPanelVersion == code) newPanelVersion = null
         synchronized(this) { texts.remove(code) }
@@ -1059,7 +1616,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val s = Sketch(
             id, name.trim().ifEmpty { "Sketch" }, paper,
             link?.first ?: 0, link?.second ?: 0, link?.third ?: 0,
-            Sketch.START_HEIGHT, created,
+            Sketch.START_HEIGHT, created, uid = Sketch.newUid(created),
         )
         sketches.add(s)
         io { user.saveSketch(s) }
@@ -1152,6 +1709,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      */
     fun addReadyMadePages(announce: Boolean = false, onlyNew: Boolean = false) {
         val layer = layers.firstOrNull() ?: return
+        val startedAt = System.currentTimeMillis() - 1000
         var added = 0
         // Pages made before (by name), so a new version adds its new pages but not ones you deleted.
         val made = prefs.getStringSet("readyMadeNames", null)?.toMutableSet()
@@ -1161,11 +1719,14 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             if (sketches.any { it.readyMade && it.name == t.name }) { made += t.name; return@forEachIndexed }
             if (onlyNew && t.name in made) return@forEachIndexed
             val s = createSketch(t.name, t.paper, link = null, open = false, created = (i + 1).toLong())
-            placeOnSketch(s, t.items(env), layerId = layer.id, undoable = false)
+            placeOnSketch(s, t.items(env), layerId = layer.id, undoable = false, ids = { n -> readyMadeId(i + 1, n) })
             made += t.name
             added++
         }
         prefs.edit { putBoolean("readyMadeAdded", true); putStringSet("readyMadeNames", made) }
+        // Every device makes these pages for itself, the same: dated long ago, so they don't count as
+        // changes to sync (a page deleted on another device stays deleted). Putting them back does.
+        if (!announce && added > 0) io { com.biblestudy.app.data.Sync.markAsOriginal(user.writableDatabase, startedAt) }
         if (announce) message = when (added) {
             0 -> "All the ready-made pages are already here."
             1 -> "1 ready-made page put back."
@@ -1244,7 +1805,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      * (STD-16, SKT-5). [items] are in page units from the top-left of the page's drawing area; they
      * go below anything already there, and the page grows to fit. Returns false if the layer is locked.
      */
-    fun placeOnSketch(s: Sketch, items: List<Drawn>, layerId: Long? = null, undoable: Boolean = true): Boolean {
+    fun placeOnSketch(s: Sketch, items: List<Drawn>, layerId: Long? = null, undoable: Boolean = true, ids: ((Int) -> Long)? = null): Boolean {
         val layer = (if (layerId != null) layers.firstOrNull { it.id == layerId } else activeLayer()) ?: return false
         if (layerId == null && layer.locked) { message = "Layer \u201c${layer.name}\u201d is locked."; return false }
         if (layerId == null && !layer.visible) setLayerVisible(layer.id, true)
@@ -1255,7 +1816,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val top = (existing.maxOrNull()?.let { it + 60f } ?: 40f)
         val added = ArrayList<Annotation>()
         var bottom = top
-        for (d in items) when (d) {
+        for ((n, d) in items.withIndex()) {
+            fun newId() = ids?.invoke(n) ?: this.newId()
+            when (d) {
             is DrawnBox -> {
                 val t = MarginText(newId(), layer.id, book, 1, Region.RIGHT, 1, d.x, top + d.y, d.w, d.text, d.size, d.color, d.background)
                 added += t
@@ -1285,6 +1848,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 }
                 added += InkStroke(newId(), layer.id, null, book, 1, Region.RIGHT, 1, false, d.color, d.width, pts.toFloatArray())
             }
+            }
         }
         added.forEach { addItem(it) }
         if (undoable) record(Edit(added, emptyList()))
@@ -1305,6 +1869,48 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     /** A text box's height before it has been laid out: wrapped lines at about half an em per letter. */
+    /**
+     * The verse a new margin stroke covering [box] (page units on [g]'s page) is pinned to, so a
+     * sketch stays in one piece in every version (ANCH-4): the verse of the margin stroke, text box
+     * or picture it touches or comes within [GROUP_GAP] of, nearest first. null: nothing near.
+     * (Each verse sits at a different height in each version, so strokes of one drawing pinned to
+     * different verses would drift apart.)
+     */
+    fun marginGroupVerse(g: PageGeometry, region: Region, box: androidx.compose.ui.geometry.Rect): Int? {
+        val layout = g.layout
+        val near = box.inflate(GROUP_GAP)
+        val visible = visibleLayerIds().toSet()
+        val ox = g.originX(region)
+        var best: Int? = null
+        var bestD = Float.MAX_VALUE
+        fun consider(verse: Int, r: androidx.compose.ui.geometry.Rect) {
+            if (!r.overlaps(near)) return
+            val d = (r.center - box.center).getDistance()
+            if (d < bestD) { bestD = d; best = verse }
+        }
+        for (s in marginStrokesFor(layout.book, layout.chapter)) {
+            if (s.region != region || s.layerId !in visible || s.points.size < 3) continue
+            val oy = g.originY(region, s.verse)
+            var l = Float.MAX_VALUE; var t = Float.MAX_VALUE; var r = -Float.MAX_VALUE; var b = -Float.MAX_VALUE
+            for (i in s.points.indices step 3) {
+                l = minOf(l, s.points[i]); r = maxOf(r, s.points[i])
+                t = minOf(t, s.points[i + 1]); b = maxOf(b, s.points[i + 1])
+            }
+            consider(s.verse, androidx.compose.ui.geometry.Rect(ox + l, oy + t, ox + r, oy + b))
+        }
+        for (x in textsFor(layout.book, layout.chapter)) {
+            if (x.region != region || x.layerId !in visible) continue
+            val oy = g.originY(region, x.verse)
+            consider(x.verse, androidx.compose.ui.geometry.Rect(ox + x.x, oy + x.y, ox + x.x + x.w, oy + x.y + (textHeights[x.id] ?: estimateTextHeight(x))))
+        }
+        for (x in imagesFor(layout.book, layout.chapter)) {
+            if (x.region != region || x.layerId !in visible) continue
+            val oy = g.originY(region, x.verse)
+            consider(x.verse, androidx.compose.ui.geometry.Rect(ox + x.x, oy + x.y, ox + x.x + x.w, oy + x.y + x.h))
+        }
+        return best
+    }
+
     private fun estimateTextHeight(t: MarginText): Float {
         val perLine = ((t.w - 16f) / (t.size * 0.5f)).coerceAtLeast(1f)
         val lines = t.text.lines().sumOf { kotlin.math.ceil((it.length.coerceAtLeast(1)) / perLine).toInt() }
@@ -1352,8 +1958,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun readingTick(now: Long = android.os.SystemClock.uptimeMillis()) {
         val since = (now - lastTick).coerceIn(0L, 30_000L)
         lastTick = now
-        if (!trackReading || !foreground || now - lastActive > IDLE_MS || since < 1000) return
+        if (!foreground || now - lastActive > IDLE_MS || since < 1000) return
         val p = panels.getOrNull(activePanel.coerceIn(0, panels.lastIndex)) ?: return
+        if (!Sketch.isSketch(p.book)) noteRecent(p.book, p.chapter, p.topVerse, since / 1000)
+        if (!trackReading) return
         val book = p.book; val chapter = p.chapter
         if (Sketch.isSketch(book)) {
             // Time on a sketch page counts as study time for its passage's day, not as reading.
@@ -1396,7 +2004,12 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     // ---------- study library (0.8) ----------
 
     /** Word studies, dictionary, topics and commentary; opened on first use. */
-    val study by lazy { StudyRepository(getApplication()) }
+    val study by lazy {
+        StudyRepository(getApplication()).also { s ->
+            // Imported versions keep their word tags, red letters and paragraphs in their own database.
+            s.ownDb = { code -> if (BibleRepository.ALL.any { it.code == code && it.imported }) text(code).database else null }
+        }
+    }
 
     /** The word study window, when open (STD-3). */
     var wordStudy by mutableStateOf<WordStudy?>(null)
@@ -1412,6 +2025,27 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             else -> wordStudy = w
         }
     }
+    // ---------- AI chat, online (AI-1 to AI-7) ----------
+
+    val chat by lazy { ChatState(getApplication(), viewModelScope) { com.biblestudy.app.data.RefLinks.find(it, bible.books).isNotEmpty() } }
+
+    /** Opens the AI chat in a panel beside the text. */
+    /** The little chat window over the text (AI-10), opened by the chat bubble. */
+    var chatWindow by mutableStateOf(false)
+
+    /** Opens the chat: in its little window, unless the AI chat panel is already showing. */
+    fun openChat() { if (chat.enabled && PaneKind.CHAT !in tab.studies) chatWindow = true }
+
+    /** Moves the chat from its window into a panel beside the text. */
+    fun chatBeside() { chatWindow = false; step { showStudy(PaneKind.CHAT) } }
+
+    /** Adds Bible text to the next question and opens the chat (AI-6). */
+    fun sendToChat(label: String, text: String) {
+        if (!chat.enabled) return
+        chat.attach(ChatPassage(label, text.trim()))
+        openChat()
+    }
+
     /** A word study opened from the Verse details panel, shown in it until Back (SPLIT-9). */
     var verseWordStudy by mutableStateOf<WordStudy?>(null)
     /** The dictionary article and topic open in the study pane, if any. */
@@ -1431,6 +2065,14 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         sidePane = PaneKind.NAMES
     }
 
+    /** The custom, feast, symbol or number open in its study view (AID-11), by its key. */
+    var aidOpen by mutableStateOf<Long?>(null)
+
+    fun openAid(entry: com.biblestudy.app.data.AidEntry) {
+        aidOpen = entry.key
+        sidePane = if (entry.kind == com.biblestudy.app.data.AidKind.CUSTOM) PaneKind.CUSTOMS else PaneKind.SYMBOLS
+    }
+
     /** Opens a person or place by its TIPNR id, e.g. a parent or child in a family list. */
     fun openNameUid(uid: String) {
         viewModelScope.launch {
@@ -1446,8 +2088,11 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     // ---------- commentaries (STD-17 to STD-19) ----------
 
-    /** The commentary a new commentary panel opens with: the last one chosen. */
-    var lastCommentary by mutableStateOf(prefs.getString("commentary", null) ?: com.biblestudy.app.data.Commentaries.CONCISE)
+    /**
+     * The commentary a new commentary panel and the verse pop-up open with: the last one chosen,
+     * the AI Commentary to start with (from 1.12 for everyone; the key changed so it's the default again).
+     */
+    var lastCommentary by mutableStateOf(prefs.getString("commentary2", null) ?: com.biblestudy.app.data.Commentaries.AI)
         private set
 
     /** The commentary shown by study view [pos] of the tab in front. */
@@ -1457,8 +2102,46 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val t = tab
         while (t.commentaries.size <= pos) t.commentaries.add("")
         t.commentaries[pos] = id
+        chooseCommentary(id)
+    }
+
+    /** Makes [id] the commentary shown in the verse pop-up and in new commentary panels. */
+    fun chooseCommentary(id: String) {
         lastCommentary = id
-        prefs.edit { putString("commentary", id) }
+        prefs.edit { putString("commentary2", id) }
+    }
+
+    /**
+     * Whether the verse details show the commentary rather than the cross-references (STD-20);
+     * remembered. The commentary first, to help readers understand the verse (from 1.12).
+     */
+    var verseCommentary by mutableStateOf(prefs.getBoolean("verseCommentary2", true))
+        private set
+
+    fun showVerseCommentary(on: Boolean) {
+        verseCommentary = on
+        prefs.edit { putBoolean("verseCommentary2", on) }
+    }
+
+    /**
+     * Commentary [cid]'s note on verse [id] (STD-20): the section covering it, or else the last one
+     * before it in the chapter. Null when it has none (or doesn't cover the book).
+     */
+    suspend fun commentaryOnVerse(cid: String, id: Int): com.biblestudy.app.data.CommentarySection? {
+        val sections = loadCommentary(cid, VerseId.book(id), VerseId.chapter(id))
+            .filter { VerseId.chapter(it.start) > 0 && VerseId.verse(it.start) > 0 }
+        sections.firstOrNull { id in it.start..it.end }?.let { return it }
+        // Between notes: the one before runs on to the next (some notes cover more than their heading says).
+        val before = sections.lastOrNull { it.start <= id } ?: return null
+        val next = sections.firstOrNull { it.start > id }
+        val end = if (next != null && VerseId.chapter(next.start) == VerseId.chapter(id)) next.start - 1
+            else VerseId.of(VerseId.book(id), VerseId.chapter(id), bible.chapter(VerseId.book(id), VerseId.chapter(id)).lastOrNull()?.verse ?: VerseId.verse(id))
+        return before.copy(end = maxOf(before.end, end))
+    }
+
+    /** Opens the commentary on the whole chapter beside the text, at the verse tapped. */
+    fun openCommentaryBeside() {
+        if (PaneKind.COMMENTARY !in tab.studies) showStudy(PaneKind.COMMENTARY)
     }
 
     /** Whether commentary [pos] scrolls together with the Bible panel (STD-18); on unless switched off. */
@@ -1482,7 +2165,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         }
 
     /** The "book" study writing on commentary [id] is kept under (INK-16): one per commentary. */
-    fun commentaryInkBook(id: String): Int = -100 - com.biblestudy.app.data.Commentaries.all.indexOfFirst { it.id == id }.coerceAtLeast(0)
+    fun commentaryInkBook(id: String): Int =
+        if (id == com.biblestudy.app.data.Commentaries.REFLECTIONS) StudyInk.REFLECTION
+        else -100 - com.biblestudy.app.data.Commentaries.all.indexOfFirst { it.id == id }.coerceAtLeast(0)
 
     /** Where a linked commentary was scrolled to by hand: the Bible panel follows it (STD-18). */
     var commentaryPos by mutableStateOf<ScrollPos?>(null)
@@ -1491,6 +2176,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun followCommentary(book: Int, chapter: Int, verse: Int) {
         commentaryPos = ScrollPos(-1, book, chapter, verse, 0f)
     }
+
+    fun commentaryFollowed(pos: ScrollPos) { if (commentaryPos === pos) commentaryPos = null }
 
     /** Easton's articles for the names and words of a chapter, in the order they first appear (STD-5). */
     fun chapterArticles(version: String, book: Int, chapter: Int): List<StudyEntry> {
@@ -1709,7 +2396,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                             if (c.font != now) {
                                 // Drawn in another font or layout: onto the same words here.
                                 val from = TextStyleKey.decode(c.font)
-                                c = c.copyAs(points = reflowPoints(c.points, plain(from), plain(key)), font = now)
+                                c = c.copyAs(points = reflowPoints(c.points, plain(from), plain(key), key.scale / from.scale), font = now)
                             }
                             if (c !== st) io { user.insert(c) }
                             c
@@ -1972,11 +2659,27 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             message = "Highlights stay on their words; only ink and images can be moved."
             return
         }
+        // What's moved together in a margin is pinned to one verse (the topmost), so it stays
+        // together in every version: moving a sketch that came apart puts it back in one piece.
+        val pin = HashMap<Region, Int>()
+        for (a in items) {
+            val (r, v) = when (a) {
+                is InkStroke -> a.region to a.verse
+                is MarginImage -> a.region to a.verse
+                is MarginText -> a.region to a.verse
+                is Highlight -> continue
+            }
+            if (r != Region.TEXT) pin[r] = minOf(pin[r] ?: v, v)
+        }
+        // Moving from verse [v] to the region's pinned verse: the same place on the page.
+        fun dy(r: Region, v: Int) = pin[r]?.let { layout.verseTop(v) - layout.verseTop(it) } ?: 0f
+        fun to(r: Region, v: Int) = pin[r] ?: v
         changeSelection { a ->
             when (a) {
-                is InkStroke -> a.withPoints(shifted(a, off.x, off.y, layout))
-                is MarginImage -> a.copy(x = a.x + off.x, y = a.y + off.y)
-                is MarginText -> a.copy(x = a.x + off.x, y = a.y + off.y)
+                is InkStroke -> if (a.region == Region.TEXT) a.withPoints(shifted(a, off.x, off.y, layout))
+                    else a.copyAs(points = a.points.translated(off.x, off.y + dy(a.region, a.verse)), verse = to(a.region, a.verse))
+                is MarginImage -> a.copy(x = a.x + off.x, y = a.y + off.y + dy(a.region, a.verse), verse = to(a.region, a.verse))
+                is MarginText -> a.copy(x = a.x + off.x, y = a.y + off.y + dy(a.region, a.verse), verse = to(a.region, a.verse))
                 is Highlight -> null
             }
         }
@@ -2196,7 +2899,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Changes when anything a verse card shows could have changed: highlights, settings, layers. */
     fun cardStamp(): Int = editCount * 31 + highlightLoads * 17 + (if (redLetters) 1 else 0) +
-        (if (highlightsAllVersions) 2 else 0) + layers.hashCode() * 7
+        (if (highlightsAllVersions) 2 else 0) + layers.hashCode() * 7 + onlineArrivals * 13
 
     /** Highlights read from the notes database for verse cards; counts up as they arrive. */
     var highlightLoads by mutableIntStateOf(0)
@@ -2419,23 +3122,25 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     fun openPassage(p: Passage, from: Int, beside: Boolean) {
-        passagePop = null
-        showBible()
-        var target = from.coerceIn(0, panels.lastIndex)
-        if (beside) {
-            if (panels.size == 1) {
-                // The passage takes the tab's other panel (a study view makes way for it).
-                tab.studies.lastOrNull()?.let { setSlotView(Slot.Study(it), null) } ?: addPanel()
-                target = target.coerceIn(0, panels.lastIndex)
+        step {
+            passagePop = null
+            showBible()
+            var target = from.coerceIn(0, panels.lastIndex)
+            if (beside) {
+                if (panels.size == 1) {
+                    // The passage takes the tab's other panel (a study view makes way for it).
+                    tab.studies.lastOrNull()?.let { setSlotView(Slot.Study(it), null) } ?: addPanel()
+                    target = target.coerceIn(0, panels.lastIndex)
+                }
+                if (linkPanels) {
+                    linkPanels = false
+                    message = "Panels unlinked to show the passage beside."
+                }
+                target = panels.indices.firstOrNull { it != target } ?: target
             }
-            if (linkPanels) {
-                linkPanels = false
-                message = "Panels unlinked to show the passage beside."
-            }
-            target = panels.indices.firstOrNull { it != target } ?: target
+            activePanel = target
+            goTo(target, p.book, p.chapter, p.verse)
         }
-        activePanel = target
-        goTo(target, p.book, p.chapter, p.verse)
     }
 
     // ---------- book picker markers ----------
@@ -2456,34 +3161,71 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         io { user.setNote(t.book, t.chapter, t.verse, text, endVerse) }
     }
 
-    // ---------- bookmarks become highlights (0.9) ----------
+    // ---------- bookmarks (NOTE-3) and recently read (READ-8) ----------
 
-    /**
-     * Bookmarks were replaced by highlights in 0.9: each saved bookmark becomes a yellow highlight
-     * over its whole verse in the KJV, tagged "bookmark" (and its folder's name), on the first
-     * layer. Runs at start-up and after restoring an older backup; nothing happens once done.
-     */
-    fun convertBookmarks() {
-        val old = user.bookmarks()
-        if (old.isEmpty()) return
-        val layer = layers.firstOrNull()?.id ?: 1L
-        for (b in old) {
-            val verses = text(bible.code).chapter(b.book, b.chapter)
-            var offset = 0
-            for (v in verses) {
-                val numberLen = v.verse.toString().length + 1
-                if (v.verse == b.verse) {
-                    val h = Highlight(newId(), layer, bible.code, b.book, b.chapter, offset + numberLen, offset + numberLen + v.text.length, HIGHLIGHT_COLORS[0])
-                    user.insert(h)
-                    user.setTags("h:${h.id}", (setOf("bookmark") + listOfNotNull(b.folder.ifEmpty { null })).toSortedSet())
-                    break
-                }
-                offset += numberLen + v.text.length + 1 // the verse, then the line break or space after it
-            }
-            user.deleteBookmark(b.id)
+    /** Bookmarked verses, newest first (NOTE-3). Back in 1.8, after highlights stood in for them from 0.9. */
+    val bookmarks = mutableStateListOf<com.biblestudy.app.model.Bookmark>().apply { addAll(user.bookmarks()) }
+
+    fun bookmarkAt(book: Int, chapter: Int, verse: Int) = bookmarks.firstOrNull { it.book == book && it.chapter == chapter && it.verse == verse }
+
+    /** The bookmarked verses of a chapter, for the ribbons beside them. */
+    fun bookmarkedVerses(book: Int, chapter: Int): List<Int> = bookmarks.filter { it.book == book && it.chapter == chapter }.map { it.verse }
+
+    /** Bookmarks a verse, or takes its bookmark off. */
+    fun toggleBookmark(book: Int, chapter: Int, verse: Int) {
+        val old = bookmarkAt(book, chapter, verse)
+        if (old != null) removeBookmark(old)
+        else {
+            val b = com.biblestudy.app.model.Bookmark(newId(), book, chapter, verse, System.currentTimeMillis(), "")
+            bookmarks.add(0, b)
+            io { user.addBookmark(b) }
         }
+        dataGeneration++
     }
 
+    fun removeBookmark(b: com.biblestudy.app.model.Bookmark) {
+        bookmarks.remove(b)
+        io { user.deleteBookmark(b.id) }
+        dataGeneration++
+    }
+
+    /** Chapters read lately, newest first, each with the verse you were at (READ-8). Kept on this tablet. */
+    val recent = mutableStateListOf<RecentRead>().apply {
+        runCatching { org.json.JSONArray(prefs.getString("recent", "[]")) }.getOrNull()?.let { a ->
+            for (i in 0 until a.length()) a.optJSONObject(i)?.let { o -> add(RecentRead(o.getInt("b"), o.getInt("c"), o.getInt("v"), o.getLong("t"))) }
+        }
+    }
+    private var recentKey = -1
+    private var recentSeconds = 0L
+
+    /**
+     * Adds the chapter in front to the recently read list once it has been read for a few seconds,
+     * and keeps its verse up to date while you stay.
+     */
+    fun noteRecent(book: Int, chapter: Int, verse: Int, seconds: Long) {
+        val key = book * 1000 + chapter
+        if (key != recentKey) { recentKey = key; recentSeconds = 0 }
+        recentSeconds += seconds
+        if (recentSeconds < RECENT_AFTER_S) return
+        val top = recent.firstOrNull()
+        val now = System.currentTimeMillis()
+        if (top != null && top.book == book && top.chapter == chapter) {
+            if (top.verse == verse && now - top.at < 60_000) return
+            recent[0] = top.copy(verse = verse, at = now)
+        } else {
+            recent.removeAll { it.book == book && it.chapter == chapter }
+            recent.add(0, RecentRead(book, chapter, verse, now))
+            while (recent.size > MAX_RECENT) recent.removeAt(recent.lastIndex)
+        }
+        saveRecent()
+    }
+
+    fun clearRecent() { recent.clear(); recentKey = -1; saveRecent() }
+
+    private fun saveRecent() {
+        val a = org.json.JSONArray(recent.map { org.json.JSONObject().put("b", it.book).put("c", it.chapter).put("v", it.verse).put("t", it.at) })
+        prefs.edit { putString("recent", a.toString()) }
+    }
 
     // ---------- backup & restore ----------
 
@@ -2507,6 +3249,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 zip.write(BibleRepository.importedJson().toByteArray())
                 zip.closeEntry()
                 for (v in imported) {
+                    if (v.online > 0) continue // online Bibles are downloaded again, not backed up (BIB-12)
                     val f = File(v.asset)
                     if (!f.exists()) continue
                     zip.putNextEntry(ZipEntry("bibles/${f.name}"))
@@ -2640,9 +3383,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                     imagesDir.listFiles()?.forEach { it.delete() }
                     File(tmp, "images").listFiles()?.forEach { it.copyTo(File(imagesDir, it.name), overwrite = true) }
                     File(tmp, "bibles/imported.json").takeIf { it.exists() }?.let {
-                        BibleRepository.restoreImported(app, it.readText(), File(tmp, "bibles"))
+                        BibleRepository.restoreImported(app, it.readText(), File(tmp, "bibles"), bible.books)
                     }
                     tmp.deleteRecursively()
+                    com.biblestudy.app.data.Sync.markAllChanged(user.writableDatabase) // restored notes win when syncing
                     user.layers() to Unit
                 }
             }
@@ -2651,25 +3395,223 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 message = "Restore failed: ${ok.exceptionOrNull()?.message ?: "unknown error"}"
                 return@launch
             }
-            textStrokes.values.forEach { it.clear() }
-            highlights.values.forEach { it.clear() }
-            marginStrokes.values.forEach { it.clear() }
-            images.values.forEach { it.clear() }
-            marginTexts.values.forEach { it.clear() }
-            notes.values.forEach { it.clear() }
-            loaded.clear(); renders.clear(); bitmaps.clear(); requestedBitmaps.clear()
-            selection = null
-            undoStack.clear(); redoStack.clear(); editVersion++
-            layers.clear(); layers.addAll(result.first)
-            if (layers.none { it.id == activeLayerId }) activeLayerId = layers.firstOrNull()?.id ?: 1L
-            convertBookmarks() // an older backup may still have bookmarks
-            tags.clear(); tags.putAll(user.tags())
-            meanings.clear(); meanings.putAll(user.meanings())
+            reloadUserData(result.first)
             workspaces.clear(); workspaces.addAll(user.workspaces().mapNotNull { (n, j) -> Workspace.fromJson(n, j) })
-            sketches.clear(); sketches.addAll(user.sketches()) // sketch pages (SKT)
             readingGeneration++ // reading stats came with the backup
-            dataGeneration++
             message = "Notes restored."
+            prepareImported() // versions in an older backup have no word tags yet
+            syncNow() // the restored notes go to the other devices
+        }
+    }
+
+    /** Reads the notes again after the database changed underneath (a restore, or a sync). */
+    private fun reloadUserData(newLayers: List<com.biblestudy.app.model.Layer> = user.layers(), keepUndo: Boolean = false) {
+        textStrokes.values.forEach { it.clear() }
+        highlights.values.forEach { it.clear() }
+        marginStrokes.values.forEach { it.clear() }
+        images.values.forEach { it.clear() }
+        marginTexts.values.forEach { it.clear() }
+        notes.values.forEach { it.clear() }
+        loaded.clear(); renders.clear(); bitmaps.clear(); requestedBitmaps.clear()
+        selection = null
+        if (!keepUndo) { undoStack.clear(); redoStack.clear() }
+        editVersion++
+        layers.clear(); layers.addAll(newLayers)
+        if (layers.none { it.id == activeLayerId }) activeLayerId = layers.firstOrNull()?.id ?: 1L
+        bookmarks.clear(); bookmarks.addAll(user.bookmarks())
+        tags.clear(); tags.putAll(user.tags())
+        meanings.clear(); meanings.putAll(user.meanings())
+        sketches.clear(); sketches.addAll(user.sketches()) // sketch pages (SKT)
+        readingGeneration++ // reading stats come from every device (SYNC-11)
+        // A panel showing a sketch page deleted on another device goes back to the Bible.
+        for (i in panels.indices) if (Sketch.isSketch(panels[i].book) && sketchOf(panels[i].book) == null) {
+            val (b, c) = biblePlaceBefore(panels[i])
+            goTo(i, b, c)
+        }
+        dataGeneration++
+    }
+
+    // ---------- sync between devices (SYNC-1) ----------
+
+    /** Notes, ink, highlights, pictures, bookmarks and sketch pages sync through the user's Google Drive. */
+    var syncOn by mutableStateOf(prefs.getBoolean("syncOn", false))
+        private set
+    /** The Google account synced with, once known. */
+    var syncAccount by mutableStateOf(prefs.getString("syncAccount", null))
+        private set
+    var lastSync by mutableLongStateOf(prefs.getLong("lastSync", 0L))
+        private set
+    var syncing by mutableStateOf(false)
+        private set
+    /** Why the last sync failed (shown in Settings), or null. */
+    var syncError by mutableStateOf<String?>(null)
+        private set
+    /** Google wants the user to allow access again: Settings shows a button for it. */
+    var syncNeedsSignIn by mutableStateOf(false)
+        private set
+
+    /** This install, for naming its change files. A backup restored here doesn't bring another device's. */
+    private val syncDevice: String = prefs.getString("syncDevice", null)
+        ?: java.util.UUID.randomUUID().toString().replace("-", "").take(12).also { prefs.edit { putString("syncDevice", it) } }
+
+    /** The tests' stand-in for Google Drive; null in the app. */
+    var testSyncStore: com.biblestudy.app.data.SyncStore? = null
+
+    /** Where sync asks Google for access; the screen shows Google's sign-in when it's needed. */
+    private val drive by lazy { DriveAuth(getApplication()) }
+
+    /**
+     * Turns sync on from Settings: asks for access to the app's own Drive folder ([signIn] shows
+     * Google's screen the first time), then syncs.
+     */
+    fun turnOnSync(signIn: (android.content.IntentSender) -> Unit) {
+        if (testSyncStore != null) { syncConnected(null); return }
+        viewModelScope.launch {
+            when (val r = runCatching { drive.authorize() }.getOrElse { DriveAuth.Result.Failed(it.message ?: "unknown error") }) {
+                is DriveAuth.Result.Token -> syncConnected(r.token)
+                is DriveAuth.Result.NeedsSignIn -> signIn(r.intent)
+                is DriveAuth.Result.Failed -> { syncError = "Couldn't connect to Google Drive: ${r.reason}"; message = syncError }
+            }
+        }
+    }
+
+    /** Google's sign-in screen came back. */
+    fun onSyncSignIn(data: android.content.Intent?) {
+        val token = runCatching { drive.tokenFrom(data) }.getOrNull()
+        if (token == null) {
+            message = "Google Drive wasn't connected."
+            return
+        }
+        syncConnected(token)
+    }
+
+    private fun syncConnected(token: String?) {
+        syncOn = true; syncNeedsSignIn = false; syncError = null
+        prefs.edit { putBoolean("syncOn", true) }
+        if (token != null) viewModelScope.launch {
+            val email = withContext(Dispatchers.IO) { com.biblestudy.app.data.DriveStore(token).email() }
+            if (email != null) { syncAccount = email; prefs.edit { putString("syncAccount", email) } }
+        }
+        syncNow(token, announce = true)
+        startSyncTimer()
+    }
+
+    /** Stops syncing. What's on this device stays; so does the copy in Drive, for the other devices. */
+    fun turnOffSync() {
+        syncOn = false; syncNeedsSignIn = false; syncError = null; syncAccount = null
+        syncTimer?.cancel(); syncTimer = null
+        prefs.edit { putBoolean("syncOn", false); remove("syncAccount") }
+    }
+
+    private var syncJob: kotlinx.coroutines.Job? = null
+
+    /**
+     * Sends this device's changes and reads the other devices' (SYNC-1): when the app opens, when it's
+     * left, every few minutes while it's open, and from Settings' "Sync now".
+     */
+    fun syncNow(token: String? = null, announce: Boolean = false): kotlinx.coroutines.Job? {
+        if (!syncOn || syncJob?.isActive == true) return null
+        syncJob = viewModelScope.launch {
+            syncing = true
+            try {
+                val store = testSyncStore ?: run {
+                    val t = token ?: when (val r = runCatching { drive.authorize() }.getOrElse { DriveAuth.Result.Failed(it.message ?: "offline") }) {
+                        is DriveAuth.Result.Token -> r.token
+                        is DriveAuth.Result.NeedsSignIn -> { syncNeedsSignIn = true; syncError = "Google needs you to allow access again."; return@launch }
+                        is DriveAuth.Result.Failed -> { syncError = "Couldn't reach Google Drive (${r.reason})."; return@launch }
+                    }
+                    com.biblestudy.app.data.DriveStore(t)
+                }
+                val engine = com.biblestudy.app.data.SyncEngine(user, store, syncDevice, imagesDir, newSketchId = ::syncSketchId)
+                // Off the database thread, so pages keep loading while it waits for Google Drive.
+                val result = withContext(Dispatchers.IO) { engine.sync() }
+                syncError = null; syncNeedsSignIn = false
+                lastSync = System.currentTimeMillis()
+                prefs.edit { putLong("lastSync", lastSync) }
+                if (result.changed) reloadUserData(keepUndo = true)
+                if (announce) message = when {
+                    result.received > 0 -> "Synced: changes from your other devices are here."
+                    else -> "Synced with Google Drive."
+                }
+            } catch (e: com.biblestudy.app.data.DriveAuthException) {
+                syncNeedsSignIn = true; syncError = "Google needs you to allow access again."
+            } catch (e: kotlinx.coroutines.CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                syncError = "Sync didn't finish: ${e.message ?: e.javaClass.simpleName}. It will try again."
+                if (announce) message = syncError
+            } finally {
+                syncing = false
+            }
+        }
+        return syncJob
+    }
+
+    /** Whether to slide the toolbar once to show it scrolls (PH-15): only the first time it doesn't fit. */
+    fun takeToolbarHint(): Boolean {
+        if (prefs.getBoolean("toolbarHinted", false)) return false
+        prefs.edit { putBoolean("toolbarHinted", true) }
+        return true
+    }
+
+    /** A local number for a sketch page from another device, never one this device has used. */
+    private fun syncSketchId(db: android.database.sqlite.SQLiteDatabase): Long {
+        val id = maxOf(prefs.getLong("nextSketch", 1L), com.biblestudy.app.data.Sync.maxSketchId(db) + 1)
+        prefs.edit { putLong("nextSketch", id + 1) }
+        return id
+    }
+
+    private var syncTimer: kotlinx.coroutines.Job? = null
+
+    /** Every few minutes while the app is on screen. */
+    private fun startSyncTimer() {
+        if (syncTimer?.isActive == true || testSyncStore != null) return
+        syncTimer = viewModelScope.launch {
+            while (isActive) {
+                kotlinx.coroutines.delay(SYNC_EVERY_MS)
+                if (foreground) syncNow()
+            }
+        }
+    }
+
+    /** How many changes here are still to be sent (for Settings). */
+    suspend fun syncWaiting(): Int = withContext(dbDispatcher) { com.biblestudy.app.data.Sync.waitingCount(user.readableDatabase) }
+
+    /**
+     * The ready-made pages made before 2.4 got random ids on each device. Gives what the app drew
+     * on them the same ids everywhere (matched by where it sits), so syncing doesn't show it twice.
+     */
+    private fun adoptReadyMadeIds() {
+        if (prefs.getBoolean("readyIdsAdopted", false)) return
+        prefs.edit { putBoolean("readyIdsAdopted", true) }
+        val ready = sketches.filter { it.readyMade }
+        if (ready.isEmpty()) return
+        val env = TemplateEnv(runCatching { LandsMap.load(getApplication()) }.getOrNull())
+        val top = 40f // where placeOnSketch starts on an empty page
+        for (s in ready) runCatching {
+            val t = SketchTemplates.all.getOrNull((s.created - 1).toInt()) ?: return@runCatching
+            val items = t.items(env)
+            val strokes = user.loadMargin(s.book, 1).first.toMutableList()
+            val texts = user.loadTexts(s.book, 1).toMutableList()
+            for ((n, d) in items.withIndex()) {
+                val id = readyMadeId(s.created.toInt(), n)
+                when (d) {
+                    is DrawnBox, is DrawnVerse -> {
+                        val (x, y) = if (d is DrawnBox) d.x to d.y else (d as DrawnVerse).x to d.y
+                        val m = texts.filter { kotlin.math.abs(it.x - x) < 0.5f && kotlin.math.abs(it.y - (top + y)) < 0.5f }.minByOrNull { it.id } ?: continue
+                        texts.remove(m)
+                        if (m.id != id) { user.delete(m); user.insert(m.copy(id = id)) }
+                    }
+                    is DrawnLine -> {
+                        val (x, y) = d.points.firstOrNull() ?: continue
+                        val m = strokes.filter {
+                            it.points.size >= 2 && it.color == d.color && kotlin.math.abs(it.points[0] - x) < 0.5f && kotlin.math.abs(it.points[1] - (top + y)) < 0.5f
+                        }.minByOrNull { it.id } ?: continue
+                        strokes.remove(m)
+                        if (m.id != id) { user.delete(m); user.insert(m.copyAs(id, m.points)) }
+                    }
+                }
+            }
         }
     }
 
@@ -2678,10 +3620,19 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     // everything they use is set up.
     init {
         // The first start makes them all; after an update, only pages new in that version.
+        runCatching { adoptReadyMadeIds() }
         runCatching { addReadyMadePages(onlyNew = true) }
+        prepareImported()
+        if (syncOn) { syncNow(); startSyncTimer() }
     }
 
     companion object {
+        /** How often the app syncs while it's on screen (SYNC-1). */
+        const val SYNC_EVERY_MS = 3 * 60_000L
+
+        /** The same id on every device for item [n] the app draws on ready-made page [created] (SYNC-1). */
+        fun readyMadeId(created: Int, n: Int): Long = 8_000_000_000_000_000_000L + created * 100_000L + n
+
         /** Reading time pauses after this long without a touch (ANL-1). */
         const val IDLE_MS = 120_000L
 
@@ -2693,7 +3644,14 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         )
         private const val COPY_SHIFT = 30f
         private const val MAX_HISTORY = 100
+        /** Seconds on a chapter before it counts as read lately (READ-8), and how many are kept. */
+        const val RECENT_AFTER_S = 5L
+        const val MAX_RECENT = 50
         const val PASSAGE_LIMIT = 80
+        /** How near (page units) a new margin stroke must be to a sketch to join it. */
+        const val GROUP_GAP = 24f
+        /** At most this many chapters are downloaded for one verse's cross-reference previews. */
+        const val XREF_FETCH = 40
         /** How many automatic backups are kept (DATA-6). */
         const val KEEP_BACKUPS = 5
     }

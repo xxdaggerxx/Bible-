@@ -1,0 +1,67 @@
+{
+ "id": "26-014-012",
+ "title": "Four Dire Judgments",
+ "refs": [
+  "Ezekiel 14:12-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26014012,
+   "end": 26014023,
+   "ref": "Ezekiel 14:12-23",
+   "ranges": [
+    [
+     26014012,
+     26014023
+    ]
+   ],
+   "title": "Not Without Cause",
+   "key_verse": [
+    26014023,
+    26014023
+   ],
+   "reflect": [
+    {
+     "text": "The sin in Jerusalem was so deep that God had to send four severe judgments all at once: famine, wild beasts, war, and disease. Each judgment was so heavy that even great men of faith like Noah, Daniel, and Job could only have saved themselves. Yet God promised that when His people looked back on what happened, they would see that He did not act without a reason.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Like Jerusalem, we often face painful trials that crush us, and we do not understand why God allows them. As F. B. Meyer wrote, we are often \"too prone to judge God hastily\" rather than waiting for Him to reveal His full purpose. When we cannot see the reason for our suffering or for what happens to those we love, we can still trust that God's discipline is shaped by wisdom and love.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "One day, God will make all things clear. When we look back from the vantage point of eternity, we will be deeply comforted. We will understand why hard things had to happen, and we will see that God never acted without cause in any part of our lives or His world.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face hard times that do not make sense, what helps you wait patiently rather than judging God hastily?",
+    "How does knowing that God never acts without a purpose give you comfort today?"
+   ],
+   "prayer": "Lord, help us to trust You when life is painful and we cannot see the reasons behind our trials. Teach us not to judge Your ways in haste, but to wait patiently for Your good purposes to be revealed. Comfort our hearts with the assurance that You never act without cause. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 14:22",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

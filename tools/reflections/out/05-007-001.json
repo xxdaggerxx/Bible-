@@ -1,0 +1,129 @@
+{
+ "id": "05-007-001",
+ "title": "Drive Out the Nations",
+ "refs": [
+  "Deuteronomy 7:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 5007009,
+   "end": 5007009,
+   "ref": "Deuteronomy 7:9",
+   "ranges": [
+    [
+     5007009,
+     5007009
+    ]
+   ],
+   "title": "\"The Faithful God\"",
+   "key_verse": [
+    5007009,
+    5007009
+   ],
+   "reflect": [
+    {
+     "text": "When we walk through seasons of exhaustion, painful trials, or unanswered prayers, it is easy to become anxious. In those hard moments, we are often tempted to doubt God's promises. We may react by relying on constant striving, trying to fix everything in our own strength. That self-reliance only leaves us feeling drained and weighed down by worry.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Yet the Bible reminds us that the Lord is completely faithful. He always means what He says, and He never breaks His word. God's covenant love does not rise and fall based on our daily performance. Just as He patiently guided the people of Israel despite their stubborn ways, He stays loyal to His people today. Looking back at His past track record of provision gives us real confidence during uncertain days.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because God cares deeply about our daily needs, we do not have to carry our burdens alone. Choosing to surrender our frantic efforts brings true intimacy with Him and lifts the weight of shame. We can find peace knowing that the faithful God keeps His word to every generation.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of life are you striving in your own strength instead of trusting God?",
+    "How can remembering God's past faithfulness help you surrender your worries to Him today?"
+   ],
+   "prayer": "Lord God, thank You that Your covenant love never depends on our human performance. When trials make us anxious, help us remember how faithfully You have cared for us in the past. Teach us to stop striving and rest in Your promises. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Meredith Boggs",
+     "work": "Whether I Strive or Surrender, He Is Steadfast",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-january-3-2023.html"
+    },
+    "D3": {
+     "author": "Tracie Miles",
+     "work": "Serious Matters Need a Serious God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/serious-matters-need-a-serious-god-encouragement-for-today-may-3-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 5007001,
+   "end": 5007011,
+   "ref": "Deuteronomy 7:1-11",
+   "ranges": [
+    [
+     5007001,
+     5007011
+    ]
+   ],
+   "title": "A People Holy to the Lord",
+   "key_verse": [
+    5007006,
+    5007006
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God commanded Israel to break away completely from the nations around them and destroy their idols. He strictly forbade them to intermarry with those peoples, warning that foreign spouses would turn their children toward other gods. God had set Israel apart as His prized possession, so they could not afford to compromise with practices that would lead them away from Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This same call to devotion applies to believers today. We may sometimes think we can enter close relationships or marriages with unbelievers in the hope of changing them. Yet spiritual rebirth is the work of the Holy Spirit, not something we can accomplish on our own while ignoring God's instruction. As F. B. Meyer observed, marriage for God's child must be \"only in the Lord.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This careful separation also shapes our daily choices, including our companionships and amusements. We must guard our hearts and our families from worldly habits that dull our faith. Setting clear boundaries helps protect us so we can remain entirely devoted to the God who chose us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there friendships or pastimes in your life that tempt you to compromise your faith?",
+    "What practical boundaries can you set to guard your heart for the Lord?"
+   ],
+   "prayer": "Heavenly Father, thank You for choosing us to belong to You as a holy people. Give us wisdom and courage to guard our hearts against worldly influences that draw us away from You. Help us honor You in our relationships and remain entirely faithful to Your word. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Deuteronomy 7:4",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

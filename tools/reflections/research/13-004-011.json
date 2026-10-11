@@ -1,0 +1,15 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://billygraham.org/",
+  "https://insight.org/",
+  "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Potter",
+  "https://www.biblegateway.com/verse/en/1%20Chronicles%204%3A23",
+  "https://www.biblegateway.com/verse/en/1%20Chronicles%204%3A24",
+  "https://www.gty.org/",
+  "https://www.ligonier.org/"
+ ],
+ "cost": 0.032433275,
+ "model": "google/gemini-3.8-flash"
+}

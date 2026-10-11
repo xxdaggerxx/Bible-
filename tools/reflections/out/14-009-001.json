@@ -1,0 +1,75 @@
+{
+ "id": "14-009-001",
+ "title": "The Queen of Sheba",
+ "refs": [
+  "2 Chronicles 9:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 14009001,
+   "end": 14009001,
+   "ref": "2 Chronicles 9:1",
+   "ranges": [
+    [
+     14009001,
+     14009001
+    ]
+   ],
+   "title": "\"She Came to Test Him\"",
+   "key_verse": [
+    14009001,
+    14009001
+   ],
+   "reflect": [
+    {
+     "text": "The queen of Sheba traveled far to see King Solomon's wealth and international renown during Israel's golden age. She came with deep questions and spoke openly about everything on her mind. In the same way, we can bring our hardest questions and troubles to Jesus Christ, who is far greater than Solomon. As F. B. Meyer reminds us, Christ holds the \"key for every riddle\" we face in life.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The queen also arrived in a generous spirit, bringing gold, precious gems, and spices. When we come to Jesus for wisdom, we must be ready to surrender our own treasures to Him. Solomon showed great generosity in return by giving her even more than she brought. God's blessings and faithful obedience can walk hand in hand. We should never follow God just to get rich, but we also do not need to feel guilty when He grants us success.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Life often leaves us with knots we cannot untangle with our own understanding. When we wait patiently before Christ, His light clears our confusion and leaves us with deep, lasting joy.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What difficult questions or worries do you need to bring before Jesus today?",
+    "How can you hold your material blessings with an open and generous heart toward God?"
+   ],
+   "prayer": "Lord Jesus, thank You that You welcome all our hard questions and tangled thoughts. Teach us to bring everything to You with generous and trusting hearts. Give us patience as we wait on Your light to guide our steps. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 9:1",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Solomon’s Accomplishments and Renown",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/solomons-accomplishments-and-renown"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

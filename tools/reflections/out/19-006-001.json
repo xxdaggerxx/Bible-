@@ -1,0 +1,81 @@
+{
+ "id": "19-006-001",
+ "title": "Do Not Rebuke Me in Your Anger",
+ "refs": [
+  "Psalms 6:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19006001,
+   "end": 19006010,
+   "ref": "Psalms 6:1-10",
+   "ranges": [
+    [
+     19006001,
+     19006010
+    ]
+   ],
+   "title": "The Lord Hears Our Weeping",
+   "key_verse": [
+    19006009,
+    19006009
+   ],
+   "reflect": [
+    {
+     "text": "When pain and sadness overwhelm us, our first instinct should not be to rely on our own strength. Scripture invites us to run straight to God and pour out our honest grief. Suffering is not always punishment for a particular sin, but God uses hard times to draw us closer to Himself. Even when our bodies ache and our tears soak our pillows, we can boldly ask Him for mercy, trusting that our trials are in His caring hands.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Waiting for help can make every minute feel like an hour. We often wonder how long our struggles will last and wish God would tell us the exact moment relief will come. Yet, as F. B. Meyer observed, \"delay is not denial.\" God does not reveal His timetable so that our patience may grow. We only need to bear one moment at a time, knowing He will never arrive too late.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "By the end of the psalm, crying turns into quiet confidence. Others may mock our sorrow or refuse to listen, but the Lord receives our prayers into His heart. Because of Jesus, our prayers are welcomed before the throne of God. We can rest in the sure hope that He hears every cry and will answer in His perfect wisdom.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What honest sorrow or burden do you need to bring to God instead of carrying it on your own?",
+    "How can remembering that God never arrives too late help you endure waiting today?"
+   ],
+   "prayer": "Lord, thank You for hearing my cries even when I am weak and weary. Help me to trust Your perfect timing when relief seems slow in coming. Teach me to rest in Your mercy, knowing that You graciously welcome every prayer I bring through Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 6",
+     "on": "Psalms 6:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 6:3",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "A Prayer for Deliverance",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/prayer-deliverance"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

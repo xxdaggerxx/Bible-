@@ -1,0 +1,150 @@
+{
+ "id": "58-012-018",
+ "title": "An Unshakable Kingdom",
+ "refs": [
+  "Hebrews 12:18-29"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 58012028,
+   "end": 58012029,
+   "ref": "Hebrews 12:28-29",
+   "ranges": [
+    [
+     58012028,
+     58012029
+    ]
+   ],
+   "title": "\"An Unshakable Kingdom\"",
+   "key_verse": [
+    58012028,
+    58012028
+   ],
+   "reflect": [
+    {
+     "text": "The world around us can feel fragile and uncertain. Yet believers belong to the new covenant and have been given an eternal kingdom that cannot be moved. When Christ returns to shake heaven and earth, only His kingdom will remain standing. Even when hard times come, our unstable circumstances cannot shake God's rule. We are held securely by our unshakable God, so we can trust His sovereignty rather than doubt His goodness.",
+     "sources": [
+      "D5",
+      "D6"
+     ]
+    },
+    {
+     "text": "Because we are receiving this lasting kingdom, our right response is deep thankfulness. Gratitude anchors our hearts, opens our eyes to more of God's kindness, and brings delight to Him as we praise Him. Ingratitude is often the very first step toward wandering away from God.",
+     "sources": [
+      "D5",
+      "D6"
+     ]
+    },
+    {
+     "text": "This grateful heart shapes how we worship. We do not approach God casually, but with deep reverence and holy awe, remembering that our God is a consuming fire.",
+     "sources": [
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to be ungrateful when circumstances feel unstable?",
+    "How can approaching God with reverence and awe protect your heart from drifting away from Him?"
+   ],
+   "prayer": "Father, thank You for giving us a kingdom that can never be shaken. Keep our hearts anchored in gratitude when everything around us feels uncertain. Teach us to worship You each day with reverent awe and joyful praise. Amen.",
+   "sources": {
+    "D5": {
+     "author": "Beloved Women",
+     "work": "The Great Gift of Gratitude",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/beloved-women/beloved-women-december-29-2020.html"
+    },
+    "D6": {
+     "author": "Ligonier Ministries",
+     "work": "An Unshakable Kingdom",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/unshakable-kingdom"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 58012018,
+   "end": 58012029,
+   "ref": "Hebrews 12:18-29",
+   "ranges": [
+    [
+     58012018,
+     58012029
+    ]
+   ],
+   "title": "Welcome to Mount Zion",
+   "key_verse": [
+    58012022,
+    58012022
+   ],
+   "reflect": [
+    {
+     "text": "We do not come to a terrifying mountain of gloom and fire, but to Mount Zion and the city of the living God. When our gatherings feel small or our lives feel lonely, we are never truly worshipping alone. Whenever we pray, we join myriads of joyful angels and the spirits of the righteous who have gone before us. By faith, we already enter the courts of the heavenly Jerusalem.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "We come to this joyful gathering through Jesus and His sprinkled blood. We arrive with no merits of our own, but the cross speaks peace and brings us endless hope. As Charles Spurgeon reminds us, our life becomes one of constantly coming to Christ, finding daily joy in His cleansing mercy. Through His sacrifice we are counted completely right before God, and the Holy Spirit continues to work within us until the day we are made fully holy in heaven.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Earthly possessions and comforts can easily be lost or shaken, for change touches everything under the sky. But our greatest blessings are entirely secure. Our salvation in Christ, God's unchanging fatherly care, and the deep love of Jesus can never be taken from us.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing you worship alongside heaven's joyful assembly comfort you when you feel isolated?",
+    "Which of your unchanging spiritual blessings gives you the most peace when earthly things change?"
+   ],
+   "prayer": "Lord Jesus, thank You for bringing us to Your holy mountain through Your precious blood. When the things of this earth shift and fade, remind us of Your secure love and our place as Your children. Cleanse our hearts today and strengthen our faith as we fix our eyes on You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 17",
+     "on": "Hebrews 12:24",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 15",
+     "on": "Hebrews 12:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 22",
+     "on": "Hebrews 12:27",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hebrews 12:22",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

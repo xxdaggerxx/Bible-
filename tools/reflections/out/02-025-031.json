@@ -1,0 +1,66 @@
+{
+ "id": "02-025-031",
+ "title": "The Lampstand",
+ "refs": [
+  "Exodus 25:31-40"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2025031,
+   "end": 2025040,
+   "ref": "Exodus 25:31-40",
+   "ranges": [
+    [
+     2025031,
+     2025040
+    ]
+   ],
+   "title": "Light and Life in God's Presence",
+   "key_verse": [
+    2025037,
+    2025037
+   ],
+   "reflect": [
+    {
+     "text": "God gave Moses detailed instructions for making a golden lampstand. It was shaped like a flowering tree with branches, buds, and cups like almond blossoms. This beautiful design pointed to the Tree of Life. It showed that living in the presence of God brings vitality, hope, and fruitful life. The burning lamps also gave needed light inside the dark, windowless sanctuary, visibly reminding everyone that God is light.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The entire lampstand and all its tools were crafted from a large amount of pure gold. Skilled workers hammered it carefully from a single piece. Using such precious metal showed that the worship of God calls for the very finest materials and craftsmanship. God's holy dwelling was not a place for cheap materials or careless work.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Today, the Lord still calls us to honor Him with what is precious. We are challenged to give Him our very best rather than our leftovers. We can honor Him by dedicating our finest efforts to Him in our personal worship, in our finances, and in how we serve others each day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life might you be offering God your leftovers instead of your best?",
+    "How can you use your time, money, or abilities to honor God more fully this week?"
+   ],
+   "prayer": "Lord God, thank You for bringing light and fruitful life into our darkness. Forgive us for the times we offer You our leftovers instead of our best. Please teach us to honor You gladly with our worship, our gifts, and our daily service. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Golden Lampstand",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/golden-lampstand"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

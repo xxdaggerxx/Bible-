@@ -1,0 +1,74 @@
+{
+ "id": "26-010-001",
+ "title": "God’s Glory Exits the Temple",
+ "refs": [
+  "Ezekiel 10:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26010001,
+   "end": 26010022,
+   "ref": "Ezekiel 10:1-22",
+   "ranges": [
+    [
+     26010001,
+     26010022
+    ]
+   ],
+   "title": "The Departure of God's Glory",
+   "key_verse": [
+    26010018,
+    26010018
+   ],
+   "reflect": [
+    {
+     "text": "Ezekiel watches God's bright glory slowly begin to leave the temple. The people of Israel had assumed that having God's sacred building made them safe from any harm. Yet the Lord cannot be confined to any earthly structure. Because of the people's persistent unfaithfulness, God actively stepped away from His sanctuary, removing His shield of protection from Jerusalem.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This departure happened in stages. As F. B. Meyer observes, God's withdrawal occurred by \"almost insensible gradations.\" Step by step, the glory moved from the temple threshold to the cherubim and toward the gate. Our own spiritual drift often happens the same way. We rarely fall away all at once. Instead, Satan leads us down a gentle slope through small neglects, like praying less, opening the Bible less often, and slowly drifting toward worldly habits.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even in this solemn scene, there is deep comfort. Because God is not bound to a stone building, His presence could accompany the faithful remnant into exile. God is never trapped by circumstances. Furthermore, as Meyer points out, Scripture promises that God will return to those who sincerely turn from sin, shining His holy light upon them once again.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there small areas in your daily routine where you have begun to drift away from prayer or reading God's Word?",
+    "How does knowing that God is not confined to a building comfort you when you face times of hardship or change?"
+   ],
+   "prayer": "Lord God, forgive us for the subtle ways our hearts grow cold and drift away from You. Keep us watchful and tender toward Your Word every day. Thank You that You are always near to those who genuinely repent and call upon Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 10:4",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "God Leaves the Temple",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-leaves-temple"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

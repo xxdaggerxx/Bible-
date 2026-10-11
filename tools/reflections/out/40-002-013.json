@@ -1,0 +1,66 @@
+{
+ "id": "40-002-013",
+ "title": "The Flight to Egypt",
+ "refs": [
+  "Matthew 2:13-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40002013,
+   "end": 40002015,
+   "ref": "Matthew 2:13-15",
+   "ranges": [
+    [
+     40002013,
+     40002015
+    ]
+   ],
+   "title": "Trusting God on Unfamiliar Paths",
+   "key_verse": [
+    40002014,
+    40002014
+   ],
+   "reflect": [
+    {
+     "text": "Right after times of joy and celebration, God sometimes calls us to leave what is familiar. Joseph and Mary had welcomed the Magi, but then an angel told them to escape into Egypt. Even though Egypt had a history of danger and cruelty, they obeyed without delay. Mary showed quiet trust in the Lord. She did not argue, stall, or demand her own way. When we follow God into unfamiliar places, we make room for Him to accomplish His greater purposes in our lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Long before this, God brought the people of Israel out of Egypt so they could shine His light to all nations. When Israel failed to live up to that calling, God sent Jesus to be the perfectly obedient Son. His journey into Egypt and back fulfilled Scripture and moved forward God's rescue plan for the whole world. Today, God has freed us from the power of sin by His grace, which is His kindness we do not deserve. In response to this gift, we are called to live holy lives that please Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is God asking you to follow Him into an unfamiliar situation, and how can you trust Him with that step?",
+    "How does knowing that Jesus came to rescue you from sin encourage you to live a holy life?"
+   ],
+   "prayer": "Lord, help us to obey You quickly even when You lead us into places that feel strange or hard. Thank You for sending Jesus as the true Son who fulfilled Your plan to rescue us from sin. Teach us to respond to Your grace by living holy lives that honor You every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Arlene Pellicane",
+     "work": "But Lord, I Don’t Want to Go There",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-december-23-2016.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "God's Son Is Called",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-son-called"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

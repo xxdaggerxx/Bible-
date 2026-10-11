@@ -1,0 +1,67 @@
+{
+ "id": "33-005-007",
+ "title": "The Remnant of Jacob",
+ "refs": [
+  "Micah 5:7-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 33005007,
+   "end": 33005015,
+   "ref": "Micah 5:7-15",
+   "ranges": [
+    [
+     33005007,
+     33005015
+    ]
+   ],
+   "title": "At God's Bidding to Bless Others",
+   "key_verse": [
+    33005007,
+    33005007
+   ],
+   "reflect": [
+    {
+     "text": "God promises that His people will be like dew and gentle showers among the nations. When believers live as God intends, we become a deep blessing to the people around us. Dew falls softly and quietly without drawing attention to itself. In that same gentle way, God's people can bring real refreshment, life, and joy to the people who live and work alongside us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "A single drop of dew seems very small, yet it faithfully waters a frail blade of grass. On our own, we may feel weak and insignificant, but God uses our humble care to support the overlooked and needy. Joined together in His love, believers can bring life and encouragement to whole communities, reflecting the beauty of God's kindness like dewdrops in the morning sun.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Rain from heaven does not wait for human permission before it falls. It comes simply because God sends it. In the words of Charles Spurgeon, godly people are called to serve at \"God's bidding\" wherever they live. We do not need the world's approval to do good. God has placed us where we are so we can freely and promptly share His love with everyone around us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you quietly bring encouragement or help to someone who feels overlooked this week?",
+    "Where has God placed you right now to show His kindness without waiting for others to prompt you?"
+   ],
+   "prayer": "Lord, make us like gentle dew that brings life and refreshment to those around us. Help us notice the weak and serve them with patient, quiet love. Grant us the courage to do your will freely wherever you have placed us today.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 5",
+     "on": "Micah 5:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

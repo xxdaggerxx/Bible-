@@ -1,0 +1,66 @@
+{
+ "id": "44-012-001",
+ "title": "James Killed, Peter Imprisoned",
+ "refs": [
+  "Acts 12:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44012001,
+   "end": 44012004,
+   "ref": "Acts 12:1-4",
+   "ranges": [
+    [
+     44012001,
+     44012004
+    ]
+   ],
+   "title": "Grief, Questions, and Trusting God",
+   "key_verse": [
+    44012002,
+    44012002
+   ],
+   "reflect": [
+    {
+     "text": "When we read this story, we often rush ahead to Peter's rescue from prison. In doing that, we can easily overlook the heavy sorrow that came first. King Herod put James, the brother of John, to death with a sword. John had to face crushing grief over losing his brother, while also dealing with fear when Herod targeted Peter next.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It is natural for believers to struggle with hard questions in moments like these. We wonder why God allows one faithful servant to suffer and die while another is spared. Seeing such different outcomes can be confusing and painful to accept.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Seeking God in our pain rarely gives us quick or easy explanations. Instead of simple answers, God meets us with His holy presence. In our grief, He reminds us that He is sovereign, meaning He remains in complete control even when we do not understand His ways.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever struggled with why God allowed suffering in one person's life while sparing someone else?",
+    "How can seeking God's presence comfort you when you do not get easy answers to your questions?"
+   ],
+   "prayer": "Lord, we bring our grief and our hard questions to You when life feels confusing. Help us to trust Your holy presence even when we do not understand why things happen. Give us peace as we rest in Your sovereign care.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 241: Acts 12:1–5",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-241-acts-12-15.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

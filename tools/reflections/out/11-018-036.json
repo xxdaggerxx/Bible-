@@ -1,0 +1,61 @@
+{
+ "id": "11-018-036",
+ "title": "Elijah’s Prayer",
+ "refs": [
+  "1 Kings 18:36-40"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11018036,
+   "end": 11018040,
+   "ref": "1 Kings 18:36-40",
+   "ranges": [
+    [
+     11018036,
+     11018040
+    ]
+   ],
+   "title": "Let Not One Sin Escape",
+   "key_verse": [
+    11018040,
+    11018040
+   ],
+   "reflect": [
+    {
+     "text": "God answered Elijah's prayer by sending fire from heaven to consume the sacrifice before all the people. After the people turned back to the Lord, Elijah gave a firm command regarding the false prophets: do not let a single one get away. As Charles Spurgeon explains, this shows us how we must treat our sins. None of them can be spared or kept safe. Even the darling sins that we have loved like idols must be put away without hesitation.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We might wonder how we can ever win such a fight against our own wrong desires. Spurgeon reminds us that Jesus gives us the power to overcome sin through his grace, because he has promised to stay with us. When we draw near to God's presence, his light reveals the hidden faults in our hearts. God acts as a sacred fire, burning away our sin rather than destroying our spirit. Walking close to him gives us the strength to turn completely away from evil.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a sin you have been trying to protect instead of giving it over to God?",
+    "How can spending time in God's presence help you see and overcome wrong desires?"
+   ],
+   "prayer": "Lord, thank you that your power and grace are greater than our sin. Help us not to cling to any wrong desires, but bring them all into your light. Burn away what is evil in our hearts and lead us in your ways each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 17",
+     "on": "1 Kings 18:40",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "01-039-013",
+ "title": "Joseph Falsely Imprisoned",
+ "refs": [
+  "Genesis 39:13-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1039013,
+   "end": 1039023,
+   "ref": "Genesis 39:13-23",
+   "ranges": [
+    [
+     1039013,
+     1039023
+    ]
+   ],
+   "title": "God Remains with Us in Every Trial",
+   "key_verse": [
+    1039021,
+    1039021
+   ],
+   "reflect": [
+    {
+     "text": "Joseph did what was right by fleeing temptation and serving his master with integrity. In return, he faced cruel lies and betrayal. Potiphar burned with anger and threw him into prison. Yet God's unseen hand was already at work protecting him, sparing Joseph from death and keeping him safe.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Experiencing unfair trouble does not mean you lack faith. Unjust suffering can often be a path God uses to bring about good. Joseph had every reason to feel bitter or give up, but he did not complain against God. Remembering how God had delivered him in the past helped him trust that the Lord was still faithful.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Even inside prison walls, Joseph was not alone. The Bible tells us that the Lord was with him, showing him steadfast love and granting him favor with the warden. When setbacks and unfair trials come into your life, you can take comfort and find strength by clinging to God, knowing He is right by your side.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face unfair treatment or sudden setbacks, how can you remember that God is still with you?",
+    "How can remembering God's past help give you courage to trust Him through a present trial?"
+   ],
+   "prayer": "Lord, thank You for staying with us even when life feels unfair and difficult. Help us not to grow bitter or lose hope when setbacks come. Give us faith to remember Your past faithfulness and trust in Your goodness today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "From Success to Setback",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/from-success-to-setback-greg-laurie-devotion-march-19-2021.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Imprisoned Again",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/imprisoned-again"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

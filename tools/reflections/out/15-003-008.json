@@ -1,0 +1,73 @@
+{
+ "id": "15-003-008",
+ "title": "Temple Restoration Begins",
+ "refs": [
+  "Ezra 3:8-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 15003011,
+   "end": 15003013,
+   "ref": "Ezra 3:11-13",
+   "ranges": [
+    [
+     15003011,
+     15003013
+    ]
+   ],
+   "title": "\"He Is Good; His Love Endures Forever\"",
+   "key_verse": [
+    15003011,
+    15003011
+   ],
+   "reflect": [
+    {
+     "text": "When the temple foundation was laid, the people responded with an intense mix of emotions. The younger generation looked ahead to the future and shouted for joy. They celebrated the return of God's presence and their covenant identity, which was their special relationship with God based on his promises. At the same time, the older priests and leaders looked back and wept loudly. They remembered the splendor of Solomon's first temple and grieved over what had been lost.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The sounds of weeping and joyful shouting blended together into one loud cry, showing that both feelings had real value. Stuart Briscoe explains that God designed both stages of life so that \"experience and enthusiasm\" can help each other. Youthful excitement looks forward, but without the wisdom gained from experience, it can easily collapse. In the same way, experience without fresh excitement never moves forward. God brings both together so believers can support one another.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Today, God's kingdom is not founded on a physical building, but on Jesus Christ himself. Because of this, we still live with both sorrow and gladness. We grieve the pain and losses of this broken world, yet we also celebrate with deep joy because Jesus has redeemed us and made us his own.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you tend to focus more on what was lost in the past or on what God is doing for the future?",
+    "How can you make room for both honest grief and thankful praise in your walk with God?"
+   ],
+   "prayer": "Lord God, thank you for giving us Jesus Christ as the true foundation of our faith. Help us hold our grief and our joy together as we look to you. Teach older and younger believers to listen to each other so we may honor you with one voice. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "Enthusiasm and Experience",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/enthusiasm-and-experience-one-year-devotions-for-men-november-3.html"
+    },
+    "D2": {
+     "author": "Owen Strachan",
+     "work": "Shouting and Weeping",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/shouting-and-weeping"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

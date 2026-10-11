@@ -1,0 +1,81 @@
+{
+ "id": "18-021-001",
+ "title": "Job: God Will Punish the Wicked",
+ "refs": [
+  "Job 21:1-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18021001,
+   "end": 18021034,
+   "ref": "Job 21:1-34",
+   "ranges": [
+    [
+     18021001,
+     18021034
+    ]
+   ],
+   "title": "Trusting God with Life's Hard Questions",
+   "key_verse": [
+    18021022,
+    18021022
+   ],
+   "reflect": [
+    {
+     "text": "In this chapter, Job challenges his friends' simple ideas about life. They argued that only the wicked suffer, while good people always enjoy success. Job looks honestly at the world and points out that the wicked often live long, wealthy lives in peace, while good people suffer. As D. A. Carson notes, simple formulas fail to explain the real pain of human life, and defending God never requires us to ignore the facts we see around us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Facing false accusations and unfair judgment is a heavy burden. Instead of reacting in anger or returning insult for insult, Job answers with verifiable facts and steady honesty. When others misjudge us, we do not need to panic or strike back. We can hold on to our personal integrity and trust God for ultimate justice, knowing that this earthly life is not the final chapter.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Job also reminds us that no human can teach God. God already knows every detail of our lives, our secret griefs, and the questions we carry. F. B. Meyer observed that \"it is pleasant to talk with one who knows the whole case perfectly.\" Because God's knowledge and love are complete, we do not have to dictate how He runs the world. We can bring Him our real thoughts in prayer and trust His higher wisdom.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When life seems unfair and evil people seem to prosper, how does remembering God's complete knowledge help you trust Him?",
+    "How can you respond with calm honesty and integrity when someone misunderstands or falsely blames you?"
+   ],
+   "prayer": "Lord God, you know everything about us, and nothing is hidden from your sight. Help us to be honest about our struggles without losing our trust in your wisdom. When life looks unfair or others judge us wrongly, give us patience to hold on to the truth and rest in your loving care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 21:22",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Stay with the Truth",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-may-8-2024.html"
+    },
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Job 21",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/exodus-4-luke-7-job-21-1-corinthians-8/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

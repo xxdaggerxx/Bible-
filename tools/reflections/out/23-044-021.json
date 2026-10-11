@@ -1,0 +1,139 @@
+{
+ "id": "23-044-021",
+ "title": "Jerusalem to Be Restored",
+ "refs": [
+  "Isaiah 44:21-28"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23044021,
+   "end": 23044021,
+   "ref": "Isaiah 44:21",
+   "ranges": [
+    [
+     23044021,
+     23044021
+    ]
+   ],
+   "title": "\"I Will Never Forget You\"",
+   "key_verse": [
+    23044021,
+    23044021
+   ],
+   "reflect": [
+    {
+     "text": "Sometimes trials make us feel as though God has turned His face away. When pain lingers, loneliness deepens, or grief overwhelms our days, we may wonder if our cries go unheard. Other people in our lives may let us down or forget their promises. Yet the Lord assures us that He cannot forget His people. He is never nearer than when He seems furthest away.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God's lasting commitment does not depend on our strength or service, but on His own faithful love. He chose His children forever and paid for them with the life of His Son. As Charles Spurgeon wrote, believers were \"bought at too great a price to be now forgotten.\" The Lord never stops thinking of you, and He will sustain you through every trial.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even when our faith trembles, we are safe in His keeping. Just as Jesus welcomed the dying thief with mercy, He remains deeply mindful of everyone who belongs to Him. Because God has blotted out our guilt, He will never cast us aside. His memory of us is unbroken, and His care for our souls will never end.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When are you most tempted to think God has forgotten you, and how does His promise answer that fear?",
+    "How does knowing that Jesus bought you with His life give you confidence in His lasting care?"
+   ],
+   "prayer": "Heavenly Father, thank You that You never forget or abandon Your servants. When we feel lonely or overwhelmed, remind us of the great price Jesus paid to make us Your own. Sustain our hearts today with the comfort of Your constant love. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 5",
+     "on": "Isaiah 44:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 44:21",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 23044022,
+   "end": 23044022,
+   "ref": "Isaiah 44:22",
+   "ranges": [
+    [
+     23044022,
+     23044022
+    ]
+   ],
+   "title": "\"Return to Me\"",
+   "key_verse": [
+    23044022,
+    23044022
+   ],
+   "reflect": [
+    {
+     "text": "Our sins can feel like a thick, dark cloud hanging over our lives. They block out the warmth of God's presence, bring deep spiritual gloom, and remind us of the judgment we deserve. We cannot sweep this cloud away on our own. Yet the Lord acts in tender mercy, not by merely scattering the dark mist, but by completely erasing our sins from existence. At the cross, Jesus permanently paid the price for our guilt, leaving no record against those who trust in Him.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    },
+    {
+     "text": "Because our sins are gone, God calls us to return to Him instead of hiding in shame. When we stumble, our past failures never exhaust His grace, which is His unearned kindness. The Lord delights to renew, restore, and revive broken lives. We do not need to let fear keep us at a distance. Since we are fully pardoned and redeemed, we can come home to the Lord and enjoy close fellowship with Him once again.",
+     "sources": [
+      "D1",
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a lingering sin or past failure that makes you feel distant from God today?",
+    "How does the truth that Jesus completely erased your guilt help you return to Him without fear?"
+   ],
+   "prayer": "Lord God, thank You for completely blotting out our sins through the sacrifice of Jesus. Forgive us for staying away from You out of fear or shame. Draw our hearts near to You today, and restore the joy of walking in Your presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 10",
+     "on": "Isaiah 44:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Beth Moore",
+     "work": "“RE”: The Most Beautiful Prefix in History",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-october-18-2016.html"
+    },
+    "D5": {
+     "author": "Truth for Life",
+     "work": "I Have Redeemed You",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-february-10-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

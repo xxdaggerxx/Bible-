@@ -1,0 +1,66 @@
+{
+ "id": "35-002-006",
+ "title": "Woe to the Chaldeans",
+ "refs": [
+  "Habakkuk 2:6-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 35002006,
+   "end": 35002020,
+   "ref": "Habakkuk 2:6-20",
+   "ranges": [
+    [
+     35002006,
+     35002020
+    ]
+   ],
+   "title": "The Glory of the Lord Fills the Earth",
+   "key_verse": [
+    35002014,
+    35002014
+   ],
+   "reflect": [
+    {
+     "text": "In a world filled with pride and injustice, God promises that evil will not have the last word. We see His power in creation, but Habakkuk points forward to an even greater display of God's glory. One day, the knowledge of the Lord will cover the entire earth, just as waters fill the sea. This promise was foreshadowed when God judged Babylon and brought His people home from exile, but its true fulfillment is in Jesus Christ. When God rescues sinners, He shows His glory as our Savior in a way nature cannot reveal. Today, the church joins in this promise by sharing the good news of Jesus and making disciples across the nations.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As we wait for that day, we are called to remember who God is. It is easy to treat God as a comfortable personal idea and focus only on our own voices. Yet Scripture calls the whole earth to be silent in awe before the Lord in His holy temple. When we gather with God's people in church, we turn away from our own self-rule and quiet our voices to hear His word. Learning to revere His holy righteousness does not take away our happiness. Instead, it prepares our hearts to find real joy in the saving work of Jesus.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can quiet reverence before God's holy presence change the way you listen to His word?",
+    "How can you take part in sharing the good news of Jesus with others this week?"
+   ],
+   "prayer": "Lord God, You are holy and sovereign over all the earth. Quiet our restless hearts so that we may stand in awe before You and listen to Your voice. Fill our lives with deep joy in Christ, and help us share Your saving grace with the world. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Coming Knowledge of God's Glory",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/coming-knowledge-of-gods-glory"
+    },
+    "D2": {
+     "author": "Jared C. Wilson",
+     "work": "What We Talk Like When We Talk About God",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/what-we-talk-like-when-we-talk-about-god/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

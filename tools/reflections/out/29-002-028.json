@@ -1,0 +1,75 @@
+{
+ "id": "29-002-028",
+ "title": "I Will Pour Out My Spirit",
+ "refs": [
+  "Joel 2:28-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 29002028,
+   "end": 29002032,
+   "ref": "Joel 2:28-32",
+   "ranges": [
+    [
+     29002028,
+     29002032
+    ]
+   ],
+   "title": "God Pours Out His Spirit",
+   "key_verse": [
+    29002032,
+    29002032
+   ],
+   "reflect": [
+    {
+     "text": "Long ago under the old covenant, God gave special gifts of His Holy Spirit only to a few chosen leaders like judges, priests, and kings. But Joel looked ahead to something much greater. He announced that God would pour out His Spirit on all His people, young and old, men and women, regardless of their background. This promise began at Pentecost, when Jesus gave the Spirit to all believers so that each of us can serve in God's kingdom and build up the church.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Joel also spoke of solemn wonders and signs before the coming day of the Lord. Yet right alongside these warnings, God offers a certain rescue. He promises that whoever calls on His name will be saved. As Charles Spurgeon wrote, this promise welcomes \"anybody and everybody who calls upon God.\" Instead of trusting our own clever schemes or running to others, we can bring our burdens straight to God. He hears our faintest cry and has the power to deliver us.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever try to fix your troubles on your own instead of calling on the Lord right away?",
+    "How can you use the gifts God's Spirit has given you to serve others in the church?"
+   ],
+   "prayer": "Lord God, thank You for giving Your Holy Spirit to all who trust in You. Forgive us for when we try to solve our own problems instead of bringing our burdens straight to You. Please help us rely on Your promise of rescue and serve You with the gifts You have given us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 16",
+     "on": "Joel 2:32",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Outpouring of God's Spirit",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/outpouring-god-s-spirit"
+    },
+    "D3": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - September 21",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-sept-21-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

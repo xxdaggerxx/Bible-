@@ -1,0 +1,110 @@
+{
+ "book": 39,
+ "chapter": 4,
+ "first": 1,
+ "last": 6,
+ "ref": "Malachi 4",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "A day of judgment is coming that will burn like a super-heated furnace. Those who lived in proud wickedness will be consumed as quickly as dry stubble in a fire. Their ruin will be complete, leaving neither root nor branch behind to sprout again.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "For everyone who honors and respects God, the Lord Jesus will rise like the morning sun, bringing spiritual health and healing in His bright beams. Believers will be set free from guilt and sorrow into abundant joy. They will leap and play with happiness like well-fed young calves let out of a dark stall into an open field.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Modern scholars often view the sun of righteousness not as a personal name for Jesus, but as a word-picture describing the coming age of justice and salvation that God will bring.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/kdo/malachi-4.html",
+      "https://www.studylight.org/commentaries/eng/pfc/malachi-4.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "When the Lord brings this judgment, evildoers will be reduced to dust and ashes beneath the feet of the righteous. God's people will share in this final victory over evil and see justice done. This triumph does not come from human power, but is entirely the work of God for His faithful followers.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "God tells His people to faithfully remember and obey the teachings He gave through Moses at Mount Sinai. Because prophets would not speak again for several hundred years, the people needed to anchor their lives to the written Scriptures they already possessed. Walking in God's commands was their best guide while waiting for the Messiah to arrive.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The Lord promises to send a prophet like Elijah before that great and fearsome day of judgment arrives. In the New Testament, Jesus explains that this promise was fulfilled by John the Baptist, who preached with Elijah's boldness to get people ready for Christ. His preaching warned people to turn back to God before judgment fell.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals believe John the Baptist was only a partial fulfillment, and that an Elijah-like prophet will still appear before the final return of Christ.",
+     "sources": [
+      "Jamieson-Fausset-Brown",
+      "https://enduringword.com/bible-commentary/malachi-4/",
+      "https://www.studylight.org/commentaries/eng/dcc/malachi-4.html"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Many early church writers and Catholic teachers held that the original prophet Elijah will return bodily to earth just before Christ's second coming.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/kdo/malachi-4.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "This messenger would call families to turn back to one another and return to the godly faith of their ancestors. God offered this chance to repent so the people would turn from sin and be spared. Without this spiritual renewal, the land would face the terrible curse of complete destruction.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

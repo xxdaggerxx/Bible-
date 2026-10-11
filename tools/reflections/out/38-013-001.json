@@ -1,0 +1,66 @@
+{
+ "id": "38-013-001",
+ "title": "An End to Idolatry",
+ "refs": [
+  "Zechariah 13:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 38013001,
+   "end": 38013006,
+   "ref": "Zechariah 13:1-6",
+   "ranges": [
+    [
+     38013001,
+     38013006
+    ]
+   ],
+   "title": "Cleansed by an Abundant Fountain",
+   "key_verse": [
+    38013001,
+    38013001
+   ],
+   "reflect": [
+    {
+     "text": "God promises to open a fountain to wash His people clean from their sin and shame. This is not just a tiny trickle of water. God gives us an abundant fountain of grace, which is His free and undeserved kindness. His mercy has no limits, and it is deep enough to reach and forgive even the worst offenses and sinners.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This generous washing changes everything. God purifies the land by completely removing the spirit of impurity. He does away with empty idols and silences false prophets who lead people astray. God cleanses deeply, taking away both our guilt and the false teachings that harm us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We know this complete cleansing is made sure through Jesus Christ. He is the true Shepherd who was struck on behalf of His sheep. Because of His sacrifice, our sins are washed away. We do not have to live under the weight of past shame, because God freely cleanses all who turn to Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God's grace is an abundant fountain help you bring your sins and shame to Him?",
+    "What false things or idols in your life do you need God to wash away?"
+   ],
+   "prayer": "Lord, thank You for opening a fountain of grace that washes away our deepest sins. Thank You for Jesus, our true Shepherd, who was struck so that we could be made clean. Help us turn away from false idols and rest fully in Your limitless mercy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Cleansing of God's People",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/cleansing-gods-people"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

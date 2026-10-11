@@ -1,0 +1,66 @@
+{
+ "id": "66-001-001",
+ "title": "Prologue",
+ "refs": [
+  "Revelation 1:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66001001,
+   "end": 66001003,
+   "ref": "Revelation 1:1-3",
+   "ranges": [
+    [
+     66001001,
+     66001003
+    ]
+   ],
+   "title": "Blessed to Hear and Obey",
+   "key_verse": [
+    66001003,
+    66001003
+   ],
+   "reflect": [
+    {
+     "text": "The book of Revelation lifts the curtain on world history to show that God is sovereign, ruling over everything behind the scenes of earthly events. Like the prophets of the Old Testament, John wrote these words to comfort and sustain believers who were enduring hard trials and persecution. To understand this message well, we need to see how it connects to the rest of the Bible. God gives a unique promise here: He will bless those who do not just read or listen to this prophecy, but actively take it to heart and obey it.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "These words are not given to make us feel afraid or filled with dread. Instead, they are meant to prepare our hearts for the day Jesus returns. The Lord sees everything we do, including our private thoughts and our hidden motives. One day, He will hold us accountable for how we practiced our faith. Taking God's message seriously means examining our everyday lives, repenting of lingering sin, and walking faithfully with Him right now.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can knowing that God is in control behind all earthly events give you peace during hard times?",
+    "What is one thought, motive, or action you need to turn away from as you prepare for Christ's return?"
+   ],
+   "prayer": "Lord Jesus, thank You for reminding us that You are in control of all things and that You are coming back. Search our thoughts and motives, and forgive us for the sins we try to hide. Help us not only to hear Your truth, but to obey it with faithful hearts each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Reading John’s Prophecy",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/reading-johns-prophecy"
+    },
+    "D2": {
+     "author": "Michelle S. Lazurek",
+     "work": "Are You Ready for the Lord?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/are-you-ready-for-the-lord-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

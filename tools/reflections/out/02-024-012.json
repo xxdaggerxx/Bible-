@@ -1,0 +1,75 @@
+{
+ "id": "02-024-012",
+ "title": "Moses on the Mountain",
+ "refs": [
+  "Exodus 24:12-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2024012,
+   "end": 2024018,
+   "ref": "Exodus 24:12-18",
+   "ranges": [
+    [
+     2024012,
+     2024018
+    ]
+   ],
+   "title": "Meeting God on the Mountain",
+   "key_verse": [
+    2024012,
+    2024012
+   ],
+   "reflect": [
+    {
+     "text": "God called Moses up the mountain to give him His written commandments. He wanted His people to understand His mind and walk in His ways. Yet the Lord invited Moses not simply to collect stone tablets, but to dwell in His presence. God told him to stay there and be near to Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Ascending the mountain to meet the Lord took careful preparation and effort. In the same way, spending time with God requires deliberate spiritual discipline. We often understand this truth in our minds, but we can easily become sluggish or distracted. A hurried pace tempts us to rush toward our next goal and miss God's presence in the moment.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Regular fellowship with God strengthens us, no matter where or for how long we meet Him. As Charles R. Swindoll notes, God simply desires our heart. When we pause and ask the Lord to awaken us to His daily work, we learn to rest with Him and hear His voice.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What distractions or busy habits keep you from slowing down to spend time with God?",
+    "How can you intentionally set aside a few quiet moments today to seek the Lord?"
+   ],
+   "prayer": "Lord, thank You for inviting us to draw near and dwell in Your presence. Please slow our hurried pace and awaken our hearts to see You at work today. Teach us to seek You with all our heart. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Mike DeVries",
+     "work": "Come and Be",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/come-and-be-homeword-april-4.html"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Doing Time",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-june-28-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

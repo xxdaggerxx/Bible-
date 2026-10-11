@@ -1,0 +1,66 @@
+{
+ "id": "47-012-011",
+ "title": "Paul’s Concern for the Corinthians",
+ "refs": [
+  "2 Corinthians 12:11-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 47012011,
+   "end": 47012021,
+   "ref": "2 Corinthians 12:11-21",
+   "ranges": [
+    [
+     47012011,
+     47012021
+    ]
+   ],
+   "title": "Seeking People, Not Possessions",
+   "key_verse": [
+    47012014,
+    47012014
+   ],
+   "reflect": [
+    {
+     "text": "A faithful spiritual leader demonstrates genuine selflessness rather than using others for personal gain. Paul showed true pastoral integrity by refusing to take financial support from the Corinthians. He did not want to be a burden to them. Instead of seeking their wealth or possessions, a godly minister wants to see people grow spiritually. Following the example of Christ, faithful leaders gladly spend themselves and their resources to serve and strengthen the church.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Paul explained this care by comparing it to family life, where parents provide for their children rather than burdening them. Sharing our wealth with our children while we are still living brings real peace of mind and keeps us from future guilt. Abraham showed this kind of wisdom when he provided for his sons before his death. When we hold our resources loosely and give while we are living, we get to see the blessings with our own eyes.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you show selflessness by serving others without expecting anything in return?",
+    "In what ways can you share what God has given you right now to bless those around you?"
+   ],
+   "prayer": "Lord, thank you for showing us what selfless love looks like through Christ. Help us to care for people rather than their possessions, and give us willing hearts to serve. Teach us to share what we have generously so we can see your blessings at work in the lives of others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Chuck Swindoll",
+     "work": "Giving While You’re Living",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-december-17-2020.html"
+    },
+    "D2": {
+     "author": "John MacArthur",
+     "work": "Marks of an Excellent Shepherd: Selflessness",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/print/B130311/marks-of-an-excellent-shepherd-selflessness"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

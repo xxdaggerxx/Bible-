@@ -1,0 +1,66 @@
+{
+ "id": "03-006-001",
+ "title": "Sins Requiring a Guilt Offering",
+ "refs": [
+  "Leviticus 6:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3006001,
+   "end": 3006007,
+   "ref": "Leviticus 6:1-7",
+   "ranges": [
+    [
+     3006001,
+     3006007
+    ]
+   ],
+   "title": "Making Things Right With God and Neighbor",
+   "key_verse": [
+    3006007,
+    3006007
+   ],
+   "reflect": [
+    {
+     "text": "When we lie to someone, cheat them, or keep what is not ours, we might think our problem is only with that person. But the Bible shows us that wronging our neighbor is first and foremost an act of unfaithfulness against the Lord. Even so, God mercifully makes a way for these intentional wrongs to be atoned for. These common sins born of temptation or resentment are not the same as open, brazen defiance of God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's forgiveness, however, never ignores the damage done to others. True repentance requires practical restitution. The offender had to return what was taken in full and add an extra twenty percent to the victim. When we are genuinely sorry for our sin, we will want to take concrete steps to repair the harm we caused.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Making things right with people is only part of the answer. The offender was also commanded to bring a guilt offering to the priest so atonement could be made before the Lord. God calls us to do both: we must seek to make amends with those we have hurt, and we must turn to God to receive His merciful pardon.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there someone you have wronged or taken from whom you need to make amends with today?",
+    "Why is it important to see that our sins against other people are also sins against the Lord?"
+   ],
+   "prayer": "Lord God, forgive us for the times we have wronged others and been unfaithful to You. Give us humble hearts that are quick to apologize and make practical restitution where we have caused harm. Thank You for Your mercy and the atonement You graciously provide for our guilt. Amen.",
+   "sources": {
+    "D1": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Leviticus 6, Psalms 5-6, Proverbs 21, Colossians 4",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/leviticus-6-psalms-5-6-proverbs-21-colossians-4/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

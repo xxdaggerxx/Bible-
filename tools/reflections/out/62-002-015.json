@@ -1,0 +1,75 @@
+{
+ "id": "62-002-015",
+ "title": "Do Not Love the World",
+ "refs": [
+  "1 John 2:15-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 62002015,
+   "end": 62002017,
+   "ref": "1 John 2:15-17",
+   "ranges": [
+    [
+     62002015,
+     62002017
+    ]
+   ],
+   "title": "Loving the Father More Than the World",
+   "key_verse": [
+    62002017,
+    62002017
+   ],
+   "reflect": [
+    {
+     "text": "The world around us constantly competes for our attention and desires. Every Christian faces an internal tug-of-war over where our true allegiance belongs. Because of this struggle, we need to guard carefully what media and ideas we allow into our hearts. Evaluating whether our everyday choices draw us closer to the Lord helps protect us from drifting astray. Feeling tension or friction with worldly culture is actually a healthy sign of spiritual sensitivity. When we give in to worldly temptations, it often shows that we have lost touch with the Father's love.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The things this world offers are temporary and cannot satisfy us. As F. B. Meyer observed, chasing worldly pursuits is like reaching out for a \"soapbubble\" that vanishes the moment we touch it. Even our desire for these earthly things eventually fades away. Turning our eyes back to Jesus and His cross breaks the false attraction of sin. When we truly receive God's love, obeying Him becomes our natural desire, and everyone who does His will remains forever.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What influences or media might you need to guard your heart against this week?",
+    "How does focusing on Christ's sacrifice on the cross help you resist the pull of the world?"
+   ],
+   "prayer": "Heavenly Father, help us guard our minds against the empty promises of this world. When we feel the pull of temptation, turn our eyes back to Jesus and the cross. Fill us with Your love so that we gladly choose to do Your will today and always. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 John 2:17",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Jeff Schreve",
+     "work": "Are You Losing the Battle with Sin?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/are-you-losing-the-battle-with-sin-from-his-heart-march-30.html"
+    },
+    "D3": {
+     "author": "Laura MacCorkle",
+     "work": "The Epic Battle Sequence Within",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-july-9-2010-11608632.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

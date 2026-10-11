@@ -1,0 +1,76 @@
+{
+ "id": "09-018-017",
+ "title": "David Marries Michal",
+ "refs": [
+  "1 Samuel 18:17-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9018017,
+   "end": 9018030,
+   "ref": "1 Samuel 18:17-30",
+   "ranges": [
+    [
+     9018017,
+     9018030
+    ]
+   ],
+   "title": "The Lord Was with David",
+   "key_verse": [
+    9018028,
+    9018028
+   ],
+   "reflect": [
+    {
+     "text": "King Saul let jealousy poison his heart. His bitter envy led him to use his own daughter as a trap, hoping the Philistines would kill David. In contrast, David showed true humility and godly restraint. Even after defeating Goliath and gaining great fame, David did not become proud or look for ways to climb the social ladder. He did not feel entitled to become the king's son-in-law, knowing that everything we receive comes by God's mercy.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Saul's evil plans failed because the Lord was with David. God protected His servant and frustrated the king's harmful traps. As Charles Spurgeon reminds us, Jesus is with His people in every conflict, and \"the battle is not yours but God's.\" When human enemies or hard troubles rise against us, God's faithful presence is far greater than their schemes. We can stand firm and fight for what is right, giving God the glory for each victory.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When success or praise comes your way, how can you keep a humble heart like David?",
+    "How does knowing that God is with you bring peace when others oppose you?"
+   ],
+   "prayer": "Lord, keep our hearts free from envy and pride. Help us to stay humble when things go well, remembering that all we have comes from Your mercy. Thank You for standing with us in every trial and fighting our battles. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 20",
+     "on": "1 Samuel 18:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Jack Graham",
+     "work": "PowerPoint - July 14, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-july-14-2010-11634718.html"
+    },
+    "D3": {
+     "author": "Beth Moore",
+     "work": "Day 23: 1 Samuel 18:17–30",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-23-1-samuel-18-1730.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

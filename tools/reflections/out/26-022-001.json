@@ -1,0 +1,67 @@
+{
+ "id": "26-022-001",
+ "title": "The Sins of Jerusalem",
+ "refs": [
+  "Ezekiel 22:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26022001,
+   "end": 26022016,
+   "ref": "Ezekiel 22:1-16",
+   "ranges": [
+    [
+     26022001,
+     26022016
+    ]
+   ],
+   "title": "The Refiner's Cleansing Fire",
+   "key_verse": [
+    26022015,
+    26022015
+   ],
+   "reflect": [
+    {
+     "text": "In Ezekiel, God speaks of scattering His people to purge their uncleanness. F. B. Meyer explains this through the picture of a smelting furnace. Fire brings pain, and our natural selves shrink back from it. We often face hard trials like health problems, money troubles, or painful words from others. Yet these afflictions are used by God to remove our sinful dross, which is the unwanted dirt mixed in with precious metal.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Meyer reminds us that when silver is refined, the refiner must be right there beside the fire. When you walk through painful trials, you are not left alone. The Lord sits beside you as \"the Great Refiner of silver,\" watching over you with the gentlest care. You might not sense His presence during the hardest moments, but He stays closer than anyone else.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Being tested in the fire does not mean God has forgotten you. A worker does not bother to refine a common stone; only precious gold is put into the heat. Because Christ paid for you with His own life, He values you deeply. He uses these trials to clean away sin so your life can shine with His beauty.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What painful trial are you facing right now that God might be using to refine your heart?",
+    "How does knowing that the Lord sits near you in your pain bring you comfort today?"
+   ],
+   "prayer": "Lord, thank You for staying near to us when we walk through deep trials and pain. Forgive us for the sins that defile our lives, and use these hard seasons to make us clean. Help us trust Your loving care even when we cannot see You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 22:15",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,105 @@
+{
+ "id": "41-016-012",
+ "title": "Jesus Appears to Two Disciples",
+ "refs": [
+  "Mark 16:12-13",
+  "Luke 24:13-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 41016012,
+   "end": 41016013,
+   "ref": "Mark 16:12-13; Luke 24:13-35",
+   "ranges": [
+    [
+     41016012,
+     41016013
+    ],
+    [
+     42024013,
+     42024035
+    ]
+   ],
+   "title": "Walking with the Risen Lord",
+   "key_verse": [
+    42024015,
+    42024015
+   ],
+   "reflect": [
+    {
+     "text": "Two disciples walked away from Jerusalem, crushed by sorrow and broken hopes. They had expected Jesus to rescue Israel, but His death left them confused and downcast. Yet in their sadness, the risen Lord took the initiative to come alongside them. Our own doubts and grief can blind us, so we fail to recognize that Jesus is right beside us.",
+     "sources": [
+      "D2",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "When they reached the village, Jesus acted as if He would keep going, but they urged Him to stay. If they had tried to face the night alone, they would have missed discovering who He was. As He broke bread, their eyes were opened. When we invite Jesus into our worries, He makes His comforting presence known.",
+     "sources": [
+      "D3",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "What sorrows or dashed expectations might be blinding you to Christ's presence today?",
+    "How can you invite Jesus into your troubles instead of trying to carry them on your own?"
+   ],
+   "prayer": "Lord Jesus, thank You for seeking us out when we are confused and discouraged. Open our eyes to see You in the Scriptures, and warm our cold hearts with Your truth. Stay with us today, and teach us to trust You with every worry. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 18",
+     "on": "Luke 24:27",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 29",
+     "on": "Luke 24:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "Stay With Us",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-july-4-2023.html"
+    },
+    "D4": {
+     "author": "Adrian Rogers",
+     "work": "Jesus Comes Looking for You",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-april-18-2026.html"
+    },
+    "D5": {
+     "author": "Jack Graham",
+     "work": "Look beyond discouragement",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-mar-31-2010-11628252.html"
+    },
+    "D6": {
+     "author": "Ligonier Ministries",
+     "work": "The Master Teacher",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-master-teacher"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "Instead of condemning their confusion, Jesus gently opened the Scriptures to them. He walked them through Moses and the Prophets, explaining that the Messiah had to suffer before entering His glory. When Jesus teaches us from God's Word about Himself, our cold and sluggish hearts begin to warm with life.",
+     "problem": "The point that Jesus did not condemn their confusion is taken from D4, which is not cited for this paragraph, and is not found in D1, D6, or the biblical text."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "10-024-001",
+ "title": "David’s Military Census",
+ "refs": [
+  "2 Samuel 24:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 10024001,
+   "end": 10024001,
+   "ref": "2 Samuel 24:1",
+   "ranges": [
+    [
+     10024001,
+     10024001
+    ]
+   ],
+   "title": "\"Go and Take a Census\"",
+   "key_verse": [
+    10024001,
+    10024001
+   ],
+   "reflect": [
+    {
+     "text": "Hard Bible passages can trouble us and make us question God's kindness if we are not careful. When we read that God stirred up David to count the people, we must remember that God's wisdom is far greater than ours. He owes no one an explanation. Scripture tells us that God never tempts anyone with evil. Instead, in His complete authority, God permitted Satan to incite David, allowing the king's hidden motives to come to the surface.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "David did not order this census because an enemy was threatening Israel. Instead, he acted out of pride and self-reliance after times of victory. The enemy often uses our achievements to pull us away from trusting God. This census also ignored the law of Moses, which required a ransom payment, a symbolic price to show their lives belonged to God, when counting Israel's men. God allowed David to follow his own stubborn desires, showing that God is never the author of sin even when He permits it.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When things in Scripture seem difficult to understand, we can find peace by trusting what God has already revealed about His faithful character. David's failure serves as a serious warning for our own lives. We need to watch our hearts closely and pray that our desires line up with God's good and pleasing will.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you ever tempted to trust in your own accomplishments instead of relying on God?",
+    "How can you rest in God's goodness when you read a passage in Scripture that seems hard to understand?"
+   ],
+   "prayer": "Lord, help us to trust Your character even when Your ways are beyond our understanding. Guard our hearts from pride after seasons of success, and keep us from relying on our own strength. Lead us so that our desires will always honor Your will. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 76: 2 Samuel 24:1–10",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-76-2-samuel-24-110.html"
+    },
+    "D2": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 04/20/2003",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-04-or-20-or-2003-1195307.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

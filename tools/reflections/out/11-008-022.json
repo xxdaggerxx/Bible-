@@ -1,0 +1,66 @@
+{
+ "id": "11-008-022",
+ "title": "Solomon’s Prayer of Dedication",
+ "refs": [
+  "1 Kings 8:22-53"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11008022,
+   "end": 11008053,
+   "ref": "1 Kings 8:22-53",
+   "ranges": [
+    [
+     11008022,
+     11008053
+    ]
+   ],
+   "title": "The Place Where God's Name Lives",
+   "key_verse": [
+    11008029,
+    11008029
+   ],
+   "reflect": [
+    {
+     "text": "When King Solomon finished building the temple in Jerusalem, he asked God to watch over it day and night. God chose this house as the earthly place where His name would dwell. Solomon prayed that whenever the people turned toward this place in trouble and repented of their wrong choices, God would hear from heaven and forgive them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In the Bible, calling on God's name means calling upon who He truly is. It points to His real presence, His authority, His holy character, and His power. God's name is never a magic charm that we can use to get our own way. We must call on Him with genuine faith and humble hearts that turn away from sin.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Today, we do not have to travel to a stone temple to meet God. Jesus has revealed the Father's name to us completely. He now invites us to come directly to the Father and pray in His name, trusting that God hears and forgives us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you pray in Jesus' name, do you treat it as a routine phrase or as a call upon His true character and authority?",
+    "How can you approach God with more humble repentance when you ask for His help?"
+   ],
+   "prayer": "Lord God, thank You for revealing Your holy name and character to us. Help us to bring our prayers to You with sincere hearts and humble faith rather than thoughtless words. Thank You that through Jesus, You hear our cries and graciously forgive us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ann Spangler",
+     "work": "Praying the Names of God - September 28",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/prayingnamesgod/praying-the-names-of-god-october-10.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

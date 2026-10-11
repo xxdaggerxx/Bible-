@@ -1,0 +1,75 @@
+{
+ "id": "14-020-026",
+ "title": "The Joyful Return",
+ "refs": [
+  "2 Chronicles 20:26-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14020026,
+   "end": 14020030,
+   "ref": "2 Chronicles 20:26-30",
+   "ranges": [
+    [
+     14020026,
+     14020030
+    ]
+   ],
+   "title": "Blessing in the Valley",
+   "key_verse": [
+    14020026,
+    14020026
+   ],
+   "reflect": [
+    {
+     "text": "When King Jehoshaphat and the people of Judah faced a huge army, they chose to worship God instead of giving in to fear. They trusted God in overwhelming times, and praise was their choice before they ever saw how things would turn out. God went ahead of them, causing their enemies to turn on one another and defeat themselves. When we fix our eyes on the Lord instead of our problems, we give room for God to act on our behalf.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "After the battle was won, the people gathered in the Valley of Beracah, which means the Valley of Blessing. Life after a hard battle can still feel messy, but God wants to help us find the good things left behind. He gave Judah far more than they expected, blessing them both inside their hearts and in their daily lives. Praise belongs at both ends of our struggles, acting like bookends before and after every fight.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Judah then marched home with harps, horns, and great joy, returning right to the temple to thank God. Surrounding nations saw that God fought for His people, and the land was granted peace and rest on every side. When we let God fight our battles and remember to thank Him, He leads us into our own places of peace and blessing.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face an overwhelming challenge, do you tend to focus on your worry or on praising God?",
+    "How can you take time to thank God for the blessings and victories He has already given you?"
+   ],
+   "prayer": "Lord God, thank You for fighting for us when our problems feel too large to bear. Help us to choose worship over anxiety and to look for Your blessings even in hard places. Give us peaceful hearts as we trust You to lead us through every battle. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Rick Warren",
+     "work": "After the Victory Comes the Blessing",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-march-16-2020.html"
+    },
+    "D2": {
+     "author": "Brenda Bradford Ottinger",
+     "work": "Valley of Blessing",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/-encouragement-for-today-january-6-2020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

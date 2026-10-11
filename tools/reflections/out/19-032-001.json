@@ -1,0 +1,135 @@
+{
+ "id": "19-032-001",
+ "title": "The Joy of Forgiveness",
+ "refs": [
+  "Psalms 32:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19032010,
+   "end": 19032010,
+   "ref": "Psalms 32:10",
+   "ranges": [
+    [
+     19032010,
+     19032010
+    ]
+   ],
+   "title": "\"Mercy Surrounds Him Who Trusts\"",
+   "key_verse": [
+    19032010,
+    19032010
+   ],
+   "reflect": [
+    {
+     "text": "Stubbornness often keeps us from seeking help when we are hurting, both in our bodies and in our spiritual lives. God warns us not to be like stubborn horses or mules that have no understanding and must be steered with a bit and bridle. He desires to lead us with gentle care, but we must first set aside our pride and admit our deep need for His grace.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "When we place our trust in the Lord, we do not come boasting of good deeds. We know we are sinners who have earned nothing. Yet God meets our humble faith with boundless kindness. Charles Spurgeon compared this mercy to a royal bodyguard protecting a prince, speaking of these \"mounted guards of grace\" stationed on every side.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Just as the air surrounds us wherever we go, the steadfast love of God wraps around those who rely on Him. While the wicked experience many griefs, those who trust in the Lord are enclosed by so many mercies that their troubles are met with peaceful confidence and praise.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you acting like a stubborn animal, resisting God's gentle guidance?",
+    "How does knowing that God's mercy surrounds you like a guard change the way you face your troubles today?"
+   ],
+   "prayer": "Lord, take away our stubborn pride whenever we try to manage our lives on our own. Teach us to listen to Your gentle instruction rather than resisting Your will. Thank You for surrounding us on every side with Your steadfast mercy in Christ. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 14",
+     "on": "Psalms 32:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "David C. McCasland",
+     "work": "Surrounded By Mercy",
+     "site": "Our Daily Bread",
+     "url": "https://military.odb.org/surrounded-by-mercy/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19032001,
+   "end": 19032011,
+   "ref": "Psalms 32:1-11",
+   "ranges": [
+    [
+     19032001,
+     19032011
+    ]
+   ],
+   "title": "The Joy of God's Forgiveness",
+   "key_verse": [
+    19032001,
+    19032001
+   ],
+   "reflect": [
+    {
+     "text": "Many people spend their lives chasing worldly success, only to find themselves trapped in constant dissatisfaction. Scripture shows that true happiness does not depend on money or earthly circumstances. Real blessing can be experienced right now when we know that God has pardoned our guilt and covered our wrongdoing.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Hiding our faults never brings peace. When David tried to keep silent about his sin, the hidden guilt drained his strength like the scorching heat of summer. Making excuses and trying to distract our thoughts only causes inner grief to fester. An unconfessed heart is left weighed down and without rest.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Relief comes when we bring our sins into the open before God. We cannot earn pardon through our good works, but God is always ready to heal a broken heart. He freely forgives us for the sake of Jesus and His finished work on the cross, taking away our heavy burden and replacing it with genuine joy.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is unconfessed sin or guilt currently draining your spiritual strength and peace?",
+    "How does knowing that Jesus paid for your pardon on the cross give you deeper joy than worldly success?"
+   ],
+   "prayer": "Heavenly Father, forgive us for looking to the things of this world for lasting satisfaction. Keep us from hiding our sins or making excuses when we fail. Thank You for freely washing away our guilt through Jesus Christ and restoring our joy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 14",
+     "on": "Psalms 32:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Joe Holland",
+     "work": "True Happiness",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/true-happiness"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

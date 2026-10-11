@@ -1,0 +1,102 @@
+{
+ "book": 19,
+ "chapter": 1,
+ "first": 1,
+ "last": 6,
+ "ref": "Psalms 1",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "True happiness begins when a person turns away from evil. The opening words picture a downward slide into sin: first listening to bad advice, then joining in wrong actions, and finally feeling right at home among those who make fun of God. Godly people are truly happy because they refuse to follow the crowd down that destructive road.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "Adam Clarke",
+    "Wesley"
+   ],
+   "differ": [
+    {
+     "tradition": "Lutheran",
+     "view": "Martin Luther taught that walking in wicked counsel means following false religious doctrines and human ideas, while sitting in the seat of mockers refers to misleading teachers who take the place of God's word in the church.",
+     "sources": [
+      "Spurgeon (Treasury of David)",
+      "https://www.preceptaustin.org/psalm-1-commentary"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Instead of following the wicked, a godly person finds deep joy in God's word. To meditate means to quietly turn scripture over in your mind, thinking carefully about what God has said and letting it guide daily decisions. A faithful believer does not treat reading God's word as a chore, but delights in thinking about it day and night.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "A person rooted in God's word is compared to a healthy tree purposely planted beside running water. Because it is constantly nourished, it produces good fruit at the proper time and its leaves stay green and strong. In the same way, God blesses a righteous life with spiritual fruitfulness and guides all their work to succeed.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars note that the phrase about streams of water describes the human-made irrigation ditches used in the ancient Near East to water carefully planted fruit orchards.",
+     "sources": [
+      "https://www.biblehub.com/commentaries/pulpit/psalms/1.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The wicked are the exact opposite of the green, fruitful tree. They are compared to chaff, which is the dry, worthless outer husk left over after wheat is threshed. Because they have no spiritual root or weight before God, they are easily swept away by temptation and God's judgment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Because the ungodly lack any true goodness, they will not be able to defend themselves when God judges the world. They will be declared guilty and will not stand acquitted, which means cleared of their charges. When God gathers His people together forever, unrepentant sinners will have no place in that pure assembly.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The Lord personally watches over, loves, and protects the daily path of those who follow Him. Even when life is difficult or confusing, God knows where His children are going and leads them to life. The life chosen by the wicked leads in the opposite direction and will end in complete ruin.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

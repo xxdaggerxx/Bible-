@@ -1,0 +1,73 @@
+{
+ "id": "55-003-001",
+ "title": "Evil in the Last Days",
+ "refs": [
+  "2 Timothy 3:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 55003001,
+   "end": 55003009,
+   "ref": "2 Timothy 3:1-9",
+   "ranges": [
+    [
+     55003001,
+     55003009
+    ]
+   ],
+   "title": "Standing Firm in Difficult Times",
+   "key_verse": [
+    55003001,
+    55003001
+   ],
+   "reflect": [
+    {
+     "text": "Paul wrote this letter to prepare Timothy and the church for difficult times and suffering. In the Bible, the phrase \"last days\" refers to the whole period between the resurrection of Jesus and His return, which includes our own day. Because Scripture warned us about these seasons ahead of time, we should not be taken off guard when we encounter trials or false teaching.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul explained that this era would be full of people who love only themselves, chase selfish pleasures, and resist God's standards. Some teachers even put on an outward show of religion while denying God's true power to produce holiness in their lives. Human rules and education cannot fix this deep cruelty and selfishness. Only the transformative power of the gospel, God's good news about Jesus, can change a human heart.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even when we face strong opposition and see imperfections in the church, we do not need to fall into despair. Sin and error will persist until the end of this age. We can remain steady and keep resisting sin, knowing that Christ will soon return to bring righteous judgment.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that trials were promised in Scripture help you avoid surprise and despair?",
+    "Where are you tempted to rely on an outward show of faith rather than letting the gospel change your life?"
+   ],
+   "prayer": "Lord God, help us not to be caught off guard by hardship or by people who turn away from Your truth. Guard our hearts from an empty show of faith, and let Your gospel change us from the inside out. Give us strength to resist sin and remain faithful until Christ returns to set all things right. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Times of Difficulty",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/times-difficulty"
+    },
+    "D2": {
+     "author": "Michael A. Youssef",
+     "work": "Trouble in the Last Days",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-september-22-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

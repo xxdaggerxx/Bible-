@@ -1,0 +1,74 @@
+{
+ "id": "55-003-010",
+ "title": "All Scripture Is God-Breathed",
+ "refs": [
+  "2 Timothy 3:10-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 55003016,
+   "end": 55003017,
+   "ref": "2 Timothy 3:16-17",
+   "ranges": [
+    [
+     55003016,
+     55003017
+    ]
+   ],
+   "title": "\"All Scripture Is God-Breathed\"",
+   "key_verse": [
+    55003016,
+    55003016
+   ],
+   "reflect": [
+    {
+     "text": "When Paul explains that Scripture is God-breathed, he tells us that the Bible is God's actual speech. Just as people exhale breath when they speak, the Scriptures are God's voice given to us. God guided human authors and used their personalities and ways of writing, yet every word comes directly from Him. This means the Bible stands alone as God's inspired message, and we can trust every word completely.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because the Bible is God speaking, it calls for our deep reverence and care. When you read the Scriptures, you are not simply reading ancient history; you are listening to the living voice of the Lord speaking directly to you. It is our sole guide for knowing what God wants us to believe and do.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "To grow in our walk with Christ, we must depend on this Word every day. Just as our bodies need daily food to stay strong, our spiritual lives need the truth of Scripture to be nourished and equipped for every good work.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that the Bible is God's own voice change the way you read it?",
+    "In what ways can you make reading Scripture a regular part of nourishing your spiritual life each day?"
+   ],
+   "prayer": "Lord, thank You for giving us Your holy Word and speaking directly to our hearts through it. Help us to treat Scripture with deep respect and trust everything You say. Feed our souls each day with Your truth, and guide our steps according to Your will. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "God-Breathed Scripture",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-breathed-scripture"
+    },
+    "D2": {
+     "author": "Adrian Rogers (Love Worth Finding)",
+     "work": "Are You Listening to the Word of God?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-october-14-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

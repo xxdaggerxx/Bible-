@@ -1,0 +1,73 @@
+{
+ "id": "54-001-003",
+ "title": "Correcting False Teachers",
+ "refs": [
+  "1 Timothy 1:3-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 54001003,
+   "end": 54001011,
+   "ref": "1 Timothy 1:3-11",
+   "ranges": [
+    [
+     54001003,
+     54001011
+    ]
+   ],
+   "title": "The Goal of God's Word",
+   "key_verse": [
+    54001005,
+    54001005
+   ],
+   "reflect": [
+    {
+     "text": "Paul urgently warned Timothy about teachers who had wandered away from the truth. Instead of helping others grow, these teachers were distracted by endless debates and outward rules. God does not give us his Word just to fill our minds with facts or make us proud. The real goal of all right teaching is love. This love is not fake or shallow; it springs from a clean heart, an honest conscience, and a genuine faith in Christ.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God's law is good, but it has a specific purpose. It was given to expose our rebellion, show us our guilt, and point us to God's grace, not to be a system of rules we use to fix ourselves. We cannot produce true love simply by trying harder under the law. True change happens only when we stop relying on our own moral efforts, turn to the living Savior, and receive his mercy.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because of this, we should pay attention to how we handle the Bible. Whenever we learn Scripture, we must ask whether it is making us more loving toward God and our neighbors. Sound teaching will always align with the good news of Jesus and bear the fruit of quiet, humble love.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Does your time in God's Word lead you to love the people around you, or does it make you feel superior to others?",
+    "Are you relying on your own rule-keeping to be good, or are you trusting Jesus to change your heart?"
+   ],
+   "prayer": "Lord, thank you for your holy law that shows us our sin and points us to Jesus. Guard us from useless arguments and intellectual pride. Cleanse our hearts and grant us a sincere faith that overflows in love for others.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Love, the Christian's Goal",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/love-christians-goal"
+    },
+    "D2": {
+     "author": "John Piper",
+     "work": "If You Want to Love, You Must Die to the Law",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/if-you-want-to-love-you-must-die-to-the-law"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

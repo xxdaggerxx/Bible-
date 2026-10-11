@@ -1,0 +1,72 @@
+{
+ "id": "44-003-001",
+ "title": "A Lame Man Walks",
+ "refs": [
+  "Acts 3:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44003001,
+   "end": 44003010,
+   "ref": "Acts 3:1-10",
+   "ranges": [
+    [
+     44003001,
+     44003010
+    ]
+   ],
+   "title": "More Than Pocket Change",
+   "key_verse": [
+    44003006,
+    44003006
+   ],
+   "reflect": [
+    {
+     "text": "Peter and John were on their way to the temple to pray, but they did not let their religious schedule keep them from noticing someone in pain. Instead of looking away from misery, they looked straight at the man who could not walk. The beggar asked for money, but Peter did not worry about what he lacked. He chose to give what he had, reaching out his hand to offer personal support and faith to help the man stand.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Deep personal crises cannot be healed with loose change or quick remedies. The man sat right outside the temple asking only for small coins, but God had something far greater in store. Peter called on the character and divine authority of Jesus Christ. That same life-changing power in Jesus' name is still active today, inviting us to pray bold prayers even over situations that seem completely hopeless.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When the man sprang to his feet and began to walk, Peter and John did not take credit for the miracle. They pointed all the attention back to God. We are invited to notice those who are hurting, offer what we have in Jesus' name, and let God receive all the glory.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Who around you might need you to pause and truly notice them today?",
+    "What difficult situation can you bring to God in bold prayer instead of looking for a quick fix?"
+   ],
+   "prayer": "Lord Jesus, help us not to rush past people who are hurting as we go about our day. Give us faith to offer what we have and to pray bold prayers in your name. Use your power to bring hope and healing, and may all the praise belong to you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Kia Stephens",
+     "work": "The Confidence to Pray Bold Prayers",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-decermber-26-2019.html"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 229: Acts 3:1–10",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-229-acts-3-110.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

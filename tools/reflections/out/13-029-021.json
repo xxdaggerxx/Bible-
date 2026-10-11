@@ -1,0 +1,60 @@
+{
+ "id": "13-029-021",
+ "title": "Solomon Anointed King",
+ "refs": [
+  "1 Chronicles 29:21-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13029021,
+   "end": 13029025,
+   "ref": "1 Chronicles 29:21-25",
+   "ranges": [
+    [
+     13029021,
+     13029025
+    ]
+   ],
+   "title": "The Lord Exalts Solomon",
+   "key_verse": [
+    13029025,
+    13029025
+   ],
+   "reflect": [
+    {
+     "text": "When Solomon became king, Israel celebrated with huge sacrifices and great joy. Yet Solomon's success did not come from human power or his own effort. God showed His abundant grace, His kindness we do not deserve, by lifting Solomon up and giving him greater royal majesty than any king before him. True worship keeps its eyes on the Lord's absolute rule and perfect character rather than on what people can do.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Real humility means knowing where everything comes from. All our possessions and even our desire to obey God originate entirely from the Lord. Remembering this changes how we pray. Instead of treating prayer like a selfish list of things we want, we are invited to focus our daily prayers on praising who God is and honoring His sovereign rule over our lives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do your daily prayers look more like a list of requests, or do you take time to praise God for who He is?",
+    "How does remembering that all good things come from God help you stay humble?"
+   ],
+   "prayer": "Lord God, You rule over all things with perfect power and grace. Thank You for every good gift, knowing that all we have comes from Your hands. Help us look past our own desires and fill our prayers with praise for Your sovereign majesty. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Solomon Exalted",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/solomon-exalted"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

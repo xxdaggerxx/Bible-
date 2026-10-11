@@ -1,0 +1,66 @@
+{
+ "id": "05-011-026",
+ "title": "A Blessing and a Curse",
+ "refs": [
+  "Deuteronomy 11:26-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5011026,
+   "end": 5011032,
+   "ref": "Deuteronomy 11:26-32",
+   "ranges": [
+    [
+     5011026,
+     5011032
+    ]
+   ],
+   "title": "The Choice Between Blessing and Curse",
+   "key_verse": [
+    5011026,
+    5011026
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God sets two clear paths before His people: a blessing and a curse. There is no middle ground between the two. The choice we make to obey or disobey the Lord directly shapes the outcome we receive in our daily lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we choose obedience, God opens the door to His good gifts. Adrian Rogers highlights six blessings God wants to give us: plenty, peace, protection, power, purity, and clear spiritual perception. God wants to provide for us, keep us safe, and help us understand His truth as we walk in His ways.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Following God's commands does something even deeper than keeping rules. It moves our faith beyond mere facts in our heads. When we listen to God and obey Him, our religion becomes a close, living relationship with Jesus.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Which of the two paths described in this passage are you choosing in your daily decisions?",
+    "How does obeying God help your relationship with Jesus become more real and personal?"
+   ],
+   "prayer": "Lord, help us to choose the path of obedience and life today. Guard our hearts from turning away from Your commands. Draw us closer to Jesus as we trust and follow You with all our heart. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "Six Blessings God Wants to Give You",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-may-29-2020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

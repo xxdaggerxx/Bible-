@@ -1,0 +1,83 @@
+{
+ "id": "19-107-001",
+ "title": "Thanksgiving for Deliverance",
+ "refs": [
+  "Psalms 107:1-43"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19107001,
+   "end": 19107043,
+   "ref": "Psalms 107:1-43",
+   "ranges": [
+    [
+     19107001,
+     19107043
+    ]
+   ],
+   "title": "The Lord Rescues and Satisfies",
+   "key_verse": [
+    19107008,
+    19107008
+   ],
+   "reflect": [
+    {
+     "text": "In Psalm 107, people wander in deserts, sit in dark prisons, suffer sickness, and face terrifying storms at sea. Yet whenever they cry out in their trouble, God hears and rescues them. As Bible Pathways notes, God sent His Word to heal them, pointing forward to Jesus Christ, who stills the wild storms of life and brings peace. Even when our path seems confusing or dark, God is leading us the right way. As Charles Spurgeon wrote, our trials are winds that carry our ship toward our \"desired haven.\"",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "When our spirits feel faint, our deep longings are actually growing pains that show our need for God. He promises not just to relieve our hunger, but to satisfy our souls with His goodness. When we remember what He has done, we have every reason to complain less and praise more. We can thank Him for daily gifts like food, friends, and shelter, and most of all for redeeming love, which breaks the chains of sin and brings us home.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What daily blessings or answers to prayer can you thank God for today?",
+    "How does knowing that God uses life's storms to guide you bring peace to your heart?"
+   ],
+   "prayer": "Lord, thank You for hearing us whenever we cry out to You in distress. Forgive us when we grumble, and help us notice Your goodness in our daily food, health, and family. Thank You for Jesus, who breaks the chains of our sin and calms our storms. Lead us safely on Your path today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 22",
+     "on": "Psalms 107:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 1",
+     "on": "Psalms 107:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 20",
+     "on": "Psalms 107:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 07/13/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-07-or-13-or-2002-1141014.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

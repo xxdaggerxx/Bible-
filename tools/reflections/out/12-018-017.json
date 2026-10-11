@@ -1,0 +1,74 @@
+{
+ "id": "12-018-017",
+ "title": "Sennacherib Threatens Jerusalem",
+ "refs": [
+  "2 Kings 18:17-37"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12018017,
+   "end": 12018037,
+   "ref": "2 Kings 18:17-37",
+   "ranges": [
+    [
+     12018017,
+     12018037
+    ]
+   ],
+   "title": "The Secret of Our Confidence",
+   "key_verse": [
+    12018020,
+    12018020
+   ],
+   "reflect": [
+    {
+     "text": "Earlier compromise under King Ahaz had brought foreign idols and heavy burdens to Judah. King Hezekiah chose a different path, purging false worship and rebelling against the mighty king of Assyria. Soon, the Assyrian army surrounded Jerusalem, plunging the city into its most desperate hour. The enemy commander stood outside the walls and mocked God, claiming that the Lord was just as powerless to save His people as the idols of the crushed nations around them.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The Assyrian official demanded to know the source of Judah's confidence. Human allies like Egypt were useless, and every other kingdom in Assyria's path had been reduced to rubble. The commander could not comprehend how Hezekiah dared to resist. The reasons for a believer's peace often remain a mystery to onlookers. As F. B. Meyer wrote, our lives must puzzle the world because \"God is our confidence\" rather than silver, gold, or human strength.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When trials surround us, people around us may wonder why we do not panic. The world only calculates visible resources and human odds, but faith looks beyond the hills to the living God. Even when our situation appears hopeless and loud voices question our faith, we can remain calm. We know our help comes from the Lord, and His enemies will never have the final word.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you tend to look for security when troubles make your future feel uncertain?",
+    "How can trusting in God's hidden power give you quiet peace when others expect you to panic?"
+   ],
+   "prayer": "Lord God, forgive us for the times we lean on fragile human strength instead of you. When troubles press in and voices mock our hope, give us quiet confidence in your unseen care. Keep our hearts anchored on your eternal throne, knowing that you will never fail your people. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 18:20",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Assyria Invades Judah",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/assyria-invades-judah"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

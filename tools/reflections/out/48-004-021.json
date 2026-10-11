@@ -1,0 +1,66 @@
+{
+ "id": "48-004-021",
+ "title": "Hagar and Sarah",
+ "refs": [
+  "Galatians 4:21-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 48004021,
+   "end": 48004031,
+   "ref": "Galatians 4:21-31",
+   "ranges": [
+    [
+     48004021,
+     48004031
+    ]
+   ],
+   "title": "Children of the Promise",
+   "key_verse": [
+    48004028,
+    48004028
+   ],
+   "reflect": [
+    {
+     "text": "Paul uses the story of Abraham's two sons to show the difference between living under the law and living in God's new covenant. Long ago, Abraham struggled to wait on God's supernatural promise to give him a son. Instead of trusting God to act, he turned to Hagar to have a child through his own natural strength.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In contrast, Isaac's birth was a miracle. This miraculous birth teaches us that justification, which means being declared right before God, is purely the Lord's work. It does not come from human striving. Like Abraham turning to Hagar, false teachers in Paul's day were trying to earn their standing with God through human effort.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Relying on our own performance only traps us in spiritual slavery. But because of Jesus, believers are heirs of God's promise. We do not have to carry the heavy burden of trying to earn our own salvation. God has freely accepted us, setting us free from the pressure of human works.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to rely on your own effort rather than trusting God's promises?",
+    "How does knowing that your acceptance is God's gift help you rest from trying to earn his favor?"
+   ],
+   "prayer": "Heavenly Father, thank you that our salvation does not depend on our own weak efforts. Forgive us for the times we try to earn your favor instead of trusting your word. Help us to rest each day in the freedom of your promise in Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Through Promise",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/through-promise"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

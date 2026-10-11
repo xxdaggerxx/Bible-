@@ -1,0 +1,116 @@
+{
+ "id": "01-035-001",
+ "title": "Jacob Returns to Bethel",
+ "refs": [
+  "Genesis 35:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1035001,
+   "end": 1035003,
+   "ref": "Genesis 35:1-3",
+   "ranges": [
+    [
+     1035001,
+     1035003
+    ]
+   ],
+   "title": "\"Arise, Go Up to Bethel\"",
+   "key_verse": [
+    1035001,
+    1035001
+   ],
+   "reflect": [
+    {
+     "text": "Jacob had settled down and prospered materially, but outward success does not mean we are walking in God's will. After his earlier encounter with God, Jacob had drifted back into scheming and earthly pursuits. Yet the Lord had set His hand to shape Jacob into a holy person. When trouble and crisis came, God spoke directly to awaken him from spiritual compromise.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "The divine call to return to Bethel stirred powerful memories for Jacob. That was the place where the Lord had comforted him in his deepest fear and distress. Remembering God's past mercy helped Jacob see the inconsistency of the sinful ways in his camp. Spiritual renewal begins when we stop despairing, turn back to God in faith, and put away sinful habits. Jacob responded with thankful obedience, leading his family to clean their lives and offer true worship to the Lord who had never abandoned him.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Has material comfort or distraction caused you to drift away from walking closely with God?",
+    "How can remembering times when God answered you in distress encourage you to return to Him today?"
+   ],
+   "prayer": "Lord God, thank You for calling us back whenever we wander into our own schemes. Remind us of Your faithfulness in our days of trouble, so we may turn away from sin and worship You with obedient hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 35:1",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - Jan. 12, 2007",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-jan-12-2007-1463090.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1035001,
+   "end": 1035015,
+   "ref": "Genesis 35:1-15",
+   "ranges": [
+    [
+     1035001,
+     1035015
+    ]
+   ],
+   "title": "Giving God First Place",
+   "key_verse": [
+    1035002,
+    1035002
+   ],
+   "reflect": [
+    {
+     "text": "Before Jacob and his family could worship at Bethel, they had to bury their foreign gods and purify themselves. An idol is not just a carved statue made of wood or stone. Good gifts in our lives, such as our possessions, relationships, or personal achievements, become idols whenever they take the central place that belongs only to the Lord. When these things begin to possess and control us, they damage our walk of faith.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We can often discover where our true devotion lies by looking honestly at how we invest our daily time and resources. The things we give our attention to reveal what we actually treasure. As Charles Swindoll teaches, believers must deliberately put away rival loyalties so that Christ holds \"first place in everything.\" Choosing to clear away these competing desires frees us to honor God with undivided hearts.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What good gifts or pursuits in your life might be taking the central place that belongs to God?",
+    "How does the way you use your time and resources reflect your true devotion to Christ?"
+   ],
+   "prayer": "Lord, search our hearts and reveal anything that has taken Your rightful place in our lives. Help us lay aside every competing loyalty, so that Christ is honored above all else in what we say and do. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Idols, Part Two",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-august-25-2014.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

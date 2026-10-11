@@ -1,0 +1,75 @@
+{
+ "id": "43-016-017",
+ "title": "Grief Will Turn to Joy",
+ "refs": [
+  "John 16:17-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43016017,
+   "end": 43016022,
+   "ref": "John 16:17-22",
+   "ranges": [
+    [
+     43016017,
+     43016022
+    ]
+   ],
+   "title": "Your Grief Will Turn to Joy",
+   "key_verse": [
+    43016017,
+    43016017
+   ],
+   "reflect": [
+    {
+     "text": "The disciples felt confused and sad because Jesus was leaving them. They were about to weep while the world rejoiced. Yet Jesus promised that their sorrow would be turned into joy when He rose from the dead. Spurgeon explains that God transforms our troubles so that even our deepest trials serve to make our coming joy all the sweeter.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus also promised that He would see His followers again. This points ahead to His final return, but it also happens in our daily lives. As Spurgeon notes, our Lord has many \"agains\" in His walk with us. When we stumble and grieve over our sins, He returns to forgive us. When our faith grows weak, He comes again to speak peace to our hearts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of this promise, our dark seasons will not last forever. God's past mercies are tokens of the good things He will do for us in the future. We can take courage and even begin to sing in hope today, knowing that Jesus will see us again and give us joy that cannot be stolen.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering God's past kindness help you trust Him when you are currently facing sorrow?",
+    "Where in your life today do you need Jesus to come to you and restore your joy?"
+   ],
+   "prayer": "Lord Jesus, thank You that our seasons of grief will not last forever. When our hearts are troubled, remind us of the mercies You have already shown us. Come to us again with Your forgiving peace, and fill us with joy that no one can take away. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 30",
+     "on": "John 16:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 26",
+     "on": "John 16:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

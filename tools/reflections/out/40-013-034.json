@@ -1,0 +1,66 @@
+{
+ "id": "40-013-034",
+ "title": "I Will Open My Mouth in Parables",
+ "refs": [
+  "Matthew 13:34-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40013034,
+   "end": 40013035,
+   "ref": "Matthew 13:34-35",
+   "ranges": [
+    [
+     40013034,
+     40013035
+    ]
+   ],
+   "title": "Revealing Hidden Truths Through Parables",
+   "key_verse": [
+    40013035,
+    40013035
+   ],
+   "reflect": [
+    {
+     "text": "Matthew stops his narrative to show that Jesus fulfilled ancient prophecy by teaching in parables. When the text says Jesus did not speak without a parable, it does not mean He never gave direct teachings. Instead, it shows that parables were central to how He instructed the crowds.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus used these stories to bring deep truths into the light. In the Old Testament, Psalm 78 drew out overlooked lessons from the history of Israel. In a similar way, Jesus used parables to uncover truths His listeners should have recognized, revealing realities about God's kingdom that had been hidden since the creation of the world.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We cannot always grasp these deep truths on our own. Because our understanding is incomplete, we can easily miss what Scripture is showing us. We need the teaching ministry of the church to help explain the Bible and make these truths clear to our hearts.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How do Jesus' parables help you better understand the nature of God's kingdom?",
+    "How can learning from teachers in your church help you see biblical truths you might otherwise miss?"
+   ],
+   "prayer": "Lord Jesus, thank You for revealing the wonders of Your kingdom through Your teachings. Please give us humble hearts to learn from Scripture and from the teachers You provide in the church. Help us to see Your truth clearly and follow You faithfully each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Teaching in Parables",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/teaching-parables"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

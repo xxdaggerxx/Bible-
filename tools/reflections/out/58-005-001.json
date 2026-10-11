@@ -1,0 +1,136 @@
+{
+ "id": "58-005-001",
+ "title": "The Perfect High Priest",
+ "refs": [
+  "Hebrews 5:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 58005007,
+   "end": 58005008,
+   "ref": "Hebrews 5:7-8",
+   "ranges": [
+    [
+     58005007,
+     58005008
+    ]
+   ],
+   "title": "\"He Learned Obedience from What He Suffered\"",
+   "key_verse": [
+    58005008,
+    58005008
+   ],
+   "reflect": [
+    {
+     "text": "In the garden of Gethsemane, Jesus showed us the reality of His human nature. He felt deep agony and shed real tears as He faced the terrible weight of God's judgment against sin. In that dark hour, He prayed with loud cries in total dependence on His Father. Spurgeon reminds us that even when Jesus felt alone in his deepest sorrow, God heard His prayer.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Scripture says Jesus learned obedience through what He suffered. This does not mean He ever disobeyed God before. Instead, He came to know firsthand how much it truly costs to submit to the Father all the way to the cross. Because our Savior walked this path of pain, we should not be surprised when we face trials ourselves.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When we walk through hardships, we are not left to struggle by ourselves. Jesus knows our pain, and His deep sympathy gives us strength to keep going. We can bring all our sorrows to Him, knowing that the Father who heard Jesus will also hear our cries.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus cried out in deep pain help you when you pray?",
+    "When you face hard times, how can remembering Christ's obedience give you comfort?"
+   ],
+   "prayer": "Lord Jesus, thank You for obeying the Father even when it meant suffering for our sake. When we feel overwhelmed or alone, remind us that You hear our cries and understand our pain. Give us strength to trust You and follow Your path each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 24",
+     "on": "Hebrews 5:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 29",
+     "on": "Hebrews 5:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Suffering and Obedience",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/suffering-and-obedience"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 58005001,
+   "end": 58005010,
+   "ref": "Hebrews 5:1-10",
+   "ranges": [
+    [
+     58005001,
+     58005010
+    ]
+   ],
+   "title": "A Gentle and Faithful High Priest",
+   "key_verse": [
+    58005002,
+    58005002
+   ],
+   "reflect": [
+    {
+     "text": "In the Old Testament, God appointed priests from among ordinary men to bring sacrifices for sins. A true priest needed to understand what it feels like to be weak so he could deal gently with people who lose their way. If someone stayed distant from human struggles, they could never guide others with real patience and tender care.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Jesus became our ultimate High Priest by stepping fully into human life. He did not watch our pain from far away. Instead, He freely chose to experience human limits. He knew what it felt like to be exhausted, deeply sorrowful, and fiercely tempted, yet He never committed any sin.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Because Jesus lived through our hardships firsthand, His sympathy for us is genuine and complete. He does not turn away from our weakness in anger. When you feel troubled or struggle with temptation, you can run to Him with confidence, knowing He understands your need and treats you with gentle grace.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How does it encourage you to know that Jesus felt tiredness, sorrow, and temptation just as we do?",
+    "What weakness or struggle do you need to bring to Jesus today, trusting in His gentle care?"
+   ],
+   "prayer": "Lord Jesus, thank You for stepping down into our world and sharing in our human weaknesses. Thank You that You understand our weariness and never turn away from us when we struggle. Help us to come to You honestly and rest in Your gentle mercy. Amen.",
+   "sources": {
+    "D4": {
+     "author": "John MacArthur",
+     "work": "Christ’s Sympathy for His People",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/B210326/christs-sympathy-for-his-people"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

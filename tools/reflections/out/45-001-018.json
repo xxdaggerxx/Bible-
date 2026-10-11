@@ -1,0 +1,74 @@
+{
+ "id": "45-001-018",
+ "title": "God’s Wrath against Sin",
+ "refs": [
+  "Romans 1:18-32"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 45001019,
+   "end": 45001021,
+   "ref": "Romans 1:19-21",
+   "ranges": [
+    [
+     45001019,
+     45001021
+    ]
+   ],
+   "title": "\"His Eternal Power and Divine Nature\"",
+   "key_verse": [
+    45001020,
+    45001020
+   ],
+   "reflect": [
+    {
+     "text": "Every day, the world around us speaks of God. The changing seasons, the steady rising of the sun, and the beauty of nature all show His reality. God not only made the universe, but He also watches over every living creature with steady care. In creation, God reveals His eternal power and goodness so clearly that no one has an excuse for denying Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet people still turn away from God. The root problem is not a lack of proof, but a rebellious heart that rejects Him. Human beings know there is a Maker, but they refuse to honor Him or give Him thanks. When people push away the truth about God, their thinking becomes empty and their hearts grow spiritually dark.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even patterns in nature, like green leaves returning in spring, point us to spiritual truths like new life. We are meant to look at creation, recognize our Maker's wise care, and respond with deep gratitude. Only God's good news and His Holy Spirit can clear away our inner darkness and help us honor Him properly as our Creator.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you look at the beauty and order of creation, what does it remind you about God?",
+    "In what areas of your daily life can you practice giving God more honor and thanks?"
+   ],
+   "prayer": "Lord God, thank You for showing Your eternal power and loving care in the world You made. Forgive us for the times our hearts fail to honor You or give You thanks. Clear away our darkness by Your Holy Spirit, and teach us to praise You as our wise Creator. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Betsy St. Amant Haddox",
+     "work": "Finding God in Creation (Romans 1:19-20)",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-november-18.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Primal Sin of Humanity",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/primal-sin-humanity"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

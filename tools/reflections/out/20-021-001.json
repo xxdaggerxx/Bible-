@@ -1,0 +1,128 @@
+{
+ "id": "20-021-001",
+ "title": "The King’s Heart",
+ "refs": [
+  "Proverbs 21:1-31"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 20021001,
+   "end": 20021001,
+   "ref": "Proverbs 21:1",
+   "ranges": [
+    [
+     20021001,
+     20021001
+    ]
+   ],
+   "title": "\"The King's Heart\"",
+   "key_verse": [
+    20021001,
+    20021001
+   ],
+   "reflect": [
+    {
+     "text": "Serving under bosses and leaders can often be difficult. When those in charge seem unfair or harsh, we easily feel anxious. Yet God reminds us that even the most powerful ruler is under His direction. Just as a stream of water is guided by trenches, the hearts of earthly leaders are held in God's hands. He directs human decisions to fulfill His good purposes, even when wicked rulers seem to flourish.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When authorities make life confusing, God has not lost control. He often uses hard circumstances and worldly rulers to protect and refine His people. We see this in Nehemiah, who served a pagan emperor. Instead of panicking or demanding his own way, he spent four months praying patiently before asking King Artaxerxes for help. God answered by turning the king's heart to favor Nehemiah and support the rebuilding of Jerusalem.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "You can bring your difficult bosses, teachers, or government leaders directly to God in prayer. We do not need to live in fear. Instead, we can place them into our heavenly Father's capable hands and wait peacefully for Him to work.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a leader or authority figure in your life whom you need to place in God's hands?",
+    "How does knowing that God directs leaders help you wait with patience and peace?"
+   ],
+   "prayer": "Lord, thank You that You rule over every earthly authority. When those in charge are hard to understand, help me not to panic. Teach me to pray patiently and trust Your loving care to guide all things. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Chuck Swindoll",
+     "work": "The King’s Heart in God’s Hand",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/the-kings-heart-in-gods-hand"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "Displays of Divine Providence",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-february-17-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 20021001,
+   "end": 20021031,
+   "ref": "Proverbs 21:1-31",
+   "ranges": [
+    [
+     20021001,
+     20021031
+    ]
+   ],
+   "title": "Victory Belongs to the Lord",
+   "key_verse": [
+    20021031,
+    20021031
+   ],
+   "reflect": [
+    {
+     "text": "Throughout life, people craft many plans and rely on clever ideas. Yet no human wisdom, advice, or strategy can ever stand against the Lord. Opposing our Creator makes no sense because no one can outsmart Him. Our proud human nature often wants to go its own way, but only the Holy Spirit can change our hearts and humble us to receive God's true wisdom.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Proverbs reminds us that a soldier prepares a horse for battle, but final victory belongs to the Lord. It is wise and responsible for us to plan diligently and do our best work. Still, our efforts cannot guarantee success on their own. The final outcome of every situation rests completely in God's hands.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "This truth takes the heavy burden off our shoulders. We do not have to secure everything through our own cleverness or strength. Instead, we can rejoice with confident hope, knowing that this unconquerable God is on our side.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where you are relying on your own cleverness rather than God?",
+    "How does knowing that true victory belongs to the Lord give you comfort today?"
+   ],
+   "prayer": "Heavenly Father, forgive me when I trust my own wisdom instead of Yours. Thank You that no human plan can stand against You and that You care for me. Teach me to plan faithfully while trusting You for the final outcome. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Our Wisdom and God's",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/our-wisdom-and-gods"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

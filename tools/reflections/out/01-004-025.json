@@ -1,0 +1,73 @@
+{
+ "id": "01-004-025",
+ "title": "Seth and Enosh",
+ "refs": [
+  "Genesis 4:25-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1004025,
+   "end": 1004026,
+   "ref": "Genesis 4:25-26",
+   "ranges": [
+    [
+     1004025,
+     1004026
+    ]
+   ],
+   "title": "Calling on the Name of the Lord",
+   "key_verse": [
+    1004026,
+    1004026
+   ],
+   "reflect": [
+    {
+     "text": "After Cain killed Abel, it might have seemed that God's plans had failed. Yet God gave Eve another son, Seth. Eve named him in faith, trusting God to fulfill His redemptive promise through Seth rather than Cain's unrepentant line. Through Seth's family line, God would one day bring Jesus Christ to decisively defeat Satan and sin.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When Seth had a son named Enosh, people began to call on the name of the Lord together. This marked the beginning of public worship and open testimony about God. It was also the very first recorded prayer after the fall. Civilizations and human achievements remain completely empty without this true devotion to God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God's people cried out because they were waiting for the promised rescuer. At its core, biblical prayer means simply asking God to accomplish what He has already promised to do. When we base our prayers on God's gospel commitments, our confusion and performance-driven guilt fade away, freeing us to pray with kingdom focus until all His promises are fulfilled.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that prayer is asking God to keep His promises change the way you pray?",
+    "In what ways can we make sure our daily lives focus on worshipping God rather than just chasing human achievements?"
+   ],
+   "prayer": "Lord God, thank You for keeping Your promises even when the world seems dark. Help us to turn away from empty achievements and gather to worship You in truth. Give us confidence to pray according to Your Word, trusting fully in the victory of Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Birth of Seth",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/birth-seth"
+    },
+    "D2": {
+     "author": "Gary Millar",
+     "work": "The Very First Prayer: Why Man Began to Call on God",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-very-first-prayer"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

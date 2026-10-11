@@ -1,0 +1,16 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "https://billygraham.org/devotions",
+  "https://utmost.org/",
+  "https://www.biblegateway.com/passage/?search=Isaiah+62%3A1-5&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+62%3A1-5&version=NLT",
+  "https://www.biblegateway.com/passage/?search=Isaiah+62%3A4-12&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+62&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+62&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+62&version=NLT",
+  "https://www.biblegateway.com/passage/?search=Isaiah+62&version=RSVCE"
+ ],
+ "cost": 0.043521875,
+ "model": "google/gemini-3.8-flash"
+}

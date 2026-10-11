@@ -1,0 +1,73 @@
+{
+ "id": "01-041-046",
+ "title": "The Seven Years of Plenty",
+ "refs": [
+  "Genesis 41:46-52"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1041050,
+   "end": 1041052,
+   "ref": "Genesis 41:50-52",
+   "ranges": [
+    [
+     1041050,
+     1041052
+    ]
+   ],
+   "title": "\"God Has Made Me Fruitful\"",
+   "key_verse": [
+    1041052,
+    1041052
+   ],
+   "reflect": [
+    {
+     "text": "Joseph suffered years of mistreatment and unjust prison time. Yet when his first son was born, he named him Manasseh, showing he chose not to hold onto bitterness toward his brothers. Letting go of anger and forgiving those who hurt us allows God to take away the painful sting of past injuries. We cannot experience the full, fruitful life God wants for us if we cling to resentment.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When his second son was born, Joseph named him Ephraim because God brought good fruit out of his suffering. Offering forgiveness opens the door to God's rich blessing. Surrendering our hurts does not mean God simply erases the hard parts of our story. Instead, He redeems those painful chapters, turning our places of affliction into places where lasting fruitfulness can grow.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jacob later placed Ephraim ahead of Manasseh, reminding us that bearing good fruit matters even more than simply moving past old trauma. As we walk through hardships, God gives our struggles purpose. What we endure softens our hearts, giving us the comfort and empathy we need to support others through their own hard times.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an old hurt or resentment you need to surrender to God so that you can grow in fruitfulness?",
+    "How might God use the painful chapters of your past to bring comfort and empathy to someone else?"
+   ],
+   "prayer": "Lord, thank You for redeeming the painful parts of our lives. Help us release any bitterness we are holding, so that our hearts are open to Your blessing. Make us fruitful even in hard places, and use our stories to comfort others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Sharon Jaynes",
+     "work": "A Good Purpose for That Bad Story",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-may-23-2019.html"
+    },
+    "D2": {
+     "author": "Pastor Jeff Schreve",
+     "work": "The Key to a Fruitful Life",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/the-key-to-a-fruitful-life-from-his-heart-week-of-march-11.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "66-017-014",
+ "title": "The Victory of the Lamb",
+ "refs": [
+  "Revelation 17:14-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66017014,
+   "end": 66017018,
+   "ref": "Revelation 17:14-18",
+   "ranges": [
+    [
+     66017014,
+     66017018
+    ]
+   ],
+   "title": "The Lamb Overcomes Every Ruler",
+   "key_verse": [
+    66017014,
+    66017014
+   ],
+   "reflect": [
+    {
+     "text": "When we look at injustice and troubling events across the world, our hearts ache for a wise, protective ruler. Scripture reveals that corrupt earthly systems and false religions often join together to oppose God's truth. Even when worldly powers unite in rebellion against Jesus Christ, we can take heart knowing that our current struggles and defeats are only temporary.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus is the Lamb who decisively overcomes all opposition. He holds supreme authority over every human government and ruler because He is Lord of lords and King of kings. Every ruler must answer to Him, and one day every person will bow before Him, either in joyful submission or under His final judgment.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "As believers, we share in this victory because we are His called, chosen, and faithful followers. Our role right now is to serve as His ambassadors, representatives sent to share His message. We can live with quiet confidence and invite others to surrender their lives to King Jesus before the day He returns.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus holds supreme authority give you peace during troubling world events?",
+    "How can you serve as a faithful ambassador for Christ among people who do not yet know Him?"
+   ],
+   "prayer": "Lord Jesus, thank You that You are the King of kings and that Your victory over all evil is secure. Give us courage to stand firm as Your faithful people when the world feels broken and confused. Please use our lives to point others toward Your loving reign. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Christ Our King",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/christ-king"
+    },
+    "D2": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - Dec. 29, 2007",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-dec-29-2007-11562731.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

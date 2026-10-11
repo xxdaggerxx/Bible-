@@ -1,0 +1,75 @@
+{
+ "id": "66-020-011",
+ "title": "Judgment before the Great White Throne",
+ "refs": [
+  "Revelation 20:11-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66020011,
+   "end": 66020015,
+   "ref": "Revelation 20:11-15",
+   "ranges": [
+    [
+     66020011,
+     66020015
+    ]
+   ],
+   "title": "Standing Before the Great White Throne",
+   "key_verse": [
+    66020012,
+    66020012
+   ],
+   "reflect": [
+    {
+     "text": "The great white throne shows the absolute purity, righteousness, and wisdom of God's final judgment. Every person who has ever lived will be raised from the dead to stand before Him. God keeps a complete record of everything we have ever done, said, or thought.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "For those who trust in Jesus, our salvation does not come from our own good deeds. Eternal life is a free gift of grace, which means God's kindness that we could never earn. Our names are written in the Book of Life. Because Jesus died for us, our sins are covered by His blood. Our failures are forgiven and taken away from judgment rather than condemning us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "At the same time, the good works produced in us by God's Spirit truly matter. They bear witness to our faith, and God uses them to give out rewards in glory. But anyone whose name is not in the Book of Life faces the lake of fire, which means permanent separation from God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that your sins are forgiven through Jesus bring you peace when you think about God's final judgment?",
+    "How does the promise of God's grace motivate you to do good works today?"
+   ],
+   "prayer": "Lord God, thank You for the gift of eternal life through faith in Jesus Christ. We praise You that our sins are wiped clean by His blood and our names are written in Your Book of Life. Help us by Your Spirit to live lives full of good works that honor You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "John Piper",
+     "work": "How Believers Will Be Judged",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/how-believers-will-be-judged"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Great White Throne Judgment",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-great-white-throne-judgment"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

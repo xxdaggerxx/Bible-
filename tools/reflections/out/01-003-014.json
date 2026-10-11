@@ -1,0 +1,77 @@
+{
+ "id": "01-003-014",
+ "title": "The Fate of the Serpent",
+ "refs": [
+  "Genesis 3:14-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1003014,
+   "end": 1003015,
+   "ref": "Genesis 3:14-15",
+   "ranges": [
+    [
+     1003014,
+     1003015
+    ]
+   ],
+   "title": "The First Promise of Victory",
+   "key_verse": [
+    1003015,
+    1003015
+   ],
+   "reflect": [
+    {
+     "text": "Right after humanity falls into sin, God speaks judgment over the serpent. This moment begins an ongoing spiritual war against evil, but God does not leave us without hope. In these verses, God gives what Charles Spurgeon calls \"the Bible's first promise.\" Even in the garden, God guarantees that His kingdom will triumph over the darkness behind our rebellion.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God announces that a rescuer descended from Eve will come. Winning this rescue would require costly suffering. Jesus Christ came as this promised Savior. When Jesus gave His life on the cross, the enemy struck His heel. Yet through His suffering, Jesus took away sin, defeated death, and crushed the power of the devil.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face trials or temptations, how does knowing Jesus broke evil's power give you comfort?",
+    "How can the promise of Christ's final victory keep you from losing heart when life hurts?"
+   ],
+   "prayer": "Lord God, thank You for promising a Savior right after humanity turned away from You. Thank You that Jesus took on suffering to break the power of evil and win our rescue. Please help us stand firm through our daily struggles, knowing that we share in His victory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 1",
+     "on": "Genesis 3:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Derek Thomas",
+     "work": "The Significance of Genesis 3:15",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/significance-genesis-315"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Proto-Evangelium",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/proto-evangelium"
+    }
+   },
+   "dropped": 1,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -138,7 +138,7 @@ fun PassagePopupHost(vm: StudyViewModel, passage: Passage?, version: String, onD
 @Composable
 fun StudyableVerse(vm: StudyViewModel, verseId: Int, version: String, text: String) {
     val strongs by produceState(emptyList<String?>(), verseId, version) {
-        value = withContext(Dispatchers.IO) { vm.study.strongs(version, verseId) }
+        value = background { vm.study.strongs(version, verseId) }
     }
     val ranges = remember(text) { StudyRepository.words(text) }
     val annotated = remember(text, strongs) {
@@ -215,20 +215,20 @@ private fun androidx.compose.foundation.layout.ColumnScope.WordStudyBody(
     val trail = remember(start) { mutableStateListOf(start.strong) }
     val strong = trail.last()
     val version = start.version
-    val entry by produceState<LexEntry?>(null, strong) { value = withContext(Dispatchers.IO) { vm.study.lexicon(strong) } }
+    val entry by produceState<LexEntry?>(null, strong) { value = background { vm.study.lexicon(strong) } }
     val uses by produceState<List<Occurrence>?>(null, strong, version) {
         value = null
-        value = withContext(Dispatchers.IO) { vm.study.occurrences(version, strong, { vm.text(version).verseText(it) }) }
+        value = background { vm.study.occurrences(version, strong, { vm.text(version).verseText(it) }) }
     }
     var onlyBook by remember(strong) { mutableStateOf<Int?>(null) }
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
     // A dictionary article for the English word, if Easton's has one.
     val article by produceState<StudyEntry?>(null, start.word) {
-        value = start.word?.let { w -> withContext(Dispatchers.IO) { vm.study.dictionaryEntry(w) ?: vm.study.dictionaryEntry(w.trimEnd('s')) } }
+        value = start.word?.let { w -> background { vm.study.dictionaryEntry(w) ?: vm.study.dictionaryEntry(w.trimEnd('s')) } }
     }
 
     val person by produceState<com.biblestudy.app.data.NameEntry?>(null, strong, start.verseId) {
-        value = withContext(Dispatchers.IO) { vm.study.nameForStrong(strong, start.verseId) }
+        value = background { vm.study.nameForStrong(strong, start.verseId) }
     }
     run {
         run {
@@ -360,7 +360,7 @@ private fun LookupPane(
     val version = vm.studyPanel().version
     PassagePopupHost(vm, shown, version, onDismiss = { shown = null })
     Column(modifier) {
-        val entry by produceState<StudyEntry?>(null, open) { value = open?.let { withContext(Dispatchers.IO) { load(it) } } }
+        val entry by produceState<StudyEntry?>(null, open) { value = open?.let { background { load(it) } } }
         val e = entry
         if (open != null && e != null) {
             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -382,7 +382,7 @@ private fun LookupPane(
             modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
         )
         val results by produceState(emptyList<StudyEntry>(), query) {
-            value = if (query.isBlank()) emptyList() else withContext(Dispatchers.IO) { search(query) }
+            value = if (query.isBlank()) emptyList() else background { search(query) }
         }
         val list = if (query.isBlank()) suggestions else results
         if (query.isBlank() && suggestionsLabel != null && suggestions.isNotEmpty()) {
@@ -407,7 +407,7 @@ private fun LookupPane(
 fun DictionaryPane(vm: StudyViewModel, modifier: Modifier) {
     val panel = vm.studyPanel()
     val suggestions by produceState(emptyList<StudyEntry>(), panel.book, panel.chapter, panel.version) {
-        value = withContext(Dispatchers.IO) { vm.chapterArticles(panel.version, panel.book, panel.chapter) }
+        value = background { vm.chapterArticles(panel.version, panel.book, panel.chapter) }
     }
     LookupPane(
         vm, modifier,
@@ -422,15 +422,52 @@ fun DictionaryPane(vm: StudyViewModel, modifier: Modifier) {
     )
 }
 
+/**
+ * Customs & feasts, or Symbols & numbers (AID-11): those in the chapter being read first, then all
+ * of them A to Z; each opens as an article with its key verses as links.
+ */
+@Composable
+fun AidsPane(vm: StudyViewModel, symbols: Boolean, modifier: Modifier) {
+    val panel = vm.studyPanel()
+    val context = vm.getApplication<android.app.Application>()
+    fun mine(e: com.biblestudy.app.data.AidEntry) = (e.kind == com.biblestudy.app.data.AidKind.CUSTOM) != symbols
+    fun entry(e: com.biblestudy.app.data.AidEntry) = StudyEntry(e.key, e.title, e.article)
+    val suggestions by produceState(emptyList<StudyEntry>(), panel.book, panel.chapter, panel.version, symbols) {
+        value = background {
+            val all = com.biblestudy.app.data.Aids.all(context).filter(::mine)
+            val verses = vm.text(panel.version).chapter(panel.book, panel.chapter).map { it.verse to it.text }
+            val on = com.biblestudy.app.data.AidSwitches(hard = false, names = false, customs = !symbols, symbols = symbols)
+            // In the order they come in the chapter, then the rest A to Z.
+            val here = com.biblestudy.app.data.Aids.marks(context, vm.study, panel.version, panel.book, panel.chapter, verses, on)
+                .toSortedMap().values.flatten().map { it.key }.distinct()
+            val byId = all.associateBy { it.id }
+            (here.mapNotNull { byId[it] } + all.filter { it.id !in here }.sortedBy { it.title.removePrefix("The ") }).map(::entry)
+        }
+    }
+    // A new chapter starts the list from the top.
+    androidx.compose.runtime.key(panel.book, panel.chapter) { LookupPane(
+        vm, modifier,
+        hint = if (symbols) "Find a symbol or number, e.g. Lamb or Seven" else "Find a custom or feast, e.g. Passover",
+        open = vm.aidOpen?.takeIf { k -> com.biblestudy.app.data.Aids.byKey(context, k)?.let(::mine) == true },
+        onOpen = { vm.aidOpen = it },
+        load = { k -> com.biblestudy.app.data.Aids.byKey(context, k)?.let(::entry) },
+        search = { q -> com.biblestudy.app.data.Aids.all(context).filter { mine(it) && (it.title.contains(q, true) || it.text.contains(q, true)) }.map(::entry) },
+        suggestions = suggestions,
+        suggestionsLabel = "In ${vm.bible.book(panel.book).name} ${panel.chapter} first, then A to Z",
+        inkBook = if (symbols) StudyInk.SYMBOL else StudyInk.CUSTOM,
+    ) }
+}
+
 /** Nave's Topical Bible (STD-6), suggesting the topics that list the verse being read. */
 @Composable
 fun TopicsPane(vm: StudyViewModel, modifier: Modifier) {
     val panel = vm.studyPanel()
     val t = vm.paneVerse?.takeIf { it.book == panel.book && it.chapter == panel.chapter }
+    // A tapped verse leads only until the Bible is scrolled; then the page leads again (STD-18).
     val verse = t?.verse ?: panel.topVerse
     val id = VerseId.of(panel.book, panel.chapter, verse)
     val suggestions by produceState(emptyList<StudyEntry>(), id) {
-        value = withContext(Dispatchers.IO) { vm.study.topicsFor(id) }
+        value = background { vm.study.topicsFor(id) }
     }
     LookupPane(
         vm, modifier,
@@ -451,11 +488,12 @@ private data class CommentaryLine(val section: Int, val para: Int, val text: Str
 /**
  * A commentary on the chapter being read (STD-7, STD-17): the one chosen for this panel, with its
  * introduction (STD-19) and, when linked, scrolling together with the Bible panel both ways (STD-18).
+ * With [fixed], one set of notes without the commentary menu: Reflections (REF-1).
  */
 @Composable
-fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
+fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier, fixed: String? = null) {
     val panel = vm.studyPanel()
-    val id = vm.commentaryAt(pos)
+    val id = fixed ?: vm.commentaryAt(pos)
     val info = com.biblestudy.app.data.Commentaries.info(id)
     val canLink = vm.tab.pinned == null && !vm.tab.bibleHidden
     val linked = vm.commentaryLinked(pos) && canLink
@@ -476,7 +514,8 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
     }
     val firstLine = remember(lines) { lines.withIndex().filter { it.value.para == -1 }.associate { it.value.section to it.index } }
     val t = vm.paneVerse?.takeIf { it.book == panel.book && it.chapter == panel.chapter }
-    val verse = t?.verse ?: panel.topVerse
+    // A tapped verse leads only until the Bible is scrolled; then the page leads again (STD-18).
+    val verse = if (t != null && panel.topVerse == vm.paneVerseTop) t.verse else panel.topVerse
     // The section about a verse: the last one starting at or before it in this chapter.
     fun sectionFor(v: Int): Int = list?.indexOfLast { s ->
         VerseId.chapter(s.start) < panel.chapter || (VerseId.chapter(s.start) == panel.chapter && VerseId.verse(s.start) <= v)
@@ -513,7 +552,8 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
     Column(modifier) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             var menu by remember { mutableStateOf(false) }
-            androidx.compose.foundation.layout.Box(Modifier.weight(1f)) {
+            if (fixed != null) androidx.compose.foundation.layout.Spacer(Modifier.weight(1f)) // the panel menu names it
+            else androidx.compose.foundation.layout.Box(Modifier.weight(1f)) {
                 androidx.compose.material3.TextButton(
                     onClick = { menu = true },
                     modifier = Modifier.semantics { contentDescription = "Choose a commentary" },
@@ -522,7 +562,7 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
                     Icon(Icons.Filled.ArrowDropDown, contentDescription = null)
                 }
                 androidx.compose.material3.DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-                    for (c in com.biblestudy.app.data.Commentaries.all) {
+                    for (c in com.biblestudy.app.data.Commentaries.menu) {
                         androidx.compose.material3.DropdownMenuItem(
                             text = {
                                 Column {
@@ -537,7 +577,7 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
                 }
             }
             IconButton(onClick = { about = true }) {
-                Icon(Icons.Outlined.Info, contentDescription = "About this commentary")
+                Icon(Icons.Outlined.Info, contentDescription = if (fixed != null) "About ${info.short}" else "About this commentary")
             }
             if (canLink) {
                 IconButton(onClick = { vm.toggleCommentaryLink(pos) }) {
@@ -561,6 +601,7 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
                 else "Getting ${info.short} ready (the first time only)…",
             )
             !info.covers(panel.book) -> Text("${info.short} covers the ${info.covers}. Choose another commentary for ${vm.bible.book(panel.book).name}.")
+            list.isEmpty() && fixed != null -> NearestEntries(vm, id, panel.book, panel.chapter) { shown = it }
             list.isEmpty() -> Text("${info.short} has no notes on this chapter.")
         }
         val inkBook = vm.commentaryInkBook(id)
@@ -579,6 +620,7 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
                 } else {
                     // Writing stays with its note and paragraph (INK-16); the Concise keeps its 1.2 key.
                     val doc = if (id == com.biblestudy.app.data.Commentaries.CONCISE) InkDoc(StudyInk.COMMENTARY, s.start, s.end)
+                    else if (fixed != null) InkDoc(inkBook, s.start, s.end % 1_000_000 * 100 + line.para)
                     else InkDoc(inkBook, s.start, line.para)
                     StudyText(line.text, onPassage = { shown = it }, modifier = Modifier.padding(vertical = 4.dp), vm = vm, doc = doc)
                 }
@@ -596,7 +638,11 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
                         Text(k, style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 10.dp))
                         Text(v, style = MaterialTheme.typography.bodyMedium)
                     }
-                    Text("Public domain.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(top = 10.dp))
+                    Text(when (info.id) {
+                        com.biblestudy.app.data.Commentaries.AI -> "Written for this app. Each note names its sources."
+                        com.biblestudy.app.data.Commentaries.REFLECTIONS -> "Written for this app. Each reflection names the devotionals it is drawn from."
+                        else -> "Public domain."
+                    }, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(top = 10.dp))
                 }
             },
             confirmButton = { androidx.compose.material3.TextButton(onClick = { about = false }) { Text("Close") } },
@@ -605,7 +651,24 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
 }
 
 /** "Verses 14–16", "Introduction to Romans" or "Introduction to chapter 3". */
-private fun commentaryHeading(vm: StudyViewModel, s: CommentarySection, chapter: Int): String = when {
+/** Nothing on this chapter (REF-8): says so, and links the nearest entries before and after it. */
+@Composable
+private fun NearestEntries(vm: StudyViewModel, id: String, book: Int, chapter: Int, onPassage: (Passage) -> Unit) {
+    val near by produceState<Pair<CommentarySection?, CommentarySection?>?>(null, id, book, chapter) {
+        value = background {
+            runCatching { com.biblestudy.app.data.Commentaries.nearest(vm.getApplication(), id, VerseId.of(book, chapter, 0), VerseId.of(book, chapter, 999)) }
+                .getOrDefault(null to null)
+        }
+    }
+    val (before, after) = near ?: return
+    fun item(label: String, s: CommentarySection) =
+        "$label: [[${s.start}-${s.end}|${s.body.substringBefore('\n')} · ${vm.refLabel(s.start, s.end)}]]"
+    val body = listOfNotNull("No reflection on this chapter yet.", before?.let { item("Before", it) }, after?.let { item("After", it) })
+        .joinToString("\n\n")
+    StudyText(body, onPassage = onPassage)
+}
+
+internal fun commentaryHeading(vm: StudyViewModel, s: CommentarySection, chapter: Int): String = when {
     VerseId.chapter(s.start) == 0 -> "Introduction to ${vm.bible.book(VerseId.book(s.start)).name}"
     VerseId.verse(s.start) == 0 -> "Introduction to chapter ${VerseId.chapter(s.start)}"
     VerseId.chapter(s.start) != VerseId.chapter(s.end) || VerseId.chapter(s.start) != chapter -> vm.refLabel(s.start, s.end)
@@ -620,9 +683,9 @@ private fun commentaryHeading(vm: StudyViewModel, s: CommentarySection, chapter:
 @Composable
 fun RelatedPassages(vm: StudyViewModel, verseId: Int, version: String, onShow: (Passage) -> Unit) {
     val related by produceState<Pair<List<Passage>, List<Triple<Int, Int, Int>>>?>(null, verseId) {
-        value = withContext(Dispatchers.IO) { vm.parallelAccounts(verseId) to vm.study.relatedByTopics(verseId) }
+        value = background { vm.parallelAccounts(verseId) to vm.study.relatedByTopics(verseId) }
     }
-    val topics by produceState(emptyList<StudyEntry>(), verseId) { value = withContext(Dispatchers.IO) { vm.study.topicsFor(verseId, 8) } }
+    val topics by produceState(emptyList<StudyEntry>(), verseId) { value = background { vm.study.topicsFor(verseId, 8) } }
     Column(Modifier.padding(top = 12.dp)) {
         if (topics.isNotEmpty()) {
             Text("Topics", style = MaterialTheme.typography.titleSmall)
@@ -660,7 +723,7 @@ fun RelatedPassages(vm: StudyViewModel, verseId: Int, version: String, onShow: (
 /** A Strong's search result header (SRCH-7): the word searched for, with a way into its word study. */
 @Composable
 fun StrongsHeader(vm: StudyViewModel, strong: String, version: String) {
-    val e by produceState<LexEntry?>(null, strong) { value = withContext(Dispatchers.IO) { vm.study.lexicon(strong) } }
+    val e by produceState<LexEntry?>(null, strong) { value = background { vm.study.lexicon(strong) } }
     val entry = e ?: return
     Row(
         Modifier.fillMaxWidth().padding(top = 8.dp).background(MaterialTheme.colorScheme.surfaceContainerHigh).padding(8.dp),

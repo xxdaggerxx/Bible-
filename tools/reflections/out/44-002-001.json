@@ -1,0 +1,126 @@
+{
+ "id": "44-002-001",
+ "title": "The Holy Spirit at Pentecost",
+ "refs": [
+  "Acts 2:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44002002,
+   "end": 44002004,
+   "ref": "Acts 2:2-4",
+   "ranges": [
+    [
+     44002002,
+     44002004
+    ]
+   ],
+   "title": "\"Filled with the Holy Spirit\"",
+   "key_verse": [
+    44002004,
+    44002004
+   ],
+   "reflect": [
+    {
+     "text": "The sound of wind and the sight of fire marked the sudden birth of the church. Before this day, the disciples were familiar with human weakness, uncertainty, and fear. Yet God did not wait for them to achieve perfection before filling them with His presence and power.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "When the Spirit entered their lives, He brought deep comfort, light, and peace. As Charles Spurgeon wrote, \"He reveals the Lord Jesus to us and in us.\" Like fresh dew and purifying water, the Spirit softens our hearts, turns us from sin, and takes away the doubts that steal our peace. He breathes spiritual life into us and assures us that we truly belong to God as His children.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our own walk with God can sometimes feel dry or weak. When that happens, we can look back on times when our faith was bright and ask God to rekindle that inner fire within us.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you feel weak or uncertain right now?",
+    "How can you ask the Holy Spirit to renew your peace and love for Jesus today?"
+   ],
+   "prayer": "Lord God, thank you for giving your Holy Spirit to ordinary and imperfect people like us. Cleanse our hearts, take away our doubts, and renew the warmth of our faith. Help us walk closely with Jesus every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 19",
+     "on": "Acts 2:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Sarah Jennings",
+     "work": "Fiery Faith",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-june-1-2009-11604170.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 44002001,
+   "end": 44002013,
+   "ref": "Acts 2:1-13",
+   "ranges": [
+    [
+     44002001,
+     44002013
+    ]
+   ],
+   "title": "God's Presence Drawn Near",
+   "key_verse": [
+    44002003,
+    44002003
+   ],
+   "reflect": [
+    {
+     "text": "The wind and fire of Pentecost remind us of Mount Sinai in the Old Testament. There, God also revealed His presence with fire and sound when He gave His holy law. At that time, however, the people had to stay at a careful distance so they would not be destroyed.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "At Pentecost, God showed His presence in a brand-new way. Instead of keeping believers far off, the Holy Spirit rested directly upon each disciple without consuming them. Rather than leaving the law on tablets of stone, God gave His Spirit to work inside them, changing their desires so they could truly obey His words.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Having God this close transformed the disciples. The manifest presence of the Lord broke through their fear and made them bold. They were able to step into the open and tell people from every land about the wondrous deeds of God.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that the Holy Spirit lives within you change how you see your daily obedience?",
+    "Where is God asking you to overcome fear and speak openly about what He has done?"
+   ],
+   "prayer": "Heavenly Father, thank you for bringing us near to yourself through your Spirit instead of keeping us at a distance. Change our hearts from the inside so that we desire to follow your commands. Give us courage to share the good news of Christ with those around us. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Greater Pentecost",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-greater-pentecost"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

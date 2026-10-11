@@ -1,0 +1,75 @@
+{
+ "id": "16-013-010",
+ "title": "Tithes Restored",
+ "refs": [
+  "Nehemiah 13:10-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 16013010,
+   "end": 16013014,
+   "ref": "Nehemiah 13:10-14",
+   "ranges": [
+    [
+     16013010,
+     16013014
+    ]
+   ],
+   "title": "Remembered for Faithful Service",
+   "key_verse": [
+    16013014,
+    16013014
+   ],
+   "reflect": [
+    {
+     "text": "When Nehemiah returned to Jerusalem, he found that the people had stopped bringing their tithes to support the Levites. Without food or care, the temple singers and workers had abandoned their duties and gone back to farm their fields. Nehemiah acted firmly to fix this neglect. He brought the ministers back to their posts, restored the gifts of grain, wine, and oil, and placed trustworthy leaders in charge of handing out the supplies fairly.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "After setting things right, Nehemiah asked God to remember what he had done for the temple. As F. B. Meyer notes, Nehemiah did not pray this to \"purchase God's favor,\" because he was already assured of God's love. Instead, as a redeemed servant, he asked God to look kindly on his honest efforts. Believers today can also humbly ask God to remember their sincere obedience, knowing that He graciously rewards those who serve Him faithfully.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Nehemiah was a simple-hearted man, yet God used him as a helpful instrument to restore proper worship. God can work through us in the same way. When we offer our own hearts fully to the Lord and care for the needs of His people, we can trust that our quiet deeds of devotion are never lost or forgotten by Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways can we make sure our local church and its workers are well supported?",
+    "How does knowing that God notices your faithful work encourage you when you serve quietly?"
+   ],
+   "prayer": "Lord God, thank You that You see every act of service done for Your kingdom. Help us to care for Your church and support those who minister Your word. Guard our hearts from growing neglectful, and keep us faithful in serving You day by day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Nehemiah 13:14",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Nehemiah’s Pleas to God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/nehemiahs-pleas-to-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

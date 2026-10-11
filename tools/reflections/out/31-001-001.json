@@ -1,0 +1,67 @@
+{
+ "id": "31-001-001",
+ "title": "The Destruction of Edom",
+ "refs": [
+  "Obadiah 1:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 31001001,
+   "end": 31001014,
+   "ref": "Obadiah 1:1-14",
+   "ranges": [
+    [
+     31001001,
+     31001014
+    ]
+   ],
+   "title": "Just Like One of Them",
+   "key_verse": [
+    31001011,
+    31001011
+   ],
+   "reflect": [
+    {
+     "text": "Edom was related to Israel like a brother, so Israel should have received kindness and support in their time of trouble. Instead, the people of Edom stood by and acted just like Israel's enemies. God pointed out their guilt directly. When those who have received God's special kindness and teaching join in with evil, their wrongdoing is especially serious.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This warning speaks to us today. God has shown us great mercy, forgiven our sins, and given us many blessings. Because of this, we need to examine our own lives honestly. We can easily blend in with the world around us. We might quietly put up with crude talk, remain silent when people speak against God, or chase wealth just as greedily as everyone else.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "If people watching our lives cannot see any difference between us and those who ignore God, we must take care. Charles Spurgeon reminds us to live carefully so that no one can say, \"Even thou wast as one of them.\" Since we do not want to share in the world's ruin, we should not copy its ways. Instead, we should stand faithfully with God's people.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what situations are you tempted to stay quiet or blend in with people who do not follow God?",
+    "How can your everyday actions show that you belong to God rather than the world?"
+   ],
+   "prayer": "Lord God, thank You for forgiving our sins and giving us Your truth. Help us to examine our hearts and turn away from worldly habits, silence, and greed. Give us courage to stand faithfully with Your people and honor You in all we do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 23",
+     "on": "Obadiah 1:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

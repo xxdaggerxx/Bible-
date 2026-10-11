@@ -1,0 +1,151 @@
+{
+ "id": "40-024-036",
+ "title": "Readiness at Any Hour",
+ "refs": [
+  "Matthew 24:36-51",
+  "Mark 13:32-37",
+  "Luke 12:35-48"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 42012035,
+   "end": 42012036,
+   "ref": "Luke 12:35-36",
+   "ranges": [
+    [
+     42012035,
+     42012036
+    ]
+   ],
+   "title": "\"Be Dressed for Service\"",
+   "key_verse": [
+    42012035,
+    42012035
+   ],
+   "reflect": [
+    {
+     "text": "Jesus tells us to be dressed for service and keep our lamps burning. Trying to calculate exact dates for His return is completely useless, because He will arrive at a time we do not expect. Instead, Jesus asks us to stay alert and do the work He gave us. Keeping our lamps burning is like leaving a porch light on while lovingly waiting up for someone you care about. We do not need to wait in cold fear or dread. We can wait with glad, affectionate expectation, walking closely with Jesus today so we are ready to meet Him without shame.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "We serve most faithfully when our hearts are full of love for the Master. True servants do not neglect their duties just because their Lord is away from sight. Part of our faithful stewardship, our God-given responsibility, is showing real love and care for the souls of others. The practical choices we make with our time and resources reveal whether we are genuinely watchful. When we love Christ, watching for Him shapes the way we live and treat others every single day.",
+     "sources": [
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "How does loving Jesus change the way you wait for His return?",
+    "How can the way you use your time and resources today show care for others?"
+   ],
+   "prayer": "Lord Jesus, fill our hearts with love for You as we wait for Your return. Help us to stay faithful in our daily duties and to care tenderly for the people around us. Keep our lamps burning so that we may welcome You with joy. Amen.",
+   "sources": {
+    "D5": {
+     "author": "Beth Moore",
+     "work": "Day 169: Luke 12:35–40",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-169-luke-12-3540.html"
+    },
+    "D6": {
+     "author": "Ambassadors for Christ International",
+     "work": "Time with God - February 19",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/timewithgod/time-with-god-february-19-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40024036,
+   "end": 40024051,
+   "ref": "Matthew 24:36-51; Mark 13:32-37; Luke 12:35-48",
+   "ranges": [
+    [
+     40024036,
+     40024051
+    ],
+    [
+     41013032,
+     41013037
+    ],
+    [
+     42012035,
+     42012048
+    ]
+   ],
+   "title": "Readiness at Any Hour",
+   "key_verse": [
+    40024044,
+    40024044
+   ],
+   "reflect": [
+    {
+     "text": "Jesus reminds us that judgment will arrive suddenly, just as it did in Noah's day. People went on eating, drinking, and marrying, completely blind to the coming flood until it swept them all away. As Charles Spurgeon wrote, \"universal was the doom,\" and no earthly status could save anyone outside the ark. Yet all who entered were entirely safe. In the exact same way, only Jesus shields us from final ruin. Because only the Father knows that unexpected hour, we cannot afford to live in spiritual carelessness.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Being ready for Christ's sudden arrival means active service rather than sitting with folded hands. If a homeowner knew when a thief was coming, he would stay awake. Jesus calls us to a ready heart that is mentally, spiritually, and practically prepared each day. We can easily become weighed down and distracted by worldly wealth and anxious worries, forgetting our Lord. Instead, true readiness means pursuing holiness and shining as faithful witnesses in a dark world, eagerly looking for the eternal joy our Master will bring.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "While we watch for Christ's final return, He also draws near to us right now in our daily lives. Jesus meets us in the twilight when our strength fades, in the dark nights of sadness and grief, and in the fresh hope of every new morning. As we listen for His quiet voice, we rest in knowing we belong to His household, where He is our Lord.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus is our only safe refuge change the way you live today?",
+    "What worldly worries or distractions might be keeping you from staying spiritually alert?"
+   ],
+   "prayer": "Lord Jesus, thank You for being the safe refuge for our souls. Guard us from getting distracted by the worries of this world, and teach us to serve You with faithful hearts. Meet us in every season of our lives, and keep us watchful until You return. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 1",
+     "on": "Matthew 24:39",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Mark 13:35",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "A Faithful and Wise Servant",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/faithful-and-wise-servant"
+    },
+    "D4": {
+     "author": "Michael A. Youssef",
+     "work": "Be Prepared for Jesus’ Return",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-september-25-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

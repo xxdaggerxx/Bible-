@@ -1,0 +1,67 @@
+{
+ "id": "24-034-008",
+ "title": "Freedom for Hebrew Slaves",
+ "refs": [
+  "Jeremiah 34:8-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24034008,
+   "end": 24034022,
+   "ref": "Jeremiah 34:8-22",
+   "ranges": [
+    [
+     24034008,
+     24034022
+    ]
+   ],
+   "title": "Keeping Our Covenant with the Lord",
+   "key_verse": [
+    24034018,
+    24034018
+   ],
+   "reflect": [
+    {
+     "text": "In Jeremiah's day, the leaders and people made a solemn covenant before God to set their fellow Hebrews free. They even cut a calf in two and walked between the pieces to seal their sacred promise. Sadly, they soon changed their minds, broke their word, and forced their brothers and sisters back into slavery. God took this broken covenant very seriously.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Reflecting on this failed promise, F. B. Meyer points us to a lasting surrender to Christ. Because Jesus bought us with His own precious blood, we belong completely to Him. A true covenant means giving our whole life over to our Savior: our thoughts, our choices, our friendships, and our gifts. Meyer describes yielding ourselves up \"without reserve\" so that Christ can rule our hearts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we give ourselves to God, we cannot take back what we have promised. We need the Holy Spirit to be our keeper every day so that we remain faithful. Instead of turning back to selfish ways, we can hold all our possessions and talents at His disposal, living only to please Him until we meet Him in joy.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What parts of your life or daily choices are hardest to surrender completely to the Lord?",
+    "How can remembering the price Jesus paid for you help you stay faithful to your commitments to Him?"
+   ],
+   "prayer": "Lord Jesus, thank You for purchasing us with Your precious blood and making us Your own. Help us by Your Holy Spirit to yield our hearts, our gifts, and our choices completely to You. Keep us faithful to our walk with You each day.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 34:18",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

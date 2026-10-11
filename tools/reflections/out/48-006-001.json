@@ -1,0 +1,79 @@
+{
+ "id": "48-006-001",
+ "title": "Carry One Another’s Burdens",
+ "refs": [
+  "Galatians 6:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 48006001,
+   "end": 48006010,
+   "ref": "Galatians 6:1-10",
+   "ranges": [
+    [
+     48006001,
+     48006010
+    ]
+   ],
+   "title": "Doing Good Together in the Spirit",
+   "key_verse": [
+    48006009,
+    48006009
+   ],
+   "reflect": [
+    {
+     "text": "Following Jesus is not something we do alone. Walking in the Spirit means living in close community with other believers. We are called to step in when someone is weighed down by illness, loneliness, or personal failure. When we carry each other's heavy loads, we reflect Jesus, who bore our own griefs and weaknesses on the cross.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Living this way can sometimes feel like a losing effort. Giving our time and energy to please God's Spirit often looks like burying good seed that we will never see again. Yet God promises that this spiritual sowing is never wasted. As we seek to honor and obey Him, He gives us eternal life, which begins now as we know and enjoy Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even so, doing good brings resistance, and we can easily become tired and impatient. When weariness sets in, we must check our motives and make sure we are serving others rather than ourselves. Instead of focusing on hard circumstances, we look to Christ, who never grows faint, and trust God's promise that a harvest will come at His right time.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Whose heavy load can you help carry this week through a simple act of care?",
+    "When you feel tired of doing good, how can looking to Christ help you keep going?"
+   ],
+   "prayer": "Lord Jesus, thank You for carrying our burdens on the cross. Help us to share each other's loads in humble love rather than living for ourselves. When we grow tired, fix our eyes on You and help us trust Your promise of a coming harvest. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 2",
+     "on": "Galatians 6:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Law of Christ",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/law-christ"
+    },
+    "D3": {
+     "author": "David Mathis",
+     "work": "Don’t Grow Weary Doing Good",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/dont-grow-weary-doing-good"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

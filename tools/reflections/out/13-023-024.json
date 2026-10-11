@@ -1,0 +1,68 @@
+{
+ "id": "13-023-024",
+ "title": "Levite Duties Revised",
+ "refs": [
+  "1 Chronicles 23:24-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13023024,
+   "end": 13023032,
+   "ref": "1 Chronicles 23:24-32",
+   "ranges": [
+    [
+     13023024,
+     13023032
+    ]
+   ],
+   "title": "Serving God in a Settled Place",
+   "key_verse": [
+    13023025,
+    13023025
+   ],
+   "reflect": [
+    {
+     "text": "For many years, God's people wandered in the wilderness. During that time, the Levites carried the heavy pieces of the tabernacle, God's portable tent. But King David explained that the Lord had given His people rest and chosen Jerusalem to be His home. Moving from the wilderness into a settled land meant the old work of packing and carrying was over. As D. A. Carson notes, this change required practical reorganization of worship. David assigned the Levites fresh tasks, including caring for the temple courts and leading daily songs of thanks and praise.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This change shows how we can remain faithful to God's word while adapting wisely when life changes. The shift from a moving tent to a solid temple also carried a deeper promise. It pointed forward to Jesus Christ, who came as the true dwelling place of God among us. Through Jesus, our great High Priest, every believer now enjoys direct access to God. We do not need special human priests to reach the Lord, because Christ brings us straight into His holy presence.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus is God's true dwelling place change how you come to Him each day?",
+    "In what ways can you serve God faithfully when your circumstances or routines change?"
+   ],
+   "prayer": "Lord God, thank You for giving us rest and for making a way to dwell with Your people. Thank You for Jesus Christ, our great High Priest, who brings us straight into Your presence. Help us to adapt our service faithfully as our seasons of life change, and fill our hearts with daily praise. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Numbering the Levites",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/numbering-the-levites"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Devotional: 1 Chronicles 23",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/1-chronicles-23-1-peter-4-micah-2-luke-11/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

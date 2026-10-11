@@ -1,0 +1,130 @@
+{
+ "id": "01-049-001",
+ "title": "Jacob Blesses His Sons",
+ "refs": [
+  "Genesis 49:1-28"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1049009,
+   "end": 1049010,
+   "ref": "Genesis 49:9-10",
+   "ranges": [
+    [
+     1049009,
+     1049010
+    ]
+   ],
+   "title": "\"Until Shiloh Comes\"",
+   "key_verse": [
+    1049010,
+    1049010
+   ],
+   "reflect": [
+    {
+     "text": "When Jacob gathered his sons to speak his final blessings, he singled out Judah to carry forward the promise of God's covenant, his special pledge of blessing. The ruling staff would remain in Judah's family until Shiloh arrived. As F. B. Meyer writes, Jesus is this Shiloh, the \"Maker, Giver, and Bringer of Peace.\" He came as the righteous King who settles our troubled consciences and restores our relationship with God through his sacrifice.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "When Christ enters our lives to rule, the stormy and divided thoughts inside us settle into a deep calm. Yet his peace and his authority always go together. Jacob foresaw that the nations would gladly obey this coming King. We cannot enjoy his peace while holding back our hearts from him. As we yield our daily choices to his guidance, he replaces our unrest with a peace that flows steadily like a river.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life today do you need Christ to quiet your troubled thoughts with his peace?",
+    "What is one practical step of obedience he is asking you to take as your King?"
+   ],
+   "prayer": "Lord Jesus, thank you for coming as our King and making peace for us through your cross. Calm our restless hearts today and rule over every thought. Help us to follow your gentle guidance so that we may walk in your lasting peace. Amen.",
+   "sources": {
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 49:10",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D4": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - Jan. 17, 2009",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-jan-17-2009-11598243.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1049001,
+   "end": 1049028,
+   "ref": "Genesis 49:1-28",
+   "ranges": [
+    [
+     1049001,
+     1049028
+    ]
+   ],
+   "title": "The Strength to Overcome at Last",
+   "key_verse": [
+    1049024,
+    1049024
+   ],
+   "reflect": [
+    {
+     "text": "Jacob's blessing on Joseph reminds us where all our real endurance comes from. Joseph faced bitter hostility from others, yet his hands remained steady. As Charles Spurgeon notes, God gives \"true--divine strength\" to his people. Like a father who gently places his hands over a child's hands to guide them, God stoops from heaven to hold and strengthen our arms. Because of his covenant, his unbreakable promise, all help and grace flow down to us in our times of testing.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In the same way, the blessing spoken over Gad gives us hope when hardships threaten to overwhelm us. For a season, difficult circumstances may press hard against us and seem to win. We can easily become discouraged when trouble knocks us down. But God promises that his people will overcome in the end. A battle is never decided by early struggles, but by the final outcome that the Lord secures.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When trouble surrounds you, remember that you do not stand in your own power. The God of Jacob holds your arms, and our Lord Jesus teaches us to endure through suffering until the work is finished. We can keep doing good with quiet confidence, trusting that the Lord will give lasting victory to his people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face heavy pressures, do you try to rely on your own power or on God's sustaining hands?",
+    "How can the promise that God will give victory at the last encourage you to keep doing what is right today?"
+   ],
+   "prayer": "Mighty God of Jacob, place your loving hands on ours when we feel weak and weary. Give us patient endurance when difficulties seem to overpower us. Teach us to trust your promise that you will bring victory in the end. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 22",
+     "on": "Genesis 49:24",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 11",
+     "on": "Genesis 49:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

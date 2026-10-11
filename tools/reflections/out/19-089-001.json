@@ -1,0 +1,61 @@
+{
+ "id": "19-089-001",
+ "title": "I Will Sing of His Love Forever",
+ "refs": [
+  "Psalms 89:1-52"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19089001,
+   "end": 19089052,
+   "ref": "Psalms 89:1-52",
+   "ranges": [
+    [
+     19089001,
+     19089052
+    ]
+   ],
+   "title": "A Brother on the Throne",
+   "key_verse": [
+    19089019,
+    19089019
+   ],
+   "reflect": [
+    {
+     "text": "In Psalm 89, God speaks of raising up a chosen servant from among the people. Charles Spurgeon explains that this points directly to Jesus Christ. Because Jesus was chosen from among human beings, He is truly our brother. Even though we may feel poor, weak, or troubled, we have a Brother in heaven who is also a reigning King. We can bring our needs to Him with great confidence, knowing He loves us and will never leave us without help.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus was also chosen from among the people so that He could understand our struggles and feel for us. He knows pain, disappointment, weariness, and temptation because He experienced them Himself. As Spurgeon wrote, \"in all our sorrows we have his sympathy.\" Whatever difficult or dark path we must walk, our Savior has already walked it ahead of us. We do not carry our burdens alone, because our King has carried them first.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus is your heavenly Brother change the way you bring your daily needs to Him in prayer?",
+    "What pain or burden are you carrying today that you can trust Jesus to understand completely?"
+   ],
+   "prayer": "Lord Jesus, thank You for becoming our brother and sharing in our human life. You know our weakness, sorrow, and trials because You walked this road before us. Help us to bring all our petitions to You with confidence and rest in Your royal care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 23",
+     "on": "Psalms 89:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

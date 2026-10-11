@@ -1,0 +1,91 @@
+{
+ "id": "26-016-001",
+ "title": "Jerusalem’s Unfaithfulness",
+ "refs": [
+  "Ezekiel 16:1-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26016001,
+   "end": 26016034,
+   "ref": "Ezekiel 16:1-34",
+   "ranges": [
+    [
+     26016001,
+     26016034
+    ]
+   ],
+   "title": "Rescued by Grace, Clothed in Beauty",
+   "key_verse": [
+    26016006,
+    26016006
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God uses vivid marriage imagery to reveal the heartbreak of turning away from Him. Jerusalem began as an abandoned baby, helpless and left to die in an open field. Yet the eternal Lord passed by and spoke the royal word, \"Live.\" Through this single command of free grace—kindness we did not earn—God gave life and pardon to someone who had nothing good to offer.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "God did not merely save her from death; He raised her up and clothed her in royal splendor. He provided fine linen, silk, and lasting protection with matchless generosity. As F. B. Meyer notes, we are \"perfect only through His comeliness which He has put upon us.\" In Christ, God washes us clean and dresses us in His righteousness, which means being made right in His sight. We have no reason to boast, because all our beauty is a gift from Him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The great tragedy was that Jerusalem became proud of her beauty and forgot her helpless start. Instead of staying loyal to her Lord, she took God's gifts and squandered them on idols, even paying foreign lovers to chase after sin. Whenever we feel tempted to take credit for our goodness or live apart from God, we need to remember where we came from. True faithfulness means remembering God's mercy every day and living earnest, grateful lives for Him.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering that your salvation is entirely a gift of grace protect you from pride?",
+    "Are there gifts God has given you that you are tempted to use for yourself rather than for His honor?"
+   ],
+   "prayer": "Lord God, thank You for speaking life to us when we were lost and helpless in our sin. Forgive us for the times we forget Your mercy and chase after things that cannot satisfy. Help us to stay faithful to You, living grateful lives dressed in the beauty of Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 7",
+     "on": "Ezekiel 16:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 21",
+     "on": "Ezekiel 16:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 16:14",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D4": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Ezekiel 16",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/2-samuel-8-9-2-corinthians-2-ezekiel-16-psalms-58-59/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

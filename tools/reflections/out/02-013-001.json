@@ -1,0 +1,75 @@
+{
+ "id": "02-013-001",
+ "title": "The Dedication of the Firstborn",
+ "refs": [
+  "Exodus 13:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2013001,
+   "end": 2013016,
+   "ref": "Exodus 13:1-16",
+   "ranges": [
+    [
+     2013001,
+     2013016
+    ]
+   ],
+   "title": "Remember the Lord's Strong Hand",
+   "key_verse": [
+    2013003,
+    2013003
+   ],
+   "reflect": [
+    {
+     "text": "In this chapter, Moses repeatedly reminds the people of the strong hand of God that brought them out of slavery. The Israelites could not free themselves. They were completely broken at the bottom of the pit, but God did not wait for them to pull themselves up halfway. His mighty hand reached all the way down to where they were. Pharaoh was strong, but God was far stronger. Even when our problems or spiritual enemies seem overwhelming, God's power is greater than our hardest struggles.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Moses gave Israel wise advice: remember the Lord. In daily life, remembering God brightens our path and helps our heavy burdens fall away. When difficulties gather around you like storm clouds, look away from them and remember the Lord. Jesus stands with you like a true friend in the middle of trouble. Even if you worry that you will forget Him, the Holy Spirit will help you recall His presence and promises.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God's strength is always present for those who trust Him, like an engine ready to pull a train. We need to connect our hearts to His power by faith. Instead of trying to carry everything in our own weakness, we can place each difficulty into His hands. As we rely on Him, He gladly takes up our cause and leads us through.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life today do you need to stop relying on your own strength and trust God's mighty hand?",
+    "How can you pause today to remember that Jesus is with you in your troubles?"
+   ],
+   "prayer": "Lord, thank You for reaching down to help us when we are weak and have no strength left. When troubles surround us, help our hearts to remember You instead of being overcome by fear. We place our difficulties into Your hands and trust Your strong power to carry us today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 13:14",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 13:3",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

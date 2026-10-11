@@ -1,0 +1,132 @@
+{
+ "book": 19,
+ "chapter": 112,
+ "first": 1,
+ "last": 10,
+ "ref": "Psalms 112",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Praising the Lord begins with honoring Him from the heart. This fear of God is not terror, but loving reverence like a child has toward a caring father. The godly person does not follow God's rules grudgingly, but takes deep joy in His commands. Sincere love for God makes joyful obedience a natural way of life.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "God promises to show favor to the children and descendants of those who honor Him. While this is a general principle rather than a guarantee for every individual child, godly living builds a strong and lasting household. Walking in integrity is the greatest heritage parents can leave to those who follow them.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "God often grants an honest sufficiency and good things to the upright, but the greatest treasure is a contented soul. Unlike earthly riches that must be left behind when life ends, the righteous character God gives endures through every trial. True godliness keeps its purity whether facing wealth or facing poverty.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Good people still experience hard times, but God promises that comfort and hope will break through their darkest troubles like the morning sun. The upright also reflect God's own nature by being kind, merciful, and fair to everyone around them. Experiencing God's compassion naturally moves us to show tender mercy to others.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Life goes well for those who are open-handed and willing to lend to neighbors who need help. Such a person does not give foolishly, but manages personal business and family resources with wisdom and fairness. Genuine religion shines brightest when matched with sound judgment and honest dealings every day.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The upright person rests on a firm foundation in God and cannot be destroyed by sudden storms. Even if trouble shakes his outward life for a season, he will not be permanently overthrown. The memory and good fruit of a righteous life remain honored before God and people long after he is gone.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The godly do not live in dread of what tomorrow might bring, nor do frightening reports throw them into panic. Their inner life is steady because their trust is firmly anchored in the Lord who rules all things. Resting in God's promises brings quiet peace when bad news arrives.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "Because God supports him, the upright person has courage that does not crumble under opposition. He stays confident and calm, knowing God will bring justice in His own time and way. Faith gives the heart strength to stand brave until every enemy is overcome.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "The righteous person gives generously and widely to meet the needs of the poor, like a farmer scattering seed across a field. In Scripture, a lifted horn is a picture of strength and public honor. God honors those who use their gifts to bless the helpless, and their acts of love will never be forgotten.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "The wicked watch the blessing and honor of the godly with bitter jealousy and grief. They grind their teeth in helpless anger, but all their selfish plans and hopes wither away into nothing. Turning against God and His people always leaves a person empty and disappointed in the end.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 9: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 10: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

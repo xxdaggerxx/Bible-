@@ -1,0 +1,67 @@
+{
+ "id": "26-031-001",
+ "title": "Egypt Will Fall like Assyria",
+ "refs": [
+  "Ezekiel 31:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26031001,
+   "end": 26031018,
+   "ref": "Ezekiel 31:1-18",
+   "ranges": [
+    [
+     26031001,
+     26031018
+    ]
+   ],
+   "title": "Sheltered Beneath the Shadow of His Presence",
+   "key_verse": [
+    26031017,
+    26031017
+   ],
+   "reflect": [
+    {
+     "text": "In Ezekiel 31, nations lived under the shade of mighty trees. F. B. Meyer notes that this picture brings to mind those who leave home to dwell in distant lands for God. Many believers take up life in hard places, not for comfort, but out of obedience to Christ. They are driven by the love of Jesus and the deep needs of people who do not yet know Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When friends and family watch loved ones go far away, it is easy to feel troubled. We may worry about sickness, hostility, or harsh conditions, and wish we were there to protect them. Yet Meyer comforts us with the truth that Christ is right there with them. He shelters them under what Meyer calls \"the shadow of His Presence\", like a rock in a dry desert or the cloud that shielded Israel from scorching heat.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We can safely trust our loved ones to our Lord, who never tires or sleeps. God is not distant from them; He lives within them by His Spirit. In His secret place, they are held safe by the God who loves them.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you have anxious fears for loved ones or missionaries serving in difficult places?",
+    "How can trusting that Christ is right with them bring peace to your heart today?"
+   ],
+   "prayer": "Lord, we place into Your hands those who have gone out to serve You in distant places. Cover them with the shadow of Your presence and guard them in body and spirit. Teach us to rest our fears in Your unending love and power. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 31:17",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

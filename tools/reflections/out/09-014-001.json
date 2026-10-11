@@ -1,0 +1,66 @@
+{
+ "id": "09-014-001",
+ "title": "Jonathan’s Victory over the Philistines",
+ "refs": [
+  "1 Samuel 14:1-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9014001,
+   "end": 9014023,
+   "ref": "1 Samuel 14:1-23",
+   "ranges": [
+    [
+     9014001,
+     9014023
+    ]
+   ],
+   "title": "Stepping Out Together in Bold Faith",
+   "key_verse": [
+    9014006,
+    9014006
+   ],
+   "reflect": [
+    {
+     "text": "Jonathan and his armor-bearer faced an entire enemy outpost with bold trust in God. While King Saul sat waiting under a tree, Jonathan decided to step forward. He believed that the Lord does not need a huge army to bring deliverance. With just two men, they took a great risk because they knew numbers do not limit God's power to save.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jonathan did not climb the cliff alone. He had an armor-bearer who promised to stand with him heart and soul. Christian friendship grows strong when believers unite around a shared mission instead of staying safe on the sidelines. We often settle into comfortable routines and only talk about spiritual battles, but God calls us to act together.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Trusting in Christ calls us to move forward rather than retreat in fear. Instead of keeping to ourselves, we can join with our brothers and sisters to take ground for the gospel. When we step out together in faith, the Lord works through our shared obedience to bring victory.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you holding back in comfortable safety, or are you stepping out to serve alongside other believers?",
+    "Who is someone you can partner with today to do God's work?"
+   ],
+   "prayer": "Lord, give us the courage to step out in faith rather than stay passive and comfortable. Help us unite with our brothers and sisters to take ground for your gospel. Teach us to trust that your power to save is never limited by our small numbers. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Morse",
+     "work": "Take the Hill: How Mission Brings Men Together",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/take-the-hill"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

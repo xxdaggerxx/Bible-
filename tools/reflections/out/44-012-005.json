@@ -1,0 +1,129 @@
+{
+ "id": "44-012-005",
+ "title": "The Rescue of Peter",
+ "refs": [
+  "Acts 12:5-19"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44012010,
+   "end": 44012010,
+   "ref": "Acts 12:10",
+   "ranges": [
+    [
+     44012010,
+     44012010
+    ]
+   ],
+   "title": "\"The Iron Gate Opened for Them\"",
+   "key_verse": [
+    44012010,
+    44012010
+   ],
+   "reflect": [
+    {
+     "text": "In our lives, we often face what feels like an iron gate. It might be a heavy trial, a closed door to our plans, or a deep fear about the future. Like Peter walking in the dark, we may worry about how we will ever get past such a massive barrier. Yet God made that heavy gate swing open by itself right when they arrived. As F. B. Meyer noted, God often opens our greatest difficulties not way ahead of time, but at the exact moment we reach them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Notice what happened as soon as Peter was safely outside on the open street. The angel vanished, leaving Peter to think and walk on his own. God steps in with miraculous rescue when human ability is completely spent and no earthly way exists. The Lord does not give miracles to replace our ordinary effort or faithful work. When He opens the impossible doors, He expects us to use our ordinary strength and keep walking with Him.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What obstacle in your life right now feels like an iron gate you cannot open?",
+    "Where might God be asking you to use your own wisdom and effort after He has provided a way forward?"
+   ],
+   "prayer": "Lord, thank You that no barrier is too strong for You to open. Help us not to fear the road ahead, but to trust that You will make a way at the right time. Give us wisdom and diligence to walk faithfully where You lead. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Acts 12:10",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Paul Carter",
+     "work": "Miracles, Means And Manna",
+     "site": "The Gospel Coalition",
+     "url": "https://ca.thegospelcoalition.org/columns/ad-fontes/miracles-means-manna/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 44012005,
+   "end": 44012019,
+   "ref": "Acts 12:5-19",
+   "ranges": [
+    [
+     44012005,
+     44012019
+    ]
+   ],
+   "title": "The Church at Prayer",
+   "key_verse": [
+    44012005,
+    44012005
+   ],
+   "reflect": [
+    {
+     "text": "Hard trials such as sickness, grief, or loneliness can easily make us feel trapped in a dark prison. Yet even while Peter sat chained between two guards, he was sleeping peacefully because of his trust in Christ. Outside the prison walls, the church gathered together for earnest, united prayer. Real prayer is more than repeating routine words; it is coming directly before God with our whole hearts, trusting the Holy Spirit to help us as we seek Him together.",
+     "sources": [
+      "D2",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "God answered their cries with extraordinary rescue, showing that no human lock or ruler can stop His purposes. When the servant girl Rhoda announced that Peter was standing at the door, the believers told her she was out of her mind. We often do the very same thing when we pray earnestly but still struggle to believe God will actually answer. While earthly powers rely on threats and violence, the Lord offers true freedom and peace to all who call on Him.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you bringing your deepest struggles to God with wholehearted desire, or are your prayers just a routine habit?",
+    "Have you ever been surprised when God actually answered a prayer you offered during a difficult time?"
+   ],
+   "prayer": "Father, thank You that You hear us whenever we join together to seek Your help. Forgive us for the times we pray for deliverance yet doubt that You will respond. Fill us with Your peace in every trial, and teach us to trust Your power. Amen.",
+   "sources": {
+    "D2": {
+     "author": "PowerPoint Ministries",
+     "work": "Power Point - March 30, 2006",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-march-30-2006-1386384.html"
+    },
+    "D4": {
+     "author": "Bob Paulson",
+     "work": "R.A. Torrey: Prevailing Prayer",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/decision-magazine/articles/r-a-torrey-prevailing-prayer"
+    },
+    "D5": {
+     "author": "Emma Danzey",
+     "work": "How Peter’s Prison Escape Shows Us the Power of Prayer",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/how-peters-prison-escape-shows-us-the-power-of-prayer.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

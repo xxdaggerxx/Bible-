@@ -1,0 +1,75 @@
+{
+ "id": "41-001-035",
+ "title": "Jesus Prays and Preaches",
+ "refs": [
+  "Mark 1:35-39",
+  "Luke 4:42-44"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 41001035,
+   "end": 41001035,
+   "ref": "Mark 1:35",
+   "ranges": [
+    [
+     41001035,
+     41001035
+    ]
+   ],
+   "title": "\"To a Solitary Place to Pray\"",
+   "key_verse": [
+    41001035,
+    41001035
+   ],
+   "reflect": [
+    {
+     "text": "Jesus had just spent a demanding evening ministering to many people. Even though living in human flesh brought physical tiredness and competing demands, He woke up while it was still dark. He stepped away from the crowds to find a quiet, empty place where He could speak with His Father. Our spiritual life is never measured by non-stop activity or how much we get done. Jesus showed us that disconnecting from earthly noise is essential.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "In that private solitude, Jesus enjoyed intimate fellowship with God. This time of quiet prayer gave Him clear direction for His mission, helping Him resist the urgent pull of the crowds who wanted Him to stay. When our days fill up with tasks and pressure, we also need that quiet focus. Stepping away to pray brings believers peace and guidance amid crowded routines.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We do not need hours of open time to meet with God. Setting aside even brief, quiet moments each day deepens our communion with Him and reminds us what matters most.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where can you find a quiet place today to step away from busy demands and pray?",
+    "How might taking a few quiet minutes with God bring you peace and clear direction?"
+   ],
+   "prayer": "Lord, thank You for showing us the importance of quiet time with You. Help us step away from our crowded schedules so we can rest in Your presence. Give us clarity and peace as we listen to Your voice each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Rev. Kyle Norman",
+     "work": "Seeking Solitude with the Savior - The Crosswalk Devotional - March 11",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/seeking-solitude-with-the-savior-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 114: Mark 1:35",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-114-mark-1-35.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

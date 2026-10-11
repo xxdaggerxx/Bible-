@@ -1,0 +1,67 @@
+{
+ "id": "24-049-023",
+ "title": "Judgment on Damascus",
+ "refs": [
+  "Jeremiah 49:23-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24049023,
+   "end": 24049027,
+   "ref": "Jeremiah 49:23-27",
+   "ranges": [
+    [
+     24049023,
+     24049027
+    ]
+   ],
+   "title": "Rest for the Restless Sea",
+   "key_verse": [
+    24049023,
+    24049023
+   ],
+   "reflect": [
+    {
+     "text": "While we sit safely in our quiet rooms, others are facing fierce storms far out on the water. Jeremiah speaks of hearts that are troubled like the sea and cannot find rest. Charles Spurgeon reminds us that \"there is sorrow on the sea\" as rough waves batter ships and bring grief to families left behind on shore. This calls us to pray for those who face constant peril, asking God to bring them safely to their haven and finding ways to help them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The churning waves also reflect the pain and trouble of our world. Just as the tide never stops breaking against the shore, the restless sea tells us that this world is not our final resting place. A day will come when the dead are raised and God will bring His people to a land where stormy waters and painful losses will be gone forever.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Until we reach that promised home, we do not have to carry our grief alone. The Lord walked on the sea of old and carved a way through deep waters for His people. Whenever our hearts feel like a raging storm, we can place our burdens into His hands and trust Him to lead us through.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you pray for or help people who face danger and sorrow today?",
+    "What stormy worries do you need to hand over to the Lord right now?"
+   ],
+   "prayer": "Lord, You rule over both the land and the deep sea. Watch over those who face storms tonight, and comfort every family that is grieving. When our own hearts are restless, help us place our sorrows in Your hands and trust You to guide us safely home. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 7",
+     "on": "Jeremiah 49:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

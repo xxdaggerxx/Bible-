@@ -1,0 +1,90 @@
+{
+ "id": "23-053-009",
+ "title": "A Grave Assigned",
+ "refs": [
+  "Isaiah 53:9-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23053009,
+   "end": 23053012,
+   "ref": "Isaiah 53:9-12",
+   "ranges": [
+    [
+     23053009,
+     23053012
+    ]
+   ],
+   "title": "The Joy of the Righteous Servant",
+   "key_verse": [
+    23053010,
+    23053010
+   ],
+   "reflect": [
+    {
+     "text": "Humanity broke God's covenant and could not rescue itself from sin. Jesus came to do what we failed to do, offering His life to pay for our guilt. He allowed Himself to be numbered with sinners so He could stand as our defender before God. As Charles Spurgeon wrote, \"there is a complete transfer made between Jesus and his people.\" Jesus took our sentence of death, and in return He gives us His perfect righteousness.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "The death of Jesus was not a defeat, because God raised Him to life and proved His sacrifice was accepted. Isaiah promised that the Servant would see His offspring and prolong His days. Jesus did not die in vain; He won an enduring spiritual family. Today, He is alive and looks on believers with delight, seeing us as the precious fruit of His deep suffering.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Because God never breaks a promise, Christ's work is guaranteed to succeed. When our own efforts for the Lord seem small or discouraging, we can trust that better days are ahead. God invites us to look past our immediate trials and ask Him with confidence to spread the kingdom of His Son across the world.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus delights to look upon you as His child change how you approach Him in prayer?",
+    "How can you pray more often for the spread of Christ's kingdom, rather than focusing only on your personal needs?"
+   ],
+   "prayer": "Lord Jesus, thank You for standing in our place, bearing our guilt, and sharing Your righteousness with us. We praise You that Your suffering was not in vain and that You now look on us with joy. Strengthen our faith when our work feels small, and help us pray faithfully for Your kingdom to grow throughout the earth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 30",
+     "on": "Isaiah 53:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 2",
+     "on": "Isaiah 53:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 18",
+     "on": "Isaiah 53:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "The Vindicated Sufferer",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/vindicated-sufferer"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

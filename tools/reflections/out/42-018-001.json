@@ -1,0 +1,115 @@
+{
+ "id": "42-018-001",
+ "title": "The Parable of the Persistent Widow",
+ "refs": [
+  "Luke 18:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 42018001,
+   "end": 42018001,
+   "ref": "Luke 18:1",
+   "ranges": [
+    [
+     42018001,
+     42018001
+    ]
+   ],
+   "title": "\"Pray at All Times and Not Lose Heart\"",
+   "key_verse": [
+    42018001,
+    42018001
+   ],
+   "reflect": [
+    {
+     "text": "Many of us experience seasons when our prayer life feels dry or distracted. When answers do not seem to come quickly, it is easy to grow discouraged and lose heart. Yet prayer is deeply powerful because it links our human weakness directly to God's almighty strength. That is why spiritual battles often target our prayer time. Jesus made prayer a regular priority during His earthly life, showing us how urgently we need God every single day.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God calls His people to intercession, which simply means praying on behalf of others. As Charles Spurgeon wrote, \"the door of grace is always open.\" We never run out of reasons to come before God. Around us are friends and family who are sick, grieving, or struggling with their faith, as well as many who do not yet know Christ. We are invited to bring every need to our King at any hour, trusting that He always welcomes our requests.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When your prayers feel dry or unanswered, what usually tempts you to stop praying?",
+    "Who in your life needs your prayers today as they face trials or seek Christ?"
+   ],
+   "prayer": "Lord, help us when our prayers feel weak, dry, or distracted. Remind us that Your door of grace is always open and that You hear every request we bring. Give us hearts to keep praying faithfully for ourselves and for those around us who need Your help. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 13",
+     "on": "Luke 18:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Pastor Jeff Schreve",
+     "work": "Above All, Pray",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-week-of-april-11.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 42018001,
+   "end": 42018008,
+   "ref": "Luke 18:1-8",
+   "ranges": [
+    [
+     42018001,
+     42018008
+    ]
+   ],
+   "title": "Our Righteous Father and the Unjust Judge",
+   "key_verse": [
+    42018007,
+    42018007
+   ],
+   "reflect": [
+    {
+     "text": "Jesus teaches us about prayer through sharp contrasts. In this parable, the judge is corrupt and selfish. He neither honors God nor cares about people, and he only helps the widow to save himself from constant annoyance. In contrast, God is our perfectly good Father who seeks our welfare. While the judge saw the poor widow as an irritating nuisance, God looks on His chosen people with tender love and care.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "If even a cold and selfish judge gave justice because the widow would not quit, we can be confident that our loving God will act for His people. As F. B. Meyer observed, the widow \"never knew herself defeated.\" Believers often face hardship and spiritual opposition in this world as they wait for God's help. God hears every cry and will surely make things right. Even when the wait feels long to us, His timing is faithful and true.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing God's loving character help you when an answer to prayer seems delayed?",
+    "What keeps you persistent in bringing your deepest concerns to God day after day?"
+   ],
+   "prayer": "Heavenly Father, thank You that You are not an uncaring judge, but a loving and righteous Father. When we feel weary or troubled in this world, help us remember Your tender care for us. Give us patience to trust Your perfect timing as we bring our cries to You day and night. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Luke 18:6",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

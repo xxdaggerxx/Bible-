@@ -1,0 +1,66 @@
+{
+ "id": "24-020-007",
+ "title": "Jeremiah’s Complaint",
+ "refs": [
+  "Jeremiah 20:7-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24020007,
+   "end": 24020018,
+   "ref": "Jeremiah 20:7-18",
+   "ranges": [
+    [
+     24020007,
+     24020018
+    ]
+   ],
+   "title": "Faithful When Obedience Brings Pain",
+   "key_verse": [
+    24020009,
+    24020009
+   ],
+   "reflect": [
+    {
+     "text": "When we seek to obey God's calling on our lives, things rarely happen the way we expect. Like Jeremiah, we can face harsh rejection, deep sorrow, and mockery from those around us. Doing what God asks does not protect us from painful trials or feelings of being completely alone.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In those dark moments, we might feel tempted to stay quiet and walk away. Jeremiah felt so hurt and discouraged that he wished he could stop speaking for God altogether. Yet God's message inside him was like a burning fire that he could not hold back. God's truth and calling in our lives are stronger than our hurt feelings and distress.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We cannot endure these hard seasons by relying on our own power. Lasting perseverance, which means continuing in faith when it is hard, comes only when we surrender to Christ. He sustains us and holds us up when we are weak. Even when our obedience feels wasted, Jesus gives us the strength to keep going.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When following God brings rejection or trouble, what makes you want to keep quiet and give up?",
+    "How can you surrender your discouragement to Christ today so that He can sustain you?"
+   ],
+   "prayer": "Lord, obeying You can be painful, and we often feel weary and misunderstood. When we are tempted to give up, remind us that Your Word is greater than our distress. Give us the grace to surrender our weakness to Christ so He can carry us through. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jennifer Slattery",
+     "work": "When Our Obedience Comes to Naught",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wholly-loved/when-our-obedience-comes-to-naught-wholly-loved-september-6.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,91 @@
+{
+ "id": "40-026-017",
+ "title": "Preparing the Passover",
+ "refs": [
+  "Matthew 26:17-19",
+  "Mark 14:12-16",
+  "Luke 22:7-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40026017,
+   "end": 40026019,
+   "ref": "Matthew 26:17-19; Mark 14:12-16; Luke 22:7-13",
+   "ranges": [
+    [
+     40026017,
+     40026019
+    ],
+    [
+     41014012,
+     41014016
+    ],
+    [
+     42022007,
+     42022013
+    ]
+   ],
+   "title": "Preparing the Passover Feast",
+   "key_verse": [
+    42022008,
+    42022008
+   ],
+   "reflect": [
+    {
+     "text": "Jesus sent Peter and John with specific instructions on how to find a room and prepare the Passover meal. Every detail, from the man carrying a water jar to the furnished room, showed that Jesus knew everything ahead of time. He was not a helpless victim caught in sudden events, but the Lord who carefully directed every step leading to the cross.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Choosing Peter and John for this practical task was completely intentional. As they prepared the lamb, bitter herbs, and bread, God was preparing to teach them deeper spiritual truths. All the old feast traditions were about to find their true meaning in Jesus, the ultimate Lamb of God. God still uses our daily duties and ordinary tasks to instruct us and reveal His truth.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "During the feast, Jerusalem was crowded, yet Jesus had no home of His own. By His quiet power, He moved a homeowner to gladly open his upper room. Spurgeon observed, \"what an honour to entertain the Son of God.\" When we welcome Jesus into our lives, it is a clear sign that His grace is already at work within our hearts, inviting us to feast with Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus was in complete control of His path to the cross bring you comfort?",
+    "How might God use your everyday tasks to teach you more about Himself?"
+   ],
+   "prayer": "Lord Jesus, thank You for willingly walking the road to the cross for us. Open our hearts to welcome You gladly, just as the homeowner opened his room. Please teach us through our daily duties and help us rest in Your loving control. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 8",
+     "on": "Mark 14:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Preparing for the Passover",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/preparing-passover"
+    },
+    "D3": {
+     "author": "Beth Moore",
+     "work": "Day 184: Luke 22:7–8",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-184-luke-22-78.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

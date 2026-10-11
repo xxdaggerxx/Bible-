@@ -1,0 +1,74 @@
+{
+ "id": "33-001-001",
+ "title": "Judgment to Come",
+ "refs": [
+  "Micah 1:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 33001001,
+   "end": 33001007,
+   "ref": "Micah 1:1-7",
+   "ranges": [
+    [
+     33001001,
+     33001007
+    ]
+   ],
+   "title": "When the Lord Comes Down",
+   "key_verse": [
+    33001003,
+    33001003
+   ],
+   "reflect": [
+    {
+     "text": "The prophet Micah brought God's message of judgment to both Israel and Judah. Usually, when the Lord marched into battle, it was to save His people from their enemies. This time, their false worship and social injustice turned them into His opponents instead. Samaria had built her wealth on pagan practices and temple prostitution, so God warned that her riches would be stripped away and her stones poured into the valley.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Micah describes God stepping forth from His dwelling place with power so great that mountains melt like wax before a fire. As F. B. Meyer notes, this vivid picture shows \"the interest of God in human life.\" God moves to judge what is wicked and to clear away every obstacle in the way of His holy purposes. Giant problems that look like impassable mountains to us are nothing under His feet.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This passage calls us to examine where we place our trust. When we cling to modern idols or dishonest gains, they will always fail us. True spiritual growth begins when we turn away from empty things and look to Christ alone for lasting security and help with our mountains.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly things are you tempted to rely on rather than trusting in God?",
+    "How does God's power over melting mountains encourage you when facing hard obstacles?"
+   ],
+   "prayer": "Lord God, forgive us for the times we put our trust in earthly things that cannot save. Help us turn away from every idol and find our full satisfaction in Christ alone. Melt the mountains of difficulty before us as we follow You today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Micah 1:4",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Word of the Lord through Micah",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/word-lord-through-micah"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

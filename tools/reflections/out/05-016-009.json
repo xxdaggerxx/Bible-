@@ -1,0 +1,74 @@
+{
+ "id": "05-016-009",
+ "title": "The Feast of Weeks",
+ "refs": [
+  "Deuteronomy 16:9-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5016009,
+   "end": 5016012,
+   "ref": "Deuteronomy 16:9-12",
+   "ranges": [
+    [
+     5016009,
+     5016012
+    ]
+   ],
+   "title": "Giving with Gratitude and Compassion",
+   "key_verse": [
+    5016010,
+    5016010
+   ],
+   "reflect": [
+    {
+     "text": "Long before modern holidays existed, God gave His people the Feast of Weeks as a time of thanksgiving. He invited them to bring a freewill offering in proportion to how much He had blessed them. True generosity means offering God the first and best of our resources instead of our leftovers. When we give this way, we show gratitude for His past provision and step out in faith for what is ahead.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God also told His people to celebrate this feast together with those who had very little. They were to include servants, foreigners, orphans, and widows in their joy. Generous giving reflects the generous character of God, who promises to meet the needs of all who trust Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "To keep their hearts humble, God told the Israelites to remember that they had once been slaves in Egypt. As F. B. Meyer observed, this memory gave a \"touch of gentle tenderness\" to how they treated people in need. When we remember our own past hardships and how God rescued us, we can share our gifts with genuine kindness instead of harshness or pride.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering God's past blessings encourage you to give Him your best rather than your leftovers?",
+    "How does remembering your own difficult seasons help you show kindness to people who are suffering?"
+   ],
+   "prayer": "Lord God, thank you for blessing us so generously and redeeming us when we were helpless. Please teach us to give back to you with grateful hearts and to step out in faith for tomorrow. Help us share what we have with gentle sympathy, bringing comfort to those who are hurting. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Deuteronomy 16:12",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Rick Warren",
+     "work": "The Real First Thanksgiving",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-november-22-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "44-002-042",
+ "title": "The Fellowship of Believers",
+ "refs": [
+  "Acts 2:42-47"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44002042,
+   "end": 44002042,
+   "ref": "Acts 2:42",
+   "ranges": [
+    [
+     44002042,
+     44002042
+    ]
+   ],
+   "title": "\"They Devoted Themselves\"",
+   "key_verse": [
+    44002042,
+    44002042
+   ],
+   "reflect": [
+    {
+     "text": "The first Christians made gathering together an essential priority rather than an occasional convenience. In our own time, we can easily feel isolated and lonely, but active life in a local church offers us real, caring connection. These early believers came from different backgrounds and carried old tensions. Yet they overcame their differences by fixing their attention on Christ rather than their own personal preferences.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At the heart of their life together was sound doctrine. They eagerly learned how Jesus fulfilled the Old Testament Scriptures. Fellowship for them was not complicated; it was the simple, biblical joy of meeting together and building one another up. They also treasured the breaking of bread, which was their covenant privilege of sharing communion at the Lord's Table.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Their devotion reached far beyond church services into everyday life through hospitality and shared meals. Meeting for corporate prayer also played a vital part in their community. Praying together strengthened their personal communion with God and deepened their mutual care for one another.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What makes it easy or difficult for you to make gathering with other believers a true priority?",
+    "How can sharing meals or praying together help deepen your care for people in your church?"
+   ],
+   "prayer": "Lord, thank You for the gift of the local church and the joy of walking together in faith. Help us to value sound biblical teaching, prayer, and the Lord's Table. Teach us to set aside our personal preferences so we can care for one another in everyday life. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Laura Bailey",
+     "work": "Life Is Better Together",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/life-is-better-together-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Snapshot of the Early Church",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/snapshot-of-the-early-church"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "01-031-001",
+ "title": "Jacob Flees from Laban",
+ "refs": [
+  "Genesis 31:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1031001,
+   "end": 1031021,
+   "ref": "Genesis 31:1-21",
+   "ranges": [
+    [
+     1031001,
+     1031021
+    ]
+   ],
+   "title": "Listening for God's Direction",
+   "key_verse": [
+    1031003,
+    1031003
+   ],
+   "reflect": [
+    {
+     "text": "Jacob spent many hard years working under Laban. Even though Laban cheated him, this long and difficult season humbled Jacob. God used it to shape him, turning a former deceiver into a more patient and disciplined man. God also blessed Jacob with large flocks, but that prosperity stirred up jealousy and hostility from Laban's family.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even though the mood around him turned bitter, Jacob did not simply flee out of fear or frustration. Instead, he waited until the Lord clearly commanded him to go back to his homeland. God reaffirmed His covenant promises to Jacob, assuring him of His abiding presence and steadfast love wherever he went.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Difficult times and changing attitudes can easily tempt us to act in a panic. Yet Jacob teaches us not to rely on circumstances alone when we face major decisions in life. Instead, we must seek clear direction from God's Word, trusting that the Lord remains faithful and walks beside us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you tempted to make a major decision out of fear rather than waiting on God?",
+    "How can you seek clear direction from God's Word when your circumstances become difficult?"
+   ],
+   "prayer": "Lord, thank You for watching over us even when others treat us unfairly. Help us not to panic or rush ahead based only on our circumstances. Teach us to wait on Your guidance in Scripture and to trust that You are always with us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "God Speaks to Jacob",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-speaks-jacob"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

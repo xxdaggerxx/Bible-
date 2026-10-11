@@ -1,0 +1,83 @@
+{
+ "id": "56-003-009",
+ "title": "Avoid Divisions",
+ "refs": [
+  "Titus 3:9-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 56003009,
+   "end": 56003011,
+   "ref": "Titus 3:9-11",
+   "ranges": [
+    [
+     56003009,
+     56003011
+    ]
+   ],
+   "title": "Avoiding Worthless Arguments and Pursuing Good Works",
+   "key_verse": [
+    56003009,
+    56003009
+   ],
+   "reflect": [
+    {
+     "text": "Life is short, and our days are far better spent doing good than fighting over minor details. Scripture tells us to stay away from foolish arguments, speculative theories, and useless debates about religious rules. As Charles Spurgeon warned, church life suffers greatly when we get trapped in petty wars over unimportant questions that do not build up love or true knowledge.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "It is easy for ordinary conversations to slide into debating just to win. When we obsess over side issues, we risk pushing aside the central truth of the gospel. Debates like that quickly become an idol that harms Christian fellowship and distracts us from serving others with sincere love.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "True Christian teaching is meant to produce visible good deeds and practical godliness. Instead of asking useless questions, we should focus on essential matters: Are we trusting in Christ? Are we growing in God's grace and walking by the Spirit? When our hands are full of loving service alongside our brothers and sisters, we have no time left for needless quarreling.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Am I spending more time arguing over minor opinions than I am serving others and doing good works?",
+    "Does the way I speak build peace and point people to Christ, or does it stir up division?"
+   ],
+   "prayer": "Lord, protect our hearts from getting distracted by useless arguments and foolish debates. Help us to guard the peace of your church and stand firmly on the truth of the gospel. Fill our days with loving service and good works that bring honor to your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 19",
+     "on": "Titus 3:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Unprofitable Works",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/unprofitable-works"
+    },
+    "D3": {
+     "author": "Katherine Britton",
+     "work": "The Heart of the Debate",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-sept-23-2009-11608834.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

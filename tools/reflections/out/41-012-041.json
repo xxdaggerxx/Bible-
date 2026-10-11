@@ -1,0 +1,71 @@
+{
+ "id": "41-012-041",
+ "title": "The Widow’s Offering",
+ "refs": [
+  "Mark 12:41-44",
+  "Luke 21:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 41012041,
+   "end": 41012044,
+   "ref": "Mark 12:41-44; Luke 21:1-4",
+   "ranges": [
+    [
+     41012041,
+     41012044
+    ],
+    [
+     42021001,
+     42021004
+    ]
+   ],
+   "title": "Giving from the Heart",
+   "key_verse": [
+    41012044,
+    41012044
+   ],
+   "reflect": [
+    {
+     "text": "Jesus sat watching people give their money at the temple treasury. Many wealthy people dropped in large sums, but Jesus noticed a poor widow who gave only two tiny coins. To those around her, her small gift looked insignificant next to the grand, public contributions of the rich. Yet Jesus saw something far deeper than the numerical size of the coins.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God does not measure our devotion by how impressive our actions look to other people. True faith values humble obedience over religious performance. The wealthy gave out of their surplus, but this woman gave everything she had to live on. Real giving means entrusting our whole lives to God rather than handing him only our comfortable leftovers.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This scene also challenges what we choose to honor. Instead of chasing earthly status or institutional glory, followers of Jesus are called to notice and care for the vulnerable, just as Jesus honored this woman's quiet faith.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you tend to give God what is convenient, or do you trust him with what costs you something?",
+    "How can you look past outward religious displays to care for people who are vulnerable?"
+   ],
+   "prayer": "Lord, teach us to love and trust you with our whole lives. Keep us from trying to impress others with outward displays of faith. Give us humble hearts that hold nothing back from you and eyes to care for those in need. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Rev. Kyle Norman",
+     "work": "3 Helpful Challenges in the Story of the Widow's Mite",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/helpful-challenges-in-the-story-of-the-widows-mite.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

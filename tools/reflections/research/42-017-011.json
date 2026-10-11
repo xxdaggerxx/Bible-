@@ -1,0 +1,19 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://billygraham.org/devotions",
+  "https://www.biblegateway.com/passage/?search=Luke+17%3A1-19&version=NET",
+  "https://www.biblegateway.com/passage/?search=Luke+17%3A1-19&version=NLT",
+  "https://www.biblegateway.com/passage/?search=Luke+17&version=NLT%3BESV%3BKJV%3BNIV",
+  "https://www.biblegateway.com/passage/?search=Luke+17&version=NRSVCE",
+  "https://www.biblegateway.com/passage/?search=Luke+17-19&version=ESV",
+  "https://www.biblegateway.com/resources/commentaries/IVP-NT/Luke/Faithful-Looking-King-Kingdom",
+  "https://www.biblegateway.com/resources/matthew-henry/Luke.17.11-Luke.17.19",
+  "https://www.davidjeremiah.org/",
+  "https://www.desiringgod.org/",
+  "https://www.intouch.org/"
+ ],
+ "cost": 0.043823975,
+ "model": "google/gemini-3.8-flash"
+}

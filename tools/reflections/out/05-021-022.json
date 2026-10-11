@@ -1,0 +1,67 @@
+{
+ "id": "05-021-022",
+ "title": "Cursed Is Anyone Hung on a Tree",
+ "refs": [
+  "Deuteronomy 21:22-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5021022,
+   "end": 5021023,
+   "ref": "Deuteronomy 21:22-23",
+   "ranges": [
+    [
+     5021022,
+     5021023
+    ]
+   ],
+   "title": "Bearing the Curse in Our Place",
+   "key_verse": [
+    5021023,
+    5021023
+   ],
+   "reflect": [
+    {
+     "text": "In the Old Testament, a body hung on a tree had to be buried before nightfall, because anyone hanging there was under God's curse. When Jesus died on the cross, the religious leaders rushed to take His body down to keep this rule. Yet they did not see the deeper truth taking place before their eyes. The apostle Paul later pointed to this very law to explain the true meaning of the death of Jesus.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Every person in the human race had broken God's law. None of us was righteous, and we all stood guilty before God, under the weight of that curse. But Jesus chose to step into our story. Connected to the whole human family, He stood before God carrying our sins and taking that curse upon Himself to put it away forever. Because of what He did, God's free grace can pour out to us without anything standing in the way.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "F. B. Meyer wrote that Jesus was \"cursed, that we might be blessed.\" He was cast out so that we could be welcomed into God's family forever. He gave up everything and took the punishment we deserved so that we could live completely free from the curse. When we look to the cross, we see the full measure of His love and rescue.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways does knowing Jesus took the curse for you change how you look at the cross?",
+    "How can you thank Jesus today for taking your place so that you could receive God's blessing?"
+   ],
+   "prayer": "Lord Jesus, thank You for taking the curse of our broken law upon Yourself. You were cast out so that we could be welcomed into God's presence forever. Help us to rest in Your forgiveness and to live each day in the freedom of Your grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Deuteronomy 21:23",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

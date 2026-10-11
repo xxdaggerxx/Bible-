@@ -1,0 +1,133 @@
+{
+ "id": "59-002-001",
+ "title": "A Warning against Favoritism",
+ "refs": [
+  "James 2:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 59002001,
+   "end": 59002001,
+   "ref": "James 2:1",
+   "ranges": [
+    [
+     59002001,
+     59002001
+    ]
+   ],
+   "title": "\"Do Not Show Favoritism\"",
+   "key_verse": [
+    59002001,
+    59002001
+   ],
+   "reflect": [
+    {
+     "text": "True faith shows in how we treat other people. God tells us not to give special honor to someone just because they have wealth, high standing, or fine clothes. When we judge people by how they look on the outside, our motives are corrupted rather than pure.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Favoritism and prejudice contradict the way Jesus commands us to love. Jesus welcomed both the wealthy and the marginalized, offering equal grace to all. In the same way, we are called to look past stereotypes, race, and social standing, respecting every person as someone made by God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Treating some people better than others hurts relationships deeply, especially in our families, and goes against God's equal love. If we have hurt others by showing preference, we need to admit our wrong, apologize, and change how we act. We can always rest in the truth that God loves each of His children without condition.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever find yourself judging or treating people differently based on their appearance or background?",
+    "Is there anyone you need to apologize to for showing favoritism?"
+   ],
+   "prayer": "Lord Jesus, help us love people the way You do, without judging by outward appearances. Forgive us for the times we have treated others unfairly or caused pain through favoritism. Teach us to reflect Your mercy and respect every person as Your creation. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg",
+     "work": "Show No Partiality - Truth For Life - December 28",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-december-28-2023.html"
+    },
+    "D2": {
+     "author": "Rick Warren",
+     "work": "The Racism Antidote: Love Like Jesus Does - Daily Hope with Rick Warren - June 14, 2020",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-june-14-2020.html"
+    },
+    "D4": {
+     "author": "Vivian Bricker",
+     "work": "The Importance of Avoiding Favoritism - The Crosswalk Devotional - September 17",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/the-importance-of-avoiding-favoritism-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 59002001,
+   "end": 59002013,
+   "ref": "James 2:1-13",
+   "ranges": [
+    [
+     59002001,
+     59002013
+    ]
+   ],
+   "title": "Mercy Above Every Bias",
+   "key_verse": [
+    59002009,
+    59002009
+   ],
+   "reflect": [
+    {
+     "text": "It is easy to think of favoritism as an innocent personal preference, but Scripture names it as sin. When we show bias toward certain people, God's Word says we break His royal law to love our neighbor as ourselves.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "We often try to excuse our favoritism in quiet ways. We might choose to pray for, serve, or give to only the people we naturally like or feel comfortable around. Yet God never acts with bias, and He calls us to live with the same fairness in our churches, workplaces, and homes.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Overcoming this sin begins by leaning on God's guidance. When we follow His lead, we learn to give generously and serve freely without picking favorites, living by the law of mercy that sets us free.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily life, such as giving or serving, are you tempted to show bias toward people you like best?",
+    "How can you rely on God's guidance this week to show generosity without picking favorites?"
+   ],
+   "prayer": "Heavenly Father, search our hearts and reveal where we treat favoritism as harmless instead of sin. Give us the strength to serve, give, and pray for others without bias. Help us walk in Your guidance and extend Your impartial mercy every day. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Lynette Kittle",
+     "work": "Exposing the Sin of Partiality - The Crosswalk Devotional - September 9",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/exposing-the-sin-of-partiality-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

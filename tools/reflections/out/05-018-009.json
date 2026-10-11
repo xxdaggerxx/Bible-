@@ -1,0 +1,68 @@
+{
+ "id": "05-018-009",
+ "title": "Sorcery Forbidden",
+ "refs": [
+  "Deuteronomy 18:9-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 5018010,
+   "end": 5018012,
+   "ref": "Deuteronomy 18:10-12",
+   "ranges": [
+    [
+     5018010,
+     5018012
+    ]
+   ],
+   "title": "\"Whoever Does These Things Is Detestable\"",
+   "key_verse": [
+    5018012,
+    5018012
+   ],
+   "reflect": [
+    {
+     "text": "God gave His people clear warnings to stay completely away from occult practices, divination, and witchcraft. Today, dark and destructive spiritual practices are still present in our world. Even things that seem harmless or mild, like checking horoscopes or reading zodiac signs, share the exact same dark roots as extreme rituals. Scripture firmly rejects all attempts to uncover the future or find hidden guidance through omens and sorcery.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Turning to the stars or spiritualists for direction functions as a subtle form of idolatry, which means putting created things before God. When we search constellations for answers, we show a lack of trust in God's sovereignty over our lives. Christians need to recognize that this is a spiritual battle. Rather than looking to the stars or chasing secret knowledge, we must look to the cross and rely on Jesus to reclaim lost ground.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there subtle things, like reading horoscopes, where you are tempted to look for answers instead of trusting God?",
+    "How can turning to the cross of Christ help you trust God with your future?"
+   ],
+   "prayer": "Lord God, forgive us when we seek guidance from the wrong places instead of trusting in Your care. Guard our hearts from all forms of occult interest and dark spiritual practices. Help us to keep our eyes fixed on Jesus and rest securely in Your power. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Neil T. Anderson",
+     "work": "Wake Up!",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/dailyinchrist/daily-in-christ-5-or-30-544574.html"
+    },
+    "D2": {
+     "author": "Ryan Duncan",
+     "work": "What’s Your Sign?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/what-s-your-sign-crosswalk-the-devotional-apr-18-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

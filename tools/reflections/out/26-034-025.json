@@ -1,0 +1,143 @@
+{
+ "id": "26-034-025",
+ "title": "The Covenant of Peace",
+ "refs": [
+  "Ezekiel 34:25-31"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 26034026,
+   "end": 26034026,
+   "ref": "Ezekiel 34:26",
+   "ranges": [
+    [
+     26034026,
+     26034026
+    ]
+   ],
+   "title": "\"Showers of Blessing\"",
+   "key_verse": [
+    26034026,
+    26034026
+   ],
+   "reflect": [
+    {
+     "text": "God alone can command the clouds to rain. In the same way, spiritual life and growth come purely from God's free grace. We can plow the field and sow the seed by doing our daily work faithfully, but our labor is useless unless the Lord bestows the rain. His divine help cannot be made by human hands; we depend entirely on Him to send it.",
+     "sources": [
+      "D1",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "When the Lord sends His blessing, He does not give mere drops. As Charles Spurgeon wrote, \"we cannot do without saturating showers of grace.\" God pours out His kindness in generous abundance to keep us humble, holy, and faithful. These gifts arrive in their proper season, meeting us right in our times of drought and heaviness with both saving help and daily comfort.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    },
+    {
+     "text": "God steadily attends and blesses our ordinary Christian duties, yet He also moves in extraordinary outpourings of the Holy Spirit. While we carry out our quiet, everyday calling, we look up and wait on Him to bring supernatural fruit that only His heavenly power can produce.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "In what part of your life do you feel like a parched plant in need of God's rain?",
+    "Are you trusting God's powerful grace while staying faithful in your everyday duties?"
+   ],
+   "prayer": "Lord God, thank You that every spiritual blessing comes from Your hand alone. Please pour out Your generous grace upon my dry heart and refresh me in this season. Teach me to serve You faithfully each day while trusting You for fruit that only You can give. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 24",
+     "on": "Ezekiel 34:26",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Ray Ortlund",
+     "work": "Showers",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/ray-ortlund/showers/"
+    },
+    "D5": {
+     "author": "Truth For Life",
+     "work": "Showers of Blessing - Truth For Life - February 24",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-february-24-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 26034025,
+   "end": 26034031,
+   "ref": "Ezekiel 34:25-31",
+   "ranges": [
+    [
+     26034025,
+     26034031
+    ]
+   ],
+   "title": "A Covenant of Peace",
+   "key_verse": [
+    26034025,
+    26034025
+   ],
+   "reflect": [
+    {
+     "text": "It is an astounding act of grace that the Lord makes a binding covenant with weak, sinful people. Through this covenant of peace, He promises to guard His flock from every enemy and harm. Even when our path leads through exposed and lonely places like the wilderness or dark woods, God provides real rest and makes us feel secure.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Being God's people is a great gift, but having clear assurance that we belong to Him brings deep joy. Believing in God saves us, yet knowing with certainty that He is ours quiets all our fears. We should never settle for mere hoping when the Lord invites us to enjoy full confidence in His care.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This assurance never comes from checking our own good deeds or looking within ourselves. We discover God's lasting favor by looking to Jesus, the plant of renown given for us. Resting in His free grace washes away the mire of doubt and reminds us that we are His sheep forever.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you resting in God's peace even when your circumstances feel exposed and uncertain?",
+    "Do you look to Jesus and His grace for assurance, or do you look to your own efforts?"
+   ],
+   "prayer": "Heavenly Father, thank You for binding Yourself to me in a covenant of peace. When doubts or troubles surround me, help me not to look inward, but to look to Christ alone. Grant me sweet assurance that I am safe in Your flock and that You are my God. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 9",
+     "on": "Ezekiel 34:30",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Dec. 3",
+     "on": "Ezekiel 34:25",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

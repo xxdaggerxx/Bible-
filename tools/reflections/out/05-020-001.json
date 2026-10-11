@@ -1,0 +1,135 @@
+{
+ "id": "05-020-001",
+ "title": "Laws of Warfare",
+ "refs": [
+  "Deuteronomy 20:1-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 5020004,
+   "end": 5020004,
+   "ref": "Deuteronomy 20:4",
+   "ranges": [
+    [
+     5020004,
+     5020004
+    ]
+   ],
+   "title": "\"The Lord Your God Goes with You\"",
+   "key_verse": [
+    5020004,
+    5020004
+   ],
+   "reflect": [
+    {
+     "text": "In our daily lives, our battles are not against other people. As Charles Spurgeon wrote, \"our fights are not against men, but against spiritual wickednesses.\" We face sin, despair, doubt, and division. God hates evil, and He does not stand on the sidelines like a coach shouting advice. He walks into the battle with us to fight for us and grant us victory through His mighty power.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Often we grow deeply weary because we keep picking up heavy worries and responsibilities that God already promised to fight. When we wrestle alone against prolonged struggles, discouragement sets in. True endurance comes when we notice that we have taken back our worries, let them go, and surrender them back into God's capable hands.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Prayer and close friendship with God are our greatest protection. Staying close to Him each day shields our hearts from deception and fear. As we worship God and speak of His greatness, our perspective changes and our heavy feelings begin to lift.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What recurring worry or burden have you been trying to fight in your own strength?",
+    "How can setting aside time for praise and prayer help you give that struggle back to God today?"
+   ],
+   "prayer": "Lord God, thank You for fighting for us against spiritual darkness and discouragement. Forgive us for carrying heavy anxieties that You have promised to handle. Help us stay close to You each day, resting in Your strength and praising Your great name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 17",
+     "on": "Deuteronomy 20:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Rachel Wojo",
+     "work": "A Prayer When You’re Tired of Fighting the Same Thing",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-when-youre-tired-of-fighting-the-same-thing.html"
+    },
+    "D4": {
+     "author": "Debbie Przybylski",
+     "work": "A Prayer for Victory",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-victory-your-daily-prayer-june-30-2016.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 5020001,
+   "end": 5020020,
+   "ref": "Deuteronomy 20:1-20",
+   "ranges": [
+    [
+     5020001,
+     5020020
+    ]
+   ],
+   "title": "When the Battle Feels Too Big",
+   "key_verse": [
+    5020001,
+    5020001
+   ],
+   "reflect": [
+    {
+     "text": "We all face seasons where life feels far larger than our capacity. You might face painful sickness, difficult family trouble, or emotional burdens that seem completely overwhelming. Just like Israel saw an enemy army with more horses and chariots than their own, our problems can look terrifying and far too big to handle.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Feeling afraid in front of huge obstacles does not mean you are a failure. Instead, being overwhelmed simply shows our constant need for God. The Lord understands our fear, but He immediately redirects our attention away from the size of the obstacle and back toward His faithful presence.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "True peace does not come from striving to be stronger or relying on our own efforts. We are invited to let go of the urge to control every outcome and trust God's fighting power instead. When our focus shifts to God being with us, we can lay down self-reliance and pray with quiet confidence.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What obstacle in your life currently feels much larger than your ability to handle it?",
+    "How does knowing God is with you change the way you look at that difficult situation?"
+   ],
+   "prayer": "Father in heaven, when our troubles look bigger than our strength, remind us that You are present with us. Help us stop depending on our own self-reliance. We surrender control of our lives to You today, trusting in Your faithful care. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Amber Ginter",
+     "work": "When Life Feels Bigger Than You",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/when-life-feels-bigger-than-you.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

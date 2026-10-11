@@ -1,0 +1,98 @@
+{
+ "book": 23,
+ "chapter": 18,
+ "first": 1,
+ "last": 7,
+ "ref": "Isaiah 18",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The prophet calls out to the land of Cush, a region south of Egypt known for buzzing insects or ships with wing-like sails. Ambassadors from that kingdom were traveling by water to seek military treaties against Assyria. The message warns that God's people should not put their trust in foreign armies.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch",
+    "https://enduringword.com/bible-commentary/isaiah-18/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Cush sends envoys down the Nile in light boats made of papyrus reeds to propose an alliance. Isaiah commands these messengers to go back home to their tall, smooth-skinned, and formidable people. The Lord wants Judah to know that He alone protects them, so human alliances are unnecessary.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch",
+    "https://biblehub.com/commentaries/ellicott/isaiah/18.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "All people living on the earth are summoned to watch and listen closely. God will raise a battle flag on the mountains and blow a trumpet blast when He acts against the invading foe. The entire world will see that the Lord is the one directing these great events.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The Lord explains that He will calmly watch events unfold from His heavenly home without stepping in right away. His stillness is like the clear heat of noonday sunshine or a quiet dew cloud during the harvest season. God's patience is not neglect, for He remains in total control while the enemy makes plans.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Just when the enemy believes their victory is ready to be picked like ripe grapes, God suddenly intervenes. He acts like a vineyard keeper who uses a pruning knife to cut off spreading branches before the harvest arrives. Human pride is easily cut down at the exact moment God chooses.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch",
+    "https://enduringword.com/bible-commentary/isaiah-18/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The defeated soldiers of the proud army are left behind in the open country instead of receiving an honorable burial. Birds of prey will feast on them throughout the summer, and wild beasts will feed on their remains all winter. This stark picture shows the total ruin of those who oppose the Lord.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "After God wins this victory, the tall and feared people of Cush will send tribute to Mount Zion in Jerusalem. Instead of Judah turning to Ethiopia for help, that mighty nation will bring gifts to honor the true God. The Lord uses His great works to draw distant nations into His worship.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch",
+    "https://enduringword.com/bible-commentary/isaiah-18/"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 1: dropped other point (Popular modern teaching): no checkable source",
+  "v. 1: removed sources ['https://www.studylight.org/commentary/isaiah-18-2.html']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,140 @@
+{
+ "id": "04-016-001",
+ "title": "Korah’s Rebellion",
+ "refs": [
+  "Numbers 16:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 4016001,
+   "end": 4016003,
+   "ref": "Numbers 16:1-3",
+   "ranges": [
+    [
+     4016001,
+     4016003
+    ]
+   ],
+   "title": "\"The Entire Congregation Is Holy\"",
+   "key_verse": [
+    4016003,
+    4016003
+   ],
+   "reflect": [
+    {
+     "text": "Korah and other prominent tribal leaders gathered together to challenge Moses and Aaron. On the outside, Korah used pious words about how everyone in the community was holy and equal before God. Beneath that religious speech, however, lay an appetite for prestige and recognition. Korah already enjoyed sacred responsibilities as a Levite, but he wanted higher status. Serving God simply to win praise from other people spoils our service.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "When envy and discontent take root in our hearts, we easily begin to criticize the leaders God has established. The Holy Spirit assigns different roles to different people. Some callings are public and seen by everyone, while others are quiet and unnoticed. Resisting the leaders God has appointed is really a way of questioning God's own wisdom, because rebelling against His chosen servants is revolting against God Himself.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever felt envious of someone else's visible role or spiritual recognition?",
+    "How can you honour God today in the quiet or ordinary tasks He has given you?"
+   ],
+   "prayer": "Lord, search our hearts for any hidden jealousy or pride when we look at others. Help us embrace the tasks You have given us with humble and thankful spirits. Teach us to support our leaders and trust Your wise plan for our church family. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Stuart Briscoe",
+     "work": "Power Play",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/power-play-one-year-devotions-for-men-july-24.html"
+    },
+    "D3": {
+     "author": "Daily Disciples Ministries",
+     "work": "God Anoints and Appoints",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-devotional-feb-27-2009-11600132.html"
+    },
+    "D5": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 2/20/2004",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-2-or-20-or-2004-1243557.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "We must take critical thoughts captive before they turn into bitterness and open rebellion. True faith shows itself in humility and willing cooperation with the leaders God places over us. When we accept our own calling with a thankful heart, we find peace in serving the Lord right where we are, rather than reaching for authority that is not ours.",
+     "problem": "The instruction about not reaching for authority that is not ours comes from D2 (which is not cited for this paragraph), and the promise of finding peace in serving where we are is not taught in D3, D5, or the passage."
+    }
+   ],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 4016001,
+   "end": 4016022,
+   "ref": "Numbers 16:1-22",
+   "ranges": [
+    [
+     4016001,
+     4016022
+    ]
+   ],
+   "title": "Drawn Near to the Holy God",
+   "key_verse": [
+    4016005,
+    4016005
+   ],
+   "reflect": [
+    {
+     "text": "In the desert, Korah and his followers used daily hardships to stir up resentment against Moses. When our hearts become discontented, we quickly forget how God rescued us in the past. It becomes tempting to twist God's words to fit our own selfish desires. Yet revolting against God's holy order brings serious judgment, reminding us that true spiritual renewal always stands on humble obedience to God's Word.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "In response to the challenge, Moses stated that the Lord Himself would reveal who was holy and cause that person to approach Him. As F. B. Meyer noted, our prayer should be, \"My God, cause me to come near.\" We cannot force our way into God's holy presence through human effort or self-promotion. We must depend on the Lord alone to draw us close to Himself.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Drawing near to God requires a life surrendered completely to Him. True holiness means being separated from sin and set apart for the Lord. When Moses and Aaron saw God's anger against the rebellion, they fell facedown and pleaded for the congregation. When we let go of worldly pride and seek God with clean hands, He draws us near and shows us His mercy.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face trials, do you remember God's past help, or do you let discontent take over?",
+    "What worldly ambitions do you need to surrender so that God can draw you near to Himself?"
+   ],
+   "prayer": "Heavenly Father, forgive us when hard times cause us to grumble or forget Your faithful care. Cause us to draw near to You with surrendered and clean hearts. Teach us to let go of earthly pride so we may dwell in Your holy presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 16:5",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D4": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Numbers 16",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/numbers-16-psalms-52-54-isaiah-6-hebrews-13/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

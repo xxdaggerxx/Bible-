@@ -1,0 +1,66 @@
+{
+ "id": "66-009-013",
+ "title": "The Sixth Trumpet",
+ "refs": [
+  "Revelation 9:13-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66009013,
+   "end": 66009021,
+   "ref": "Revelation 9:13-21",
+   "ranges": [
+    [
+     66009013,
+     66009021
+    ]
+   ],
+   "title": "Warnings from the Sixth Trumpet",
+   "key_verse": [
+    66009020,
+    66009020
+   ],
+   "reflect": [
+    {
+     "text": "In this vision, an army of two hundred million brings terrifying destruction. A third of mankind is killed by fire, smoke, and sulfur. Even though this force seems completely overwhelming, it is not the final end-time judgment. God still restrains its reach and limits the destruction.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "These painful afflictions are gracious warnings meant to wake people up to repentance, which means turning away from sin and turning back to God. Yet the survivors stubbornly refuse to listen. Sin makes no sense, and it hardens their hearts. Instead of seeking the Lord, they keep worshiping demons, bowing to lifeless idols, and practicing wickedness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We should not be surprised when people in our world stubbornly reject God, even during severe trials. This passage reminds us to examine our own lives. We must continually turn from sin and cling to God, both in good times and in bad times.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you usually respond when God brings difficult trials or warnings into your life?",
+    "Are there sins in your life that you need to turn away from today?"
+   ],
+   "prayer": "Lord God, thank You for Your patience and for the warnings that call us back to You. Please keep our hearts tender so we do not become hardened by sin. Help us to turn away from evil and seek You faithfully in every season of life. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Sixth Trumpet",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-sixth-trumpet"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,72 @@
+{
+ "id": "45-012-009",
+ "title": "Love, Zeal, Hope, Hospitality",
+ "refs": [
+  "Romans 12:9-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45012009,
+   "end": 45012013,
+   "ref": "Romans 12:9-13",
+   "ranges": [
+    [
+     45012009,
+     45012013
+    ]
+   ],
+   "title": "Living Out True Love and Hope",
+   "key_verse": [
+    45012010,
+    45012010
+   ],
+   "reflect": [
+    {
+     "text": "Loving each other like family means stepping outside our ordinary church routines to meet real needs. We honor people when we take time to notice those who are easily overlooked. Reaching out with practical help does not just bless our neighbors; it also models the love of Christ to our children. As we obey God in caring for others, our own anxious worries are replaced by His peace.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Serving and caring for others can be demanding, but we are sustained by joyful hope. This hope does not depend on our shifting life circumstances, because it rests entirely on God's trustworthy character. When we choose to reject worst-case fears and anticipate God's goodness instead, hope and patience work together to keep our attention focused on what He is doing.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Regular prayer keeps this hope alive by connecting us directly to God, the source of true joy. When we stay in consistent conversation with Him, we can endure hardships with patience. Daily life becomes an adventure where we walk with hopeful curiosity, watching for how God is working in and through us each day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Who is someone overlooked around you that you could honor with practical help this week?",
+    "How can turning from worst-case worries to steady prayer bring you joy today?"
+   ],
+   "prayer": "Lord, help us to look past our normal routines and notice the needs of people around us. Give us patience in trials and guard our minds from fear. Fill us with joyful hope through steady prayer, and let our service point others to your goodness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Whitney Hopler",
+     "work": "How Do We Do as Paul Says and 'Be Joyful in Hope'?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/spiritual-life/how-do-we-do-as-paul-says-and-be-joyful-in-hope.html"
+    },
+    "D2": {
+     "author": "Holly Good",
+     "work": "A Different Kind of Church",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-jan-16-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

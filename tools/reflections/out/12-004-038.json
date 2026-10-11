@@ -1,0 +1,66 @@
+{
+ "id": "12-004-038",
+ "title": "Elisha Purifies the Poisonous Stew",
+ "refs": [
+  "2 Kings 4:38-41"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12004038,
+   "end": 12004041,
+   "ref": "2 Kings 4:38-41",
+   "ranges": [
+    [
+     12004038,
+     12004041
+    ]
+   ],
+   "title": "Letting Go of the Need for Control",
+   "key_verse": [
+    12004041,
+    12004041
+   ],
+   "reflect": [
+    {
+     "text": "During a severe famine, Elisha trusted that God would care for the prophets gathered around him. Yet someone decided to take matters into his own hands. A man went out and gathered strange wild gourds to add to the stew, not knowing what they were. His effort to improve the meal caused a practical disaster. When we rely on ourselves and try to take control instead of trusting God, we often bring trouble and ruin into our lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even when our own meddling makes a mess, God is still able to step in and fix what went wrong. Elisha threw flour into the pot, and the deadly stew was made harmless and good. That flour points us ahead to Jesus Christ. Just like grain crushed into flour, Jesus was crushed on the cross to cure the deadly poison of our sin and make us whole.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God invites us to lay down our stubborn urge to control our outcomes. When we give up self-reliance, we can rest in the peace of God's perfect plan to provide for us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what parts of your life are you tempted to take control instead of waiting on God?",
+    "How does remembering what Jesus did on the cross help you trust God when things go wrong?"
+   ],
+   "prayer": "Lord, forgive us when we rely on our own strength and make things worse. Thank you for sending Jesus to be crushed for our sins and to heal our brokenness. Please help us surrender our need for control and trust your good plan. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Dr. Michael Youssef",
+     "work": "The Spirit of Control",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-week-of-june-22-11605039.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "06-005-013",
+ "title": "The Commander of the LORD’s Army",
+ "refs": [
+  "Joshua 5:13-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6005013,
+   "end": 6005015,
+   "ref": "Joshua 5:13-15",
+   "ranges": [
+    [
+     6005013,
+     6005015
+    ]
+   ],
+   "title": "Joining God's Side",
+   "key_verse": [
+    6005014,
+    6005014
+   ],
+   "reflect": [
+    {
+     "text": "Before the battle of Jericho, Joshua saw a man standing with a sword drawn in his hand. Naturally, Joshua wanted to know if this stranger was an ally or an enemy. Like Joshua, we often look at our lives and conflicts through an us-versus-them lens. We tend to assume God is there to support our personal plans and fight for our side.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The Commander surprised Joshua by answering, \"Neither.\" He did not come to take orders or join a human faction. Instead, He came as the leader of the Lord's army. Because He accepted Joshua's worship without correcting him, this encounter points us to Christ Himself. The Lord does not enlist in our small campaigns. He arrives as the rightful King who calls us to bow down and submit to His lead.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The true question for us is not whether God will back our cause, but whether we will join His. Like Jesus praying in Gethsemane, we are called to lay down our own agendas and yield to God's kingdom purposes. As we follow Christ's command, we can move forward with courage, trusting that He directs the battle and has already overcome sin.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you asking God to back your plans instead of submitting to His?",
+    "How can you surrender your own agenda today to join what God is doing?"
+   ],
+   "prayer": "Lord God, forgive us when we treat You as an ally for our own plans rather than our Commander. Help us lay down our desires and bow before Your holy authority. Teach us to trust Your leadership and faithfully serve Your kingdom purposes. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Deidre Braley",
+     "work": "Are You for Us, or Our Enemies?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/are-you-for-us-or-our-enemies-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Joshua",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/joshua"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

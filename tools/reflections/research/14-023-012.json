@@ -1,0 +1,19 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://billygraham.org/devotions",
+  "https://utmost.org/",
+  "https://www.biblegateway.com/passage/?search=2+Chronicles+23%3A13&version=KJV",
+  "https://www.biblegateway.com/passage/?search=2+Chronicles+23&version=AMP",
+  "https://www.biblegateway.com/passage/?search=2+Chronicles+23&version=GW",
+  "https://www.biblegateway.com/passage/?search=2+Chronicles+23&version=MSG%3BNLT",
+  "https://www.biblegateway.com/passage/?search=2+Chronicles+23&version=NABRE",
+  "https://www.biblegateway.com/resources/matthew-henry/2Chr.23.12-2Chr.23.21",
+  "https://www.biblegateway.com/verse/en/2%20Chronicles%2023%3A13",
+  "https://www.davidjeremiah.org/",
+  "https://www.ligonier.org/"
+ ],
+ "cost": 0.031620275,
+ "model": "google/gemini-3.8-flash"
+}

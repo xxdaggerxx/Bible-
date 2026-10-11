@@ -1,0 +1,67 @@
+{
+ "id": "07-007-015",
+ "title": "Gideon Defeats Midian",
+ "refs": [
+  "Judges 7:15-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7007015,
+   "end": 7007025,
+   "ref": "Judges 7:15-25",
+   "ranges": [
+    [
+     7007015,
+     7007025
+    ]
+   ],
+   "title": "Shining and Sounding for the Lord",
+   "key_verse": [
+    7007020,
+    7007020
+   ],
+   "reflect": [
+    {
+     "text": "Gideon gave his three hundred men jars with torches inside and horns to blow. At his signal, they broke the jars, let the light blaze out, blew their horns, and shouted their battle cry. Charles Spurgeon explains that this shows what believers are called to do today. First, we must let our light shine. We need to break through anything that hides our faith and live out good deeds so others can clearly see that we belong to Jesus.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Next comes the sound of the trumpet. Gideon's men did not stay silent, and we must not be quiet about our faith either. We are called to actively share the gospel, the good news of Christ crucified, with the people around us. We are to carry this message directly to others and speak boldly so they have every chance to hear God's truth.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Finally, their battle cry joined God's power and human obedience together. Spurgeon points out that God does the work, but he calls us to avoid being idle. If we expect God to work without doing our part, we are being presumptuous. If we rely only on ourselves, we trust foolishly in human strength. We can do nothing on our own, but with God's help, our holy examples and our spoken testimony bring honor to him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what everyday ways can you let the light of your faith shine through your actions?",
+    "How can you balance trusting completely in God's power while actively doing your part to share the gospel?"
+   ],
+   "prayer": "Lord, help us to shine brightly by living lives filled with your love and good works. Give us courage to speak clearly about Jesus to those who do not know him. Teach us to depend entirely on your strength rather than our own as we serve you each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 20",
+     "on": "Judges 7:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

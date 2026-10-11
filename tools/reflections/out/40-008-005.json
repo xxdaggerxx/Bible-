@@ -1,0 +1,79 @@
+{
+ "id": "40-008-005",
+ "title": "The Faith of the Centurion",
+ "refs": [
+  "Matthew 8:5-13",
+  "Luke 7:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40008005,
+   "end": 40008013,
+   "ref": "Matthew 8:5-13; Luke 7:1-10",
+   "ranges": [
+    [
+     40008005,
+     40008013
+    ],
+    [
+     42007001,
+     42007010
+    ]
+   ],
+   "title": "Faith That Amazed Jesus",
+   "key_verse": [
+    42007009,
+    42007009
+   ],
+   "reflect": [
+    {
+     "text": "The Roman centurion was a commander with many soldiers under him, but he laid aside his authority when he reached out to Jesus. Our world is often impressed by big outward displays, but God cares about inward character. This officer showed deep humility. He did not seek power or attention for himself. Instead, he made a completely selfless request on behalf of a suffering servant.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even though he was an outsider without religious credentials, the centurion recognized the holiness of Jesus and his own unworthiness. Because he gave orders in the army every day, he understood how authority works. He knew Jesus had absolute power over sickness, even from far away. He trusted that Jesus did not need to walk into his house; a single spoken word would be enough to heal his servant.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus marveled at this man's trust, which was greater than any faith he had seen in Israel. The centurion gave a foretaste of people coming from everywhere to enter God's kingdom. Jesus is not won over by outward performance or titles. He delights in those who come with humble, obedient reliance on who he is.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you tend to approach Jesus relying on your own standing, or with the centurion's humble trust?",
+    "What situation in your life right now calls you to trust Jesus simply at his word?"
+   ],
+   "prayer": "Lord Jesus, thank you that we do not need impressive titles or religious status to come to you. Help us lay aside our pride and bring our needs to you with complete trust in your power. Teach us to rest quietly in your word today.",
+   "sources": {
+    "D1": {
+     "author": "Amy Carroll",
+     "work": "How to Amaze Jesus",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/-encouragement-for-today-january-7-2020.html"
+    },
+    "D2": {
+     "author": "Jon Bloom",
+     "work": "Faith That Made Jesus Marvel",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/faith-that-made-jesus-marvel"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

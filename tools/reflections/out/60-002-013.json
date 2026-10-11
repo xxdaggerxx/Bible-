@@ -1,0 +1,73 @@
+{
+ "id": "60-002-013",
+ "title": "Submission to Authorities",
+ "refs": [
+  "1 Peter 2:13-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 60002013,
+   "end": 60002020,
+   "ref": "1 Peter 2:13-20",
+   "ranges": [
+    [
+     60002013,
+     60002020
+    ]
+   ],
+   "title": "Honoring God by Respecting Others",
+   "key_verse": [
+    60002017,
+    60002017
+   ],
+   "reflect": [
+    {
+     "text": "God calls us to live honorable lives before a watching world. When we obey governing authorities and follow the law, we are ultimately serving the Lord. God gives civil leaders the task of keeping order and stopping wrongdoing. Unless an authority orders us to sin against God, we are called to respect the law even when it is inconvenient for us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Peter also reminds us to show dignity to all people. Every human being is made in the image of God, so treating others with value honors our Creator. Even when someone mistreats us or acts unfairly, Scripture directs us never to retaliate or pay back evil with evil.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Doing good when others treat us poorly is difficult, but we do not have to rely on our own strength. As Vivian Bricker explains, the Holy Spirit helps us extend patience and grace during times of hardship. When our lives are marked by quiet goodness instead of rebellion, we show the character of Christ and help silence foolish criticism.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a leader, law, or difficult person that you find hard to treat with respect?",
+    "How can asking the Holy Spirit for patience change the way you respond when you feel mistreated?"
+   ],
+   "prayer": "Lord, help us to honor You by respecting the authorities and people You have placed in our lives. When we face unfair treatment, keep our hearts from seeking revenge. Give us the help of Your Holy Spirit so our actions reflect the kindness and grace of Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Subject Yourselves",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/subject-yourselves"
+    },
+    "D2": {
+     "author": "Vivian Bricker",
+     "work": "Respecting Your In-Laws When They Don't Respect You - Crosswalk Couples Devotional - July 17",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-couples-devotional/respecting-your-in-laws-when-they-dont-respect-you.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

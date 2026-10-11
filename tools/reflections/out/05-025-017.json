@@ -1,0 +1,66 @@
+{
+ "id": "05-025-017",
+ "title": "Revenge on the Amalekites",
+ "refs": [
+  "Deuteronomy 25:17-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5025017,
+   "end": 5025019,
+   "ref": "Deuteronomy 25:17-19",
+   "ranges": [
+    [
+     5025017,
+     5025019
+    ]
+   ],
+   "title": "God's Justice Against Cruelty",
+   "key_verse": [
+    5025018,
+    5025018
+   ],
+   "reflect": [
+    {
+     "text": "When the people of Israel were journeying out of Egypt, the Amalekites launched a cruel attack against them. They did not fight the strong warriors face to face. Instead, they struck the tired and weak people struggling at the back of the line. The Amalekites showed that they had no fear or respect for God, and God took notice of how they treated the helpless.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Years later, the Lord commanded Israel to blot out Amalek. This was not about human bitterness or personal revenge. It was God carrying out His divine justice against deep wickedness. Scripture draws a clear line between private payback and lawful justice. God does not permit us to nurse personal grudges or seek our own retaliation.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Instead, God is the true judge who defends the weak. In His wisdom, He puts civil leaders and laws in place to restrain evil and enforce what is right in society. We can trust that God sees every injustice, and we can leave judgment in His hands rather than trying to get even ourselves.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When someone wrongs you, why is it important to leave justice to God rather than seeking personal revenge?",
+    "How can we support fair laws and leaders who protect the weak and vulnerable in our communities?"
+   ],
+   "prayer": "Lord, thank You for caring for the weak and upholding true justice. Keep us from holding grudges or seeking personal revenge when people hurt us. Help our leaders enforce laws that protect the vulnerable and restrain evil. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 03/09/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-03-or-09-or-2002-1127494.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

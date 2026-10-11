@@ -1,0 +1,66 @@
+{
+ "id": "24-014-001",
+ "title": "Drought, Famine, Sword, and Plague",
+ "refs": [
+  "Jeremiah 14:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24014001,
+   "end": 24014018,
+   "ref": "Jeremiah 14:1-18",
+   "ranges": [
+    [
+     24014001,
+     24014018
+    ]
+   ],
+   "title": "Choosing Truth Over Comforting Lies",
+   "key_verse": [
+    24014014,
+    24014014
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, Judah faced severe suffering from drought and hunger. When Jeremiah pleaded for mercy, he pointed to the false prophets who were telling everyone that peace was coming. Yet God made it clear that the people were still accountable for their choices. God had graciously given them His law, so they had no excuse for ignoring what He had already spoken.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The people were guilty because they chose comforting lies instead of God's truth. Turning away from God's Word brings spiritual confusion and His rightful judgment. Both the deceptive leaders and the people who willingly followed their false promises would face the painful results of their rebellion.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This reminds us that hearing God's truth is a serious gift. It is never enough to simply have Bible knowledge in our heads or to listen only to messages that make us feel safe. We are called to genuinely love God's Word and gladly walk in obedience to it.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do we ever find ourselves preferring comfortable messages over the challenging truths in God's Word?",
+    "What helps you move from just knowing Scripture in your mind to genuinely loving and obeying it?"
+   ],
+   "prayer": "Lord, thank You for the gift of Your Word that guides us in truth. Keep us from turning toward pleasant words that lead our hearts away from You. Please give us humble hearts that truly love Your ways and seek to obey You in all things. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The End of the False Prophets",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/end-false-prophets"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

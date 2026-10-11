@@ -1,0 +1,67 @@
+{
+ "id": "18-001-006",
+ "title": "Satan’s First Attack",
+ "refs": [
+  "Job 1:6-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18001006,
+   "end": 18001012,
+   "ref": "Job 1:6-12",
+   "ranges": [
+    [
+     18001006,
+     18001012
+    ]
+   ],
+   "title": "Loving God for Himself",
+   "key_verse": [
+    18001009,
+    18001009
+   ],
+   "reflect": [
+    {
+     "text": "Satan claimed that Job only honored God because God kept him safe and made him rich. Charles Spurgeon noted that this accusation fits many people today. Some love God only while life is easy and prosperous, but they walk away when trouble strikes. As Spurgeon wrote, their love is for the cupboard, not \"the master of the house.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "True faith does not depend on earthly gain. Jesus warned that fruitful branches must be pruned through hardship. Difficult times can feel painful, but God uses them like a fire that purifies gold. Suffering helps wean our hearts from the things of this world and points our eyes toward heaven.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When life is hard and it seems we get no earthly reward for our faith, we can still trust God. He meets our trials with deep comfort in Christ. Our greatest reward is not found in the gifts of this life, but in the eternal life waiting for us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you find it easier to praise God when life is going well than when you face difficulties?",
+    "How can remembering your eternal reward help you stay faithful during hard times?"
+   ],
+   "prayer": "Lord, help us to love You for who You are, not just for the gifts You give us. When hard times come and we face trials, keep our faith strong and teach us to depend on You. Turn our hearts away from the things of this world and help us fix our hope on eternity with Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 22",
+     "on": "Job 1:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

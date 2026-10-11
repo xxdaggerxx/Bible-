@@ -1,0 +1,66 @@
+{
+ "id": "57-001-008",
+ "title": "Paul’s Appeal for Onesimus",
+ "refs": [
+  "Philemon 1:8-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 57001008,
+   "end": 57001022,
+   "ref": "Philemon 1:8-22",
+   "ranges": [
+    [
+     57001008,
+     57001022
+    ]
+   ],
+   "title": "Love, Forgiveness, and True Reconciliation",
+   "key_verse": [
+    57001017,
+    57001017
+   ],
+   "reflect": [
+    {
+     "text": "When someone turns to Jesus Christ, God changes their character in a deep way. Onesimus had once run away and seemed useless, but Christ transformed him into someone useful to God's kingdom. True reconciliation between believers does not ignore past hurts. Instead, it directly faces previous wrongs so that peace and trust can be restored.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul had the authority to order Philemon to do what was right, but he chose to appeal on the basis of love instead. He wanted Philemon's good deed to come from his own free will, not from force. Christian love invites us to obey God willingly, allowing kindness to flow from a renewed heart.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Love shaped by the gospel also asks us to forgive debts that cost us something. Paul offered to repay whatever Onesimus owed, showing that making things right can be costly. When we love like Christ, we are ready to bear the cost of forgiveness and welcome former offenders as dear brothers and sisters in the faith.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there someone who has wronged you whom God is asking you to forgive and welcome in love?",
+    "How can remembering what Christ did for you help you let go of costly debts others owe you?"
+   ],
+   "prayer": "Lord, thank you for transforming our lives and calling us into your family. Please give us the grace to forgive others, even when reconciliation feels costly. Help us to love freely and welcome our brothers and sisters in Christ with open hearts.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Costs and Demands of Love",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/costs-and-demands-love"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

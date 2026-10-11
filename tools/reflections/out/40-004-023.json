@@ -1,0 +1,77 @@
+{
+ "id": "40-004-023",
+ "title": "Jesus Heals the Multitudes",
+ "refs": [
+  "Matthew 4:23-25",
+  "Mark 3:7-12",
+  "Luke 6:17-19"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40004023,
+   "end": 40004025,
+   "ref": "Matthew 4:23-25",
+   "ranges": [
+    [
+     40004023,
+     40004025
+    ]
+   ],
+   "title": "\"Preaching the Gospel of the Kingdom\"",
+   "key_verse": [
+    40004023,
+    40004023
+   ],
+   "reflect": [
+    {
+     "text": "Jesus traveled throughout Galilee, sharing the good news that God's saving kingdom had arrived. Large crowds came to Him from Jewish towns and Gentile regions alike, showing that His message was meant for the entire world. While Jesus cared deeply for their everyday troubles, He made preaching His highest priority. Physical healing touches our earthly bodies for a time, but the message of the kingdom lasts for eternity.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus also healed every sickness and freed people from evil spirits. He did these wonders out of deep compassion and by His own sovereign power. His miracles proved His divine identity as the Son of God and showed that He was defeating the rule of Satan. Even with huge crowds pressing in with constant demands, Jesus refused to be pulled away from His primary mission.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We are called to follow Jesus by sharing the gospel in the places we live and work each day. It is easy to let urgent situational needs distract us from our true calling. As we care for people around us, we must keep our focus on pointing them to Christ and His eternal kingdom.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What daily distractions tend to pull your attention away from Christ's kingdom message?",
+    "How can you show Jesus' love to someone in need this week while also sharing His truth?"
+   ],
+   "prayer": "Lord Jesus, thank You for Your deep compassion and sovereign power over all sickness and evil. Help us keep our eyes on Your eternal kingdom instead of getting lost in urgent worldly tasks. Give us grace and courage to share Your good news with the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 99: Matthew 4:23",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-99-matthew-4-23.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Great Crowds Follow Jesus",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/great-crowds-follow-jesus"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

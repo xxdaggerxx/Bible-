@@ -1,0 +1,120 @@
+{
+ "id": "23-012-001",
+ "title": "Joyful Thanksgiving",
+ "refs": [
+  "Isaiah 12:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23012002,
+   "end": 23012002,
+   "ref": "Isaiah 12:2",
+   "ranges": [
+    [
+     23012002,
+     23012002
+    ]
+   ],
+   "title": "\"I Will Trust and Not Be Afraid\"",
+   "key_verse": [
+    23012002,
+    23012002
+   ],
+   "reflect": [
+    {
+     "text": "Following Christ means resting our full weight on Him rather than trying to fix everything through self-effort. Charles Swindoll compares genuine trust to leaning your whole weight on crutches for support. We often rely on our own limited understanding, but spiritual strength comes when we choose to look at life through God's perspective instead. Choosing wholehearted trust, prayer, and praise transforms our inner life, bringing calm and change from within even when our outward circumstances remain the same.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Scripture also reminds us that God Himself is our strength, our salvation, and our song. Music connects deeply to the core of our being and naturally leads us into heartfelt worship. Singing praises to God gives us a practical, daily way to fulfill the call to love Him completely. Even in the middle of mundane daily chores and constant distractions, believers can still choose to celebrate the Lord and find real joy in Him.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you leaning your full weight on Christ today, or are you still relying on your own strength?",
+    "How can you turn an ordinary daily chore into a moment of song and praise to God?"
+   ],
+   "prayer": "Lord, help us to stop relying on our own effort and to lean our full weight on You. Give us Your perspective when our circumstances are hard. Thank You for being our strength, our rescue, and our song throughout every ordinary day. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Trust Without Reservation",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-july-6-7-2013.html"
+    },
+    "D3": {
+     "author": "Gwen Smith",
+     "work": "The Power of a Song",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-august-29-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 23012001,
+   "end": 23012006,
+   "ref": "Isaiah 12:1-6",
+   "ranges": [
+    [
+     23012001,
+     23012006
+    ]
+   ],
+   "title": "Drawing from the Wells of Salvation",
+   "key_verse": [
+    23012003,
+    23012003
+   ],
+   "reflect": [
+    {
+     "text": "The prophet pictures God's rescue as deep springs of fresh water. In Jesus, we find unending wells of blessing for every need of the soul. If we lack sympathy, we find it in His tears; if we need courage, peace, purity, or mercy, each quality flows directly from Him. There is no spiritual grace we need that does not have its full supply waiting for us in Christ.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "To receive this living water, we must draw it out. F. B. Meyer writes that \"faith is the bucket\" we lower into God's full supply. This means trusting that God has already answered our request for a specific grace and given it to us. Instead of staring nervously at our own weak faith to see what we have, we are called to step out and use what God supplies, confident that His riches will never run dry.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "What great joy comes from discovering that all the wealth of God's salvation is within our reach. We can draw from His kindness continually without any fear of emptying the well. Turning to Him ends our restless thirst, our inner anxiety, and our weary search for help, giving us cause to praise His holy name among all people.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What specific grace, such as patience, peace, or courage, do you need to draw from Christ today?",
+    "Are you looking at the weakness of your own faith, or are you trusting in the unending supply found in Jesus?"
+   ],
+   "prayer": "Lord, thank You for opening rich wells of salvation for us in Jesus. Forgive us when we look at our own weakness instead of trusting Your full supply. Give us faith to draw the peace and courage we need from You today, and satisfy our thirsty souls. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 12:3",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

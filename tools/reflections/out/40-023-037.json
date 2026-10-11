@@ -1,0 +1,71 @@
+{
+ "id": "40-023-037",
+ "title": "Lament over Jerusalem",
+ "refs": [
+  "Matthew 23:37-39",
+  "Luke 13:31-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40023037,
+   "end": 40023039,
+   "ref": "Matthew 23:37-39; Luke 13:31-35",
+   "ranges": [
+    [
+     40023037,
+     40023039
+    ],
+    [
+     42013031,
+     42013035
+    ]
+   ],
+   "title": "The Compassionate Heart of Jesus",
+   "key_verse": [
+    40023037,
+    40023037
+   ],
+   "reflect": [
+    {
+     "text": "Jesus grieved deeply over the city of Jerusalem. For generations, the people turned away from God's messengers and refused to repent, which means turning away from sin and returning to God. Even after so much rebellion, Jesus revealed the tender heart of God toward His people. He pictured Himself as a mother hen longing to gather her young chicks under her wings to protect them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet the people refused His loving shelter. Persistently rejecting Christ leads to spiritual emptiness and God's righteous judgment. Even when God carries out His just punishment, He takes no pleasure in the suffering or death of those who do wrong. His sorrow shows us that divine justice comes with a broken heart over those who walk away.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This passage teaches us how to view those who reject the gospel today. Instead of looking down on others or feeling self-righteous, we are called to share the sorrow of Jesus. When we see people refuse God's mercy, our hearts should be filled with genuine grief and compassion rather than pride.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you see people reject God, do you feel sorrow for them or do you tend to feel superior?",
+    "How can remembering God's compassionate heart shape the way you pray for those who do not believe?"
+   ],
+   "prayer": "Lord Jesus, thank You for Your tender compassion toward people who stray. Soften our hearts so that we grieve over lost souls instead of looking at them with pride. Please help us to reflect Your gentle love as we point others to Your safe shelter. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Jesus Laments Over Jerusalem",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jesus-laments-over-jerusalem"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

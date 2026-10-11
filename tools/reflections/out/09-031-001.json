@@ -1,0 +1,73 @@
+{
+ "id": "09-031-001",
+ "title": "Saul’s Overthrow and Death",
+ "refs": [
+  "1 Samuel 31:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9031001,
+   "end": 9031006,
+   "ref": "1 Samuel 31:1-6",
+   "ranges": [
+    [
+     9031001,
+     9031006
+    ]
+   ],
+   "title": "The Tragic End of Self-Reliance",
+   "key_verse": [
+    9031006,
+    9031006
+   ],
+   "reflect": [
+    {
+     "text": "Saul's death on Mount Gilboa brings a tragic end to a king who insisted on doing things his own way. By continually refusing to obey the Lord, Saul faced God's discipline and brought public shame upon Israel before their enemies. His downfall reminds us that God does not let stubborn disobedience go unanswered, and we must never take his grace—his free and undeserved favor—for granted.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At first, Saul's defeat seemed to wipe out all hope for the nation. Yet God used the close of this failed era to clear the way for King David, whose royal family would one day lead to Jesus the Messiah. Saul's end showed the emptiness of human foolishness, but God's plan was already moving forward toward the cross, where Christ would end our guilt and bring true grace.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Saul lived as a warning of what happens when we trust in ourselves rather than in God. Instead of walking in pride and stubbornly guarding our own way, we are called to let go of our self-will and let the Lord take full control of our lives.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to rely on yourself rather than obey God?",
+    "What would it look like for you to surrender control of those areas to the Lord today?"
+   ],
+   "prayer": "Lord, forgive us for the times we stubbornly go our own way and depend on our own strength. Help us to take your word seriously and never treat your grace lightly. We surrender our lives to you and ask you to guide our steps each day.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Saul Falls to the Philistines",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/saul-falls-to-philistines"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Take Control",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-august-20-21-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

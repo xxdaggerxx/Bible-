@@ -1,0 +1,61 @@
+{
+ "id": "02-026-031",
+ "title": "The Veil",
+ "refs": [
+  "Exodus 26:31-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2026031,
+   "end": 2026035,
+   "ref": "Exodus 26:31-35",
+   "ranges": [
+    [
+     2026031,
+     2026035
+    ]
+   ],
+   "title": "Welcome into God's Presence",
+   "key_verse": [
+    2026033,
+    2026033
+   ],
+   "reflect": [
+    {
+     "text": "In the tabernacle, God commanded a beautiful veil to hang between the Holy Place and the Most Holy Place. Behind this curtain rested the ark and the mercy seat. The veil acted as a barrier, keeping people separated from the immediate presence of God. Yet when Jesus died on the cross, that dividing veil was torn open. The Holy Spirit showed that the way was finally clear. Now, every believer is welcome to draw near to God our Father and live in His presence every day.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "F. B. Meyer notes that many Christians never pass beyond this barrier. They know about forgiveness at the altar and daily washing, but they miss the deep joy of close fellowship with God. Entering \"within the veil\" means following Jesus in dying to our own selfish desires. As the Holy Spirit cleanses our hearts and daily habits, we are welcomed into a life of real intimacy with the Father, standing right before His mercy seat through Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you living in daily, close fellowship with God, or are you staying at a distance from Him?",
+    "What selfish habits might be keeping you from drawing near to God's presence today?"
+   ],
+   "prayer": "Lord Jesus, thank You for opening the way into the Father's presence through Your death on the cross. Cleanse our hearts and our daily lives by Your Holy Spirit. Teach us to put aside our selfish desires so we may walk closely with You each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 26:33",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

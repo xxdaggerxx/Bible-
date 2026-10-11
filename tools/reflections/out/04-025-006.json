@@ -1,0 +1,66 @@
+{
+ "id": "04-025-006",
+ "title": "The Zeal of Phinehas",
+ "refs": [
+  "Numbers 25:6-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4025006,
+   "end": 4025018,
+   "ref": "Numbers 25:6-18",
+   "ranges": [
+    [
+     4025006,
+     4025018
+    ]
+   ],
+   "title": "Zeal for the Lord's Honor",
+   "key_verse": [
+    4025011,
+    4025011
+   ],
+   "reflect": [
+    {
+     "text": "Israel was not overcome by an army on the battlefield. Instead, their greatest danger came when they were seduced into sexual sin and worshiping false gods. By giving up what made them distinct as God's special people, they brought the Lord's holy anger upon themselves.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When an Israelite leader brazenly defied God in front of everyone, Phinehas stepped forward to act. His quick and decisive intervention was not an act of senseless violence. Rather, it was a principled stand to defend God's covenant, and it turned away God's judgment to save thousands of lives from a deadly plague.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In the same way, the church today must remain watchful against subtle cultural compromise. We face the daily temptation to make self-serving spiritual compromises with the world around us. God calls us to care deeply about His honor and to keep our lives pure and devoted to Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to blend in with the culture around you rather than honor God?",
+    "How can we cultivate a heart that truly cares about God's holiness and truth?"
+   ],
+   "prayer": "Lord, help us to stand firm in our loyalty to you. Keep us safe from cultural temptations and quiet compromises that harm our faith. Teach us to cherish your holiness and live in a way that honors your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Numbers 25, Psalm 68, Isaiah 15, 1 Peter 3",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/numbers-25-psalm-68-isaiah-15-1-peter-3/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

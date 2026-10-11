@@ -1,0 +1,68 @@
+{
+ "id": "40-019-013",
+ "title": "Jesus Blesses the Children",
+ "refs": [
+  "Matthew 19:13-15",
+  "Mark 10:13-16",
+  "Luke 18:15-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40019013,
+   "end": 40019014,
+   "ref": "Matthew 19:13-14",
+   "ranges": [
+    [
+     40019013,
+     40019014
+    ]
+   ],
+   "title": "\"Let the Little Children Come to Me\"",
+   "key_verse": [
+    40019014,
+    40019014
+   ],
+   "reflect": [
+    {
+     "text": "When people brought children to Jesus, the disciples saw it as an unwelcome intrusion. Yet Jesus showed that unexpected interruptions are often appointments arranged by God. When our daily plans are broken by other people, God can use those moments to chip away at our selfishness and pride. If we leave room in our schedules, we can welcome unexpected visitors and encourage those who are weary or hurting.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus also tells us not to hinder young people from coming to Him. We can always bring children to the Lord by praying for them. No human rule or earthly limit can stop us from interceding for the next generation. As children face new seasons, worries, and changes in school, we are called to pray faithfully for their spiritual life and safety. We can ask God to guard their minds and give them discernment to compare what they learn with His truth.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you create room in your daily schedule to welcome people who interrupt you?",
+    "Which children in your life can you bring before Jesus in prayer today?"
+   ],
+   "prayer": "Lord, help us to see daily interruptions as chances to serve others rather than burdens. Soften our hearts so we can encourage people who need your love. We bring our children to You, asking You to protect their minds, guide their choices, and draw them close to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Mary Southerland",
+     "work": "Divine Interruptions",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/divine-interruptions-girlfriends-in-god-february-16-2016.html"
+    },
+    "D2": {
+     "author": "Lynette Kittle",
+     "work": "A Prayer to Lead Our Children Back to School",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-to-lead-our-children-back-to-school.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

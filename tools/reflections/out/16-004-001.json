@@ -1,0 +1,74 @@
+{
+ "id": "16-004-001",
+ "title": "The Work Ridiculed",
+ "refs": [
+  "Nehemiah 4:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 16004001,
+   "end": 16004008,
+   "ref": "Nehemiah 4:1-8",
+   "ranges": [
+    [
+     16004001,
+     16004008
+    ]
+   ],
+   "title": "Trusting God Through Ridicule and Delays",
+   "key_verse": [
+    16004006,
+    16004006
+   ],
+   "reflect": [
+    {
+     "text": "When Nehemiah and the people began repairing the broken walls of Jerusalem, hostile neighbors mocked them. Harsh and cruel words can cause deep pain, and our spiritual enemy often uses such lies to shatter our confidence and stop our progress. Whenever we seek renewal or try to serve God, we can expect pushback.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "It can be confusing when hard work for God meets sudden resistance and threats. Yet time and energy spent facing trouble are never wasted in God's eyes. He uses opposition and interruptions to strip away our self-reliance and teach us dependent faith, which is trusting God instead of our own strength.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The people kept building because they had a mind to work and turned their cries to God. When we recognize the enemy's deceit and bring our fears to the Lord, trials become the very ground where genuine trust is formed. God cares far more about growing our faith in Him than about quick and easy results.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What discouragements or harsh words have made you want to stop serving God?",
+    "How might God be using a current delay or setback to help you depend on Him?"
+   ],
+   "prayer": "Lord God, help us not to lose heart when others mock our efforts or when troubles slow us down. Remind us that our setbacks are never wasted in Your hands. Teach us to reject discouraging lies and rely fully on Your strength today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jack Graham",
+     "work": "Power Point - Sept. 1, 2006",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-sept-1-2006-1419484.html"
+    },
+    "D2": {
+     "author": "Jon Bloom",
+     "work": "What God Is Building Through All the \"Inefficiencies\" of Life",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/what-god-is-building-through-all-the-inefficiencies-of-life"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "11-006-005",
+ "title": "The Chambers",
+ "refs": [
+  "1 Kings 6:5-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11006005,
+   "end": 11006010,
+   "ref": "1 Kings 6:5-10",
+   "ranges": [
+    [
+     11006005,
+     11006010
+    ]
+   ],
+   "title": "Prepared in the Quarry",
+   "key_verse": [
+    11006007,
+    11006007
+   ],
+   "reflect": [
+    {
+     "text": "When Solomon built the temple, no sound of a hammer, chisel, or iron tool was heard at the building site. All the heavy shaping was finished beforehand at the quarry. In absolute quietness, stone after stone was brought in and fitted smoothly into place. As F. B. Meyer notes, this quiet building shows how God is constructing His Church. While the kingdoms of this world rise and fall, God is quietly saving people and adding them, one by one, to His lasting spiritual house.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This picture helps us make sense of our present troubles. In this earthly life, we are still in God's quarry. When we experience pain, sorrow, or difficult testing, God is using those trials like tools to shape our character. The cutting and chiselling can feel painful and hard to endure, but they are preparing us for the exact place God has planned for us in eternity.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Be encouraged when life feels difficult. The cutting and smoothing will not last forever. When our time on earth is done, all our trials will be finished. No iron tool, grief, or crying can ever enter heaven. There, every believer will rest in the completed house of God, perfectly prepared to honor Him forever.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that trials are God's shaping tools change the way you face your present hardships?",
+    "What helps you trust God when the chiselling work in your life feels painful?"
+   ],
+   "prayer": "Lord, thank you that you are quietly building your Church and shaping each of us for eternity. Help us to be patient when trials feel like a sharp chisel at work in our lives. Remind us that our present troubles are preparing us for an eternal home where sorrow will never enter. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Kings 6:7",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

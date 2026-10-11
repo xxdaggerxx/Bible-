@@ -1,0 +1,15 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "https://www.biblegateway.com/passage/?search=Isaiah+27%3A2-3&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+27%3A2-3&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+27%3A2-6&version=NRSVUE",
+  "https://www.biblegateway.com/passage/?search=Isaiah+27%3A3-5&version=NKJV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+27%3A3-5&version=NLT",
+  "https://www.biblegateway.com/passage/?search=Isaiah+27%3A5-6&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+27&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+27&version=NRSVUE%3BNIV"
+ ],
+ "cost": 0.037212125,
+ "model": "google/gemini-3.8-flash"
+}

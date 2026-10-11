@@ -1,0 +1,71 @@
+{
+ "id": "40-015-029",
+ "title": "The Feeding of the Four Thousand",
+ "refs": [
+  "Matthew 15:29-39",
+  "Mark 8:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40015029,
+   "end": 40015039,
+   "ref": "Matthew 15:29-39; Mark 8:1-10",
+   "ranges": [
+    [
+     40015029,
+     40015039
+    ],
+    [
+     41008001,
+     41008010
+    ]
+   ],
+   "title": "Christ Abundantly Provides for All",
+   "key_verse": [
+    41008002,
+    41008002
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, a vast crowd was far from home with nothing to eat. Jesus had compassion on them and provided a miracle of food in the wilderness. This miracle shows that His care and provision extend to both Jews and Gentiles, meaning people from all nations. Christ is the true living bread who richly satisfies everyone who comes to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even though the disciples had seen Jesus perform a similar miracle earlier, they quickly forgot His power. Faced with a hungry crowd in a lonely place, they doubted where enough bread could be found. We often do the exact same thing. When new difficulties arise, we tend to fix our eyes on the obstacles around us and forget God's past faithfulness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Remembering what God has done strengthens our trust for today. Above all, when we recall how the Lord delivered us from our sin, we find steady confidence that He will continue to care for us through every trial.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you encounter a new difficulty, what helps you remember God's faithfulness in the past?",
+    "How can remembering Christ's deliverance from your sin help you trust Him with today's worries?"
+   ],
+   "prayer": "Lord Jesus, thank You for being the living bread who satisfies our needs and cares for all people. Forgive us when we forget Your past faithfulness and worry about the obstacles before us. Help us rest in the assurance of Your great salvation and trust Your constant care today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Feeding Four Thousand",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/feeding-four-thousand"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

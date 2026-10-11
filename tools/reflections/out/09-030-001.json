@@ -1,0 +1,74 @@
+{
+ "id": "09-030-001",
+ "title": "The Amalekites Raid Ziklag",
+ "refs": [
+  "1 Samuel 30:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 9030006,
+   "end": 9030006,
+   "ref": "1 Samuel 30:6",
+   "ranges": [
+    [
+     9030006,
+     9030006
+    ]
+   ],
+   "title": "\"David Found Strength in the LORD His God\"",
+   "key_verse": [
+    9030006,
+    9030006
+   ],
+   "reflect": [
+    {
+     "text": "David was in deep trouble. His city had been burned, his family was taken captive, and his own soldiers were so bitter that they talked about stoning him. When the people around us turn against us or let us down, we quickly learn that relying too much on others leaves us helpless. In that dark and lonely moment, David had to look directly to the Lord.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Earlier in his life, David had received help from his friend Jonathan, who encouraged him by speaking God's promises to him. But at Ziklag, Jonathan was not there. David had to do for himself what his friend had once done. He strengthened his own heart by meditating on and believing the words God had spoken.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We can follow David's example whenever we face distress. When trials leave us feeling isolated, drawing close to God in prayer and worship restores our spirits. We can read Scripture and feed our souls on the divine promises fulfilled in Jesus, remembering how God has faithfully helped us in the past.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When people let you down or leave you feeling alone, what promises from God can you hold on to?",
+    "How can remembering God's past faithfulness give you peace during a hard time today?"
+   ],
+   "prayer": "Lord, when trouble comes and we feel alone, teach us to look directly to you for strength. Help us remember your faithful promises fulfilled in Christ, and quiet our fears as we draw near to you in prayer. Amen.",
+   "sources": {
+    "D1": {
+     "author": "David Mathis",
+     "work": "How to Get Strong in God",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/how-to-get-strong-in-god"
+    },
+    "D2": {
+     "author": "Lynette Kittle",
+     "work": "Encouraging Ourselves through Tough Times",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/encouraging-ourselves-through-tough-times-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -245,5 +245,8 @@ class LayoutAnchorTest {
         assertEquals("SANS|p|n", k.encode())
         assertEquals(k, com.biblestudy.app.model.TextStyleKey.decode("SANS|p|n"))
         assertEquals(com.biblestudy.app.model.TextStyleKey(), com.biblestudy.app.model.TextStyleKey.decode("BOOK"))
+        val big = com.biblestudy.app.model.TextStyleKey(com.biblestudy.app.model.TextFont.SERIF, paragraphs = true, size = 145)
+        assertEquals("SERIF|p|s145", big.encode())
+        assertEquals(big, com.biblestudy.app.model.TextStyleKey.decode(big.encode()))
     }
 }

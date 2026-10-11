@@ -1,0 +1,132 @@
+{
+ "id": "58-010-019",
+ "title": "A Call to Persevere",
+ "refs": [
+  "Hebrews 10:19-39"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 58010035,
+   "end": 58010036,
+   "ref": "Hebrews 10:35-36",
+   "ranges": [
+    [
+     58010035,
+     58010036
+    ]
+   ],
+   "title": "\"Do Not Throw Away Your Confidence\"",
+   "key_verse": [
+    58010035,
+    58010035
+   ],
+   "reflect": [
+    {
+     "text": "When troubles press hard against us, we might feel tempted to let go of our confidence in Christ. But our ability to stand firm does not depend on our own weak power. True endurance rests entirely on Jesus and His faithfulness. Turning away from Him means abandoning our only access to God, so we must turn our attention away from our weaknesses and fix our eyes on Him.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "We often forget how good God has been to us as soon as a new difficulty starts. To hold onto our confidence, we need to intentionally recall how He delivered and cared for us in the past. His past faithfulness proves that He will watch over us through upcoming trials, and we can strengthen one another by talking about His track record.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Patient endurance is necessary if we want to receive all that God has promised. The Lord uses difficult seasons and loving discipline to build our spiritual stamina. These hardships serve a good purpose that leads to our eternal joy, so we should urge one another to keep moving forward instead of only looking for an easy way out.",
+     "sources": [
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What is one past time God helped you that can encourage you today?",
+    "How can you remind a struggling friend of God's faithfulness this week?"
+   ],
+   "prayer": "Lord, help us to keep our confidence in Jesus rather than relying on our own strength. Remind us of Your past goodness whenever new troubles arrive. Give us endurance to do Your will and wait for what You have promised. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Endure With Confidence",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/endure-confidence"
+    },
+    "D4": {
+     "author": "Adrian Rogers",
+     "work": "Remember God’s Provision to Increase Faith",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-april-30-2023.html"
+    },
+    "D5": {
+     "author": "Jon Bloom",
+     "work": "You Have Need of Endurance",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/you-have-need-of-endurance"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 58010019,
+   "end": 58010039,
+   "ref": "Hebrews 10:19-39",
+   "ranges": [
+    [
+     58010019,
+     58010039
+    ]
+   ],
+   "title": "Drawing Near and Holding Fast",
+   "key_verse": [
+    58010023,
+    58010023
+   ],
+   "reflect": [
+    {
+     "text": "Following Jesus through hard times requires a steady hope. Hope is God's gift to us, bringing strength and courage when we feel exhausted or ready to quit. When we face lingering sickness, grief, or painful delays, this hope reminds us that God is still in complete control and gives us the patience to trust Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This living hope also changes how we view earthly possessions. Early believers could joyfully accept having their property taken away because they knew they owned something far better. As Charles Spurgeon wrote, \"heaven is even now our own.\" Worldly things can be lost, but the eternal home Jesus has prepared for us remains safe forever.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing your heavenly home is secure change how you handle earthly losses?",
+    "Where in your life do you need God's gift of hope to help you wait patiently on Him?"
+   ],
+   "prayer": "Father, thank You for giving us hope that lifts us up when we are tired and hurting. Help us remember that our true treasure is kept safe in heaven with You. Keep our hearts fixed on Your promises as we walk together each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 28",
+     "on": "Hebrews 10:34",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Nothing Helps Like Hope",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-march-28-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

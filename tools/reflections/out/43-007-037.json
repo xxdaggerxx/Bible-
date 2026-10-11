@@ -1,0 +1,74 @@
+{
+ "id": "43-007-037",
+ "title": "Living Water",
+ "refs": [
+  "John 7:37-39"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43007037,
+   "end": 43007039,
+   "ref": "John 7:37-39",
+   "ranges": [
+    [
+     43007037,
+     43007039
+    ]
+   ],
+   "title": "Streams of Living Water",
+   "key_verse": [
+    43007037,
+    43007037
+   ],
+   "reflect": [
+    {
+     "text": "Jesus waited patiently until the final day of the feast to call out to the crowd. His loud cry was filled with tender pity and love. He offered living water to anyone who was thirsty. You do not need to make yourself worthy before you come to Him. Just as anyone can drink plain water, any person with a troubled conscience or an aching heart is invited to come directly to Jesus.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus was speaking about the Holy Spirit, whom believers would soon receive. The Spirit could not be poured out right away, because Jesus had not yet been glorified. The Saviour had to finish His work on the cross, rise from death, and ascend to the Father's right hand. Only when Jesus sat upon His heavenly throne could the Spirit be given to His followers.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This brings a searching lesson for our daily walk. We may wonder why the Spirit does not flow through our lives like fresh rivers to help others. As F. B. Meyer observes, we often fail to make it our life-purpose \"to glorify the Lord Jesus.\" When we welcome Christ as King and surrender our plans to Him, His Spirit can work freely in us, turning our lives into channels of His blessing.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you come directly to Jesus to satisfy your soul's deepest thirst?",
+    "Are you honouring Jesus as King in your life so His Spirit can flow through you?"
+   ],
+   "prayer": "Lord Jesus, thank You for patiently inviting thirsty people to come to You. Forgive us for turning to things that never satisfy the heart. Help us to honour You as our King each day, so that Your Holy Spirit may flow freely through our lives to bless others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 31",
+     "on": "John 7:37",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "John 7:39",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

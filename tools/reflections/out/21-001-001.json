@@ -1,0 +1,137 @@
+{
+ "id": "21-001-001",
+ "title": "Everything Is Futile",
+ "refs": [
+  "Ecclesiastes 1:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 21001007,
+   "end": 21001007,
+   "ref": "Ecclesiastes 1:7",
+   "ranges": [
+    [
+     21001007,
+     21001007
+    ]
+   ],
+   "title": "\"The Sea Is Never Full\"",
+   "key_verse": [
+    21001007,
+    21001007
+   ],
+   "reflect": [
+    {
+     "text": "In this world, everything is always moving and changing. Water flows into the ocean, yet the sea is never full, and the streams cycle back again. F. B. Meyer observes that the joys of this world \"will never satisfy\" the human heart, because earthly pleasures soon grow dull and leave us wanting more. When we leave God out of our lives, our daily existence feels like a wearisome and empty routine.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus gives us what earthly pursuits never can. While the streams of this world dry up or leave us disappointed, Christ offers living water and unchanging peace. In His love and service, our souls find true rest and a sure hope that lasts forever beyond the skies.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The sea also gives us a picture of how to live. It receives water from all the rivers, but it freely gives it back through clouds and rain. Charles Spurgeon reminds us that living only for ourselves brings harm, whereas Jesus poured out His life for others. Because we have received so much grace, God's undeserved kindness, we are called to share our blessings generously with those around us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly pleasures are you tempted to rely on for happiness instead of finding rest in Jesus?",
+    "How can you share the blessings God has given you with someone in need this week?"
+   ],
+   "prayer": "Lord Jesus, thank You for being our unchanging joy when this world leaves us empty. Help us to find our deepest satisfaction in Your love rather than chasing earthly things. Teach us to live generously, sharing Your grace and kindness with others today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 26",
+     "on": "Ecclesiastes 1:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ecclesiastes 1:7",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 21001001,
+   "end": 21001011,
+   "ref": "Ecclesiastes 1:1-11",
+   "ranges": [
+    [
+     21001001,
+     21001011
+    ]
+   ],
+   "title": "Finding Meaning in an Endless Cycle",
+   "key_verse": [
+    21001002,
+    21001002
+   ],
+   "reflect": [
+    {
+     "text": "Life in this world often feels like an endless loop. The sun rises and sets, generations come and go, and our daily chores never truly end. Society pressures us to define our worth by relentless striving and material success, leaving us exhausted. An unfinished list of tasks is not a personal failure, because the duties of everyday life will always recur.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Ecclesiastes strips away our illusions about human effort. If we exclude God from our lives, all our hard work and labor end up feeling empty and dispiriting. Human life is brief, and working solely for temporary gains cannot provide lasting significance beyond the grave.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "The repeating rhythms of nature remind us that the weight of the universe does not rest on our shoulders. When we look to God, our whole perspective shifts. Eternal hope in Jesus Christ gives our short lives real significance and redeems our daily routines with joy. We are freed to do our work for the Lord rather than for temporary approval.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When your daily routine feels heavy or repetitive, how does an eternal perspective bring you comfort?",
+    "Are you tempted to measure your value by what you achieve rather than by your hope in Christ?"
+   ],
+   "prayer": "Heavenly Father, forgive us when we measure our worth by our busy schedules and worldly success. Remind us that the world does not rest on our shoulders, and lift our eyes to eternity. Fill our ordinary days with lasting joy as we work for Jesus Christ. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Laura Bailey",
+     "work": "A Prayer to Find Eternal Meaning",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-to-find-eternal-meaning.html"
+    },
+    "D4": {
+     "author": "Alistair Begg",
+     "work": "A Dose of Reality",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-may-5-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

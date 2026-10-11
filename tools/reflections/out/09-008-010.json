@@ -1,0 +1,66 @@
+{
+ "id": "09-008-010",
+ "title": "Samuel’s Warning",
+ "refs": [
+  "1 Samuel 8:10-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9008010,
+   "end": 9008018,
+   "ref": "1 Samuel 8:10-18",
+   "ranges": [
+    [
+     9008010,
+     9008018
+    ]
+   ],
+   "title": "The King Who Gives",
+   "key_verse": [
+    9008011,
+    9008011
+   ],
+   "reflect": [
+    {
+     "text": "Samuel gave the people of Israel a clear warning when they asked for an earthly king. Worldly rulers naturally take from their people. Samuel told them that a human king would demand their labor, take their sons and daughters, claim their finest fields, and take their crops. Over time, Israel's history proved this warning was true. Earthly kings used their power to enrich themselves at the expense of the people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "People today often assume that following God is restrictive and takes away our freedom. But Jesus is completely different from earthly rulers. While human leaders take, Jesus came into our world as a humble King who gives. He does not take away our freedom. Instead, He offers us eternal life, deep rest for our souls, and true spiritual freedom.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Human leaders will always fall short and let us down. Jesus, however, never disappoints His people. He supplies everything we truly need, and the only thing this loving King ever takes from us is our sin.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways have you been tempted to trust in human leaders or worldly things rather than in God?",
+    "How does knowing that Jesus gives instead of takes help you trust Him more with your daily life?"
+   ],
+   "prayer": "Lord Jesus, thank You for being a King who gives rather than takes. Forgive us for the times we look to worldly things or human rulers to rescue us. Help us to rest in Your humble rule, grateful that You have taken away our sin and given us eternal life. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg",
+     "work": "The King Who Does Not Take",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-june-27-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

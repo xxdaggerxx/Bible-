@@ -1,0 +1,66 @@
+{
+ "id": "54-001-001",
+ "title": "Paul’s Greeting to Timothy",
+ "refs": [
+  "1 Timothy 1:1-2"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 54001001,
+   "end": 54001002,
+   "ref": "1 Timothy 1:1-2",
+   "ranges": [
+    [
+     54001001,
+     54001002
+    ]
+   ],
+   "title": "Encouragement for a True Child in Faith",
+   "key_verse": [
+    54001002,
+    54001002
+   ],
+   "reflect": [
+    {
+     "text": "The apostle Paul wrote this letter after being released from his first time in a Roman prison. He addressed it to Timothy, a younger companion whom he trusted completely. Paul cared for Timothy like a real spiritual son. In his greeting, Paul wished him grace, mercy, and peace from God the Father and Christ Jesus.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Timothy was stationed in the city of Ephesus to carry out an important pastoral task. He had to confront and stop false teachers who had made their way into church leadership. Paul wrote this letter to provide Timothy with apostolic authority, wisdom, and heartfelt encouragement for this difficult assignment.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul’s words are not just for Timothy in the past. Believers today are called to let the Holy Spirit apply the practical warnings and teachings of this letter to our own church life. God still gives his people the guidance and strength they need to stand firm in the truth.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you pray for and encourage church leaders who carry out difficult tasks?",
+    "In what ways can you allow the Holy Spirit to shape your church life through the teachings of Scripture?"
+   ],
+   "prayer": "Lord God, thank you for giving your grace, mercy, and peace to your servants. Please grant wisdom and courage to church leaders as they protect and teach your people. Help us by your Holy Spirit to listen to your Word and put its instructions into practice in our daily lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "First Timothy",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/first-timothy"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

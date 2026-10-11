@@ -1,0 +1,84 @@
+{
+ "id": "40-006-016",
+ "title": "Proper Fasting",
+ "refs": [
+  "Matthew 6:16-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40006016,
+   "end": 40006018,
+   "ref": "Matthew 6:16-18",
+   "ranges": [
+    [
+     40006016,
+     40006018
+    ]
+   ],
+   "title": "Fasting for the Father Alone",
+   "key_verse": [
+    40006018,
+    40006018
+   ],
+   "reflect": [
+    {
+     "text": "In Jesus' day, some religious people tried hard to look miserable when they fasted. They left their hair messy and looked worn out so everyone would notice how spiritual they were. Jesus warned that their only reward was human praise. Fasting was never meant to be a show. It is an urgent, humble way to turn to God and remember how much we depend on Him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Instead of putting on a performance, Jesus told His followers to wash their faces and look completely normal. As F. B. Meyer observed, \"We have just as much religious life as we show to God in secret.\" When we hide our spiritual acts from others, we protect our hearts from pride. We trade the cheap applause of people for genuine closeness with our heavenly Father.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God sees everything done in quiet places, away from curious eyes. When we give up our own comforts simply to seek Him, He pays close attention. We do not need to advertise our devotion to get His notice. The Father who watches in secret knows our hearts, and He promises a true and lasting reward.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you practice spiritual habits like prayer or fasting, do you ever find yourself wanting other people to notice?",
+    "How can keeping your devotion quiet help you focus purely on God?"
+   ],
+   "prayer": "Heavenly Father, forgive us when we want other people to admire our spiritual lives. Help us to seek Your presence in quiet, hidden ways without needing attention from anyone else. Teach us to depend entirely on You and to find our joy in Your love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Matthew 6:18",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Fasting in Secret",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/fasting-secret"
+    },
+    "D3": {
+     "author": "Grace to You",
+     "work": "The Heart of Christian Fasting, Part 2: Fasting in the Sermon on the Mount",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/B110111/the-heart-of-christian-fasting-part-2-fasting-in-the-sermon-on-the-mount"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

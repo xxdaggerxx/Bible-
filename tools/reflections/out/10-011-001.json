@@ -1,0 +1,99 @@
+{
+ "id": "10-011-001",
+ "title": "David and Bathsheba",
+ "refs": [
+  "2 Samuel 11:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 10011001,
+   "end": 10011003,
+   "ref": "2 Samuel 11:1-3",
+   "ranges": [
+    [
+     10011001,
+     10011003
+    ]
+   ],
+   "title": "\"David Walked upon the Roof\"",
+   "key_verse": [
+    10011002,
+    10011002
+   ],
+   "reflect": [
+    {
+     "text": "David was a godly king, yet he let down his guard. When kings usually marched out to war, David stayed behind in Jerusalem, resting in idleness and luxury. Leaving his daily duties and spiritual discipline left him open to danger. Even mature believers can fall into deep trouble when they become careless. As Charles Spurgeon wrote, \"The armour-bearer of Sin is Self-confidence.\"",
+     "sources": [
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "From his rooftop, David saw Bathsheba bathing. He could not stop the unexpected first glance, but he chose to keep looking and let his desire grow. Instead of turning away and leaving the roof, he allowed lust to silence his conscience, ignoring that she was another man's wife. Flirting with temptation is like a moth circling a flame, and it quickly pulls us into a downward spiral of sin.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "No place on earth is completely free from temptation, not even our own homes in the quiet evening. Temptation tests us, but it also gives us a chance to build spiritual integrity by stepping away. Rather than trusting our own strength, we need God to keep us watchful and humble every day.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "In what parts of your daily routine are you most tempted to become careless or spiritually idle?",
+    "When an unexpected temptation catches your attention, what practical steps can you take to turn away immediately?"
+   ],
+   "prayer": "Lord, protect our hearts when we grow idle or feel too secure in our own strength. Keep us alert to the subtle beginnings of sin, and grant us grace to turn away from danger without delay. Teach us to stay faithful in our daily duties and rely entirely on your keeping power.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 17",
+     "on": "2 Samuel 11:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "The Downward Spiral of Sin",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-may-23-2023.html"
+    },
+    "D3": {
+     "author": "Jill Briscoe",
+     "work": "Get Off the Roof!",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-women/get-off-the-roof-one-year-devotions-for-women-february-10.html"
+    },
+    "D4": {
+     "author": "Stuart Briscoe",
+     "work": "A Seductive Glow",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/a-seductive-glow-one-year-devotions-for-men-october-23.html"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "David’s Great Sin",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/davids-great-sin"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

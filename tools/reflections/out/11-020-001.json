@@ -1,0 +1,66 @@
+{
+ "id": "11-020-001",
+ "title": "Ben-hadad Attacks Samaria",
+ "refs": [
+  "1 Kings 20:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11020001,
+   "end": 11020012,
+   "ref": "1 Kings 20:1-12",
+   "ranges": [
+    [
+     11020001,
+     11020012
+    ]
+   ],
+   "title": "Do Not Boast Before the Battle",
+   "key_verse": [
+    11020011,
+    11020011
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, King Ben-hadad marched against Samaria with a massive army and made harsh demands. When King Ahab finally refused to surrender everything, Ben-hadad boasted that he would turn Samaria into dust. Ahab answered with a clear warning: a soldier strapping on armor should not brag like one who has already won the fight and is taking his armor off.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As Glynnis Whitwer points out, sharing our personal ambitions ahead of time often gives us a false sense of success before we do the actual work. Loud words and proud claims mean very little without the steady, daily discipline needed to finish a difficult task.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Instead of broadcasting our goals to get praise from others, we should focus quietly on what God gives us to do right now. God calls us to spend our energy on humble obedience today rather than making empty promises about tomorrow.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there goals you tend to talk about rather than quietly working to finish?",
+    "What simple task of obedience can you focus on today without seeking attention from others?"
+   ],
+   "prayer": "Lord, forgive us when we speak proud words about things we have not done. Give us the discipline to work quietly and faithfully each day. Help us to obey your call with humble hearts rather than seeking praise from others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Glynnis Whitwer",
+     "work": "Keeping My New Year's Resolutions to Myself",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-jan-5-2011-11643606.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "25-004-001",
+ "title": "The Distress of Zion",
+ "refs": [
+  "Lamentations 4:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 25004001,
+   "end": 25004022,
+   "ref": "Lamentations 4:1-22",
+   "ranges": [
+    [
+     25004001,
+     25004022
+    ]
+   ],
+   "title": "Under the Shadow of Our King",
+   "key_verse": [
+    25004020,
+    25004020
+   ],
+   "reflect": [
+    {
+     "text": "The people of Judah suffered a heartbreaking loss. Enemies chased them down swifter than eagles, and their earthly king was captured in a trap. The people had hoped to find safety under his care, calling him the very breath of their life. Yet this earthly ruler could not protect them, and their hopes fell with him into the pit.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This tragedy points us to Jesus, both in likeness and in contrast. Like that king, Jesus is the Lord's Anointed, the true breath of our life. We draw upon Him daily for our spiritual life, receiving His Spirit and His strength. Because He is the Christ, which means the Anointed One, we share in His anointing as His people and rest under His shelter.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet Jesus is far greater than any earthly king who failed. Though He was once brought into the pit of death, He rose again. As F. B. Meyer writes, He now lives to be the \"shield and protector of His people\". No matter what hardships we face, we dwell safely under His care, sheltered like travelers resting beside a great rock in a dry land.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways do you look to Jesus each day as the breath of your life?",
+    "How does knowing that Christ is alive help you trust Him when earthly protections fail?"
+   ],
+   "prayer": "Lord Jesus, thank You for being the breath of our life and our living King. Forgive us when we place our ultimate hope in human strength that cannot save us. Keep us safe under Your shelter today, and fill us with Your Spirit and resurrection strength. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Lamentations 4:20",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

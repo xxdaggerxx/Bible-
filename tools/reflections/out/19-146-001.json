@@ -1,0 +1,68 @@
+{
+ "id": "19-146-001",
+ "title": "Praise the LORD, O My Soul",
+ "refs": [
+  "Psalms 146:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19146001,
+   "end": 19146010,
+   "ref": "Psalms 146:1-10",
+   "ranges": [
+    [
+     19146001,
+     19146010
+    ]
+   ],
+   "title": "The God Who Frees and Restores",
+   "key_verse": [
+    19146007,
+    19146007
+   ],
+   "reflect": [
+    {
+     "text": "Throughout history, the Lord has freed people who were trapped, such as Joseph, Peter, and the people of Israel in Egypt. He is still setting captives free today. You might feel locked up by sorrow, doubt, fear, or your own sin. You do not have to break those heavy iron chains by your own strength. As Charles Spurgeon reminds us, \"it will be a joy to Jesus to give you liberty.\" When you trust in His saving power, neither despair nor the enemy can hold you back.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord also cares for those who are weighed down and exhausted. It is His regular way and promise to lift up people who are crushed under life's heavy burdens. Perhaps you feel bowed down by grief, sudden loss, or the heavy weight of guilt. God does not leave you in the dust. The Holy Spirit has taken up the task of comforting you, and Jesus has the power to restore your hope, health, and peace. He has helped His people through past troubles, and He will show the very same kindness to you today.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy burden, fear, or sorrow do you need to ask the Lord to lift from your shoulders today?",
+    "How does remembering God's past help give you confidence to trust Him right now?"
+   ],
+   "prayer": "Lord God, thank you that you have the power to break every chain and lift us up when we are bowed down. Forgive our sins and free us from fear, doubt, and sorrow. Restore our hope and comfort our hearts by your Holy Spirit today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 7",
+     "on": "Psalms 146:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 22",
+     "on": "Psalms 146:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

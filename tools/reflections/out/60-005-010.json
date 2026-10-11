@@ -1,0 +1,79 @@
+{
+ "id": "60-005-010",
+ "title": "Benediction and Farewell",
+ "refs": [
+  "1 Peter 5:10-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 60005010,
+   "end": 60005014,
+   "ref": "1 Peter 5:10-14",
+   "ranges": [
+    [
+     60005010,
+     60005014
+    ]
+   ],
+   "title": "Restored and Strengthened by Grace",
+   "key_verse": [
+    60005010,
+    60005010
+   ],
+   "reflect": [
+    {
+     "text": "Peter reminds us that the God of all grace calls us to eternal glory, but only after we have suffered for a little while. Church blessings often celebrate God's peace while skipping over this uncomfortable truth. When we try to follow Jesus and resist evil, we will face trials. Yet these hardships are not random accidents. God uses difficult seasons on purpose to train us and mature our faith.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "These painful seasons help our faith endure. A rainbow is lovely, but its colors quickly fade from the sky. God wants our character to be settled and lasting, not brief like a rainbow. Like a great oak tree whose roots drive deeper because of fierce winds, our trials anchor us. As Charles Spurgeon wrote, \"Shrink not then from the tempestuous winds of trial.\" God uses rough winds to make us firm and steady.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Suffering and sin can leave us feeling fractured and damaged, but God does not throw away broken people. In the Japanese craft of kintsukuroi, broken pottery is carefully mended with precious metal, making the vessel even more beautiful than it was before. In the same way, God gently gathers our pieces and restores us in Christ. He rebuilds us into living works of art that reflect His grace and point to the day He will renew the whole world.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How have difficult seasons in your past helped your faith grow deeper roots?",
+    "Where do you need to trust God to mend and restore broken areas of your life today?"
+   ],
+   "prayer": "Lord God, thank You for holding us close when life hurts and we feel broken. Use our trials to settle our hearts and make our roots run deep in You. Please mend our fractured lives by Your grace, and keep us standing firm until the day of Your eternal glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 11",
+     "on": "1 Peter 5:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ryan Duncan",
+     "work": "Kintsukuroi",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-june-6-2014.html"
+    },
+    "D3": {
+     "author": "C. P. Hia",
+     "work": "Strengthened Through Suffering",
+     "site": "Our Daily Bread",
+     "url": "https://military.odb.org/strengthened-through-suffering/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

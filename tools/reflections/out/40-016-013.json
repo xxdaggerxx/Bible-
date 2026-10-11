@@ -1,0 +1,75 @@
+{
+ "id": "40-016-013",
+ "title": "Peter’s Confession of Christ",
+ "refs": [
+  "Matthew 16:13-20",
+  "Mark 8:27-30",
+  "Luke 9:18-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40016015,
+   "end": 40016016,
+   "ref": "Matthew 16:15-16",
+   "ranges": [
+    [
+     40016015,
+     40016016
+    ]
+   ],
+   "title": "\"Who Do You Say I Am?\"",
+   "key_verse": [
+    40016015,
+    40016015
+   ],
+   "reflect": [
+    {
+     "text": "What we believe about Jesus is the very foundation of our faith. Jesus proved that He is the true Messiah by fulfilling ancient prophecies, giving His life on the cross, and rising from the dead. To receive His gift of salvation, we must recognize that He is both fully God and fully human.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Knowing who Jesus is cannot remain an interesting idea in our heads. It demands a personal answer from deep within our hearts. When we trust Him, we begin to follow His example, put His kingdom first, and tell others about Him. Standing openly for Christ may bring costs or hardships in this world, but God will bless our faithfulness.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Whenever you face seasons of doubt or spiritual confusion, coming back to who Jesus is can rebuild a firm faith. Remembering His sacrifice and His resurrection settles our hearts and anchors us in the truth.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does your personal answer to who Jesus is change the way you live each day?",
+    "When you face doubts or tough moments, how can returning to Jesus' identity restore your faith?"
+   ],
+   "prayer": "Lord Jesus, we confess that You are the Christ, the Son of the living God. Give us courage to follow Your example and put Your kingdom first, even when it costs us something. When we face doubt or disappointment, anchor our hearts once more in who You are. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Amanda Idleman",
+     "work": "Who Do You Say I Am? - The Crosswalk Devotional - January 8",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/who-do-you-say-i-am-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "Who Do You Say He Is? - Greg Laurie Devotion - March 31, 2025",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-march-31-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

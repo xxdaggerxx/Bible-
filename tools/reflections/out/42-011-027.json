@@ -1,0 +1,76 @@
+{
+ "id": "42-011-027",
+ "title": "True Blessedness",
+ "refs": [
+  "Luke 11:27-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42011027,
+   "end": 42011028,
+   "ref": "Luke 11:27-28",
+   "ranges": [
+    [
+     42011027,
+     42011028
+    ]
+   ],
+   "title": "True Privilege in Christ",
+   "key_verse": [
+    42011028,
+    42011028
+   ],
+   "reflect": [
+    {
+     "text": "A woman in the crowd called out that Jesus' mother must be the most blessed person on earth. It is easy to imagine that Mary had a special closeness to Him that nobody else could ever reach. Yet Scripture shows that Mary did not have secret spiritual knowledge kept hidden from the rest of the disciples.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus explained that closeness to Him does not depend on being part of His earthly family. Instead, He treats all faithful followers as intimate friends. He reveals the Father's heart to us and holds back nothing that is good for our souls. As Charles Spurgeon wrote, believers have \"as true a communion with the Saviour\" as Mary enjoyed.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The greatest privilege is open to all of us today. True joy and honour belong to anyone who hears God's message and puts it into practice. When you listen to God's word and follow it in your daily life, you share in real, personal friendship with Christ.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever feel that other people have a special closeness to Jesus that is out of your reach?",
+    "What is one way you can obey God's word today to walk more closely with Him?"
+   ],
+   "prayer": "Lord Jesus, thank You for welcoming us as Your friends and making the Father's will known to us. Help us to listen carefully to Your word and obey what You say. Teach us to rest in the true joy of walking with You each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 24",
+     "on": "Luke 11:27-28",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Truth For Life",
+     "work": "Who is Privileged? - Truth For Life - June 24",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-june-24-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

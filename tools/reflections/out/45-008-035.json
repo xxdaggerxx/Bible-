@@ -1,0 +1,81 @@
+{
+ "id": "45-008-035",
+ "title": "More than Conquerors",
+ "refs": [
+  "Romans 8:35-39"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45008035,
+   "end": 45008039,
+   "ref": "Romans 8:35-39",
+   "ranges": [
+    [
+     45008035,
+     45008039
+    ]
+   ],
+   "title": "More than Conquerors Through Christ",
+   "key_verse": [
+    45008037,
+    45008037
+   ],
+   "reflect": [
+    {
+     "text": "Deep trials, pain, and anxiety can make us wonder if God has forgotten us. Yet hard times are not a sign that God does not love us. In Christ, we face real grief and trouble knowing that Jesus proved His conquering love at the cross, turning defeat into victory. Nothing in all creation can tear us away from His hold.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "We cannot win these battles in our own strength. Just as we came to Jesus for forgiveness, we must bring our daily struggles and sins straight to Him. As Charles Spurgeon wrote, \"None but Jesus can do helpless sinners good,\" and that is just as true for Christians facing hardships today. True victory comes only from trusting Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Being more than conquerors does not mean we avoid hardship. It means holding fast to hope while walking through trouble, relying on God's strength rather than our own. Our hardest seasons are even shaped to serve our eternal good, and the Lord promises full deliverance in this life or the next.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What hard trial or struggle tempts you to doubt God's care, and how can you bring it to Jesus today?",
+    "How does knowing that nothing can separate you from Christ change the way you face your fears?"
+   ],
+   "prayer": "Lord Jesus, thank You that nothing in all creation can separate us from Your love. When we face painful trials or battle our own weaknesses, help us to look to Your cross rather than relying on our own strength. Give us hope to persevere, knowing our lives are safe in Your hands. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 23",
+     "on": "Romans 8:37",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Rachel Olsen",
+     "work": "What It Takes to Struggle with Something Hard",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-november-30-2012.html"
+    },
+    "D3": {
+     "author": "Scott Hubbard",
+     "work": "The Making of More Than a Conqueror",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-making-of-more-than-a-conqueror"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,72 @@
+{
+ "id": "44-017-001",
+ "title": "The Uproar in Thessalonica",
+ "refs": [
+  "Acts 17:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44017001,
+   "end": 44017009,
+   "ref": "Acts 17:1-9",
+   "ranges": [
+    [
+     44017001,
+     44017009
+    ]
+   ],
+   "title": "Turning the World Upside Down",
+   "key_verse": [
+    44017006,
+    44017006
+   ],
+   "reflect": [
+    {
+     "text": "When Paul arrived in Thessalonica, he faced fierce opposition and the threat of suffering. Even so, he did not quit or stay aloof and secretive. Authentic spiritual leaders live open, honest lives with nothing to hide. Through every trial, Paul kept one lasting priority: pointing people to Christ and his cross.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The angry mob complained that these Christians were turning the world upside down. Today, that same gospel message reaches across the earth. Believers from many different cultures share a deep unity in what they believe, how they worship, and how they live. Christians everywhere are joined together by the same Scriptures, the same Spirit, and one Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we gather for worship in our local church, we join our voices with this worldwide family of believers. Together, we look forward to the day Jesus returns. The faithful witness of Christians around the globe shows the true power of God at work, changing lives and reshaping the world.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing you are united with Christians around the world encourage your faith today?",
+    "What helps you keep sharing Christ as your main priority when you meet opposition or trials?"
+   ],
+   "prayer": "Lord Jesus, thank you for uniting believers across the world through your Spirit and your Word. Help us to live honest, open lives and keep you as our chief priority. Give us courage to stand firm with our brothers and sisters as we wait for your return. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Burk Parsons",
+     "work": "The World Upside Down",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/world-upside-down"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "His Only Priority",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-may-5-6-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,76 @@
+{
+ "id": "20-001-020",
+ "title": "Wisdom Calls Aloud",
+ "refs": [
+  "Proverbs 1:20-33"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 20001033,
+   "end": 20001033,
+   "ref": "Proverbs 1:33",
+   "ranges": [
+    [
+     20001033,
+     20001033
+    ]
+   ],
+   "title": "\"Will Dwell in Safety\"",
+   "key_verse": [
+    20001033,
+    20001033
+   ],
+   "reflect": [
+    {
+     "text": "God's care often shines brightest when times are hard. Like a lone star shining through storm clouds, His love stands out in seasons of trouble. In Scripture, when a terrible famine struck the land, the Lord took care of Elijah by providing water and food. He also protected a faithful remnant—a group of believers who stayed loyal to Him—hiding them in caves and feeding them.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This shows us that whatever happens around us, God keeps His people safe. Troubles may shake the earth, but we do not need to be gripped by panic. As Charles Spurgeon wrote, believers remain secure even \"amid the wreck of worlds.\" Whether the Lord shields us through hardships here or brings us safely home to heaven, our eternal life is never in danger.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because God holds you in His faithful hands, you can face the future with calm trust. When scary news or world conflicts arise, you do not have to be overwhelmed by dread. Resting under God's protection frees you to show others the quiet peace that comes from listening to His wisdom.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What current worries or news headlines tempt you to give in to fear?",
+    "How does knowing that God keeps you safe forever change the way you face uncertain times?"
+   ],
+   "prayer": "Lord God, thank You for being our safe shelter in every storm. When the world around us is troubled, help us to trust Your promises and be quiet from the fear of evil. Teach us to listen to Your wisdom and reflect Your peace to everyone we meet. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 6",
+     "on": "Proverbs 1:33",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "Protecting His Own",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-july-6-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

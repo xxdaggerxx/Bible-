@@ -1,0 +1,75 @@
+{
+ "id": "26-016-059",
+ "title": "The Covenant Remembered",
+ "refs": [
+  "Ezekiel 16:59-63"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26016059,
+   "end": 26016063,
+   "ref": "Ezekiel 16:59-63",
+   "ranges": [
+    [
+     26016059,
+     26016063
+    ]
+   ],
+   "title": "God's Everlasting Covenant of Grace",
+   "key_verse": [
+    26016060,
+    26016060
+   ],
+   "reflect": [
+    {
+     "text": "God describes His relationship with His people like a marriage. Yet Israel broke that sacred bond by worshiping idols and chasing worldly alliances. Because of their unfaithfulness, God allowed them to face the bitter consequences of their sins. His judgment was not meant to destroy them forever, but to bring them to realize their shame and turn back in true repentance.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even though His people failed to keep their promises, the Lord remains faithful. As Charles Spurgeon wrote, \"He looks rather to His covenant with us than to our covenant with Him.\" God looks back in love to the beginning of their relationship, and He looks forward to an everlasting covenant that will never fail. He guarantees this promise through Christ, who paid the price to reconcile us to God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When God forgives all our wrongs, our pride is completely silenced. We see how deeply we have failed and how wonderful His grace is. We do not stand before God because of our own goodness, but because He faithfully keeps His promises.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering God's faithfulness encourage you to turn back to Him when you fail?",
+    "Why does receiving God's undeserved forgiveness make us humble rather than proud?"
+   ],
+   "prayer": "Lord, thank You for remaining faithful to us even when our hearts wander from You. Forgive us for the times we look to the world instead of trusting in Your love. Help us to walk humbly before You and rest in the everlasting covenant You have given us in Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 30",
+     "on": "Ezekiel 16:60",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Grace for God's Adulterous Bride",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/grace-gods-adulterous-bride"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

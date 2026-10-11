@@ -1,0 +1,142 @@
+{
+ "id": "24-033-001",
+ "title": "The Excellence of the Restored Nation",
+ "refs": [
+  "Jeremiah 33:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 24033003,
+   "end": 24033003,
+   "ref": "Jeremiah 33:3",
+   "ranges": [
+    [
+     24033003,
+     24033003
+    ]
+   ],
+   "title": "\"Call to Me\"",
+   "key_verse": [
+    24033003,
+    24033003
+   ],
+   "reflect": [
+    {
+     "text": "Exhaustion and difficult seasons can make prayer feel heavy, and our minds often drift to the worst possible outcomes. Sometimes we fall into silence or make excuses, thinking prayer changes nothing. Yet the living God invites us to come directly to Him in honest conversation. He made our ears, so He certainly hears our cries. He gives us an unchanging promise that when we call, He will answer.",
+     "sources": [
+      "D2",
+      "D3",
+      "D5",
+      "D6"
+     ]
+    },
+    {
+     "text": "God does not want us to offer small, cautious prayers that limit Him to what humans can do. As Charles Spurgeon noted, God has wonders in store and can \"astound us with His grace.\" There are deep spiritual riches, peace, and insights that God longs to show us when we seek Him earnestly. When we pray boldly, trusting His boundless power, He opens the way for great blessings that we could never imagine on our own.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3",
+      "D5",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "What worries or difficult situations have made your prayers feel small or hesitant lately?",
+    "How does God's promise to answer encourage you to speak openly with Him today?"
+   ],
+   "prayer": "Lord, thank You for inviting us to call on You and promising to answer. Forgive us for when we hold back or doubt that You hear our cries. Teach us to pray boldly, and show us the great things of Your grace that go beyond our understanding. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 9",
+     "on": "Jeremiah 33:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 29",
+     "on": "Jeremiah 33:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 33:3",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D5": {
+     "author": "Karrilee Aggett",
+     "work": "The Joy of Being Heard",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/the-joy-of-being-heard-bible-study-minute-may-4-2018.html"
+    },
+    "D6": {
+     "author": "Rachel Britton",
+     "work": "A Prayer to Boldly Ask God for What Seems Impossible",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-to-boldly-ask-god-for-what-seems-impossible.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 24033001,
+   "end": 24033013,
+   "ref": "Jeremiah 33:1-13",
+   "ranges": [
+    [
+     24033001,
+     24033013
+    ]
+   ],
+   "title": "Pastures of Rest for God's Flock",
+   "key_verse": [
+    24033012,
+    24033012
+   ],
+   "reflect": [
+    {
+     "text": "In seasons of crisis, busy work, or sharp temptation, we easily become anxious and frantic. We run around trying to fix everything in our own strength, losing sleep and forgetting to seek God. Jeremiah saw Jerusalem torn down and ruined, yet God promised that in that very wasteland there would once again be quiet pastures for shepherds to rest their flocks. When life feels overwhelming, we must remember where our true shelter lies.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "We find that safety by turning back to the arms of Jesus, resting under the shadow of His cross. Even when we look back on our lives and see our many sins, God has not abandoned us. His love is so deep and steadfast that nothing can tear His children from His hand. Instead of carrying every heavy burden ourselves, we can cast our cares into His boundless love and find true peace for our souls.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life have you become hurried and anxious instead of resting in Christ?",
+    "How does knowing that God will never abandon His people bring calm to your heart today?"
+   ],
+   "prayer": "Lord Jesus, when troubles surround us, help us not to run around in panic or rely on our own strength. Remind us that our true resting place is always with You under the cross. Thank You for Your unfailing love that never forsakes us, and give our weary hearts Your quiet peace. Amen.",
+   "sources": {
+    "D4": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 33:12",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

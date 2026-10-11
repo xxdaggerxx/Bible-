@@ -1,0 +1,70 @@
+{
+ "id": "26-011-013",
+ "title": "A Promise of Restoration",
+ "refs": [
+  "Ezekiel 11:13-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 26011016,
+   "end": 26011016,
+   "ref": "Ezekiel 11:16",
+   "ranges": [
+    [
+     26011016,
+     26011016
+    ]
+   ],
+   "title": "\"I Have Been a Sanctuary for Them\"",
+   "key_verse": [
+    26011016,
+    26011016
+   ],
+   "reflect": [
+    {
+     "text": "When the people of Israel were scattered far from home, they lost their temple and regular worship. Yet God promised that He Himself would be their sanctuary, a holy place of safety. We too might be kept away from church through illness, travel, or lonely circumstances. Even when we attend a service that feels dry, God does not leave us empty. As Charles Spurgeon wrote, \"we are not removed from the grace of the means,\" because the Lord Himself comes near to feed our souls.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God is also our refuge when troubles or unkind voices press against us. In the quiet of His presence, fear loses its power, just as Jacob discovered the Lord was with him while sleeping on the bare ground. In Christ, God provides everything our hearts need: forgiveness, deep peace, and daily fellowship. Wherever we are called to wander, the Lord remains our true home.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When has being away from church or feeling lonely prompted you to seek God's presence directly?",
+    "In what area of your life do you need to take shelter in God today?"
+   ],
+   "prayer": "Lord God, thank You that Your presence is never confined to a building or a distant place. When we feel alone, sick, or far from fellowship, be our quiet sanctuary of peace. Protect us from every danger and remind us that You are always near through Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 15",
+     "on": "Ezekiel 11:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 11:16",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

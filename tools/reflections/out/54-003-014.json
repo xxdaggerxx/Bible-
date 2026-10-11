@@ -1,0 +1,83 @@
+{
+ "id": "54-003-014",
+ "title": "The Mystery of Godliness",
+ "refs": [
+  "1 Timothy 3:14-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 54003014,
+   "end": 54003016,
+   "ref": "1 Timothy 3:14-16",
+   "ranges": [
+    [
+     54003014,
+     54003016
+    ]
+   ],
+   "title": "The Great Mystery of Godliness",
+   "key_verse": [
+    54003016,
+    54003016
+   ],
+   "reflect": [
+    {
+     "text": "Paul points us to an early Christian hymn that shares the core truths of our salvation. In Scripture, a mystery is not an unsolved puzzle. It is God's divine truth that was once hidden and is now openly revealed. At the very heart of this truth is the wonder of God taking on human flesh in Jesus Christ.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jesus lived in bodily weakness and sorrow, but the Holy Spirit proved Him right by raising Him from the dead. Heavenly angels watched Him, the good news was preached across the nations, and people throughout the world believed in Him. Christ defeated sin and death, and as Charles Spurgeon writes, \"a cloud received him out of mortal sight.\" Now He reigns in glory as our victorious King and defender.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Knowing who Jesus is shapes how we live together in God's family. This truth produces real holiness in our everyday lives and gives us deep confidence, because Christ holds us by His grace. When we think about this wonder each day, we learn never to take our salvation for granted.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus holds you by His grace give you peace today?",
+    "What can help you reflect on Christ's victory each day so you do not take your salvation for granted?"
+   ],
+   "prayer": "Lord Jesus, thank You for coming in human flesh, conquering sin and death, and ascending into heavenly glory. Help us to see Your greatness clearly and live holy lives that honor You. Keep our hearts thankful each day so we never take Your saving grace for granted. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 4",
+     "on": "1 Timothy 3:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Mystery of Godliness",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/mystery-godliness"
+    },
+    "D3": {
+     "author": "The Gospel Coalition",
+     "work": "The Mystery Unfolding, Grasping: A Maundy Thursday Reflection",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/the-mystery-unfolding-grasping-a-maundy-thursday-reflection/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -5,6 +5,14 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.gestures.animateScrollBy
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material3.surfaceColorAtElevation
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.platform.testTag
+import kotlinx.coroutines.launch
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -22,6 +30,10 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.RestartAlt
+import androidx.compose.foundation.combinedClickable
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.OutlinedTextField
@@ -96,12 +108,41 @@ fun StudyToolbar(
         Row(
             Modifier
                 .fillMaxWidth()
-                .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal))
-                .horizontalScroll(rememberScrollState())
-                .padding(horizontal = 8.dp, vertical = 4.dp),
+                .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal)),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+        // The buttons scroll sideways where they don't fit (a phone, PH-1); the ⋮ menu stays in reach.
+        // An arrow at the edge shows there are more (PH-15), and the first time the row slides a little.
+        val toolScroll = rememberScrollState()
+        val scope = rememberCoroutineScope()
+        LaunchedEffect(toolScroll.maxValue > 0) {
+            if (toolScroll.maxValue > 0 && vm.takeToolbarHint()) {
+                kotlinx.coroutines.delay(800)
+                toolScroll.animateScrollTo(minOf(toolScroll.maxValue, 160))
+                kotlinx.coroutines.delay(400)
+                toolScroll.animateScrollTo(0)
+            }
+        }
+        Box(Modifier.weight(1f)) {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .horizontalScroll(toolScroll)
+                .padding(start = 8.dp, top = 4.dp, bottom = 4.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(2.dp),
         ) {
+            // Back and Forward for the whole screen (NAV-1): passages, panels and tabs as they were.
+            // Hold either one for a list of the screens it goes to.
+            StepButton(
+                vm, Icons.AutoMirrored.Filled.ArrowBack, "Back", vm.backSteps.toList().asReversed().take(10),
+                onStep = vm::back, onPick = { n -> vm.backTo(vm.backSteps.lastIndex - n) },
+            )
+            StepButton(
+                vm, Icons.AutoMirrored.Filled.ArrowForward, "Forward", vm.forwardSteps.toList().asReversed().take(10),
+                onStep = vm::forward, onPick = { n -> vm.forwardTo(vm.forwardSteps.lastIndex - n) },
+            )
+            Divider()
             // Read mode (PEN-4): a lock that stops the pen marking the page.
             IconToggleButton(
                 checked = vm.readMode,
@@ -122,8 +163,8 @@ fun StudyToolbar(
             for (t in Tool.entries) {
                 IconToggleButton(
                     checked = vm.tool == t && !vm.readMode,
-                    enabled = !vm.readMode,
-                    onCheckedChange = { vm.tool = t },
+                    // Picking a tool in read mode ends it, ready to draw (PH-3: phones start in read mode).
+                    onCheckedChange = { if (vm.readMode) { vm.readMode = false; vm.message = "Read mode off." }; vm.tool = t },
                     colors = IconButtonDefaults.iconToggleButtonColors(
                         checkedContainerColor = MaterialTheme.colorScheme.secondaryContainer,
                         checkedContentColor = MaterialTheme.colorScheme.onSecondaryContainer,
@@ -148,7 +189,7 @@ fun StudyToolbar(
             var insertMenu by remember { mutableStateOf(false) }
             var insertDialog by remember { mutableStateOf<String?>(null) }
             when (insertDialog) {
-                "sketch" -> NewSketchDialog(vm) { insertDialog = null }
+                "sketch" -> NewSketchDialog(vm, onDismiss = { insertDialog = null })
                 "verse" -> VerseCardDialog(vm) { insertDialog = null }
                 "name" -> NameCardDialog(vm) { insertDialog = null }
             }
@@ -197,6 +238,14 @@ fun StudyToolbar(
                     Icon(Icons.Filled.VerticalSplit, contentDescription = "Panels")
                 }
                 DropdownMenu(expanded = panelsMenu, onDismissRequest = { panelsMenu = false }) {
+                    // Lost? One tab, one Bible panel, at the passage being read (NAV-2).
+                    DropdownMenuItem(
+                        text = { Text("Start fresh") },
+                        leadingIcon = { Icon(Icons.Filled.RestartAlt, contentDescription = null) },
+                        enabled = vm.tabs.size > 1 || vm.tab.shown > 1,
+                        onClick = { vm.startFresh(); panelsMenu = false; vm.message = "One panel again. Back (\u2190) undoes it." },
+                    )
+                    HorizontalDivider()
                     // Tabs (TAB-1): each keeps its own one or two panels.
                     DropdownMenuItem(text = { Text("New tab") }, onClick = { vm.newTab(); panelsMenu = false })
                     DropdownMenuItem(
@@ -213,12 +262,12 @@ fun StudyToolbar(
                         })
                     }
                     HorizontalDivider()
-                    for (k in PaneKind.entries) {
-                        DropdownMenuItem(
-                            text = { Text("Beside the text: ${k.label}" + if (vm.sidePane == k) "  \u2713" else "") },
-                            onClick = { vm.togglePane(k); panelsMenu = false },
-                        )
-                    }
+                    // Beside the text: the views, folded the same way as the panel menu.
+                    Text(
+                        "Beside the text", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.padding(start = 16.dp, top = 10.dp, bottom = 2.dp),
+                    )
+                    ViewChoices(vm, vm.sidePane, bible = false) { k -> vm.togglePane(k); panelsMenu = false }
                     HorizontalDivider()
                     // Saved layouts (SPLIT-6).
                     for (w in vm.workspaces) {
@@ -247,8 +296,17 @@ fun StudyToolbar(
             IconButton(onClick = onSearch) { Icon(Icons.Filled.Search, contentDescription = "Search") }
             IconButton(onClick = onNotes) { Icon(Icons.Filled.EditNote, contentDescription = "My notes") }
 
+        }
+        val edge = MaterialTheme.colorScheme.surfaceColorAtElevation(3.dp)
+        if (toolScroll.canScrollBackward) ScrollHint(
+            Modifier.align(Alignment.CenterStart), edge, left = true,
+        ) { scope.launch { toolScroll.animateScrollBy(-toolScroll.viewportSize * 0.7f) } }
+        if (toolScroll.canScrollForward) ScrollHint(
+            Modifier.align(Alignment.CenterEnd), edge, left = false,
+        ) { scope.launch { toolScroll.animateScrollBy(toolScroll.viewportSize * 0.7f) } }
+        }
             var menu by remember { mutableStateOf(false) }
-            Box {
+            Box(Modifier.padding(end = 8.dp)) {
                 IconButton(onClick = { menu = true }) { Icon(Icons.Filled.MoreVert, contentDescription = "More") }
                 DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
                     DropdownMenuItem(
@@ -280,7 +338,7 @@ private fun ToolOptions(vm: StudyViewModel) {
     if (tool == Tool.LASSO || tool == Tool.SELECT) return
     Box {
         val color = when (tool) {
-            Tool.PEN -> Color(vm.penColor)
+            Tool.PEN -> Color(inkOn(vm.theme, vm.penColor))
             Tool.HIGHLIGHTER -> Color(vm.highlightColor)
             else -> MaterialTheme.colorScheme.surfaceVariant
         }
@@ -299,7 +357,8 @@ private fun ToolOptions(vm: StudyViewModel) {
                 when (tool) {
                     Tool.PEN -> {
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                            for (c in PEN_COLORS) Swatch(c, vm.penColor == c) { vm.penColor = c }
+                            // Shown as they'll look on this page (INK-17): black ink is light on the dark page.
+                            for (c in PEN_COLORS) Swatch(inkOn(vm.theme, c), vm.penColor == c) { vm.penColor = c }
                         }
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) { SizePicker(vm.penSize) { vm.penSize = it } }
                     }
@@ -383,5 +442,68 @@ private fun Swatch(color: Int, selected: Boolean, onClick: () -> Unit) {
 private fun SizePicker(current: Int, onPick: (Int) -> Unit) {
     listOf("S", "M", "L").forEachIndexed { i, label ->
         FilterChip(selected = current == i, onClick = { onPick(i) }, label = { Text(label) })
+    }
+}
+
+/**
+ * Back or Forward (NAV-1): a tap goes one step; holding it lists the screens it goes to, nearest
+ * first, to jump straight to one.
+ */
+@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
+@Composable
+private fun StepButton(
+    vm: StudyViewModel,
+    icon: androidx.compose.ui.graphics.vector.ImageVector,
+    label: String,
+    steps: List<StudyViewModel.Screen>,
+    onStep: () -> Unit,
+    onPick: (Int) -> Unit,
+) {
+    var list by remember { mutableStateOf(false) }
+    val enabled = steps.isNotEmpty()
+    Box {
+        Box(
+            Modifier
+                .size(48.dp)
+                .clip(androidx.compose.foundation.shape.CircleShape)
+                .combinedClickable(enabled = enabled, role = androidx.compose.ui.semantics.Role.Button, onLongClick = { list = true }, onClick = onStep),
+            contentAlignment = Alignment.Center,
+        ) {
+            Icon(
+                icon, contentDescription = label,
+                tint = if (enabled) MaterialTheme.colorScheme.onSurfaceVariant else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f),
+            )
+        }
+        DropdownMenu(expanded = list, onDismissRequest = { list = false }) {
+            Text(
+                if (label == "Back") "Go back to" else "Go forward to",
+                style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(start = 16.dp, top = 8.dp, bottom = 4.dp),
+            )
+            steps.forEachIndexed { n, s ->
+                DropdownMenuItem(text = { Text(vm.screenLabel(s)) }, onClick = { list = false; onPick(n) })
+            }
+        }
+    }
+}
+
+/** An arrow fading in at the toolbar's edge when more buttons are that way (PH-15); tap it to slide. */
+@Composable
+private fun ScrollHint(modifier: Modifier, edge: Color, left: Boolean, onClick: () -> Unit) {
+    val fade = if (left) listOf(edge, edge, edge.copy(alpha = 0f)) else listOf(edge.copy(alpha = 0f), edge, edge)
+    Box(
+        modifier
+            .width(40.dp)
+            .height(48.dp)
+            .background(androidx.compose.ui.graphics.Brush.horizontalGradient(fade))
+            .clickable(onClick = onClick)
+            .testTag(if (left) "toolbarScrollLeft" else "toolbarScrollRight"),
+        contentAlignment = if (left) Alignment.CenterStart else Alignment.CenterEnd,
+    ) {
+        Icon(
+            if (left) Icons.AutoMirrored.Filled.KeyboardArrowLeft else Icons.AutoMirrored.Filled.KeyboardArrowRight,
+            contentDescription = if (left) "Earlier buttons" else "More buttons",
+            tint = MaterialTheme.colorScheme.primary,
+        )
     }
 }

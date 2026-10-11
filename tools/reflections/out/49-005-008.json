@@ -1,0 +1,131 @@
+{
+ "id": "49-005-008",
+ "title": "Children of Light",
+ "refs": [
+  "Ephesians 5:8-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 49005015,
+   "end": 49005017,
+   "ref": "Ephesians 5:15-17",
+   "ranges": [
+    [
+     49005015,
+     49005017
+    ]
+   ],
+   "title": "\"Redeeming the Time\"",
+   "key_verse": [
+    49005016,
+    49005016
+   ],
+   "reflect": [
+    {
+     "text": "It is easy to drift through our days without thinking, letting hours slip away. When we do that, circumstances control us, and we end up with regrets. The Bible calls us to wake up and take ownership of our time. We need to pause and seek God's will rather than letting life just happen.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Every day is appointed by God, yet our time on earth is brief. Wise living does not require rigid control over every minute. Instead, simple daily rhythms, like morning and evening habits, steady our minds. These anchors keep us ready to care for others when unexpected needs arise.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Our modern world is full of digital noise and screens that steal our focus and leave us feeling empty. Because the days are evil, we need to set healthy boundaries and make room for Scripture and prayer. Time is a gift from God, and we honor Him when we deliberately protect it for what matters most.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What daily habits or distractions take your focus away from God and other people?",
+    "How can you pause today to discover what the Lord wants you to do?"
+   ],
+   "prayer": "Lord, thank You for the gift of today. Forgive us when we waste our hours on things that do not matter. Help us build simple, wise habits and choose what pleases You. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "It's about Time, Part One",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/it's-about-time-part-one"
+    },
+    "D3": {
+     "author": "Tsh Oxenreider",
+     "work": "Honor God With Your Time",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-august-29-2023.html"
+    },
+    "D4": {
+     "author": "Emily Rose Massey",
+     "work": "Redeeming, Not Wasting, Our Time",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/redeeming-not-wasting-our-time-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 49005008,
+   "end": 49005020,
+   "ref": "Ephesians 5:8-20",
+   "ranges": [
+    [
+     49005008,
+     49005020
+    ]
+   ],
+   "title": "Living as Children of Light",
+   "key_verse": [
+    49005008,
+    49005008
+   ],
+   "reflect": [
+    {
+     "text": "Jesus does not hide in the shadows. He is the true light who steps into our lives. Before we knew Him, we were in darkness, but now He has made us new. As God's children, our calling is to show His character by producing goodness, righteousness, and truth.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Sometimes we feel afraid when our hidden sins are brought into the open. Yet God does not expose our wrongs to frighten or shame us. He acts as a loving Father who reveals dark places in our hearts so He can heal, cleanse, and restore us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We are invited to examine our hearts and let Christ shine on every corner of our lives. When we step away from secret sins, we begin to reflect His pure light to the world around us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any dark or hidden corner in your life that you need to bring to Jesus for healing?",
+    "How can your actions this week display God's goodness and truth to others?"
+   ],
+   "prayer": "Father, thank You for bringing us out of darkness and calling us Your children. Shine Your gentle light into our hearts and uncover anything that does not belong. Heal us and help us walk in Your truth every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Laura MacCorkle",
+     "work": "Who Knows What Evil Lurks?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-apr-30-2008-11574512.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

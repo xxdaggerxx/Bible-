@@ -1,0 +1,121 @@
+{
+ "id": "10-017-001",
+ "title": "Hushai Counters Ahithophel’s Advice",
+ "refs": [
+  "2 Samuel 17:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 10017014,
+   "end": 10017014,
+   "ref": "2 Samuel 17:14",
+   "ranges": [
+    [
+     10017014,
+     10017014
+    ]
+   ],
+   "title": "\"The LORD Had Purposed to Thwart\"",
+   "key_verse": [
+    10017014,
+    10017014
+   ],
+   "reflect": [
+    {
+     "text": "When Absalom rebelled against King David, the rebellion grew strong because of Ahithophel's clever advice. In great danger, David prayed and asked God to turn Ahithophel's counsel into foolishness. David also sent his friend Hushai into Absalom's court to oppose that advice. Ahithophel came up with a solid military plan to strike David quickly, but the Lord moved Absalom and Israel to choose Hushai's plan instead.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God decided to ruin Ahithophel's sound advice so He could bring judgment on Absalom and save David from destruction. God often works through ordinary human choices to stop the plans of wicked people and protect His own. David had asked God to make the advice foolish, but God answered in an even greater way. Instead of making Ahithophel speak nonsense, God made Absalom reject good advice. We do not need to tell God exactly how to help us, because He knows how to answer far beyond what we ask.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face hard situations, do you try to tell God how to fix them, or do you trust Him to answer in His own way?",
+    "How does knowing that God works through everyday human choices give you peace?"
+   ],
+   "prayer": "Lord, thank You that You rule over every plan and purpose. Help us trust You when we are in danger or distress, even when we cannot see what You are doing. Teach us to rest in Your care, knowing You answer our prayers better than we could ever ask. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Ahithophel’s Counsel Defeated",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/ahithophels-counsel-defeated"
+    },
+    "D2": {
+     "author": "David Mathis",
+     "work": "God Answers Better Than We Ask",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/god-answers-better-than-we-ask"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 10017001,
+   "end": 10017014,
+   "ref": "2 Samuel 17:1-14",
+   "ranges": [
+    [
+     10017001,
+     10017014
+    ]
+   ],
+   "title": "Hushai Counters Ahithophel's Advice",
+   "key_verse": [
+    10017011,
+    10017011
+   ],
+   "reflect": [
+    {
+     "text": "When Ahithophel laid out his battle plan, he showed his own selfish ambition. He kept talking about what he would do, offering to lead twelve thousand men himself and strike down David. Hushai saw through this and wisely offered another idea. He reminded Absalom of David's skill and courage as a warrior, warning that David and his men were fierce fighters who would not be easily caught.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Hushai then appealed directly to Absalom's pride. He suggested that Absalom should gather a massive army from all across the nation and lead the troops into battle in person. Absalom loved this flattering picture of his own importance. Because of his vanity, Absalom turned away from good strategy and chose Hushai's plan instead.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "This delay was crucial. By convincing Absalom to take time to gather a huge army, Hushai gave David the precious hours he needed to regroup and find safety. Behind all these words and human schemes, God was quietly at work. He answered prayer behind the scenes to shelter David and protect those who put their trust in Him.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways can personal pride blind us to wise guidance and lead us toward foolish choices?",
+    "How does remembering that God works quietly behind the scenes encourage you when help seems slow to arrive?"
+   ],
+   "prayer": "Heavenly Father, keep our hearts from pride and selfish ambition. When trouble surrounds us, remind us that You are quietly at work to protect all who rely on You. Help us to wait patiently on You and place our safety entirely in Your hands. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 4/17/2001",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-4-or-17-or-2001-550372.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

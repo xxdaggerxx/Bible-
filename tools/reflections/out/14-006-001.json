@@ -1,0 +1,66 @@
+{
+ "id": "14-006-001",
+ "title": "Solomon Blesses the LORD",
+ "refs": [
+  "2 Chronicles 6:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14006001,
+   "end": 14006011,
+   "ref": "2 Chronicles 6:1-11",
+   "ranges": [
+    [
+     14006001,
+     14006011
+    ]
+   ],
+   "title": "God Keeps His Promise",
+   "key_verse": [
+    14006010,
+    14006010
+   ],
+   "reflect": [
+    {
+     "text": "Solomon brought the dedicated treasures and the sacred ark of the covenant into the finished temple in Jerusalem. As priests blew trumpets and musicians sang praises, God showed His pleasure. The visible cloud of God's glory filled the house of the Lord, showing that He was dwelling among His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Solomon then turned to speak to the whole assembly of Israel. He praised God for keeping His promise to his father David. Years before, God had said that David's son would reign as king and build this house. Solomon reminded the people that God's own hand had faithfully fulfilled what He had spoken.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The great Creator of heaven and earth cannot be contained inside any earthly building. Even so, God graciously made His presence known in the temple. In the same way, we can be completely confident that God meets with us and gives us His special presence whenever we gather together for worship.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does seeing God keep His promises to David and Solomon help you trust Him today?",
+    "How does knowing that God is specially present when we gather change the way you worship?"
+   ],
+   "prayer": "Lord God, thank You for being faithful to every promise You make. We know that no building can hold Your greatness, yet You still choose to be near us. Help us to come before You with joy and confidence whenever we gather to worship Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Ark Comes to the Temple",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/ark-comes-to-the-temple"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,138 @@
+{
+ "id": "66-002-001",
+ "title": "To the Church in Ephesus",
+ "refs": [
+  "Revelation 2:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 66002004,
+   "end": 66002004,
+   "ref": "Revelation 2:4",
+   "ranges": [
+    [
+     66002004,
+     66002004
+    ]
+   ],
+   "title": "\"You Have Abandoned Your First Love\"",
+   "key_verse": [
+    66002004,
+    66002004
+   ],
+   "reflect": [
+    {
+     "text": "When we first came to Jesus, our hearts were filled with joy and peace. As Charles Spurgeon wrote, \"It was spring time in the soul\" when we received forgiveness and resolved to devote our entire lives to Him. The church in Ephesus had that same bright beginning. They worked tirelessly, stood firmly against evil, and endured hardships for the name of Christ. Yet over time, their warm affection for the Savior began to cool.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "The believers in Ephesus had not turned their backs on Jesus, but their devotion had slowly drifted into apathy. It is easy for us to stay busy with church routines, good actions, and correct beliefs while quietly losing our personal closeness with Christ. Jesus values heartfelt love from us far more than our outward accomplishments. When our love fades, we often allow our own will to take the throne of our hearts.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Loving Jesus less than we used to is a sure sign of spiritual decline. Christ asks us to pause, see how far we have drifted, and turn back to Him. We are called to reorder our lives, repent of our coldness, and ask the Lord to renew that sincere, burning love we had when we first believed.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Has religious busyness or daily routine crowded out your personal time of devotion with Jesus?",
+    "What is one practical step you can take today to return to your first love for Christ?"
+   ],
+   "prayer": "Lord Jesus, forgive us for letting our love for You grow cold while we stay busy with other things. Melt the winter in our souls and draw us back into close fellowship with You. Help us to put You first in our hearts today and always. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 11",
+     "on": "Revelation 2:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Michael Youssef",
+     "work": "Ephesus and the Loss of First Love",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-week-of-march-13-2023.html"
+    },
+    "D4": {
+     "author": "Adrian Rogers",
+     "work": "What Makes God Sick?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-september-8-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 66002001,
+   "end": 66002007,
+   "ref": "Revelation 2:1-7",
+   "ranges": [
+    [
+     66002001,
+     66002007
+    ]
+   ],
+   "title": "The Promise to the Overcomer",
+   "key_verse": [
+    66002007,
+    66002007
+   ],
+   "reflect": [
+    {
+     "text": "The Christian life is a spiritual battle that calls for steadfast courage. Jesus commands His people never to turn their backs in the day of conflict or walk away from the struggle. We are called to carry on this warfare until we overcome every enemy, because the wonderful promises of Christ are given to those who persevere to the end.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Overcoming means standing against false teachers and their harmful errors. It also means fighting against the weakness of our own hearts and resisting the tendency to let our love grow cold. We cannot win this battle in our own power, but through God's grace, His kindness and help that we do not deserve, we will triumph if we follow Jesus as our conquering Leader.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The reward prepared for the victor is glorious. Jesus promises that the overcomer will be welcomed into the heart of God's paradise and eat freely from the tree of life. We are rescued from eternal death and given everlasting life in God's presence. Knowing this final joy gives us strength to stand firm today.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you currently tempted to feel faint of heart or give up in your walk with God?",
+    "How does the promise of eternal life in God's paradise help you face spiritual battles today?"
+   ],
+   "prayer": "Lord, give us strength when our hearts feel weary in the struggle of faith. Help us to follow You faithfully as our Leader and overcome every trial by Your grace. Keep our eyes fixed on the hope of living forever in Your paradise. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 20",
+     "on": "Revelation 2:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

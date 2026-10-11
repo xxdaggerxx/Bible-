@@ -1,0 +1,67 @@
+{
+ "id": "45-011-025",
+ "title": "All Israel Will Be Saved",
+ "refs": [
+  "Romans 11:25-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45011025,
+   "end": 45011032,
+   "ref": "Romans 11:25-32",
+   "ranges": [
+    [
+     45011025,
+     45011032
+    ]
+   ],
+   "title": "All God's People Brought Safely Home",
+   "key_verse": [
+    45011026,
+    45011026
+   ],
+   "reflect": [
+    {
+     "text": "When Moses led Israel across the Red Sea, the waters did not close until every single person had safely reached the other shore. In the same way, God promises to bring all of His chosen people to safety. As Charles Spurgeon reminds us, \"in heaven there shall not be a vacant throne.\" Every person who trusts in Christ will be kept secure until the end.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Right now, God's people are on that journey. Some believers have already reached the shore and are at rest with the Lord. Others of us are still walking through the deep waters of this life, following hard after Jesus. Even when the way seems long or difficult, we can take heart. God does not leave any of His children behind.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's salvation is completely secure. If even one of His redeemed family were missing or cast away, the final song of victory would be ruined. Because His mercy is sure, we can know with joy that every believer will safely make it home to praise Him together.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus will not lose any of His people give you peace today?",
+    "How can you encourage another Christian who is currently finding the journey difficult?"
+   ],
+   "prayer": "Lord God, thank You for Your unending mercy and Your promise to save Your people. Help us to follow Jesus faithfully as we walk through trials in this life. Keep our hearts steady in the assurance that You will bring each of us safely home to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 21",
+     "on": "Romans 11:26",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

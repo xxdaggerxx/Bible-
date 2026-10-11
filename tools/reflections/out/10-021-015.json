@@ -1,0 +1,73 @@
+{
+ "id": "10-021-015",
+ "title": "Four Battles against the Philistines",
+ "refs": [
+  "2 Samuel 21:15-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 10021015,
+   "end": 10021017,
+   "ref": "2 Samuel 21:15-17",
+   "ranges": [
+    [
+     10021015,
+     10021017
+    ]
+   ],
+   "title": "\"Abishai Came to His Aid\"",
+   "key_verse": [
+    10021017,
+    10021017
+   ],
+   "reflect": [
+    {
+     "text": "Even strong believers can grow tired when old struggles return. David had defeated giants before, but in this battle his energy ran out. Facing the same hard trials again and again can wear us down. It is easy to feel weak or embarrassed when our strength fails, but we do not have to fight these battles by ourselves.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God gives us other believers so we never have to struggle in isolation. There is no shame in admitting that we need help. Just as Abishai stepped in to defend David when he was cornered, we need loyal companions who will stand up for us during difficult times. True spiritual growth and leadership do not happen alone.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "At the same time, following Jesus means being ready to support the people around us. We should watch for friends who are exhausted by their own trials. When we see someone under pressure, we can step forward and help carry the load, just as Abishai did for David.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Who is a trusted companion you can turn to when recurring struggles wear you down?",
+    "How can you step in this week to support someone around you who is feeling exhausted?"
+   ],
+   "prayer": "Lord, thank you for placing other believers in our lives so we do not have to fight our battles alone. Help us not to feel ashamed when our own strength runs out. Give us the humility to accept help, and show us how to step in and support others who are weary. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Doug Fields",
+     "work": "Everyone Needs an Abishai!",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/everyone-needs-an-abishai-homeword-may-13.html"
+    },
+    "D2": {
+     "author": "Amber Ginter",
+     "work": "When the Giant Comes Back",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/when-the-giant-comes-back.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

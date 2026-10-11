@@ -1,0 +1,134 @@
+{
+ "id": "40-020-020",
+ "title": "A Mother’s Request",
+ "refs": [
+  "Matthew 20:20-28",
+  "Mark 10:35-45"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40020026,
+   "end": 40020028,
+   "ref": "Matthew 20:26-28",
+   "ranges": [
+    [
+     40020026,
+     40020028
+    ]
+   ],
+   "title": "\"Whoever Wants to Be Great Must Serve\"",
+   "key_verse": [
+    40020026,
+    40020026
+   ],
+   "reflect": [
+    {
+     "text": "When James and John sought places of honor, the other disciples were furious. Their anger showed that they were all secretly competing for status and praise. The world around us measures greatness by titles, rank, and power over other people. Earthly leaders often show their authority by exercising control.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jesus turned this worldly ambition upside down. In His kingdom, true greatness comes through humble service. Faithful leadership does not demand authority or control over others. Instead, it is shown by caring for people and quietly meeting their needs.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jesus Himself showed us how to live this way. He did not come so that people would wait on Him, but to give His life as a ransom for many. As His followers, we reflect His love when we lay aside our personal rights to help someone else. The true path to honor in God's eyes is choosing to serve.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to seek attention or control instead of serving others?",
+    "How can you give up your own convenience this week to help someone in need?"
+   ],
+   "prayer": "Lord Jesus, forgive us when we secretly compete for praise or try to control those around us. Teach us to follow Your example by putting others first. Give us humble hearts that find joy in serving.",
+   "sources": {
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "The Way Up Is Down",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-march-14-2023.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Greatness of Service",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/greatness-service"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40020020,
+   "end": 40020028,
+   "ref": "Matthew 20:20-28; Mark 10:35-45",
+   "ranges": [
+    [
+     40020020,
+     40020028
+    ],
+    [
+     41010035,
+     41010045
+    ]
+   ],
+   "title": "Drinking the Cup",
+   "key_verse": [
+    40020022,
+    40020022
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus asked James and John if they could drink His cup of suffering, they quickly answered that they could. Their words were bold and confident. Like excited young men, they did not stop to think about the rough road ahead. Yet when danger arrived in Gethsemane, their human strength failed. They fell asleep, and later they fled when Jesus was arrested.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In our own strength, we cannot face hard trials or follow Christ into deep testing. As F. B. Meyer notes, our own power cannot carry us in our greatest peril. We need the Holy Spirit to strengthen us day by day. When God calls us to walk through sorrow, He is the one who graciously enables us to stand firm.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Following Jesus looks different for each believer. For James, drinking the cup meant dying swiftly as a martyr. For John, it meant many quiet years of patient waiting and enduring. Both paths brought these brothers into deep fellowship with Christ. If our desire is simply to be near Jesus, we can be sure He will sustain us in every trial.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you relying on your own strength rather than the Holy Spirit?",
+    "How does knowing that Jesus walks with you through suffering give you patience during hard times?"
+   ],
+   "prayer": "Lord, we confess that our own strength is never enough to endure hardship. Fill us with Your Holy Spirit so we can remain faithful in every trial. Keep us close to Jesus, whether our road is quick or requires long years of patience.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Matthew 20:22",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

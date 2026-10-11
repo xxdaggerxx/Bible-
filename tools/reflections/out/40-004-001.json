@@ -1,0 +1,158 @@
+{
+ "id": "40-004-001",
+ "title": "The Temptation of Jesus",
+ "refs": [
+  "Matthew 4:1-11",
+  "Mark 1:12-15",
+  "Luke 4:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40004001,
+   "end": 40004001,
+   "ref": "Matthew 4:1",
+   "ranges": [
+    [
+     40004001,
+     40004001
+    ]
+   ],
+   "title": "\"Led by the Spirit into the Wilderness\"",
+   "key_verse": [
+    40004001,
+    40004001
+   ],
+   "reflect": [
+    {
+     "text": "Just before this passage, the heavens opened and the Father spoke His love over Jesus. Yet right after that joyful moment, the Holy Spirit led Him into a dry desert silence, with only the cry of wild beasts and the voice of the tempter. God often gives us a clear sense of His love right before a trial comes. The Spirit leads us into these hard places so that God's gifts in our lives can take deep root and last.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Being close to God does not keep us safe from spiritual attacks. Jesus was entirely devoted to His Father, yet the enemy still came to test Him. We might think that going away into quiet solitude will hide us from bad thoughts, but temptation can reach us anywhere. As Charles Spurgeon wrote, \"a holy character does not avert temptation.\" Because we are prone to stumble, we must always stay watchful and keep our spiritual guard up.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face hard trials after a sweet time with God, how does remembering Jesus in the wilderness encourage you?",
+    "In what quiet or unguarded moments do you need to be more watchful against temptation?"
+   ],
+   "prayer": "Lord Jesus, thank You for standing firm when You were tested in the wilderness. When trials follow times of blessing, remind us that You understand our battles. Keep our hearts watchful and teach us to depend on Your strength every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 20",
+     "on": "Matthew 4:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Matthew 4:1",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40004001,
+   "end": 40004011,
+   "ref": "Matthew 4:1-11; Mark 1:12-15; Luke 4:1-13",
+   "ranges": [
+    [
+     40004001,
+     40004011
+    ],
+    [
+     41001012,
+     41001015
+    ],
+    [
+     42004001,
+     42004013
+    ]
+   ],
+   "title": "Overcoming the Tempter in the Wilderness",
+   "key_verse": [
+    40004010,
+    40004010
+   ],
+   "reflect": [
+    {
+     "text": "The first man, Adam, failed in a perfect garden and brought sin into the world. In contrast, Jesus faced Satan as the true King in a lonely wilderness among wild animals. When hunger struck, Satan tempted Jesus to satisfy a real physical need through selfish means, but Jesus answered with Scripture. Bread alone cannot sustain us; our true life comes directly from God and His written promises.",
+     "sources": [
+      "D2",
+      "D4",
+      "D6"
+     ]
+    },
+    {
+     "text": "Next, the enemy twisted Scripture to lure Jesus into pride, and offered Him instant rule over all nations to avoid the pain of the cross. Allowing even a small compromise invites defeat, but Jesus refused to chase godless shortcuts or worship anyone other than the Father. We often feel torn between our lower bodily desires and the upward call of God's Spirit.",
+     "sources": [
+      "D4",
+      "D5",
+      "D6"
+     ]
+    },
+    {
+     "text": "By leaning on Scripture rather than human pride, Christ soundly defeated the tempter. Because He overcame every trial without sinning, Jesus now gives us the power to master our own selfish desires. When we submit to God's Word, we find the strength we need to stand firm against the enemy's schemes.",
+     "sources": [
+      "D2",
+      "D4",
+      "D5",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "What shortcuts or compromises are you most tempted to take when facing difficulty?",
+    "How can relying on God's Word help you choose what is right when your natural desires pull you another way?"
+   ],
+   "prayer": "Father in heaven, thank You that Jesus conquered every temptation on our behalf. Feed our souls with Your Word so that we do not look to empty worldly shortcuts. Give us strength by Your Spirit to worship and serve You alone. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 4",
+     "on": "Matthew 4:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Mark 1:13",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "Jesus Overcomes Satan",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jesus-overcomes-satan"
+    },
+    "D6": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 10/02/04",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-10-or-02-or-04-1287913.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

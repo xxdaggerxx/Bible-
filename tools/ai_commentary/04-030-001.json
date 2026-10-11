@@ -1,0 +1,150 @@
+{
+ "book": 4,
+ "chapter": 30,
+ "first": 1,
+ "last": 16,
+ "ref": "Numbers 30",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Moses delivered God's instructions about vows directly to the leaders of the twelve tribes. These leaders were responsible for teaching the rules to the people and keeping order in the community. Their role was to make sure everyone understood how serious a promise to God was.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes",
+    "https://enduringword.com/bible-commentary/numbers-30/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars suggest this law came from a separate source or was inserted later, because it is addressed only to tribal heads rather than the whole nation.",
+     "sources": [
+      "https://biblehub.com/commentaries/pulpit/numbers/30.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "When an independent man made a sacred promise to God, he was required to keep his word completely. Failing to do what he promised would treat his word as empty and dishonor God. A vow could never be used to justify doing something God had already forbidden.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Matthew Henry (Concise)",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 5,
+   "meaning": "A young woman living in her father's home was free to make personal promises and vows directly to God. Her father had the right to confirm the vow by saying nothing, or to cancel it out loud on the day he heard about it. If her father forbade it, God excused her from the promise because honoring her father came first.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "https://enduringword.com/bible-commentary/numbers-30/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Thomas Aquinas taught that a father has the right to approve or cancel a child's vow to enter religious life, and that the child does not sin by making such a vow.",
+     "sources": [
+      "https://www.newadvent.org/summa/3189.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 6,
+   "end": 8,
+   "meaning": "A woman might enter marriage with a vow she had already made or blurted out hastily. Her new husband had the choice to let it stand or cancel it on the day he learned about it. If he objected immediately, the vow was canceled, and God released her so that household peace remained intact.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://biblehub.com/commentaries/pulpit/numbers/30.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "A widow or a divorced woman was not under the authority of a father or husband, so she was fully responsible for her own vows. Any promise she made while on her own was binding, just like the vow of an independent man. Any vow a husband had canceled while he was alive remained canceled.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "https://enduringword.com/bible-commentary/numbers-30/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 12,
+   "meaning": "When a married woman made a vow while living in her husband's home, her husband decided whether it would stand. If he heard of her promise and stayed silent, she was bound to carry it out. If he spoke against it on that same day, the vow was canceled, and God freed her from the obligation.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://biblehub.com/commentaries/pulpit/numbers/30.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
+   "end": 13,
+   "meaning": "A husband had the authority to confirm or cancel any vow his wife made, including private promises to fast or deny herself. This rule covered personal acts of self-denial so that a wife's health and the marriage relationship were protected. The husband's leadership was meant to bring protection and order, not harsh control.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "https://biblehub.com/numbers/30-13.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 14,
+   "end": 14,
+   "meaning": "If a husband stayed silent from day to day after hearing about his wife's vow, his silence counted as approval. He was given only a short time to object once he found out. After that day passed, he could no longer take back his consent.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://www.studylight.org/commentaries/eng/whe/numbers-30.html"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 15,
+   "end": 15,
+   "meaning": "If a husband permitted his wife's vow by staying silent, but later changed his mind and stopped her from keeping it, the guilt fell on him. The wife was free from blame because she obeyed her husband. The husband had to answer to God for causing a holy promise to be broken.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 16,
+   "end": 16,
+   "meaning": "These rules conclude God's commands about vows made within the family circle. They guided how daughters related to their fathers and how wives related to their husbands. God honored personal devotion while also protecting harmony and respect under the roof of the home.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/numbers-30/"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 3: removed sources ['Keil & Delitzsch']",
+  "v. 6: removed sources ['Keil & Delitzsch']",
+  "v. 10: removed sources ['Keil & Delitzsch']",
+  "v. 14: removed sources ['Wesley']",
+  "v. 15: removed sources ['Jamieson-Fausset-Brown', 'Keil & Delitzsch']",
+  "v. 16: removed sources ['Keil & Delitzsch']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

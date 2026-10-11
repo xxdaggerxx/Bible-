@@ -1,0 +1,128 @@
+{
+ "id": "09-004-001",
+ "title": "The Philistines Capture the Ark",
+ "refs": [
+  "1 Samuel 4:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 9004003,
+   "end": 9004003,
+   "ref": "1 Samuel 4:3",
+   "ranges": [
+    [
+     9004003,
+     9004003
+    ]
+   ],
+   "title": "\"Let Us Bring the Ark\"",
+   "key_verse": [
+    9004003,
+    9004003
+   ],
+   "reflect": [
+    {
+     "text": "After suffering a heavy defeat, Israel rightly recognized that God stood behind their loss. Yet instead of turning away from their sins, the leaders chose to send for the ark of the covenant. They remembered how God granted victory with the ark in the days of Joshua, but they wrongly thought they could use it like a magic token to force God's favor in battle.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The leaders forgot that the ark was only a visible sign of an inner relationship. As F. B. Meyer wrote, the ark was useless unless that relationship was \"in living force.\" The carved cherubim could not protect soldiers whose hearts were broken off from God by backsliding. God simply does not bless open disobedience to His covenant.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We can easily make this same error today. We may depend on baptism, the Lord's Supper, regular Bible reading, or church attendance to keep us safe, even when our hearts are cold toward God. External religious duties mean nothing without genuine inward faith. Real safety and peace come only from a living union with Jesus Christ.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever find yourself relying on church habits instead of nurturing a living relationship with Jesus?",
+    "Is there any disobedience you need to confess before God today rather than trusting in religious routines?"
+   ],
+   "prayer": "Lord God, forgive us when we treat religious activities like tools to gain your favor. Help us not to rest in outward forms while our hearts wander far from you. Keep us closely united to Jesus Christ in honest, daily faith. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 4:3",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Ark of the Covenant Captured",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/ark-of-the-covenant-captured"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 9004001,
+   "end": 9004011,
+   "ref": "1 Samuel 4:1-11",
+   "ranges": [
+    [
+     9004001,
+     9004011
+    ]
+   ],
+   "title": "True Faith or Empty Superstition",
+   "key_verse": [
+    9004005,
+    9004005
+   ],
+   "reflect": [
+    {
+     "text": "When the ark entered the camp, Israel raised a shout so loud that the ground shook, and the Philistines grew terrified. Yet the Israelites' loud confidence was hollow. People who practice outward religion without truly walking with God often confuse genuine faith with mere superstition.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "The people presumed upon the Lord, carrying the ark into war like a good-luck charm instead of honoring Him in their lives. Corrupt priests stood right beside the sacred chest. Because the people chose to neglect God's ways, He refused to bless their superstition or give them the victory.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Israel's terrible defeat reminds us that sacred objects hold no power of their own. Religious symbols cannot rescue us when we live apart from the actual presence of God. He calls us to honor Him with our lives rather than trying to use holy things for our own ends.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there ways you treat God or spiritual things like a good-luck charm instead of revering Him as Lord?",
+    "What does it look like for you to seek God's real presence rather than just religious symbols?"
+   ],
+   "prayer": "Father, guard our hearts from empty superstition and religious pretension. Teach us to revere you with genuine obedience rather than relying on mere symbols. Help us to walk humbly in your presence every day. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Beth Moore",
+     "work": "Day 8: 1 Samuel 4:1–11",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-8-1-samuel-4-111.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

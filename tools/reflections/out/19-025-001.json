@@ -1,0 +1,89 @@
+{
+ "id": "19-025-001",
+ "title": "To You I Lift Up My Soul",
+ "refs": [
+  "Psalms 25:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19025001,
+   "end": 19025022,
+   "ref": "Psalms 25:1-22",
+   "ranges": [
+    [
+     19025001,
+     19025022
+    ]
+   ],
+   "title": "Guided and Befriended by the Lord",
+   "key_verse": [
+    19025005,
+    19025005
+   ],
+   "reflect": [
+    {
+     "text": "When unexpected trials disrupt our lives, it can be hard to see where God is leading us. Yet the Lord purposefully uses difficult seasons to instruct His children and lead them toward true joy. Like young children learning to walk with trembling steps, we need our Heavenly Father to hold our hand and teach us His truth. When we humbly admit our ignorance, God faithfully guides our path.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "In every hardship, we can bring both our pains and our sins directly to God. While we may ask Him to look with pity upon our earthly troubles, our deepest need is always to have our sins forgiven. We can bear having our pain continue for a while, but we cannot bear the heavy burden of guilt. We leave our troubles to His wise care while running to the cross for pardon.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As we wait on God with patient trust, He offers us something extraordinary: His personal friendship and counsel. The Lord shares His secrets and reveals His love to those who revere Him and fear to grieve Him. Trusting completely in God's sovereign control brings quiet confidence and peace to our souls.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face difficult trials, do you focus more on removing the pain or on asking God to forgive and teach you?",
+    "What helps you wait patiently for God's guidance instead of trying to direct your own path?"
+   ],
+   "prayer": "Lord, guide us gently in Your truth and teach us to follow Your ways like trusting children. Forgive our sins and help us leave our pain in Your wise hands. Draw us close into Your personal friendship, and grant us quiet peace as we wait upon You.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 11",
+     "on": "Psalms 25:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 8",
+     "on": "Psalms 25:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 25:14",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "Thomas Brewer",
+     "work": "God’s Instruction",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-instruction"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

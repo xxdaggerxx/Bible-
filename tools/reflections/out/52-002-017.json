@@ -1,0 +1,80 @@
+{
+ "id": "52-002-017",
+ "title": "Paul’s Longing to Visit",
+ "refs": [
+  "1 Thessalonians 2:17-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 52002017,
+   "end": 52002020,
+   "ref": "1 Thessalonians 2:17-20",
+   "ranges": [
+    [
+     52002017,
+     52002020
+    ]
+   ],
+   "title": "Deep Love and Real Opposition",
+   "key_verse": [
+    52002019,
+    52002019
+   ],
+   "reflect": [
+    {
+     "text": "When Christ changes our hearts, he gives us a sincere affection for his people. We do not just care about other believers from a distance. Genuine Christian love wants to meet face to face, share life, and build one another up in faith. That is why being separated from fellow Christians can feel so hard.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet gathering together and serving one another is rarely easy. Paul found that Satan actively blocked his way, trying to stop believers from meeting and encouraging each other. As Charles Spurgeon observed, our enemy constantly seeks to hinder Christian effort. Facing obstacles is not a sign that God has failed, but a reminder that we are doing the Lord's work. In his strength, we can overcome this opposition.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Pouring our lives into helping others follow Jesus takes time, hard work, and sacrifice. Even so, seeing other Christians grow and stand firm brings deep delight. Celebrating the faith of others does not compete with our worship of Jesus. Instead, sharing our lives to help others know God's grace makes our own joy in Christ even greater.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Who is a believer you could make an effort to encourage face to face this week?",
+    "When you face obstacles to fellowship or service, how does knowing God wins the victory give you patience to keep trying?"
+   ],
+   "prayer": "Lord, thank you for giving us brothers and sisters to walk with in faith. When difficulties or spiritual opposition make gathering and serving hard, give us strength to keep going. Please enlarge our joy in you as we invest our lives in helping others grow. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 7",
+     "on": "1 Thessalonians 2:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Paul’s Longing to See the Thessalonians",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/pauls-longing-to-see-thessalonians"
+    },
+    "D3": {
+     "author": "David Mathis",
+     "work": "You Are My Joy: The Deep Reward in Discipling Others",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/you-are-my-joy"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

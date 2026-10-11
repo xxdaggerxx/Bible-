@@ -1,0 +1,122 @@
+{
+ "id": "46-014-001",
+ "title": "Prophecy and Tongues",
+ "refs": [
+  "1 Corinthians 14:1-25"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46014001,
+   "end": 46014001,
+   "ref": "1 Corinthians 14:1",
+   "ranges": [
+    [
+     46014001,
+     46014001
+    ]
+   ],
+   "title": "\"Eagerly Desire Spiritual Gifts\"",
+   "key_verse": [
+    46014001,
+    46014001
+   ],
+   "reflect": [
+    {
+     "text": "Scripture tells us to chase after love and eagerly desire spiritual gifts, especially the gift of prophecy. Prophesying does not mainly mean predicting what will happen in the future. Instead, it means taking God's biblical truth and applying it directly to everyday life. When believers share God's truth, they can offer timely encouragement, comfort, and direction to people who are searching for God's will.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "This work of speaking God's Word is not meant only for pastors or church leaders, because all believers are called to minister. Making the proclamation of God's Word a daily focus helps us grow in closer intimacy with the Holy Spirit. Sharing words from God also carries a serious responsibility to speak faithfully and obediently. Because of this, churches should equip believers to tune their hearts to the Spirit's voice so they can build up those around them.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you make sharing God's biblical truth a regular part of your daily conversations?",
+    "Who in your life might need a timely word of encouragement today?"
+   ],
+   "prayer": "Lord, help us to pursue love and eagerly seek the gifts You give. Give us courage to share Your truth with people who need encouragement and clarity. Teach us to listen faithfully to Your Holy Spirit and speak obediently to build up others. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Jack Graham",
+     "work": "How to Use the Gift of Prophecy",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-apr-11-2011.html"
+    },
+    "D3": {
+     "author": "Michelle S. Lazurek",
+     "work": "Embrace the Gift of Prophecy",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/embrace-the-gift-of-prophecy.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 46014001,
+   "end": 46014025,
+   "ref": "1 Corinthians 14:1-25",
+   "ranges": [
+    [
+     46014001,
+     46014025
+    ]
+   ],
+   "title": "Speaking and Listening with Understanding",
+   "key_verse": [
+    46014009,
+    46014009
+   ],
+   "reflect": [
+    {
+     "text": "Whenever we gather to worship, our words must be clear and easy to understand. Tools for communication change over the centuries, but the basic rules of good communication remain the same. Paul warned that speech that cannot be understood fails to benefit the hearer. Spiritual speech must always put clear understanding first so that listeners, especially seekers who are exploring faith, can be helped. The church needs to share the timeless gospel using everyday language that ordinary people comprehend.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Clear communication also requires careful listening. God is constantly speaking to us through many different voices in our world. We can hear echoes of His voice in the music of nature, such as ocean waves, stars, and birdsong. He also speaks through our families, teachers, and friends, as well as through our changing circumstances of joy, loss, and hardship. Behind all these everyday experiences, God is speaking, and we should listen attentively to learn what He wants to teach us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you talk about your faith, do you use plain language that anyone can easily follow?",
+    "What might God be trying to teach you through the circumstances in your life right now?"
+   ],
+   "prayer": "Heavenly Father, help us speak Your message clearly so that anyone who hears can understand and find help. Give us attentive hearts to hear You speaking through creation, our friends, and our daily joys and struggles. Teach us to listen well and honor You with all our words. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Corinthians 14:10",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D4": {
+     "author": "One Year Devotions for Men",
+     "work": "Communication",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/communication-one-year-devotions-for-men-may-10.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

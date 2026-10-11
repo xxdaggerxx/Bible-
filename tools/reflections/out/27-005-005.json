@@ -1,0 +1,66 @@
+{
+ "id": "27-005-005",
+ "title": "The Handwriting on the Wall",
+ "refs": [
+  "Daniel 5:5-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 27005005,
+   "end": 27005012,
+   "ref": "Daniel 5:5-12",
+   "ranges": [
+    [
+     27005005,
+     27005012
+    ]
+   ],
+   "title": "God's Warning to Human Pride",
+   "key_verse": [
+    27005005,
+    27005005
+   ],
+   "reflect": [
+    {
+     "text": "King Belshazzar threw a grand banquet, but he twisted the gift of community into a show of human pride. He used sacred cups from God's temple to celebrate his own greatness. Suddenly, human fingers appeared and wrote on the palace plaster. The king watched in terror as his strength failed and his knees knocked together. God broke through the king's arrogance in an instant.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Like Belshazzar, we can be tempted to use good gifts in selfish and dishonoring ways. We might misuse our time, our minds, or our resources to serve ourselves rather than God. When we do that, we need to recognize divine conviction, God's gentle and firm way of showing us where we are wrong.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Spiritual growth requires giving the Holy Spirit room to speak to our hearts. When He points out where we have compromised, we should not harden our hearts or hide in fear. Instead, we can listen to His correction and turn away from our pride so that our lives honor the Lord.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas of your life, mind, or resources that you are using for your own pride rather than for God?",
+    "How can you give the Holy Spirit room today to show you where you need to turn back to Him?"
+   ],
+   "prayer": "Lord, forgive us for the times we use your blessings with selfish pride. Give us humble hearts to listen when the Holy Spirit shows us where we have compromised. Help us turn away from dishonoring habits and honor you with all that we have. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Robin Dugall",
+     "work": "The Handwriting on the Wall - Homeword - September 18",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/the-handwriting-on-the-wall-homeword-september.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

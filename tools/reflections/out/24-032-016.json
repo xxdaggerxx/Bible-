@@ -1,0 +1,83 @@
+{
+ "id": "24-032-016",
+ "title": "Jeremiah Prays for Understanding",
+ "refs": [
+  "Jeremiah 32:16-25"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 24032017,
+   "end": 24032017,
+   "ref": "Jeremiah 32:17",
+   "ranges": [
+    [
+     24032017,
+     24032017
+    ]
+   ],
+   "title": "\"Nothing Is Too Difficult for You\"",
+   "key_verse": [
+    24032017,
+    24032017
+   ],
+   "reflect": [
+    {
+     "text": "When an invading army surrounded Jerusalem, God told Jeremiah to buy a plot of land. To human common sense, this made no sense because the city was about to fall. Yet Jeremiah obeyed and anchored his heart in God's power. He recognized that the Creator of heaven and earth has unlimited strength, and nothing in any circumstance is too hard for Him.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because God is all-powerful, nothing is beyond His reach. He can answer prayer, keep every promise, solve our hardest problems, and save any lost person. Believers often treat prayer as a desperate last resort after exhausting human efforts, but turning to God should always be our very first reaction.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Like Jeremiah, we are called to trust God's bare word even when human reason disagrees. Our stubbornness, cold hearts, or hidden sin can hold back the work God wants to do in our lives. When we overcome unbelief and step out in obedient faith, we open the channel through which God pours out His blessings.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face a difficult problem, do you turn to God first or treat prayer as a last resort?",
+    "Is there any stubbornness or doubt in your heart that keeps you from trusting God's power?"
+   ],
+   "prayer": "Lord God, You created the heavens and the earth, and nothing is too difficult for You. Forgive us when we rely on our own ideas or wait until things feel hopeless before coming to You. Help us to bring every situation to You first and to trust Your promises with simple, obedient faith.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 30",
+     "on": "Jeremiah 32:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "The All-powerful God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/harvest-daily-may-20-2005-1330485.html"
+    },
+    "D3": {
+     "author": "Adrian Rogers",
+     "work": "There is Nothing Too Hard for God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/spiritual-life/there-is-nothing-too-hard-for-god-1270903.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

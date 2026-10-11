@@ -1,0 +1,123 @@
+{
+ "id": "01-017-001",
+ "title": "Abraham to Father Many Nations",
+ "refs": [
+  "Genesis 17:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1017001,
+   "end": 1017001,
+   "ref": "Genesis 17:1",
+   "ranges": [
+    [
+     1017001,
+     1017001
+    ]
+   ],
+   "title": "\"I Am God Almighty\"",
+   "key_verse": [
+    1017001,
+    1017001
+   ],
+   "reflect": [
+    {
+     "text": "Abram had waited through thirteen years of divine silence after trying to fulfill God's promise through his own human striving. That long delay brought him to the end of relying on himself. When God finally spoke, He reintroduced Himself as El Shaddai, God Almighty. Even when the Lord seems quiet or distant, His sovereign power rules over nature and our circumstances. He meets us in our weakness and calls us to walk by faith instead of sight.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "God told Abram to walk before Him and be blameless. As F. B. Meyer observed, God reveals who He is first so that \"obedience is rendered easily possible.\" This call to blameless living is not an attempt to earn God's covenant kindness. Rather, it is a thankful response to His grace, which is God's undeserved love. It means surrendering our whole heart to Him, holding nothing back, and letting His supreme power guide every part of our lives.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life are you tempted to rely on your own striving instead of waiting on God?",
+    "What does it look like for you to surrender every part of your heart to God Almighty today?"
+   ],
+   "prayer": "Lord God Almighty, teach us to trust Your timing even when You seem silent. We confess that our own striving cannot fulfill Your promises. Help us to rest in Your great power and walk before You with a thankful, fully surrendered heart. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 17:1",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "Chuck Swindoll",
+     "work": "The Almighty One",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-september-3-2024.html"
+    },
+    "D4": {
+     "author": "Eric Watkins",
+     "work": "Walk Before Me and Be Blameless",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/walk-me-and-be-blameless"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1017001,
+   "end": 1017008,
+   "ref": "Genesis 17:1-8",
+   "ranges": [
+    [
+     1017001,
+     1017008
+    ]
+   ],
+   "title": "An Everlasting Covenant for All Generations",
+   "key_verse": [
+    1017007,
+    1017007
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, the Lord establishes an everlasting covenant, a sacred binding promise, not only with Abraham but also with his descendants throughout all their generations. Through Christ Jesus, believers can lay hold of this wonderful promise for their own households. Our children do not belong to God's family merely by natural birth, because we are all born in sin. For this reason, we ask the Holy Spirit to bring them into God's covenant of grace.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As Charles Spurgeon noted, our highest honor is being permitted to serve the Lord. Because God is faithful to His word, we can ask Him to be the God of our children and our descendants in all the years ahead. We also pray for other Christian households who long to see their loved ones saved. We ask God to show mercy to our families so that future generations walk in His truth.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that salvation is a gift of God's grace shape the way you pray for your children or family?",
+    "Which families in your church community can you lift up in prayer for spiritual renewal today?"
+   ],
+   "prayer": "Lord God of Abraham, thank You for welcoming us into Your everlasting covenant through Christ Jesus. We ask You to work by Your Holy Spirit in the hearts of our children and future generations. Be their God just as You are our God, and bless every household in Your church with living faith. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 1",
+     "on": "Genesis 17:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

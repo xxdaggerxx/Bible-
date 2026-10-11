@@ -1,0 +1,75 @@
+{
+ "id": "17-005-001",
+ "title": "Esther Approaches the King",
+ "refs": [
+  "Esther 5:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 17005001,
+   "end": 17005003,
+   "ref": "Esther 5:1-3",
+   "ranges": [
+    [
+     17005001,
+     17005003
+    ]
+   ],
+   "title": "\"She Found Favor in His Sight\"",
+   "key_verse": [
+    17005002,
+    17005002
+   ],
+   "reflect": [
+    {
+     "text": "When Esther stepped into the inner court, she did not cower in fear. She stood with quiet dignity, calm assurance, and humble boldness before the king. Earthly rulers never intimidate God, who directs every human heart, and He moved the king to welcome her. In an even greater way, we can approach our sovereign Lord with reverence and confidence. We do not have to persuade God to love us, because believers are already His children who have an enduring place of favor through Jesus Christ.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Esther also showed patience and discernment, waiting on the Lord instead of rushing forward with impulsive words. When the king held out his golden scepter, she was received with grace. As F. B. Meyer wrote, \"none ever perished at the footstool of mercy.\" Because Jesus intercedes for us at the Father's right hand, we never need to fear rejection. God invites us to bring our deepest burdens to Him, knowing He will answer out of the riches of His kingdom.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you pray, do you remember that God already welcomes you with love as His child?",
+    "What request can you bring to the Lord today with patience, trusting Him to answer in His right time?"
+   ],
+   "prayer": "Heavenly Father, thank You that through Jesus we are welcomed into Your presence with lasting favor. Teach us to wait patiently on You and to trust Your sovereign care. Give us the courage to bring all our needs before You, resting in Your promise to provide what is best. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Esther 5:2",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Calm, Wise, and Confident",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-march-21-2024.html"
+    },
+    "D3": {
+     "author": "Kimberly Orr",
+     "work": "Approaching the King",
+     "site": "The Upper Room",
+     "url": "https://www.upperroom.org/devotionals/blog-posts/2492"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

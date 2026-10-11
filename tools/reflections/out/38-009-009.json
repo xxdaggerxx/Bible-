@@ -1,0 +1,82 @@
+{
+ "id": "38-009-009",
+ "title": "Zion’s Coming King",
+ "refs": [
+  "Zechariah 9:9-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 38009009,
+   "end": 38009013,
+   "ref": "Zechariah 9:9-13",
+   "ranges": [
+    [
+     38009009,
+     38009013
+    ]
+   ],
+   "title": "Our Humble King of Peace",
+   "key_verse": [
+    38009009,
+    38009009
+   ],
+   "reflect": [
+    {
+     "text": "Zechariah told God's weary people to rejoice because their King was coming. Many people expected an earthly ruler riding a powerful warhorse to defeat their political enemies. Instead, Jesus arrived riding humbly on a donkey. He did not come to win an earthly battle or give us worldly comfort. He came to bring eternal salvation and real peace to all nations.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Waiting for God to act can be difficult. During long, painful seasons, we might be tempted to feel that God has forgotten His promises. Yet the prophet calls God's people prisoners of hope. Even when we feel trapped by hard circumstances or our own failures, God remembers His covenant. Because His promises are sealed by blood, we can be confident that He will rescue us from the pit.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God's plans often run contrary to what we imagine. We must be careful not to shape Jesus into a savior who only serves our personal goals and wishes. True worship means honoring Christ for who He truly is and trusting that He will faithfully complete everything He started.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face hard seasons of waiting, how does knowing God keeps His covenant give you hope?",
+    "In what ways might you be tempted to shape Jesus around your own plans rather than following His ways?"
+   ],
+   "prayer": "Lord Jesus, thank You for coming in humility to bring us peace and eternal salvation. When we feel trapped in discouraging circumstances, help us to trust Your faithful promises. Teach our hearts to worship You as You truly are. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Zechariah 9:11",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Lysa TerKeurst",
+     "work": "Completely Trusting Our God of Completion",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-october-11-2018.html"
+    },
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "Peace to the Nations",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-april-10-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

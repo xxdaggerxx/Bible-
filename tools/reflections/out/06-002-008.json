@@ -1,0 +1,143 @@
+{
+ "id": "06-002-008",
+ "title": "The Promise to Rahab",
+ "refs": [
+  "Joshua 2:8-24"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 6002009,
+   "end": 6002011,
+   "ref": "Joshua 2:9-11",
+   "ranges": [
+    [
+     6002009,
+     6002011
+    ]
+   ],
+   "title": "\"The LORD Your God Is God\"",
+   "key_verse": [
+    6002011,
+    6002011
+   ],
+   "reflect": [
+    {
+     "text": "Everyone in Jericho was terrified when they heard what the Lord had done at the Red Sea. Yet while the whole city melted in fear, only Rahab responded by turning toward God. She recognized that the Lord rules supreme over heaven and earth. Instead of clinging to the false idols of her people, she sought refuge in the living God.",
+     "sources": [
+      "D2",
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "Rahab took a brave, life-risking stand to help the spies because she believed God's power was real. True faith is not about how big or strong our faith feels, but about the faithfulness of the God we trust. Rahab was an outsider with a troubled past, yet God saw her, loved her, and gave her a place in His grand story of salvation.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "God had already prepared the way before the spies ever arrived in the city. Rahab's confession showed them that God was keeping His promises. In the same way, real trust in God moves us to step forward even when we feel uncertain, turning away from sin and resting fully in His mercy.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What false securities or fears do you need to turn away from so you can rest in God?",
+    "How can remembering that God rules over heaven and earth help you take bold steps of faith today?"
+   ],
+   "prayer": "Lord God of heaven and earth, thank You for Your great power and mercy. Forgive us when we cling to idols or let fear rule our hearts. Help us to leave our past behind, step out in faith, and trust in Your unfailing promises each day. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Rahab Trusts the God of Israel",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/rahab-trusts-god-of-israel"
+    },
+    "D3": {
+     "author": "Daily Disciples Ministries",
+     "work": "Just Step Out in Faith",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-devotional-mar-19-2009-11601085.html"
+    },
+    "D4": {
+     "author": "Drew Williams",
+     "work": "By Name and Not Profession: Rahab's Story",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/by-name-and-not-profession-rahab-s-story.html"
+    },
+    "D5": {
+     "author": "Bible Pathways Ministries",
+     "work": "Bible Pathways 03/13/05",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-03-or-13-or-05-1315791.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 6002008,
+   "end": 6002024,
+   "ref": "Joshua 2:8-24",
+   "ranges": [
+    [
+     6002008,
+     6002024
+    ]
+   ],
+   "title": "The Scarlet Cord in the Window",
+   "key_verse": [
+    6002021,
+    6002021
+   ],
+   "reflect": [
+    {
+     "text": "The spies promised Rahab that she and her family would be spared if she hung a bright scarlet cord from her window. Tying a simple cord might have seemed like a very small thing to do, but Rahab obeyed immediately. Her faith was simple, firm, and fully obedient to what she had been told.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This scarlet cord reminds us of the precious blood of Jesus that shields us from judgment. Even when our own faith feels weak, God looks upon the blood of Christ and passes over our sins. As Charles Spurgeon wrote, \"the blood is my boast and my song.\" We are called to display our trust in Christ openly so that all around us can see His saving work.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Rahab lived right inside the city wall, yet when the walls of Jericho fell, her home remained safe. In the same way, when destruction comes upon this fallen world, those who rest beneath the blood of Jesus are completely secure. We can rely on His promises and rest in quiet peace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there small matters of obedience in your life that you have been neglecting?",
+    "Is your trust in the blood of Jesus visible in the way you live each day?"
+   ],
+   "prayer": "Heavenly Father, thank You for the precious blood of Jesus that keeps us safe from judgment. Give us hearts that gladly obey all Your commands, even the small ones. Help us to place our complete trust in You and rest in Your peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 18",
+     "on": "Joshua 2:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

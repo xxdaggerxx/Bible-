@@ -1,0 +1,82 @@
+{
+ "id": "42-016-001",
+ "title": "The Parable of the Shrewd Manager",
+ "refs": [
+  "Luke 16:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42016001,
+   "end": 42016013,
+   "ref": "Luke 16:1-13",
+   "ranges": [
+    [
+     42016001,
+     42016013
+    ]
+   ],
+   "title": "Managing Earthly Wealth with Eternity in View",
+   "key_verse": [
+    42016010,
+    42016010
+   ],
+   "reflect": [
+    {
+     "text": "In this parable, Jesus tells of a manager about to lose his position. Jesus does not praise the man's dishonest choices, but He notes how quickly and decisively the man prepared for his future. People living for this world often show more initiative for earthly survival than believers do for the kingdom of God. Jesus calls us to have that same foresight. Instead of focusing only on immediate wants, we need to use our temporary resources to bless others and look toward eternity.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Faithful management means having an intentional plan rather than putting off needed adjustments. When we are disorganized, wasteful, or neglectful in our daily duties, we risk losing trust and damaging our Christian witness. Taking practical care of our responsibilities protects our reputation and honors the work God has entrusted to us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "How we handle money and possessions serves as an earthly proving ground. God observes how we manage small, routine matters to see if we are ready for greater spiritual responsibilities. When we steward worldly resources in ways that honor Him, we lay hold of true, everlasting riches.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what small, daily responsibilities can you be more dependable and organized this week?",
+    "How can you use your earthly resources more intentionally to bless others and invest in God's kingdom?"
+   ],
+   "prayer": "Lord, thank You for the resources and responsibilities You have placed into our hands. Teach us to be faithful in routine tasks so our daily choices reflect well on You. Give us the wisdom to manage what we have with eternity in mind. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Rick Warren",
+     "work": "What the Dishonest Manager Did Right",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-january-25-2020.html"
+    },
+    "D2": {
+     "author": "Will Graham",
+     "work": "Passing the Stewardship Test?",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/articles/will-graham-devotion-the-unfaithful-servant"
+    },
+    "D3": {
+     "author": "Jon Bloom",
+     "work": "Jesus Commends Shrewd Money Managers",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/jesus-commends-shrewd-money-managers"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

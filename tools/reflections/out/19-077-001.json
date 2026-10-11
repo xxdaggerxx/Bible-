@@ -1,0 +1,84 @@
+{
+ "id": "19-077-001",
+ "title": "In the Day of Trouble I Sought the LORD",
+ "refs": [
+  "Psalms 77:1-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19077001,
+   "end": 19077020,
+   "ref": "Psalms 77:1-20",
+   "ranges": [
+    [
+     19077001,
+     19077020
+    ]
+   ],
+   "title": "Remembering God's Wonders in the Dark",
+   "key_verse": [
+    19077011,
+    19077011
+   ],
+   "reflect": [
+    {
+     "text": "Deep grief and trouble can fill our nights with sleepless worry. When suffering feels heavy, our souls may refuse quick comfort, and we can easily feel isolated and forgotten. Like the psalmist Asaph, we might wonder in our pain if God has withheld His mercy or if His promises have failed. God welcomes our honest questions and groans when we face these crises of faith.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When our present circumstances cloud our vision and look hopeless, Asaph shows us a way forward. He chose to search his memory and look back at the Lord's mighty deeds. He meditated on God's great wonders of old, such as the powerful rescue of His people through the parted waters of the Red Sea.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Intentionally recalling what God has already done becomes an oasis of comfort. Tangible reminders of His past care restore our hope as we face new mountains. Even when our pain is not solved right away, remembering God's character and power anchors our trust, assuring us that He never forgets His people.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When trouble or sorrow keeps you awake, what past acts of God can you choose to remember?",
+    "What reminders can you keep in your daily life to help you recall the Lord's faithfulness?"
+   ],
+   "prayer": "Lord God, when trouble presses in and we feel troubled and weak, help us bring our honest cries to You. Teach our hearts to pause and remember all the wonders You have done in the past. Anchor our trust in Your unchanging love, and lead us peacefully through every deep water. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jessica Van Roekel",
+     "work": "A Prayer to Stack Stones",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-to-stack-stones.html"
+    },
+    "D2": {
+     "author": "David C. McCasland",
+     "work": "Known Unto God",
+     "site": "Our Daily Bread",
+     "url": "https://military.odb.org/known-unto-god/"
+    },
+    "D3": {
+     "author": "Jon Bloom",
+     "work": "‘My Soul Refuses to Be Comforted’: A Song for Long Nights in Darkness",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/my-soul-refuses-to-be-comforted"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

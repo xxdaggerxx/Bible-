@@ -22,6 +22,8 @@ data class BibleVersion(
     val description: String,
     /** Imported by the user (BIB-4): [asset] is then the database file's full path. */
     val imported: Boolean = false,
+    /** An online Bible (BIB-12): its YouVersion id; [asset] is the database it's kept in on the tablet. */
+    val online: Int = 0,
 )
 
 /**
@@ -40,14 +42,9 @@ class BibleRepository(context: Context, val version: BibleVersion) {
         if (!version.imported && !file.exists()) {
             // Remove copies of older bundled databases.
             file.parentFile?.listFiles()?.filter { it.name.startsWith(base) && it.name != file.name }?.forEach { it.delete() }
-            file.parentFile?.mkdirs()
-            val tmp = File(file.path + ".tmp")
-            context.assets.open("bibles/${version.asset}").use { input ->
-                tmp.outputStream().use { output -> input.copyTo(output) }
-            }
-            tmp.renameTo(file)
+            PackedAssets.copy(context, "bibles/${version.asset}", file)
         }
-        db = SQLiteDatabase.openDatabase(file.path, null, SQLiteDatabase.OPEN_READONLY)
+        db = SQLiteDatabase.openDatabase(file.path, null, if (version.online > 0) SQLiteDatabase.OPEN_READWRITE else SQLiteDatabase.OPEN_READONLY)
         books = db.rawQuery("SELECT id, name, osis, chapters FROM books ORDER BY id", null).use { c ->
             buildList {
                 while (c.moveToNext()) add(BookInfo(c.getInt(0), c.getString(1), c.getString(2), c.getInt(3)))
@@ -55,15 +52,60 @@ class BibleRepository(context: Context, val version: BibleVersion) {
         }
     }
 
+    /** An online Bible's downloads (BIB-12); null for the others. */
+    val online: OnlineBible? = if (version.online > 0) OnlineBible(version.code, version.online, db) else null
+
+    /**
+     * For an online Bible: makes sure a chapter is on the tablet before it's read. Off the main
+     * thread it's downloaded now (the caller waits); on the main thread it's fetched in the
+     * background and [onlineEvents] says when it has come, so the screen shows it then.
+     */
+    fun ensure(book: Int, chapter: Int) {
+        val o = online ?: return
+        if (book !in 1..66 || chapter < 1) return
+        if (o.isSaved(book, chapter)) { o.touch(book, chapter); return }
+        if (android.os.Looper.getMainLooper().isCurrentThread) { fetchLater(book, chapter); return }
+        fetchNow(book, chapter)
+    }
+
+    private fun fetchNow(book: Int, chapter: Int): Boolean {
+        val o = online ?: return false
+        return try {
+            o.fetch(book, chapter)
+            onlineEvents?.arrived(code, book, chapter)
+            // Read on without waiting: the next two chapters come in the background.
+            for (n in 1..2) if (chapter + n <= book(book).chapters) fetchLater(book, chapter + n, quiet = true)
+            true
+        } catch (e: Exception) {
+            onlineEvents?.failed(code, book, chapter, e)
+            false
+        }
+    }
+
+    private fun fetchLater(book: Int, chapter: Int, quiet: Boolean = false) {
+        val o = online ?: return
+        val key = "$code $book $chapter"
+        if (o.isSaved(book, chapter) || !pending.add(key)) return
+        OnlineBible.background.execute {
+            try {
+                if (quiet) runCatching { o.fetch(book, chapter) }.onSuccess { onlineEvents?.arrived(code, book, chapter) }
+                else fetchNow(book, chapter)
+            } finally {
+                pending.remove(key)
+            }
+        }
+    }
+
     fun book(id: Int): BookInfo = books[(id - 1).coerceIn(0, books.lastIndex)]
 
-    fun chapter(book: Int, chapter: Int): List<Verse> =
+    fun chapter(book: Int, chapter: Int): List<Verse> = ensure(book, chapter).let {
         db.rawQuery(
             "SELECT verse, text FROM verses WHERE book = ? AND chapter = ? ORDER BY verse",
             arrayOf(book.toString(), chapter.toString()),
         ).use { c ->
             buildList { while (c.moveToNext()) add(Verse(c.getInt(0), c.getString(1))) }
         }
+    }
 
     /** Section headings in a chapter (only databases built with headings have any). */
     fun headings(book: Int, chapter: Int): List<Heading> = try {
@@ -79,16 +121,43 @@ class BibleRepository(context: Context, val version: BibleVersion) {
     }
 
     /** Verses from [fromId] to [toId] (verse ids), in order, at most [limit]. */
-    fun versesBetween(fromId: Int, toId: Int, limit: Int): List<Pair<Int, String>> =
-        db.rawQuery(
+    fun versesBetween(fromId: Int, toId: Int, limit: Int): List<Pair<Int, String>> {
+        // An online Bible fetches the chapters of a short passage (a pop-over, a verse card).
+        if (online != null && fromId / 1_000_000 == toId / 1_000_000 && (toId / 1000) % 1000 - (fromId / 1000) % 1000 <= 3) {
+            for (c in (fromId / 1000) % 1000..(toId / 1000) % 1000) ensure(fromId / 1_000_000, c)
+        }
+        return savedVersesBetween(fromId, toId, limit)
+    }
+
+    /** Verses from [fromId] to [toId] that are on the tablet, without downloading (see [versesBetween]). */
+    fun savedVersesBetween(fromId: Int, toId: Int, limit: Int): List<Pair<Int, String>> {
+        return db.rawQuery(
             "SELECT id, text FROM verses WHERE id BETWEEN ? AND ? ORDER BY id LIMIT $limit",
             arrayOf(fromId.toString(), toId.toString()),
         ).use { c -> buildList { while (c.moveToNext()) add(c.getInt(0) to c.getString(1)) } }
+    }
 
-    fun verseText(id: Int): String? =
+    /** The open database, for an imported version's word tags, red letters and paragraphs (see [StudyRepository.ownDb]). */
+    internal val database: SQLiteDatabase get() = db
+
+    /** Every verse, in Bible order. */
+    fun allVerses(): List<Pair<Int, String>> =
+        db.rawQuery("SELECT id, text FROM verses ORDER BY id", null).use { c ->
+            buildList { while (c.moveToNext()) add(c.getInt(0) to c.getString(1)) }
+        }
+
+    /**
+     * A verse's text if it's on the tablet, without downloading (an online Bible's previews, such as
+     * the cross-reference list, shouldn't fetch a chapter for every line).
+     */
+    fun savedVerseText(id: Int): String? =
+        db.rawQuery("SELECT text FROM verses WHERE id = ?", arrayOf(id.toString())).use { c -> if (c.moveToFirst()) c.getString(0) else null }
+
+    fun verseText(id: Int): String? = ensure(id / 1_000_000, (id / 1000) % 1000).let {
         db.rawQuery("SELECT text FROM verses WHERE id = ?", arrayOf(id.toString())).use { c ->
             if (c.moveToFirst()) c.getString(0) else null
         }
+    }
 
     fun crossRefs(fromId: Int): List<CrossRef> =
         db.rawQuery(
@@ -108,6 +177,22 @@ class BibleRepository(context: Context, val version: BibleVersion) {
             SearchScope.NT -> 40 to 66
             SearchScope.BOOK -> currentBook to currentBook
         }
+        val found = searchSaved(query, lo, hi, excluded)
+        val o = online ?: return found
+        // An online Bible: also ask YouVersion, for chapters not on the tablet yet (not on the main thread).
+        if (android.os.Looper.getMainLooper().isCurrentThread) return found
+        val ids = runCatching { o.searchRemote(wanted, books) }.getOrDefault(emptyList())
+            .filter { it.first / 1_000_000 in lo..hi }
+        if (ids.isEmpty()) return found
+        val have = found.mapTo(HashSet()) { VerseId.of(it.book, it.chapter, it.verse) }
+        val extra = ids.filter { it.first !in have }.mapNotNull { (id, given) ->
+            val text = given ?: verseText(id) ?: return@mapNotNull null
+            if (containsAny(text, excluded)) null else SearchHit(id / 1_000_000, (id / 1000) % 1000, id % 1000, text)
+        }
+        return (found + extra).sortedBy { VerseId.of(it.book, it.chapter, it.verse) }
+    }
+
+    private fun searchSaved(query: String, lo: Int, hi: Int, excluded: List<String>): List<SearchHit> {
         return try {
             db.rawQuery(
                 "SELECT v.book, v.chapter, v.verse, v.text FROM verses_fts " +
@@ -127,7 +212,18 @@ class BibleRepository(context: Context, val version: BibleVersion) {
         }
     }
 
+    /** What happens to an online Bible's downloads (BIB-12): told to the screen. */
+    interface OnlineEvents {
+        fun arrived(code: String, book: Int, chapter: Int)
+        fun failed(code: String, book: Int, chapter: Int, error: Exception)
+    }
+
     companion object {
+        @Volatile var onlineEvents: OnlineEvents? = null
+
+        /** Chapters being fetched in the background ("NIV 43 3"). */
+        private val pending = java.util.Collections.synchronizedSet(HashSet<String>())
+
         /** Bump when a bundled database changes, so the new copy replaces the old one. */
         private const val DB_VERSION = 2
         const val MAX_RESULTS = 2000
@@ -197,10 +293,16 @@ class BibleRepository(context: Context, val version: BibleVersion) {
          * Brings back imported versions from a backup: [files] holds their database files by name.
          * Each is added (replacing one with the same code) with its file in this tablet's folder.
          */
-        fun restoreImported(context: Context, json: String, files: File) {
+        fun restoreImported(context: Context, json: String, files: File, kjvBooks: List<BookInfo>) {
             val dir = File(context.filesDir, "bibles").apply { mkdirs() }
             val list = runCatching { BibleImport.fromJson(org.json.JSONArray(json)) }.getOrDefault(emptyList())
             for (v in list) {
+                if (v.online > 0) {
+                    // Online Bibles aren't in backups: they're downloaded again as they're read (BIB-12).
+                    val info = YouVersion.Info(v.online, v.code, v.name, (1..66).toSet(), v.copyright, v.description)
+                    addImported(context, OnlineBible.create(context, info, kjvBooks).copy(code = v.code))
+                    continue
+                }
                 val src = File(files, File(v.asset).name)
                 if (!src.exists()) continue
                 val dest = File(dir, src.name)

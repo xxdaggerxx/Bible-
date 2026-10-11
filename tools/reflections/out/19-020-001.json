@@ -1,0 +1,67 @@
+{
+ "id": "19-020-001",
+ "title": "The Day of Trouble",
+ "refs": [
+  "Psalms 20:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19020001,
+   "end": 19020009,
+   "ref": "Psalms 20:1-9",
+   "ranges": [
+    [
+     19020001,
+     19020009
+    ]
+   ],
+   "title": "The Saving Strength of God's Hand",
+   "key_verse": [
+    19020006,
+    19020006
+   ],
+   "reflect": [
+    {
+     "text": "When this psalm speaks of God saving his anointed king, it points first to David, and ultimately to Jesus Christ. Yet it also belongs to all of us who follow Jesus. The word Christian actually means an anointed person, someone who has received God's Holy Spirit. When we yield our hearts to the Spirit, we can rest in this promise of God's ongoing help.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Daily life brings many annoyances, pitfalls, and temptations that feel too heavy to overcome. We may wonder if we can ever be free from constant fret and failure. But as F. B. Meyer reminds us, God's right hand is pledged \"not to destroy, but to save.\" All the power of heaven reaches out to rescue us, not to push us down.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus sits at that very right hand of God, and that hand is moved by the deep love shown on the cross. Instead of focusing on your struggles or trusting in human strength, look to the Lord. You can remind yourself each day that God is ready to help you right now with his mighty hand.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face daily irritations or temptations, do you look at the trouble or at God's power to save?",
+    "How does knowing that Jesus sits at God's strong right hand bring you comfort today?"
+   ],
+   "prayer": "Lord, thank you that your strong right hand is pledged to save and help us. When temptations and worries feel too big, turn our eyes away from the trouble and toward your great power. Help us to stand firm and trust in your love today.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 20:6",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

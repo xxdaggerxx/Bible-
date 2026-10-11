@@ -1,0 +1,73 @@
+{
+ "id": "14-035-001",
+ "title": "Josiah Restores the Passover",
+ "refs": [
+  "2 Chronicles 35:1-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14035001,
+   "end": 14035019,
+   "ref": "2 Chronicles 35:1-19",
+   "ranges": [
+    [
+     14035001,
+     14035019
+    ]
+   ],
+   "title": "Restoring Joyful Worship to the Lord",
+   "key_verse": [
+    14035018,
+    14035018
+   ],
+   "reflect": [
+    {
+     "text": "True spiritual renewal is not only about turning away from what is false. It also requires actively restoring God's truth. King Josiah did not stop at clearing out idols; he reinstated the long-neglected Passover according to Scripture. With remarkable generosity, he and his leaders provided thousands of animals so everyone could take part. This created a celebration of God's rescue on a scale that had not been seen since the time of the prophet Samuel.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This great event succeeded because of careful preparation. Nothing was left to chance. The priests and Levites cleansed themselves, followed the instructions given in Scripture, and stood ready in their assigned places. We are meant to rely on the Holy Spirit, but that does not mean we live by haphazard guesswork. God calls us to prepare our hearts through prayer and studying the Bible, keeping ourselves clean and ready for the Master to pick up and use at any time.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God desires His people to celebrate their redemption with lavish, deep joy rather than gloomy duty. Remembering how the Lord has saved us through Christ should fill our worship with gladness and praise, even when we walk through difficult days.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you prepare your heart through prayer and Scripture to be ready for God to use you today?",
+    "Does your worship reflect the deep joy of being rescued by God, or has it become routine and gloomy?"
+   ],
+   "prayer": "Lord God, thank You for rescuing us through Jesus Christ. Cleanse our hearts and prepare us through Your Word and prayer to do Your will. Help us to serve You faithfully and to celebrate Your saving grace with genuine, overflowing joy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 35:4",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Josiah’s Passover",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/josiahs-passover"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

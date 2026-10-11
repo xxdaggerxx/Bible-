@@ -1,0 +1,129 @@
+{
+ "id": "22-005-001",
+ "title": "The Bride and Her Beloved",
+ "refs": [
+  "Song of Solomon 5:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 22005001,
+   "end": 22005016,
+   "ref": "Song of Solomon 5:1-16",
+   "ranges": [
+    [
+     22005001,
+     22005016
+    ]
+   ],
+   "title": "He Is Altogether Lovely",
+   "key_verse": [
+    22005016,
+    22005016
+   ],
+   "reflect": [
+    {
+     "text": "Christ claims the believer's heart as his own garden, bought by his blood and set apart for him. Yet we often fall into spiritual sleep and coldness, leaving him knocking at the door while we stay comfortable in our ease. Even when we are slow to welcome him, his patient grace reaches out to stir our slumbering souls.",
+     "sources": [
+      "D4",
+      "D6",
+      "D7"
+     ]
+    },
+    {
+     "text": "When we finally rise and feel his absence, our hearts ache with longing for his presence. At times the Lord delays answering our prayers to test and train our patience, but unanswered requests are never forgotten in heaven. This deep hunger for him is a gift of grace, and he has promised that those who thirst for him will be satisfied.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "When others see our longing and ask why Christ is so special, we can point to his unmatched worth. Worldly success and human applause leave us empty, but Jesus has eternal majesty and youthful vigor. His face once bore suffering and shame for us, and as Charles Spurgeon writes, \"he is altogether lovely.\"",
+     "sources": [
+      "D1",
+      "D3",
+      "D8",
+      "D9"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you grown spiritually sleepy, needing the Lord's gentle touch to stir your heart again?",
+    "How can the supreme beauty of Jesus guard you from chasing things that never truly satisfy?"
+   ],
+   "prayer": "Lord Jesus, thank you for claiming our hearts as your garden and waking us by your grace. Give us patience when your answers seem delayed, and keep our souls longing for you. Help us to see your unmatched beauty and love you above everything else in this world. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 9",
+     "on": "Song of Solomon 5:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 29",
+     "on": "Song of Solomon 5:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 1",
+     "on": "Song of Solomon 5:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 18",
+     "on": "Song of Solomon 5:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 22",
+     "on": "Song of Solomon 5:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D6": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 24",
+     "on": "Song of Solomon 5:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D7": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 27",
+     "on": "Song of Solomon 5:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D8": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 28",
+     "on": "Song of Solomon 5:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D9": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Song of Solomon 5:9",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

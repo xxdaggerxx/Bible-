@@ -1,0 +1,139 @@
+{
+ "id": "47-012-005",
+ "title": "Paul’s Thorn and God’s Grace",
+ "refs": [
+  "2 Corinthians 12:5-10"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 47012009,
+   "end": 47012009,
+   "ref": "2 Corinthians 12:9",
+   "ranges": [
+    [
+     47012009,
+     47012009
+    ]
+   ],
+   "title": "\"My Grace Is Sufficient for You\"",
+   "key_verse": [
+    47012009,
+    47012009
+   ],
+   "reflect": [
+    {
+     "text": "When we feel weak and helpless, we often think we cannot be useful to God. Yet God tells us that His grace, His loving kindness that we do not deserve, is completely enough for us. Just as the wide ocean has more than enough water for a tiny fish, God has all the help we will ever need. He asks us to let go of our self-reliance so He can fill us with His divine power. We cannot fight spiritual battles with our own might; God prepares us for victory by showing us how much we need Him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Trying to present a flawless front robs God of the honor He deserves. When we honestly admit where we fall short, others can see clearly that any victory comes from the Lord and not from our own skill. Our difficulties do not mean God has failed us. Like a sturdy lighthouse that proves its strength during a raging storm, our lives show the steady power of God's grace when we keep trusting Him through our deepest troubles.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of my life am I still trying to rely on my own strength instead of trusting God?",
+    "How can being honest about my personal weaknesses point other people toward God's grace?"
+   ],
+   "prayer": "Lord, thank You that Your grace is always enough to carry me through every day. Help me to stop pretending to be strong on my own, and teach me to rest in Your power. May my weaknesses show others how faithful and good You are. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 4",
+     "on": "2 Corinthians 12:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 4",
+     "on": "2 Corinthians 12:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 8",
+     "on": "2 Corinthians 12:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D5": {
+     "author": "Angela Mackey",
+     "work": "Boasting and Humility",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/boasting-and-humility-encouragement-caf-november-4-2014.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 47012005,
+   "end": 47012010,
+   "ref": "2 Corinthians 12:5-10",
+   "ranges": [
+    [
+     47012005,
+     47012010
+    ]
+   ],
+   "title": "Finding Strength in the Thorn",
+   "key_verse": [
+    47012010,
+    47012010
+   ],
+   "reflect": [
+    {
+     "text": "Paul was given a painful physical affliction, like a sharp stake driven into his body, to keep him from becoming proud after receiving wonderful heavenly visions. God allowed this messenger from Satan so that spiritual pride would not ruin Paul's heart. Paul pleaded with the Lord three times to take this pain away, but God gave him a no. God did not remove the affliction, but He promised to sustain Paul through it.",
+     "sources": [
+      "D4",
+      "D6"
+     ]
+    },
+    {
+     "text": "When God does not take away our pain, it does not mean He is ignoring our prayers or that our lives are failures. Persistent troubles and physical limitations teach us to depend on God rather than on our own resources. When we accept our hardships for the sake of Christ, we find true contentment and become far more useful in God's service.",
+     "sources": [
+      "D4",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing God uses hardships to guard me against pride change the way I view my troubles?",
+    "What persistent struggle can I surrender to God today, trusting that He will sustain me through it?"
+   ],
+   "prayer": "Heavenly Father, help me trust Your wisdom when You choose not to remove my painful trials. Protect my heart from pride, and teach me to depend entirely on You instead of my own resources. Give me contentment so that I can serve You faithfully through every hardship. Amen.",
+   "sources": {
+    "D4": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Corinthians 12:10",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D6": {
+     "author": "John MacArthur",
+     "work": "God's Sufficient Grace",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/B140919/gods-sufficient-grace"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

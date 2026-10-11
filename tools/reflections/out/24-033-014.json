@@ -1,0 +1,75 @@
+{
+ "id": "24-033-014",
+ "title": "The Covenant with David",
+ "refs": [
+  "Jeremiah 33:14-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24033014,
+   "end": 24033026,
+   "ref": "Jeremiah 33:14-26",
+   "ranges": [
+    [
+     24033014,
+     24033026
+    ]
+   ],
+   "title": "God's Unbreakable Promise",
+   "key_verse": [
+    24033015,
+    24033015
+   ],
+   "reflect": [
+    {
+     "text": "When Judah faced destruction and exile, it seemed as if God had cast off His people. Yet the Lord assured them that His covenant with David was never canceled. He promised that a righteous Branch would sprout from David's family line to bring true justice. Just as the rising of the sun and the falling of night never fail, God's commitment to His people remains completely unbreakable.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus Christ is the ultimate fulfillment of this holy promise. He serves both as the Davidic King and as our great High Priest. One day, Christ will return visibly in majesty to rule over the earth. In that glorious day, even David himself will cast his crown before Jesus and worship Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Knowing that God faithfully keeps every word turns our grief and waiting into quiet confidence and praise. Because His promises are entirely trustworthy, we can rely on Him through every trial. Today, we are invited to place our wholehearted love, faith, and adoration upon Jesus alone.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does seeing God's faithfulness in the daily rhythm of day and night help you trust His promises?",
+    "In what areas of your life can you shift from worry to joyful worship of King Jesus?"
+   ],
+   "prayer": "Lord God, thank You for being completely faithful to all Your promises. We praise You for sending Jesus as our righteous King and Priest. Help us to rest in Your unchanging love and worship Him with all our hearts today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Everlasting Covenant With David",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/everlasting-covenant-david"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 93: Jeremiah 33:14–22",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-93-jeremiah-33-1422.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

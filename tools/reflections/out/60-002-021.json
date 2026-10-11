@@ -1,0 +1,74 @@
+{
+ "id": "60-002-021",
+ "title": "Christ’s Example of Suffering",
+ "refs": [
+  "1 Peter 2:21-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 60002021,
+   "end": 60002025,
+   "ref": "1 Peter 2:21-25",
+   "ranges": [
+    [
+     60002021,
+     60002025
+    ]
+   ],
+   "title": "Following Christ in Unjust Suffering",
+   "key_verse": [
+    60002021,
+    60002021
+   ],
+   "reflect": [
+    {
+     "text": "When we face mistreatment for doing what is right, it is not an accident. God has called us to this very path. Our natural reaction is to strike back when people hurt us, but Jesus showed us a different way. When people insulted Him and caused Him pain, He never threatened them or tried to get revenge. Instead, He placed Himself completely in the hands of the Father, who judges fairly.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus understood our struggles because He lived among us. Even though He was sinless, He entered our broken world and shared in our daily sorrows. As F. B. Meyer noted, He stood as our \"substitute, sacrifice, and satisfaction,\" bearing the penalty of our sins on the cross so we could be healed and live for righteousness. Our own hardships cannot pay for sin, but patiently enduring them fits into God's sovereign plan.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because our Lord walked this thorny path before us, we do not suffer alone. Going through hard trials allows us to experience the close companionship of Jesus and teaches us how to comfort others who are hurting. We once wandered like lost sheep, but we have now returned to the gentle Shepherd who watches over our souls.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When others treat you unfairly, how does remembering Jesus' response help you not to strike back?",
+    "How does knowing that Jesus bore your sins give you peace during hard times?"
+   ],
+   "prayer": "Lord Jesus, thank You for taking the punishment for our sins and showing us how to trust the Father. When people mistreat us, give us the grace to endure patiently without seeking revenge. Keep us walking close to You as our faithful Shepherd and Overseer. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Peter 2:24",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Christ Our Example",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/christ-our-example"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,135 @@
+{
+ "id": "43-006-022",
+ "title": "Jesus the Bread of Life",
+ "refs": [
+  "John 6:22-58"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 43006037,
+   "end": 43006037,
+   "ref": "John 6:37",
+   "ranges": [
+    [
+     43006037,
+     43006037
+    ]
+   ],
+   "title": "\"I Will Never Cast Out\"",
+   "key_verse": [
+    43006037,
+    43006037
+   ],
+   "reflect": [
+    {
+     "text": "Jesus promises that everyone the Father gives Him will come to Him. God works by His Holy Spirit on our minds and hearts, drawing us with sovereign love so that we willingly run to Jesus. Faith is necessary for salvation, and those who belong to Christ show it by trusting Him completely as their only hope.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we come to Jesus, He makes a lasting promise: He will never turn us away. This does not mean He only welcomes us on our first day and leaves us later. Even when believers stumble, fall into temptation, or struggle with sin, Jesus remains our helper. He cleanses us, restores us, and keeps us safe forever in His care.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Charles Spurgeon observed that no soul can say, \"I went to Jesus, and He refused me.\" You might feel your faith is weak, your prayers broken, or your life stained by guilt. Yet the door of grace stands wide open. We can come to Him right now, knowing He turns no one away.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or weaknesses make you hesitate to come to Jesus today?",
+    "How does knowing Jesus will never turn you away give you peace when you stumble?"
+   ],
+   "prayer": "Lord Jesus, thank You for drawing us to Yourself and promising never to drive us away. When our faith is weak and our prayers feel broken, remind us that Your welcome never ends. Keep us resting in Your grace today and always. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 29",
+     "on": "John 6:37",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 30",
+     "on": "John 6:37",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 13",
+     "on": "John 6:37",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 43006022,
+   "end": 43006058,
+   "ref": "John 6:22-58",
+   "ranges": [
+    [
+     43006022,
+     43006058
+    ]
+   ],
+   "title": "Feeding on the Bread of Life",
+   "key_verse": [
+    43006022,
+    43006022
+   ],
+   "reflect": [
+    {
+     "text": "Just as our physical bodies need food to survive, our spiritual life needs daily nourishment. Jesus explains that just as He lives because of the Father who sent Him, anyone who feeds on Him will live because of Him. The Lord who gives us new life is also the one who sustains it day by day.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Feeding on Jesus means taking Him into our inner life. It is not just thinking about His teaching or remembering His deeds, but trusting in Christ Himself. We feed on Him when we spend time thinking about His love, relying on His death on the cross, and taking His promises into our hearts with simple faith.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "As Charles Spurgeon wrote, this spiritual feeding is both a necessity and our \"greatest delight.\" It brings true strength to our souls that earthly food can never give. The more we practice turning our thoughts and desires toward Jesus, the more we enjoy the everlasting life He freely gives.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How often do you turn to Jesus to satisfy your soul rather than looking to earthly things?",
+    "What is one practical way you can feed on Christ through prayer and meditation this week?"
+   ],
+   "prayer": "Lord Jesus, You are the living bread who came down from heaven to give us life. Teach us to feed on You each day by trusting Your word and resting in Your love. Satisfy our hearts with Your presence so that we may live for You. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 15",
+     "on": "John 6:57",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

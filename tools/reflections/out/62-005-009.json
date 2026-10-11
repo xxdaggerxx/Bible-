@@ -1,0 +1,74 @@
+{
+ "id": "62-005-009",
+ "title": "God’s Testimony about His Son",
+ "refs": [
+  "1 John 5:9-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 62005009,
+   "end": 62005012,
+   "ref": "1 John 5:9-12",
+   "ranges": [
+    [
+     62005009,
+     62005012
+    ]
+   ],
+   "title": "God's Testimony of Eternal Life",
+   "key_verse": [
+    62005011,
+    62005011
+   ],
+   "reflect": [
+    {
+     "text": "God has given us His written Word as a testimony of His enduring love. In it, He tells us clearly how we receive eternal life. We cannot earn this life through our own good works or self-reliance. Jesus made the complete sacrifice for our sins, offering eternal life as a gracious gift rather than something we could ever achieve on our own.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This truth cuts through modern ideas that any path will lead to God. God's own testimony makes it clear that life is found only in His Son, Jesus. Whoever has the Son has life, and because this gift is truly eternal, believers can know it will never be lost. Staying anchored in God's promises protects our hearts from doubts and spiritual deception.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Knowing that life is found only in Jesus also shapes how we live. Believing God's testimony moves us to actively share this good news with others, so they too may hear the truth and trust in Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that eternal life is a secure gift from Jesus bring peace to your heart?",
+    "Who is someone in your life with whom you can share this good news about Jesus?"
+   ],
+   "prayer": "Heavenly Father, thank You for the clear testimony You have given us in Your Word. Thank You that eternal life is a secure gift through Jesus and not something we must earn. Help us stay anchored in Your promises and give us courage to share Your truth with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Whoever Has the Son",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/whoever-has-son"
+    },
+    "D2": {
+     "author": "Anne Peterson",
+     "work": "A Love Letter from God (1 John 5:11) - Your Daily Bible Verse - August 15",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-august-15.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

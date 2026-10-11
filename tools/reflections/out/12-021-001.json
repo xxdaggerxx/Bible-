@@ -1,0 +1,66 @@
+{
+ "id": "12-021-001",
+ "title": "Manasseh Reigns in Judah",
+ "refs": [
+  "2 Kings 21:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12021001,
+   "end": 12021009,
+   "ref": "2 Kings 21:1-9",
+   "ranges": [
+    [
+     12021001,
+     12021009
+    ]
+   ],
+   "title": "Turning Away from God and Finding Mercy",
+   "key_verse": [
+    12021002,
+    12021002
+   ],
+   "reflect": [
+    {
+     "text": "King Manasseh had a father who loved God, but he chose to reject that godly example. Instead of honoring the Lord, he rebuilt altars to false gods and even placed them inside God's temple. In our own lives, modern idols can still tempt us to push Christ aside as Lord when we make daily choices.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of his rebellion, God allowed the Assyrians to capture and deeply humiliate Manasseh. In the middle of that pain, the king finally humbled himself and asked for help. God answered him with grace, which is His kindness that we do not deserve, and freely forgave and restored him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord always forgives anyone who truly repents and turns back to Him. Even so, Manasseh's life reminds us that the painful worldly damage caused by past sins often remains behind.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What daily habits or desires tempt you to put other things ahead of Christ?",
+    "How does God's willingness to forgive a humble heart give you peace today?"
+   ],
+   "prayer": "Lord, forgive us for the times we wander away from You and chase after other things. Teach us to humble ourselves and seek Your mercy whenever we fail. Help us to keep Jesus at the center of our choices every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - May 9, 2009",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-may-9-2009-11603368.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

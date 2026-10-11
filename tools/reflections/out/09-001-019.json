@@ -1,0 +1,81 @@
+{
+ "id": "09-001-019",
+ "title": "The Birth of Samuel",
+ "refs": [
+  "1 Samuel 1:19-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9001019,
+   "end": 9001028,
+   "ref": "1 Samuel 1:19-28",
+   "ranges": [
+    [
+     9001019,
+     9001028
+    ]
+   ],
+   "title": "Dedicating God's Gift Back to Him",
+   "key_verse": [
+    9001027,
+    9001027
+   ],
+   "reflect": [
+    {
+     "text": "God remembered Hannah in her sorrow and answered her prayers with a son. In the Bible, God remembering someone means He steps in with covenant faithfulness to lift up the hurting and remove their shame. Samuel's birth was also a major step forward in God's saving plan, preparing Israel for a king and ultimately pointing toward Christ. We can take deep comfort knowing that the Lord never forgets His people or His promises.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Hannah named her boy Samuel because she had asked the Lord for him. Blessings that come through honest prayer are doubly sweet, because we see God's personal love woven through them. As Charles Spurgeon wrote, \"That which we win by prayer we should dedicate to God.\" God used Hannah's deep heartache and desperate pleas to accomplish something far greater than ordinary parental plans could ever achieve.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Though parting with her young child was surely difficult, Hannah kept her vow. In Samuel's early years, she tenderly taught him to know and worship the Lord before bringing him to Shiloh. Her example invites us to surrender our own treasures and loved ones back to God, trusting that what came from heaven is safest in heaven's hands.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What blessings in your life feel especially precious because they came in answer to patient prayer?",
+    "How can you practice giving your dearest treasures and plans back to the Lord today?"
+   ],
+   "prayer": "Heavenly Father, thank You that You never forget Your people and that You hear our quietest cries. Everything good we have in this life has come from Your hand. Give us generous, faithful hearts like Hannah to dedicate our gifts, our families, and our lives back to Your service. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 19",
+     "on": "1 Samuel 1:27",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "God Remembers Hannah",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-remembers-hannah"
+    },
+    "D3": {
+     "author": "Beth Moore",
+     "work": "Day 6: 1 Samuel 1:19–28",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-6-1-samuel-1-1928.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

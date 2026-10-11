@@ -1,0 +1,82 @@
+{
+ "id": "01-045-001",
+ "title": "Joseph Reveals His Identity",
+ "refs": [
+  "Genesis 45:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1045005,
+   "end": 1045005,
+   "ref": "Genesis 45:5",
+   "ranges": [
+    [
+     1045005,
+     1045005
+    ]
+   ],
+   "title": "\"God Sent Me Before You\"",
+   "key_verse": [
+    1045005,
+    1045005
+   ],
+   "reflect": [
+    {
+     "text": "When Joseph revealed who he was, his brothers were terrified. Instead of taking revenge, he chose complete forgiveness. He spoke gently to lift their sorrow and stop them from falling into self-blame. Joseph reminded them that even though they sold him, God had guided the outcome to preserve lives during the severe famine.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Joseph looked back over his life and saw God's hand at work through all his hardships. He knew that even through the cruelty of others, God remained in control to carry out a hidden plan. We can have that same comfort today, knowing God directs every season of our lives and rules over our hardest storms.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Joseph also wanted to free his brothers from lasting guilt. When we turn from our sins, continuing to blame ourselves only keeps the pain alive. Jesus took our wrongdoings on the cross so that we would not have to carry ongoing self-condemnation. We find true peace when we rest in Christ's forgiveness rather than our past failures.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you holding on to guilt over past sins instead of resting in the forgiveness Jesus offers you?",
+    "How does knowing that God directs your life help you forgive people who have hurt you?"
+   ],
+   "prayer": "Lord, thank you that you are in control of every season of our lives, even when we walk through hardships. Help us to let go of old guilt and trust the complete forgiveness Jesus won for us on the cross. Give us the grace to forgive others, knowing that you can work good through our trials.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 45:5",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "What Joseph Knew",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/what-joseph-knew-greg-laurie-devotion-march-20-2021.html"
+    },
+    "D3": {
+     "author": "Dennis J. DeHaan",
+     "work": "The Memory Of Past Sins",
+     "site": "Our Daily Bread",
+     "url": "https://military.odb.org/the-memory-of-past-sins/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

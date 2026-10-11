@@ -1,0 +1,66 @@
+{
+ "id": "11-001-001",
+ "title": "Abishag Cares for David",
+ "refs": [
+  "1 Kings 1:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11001001,
+   "end": 11001004,
+   "ref": "1 Kings 1:1-4",
+   "ranges": [
+    [
+     11001001,
+     11001004
+    ]
+   ],
+   "title": "When Strength Fades",
+   "key_verse": [
+    11001001,
+    11001001
+   ],
+   "reflect": [
+    {
+     "text": "King David had been a mighty warrior and a great leader of faith. Yet as his years drew to a close, he could not even keep warm under layers of blankets. His shivering and physical decline remind us of our inescapable human frailty. No matter how gifted or strong a person may be, every human life eventually faces the end of its earthly vitality.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "David lived a life marked by severe emotional and spiritual extremes. He experienced thrilling victories, deep personal heartbreak, and heavy seasons of struggle. Navigating those intense highs and lows carries a heavy personal toll over the years. Over time, our bodies and earthly stamina naturally wear down.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "David's final years show us that human limits come to everyone. When our lives move through dramatic ups and downs, or when physical weakness sets in, we can ask God to meet us fully in every extreme. He stays near to us through every season of our frailty.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does seeing David's weakness remind you of your own human limits?",
+    "In what highs or lows of life can you ask God to meet you today?"
+   ],
+   "prayer": "Lord, thank you that you understand our human frailty and limits. Life brings dramatic highs and lows that wear us down, but we trust that you are with us. Please meet us in every extreme and hold us close when our earthly strength fades. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 79: 1 Kings 1:1–4",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-79-1-kings-1-14.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

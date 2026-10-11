@@ -1,0 +1,66 @@
+{
+ "id": "05-005-005",
+ "title": "The Ten Commandments",
+ "refs": [
+  "Deuteronomy 5:5-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5005005,
+   "end": 5005021,
+   "ref": "Deuteronomy 5:5-21",
+   "ranges": [
+    [
+     5005005,
+     5005021
+    ]
+   ],
+   "title": "Remembering God's Rescue Through Rest",
+   "key_verse": [
+    5005015,
+    5005015
+   ],
+   "reflect": [
+    {
+     "text": "In the Ten Commandments, God gave His people clear guidance for living under His care. One central command is to stop ordinary labor one day out of seven. In modern society, setting aside a weekly day of rest has become far less common. Yet this rhythm was established at creation, showing an enduring pattern for humanity to pause from daily work.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In Deuteronomy, God reminds His people that they were once slaves in Egypt before He redeemed them. This shows that remembering our salvation goes hand in hand with worship. Under the new covenant, Christians observe the Lord's Day on the first day of the week, celebrating the resurrection of Christ who brought us true freedom.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We keep this day holy by laying down our regular employment and routine jobs. By stopping our ordinary work and gathering together with God's people for corporate worship, we show our trust in the God who provides for us and set apart time to praise Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you usually spend the Lord's Day, and does your routine include setting aside ordinary work to rest?",
+    "In what ways does gathering with other believers help you remember and celebrate what Christ has done for you?"
+   ],
+   "prayer": "Lord God, thank You for rescuing us from sin and giving us true rest. Help us to pause from our ordinary work each week to focus on You. Teach us to joyfully gather with Your people to praise You and celebrate Christ's resurrection. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Keeping the Lord's Day",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/keeping-the-lords-day"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

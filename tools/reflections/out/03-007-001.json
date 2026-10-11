@@ -1,0 +1,74 @@
+{
+ "id": "03-007-001",
+ "title": "The Guilt Offering",
+ "refs": [
+  "Leviticus 7:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3007001,
+   "end": 3007010,
+   "ref": "Leviticus 7:1-10",
+   "ranges": [
+    [
+     3007001,
+     3007010
+    ]
+   ],
+   "title": "Cleansed and Restored in Christ",
+   "key_verse": [
+    3007007,
+    3007007
+   ],
+   "reflect": [
+    {
+     "text": "The guilt offering dealt directly with specific sins against God and other people. Even if a person sinned without realizing it at the time, they were still guilty. Neglecting God's Word does not excuse our disobedience. In this offering, ordinary worshippers were not permitted to eat any part of the sacrifice. They came only as unworthy sinners needing reconciliation, which means being restored to peace with God.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We often carry selfishness and wrong attitudes into our daily lives and worship. If we hold onto sin without confessing it, our fellowship with God breaks down. As F. B. Meyer observed, unconfessed sin results in \"joyless faces and powerless prayers.\" God does not want us to stay cut off from His presence, but calls us to examine our hearts and turn away from our wrongs.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God has provided the way back through Jesus Christ, our Great High Priest. Jesus cleansed us through His own blood so that we can enjoy ongoing communion with God at His table. Having received this mercy, we are invited to dedicate our ears, our actions, and our daily walk completely to Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any unconfessed sin in your life that is dimming your joy and fellowship with God?",
+    "How can you dedicate your daily actions and words more fully to the Lord today?"
+   ],
+   "prayer": "Lord Jesus, thank You for shedding Your blood to cleanse us from every sin and reconcile us to God. Search our hearts and reveal any hidden disobedience or selfishness we need to confess. Help us walk closely with You today, honoring You in everything we hear, say, and do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 7:6-7",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - February 3",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-feb-3-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

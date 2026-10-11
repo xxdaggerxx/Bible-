@@ -1,0 +1,82 @@
+{
+ "id": "02-024-001",
+ "title": "The Covenant Sealed",
+ "refs": [
+  "Exodus 24:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2024001,
+   "end": 2024011,
+   "ref": "Exodus 24:1-11",
+   "ranges": [
+    [
+     2024001,
+     2024011
+    ]
+   ],
+   "title": "Eating and Drinking in God's Presence",
+   "key_verse": [
+    2024011,
+    2024011
+   ],
+   "reflect": [
+    {
+     "text": "Moses and the elders of Israel were given a remarkable privilege on the mountain. They saw God and shared a meal in His presence without facing judgment. This peace and close fellowship were possible only because sacrificial blood had just been sprinkled on the altar and on the people. The covenant of peace had to be sealed with blood before they could sit together with God.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "This points us directly to the new covenant. Jesus sealed our reconciliation with God not with the blood of bulls, but with His own precious blood on the cross. When we share the Lord's Supper, taking the cup reminds us that God has forgiven our sins and holds them against us no more. We sit at His table not as guilty rebels, but as welcome guests at peace with our Lord.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The leaders on the mountain did two things together: they beheld God, and they ate and drank. As F. B. Meyer reminds us, true faith connects \"the commonest details of life and the service of God.\" We do not need to separate our ordinary tasks from our walk with Him. In every simple meal, routine chore, and quiet moment, we can live gladly under our Father's watchful care.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing Christ's blood has made peace with God give you confidence to draw near to Him?",
+    "What common, everyday activities could you bring into God's presence today?"
+   ],
+   "prayer": "Lord God, thank You for welcoming us into close fellowship with You through the precious blood of Jesus. Help us to rest in the peace and complete forgiveness You have freely provided. Teach us to live each day in Your presence, honoring You in our ordinary routines as well as our worship. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 24:11",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 24:8",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "With God on the Mountain",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-mountain"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

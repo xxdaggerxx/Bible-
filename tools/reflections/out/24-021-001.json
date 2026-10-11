@@ -1,0 +1,67 @@
+{
+ "id": "24-021-001",
+ "title": "Jerusalem Will Fall to Babylon",
+ "refs": [
+  "Jeremiah 21:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24021001,
+   "end": 24021010,
+   "ref": "Jeremiah 21:1-10",
+   "ranges": [
+    [
+     24021001,
+     24021010
+    ]
+   ],
+   "title": "The Way of Life and Death",
+   "key_verse": [
+    24021008,
+    24021008
+   ],
+   "reflect": [
+    {
+     "text": "When Babylon surrounded Jerusalem, King Zedekiah finally sent messengers to ask God for help. The king and his people had ignored God's loving warnings for a very long time. Now, facing ruin, they were not truly turning back to God in sorrow for their sin. As F. B. Meyer observed, they were more eager to escape trouble than \"to repent and return to God.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God told them that the fall of the city could no longer be avoided. People reap what they sow, and their wrongdoing had set disaster in motion. Yet, even in this judgment, God offered a way of escape. He placed before them the way of life and the way of death. If they stayed inside the city walls, they would perish. If they stepped out in faith and surrendered to the enemy, they would live.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This was a great test of faith. Walking out to the frightening Babylonian army seemed like certain death, while staying behind strong walls felt safer. Yet God reversed ordinary human thinking. Clinging to their own safety meant ruin, but giving themselves up meant life. Jesus calls us to a similar trust: whoever tries to save their own life will lose it, but whoever yields their life to Him will be saved.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face hard times, do you only want to escape trouble, or do you truly turn your heart back to God?",
+    "What false security might you need to give up so that you can trust God's way instead?"
+   ],
+   "prayer": "Lord, forgive us when we care more about escaping consequences than truly returning to You. Help us not to cling to our own ways or rely on false safety. Give us the faith to surrender our lives to You, knowing that true life is found only in following Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 21:2",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

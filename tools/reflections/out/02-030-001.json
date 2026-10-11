@@ -1,0 +1,66 @@
+{
+ "id": "02-030-001",
+ "title": "The Altar of Incense",
+ "refs": [
+  "Exodus 30:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2030001,
+   "end": 2030010,
+   "ref": "Exodus 30:1-10",
+   "ranges": [
+    [
+     2030001,
+     2030010
+    ]
+   ],
+   "title": "Prayers Rising Before the Lord",
+   "key_verse": [
+    2030008,
+    2030008
+   ],
+   "reflect": [
+    {
+     "text": "In ancient times, sweet incense was burned to honor kings. God told Israel to burn fragrant incense in His tabernacle, which served as His earthly throne room. While furnishings like the table and lampstand showed God providing for His people, this golden altar stood for something different: the prayers of the people offered back to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Morning and evening, fragrant smoke drifted upward and past the inner curtain toward the ark. This gave Israel a clear picture of how prayer works. Just like that rising cloud, our prayers go beyond what we can see and enter directly into the presence of God in heaven.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God also commanded that no unauthorized incense could be used on this altar. In addition, the priest put blood on its horns once a year for atonement, which means cleansing sin to bring people back into right relationship with God. This looked ahead to Jesus. It is only because of Christ's sacrifice on the cross that our imperfect prayers are made welcome. God calls us to bring our worship and requests to Him through Christ alone.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does picturing your prayers rising into God's presence encourage you to pray regularly?",
+    "Why is it a relief to know that your prayers are accepted because of Jesus and not your own perfection?"
+   ],
+   "prayer": "Heavenly Father, thank You that we can speak to You as our King. We praise You that Jesus cleansed our sins on the cross so our prayers are pleasing in Your sight. Teach us to bring all our needs to You each day through Him alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Altar of Incense",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/altar-incense"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

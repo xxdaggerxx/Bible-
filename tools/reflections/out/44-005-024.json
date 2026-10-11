@@ -1,0 +1,74 @@
+{
+ "id": "44-005-024",
+ "title": "The Apostles before the Sanhedrin",
+ "refs": [
+  "Acts 5:24-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44005024,
+   "end": 44005032,
+   "ref": "Acts 5:24-32",
+   "ranges": [
+    [
+     44005024,
+     44005032
+    ]
+   ],
+   "title": "Obeying God Rather Than Men",
+   "key_verse": [
+    44005029,
+    44005029
+   ],
+   "reflect": [
+    {
+     "text": "When the religious leaders commanded the apostles to stop speaking about Jesus, Peter and the others stood firm. Believers are called to respect human rulers, but when earthly laws directly clash with God's clear commands, we must choose to obey God. Even then, we must never insult leaders or turn to violence. The apostles did not fight or resist arrest. Instead, they accepted the authorities' judgment peacefully, prepared to endure suffering with joy while continuing to do what God told them to do.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The apostles were courageous because they knew who truly reigns. God raised Jesus from the dead and exalted Him, lifting Him to the highest place in heaven as Prince and Savior. Even better, Jesus represents us there. We are joined to Him as members of His body, so His exaltation is ours as well. As Charles Spurgeon wrote, \"the honours which Jesus wears in heaven are the heritage of all the saints.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This great hope changes how we face hardship. We might live unnoticed, face poverty, or endure trouble because we follow Christ. Yet we do not need to panic or fight back with anger. Because Jesus already sits on the throne of glory, we can obey God peacefully today, knowing we will one day share in our Savior's everlasting honor and joy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus reigns in heaven help you stay calm when people oppose your faith?",
+    "How can you show honor and peace toward leaders while still standing firm on God's commands?"
+   ],
+   "prayer": "Lord Jesus, you are our exalted Prince and Savior, seated in glory at the Father's right hand. Grant us the courage to obey God above all human demands, while remaining gentle and respectful to those around us. Help us endure life's hardships with quiet joy, trusting that we belong to you and will share in your victory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 22",
+     "on": "Acts 5:31",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Paul Carter",
+     "work": "A Few Principles on Civil Disobedience",
+     "site": "The Gospel Coalition",
+     "url": "https://ca.thegospelcoalition.org/columns/ad-fontes/a-few-principles-on-civil-disobedience/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

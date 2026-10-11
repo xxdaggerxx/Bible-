@@ -1,0 +1,81 @@
+{
+ "id": "14-016-007",
+ "title": "Hanani’s Message to Asa",
+ "refs": [
+  "2 Chronicles 16:7-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14016007,
+   "end": 14016010,
+   "ref": "2 Chronicles 16:7-10",
+   "ranges": [
+    [
+     14016007,
+     14016010
+    ]
+   ],
+   "title": "Resting in God's Strength",
+   "key_verse": [
+    14016009,
+    14016009
+   ],
+   "reflect": [
+    {
+     "text": "King Asa faced a crisis, but instead of turning to God first, he formed an alliance with a foreign king. The prophet Hanani brought a sobering rebuke, reminding Asa that God had already rescued Judah from vast armies in the past. Turning to human allies showed a proud self-reliance. By leaving God out of his problem, Asa forfeited divine help and brought ongoing conflict upon his land.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Unlike human champions who show off their power to prove they are better than others, God uses His almighty strength to deliver and sustain people who are devoted to Him. His eyes search the whole earth, noticing every sorrow, trial, and challenge we face. God is ready and eager to show His strength on our behalf, but He asks for our undivided trust rather than divided loyalties.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When God confronted Asa's misplaced trust, the king reacted with anger, locking Hanani in prison and mistreating his people. Pride made him defensive instead of repentant. When God's word exposes where our trust has failed, we are called to acknowledge our weakness, turn away from our stubbornness, and humbly seek His mercy.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to rely on human solutions before turning to God?",
+    "When God reveals a mistake or a lack of trust in your heart, do you respond with defensiveness or humble repentance?"
+   ],
+   "prayer": "Lord, forgive us for the times we turn to our own schemes instead of trusting Your delivering power. Thank You that Your eyes see every challenge we face and that You love to help those who depend on You. Give us humble hearts to accept Your correction and to rest fully in Your strength.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 16:9",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Joe Stowell",
+     "work": "Beneficial Power",
+     "site": "Our Daily Bread",
+     "url": "https://military.odb.org/beneficial-power/"
+    },
+    "D3": {
+     "author": "Marshall Segal",
+     "work": "When God Does Not Draw Near",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/when-god-does-not-draw-near"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

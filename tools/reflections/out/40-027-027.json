@@ -1,0 +1,81 @@
+{
+ "id": "40-027-027",
+ "title": "The Soldiers Mock Jesus",
+ "refs": [
+  "Matthew 27:27-31",
+  "Mark 15:16-20",
+  "Luke 22:63-65",
+  "John 19:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40027027,
+   "end": 40027031,
+   "ref": "Matthew 27:27-31; Mark 15:16-20; Luke 22:63-65; John 19:1-15",
+   "ranges": [
+    [
+     40027027,
+     40027031
+    ],
+    [
+     41015016,
+     41015020
+    ],
+    [
+     42022063,
+     42022065
+    ],
+    [
+     43019001,
+     43019015
+    ]
+   ],
+   "title": "The Thorns That Belonged to Us",
+   "key_verse": [
+    40027029,
+    40027029
+   ],
+   "reflect": [
+    {
+     "text": "The Roman soldiers gathered around Jesus to brutalize, beat, and ridicule Him. They treated Him like a mock king, putting a robe on Him and placing a staff in His hand. Then they bowed before Him in cruel pretend worship, spat on Him, and struck Him repeatedly on the head.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The soldiers also twisted together sharp thorns into a crown and forced it onto His head. In the book of Genesis, thorns first came into creation as an outward sign of the curse of human sin. When Jesus wore that painful crown, He was carrying the pain, sorrow, and judgment that truly belonged to us. He took our curse upon Himself so that we could be forgiven.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Remembering what Jesus endured in our place changes how we see our own troubles. When you face hard times and pain, you can take comfort in knowing that your Savior understands suffering. He went through deep agony for your sake, and keeping your eyes on His sacrifice gives you peace and perspective during difficult trials.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing Jesus bore the curse of our sin comfort you when you face your own trials?",
+    "In what ways can you show thankfulness to Jesus for taking the pain and judgment that belonged to you?"
+   ],
+   "prayer": "Lord Jesus, thank You for taking the crown of thorns and bearing the curse of sin in our place. When trials come into our lives, help us remember the agony You endured for us and find comfort in Your love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "The Thorns That Belonged to Us",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-april-16-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

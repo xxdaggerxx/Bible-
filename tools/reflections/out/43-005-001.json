@@ -1,0 +1,74 @@
+{
+ "id": "43-005-001",
+ "title": "The Pool of Bethesda",
+ "refs": [
+  "John 5:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43005001,
+   "end": 43005015,
+   "ref": "John 5:1-15",
+   "ranges": [
+    [
+     43005001,
+     43005015
+    ]
+   ],
+   "title": "The Savior at the Pool",
+   "key_verse": [
+    43005001,
+    43005001
+   ],
+   "reflect": [
+    {
+     "text": "The man at the pool had waited thirty-eight long years for help. He was watching for an angel or a miracle in the water, not realizing that Jesus was standing right beside him. Many of us do something similar. We wait for a special feeling, an unusual sign, or we rely on our own good resolutions before turning to Christ. Yet Jesus is already near and ready to heal our souls by His word. We simply need to trust Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When Jesus told the man to walk, the change was immediate and unmistakable. After decades of weakness, he could feel that real life had returned to his body. In the same way, when the Lord forgives our sins and gives us peace, we are deeply aware of the difference He makes. At first, the healed man did not even know who Jesus was. God often begins saving us before we understand deep truths about Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus did not leave the man in the dark. He found him again in the temple, taught him to turn away from sin, and revealed Himself. Once the man knew the Lord, he could clearly tell others who had made him whole. As Jesus helps us understand who He is, He also gives us the courage to speak about what He has done for us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you waiting for a special sign or feeling instead of simply trusting Jesus at His word?",
+    "How has Jesus changed your life, and who can you share that with this week?"
+   ],
+   "prayer": "Lord Jesus, thank you for meeting us in our weakness and speaking words of life to our souls. Help us not to look for signs or trust our own efforts, but to rely entirely on you. Teach us who you are, and give us courage to tell others about your saving grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 7",
+     "on": "John 5:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 8",
+     "on": "John 5:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

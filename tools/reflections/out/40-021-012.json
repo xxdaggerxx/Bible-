@@ -1,0 +1,85 @@
+{
+ "id": "40-021-012",
+ "title": "Jesus Cleanses the Temple",
+ "refs": [
+  "Matthew 21:12-17",
+  "Mark 11:15-19",
+  "Luke 19:45-48"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40021012,
+   "end": 40021017,
+   "ref": "Matthew 21:12-17; Mark 11:15-19; Luke 19:45-48",
+   "ranges": [
+    [
+     40021012,
+     40021017
+    ],
+    [
+     41011015,
+     41011019
+    ],
+    [
+     42019045,
+     42019048
+    ]
+   ],
+   "title": "A House of Prayer for All",
+   "key_verse": [
+    41011017,
+    41011017
+   ],
+   "reflect": [
+    {
+     "text": "Many people in Jesus' day expected Him to judge Roman oppressors. Instead, Jesus confronted corruption among His own people. He entered the temple courts with holy authority, refusing to quietly tolerate corrupt worship. When He saw the greedy trading taking place, He stepped forward to cleanse His Father's house.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The buying and selling had taken over the Court of the Gentiles. That space was the only place where non-Jewish seekers could come to pray. The religious leaders had lost sight of God's plan to welcome all nations and outcasts. Instead of making room for these worshipers, the noise and haggling blocked their way. Jesus drove out the merchants to restore pure worship and open the path to the Father.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We need to look honestly at our own churches today. It can be easy to care more about an impressive appearance than about welcoming those on the margins. As followers of Jesus, we are called to remove stumbling blocks and actively help others reach God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there any habits or attitudes in our church gatherings that make it hard for outsiders to feel welcome?",
+    "How can you help clear a path for someone else to seek God this week?"
+   ],
+   "prayer": "Lord Jesus, thank You for opening the way for all nations to seek the Father. Show us if we have placed any stumbling blocks in the way of others. Help our churches welcome those on the margins and keep our worship pure. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jonathan Parnell",
+     "work": "Jesus Turns the Tables",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/jesus-turns-the-tables"
+    },
+    "D2": {
+     "author": "Charles F. Stanley",
+     "work": "Cleansing the Temple",
+     "site": "In Touch Ministries",
+     "url": "https://www.intouch.org/read/daily-devotions/cleansing-the-temple-2"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

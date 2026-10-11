@@ -1,0 +1,60 @@
+{
+ "id": "03-008-001",
+ "title": "Moses Consecrates Aaron and His Sons",
+ "refs": [
+  "Leviticus 8:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3008001,
+   "end": 3008013,
+   "ref": "Leviticus 8:1-13",
+   "ranges": [
+    [
+     3008001,
+     3008013
+    ]
+   ],
+   "title": "Set Apart as Priests",
+   "key_verse": [
+    3008012,
+    3008012
+   ],
+   "reflect": [
+    {
+     "text": "In Leviticus 8, Moses gathered the whole community to watch Aaron and his sons being prepared for service. They were washed with water, dressed in special priestly clothes, and anointed with holy oil. These visible signs showed that these men were being set apart for a sacred duty. Because human beings have sinned and turned away from God, we cannot simply walk into his presence on our own. We need a mediator, someone to stand between a holy God and fallen people so we can be brought back together.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Aaron and his sons served to protect Israel from God's judgment, but ordinary worshippers still had to remain separated from God's presence. That old priesthood could never fully solve the problem. Instead, it was an early picture pointing forward to the ultimate mediation of Jesus Christ. When we see the care taken to ordain Aaron, we can better appreciate Jesus. His once-for-all work does what Aaron could never do, bringing us safely and fully into God's presence.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Why was a mediator necessary for the people of Israel to approach God?",
+    "How does Aaron's ordination help you value the work Jesus did for you?"
+   ],
+   "prayer": "Lord God, you are holy, and we need someone to bring us near to you. Thank you for showing us through Aaron our need for a priest. Most of all, thank you for sending Jesus Christ to be our perfect mediator and bring us home to you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Old Covenant Priesthood",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/old-covenant-priesthood"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

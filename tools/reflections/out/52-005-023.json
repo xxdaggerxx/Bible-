@@ -1,0 +1,129 @@
+{
+ "id": "52-005-023",
+ "title": "Final Blessings and Instructions",
+ "refs": [
+  "1 Thessalonians 5:23-28"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 52005024,
+   "end": 52005024,
+   "ref": "1 Thessalonians 5:24",
+   "ranges": [
+    [
+     52005024,
+     52005024
+    ]
+   ],
+   "title": "\"The One Who Calls You Is Faithful\"",
+   "key_verse": [
+    52005024,
+    52005024
+   ],
+   "reflect": [
+    {
+     "text": "When God calls you to follow Him, the path can sometimes feel humanly impossible. We quickly bump into our own natural limits and weaknesses. Yet God never gives us an assignment without supplying the strength and resources we need to finish it. He empowers us by His Holy Spirit so we can bear hardships and reach out to help others. Because we cannot store up spiritual power for tomorrow, we need to ask Him each day for fresh grace.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "Our confidence does not rest on our own grip, but on God's unchanging character. Charles Spurgeon wrote that those who trust Christ will find Him to be a \"faithful and immutable preserver.\" God called you out of darkness, and He will finish purifying your spirit, soul, and body. He will not let you fall away. Even now, you can enjoy a deep sense of safety knowing that Jesus holds you fast until the end.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you feel weak in following God's call right now?",
+    "How does knowing that God is faithful give you peace instead of anxiety today?"
+   ],
+   "prayer": "Lord, thank You that our safety rests in Your faithfulness and not in our own strength. Please renew our energy each day by Your Holy Spirit so we can serve others. Keep us blameless and finish the good work You started in our lives. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 11",
+     "on": "1 Thessalonians 5:24",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 1",
+     "on": "1 Thessalonians 5:24",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D5": {
+     "author": "Rick Warren",
+     "work": "What It Means to Be Anointed - Daily Hope with Rick Warren - August 6, 2026",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-august-6-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 52005023,
+   "end": 52005028,
+   "ref": "1 Thessalonians 5:23-28",
+   "ranges": [
+    [
+     52005023,
+     52005028
+    ]
+   ],
+   "title": "Growing and Standing Together in Grace",
+   "key_verse": [
+    52005023,
+    52005023
+   ],
+   "reflect": [
+    {
+     "text": "Paul closes his letter by praying that God will sanctify us completely. Sanctification is the ongoing process of growing into the mature people God created us to be. Vertically, it means walking with God our Father with the humble trust of a little child. Horizontally, it means becoming like Jesus as we offer real, practical kindness to the people around us. God has already made us His people, He is changing us today, and one day we will see Christ face to face.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Paul also makes a simple plea: pray for us. Church leaders carry a solemn responsibility as they care for souls and preach the gospel. They face heavy pressures, strong temptations, and times of deep weariness as they serve God's family. They need our prayers. When we intercede for our ministers, we ask the Lord to protect their hearts and use them as instruments to bring His truth and comfort to many.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what practical way can you show Christ's kindness to someone in your life today?",
+    "Which pastor or church leader can you lift up to God in prayer this week?"
+   ],
+   "prayer": "Father, teach us to trust You with childlike faith and to love our neighbours as Jesus does. We ask You to watch over our church leaders, shielding them in spiritual battles and refreshing their spirits. May Your grace be with all of us as we walk together. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 7",
+     "on": "1 Thessalonians 5:25",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "David Powlison",
+     "work": "A Simple Way to Think about Sanctification (1 Thessalonians 5:23) - Your Daily Bible Verse - July 18",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/a-simple-way-to-think-about-sanctification-bible-study-minute-october-31-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

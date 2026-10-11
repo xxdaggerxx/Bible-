@@ -1,0 +1,135 @@
+{
+ "id": "01-016-001",
+ "title": "Hagar and Ishmael",
+ "refs": [
+  "Genesis 16:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1016013,
+   "end": 1016013,
+   "ref": "Genesis 16:13",
+   "ranges": [
+    [
+     1016013,
+     1016013
+    ]
+   ],
+   "title": "\"You Are the God Who Sees Me\"",
+   "key_verse": [
+    1016013,
+    1016013
+   ],
+   "reflect": [
+    {
+     "text": "In times of deep heartbreak or loneliness, we can easily feel invisible and overlooked by those around us. Hagar knew this painful ache. Sarai and Abram used her to meet their own goals without valuing her as a person. After harsh mistreatment, she fled into the empty desert, exhausted and alone.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Yet the Lord did not ignore her in the wilderness. Unlike the distracted ways people look at each other, God's gaze is intentional, steady, and near. He met Hagar right in her distress and welcomed her honest tears. In that quiet place, the hurting runaway gave God the name El Roi, which means \"the God who sees me.\"",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Knowing that God sees you changes how you face painful seasons. You do not have to pretend to be strong or believe the lie that you are unworthy. God tracks every chapter of your life, never forgets your pain, and stays close with a caring heart to redeem your story.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When have you felt unseen or forgotten in a difficult season?",
+    "How does knowing that God intimately watches over you bring comfort today?"
+   ],
+   "prayer": "Lord, thank You for seeing every hidden tear and caring for me in my lowest moments. When I feel lonely or overlooked, remind me that Your eyes are always on me with love. Help me rest in Your presence and trust You with my story. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jo Saxton",
+     "work": "The God Who Sees You",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-august-23-2021.html"
+    },
+    "D2": {
+     "author": "Jeff Mingee",
+     "work": "What Hagar and Genesis 16 Teach Us About 'The God Who Sees'",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/god-seeing-not-scrolling/"
+    },
+    "D4": {
+     "author": "Emma Danzey",
+     "work": "El Roi: The God Who Sees Us",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/the-one-who-sees-us-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1016001,
+   "end": 1016016,
+   "ref": "Genesis 16:1-16",
+   "ranges": [
+    [
+     1016001,
+     1016016
+    ]
+   ],
+   "title": "God Hears in Our Affliction",
+   "key_verse": [
+    1016011,
+    1016011
+   ],
+   "reflect": [
+    {
+     "text": "Abram and Sarai grew impatient waiting for God's promise of a child, so they tried to solve the problem with their own human plan. Taking matters into their own hands brought jealousy, cruelty, and deep family pain. The angel's words about Ishmael show that lasting trouble and conflict often follow when we try to fulfill God's plans through our own scheming.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Even in the middle of this broken situation, the Lord showed great mercy to the suffering servant. He instructed Hagar to name her baby Ishmael, which means \"God hears.\" Every time Hagar spoke her son's name, it served as a lifelong reminder that the Lord actively listened to her cry of affliction in the wilderness.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Ishmael was not the child through whom God made His special covenant family. Still, the Lord's care for him and his mother reminds us of a larger truth. God's grace, His undeserved kindness, is not limited to one small group. Through the gospel, the good news of salvation, His love reaches out to people from every nation.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to rush ahead of God with your own plans?",
+    "How does the name Ishmael, meaning \"God hears,\" encourage you to bring your struggles to the Lord?"
+   ],
+   "prayer": "Heavenly Father, forgive us for the times we try to take control instead of waiting patiently for Your promises. Thank You for hearing our cries when we are in distress. We praise You that Your saving grace extends to people of every nation. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The LORD Has Listened",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lord-has-listened"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

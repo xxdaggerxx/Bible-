@@ -1,0 +1,85 @@
+{
+ "id": "11-012-025",
+ "title": "Jeroboam’s Idolatry",
+ "refs": [
+  "1 Kings 12:25-33"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11012025,
+   "end": 11012033,
+   "ref": "1 Kings 12:25-33",
+   "ranges": [
+    [
+     11012025,
+     11012033
+    ]
+   ],
+   "title": "Trusting God Instead of Worldly Shortcuts",
+   "key_verse": [
+    11012028,
+    11012028
+   ],
+   "reflect": [
+    {
+     "text": "King Jeroboam became anxious about his future. Even though God had promised him the kingdom, he worried that his people would return to King Rehoboam if they traveled to Jerusalem to worship. Driven by insecurity and selfish ambition, he took matters into his own hands instead of trusting God's word. To keep his power, he set up golden calves at Bethel and Dan, telling the people that traveling to Jerusalem was too hard.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jeroboam chose worldly convenience over God's clear commands. He built his own shrines, created a counterfeit feast, and made priests who were not from the tribe of Levi. F. B. Meyer observed that Jeroboam \"acted on expediency,\" yet his clever schemes led only to disaster and ruined his kingdom. When we let fear guide us, we often try to fix our problems with comfortable shortcuts that lead us and others into sin.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jesus showed us a completely different way. Instead of seeking His own will or chasing convenience, Jesus always obeyed His Father. As followers of God, we must stay grounded in the promises of Scripture rather than manufacturing our own solutions. Waiting on God's timing and obeying His word protects us from compromise and gives true peace.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel anxious about your future, do you look for easy shortcuts or do you wait on God?",
+    "How can staying grounded in Scripture help you choose obedience over worldly convenience?"
+   ],
+   "prayer": "Lord, help us to trust Your promises instead of letting fear control our choices. Keep us from taking easy shortcuts that disobey Your word. Teach us to follow Jesus by seeking Your will each day.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Kings 12:33",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Jeroboam I Breaks the Covenant",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jeroboam-breaks-the-covenant"
+    },
+    "D3": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Apr. 26, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-apr-26-2010-11629382.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

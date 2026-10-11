@@ -1,0 +1,121 @@
+{
+ "id": "02-025-001",
+ "title": "Offerings for the Tabernacle",
+ "refs": [
+  "Exodus 25:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2025009,
+   "end": 2025009,
+   "ref": "Exodus 25:9",
+   "ranges": [
+    [
+     2025009,
+     2025009
+    ]
+   ],
+   "title": "\"According to the Pattern I Show You\"",
+   "key_verse": [
+    2025009,
+    2025009
+   ],
+   "reflect": [
+    {
+     "text": "God gave Moses remarkably detailed instructions for building the tabernacle. Every measurement, material, and furnishing had an exact place. This shows us that the Lord is not distant or vague. He cares about the specific details of our lives. When we face big challenges with limited resources, or feel lost in unfamiliar territory, we can trust Him. God gently takes us by the hand to guide our steps.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God also takes responsibility to provide for the work He commands. As F. B. Meyer observed, \"to be on God's plan is the only place of rightness, safety, and joy.\" We often burden our hearts with anxiety because we add our own extra plans and worries that God never asked us to carry. Instead, God has a pattern for our character, calling us to follow Jesus. He has a purpose for each day, and we can find peace by staying inside His design.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there worries or extra responsibilities you are carrying today that God never asked you to take on?",
+    "How does knowing that God cares about the small details of your life help you trust His guidance?"
+   ],
+   "prayer": "Lord, thank You for caring about every detail of our lives. Help us to follow Your pattern rather than piling on our own anxious plans. Give us peace as we trust You to guide our steps each day. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 25:9",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "Katie Westenberg",
+     "work": "The God of Details",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/the-god-of-details-bible-study-minute-march-15-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 2025001,
+   "end": 2025009,
+   "ref": "Exodus 25:1-9",
+   "ranges": [
+    [
+     2025001,
+     2025009
+    ]
+   ],
+   "title": "A Dwelling Place for God",
+   "key_verse": [
+    2025008,
+    2025008
+   ],
+   "reflect": [
+    {
+     "text": "The Lord asked Israel to bring willing offerings so they could build a holy sanctuary where He could live among them. During forty long years in the desert, God's faithful presence sustained and renewed this meeting place. Today, through Jesus, believers are no longer pointing to a tent in the wilderness. By the Holy Spirit, we have become God's living dwelling place, called to set our eyes on eternity rather than temporary earthly homes.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "One vital offering listed for the tabernacle was pure olive oil for the lamps. A lamp cannot keep burning on its own; without fresh oil, its flame soon smokes and goes out. In the same way, we cannot shine with love, truth, and joy through our own natural goodness or outward rituals. We need the pure grace of the Holy Spirit every day. Just as the tabernacle lamps needed oil, we must come to God in private prayer to be refilled so our lives can shine brightly.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God's Spirit lives in you change how you view your daily life?",
+    "Do you take time in private prayer to ask God for the fresh grace you need to shine for Him?"
+   ],
+   "prayer": "Heavenly Father, thank You for choosing to dwell within us through Your Holy Spirit. Fill our hearts with Your grace so that we do not rely on our own strength. Help us to keep our eyes on eternity and let Your light shine through us today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 28",
+     "on": "Exodus 25:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Daily Disciples Ministries",
+     "work": "God's Dwelling Place",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-devotional-january-26-11565208.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "19-114-001",
+ "title": "A Psalm of Exodus",
+ "refs": [
+  "Psalms 114:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19114001,
+   "end": 19114008,
+   "ref": "Psalms 114:1-8",
+   "ranges": [
+    [
+     19114001,
+     19114008
+    ]
+   ],
+   "title": "Water from the Hard Rock",
+   "key_verse": [
+    19114008,
+    19114008
+   ],
+   "reflect": [
+    {
+     "text": "In Psalm 114, the whole earth trembles at the presence of the Lord. The seas part, mountains skip, and God turns hard flint into flowing springs of water. F. B. Meyer points out that this miracle is something we all need in our own lives today. Too often our hearts feel as hard as stone. We can become dry and cold, failing to feel true sorrow for our sins or deep love for Jesus, who died for us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In the desert, Moses struck the rock, and water gushed out to quench the people's thirst. Meyer reminds us that the Son of God can do that same work in us. He can use the message of His cross or speak His word to melt our stubbornness. When God touches us, our dryness turns into repentance, which means turning away from our sin and toward Him with a humble spirit.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God does not want us to stay unfeeling. Scripture tells us that He values a tender, broken heart. Just as the Lord brought refreshing pools from a dry cliff for Israel, He is able to soften our hard hearts and fill them with life and love.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life has your heart felt dry or hard toward God?",
+    "How can meditating on the sacrifice of Jesus help soften your heart today?"
+   ],
+   "prayer": "Lord God, You have the power to bring flowing streams out of solid rock. Please touch our hard hearts and take away our coldness. Give us tender spirits that grieve over sin and respond gladly to Your great love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 114:8",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

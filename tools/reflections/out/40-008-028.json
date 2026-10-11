@@ -1,0 +1,93 @@
+{
+ "id": "40-008-028",
+ "title": "The Demons and the Pigs",
+ "refs": [
+  "Matthew 8:28-34",
+  "Mark 5:1-20",
+  "Luke 8:26-39"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40008028,
+   "end": 40008034,
+   "ref": "Matthew 8:28-34; Mark 5:1-20; Luke 8:26-39",
+   "ranges": [
+    [
+     40008028,
+     40008034
+    ],
+    [
+     41005001,
+     41005020
+    ],
+    [
+     42008026,
+     42008039
+    ]
+   ],
+   "title": "Restored and Sent Home",
+   "key_verse": [
+    41005019,
+    41005019
+   ],
+   "reflect": [
+    {
+     "text": "Jesus arrived in a place where an isolated and deeply suffering man lived among the tombs. No person is ever too broken or cut off for Jesus to reach and heal. Even the demonic forces recognized His absolute authority and had to submit to Him. In an instant, Jesus freed the man from his torment, restoring his dignity and giving him a sound mind.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Seeing this divine power, the fearful townspeople urged Jesus to leave their land. An encounter with Jesus often divides people between those who run away and those who long to stay near Him. The healed man pleaded to get into the boat with Jesus. When we experience His deliverance, our natural response is a wholehearted desire to follow and stay close to our Savior.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Instead of taking him along, Jesus gave him a mission. He sent the man home to tell his friends and family how much mercy the Lord had shown him. We often live in that same tension, wanting to be with Christ while being called to serve Him in our daily world. Telling others what God has done in our lives is one of the best ways we can show our gratitude for His salvation.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How has Jesus shown His mercy and restored peace in your own life?",
+    "Who in your family or community can you tell about the good things God has done for you?"
+   ],
+   "prayer": "Lord Jesus, thank You for reaching us in our deepest brokenness and bringing peace to our minds. Help us to gladly accept the calling You have given us right where we live. Give us bold and thankful hearts to tell our family and neighbors about Your great mercy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "A Witness to the Decapolis",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/witness-decapolis"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 152: Luke 8:26–39",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-152-luke-8-2639.html"
+    },
+    "D3": {
+     "author": "Denise Kohlmeyer",
+     "work": "3 Applicable Lessons from the Story of the Demon-Possessed Man",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/3-applicable-lessons-from-the-story-of-the-demon-possessed-man.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "09-021-001",
+ "title": "David Takes the Consecrated Bread",
+ "refs": [
+  "1 Samuel 21:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9021001,
+   "end": 9021007,
+   "ref": "1 Samuel 21:1-7",
+   "ranges": [
+    [
+     9021001,
+     9021007
+    ]
+   ],
+   "title": "Bread for the Journey",
+   "key_verse": [
+    9021006,
+    9021006
+   ],
+   "reflect": [
+    {
+     "text": "When David was fleeing for his life from King Saul, he went to the tabernacle at Nob to be near God's servants and ask the priest Ahimelech for food. The only bread on hand was the consecrated bread, also called the Bread of the Presence. Under ceremonial law, this holy bread was set apart for priests alone. Even so, Ahimelech shared it with David. The priest understood that protecting a human life and showing mercy take priority over outward ritual rules.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus later pointed to this story to show that caring for human need is more important than rigid traditions. Faithful obedience means honoring the true spirit of God's law rather than choosing formal customs over compassion. Learning how to carry out God's commands with this kind of wisdom takes regular prayer and studying Scripture together in Christian community.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Bread of the Presence was a lasting reminder of God's covenant faithfulness, his unbreakable promise to love and care for his people. Receiving this bread gave David confidence that the Lord's sustaining presence would remain with him throughout his exile. David's request for five loaves also points ahead to Jesus feeding the crowds. Today, Jesus is our true Bread of Life who promises never to leave us or forsake us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When might holding tightly to a religious habit keep you from showing mercy to someone in need?",
+    "How does knowing that Jesus is the Bread of Life give you comfort when you face difficult times?"
+   ],
+   "prayer": "Lord, thank you for showing us that loving mercy is more important than rigid religious traditions. Guide us through prayer and your Word so we know how to care for others well. Thank you for giving us Jesus, the Bread of Life, whose faithful presence will never leave our side. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "David and Ahimelech",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/david-and-ahimelech"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 26: 1 Samuel 21:1–9",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-26-1-samuel-21-19.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

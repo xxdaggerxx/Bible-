@@ -1,0 +1,68 @@
+{
+ "id": "30-005-016",
+ "title": "Woe to Rebellious Israel",
+ "refs": [
+  "Amos 5:16-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 30005024,
+   "end": 30005024,
+   "ref": "Amos 5:24",
+   "ranges": [
+    [
+     30005024,
+     30005024
+    ]
+   ],
+   "title": "\"Let Justice Roll on Like a River\"",
+   "key_verse": [
+    30005024,
+    30005024
+   ],
+   "reflect": [
+    {
+     "text": "It is easy to let church activities and religious routines hide moral decay in daily life. God makes it clear that he rejects worship ceremonies when our daily habits contradict his standards. When believers ignore unfairness in society or mistreat others, their devotion becomes hollow. God views acts of justice as genuine worship. True faith cannot simply stop at feeling sad about wrong things; it requires active obedience in putting things right.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Amos compares justice to a rolling river and righteousness to a stream that never dries up. Righteousness meets personal needs, while justice addresses deep corruption across society. Living out justice functions like fresh flowing water that sustains life, showing our confidence in God's moral order. When we choose compassion over grievance, the Holy Spirit can bring healing, and we become channels of God's blessing to others.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where can you turn your concern about unfairness into active obedience this week?",
+    "How can your daily actions toward other people become a true form of worship?"
+   ],
+   "prayer": "Lord God, help us to honor you not only with our words, but through our everyday actions. Give us the courage to correct wrongs and show your compassion to people in need. Let your righteousness flow through our lives like a steady stream to bring healing to our world. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Mel Lawrenz",
+     "work": "How to Live the Bible — Let Justice Roll",
+     "site": "BibleGateway",
+     "url": "https://www.biblegateway.com/blog/2022/04/how-to-live-the-bible-let-justice-roll/"
+    },
+    "D2": {
+     "author": "Whitney Hopler",
+     "work": "What Does the Bible Mean When it Says \"Let Justice Roll Down Like a River?\"",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/what-does-the-bible-mean-when-it-says-let-justice-roll-down-like-a-river.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

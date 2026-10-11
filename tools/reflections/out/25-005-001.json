@@ -1,0 +1,123 @@
+{
+ "id": "25-005-001",
+ "title": "A Prayer for Restoration",
+ "refs": [
+  "Lamentations 5:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 25005021,
+   "end": 25005021,
+   "ref": "Lamentations 5:21",
+   "ranges": [
+    [
+     25005021,
+     25005021
+    ]
+   ],
+   "title": "\"Restore Us to Yourself\"",
+   "key_verse": [
+    25005021,
+    25005021
+   ],
+   "reflect": [
+    {
+     "text": "When we wander away from God, we often long for the peace and fellowship we once enjoyed. Yet trying to return on our own strength feels impossible. We may want to pray, but the words fail, and our hearts can feel as hard as stone. The prophet reminds us that we have no power to recover ourselves from our spiritual wandering. We are completely dependent on God's grace to bring us back.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Real renewal begins when we stop relying on our own efforts and ask the Lord to do the work. As F. B. Meyer wrote, \"there will be no doubt of our being turned, if He turns us.\" Because God's throne endures forever, He has unlimited power to give new life to a weary soul. Just as Jesus prayed to keep Peter from falling away, God's mighty power preserves us and turns our hearts back to Himself.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever tried to fix your own cold heart and found you could not do it?",
+    "How does knowing that God holds the power to turn you bring relief to your soul?"
+   ],
+   "prayer": "Lord God, we know we cannot turn back to You by our own strength. Please soften our stubborn hearts and draw us back to Yourself by Your grace. Renew our love for You and keep our faith steady every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Lamentations 5:21",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "John Piper",
+     "work": "Caused to Return",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/caused-to-return"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 25005001,
+   "end": 25005022,
+   "ref": "Lamentations 5:1-22",
+   "ranges": [
+    [
+     25005001,
+     25005022
+    ]
+   ],
+   "title": "A Final Cry for Mercy",
+   "key_verse": [
+    25005019,
+    25005019
+   ],
+   "reflect": [
+    {
+     "text": "Lamentations does not give us a quick, easy ending. The prophet lays out the full, bitter reality of suffering, loss, and disgrace before the Lord. He acknowledges the people's sins and accepts God's righteous judgment. This prayer shows that any outward relief or change in circumstances is hollow if God's people are not first reconciled to Him.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Ending the book with prayer shows that God's covenant bond with His people was strained, but never broken. Calling on the Lord in dark times proves that believers are still safely in His hands. The people do not have to remain defined by judgment. Because the Lord rules forever, we can trust Him to soften hard hearts and show mercy. In times of cultural decline and hardship, we need this same honest, heartfelt passion for God.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face trouble, do you bring your honest grief and confession directly to God?",
+    "Why is being right with God more important than simply having our outward problems removed?"
+   ],
+   "prayer": "Eternal Lord, Your throne endures from generation to generation. When we walk through seasons of grief and distress, remind us that we are still in Your care. Forgive our sins, restore our hearts, and lead us back into Your peace. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "A Final Plea for Restoration",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/final-plea-restoration"
+    },
+    "D4": {
+     "author": "D.A. Carson",
+     "work": "Read the Bible: 1 Samuel 20, 1 Cor. 2, Lamentations 5, and Psalm 36",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/1-samuel-20-1-corinthians-2-lamentations-5-psalm-36/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

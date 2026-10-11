@@ -1,0 +1,153 @@
+{
+ "id": "62-004-007",
+ "title": "Love Comes from God",
+ "refs": [
+  "1 John 4:7-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 62004018,
+   "end": 62004018,
+   "ref": "1 John 4:18",
+   "ranges": [
+    [
+     62004018,
+     62004018
+    ]
+   ],
+   "title": "\"Perfect Love Drives Out Fear\"",
+   "key_verse": [
+    62004018,
+    62004018
+   ],
+   "reflect": [
+    {
+     "text": "When worries about tomorrow or painful trials press upon us, fear can easily take over our hearts. Yet genuine love drives out that anxiety because God is already present in our future. When our lives and families are anchored in authentic love, we are equipped to endure severe hardships. As we bring our troubles to Him in prayer, His love replaces dread with quiet confidence, freeing us from fear even in the face of death.",
+     "sources": [
+      "D8"
+     ]
+    },
+    {
+     "text": "Fear can also keep us from reaching out to those around us. Unplanned encounters often challenge our hesitation to step into messy situations, and we easily pull back from people who do not match our preferences. Yet God demonstrated His love by fully embracing us despite our spiritual brokenness. Following Jesus means letting His love overcome our awkwardness and fear, so that we can freely cross social divides to care for others.",
+     "sources": [
+      "D7"
+     ]
+    }
+   ],
+   "questions": [
+    "Where is fear or awkwardness holding you back from reaching out to someone in need?",
+    "What future worry can you surrender to God today, trusting that His love is already there?"
+   ],
+   "prayer": "Lord, thank You that Your love is already present in our future and casts out all our dread. Forgive us when we let fear or awkwardness keep us from caring for people who are different from us. Give us quiet confidence in every trial, and help us share Your embrace with a broken world. Amen.",
+   "sources": {
+    "D7": {
+     "author": "John UpChurch",
+     "work": "The Day I Rolled Down the Window - Crosswalk the Devotional - May 3",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-may-2-2013.html"
+    },
+    "D8": {
+     "author": "Jim Burns",
+     "work": "Ruth Bell Graham: A Legacy of Love",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-june-22-2007-11545108.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 62004007,
+   "end": 62004021,
+   "ref": "1 John 4:7-21",
+   "ranges": [
+    [
+     62004007,
+     62004021
+    ]
+   ],
+   "title": "Love Comes from God",
+   "key_verse": [
+    62004019,
+    62004019
+   ],
+   "reflect": [
+    {
+     "text": "Our entire journey in this world is a schooling in love, helping us know and believe the heart of God through every season of life. True love does not grow naturally from our own hearts; as Charles Spurgeon noted, love is an \"exotic\" plant that must be watered from heaven. We only love because God first loved us. When we look at the cross, we see the deep kindness of the Father who sent His Son to save us, proving His tender mercy toward us.",
+     "sources": [
+      "D1",
+      "D4",
+      "D6"
+     ]
+    },
+    {
+     "text": "Because Christ gave His life and rose again, our spiritual life is made as certain and eternal as His own. Through faith, God invites us to dwell in Him freely, taking refuge in a strong, eternal home that costs nothing to enter. Trusting in this love changes how we live every day. It becomes a bright flame in our hearts that cannot stay hidden, showing itself clearly in our everyday speech, actions, and sincere love for others.",
+     "sources": [
+      "D2",
+      "D3",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "How have your everyday experiences helped you learn more about God's deep love for you?",
+    "In what ways can your love for Christ show up visibly in your daily words and actions?"
+   ],
+   "prayer": "Heavenly Father, thank You for sending Your Son to give us eternal life and a safe home in You. Water our hearts with Your Spirit so that we can truly love You and love those around us. Let our lives shine with gratitude for the great love You have shown us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 5",
+     "on": "1 John 4:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 6",
+     "on": "1 John 4:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 5",
+     "on": "1 John 4:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 11",
+     "on": "1 John 4:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 16",
+     "on": "1 John 4:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D6": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 John 4:16",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

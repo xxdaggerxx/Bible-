@@ -1,0 +1,66 @@
+{
+ "id": "05-028-015",
+ "title": "The Curses of Disobedience",
+ "refs": [
+  "Deuteronomy 28:15-68"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5028015,
+   "end": 5028068,
+   "ref": "Deuteronomy 28:15-68",
+   "ranges": [
+    [
+     5028015,
+     5028068
+    ]
+   ],
+   "title": "The Choice Between Life and Ruin",
+   "key_verse": [
+    5028015,
+    5028015
+   ],
+   "reflect": [
+    {
+     "text": "Scripture gives a large amount of space to describe the painful consequences of turning away from God. This detailed list is meant to alert us to how serious and certain God's judgment really is. The picture of the two mountains, Mount Gerizim and Mount Ebal, shows us that every person faces a clear spiritual crossroads: we must choose between life with God or complete ruin without Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God does not give these heavy warnings to discourage us, but to speak to our hearts. His righteous words urge us to listen to our conscience and turn to Christ in repentance—which means turning away from sin and seeking God's forgiveness—while His mercy is still freely offered to us today.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As believers, we need to understand that the true enjoyment of life is closely tied to walking in obedience to God's Word. Listening to the Lord protects us from ruin and leads us into the genuine peace and gladness He wants for our everyday lives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering the seriousness of God's warnings encourage you to listen to your conscience?",
+    "In what practical ways do you experience genuine joy when you follow God's Word?"
+   ],
+   "prayer": "Lord God, thank You for warning us about the painful path of sin and for offering us mercy in Christ. Help us to hear Your voice and turn to You with humble hearts. Teach us to obey Your Word daily so that we may know the true joy of walking with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathways Ministries",
+     "work": "Bible Pathways 03/10/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-03-or-10-or-2002-1127496.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

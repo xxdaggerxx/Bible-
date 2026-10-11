@@ -1,0 +1,138 @@
+{
+ "id": "24-039-011",
+ "title": "Jeremiah Delivered",
+ "refs": [
+  "Jeremiah 39:11-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 24039018,
+   "end": 24039018,
+   "ref": "Jeremiah 39:18",
+   "ranges": [
+    [
+     24039018,
+     24039018
+    ]
+   ],
+   "title": "\"Because You Have Trusted in Me\"",
+   "key_verse": [
+    24039018,
+    24039018
+   ],
+   "reflect": [
+    {
+     "text": "When Jerusalem was overrun with fire and war, many strong leaders fell. Yet Ebed-melech was kept completely safe. The Lord promised to rescue him for one clear reason: he had put his confidence in God. As Charles Spurgeon wrote, \"No one ever did trust in the Lord in vain.\" We often look to clever plans or helpful friends to feel secure, but true safety comes only from resting under God's wing.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Ebed-melech proved his faith through his gentle care for Jeremiah when the prophet was in deep trouble. True trust in the living God shows itself in how we care for His servants, even when others around us are hostile and cruel. God notices that quiet faithfulness. His pledge to deliver those who lean on Him is completely dependable, whatever storms may arise.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God wants us to live without anxious dread. He created our souls and bodies, and He knows exactly what provision we need each day. We should not settle for staying on the edges of His promises like strangers. Instead, we can step forward and actively rely on the wonderful care He pours out on all who truly trust Him.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you leaning on your own clever plans right now, or are you resting your safety entirely in the Lord?",
+    "How can your everyday actions show kindness and care to God's people who may be suffering?"
+   ],
+   "prayer": "Lord, help us to place our whole trust in You rather than in our own strength or circumstances. Teach us to care tenderly for Your servants who are hurting. When dangers surround us, remind us that Your promise to deliver us will never fail. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 13",
+     "on": "Jeremiah 39:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 39:18",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 24039011,
+   "end": 24039018,
+   "ref": "Jeremiah 39:11-18",
+   "ranges": [
+    [
+     24039011,
+     24039018
+    ]
+   ],
+   "title": "God Delivers His Faithful Servants",
+   "key_verse": [
+    24039017,
+    24039017
+   ],
+   "reflect": [
+    {
+     "text": "When judgment finally fell upon Jerusalem for its unfaithfulness, the city was shattered and its rulers faced harsh ruin. Yet in the middle of that terrible destruction, the Lord did not overlook His faithful followers. He showed His supreme authority over earthly rulers by moving King Nebuchadnezzar and the Babylonian officers to guard Jeremiah, treat him kindly, and release him back to his people.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "The Lord also sent a direct word of comfort to Ebed-melech, promising to spare him from the very men he feared. Though Ebed-melech was an outsider, God showed no partiality. He honored the man who had shown sympathy to His suffering prophet. When God's people face persecution, the Lord sees every kindness done to them and brings peace to those who stood by His truth.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "This shows us that no earthly enemy can lift a hand against us without God's permission. He controls the power and rage of human rulers. When we fear the Lord alone, we never have to tremble before the people around us. Even in dark hours of trouble, the Lord unfailingly keeps and delivers those who belong to Him.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God rules over powerful rulers give you courage when you feel afraid?",
+    "In what ways can you stand up for God's truth and support fellow believers who face opposition?"
+   ],
+   "prayer": "Sovereign Father, You never forget Your people, even when judgment and devastation fall around them. Free us from the fear of human anger, knowing You hold all power in Your hands. Give us courageous hearts to stand with Your persecuted servants and honor Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 5",
+     "on": "Jeremiah 39:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "The Lord Saves His Servants",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lord-saves-his-servants"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

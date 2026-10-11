@@ -1,0 +1,66 @@
+{
+ "id": "57-001-001",
+ "title": "Greetings from Paul and Timothy",
+ "refs": [
+  "Philemon 1:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 57001001,
+   "end": 57001003,
+   "ref": "Philemon 1:1-3",
+   "ranges": [
+    [
+     57001001,
+     57001003
+    ]
+   ],
+   "title": "Grace and Peace to the Church at Home",
+   "key_verse": [
+    57001002,
+    57001002
+   ],
+   "reflect": [
+    {
+     "text": "When Paul wrote this letter, he did not send it to Philemon alone. He included Apphia, Archippus, and the whole church meeting in Philemon's house. Even though this letter is short, it is God's inspired word and carries divine authority. It deals with hard, real-life problems like slavery and broken relationships. Paul stepped in as a peacemaker to help restore fellowship between Philemon and his runaway servant Onesimus, who had become a Christian through Paul's teaching. This shows us that personal matters between believers also matter to the wider church family.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Paul's greeting also prompts us to consider our own homes. We are called to live with holy purpose, showing warm family love and worshiping God together. Believing families can also pray faithfully for relatives who do not yet follow Christ, whether they live under our roof or far away. God is able to answer our prayers by changing wayward hearts and making them beloved brothers and sisters in Christ, just as He did with Onesimus.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you help your home become a place of love, worship, and faithful prayer?",
+    "Is there a family member or friend who needs your prayers to trust in Christ?"
+   ],
+   "prayer": "Lord God, thank you for bringing us into your family and giving us grace and peace. Help our homes to be places of genuine love, holiness, and sincere worship. Please work in the hearts of our loved ones who do not yet know you, and draw them to Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Truth For Life",
+     "work": "A Question to Consider",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-november-1-2021.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "To Philemon and Company",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/philemon-and-company"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

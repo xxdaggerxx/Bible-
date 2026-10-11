@@ -1,0 +1,61 @@
+{
+ "id": "02-029-001",
+ "title": "Consecration of the Priests",
+ "refs": [
+  "Exodus 29:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2029001,
+   "end": 2029009,
+   "ref": "Exodus 29:1-9",
+   "ranges": [
+    [
+     2029001,
+     2029009
+    ]
+   ],
+   "title": "Washed and Set Apart for God",
+   "key_verse": [
+    2029004,
+    2029004
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, Aaron and his sons were brought together to be set apart to serve the Lord. Before they put on the holy garments and received the anointing oil, Moses had to wash them with water. Today, all who trust in Christ belong to His family and are called to serve Him. But we often make the mistake of seeking God's power and blessing while forgetting to be clean. God asks us to put away daily habits that dishonor Him, turning away from selfish desires so our lives are truly dedicated to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This cleansing goes deeper than our outside actions. We must also be clean in our thoughts and our secret intentions. It is very easy to do religious work out of pride or a desire to look important. As F. B. Meyer warned, God will not give His Spirit to serve \"the millwheels of personal ambition.\" We cannot earn the Holy Spirit through our own striving. When we admit our weakness and ask God to cleanse our hearts hour by hour, He prepares us to be filled and used for His glory.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an unclean habit or selfish thought that you need God to wash away today?",
+    "Are your efforts to serve God motivated by love for Him or by a desire to impress others?"
+   ],
+   "prayer": "Lord, wash our daily habits, thoughts, and motives so that we may be clean before You. Forgive us for the times we have tried to serve You out of selfish pride. Humble our hearts and fill us with Your Holy Spirit to do Your work. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 29:4",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

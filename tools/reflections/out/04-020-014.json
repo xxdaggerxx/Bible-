@@ -1,0 +1,66 @@
+{
+ "id": "04-020-014",
+ "title": "Edom Refuses Passage",
+ "refs": [
+  "Numbers 20:14-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4020014,
+   "end": 4020021,
+   "ref": "Numbers 20:14-21",
+   "ranges": [
+    [
+     4020014,
+     4020021
+    ]
+   ],
+   "title": "Choosing Peace over Conflict",
+   "key_verse": [
+    4020018,
+    4020018
+   ],
+   "reflect": [
+    {
+     "text": "Moses approached Edom with respect and care. He asked for permission to pass peacefully along the main road, promising not to harm any fields or take water without paying for it. In return, the king of Edom answered with hostility and threatened them with the sword. This harsh response showed an old bitterness that had lasted for generations, going back to the conflict between Jacob and Esau.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Unresolved hurt between relatives can fester over time and turn into deep resentment. Israel did not respond to Edom's threats with violence. Instead of fighting their relatives, they chose a hard and tiring detour. As Stuart Briscoe observes, they recognized that discretion was better than retaliation.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We often face moments when old family arguments threaten to flare up again. God calls us to calm tension rather than let grudges grow. Stepping back from an unnecessary fight takes wisdom, but choosing peace honors the Lord far more than striking back.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an old family disagreement or hurt that you need to help diffuse rather than let grow?",
+    "How can you choose peaceful restraint the next time someone treats you with unfair hostility?"
+   ],
+   "prayer": "Lord, give us wisdom when old grievances and harsh words arise. Help us to choose peaceful paths instead of fighting to get our own way. Guard our hearts against bitterness, and help us bring healing to our families. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe (One Year Devotions for Men)",
+     "work": "Relative Values",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/relative-values-one-year-devotions-for-men-july-28.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,81 @@
+{
+ "id": "02-011-001",
+ "title": "The Plague on the Firstborn Foretold",
+ "refs": [
+  "Exodus 11:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2011001,
+   "end": 2011010,
+   "ref": "Exodus 11:1-10",
+   "ranges": [
+    [
+     2011001,
+     2011010
+    ]
+   ],
+   "title": "God Protects and Provides for His People",
+   "key_verse": [
+    2011007,
+    2011007
+   ],
+   "reflect": [
+    {
+     "text": "God was completely in control of everything happening in Egypt. Even when Pharaoh stubbornly refused to listen, God used that resistance to display His mighty power. At the same time, God worked directly in the hearts of the Egyptians to give His people favor. The Israelites simply obeyed God's instructions to ask for silver and gold, even though they did not yet know how God would use those gifts later.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Moses stood firm and trusted God without compromising his integrity. Because he remained faithful, God turned hostility into respect, causing Pharaoh's officials and the Egyptian people to hold Moses in high regard.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "As the final plague drew near, God promised to show a clear difference between Egypt and Israel, keeping His people so secure that not even a dog would bark at them. As Charles Spurgeon noted, God can easily \"stop their teeth\" and silence any threat against His flock. Just as the Lord supernaturally softened Egyptian hearts and guarded His children, we can trust that He still has the power to change resistant minds and keep us safe in His peace.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When God calls you to obey without explaining the future, what helps you trust Him?",
+    "Where do you need God to silence fears or soften a resistant heart today?"
+   ],
+   "prayer": "Lord God, thank You for Your watchful care and for making a distinction of grace in our lives. Help us to stand firm in our faith and obey You with integrity, even when we cannot see the whole picture. We ask that You soften resistant hearts around us and guard us with Your perfect peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 5",
+     "on": "Exodus 11:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "The Essential Ingredient",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-november-20-2023.html"
+    },
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Exodus 11:1–12:20, Luke 14, Job 29, 1 Corinthians 15",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/exodus-111-1220-luke-14-job-29-1-corinthians-15/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

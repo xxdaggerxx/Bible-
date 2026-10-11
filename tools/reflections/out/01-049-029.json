@@ -1,0 +1,66 @@
+{
+ "id": "01-049-029",
+ "title": "The Death of Jacob",
+ "refs": [
+  "Genesis 49:29-33"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1049029,
+   "end": 1049033,
+   "ref": "Genesis 49:29-33",
+   "ranges": [
+    [
+     1049029,
+     1049033
+    ]
+   ],
+   "title": "Gathered to His People",
+   "key_verse": [
+    1049033,
+    1049033
+   ],
+   "reflect": [
+    {
+     "text": "Jacob reached the very end of his long earthly life. After sharing blessings and giving his sons clear instructions about his burial in Canaan, he met death with peaceful composure. He simply drew his feet up into his bed and breathed his last breath.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Scripture says that Jacob was gathered to his people. This picture reminds us that when believers die, they step immediately into the presence of God and other saints who have gone before. It is not an ending of our story, but the moment when the ultimate purpose and full significance of our life are finally realized with the Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This promise offers great comfort to grieving families. Leaving our physical body behind does not mean we are lost; it leads directly into eternity with God. Because of this hope, we do not need to fear our final moments. We can rest in the peace of knowing where our true home is.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that believers go immediately to be with God bring you peace when thinking about death?",
+    "In what ways can the hope of eternity comfort you or your family during times of grief?"
+   ],
+   "prayer": "Lord, thank You for the promise that death is not the end for those who trust in You. Comfort our hearts when we grieve, and help us remember that believers enter straight into Your presence. Give us peace and quiet trust as we look forward to our eternal home with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Those Final Moments",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-june-21-2016.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

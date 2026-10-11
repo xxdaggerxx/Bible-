@@ -1,0 +1,73 @@
+{
+ "id": "46-001-010",
+ "title": "Unity in the Church",
+ "refs": [
+  "1 Corinthians 1:10-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46001010,
+   "end": 46001010,
+   "ref": "1 Corinthians 1:10",
+   "ranges": [
+    [
+     46001010,
+     46001010
+    ]
+   ],
+   "title": "\"That There Be No Divisions\"",
+   "key_verse": [
+    46001010,
+    46001010
+   ],
+   "reflect": [
+    {
+     "text": "A loss of clear purpose combined with inner fighting can ruin any group. The Corinthian believers had many spiritual gifts and advantages, yet they stumbled because of strife. They split into rival groups based on their favorite Christian leaders. Arguing over personalities drained their spiritual energy and damaged their witness before others.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "It is still easy for churches to let minor, unimportant issues cause deep divisions. Yet when believers focus on sharing the good news with people who need it, secondary arguments fade away. Just as tall grain in a ripe harvest field hides the boundary fences underneath, a shared mission helps us look past petty differences.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "True church unity comes when we keep the cross of Christ and His gospel at the very center. When we set aside small disputes to do the work God gave us, the world can clearly see His grace at work among us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there minor disagreements or personal preferences that distract you from serving alongside other believers?",
+    "How does focusing on the cross of Christ help you let go of petty disputes?"
+   ],
+   "prayer": "Lord Jesus, forgive us when we allow minor issues and personal loyalties to cause division among us. Keep our eyes fixed on Your cross and the good news of Your grace. Help our church work together in love, so that others may see You clearly. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jack Graham",
+     "work": "Kingdom Advancement - Powerpoint - March 21, 2013",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-march-21-2013.html"
+    },
+    "D2": {
+     "author": "Stuart Briscoe",
+     "work": "The Main Thing - One Year Devotions for Men",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/the-main-thing-one-year-devotions-for-men-april-13.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

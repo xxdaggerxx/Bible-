@@ -1,0 +1,81 @@
+{
+ "id": "15-005-001",
+ "title": "Temple Rebuilding Resumes",
+ "refs": [
+  "Ezra 5:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 15005001,
+   "end": 15005005,
+   "ref": "Ezra 5:1-5",
+   "ranges": [
+    [
+     15005001,
+     15005005
+    ]
+   ],
+   "title": "Under God's Watchful Eye",
+   "key_verse": [
+    15005005,
+    15005005
+   ],
+   "reflect": [
+    {
+     "text": "After years of pausing because of hostile neighbors, the Jewish people began rebuilding God's temple again. God sent the prophets Haggai and Zechariah to stir up and encourage the leaders to restart the work. Even when local Persian governors arrived to challenge them and demand names, the builders did not back down. They kept right on working while an official report was sent to King Darius.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Faithful obedience to God often meets opposition and intimidation. In those moments, we face a choice to shrink back in fear or trust God's sovereign care, which means His supreme rule over all things. The temple builders were not halted because the watchful eye of God was actively resting on them. Whenever God gives us a task, He faithfully provides the strength and resources we need to complete it.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "As F. B. Meyer reminds us, we should look away to the face of Jesus instead of staring at our opposition. Like a faithful shepherd, God watches over us lovingly, even when we are not directly aware of His presence. He can even turn the hearts of powerful rulers to accomplish His will. When we seek God's honor, we can press on with courage, knowing He shields us until His purpose is fulfilled.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face pressure or difficulty while trying to do what is right, where do you tend to fix your attention?",
+    "How does knowing that God's watchful eye is on you help you overcome fear today?"
+   ],
+   "prayer": "Lord, thank You for watching over us with constant, loving care. When we meet opposition or feel afraid, help us fix our eyes on Jesus rather than our problems. Grant us strength to keep doing what You ask, trusting that You will provide all we need. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezra 5:5",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Haggai and Zechariah Encourage the People",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/haggai-and-zechariah-encourage-people"
+    },
+    "D3": {
+     "author": "Jennifer Slattery",
+     "work": "Divinely Empowered for Our Greatest Challenges",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/divinely-empowered-for-our-greatest-challenges-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

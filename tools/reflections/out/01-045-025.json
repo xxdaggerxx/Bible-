@@ -1,0 +1,73 @@
+{
+ "id": "01-045-025",
+ "title": "The Revival of Jacob",
+ "refs": [
+  "Genesis 45:25-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1045025,
+   "end": 1045028,
+   "ref": "Genesis 45:25-28",
+   "ranges": [
+    [
+     1045025,
+     1045028
+    ]
+   ],
+   "title": "Good News That Revives the Heart",
+   "key_verse": [
+    1045027,
+    1045027
+   ],
+   "reflect": [
+    {
+     "text": "Joseph had forgiven his brothers and sent them home with a vital message. They became heralds who shared that Joseph was alive and ruling over all Egypt. In a similar way, when Christ forgives us, he calls us to go out and tell others that he is alive, reigning in majesty, and full of grace.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Jacob had lived in deep grief for decades, believing his son was gone forever. At first, the news stunned him, and he could not believe it. But when he heard their report and saw the wagons Joseph sent to provide for him, his spirit was revived. God was quietly working through all those painful years to preserve his covenant people and protect them from blending into Canaan.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Hearing that Joseph lived gave Jacob renewed hope and purpose for his remaining years. Unlike Jacob, who waited decades for answers, we now possess the complete Word of God. The Scriptures help us discern God's will and trust his sovereign care through every circumstance of life.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Who in your life needs to hear the good news that Jesus is alive and reigning?",
+    "How can God's Word give you fresh hope and purpose when you face hard times?"
+   ],
+   "prayer": "Lord God, thank you for working through all our circumstances to care for us. Help us to share the good news of our living Savior with people around us. Renew our spirits through your Word and give us fresh purpose to follow you each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Good News for Jacob",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/good-news-jacob"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "How Does Coming to Jesus Lead to Going?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-november-12-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

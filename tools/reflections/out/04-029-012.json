@@ -1,0 +1,66 @@
+{
+ "id": "04-029-012",
+ "title": "The Feast of Tabernacles",
+ "refs": [
+  "Numbers 29:12-40"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4029012,
+   "end": 4029040,
+   "ref": "Numbers 29:12-40",
+   "ranges": [
+    [
+     4029012,
+     4029040
+    ]
+   ],
+   "title": "Remembering God's Faithful Care",
+   "key_verse": [
+    4029012,
+    4029012
+   ],
+   "reflect": [
+    {
+     "text": "The Feast of Tabernacles was an annual week of sacred celebration and rest for God's people following their harvest. The Lord told them to set aside their ordinary work and gather together to worship Him. As they resided in temporary shelters throughout the feast, they were given a vivid reminder of God's faithful care for their ancestors during all their years of wandering in the wilderness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Each day of the festival was marked by bringing generous burnt offerings, grain offerings, drink offerings, and sin offerings before the Lord. These ceremonies were not just rituals of the past; they pointed forward to the good things God had planned. For instance, the water ceremony practiced during this feast foreshadowed Jesus offering living water to satisfy everyone who thirsts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The sacrifices, including the peace offerings mentioned at the end of the feast, also held deep meaning for the future. They pointed ahead to the lasting fellowship that believers now enjoy with God through Jesus. Today, we can look back on God's past faithfulness and celebrate the close, ongoing relationship He gives us through Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering God's care in the past help you trust Him today?",
+    "In what ways can you enjoy the lasting fellowship God has given you through Jesus?"
+   ],
+   "prayer": "Lord, thank You for Your faithful care in every season of life. We praise You for Jesus, who gives living water to our thirsty souls and brings us into lasting fellowship with You. Help us to rest in Your goodness and walk closely with You each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 02/25/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-02-or-25-or-2002-1127470.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,76 @@
+{
+ "id": "13-013-008",
+ "title": "Uzzah Touches the Ark",
+ "refs": [
+  "1 Chronicles 13:8-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13013008,
+   "end": 13013014,
+   "ref": "1 Chronicles 13:8-14",
+   "ranges": [
+    [
+     13013008,
+     13013014
+    ]
+   ],
+   "title": "Honoring God's Holy Presence",
+   "key_verse": [
+    13013012,
+    13013012
+   ],
+   "reflect": [
+    {
+     "text": "David wanted to bring the ark to Jerusalem to show that God was the true King of Israel. Even so, the journey ended in tragedy. God had given clear instructions in Scripture about how His ark should be moved, but David and the people ignored them. Good intentions and joyful celebration can never replace obedience to God's direct commands. Because Israel failed to honor His holiness, God's judgment fell on Uzzah.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God's holiness can be compared to fire. Fire brings warmth and help when we follow its laws, but it burns when we disregard them. F. B. Meyer explained that David had no reason to be afraid of God if he had only followed the Lord's rules. God does not strike out unpredictably. When the ark was taken into the home of Obed-edom and treated with proper honor, God poured out great blessings on his entire family.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God's presence brings either judgment or blessing, depending on how we approach Him. We do not need to be terrified of God when we walk in His ways. When we listen to His word and welcome Him into our homes and daily routines, His holy presence brings peace and life.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there times when you rely on good intentions instead of carefully obeying God's word?",
+    "How can you welcome God's holy presence into your home with honor and reverence today?"
+   ],
+   "prayer": "Lord God, You are holy and worthy of our deepest respect. Forgive us when we treat Your commands lightly or let our own ideas replace Your word. Teach us to walk in obedience and to welcome Your presence into our homes. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 13:12",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Blessing and Curse of the Ark",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/blessing-and-curse-of-the-ark"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

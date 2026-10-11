@@ -1,0 +1,66 @@
+{
+ "id": "12-023-004",
+ "title": "Josiah Destroys Idolatry",
+ "refs": [
+  "2 Kings 23:4-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12023004,
+   "end": 12023020,
+   "ref": "2 Kings 23:4-20",
+   "ranges": [
+    [
+     12023004,
+     12023020
+    ]
+   ],
+   "title": "Clearing Out False Worship",
+   "key_verse": [
+    12023004,
+    12023004
+   ],
+   "reflect": [
+    {
+     "text": "When King Josiah recommitted to God's covenant, his special promise and bond with his people, he did not stop at good intentions. He led a complete purge of false worship across the land of Judah. He started right in the temple of the Lord, removing items made for the false god Baal, breaking down the Asherah pole, and tearing down the quarters of cult prostitutes.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Josiah carried this work across the whole country. He put an end to the horrific practice of child sacrifice at Topheth and broke down the old altar at Bethel, fulfilling God's prophetic word from long before. He also removed the pagan priests who had led the people astray, bringing Judah back into line with God's law.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Josiah's thorough actions show us how important it is to take the worship of God seriously. His reforming zeal challenges us today to examine our own hearts. We are called to remove spiritual compromise and turn away from anything that takes the place of the Lord in our lives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any area of spiritual compromise in your life that needs to be cleared away?",
+    "What does it look like for you to take worshiping God seriously this week?"
+   ],
+   "prayer": "Lord, help us to worship you with our whole hearts and not hold back. Show us any areas of spiritual compromise in our lives where other things have taken your place. Give us the courage to turn away from what is false and follow your ways faithfully. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Josiah’s Covenant Faithfulness",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/josiahs-covenant-faithfulness"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

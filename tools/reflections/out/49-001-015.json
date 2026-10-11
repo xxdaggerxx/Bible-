@@ -1,0 +1,114 @@
+{
+ "id": "49-001-015",
+ "title": "Spiritual Wisdom",
+ "refs": [
+  "Ephesians 1:15-23"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 49001016,
+   "end": 49001018,
+   "ref": "Ephesians 1:16-18",
+   "ranges": [
+    [
+     49001016,
+     49001018
+    ]
+   ],
+   "title": "\"The Eyes of Your Heart Enlightened\"",
+   "key_verse": [
+    49001018,
+    49001018
+   ],
+   "reflect": [
+    {
+     "text": "God made human beings to see spiritual truth clearly. However, human sin caused everyone to fall into spiritual blindness. Without the Holy Spirit opening our inner eyes, we cannot understand the good news of Jesus. When the Spirit gives us new life, He takes away that blindness so we can see the wonderful hope and rich blessings God has promised us in Christ.",
+     "sources": [
+      "D3",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you need the Spirit to give you clearer spiritual sight right now?",
+    "How does knowing that the Spirit gives wisdom to every believer encourage your daily prayers?"
+   ],
+   "prayer": "Heavenly Father, thank You for sending Your Spirit to remove our spiritual blindness. Please open the eyes of our hearts each day so we can understand Your Word and see the rich hope You have given us. Guide our steps and help us grow in true wisdom. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Wisdom and Revelation by the Spirit",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/wisdom-and-revelation-spirit"
+    },
+    "D3": {
+     "author": "Jennifer Waddle",
+     "work": "What It Means to Have the Eyes of Our Hearts Opened",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/what-it-means-to-have-the-eyes-of-our-hearts-opened-bible-study-minute-march-14-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "Even after we come to faith, we still need God to help us grow. Paul did not ask God to give believers a different Spirit. Instead, he prayed for the Spirit to give deeper understanding and daily guidance. This spiritual sight is not just for a few special Christians; it is God's regular work in all who follow Jesus. For this reason, we can pray each day for God to keep our spiritual eyes open and fixed on Him.",
+     "problem": "D2 states that Paul is not asking for the Holy Spirit to be given again, not that he was not asking for a different Spirit."
+    }
+   ],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 49001015,
+   "end": 49001023,
+   "ref": "Ephesians 1:15-23",
+   "ranges": [
+    [
+     49001015,
+     49001023
+    ]
+   ],
+   "title": "The Great Power That Raised Christ",
+   "key_verse": [
+    49001019,
+    49001019
+   ],
+   "reflect": [
+    {
+     "text": "When God saved us, He showed the very same mighty power that brought Jesus back from the dead. Just as a dead body in a grave cannot bring itself back to life, we could not turn to Christ by our own human strength or goodness. The Holy Spirit gave us new life by His own divine power. Nothing could hold Jesus in the grave, and in the same way, no sin, devil, or human choice can stop God's grace when He decides to save someone.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This saving power brings great glory to God and defeats the forces of evil. It is also an everlasting power. Because Jesus was raised to never die again, the new life He gives us lasts forever. We do not have to slide back into our old dead ways of sinning. We are united to Jesus like a body is joined to its head. The very power that raised our Lord now lives and works inside everyone who belongs to His church.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God saved you by His own mighty power give you peace when you feel weak?",
+    "Since Jesus rose to never die again, how does His everlasting life help you turn away from old sins today?"
+   ],
+   "prayer": "Lord God, we praise You for the mighty power that raised Jesus from the dead and gave us new life. Thank You for breaking the hold of sin and bringing us into union with Christ our Head. Please help us live each day in the strength of His lasting victory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 8",
+     "on": "Ephesians 1:19-20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

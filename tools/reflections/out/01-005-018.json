@@ -1,0 +1,83 @@
+{
+ "id": "01-005-018",
+ "title": "God Takes Up Enoch",
+ "refs": [
+  "Genesis 5:18-24"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1005024,
+   "end": 1005024,
+   "ref": "Genesis 5:24",
+   "ranges": [
+    [
+     1005024,
+     1005024
+    ]
+   ],
+   "title": "\"Enoch Walked with God\"",
+   "key_verse": [
+    1005024,
+    1005024
+   ],
+   "reflect": [
+    {
+     "text": "Scripture tells us very little about Enoch, yet his life gives us a clear and powerful testimony. He pleased God by walking with Him in daily harmony. Walking with the Lord is not about chasing occasional spiritual highs and then falling away. As F. B. Meyer wrote, it is about a life of \"calm, unbroken fellowship\" with God. Enoch showed that a life that honors God is built on simple, continuous closeness day after day.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Living this way sounds simple, but our own desire for control often gets in the way. To walk with God, we must give up steering our own lives and choose His direction instead of asking Him to follow ours. We must also learn to match His pace. That means we do not run ahead in our own impatience, and we do not drag our feet in laziness. We simply look to Him, ready to obey His lead in everyday choices.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Enoch's steady walk with the Lord shaped his entire life, and God took him straight to heaven without experiencing death. When we turn away from darkness and walk with God in the light, our daily fellowship is never wasted. Walking faithfully with Him here on earth prepares our hearts to walk with Him forever in eternity.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily routine are you tempted to rush ahead of God or lag behind Him?",
+    "What does surrendering your own plans look like as you seek to walk in step with the Lord today?"
+   ],
+   "prayer": "Lord God, thank You for calling us into daily fellowship with You. Help us lay down our need for control and keep in step with Your pace and Your path. Keep us walking faithfully in Your light today as You prepare us for eternity with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 5:24",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "Walk with God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/harvest-daily-july-26-2005-1342326.html"
+    },
+    "D3": {
+     "author": "Karen Ehman",
+     "work": "Of Enoch and Long Walks",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-jan-9-2009-11597924.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

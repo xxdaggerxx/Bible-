@@ -1,0 +1,74 @@
+{
+ "id": "40-009-035",
+ "title": "The Lord of the Harvest",
+ "refs": [
+  "Matthew 9:35-38",
+  "Luke 10:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40009037,
+   "end": 40009038,
+   "ref": "Matthew 9:37-38",
+   "ranges": [
+    [
+     40009037,
+     40009038
+    ]
+   ],
+   "title": "\"The Harvest Is Plentiful\"",
+   "key_verse": [
+    40009037,
+    40009037
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus saw the huge harvest and how few workers there were, His first command was to pray. Before rushing into action, we are told to turn to the Lord. Praying for workers and for people who do not know God shapes our hearts so we care about what He cares about. Praying for the lost is something every believer can do, making it the most vital and open work available to all of us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At times, we might feel insecure and wonder if there is any place left for us to help. We compare ourselves to others and falsely believe that all the roles in ministry are already taken. Yet Jesus reminds us that the field is vast. God does not operate with a shortage of opportunity, and there is more than enough room for you to take part.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead of feeling threatened by other people's gifts, we can celebrate and encourage our fellow workers. Jesus invites each of us into His harvest while asking us to plead for even more laborers to join. We can build this faithful habit of prayer in practical ways, such as keeping personal prayer cards or using missionary calendars to guide our requests.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever hold back from serving because you compare yourself to others?",
+    "What practical tool, like a prayer list or calendar, could help you pray regularly for gospel workers?"
+   ],
+   "prayer": "Lord of the harvest, thank You that there is room for each of us to serve in Your vast field. Please free our hearts from comparison and help us celebrate the gifts of our brothers and sisters. Teach us to pray faithfully each day for more workers to share Your good news with the world. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Trevin Wax",
+     "work": "Pray to the Lord of the Harvest",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/trevin-wax/pray-lord-harvest/"
+    },
+    "D2": {
+     "author": "Glynnis Whitwer",
+     "work": "Is There Room for Me?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/is-there-room-for-me-encouragement-for-today-april-20-2015.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

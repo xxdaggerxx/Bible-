@@ -1,0 +1,66 @@
+{
+ "id": "01-025-019",
+ "title": "Jacob and Esau",
+ "refs": [
+  "Genesis 25:19-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1025019,
+   "end": 1025028,
+   "ref": "Genesis 25:19-28",
+   "ranges": [
+    [
+     1025019,
+     1025028
+    ]
+   ],
+   "title": "When Answered Prayer Brings a Struggle",
+   "key_verse": [
+    1025022,
+    1025022
+   ],
+   "reflect": [
+    {
+     "text": "Isaac prayed for his wife because she could not have children, and the Lord answered his prayer. Rebekah finally became pregnant after twenty years of barrenness. Yet this wonderful answer to prayer came with unexpected tension and pain. Inside her womb, the two babies wrestled together, leaving her confused and hurting.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Rebekah did not keep her distress to herself. Instead of pulling away, she took her honest questions directly to God and asked why this was happening. The Lord did not scold her for her doubts or fears. He met her with clear answers, reassurance, and peace as he explained his plan for the two boys.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Sometimes the blessings we ask for also bring surprising challenges. When that happens, we are invited to approach God boldly with our wrestling hearts. We do not have to hide our confusion from him. We can bring him our real struggles, confident that he is with us and will care for us in hard times.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What honest struggles or questions do you need to take to God today?",
+    "How can knowing that God welcomes your questions give you peace when life feels difficult?"
+   ],
+   "prayer": "Lord, thank you that you listen to our prayers and care about our pain. When your answers come with unexpected struggles, help us bring our questions straight to you. Give us peace and teach us to trust your presence in every season. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Paige Allen",
+     "work": "The Hidden Wrestle of Answered Prayer",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-august-19-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

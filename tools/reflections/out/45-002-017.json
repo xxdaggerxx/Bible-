@@ -1,0 +1,66 @@
+{
+ "id": "45-002-017",
+ "title": "The Jews and the Law",
+ "refs": [
+  "Romans 2:17-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45002017,
+   "end": 45002029,
+   "ref": "Romans 2:17-29",
+   "ranges": [
+    [
+     45002017,
+     45002029
+    ]
+   ],
+   "title": "A Matter of the Heart",
+   "key_verse": [
+    45002029,
+    45002029
+   ],
+   "reflect": [
+    {
+     "text": "It is easy to think that outward things make us right with God. We might point to our family background, religious rituals, or sincere efforts to live a good life. In this passage, Paul addresses people who rested in having God's law and performing religious ceremonies. Yet our own obedience is never enough to give us right standing before God, because we still fall short of His standard.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even in the Old Testament, God showed that His people could never be saved by their own deeds. They always depended on His gracious atonement, which is His loving way of providing forgiveness for sin. Outward rituals, like physical circumcision, cannot fix the problem of sin. True circumcision is an inward work that happens inside us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Real change is done by the Holy Spirit, who renews our hearts so we no longer rely on external rules or our own good deeds. We cannot earn God's approval by ourselves. Instead, we are made right with God only when our renewed hearts trust completely in Christ alone.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you tempted to rely on outward religious habits instead of trusting in Christ alone?",
+    "How does knowing that the Holy Spirit renews your heart change the way you seek God's approval?"
+   ],
+   "prayer": "Lord, forgive us when we depend on our own good works or outward rituals to look righteous. Change our hearts from the inside out through your Holy Spirit. Teach us to rest our faith completely in Christ alone.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Circumcision of the Heart",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/circumcision-of-heart"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

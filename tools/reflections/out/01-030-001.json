@@ -1,0 +1,75 @@
+{
+ "id": "01-030-001",
+ "title": "Dan and Naphtali",
+ "refs": [
+  "Genesis 30:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1030001,
+   "end": 1030008,
+   "ref": "Genesis 30:1-8",
+   "ranges": [
+    [
+     1030001,
+     1030008
+    ]
+   ],
+   "title": "Letting Go of Envy and Comparison",
+   "key_verse": [
+    1030001,
+    1030001
+   ],
+   "reflect": [
+    {
+     "text": "When Rachel looked at Leah, she saw only what she lacked. Comparing herself to her sister brought deep envy, bitterness, and anger into her home. Instead of coming to God in honest prayer, Rachel let comparison rule her feelings and steal her joy. In her pain, she made desperate demands on her husband to fix what only God could change.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Outward appearances rarely tell the whole story. Leah had children, but she also endured the quiet ache of an unloved marriage. Rachel failed to see that. Instead of waiting on the Lord in faith, she took matters into her own hands and gave her servant Bilhah to Jacob. Even the names she gave the children, Dan and Naphtali, were chosen to claim victory in a bitter contest with her sister.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet God was still at work through this broken, imperfect family to carry out His good plan. We often fall into the very same trap when we measure our worth against the lives of people around us. Fixing our eyes on Christ breaks that cycle. We are invited to turn away from sinful rivalry and trust God's grace, which is His kindness that we do not deserve.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When do you feel most tempted to compare yourself to someone else and lose your joy?",
+    "How can trusting God's plan keep you from trying to force your own answers?"
+   ],
+   "prayer": "Lord, forgive us when we focus on what others have and let envy take root in our hearts. Help us remember that you are working even when we cannot see it. Teach us to rest in your grace and keep our eyes fixed on Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Kia Stephens",
+     "work": "Avoiding the Comparison Trap",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-may-10-2021.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Sons for Rachel",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/sons-rachel"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

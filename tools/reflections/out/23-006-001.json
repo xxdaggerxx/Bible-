@@ -1,0 +1,89 @@
+{
+ "id": "23-006-001",
+ "title": "Isaiah’s Commission",
+ "refs": [
+  "Isaiah 6:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23006001,
+   "end": 23006013,
+   "ref": "Isaiah 6:1-13",
+   "ranges": [
+    [
+     23006001,
+     23006013
+    ]
+   ],
+   "title": "Cleansed to Serve the Holy King",
+   "key_verse": [
+    23006008,
+    23006008
+   ],
+   "reflect": [
+    {
+     "text": "In a time of grief and uncertainty, Isaiah saw the sovereign King on His heavenly throne. Worshiping seraphim covered their faces and feet in humble reverence, using two wings to fly in obedience. Seeing God's blazing purity made Isaiah feel completely ruined by his own sin. The glorious King on that throne was Christ, who later took on human flesh to save us.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Isaiah could not fix his own unworthiness, but God provided the cleansing. An angel touched Isaiah's lips with a glowing coal from the altar, granting atonement, which is God's pardon for sin. As F. B. Meyer noted, genuine service \"springs from such communion\" with God. Only after receiving this cleansing was Isaiah ready to answer God's call to go.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "God gave Isaiah a difficult task: preaching to people whose spiritual deafness and blindness reflected the lifeless idols they worshiped. Centuries later, Jesus quoted these words to explain why many rejected His own message. We are reminded that people cannot turn and be healed unless God mercifully intervenes to open their eyes and change their hearts.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does spending quiet time worshiping God prepare you to serve Him?",
+    "When you share God's truth and face rejection, how does knowing God must heal human hearts encourage you?"
+   ],
+   "prayer": "Holy Lord, thank You for showing us Your purity in Christ and for taking away our guilt. Teach us to spend time in humble communion with You before we rush into activity. Please heal our dull hearts so we may truly see Your truth and share it faithfully with others.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 6:2",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Call of Isaiah",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/call-isaiah"
+    },
+    "D3": {
+     "author": "Brian Tabb",
+     "work": "Do You See Without Seeing? Isaiah’s Riddle and Christ’s Rescue",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/do-you-see-without-seeing"
+    },
+    "D4": {
+     "author": "John MacArthur",
+     "work": "Face to Face with the Holy One",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/print/B200701/face-to-face-with-the-holy-one"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

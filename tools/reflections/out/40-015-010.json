@@ -1,0 +1,78 @@
+{
+ "id": "40-015-010",
+ "title": "What Defiles a Man",
+ "refs": [
+  "Matthew 15:10-20",
+  "Mark 7:14-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40015010,
+   "end": 40015020,
+   "ref": "Matthew 15:10-20; Mark 7:14-23",
+   "ranges": [
+    [
+     40015010,
+     40015020
+    ],
+    [
+     41007014,
+     41007023
+    ]
+   ],
+   "title": "What Comes Out of the Heart",
+   "key_verse": [
+    40015018,
+    40015018
+   ],
+   "reflect": [
+    {
+     "text": "Jesus called the crowd together to correct a shallow view of sin and righteousness. People often worry a great deal about external habits, diets, and healthy food trends. Yet Jesus explained that what goes into our mouths does not make us unclean before God. Outward rituals and food rules have no power to change or purify who we are on the inside.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead, our real problem begins much deeper. Jesus showed that the human heart is the true source of all moral defilement and sinful behavior. Evils like deceit, greed, and harmful thoughts do not come from the outside. They spill out from an unclean heart. Genuine godliness cannot come from merely keeping outside rules; we need our hearts renewed and cleansed through the Holy Spirit.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because what we say shows what is inside us, we must take our speech seriously. We fool ourselves if we claim to follow God while failing to control our tongues. Words hold the power of life and death. For that reason, we need to be far more watchful over what comes out of our mouths than what goes onto our plates.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you more careful about external habits and diet than about the words you speak?",
+    "What do your daily words reveal about what is living inside your heart?"
+   ],
+   "prayer": "Lord, show us where we focus on outside rules rather than the state of our hearts. Cleanse us within by Your Holy Spirit, and help us guard our speech so that our words bring life instead of harm. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Lynette Kittle",
+     "work": "Keeping Our Mouths in Check (Matthew 15:11) - Your Daily Bible Verse - December 30",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-december-30.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Evil in Heart",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/evil-heart"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

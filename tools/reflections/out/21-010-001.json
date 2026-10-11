@@ -1,0 +1,134 @@
+{
+ "id": "21-010-001",
+ "title": "Wisdom and Folly",
+ "refs": [
+  "Ecclesiastes 10:1-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 21010010,
+   "end": 21010010,
+   "ref": "Ecclesiastes 10:10",
+   "ranges": [
+    [
+     21010010,
+     21010010
+    ]
+   ],
+   "title": "\"If the axe is dull\"",
+   "key_verse": [
+    21010010,
+    21010010
+   ],
+   "reflect": [
+    {
+     "text": "Our culture talks constantly about success, but it usually ignores the need for wisdom. Many people chase money, fame, or high positions. Yet living wisely does not guarantee worldly rewards. Real success is defined by God rather than the standards of the world.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "When an axe is blunt, cutting wood takes far more effort. In the same way, those who serve God can become worn out over time. Our minds grow tired, our feelings become dull, and quiet heartaches take away our energy. In those weak moments, we can ask God to give us his strength and grace so that his power is shown in our weakness.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "At the same time, we should seek to sharpen our edge again. Just as a worker stops to sharpen a blade, we need healthy rest, encouraging fellowship with Christian friends, and time spent reading God's Word. Scripture restores our sharpness so we are ready to serve.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what parts of your daily life or service do you feel worn out and blunt?",
+    "How can you make time this week to be sharpened through God's Word, rest, or Christian friends?"
+   ],
+   "prayer": "Lord, help us to seek true wisdom rather than the world's ideas of success. When our minds and hearts feel dull, give us your strength to keep going. Sharpen us through your Word and godly fellowship so that we may serve you well. Amen.",
+   "sources": {
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ecclesiastes 10:10",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "Charles R. Swindoll",
+     "work": "No Success Without Wisdom",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-july-7-8-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 21010001,
+   "end": 21010020,
+   "ref": "Ecclesiastes 10:1-20",
+   "ranges": [
+    [
+     21010001,
+     21010020
+    ]
+   ],
+   "title": "Wisdom in an Upside-Down World",
+   "key_verse": [
+    21010007,
+    21010007
+   ],
+   "reflect": [
+    {
+     "text": "Life in this fallen world often seems completely backwards. Unqualified people are placed in high positions, while the faithful are overlooked. As Charles Spurgeon wrote, \"eternity will right the wrongs of time.\" Jesus walked the earth as a servant, so we should not complain if we are treated as lowly.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This disorder can also happen inside our own lives. We make a great mistake if we let our sinful desires rule over us while our spiritual life is neglected. We need grace—God's undeserved kindness—to keep our bodies and passions in check, living under the lordship of Christ.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Everyday life also brings hidden spiritual dangers. Just as splitting logs can cause sudden injury, even ordinary daily tasks carry perils for our souls. Pride, greed, and anger can quietly sneak into the quietest homes and jobs. We cannot keep ourselves safe on our own, so we must depend on the Lord to guard and protect us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there selfish desires in your life that are trying to rule over you?",
+    "What subtle temptations do you face during your regular daily routines?"
+   ],
+   "prayer": "Father, help us trust your timing when the world feels unfair and upside down. Keep our sinful passions from ruling over our lives, and grant us grace to walk with self-control. Protect our hearts from hidden temptations in our daily work, and keep us safe in your care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 19",
+     "on": "Ecclesiastes 10:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 17",
+     "on": "Ecclesiastes 10:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

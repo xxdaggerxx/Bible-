@@ -1,0 +1,66 @@
+{
+ "id": "42-009-051",
+ "title": "The Samaritans Reject Jesus",
+ "refs": [
+  "Luke 9:51-56"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42009051,
+   "end": 42009056,
+   "ref": "Luke 9:51-56",
+   "ranges": [
+    [
+     42009051,
+     42009056
+    ]
+   ],
+   "title": "Following Jesus with Courage and Mercy",
+   "key_verse": [
+    42009051,
+    42009051
+   ],
+   "reflect": [
+    {
+     "text": "Jesus knew what awaited Him in Jerusalem. Even though He faced suffering and the cross, He firmly set out on the road. He did not pull back to protect Himself. Instead, Christ stepped forward with bold courage, completely trusting God to bring Him through death to resurrection. His steadfast determination came from deep, sacrificial love for God and for the people He came to save. In the same way, we are called to trust God and stay faithful when we face our own trials.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Along the way, a Samaritan town refused to welcome Jesus. James and John became deeply offended and asked if they should call down fire to destroy the people. Jesus turned and rebuked them right away. Zeal for God becomes harmful when believers run ahead of God with bitter anger. Jesus came to save people, not to destroy them. Any real passion for Christ must be guided by His mercy and reflect His gentle grace.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face difficult situations or rejection, do you respond with the patient grace of Jesus or with anger?",
+    "How can you show Christ's saving love to people who disagree with you or oppose you?"
+   ],
+   "prayer": "Lord Jesus, thank You for Your brave love in going to the cross to save us. Forgive us when our anger takes over and we want to strike back instead of showing mercy. Teach us to trust the Father in hard times and to reflect Your grace to everyone around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Justin Dillehay",
+     "work": "The Hero Who Set His Face",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/hero-set-his-face/"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "Losing Direction and Doubling Your Speed - Love Worth Finding - February 2",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-february-2-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

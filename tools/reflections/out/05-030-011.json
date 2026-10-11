@@ -1,0 +1,66 @@
+{
+ "id": "05-030-011",
+ "title": "The Choice of Life or Death",
+ "refs": [
+  "Deuteronomy 30:11-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5030011,
+   "end": 5030020,
+   "ref": "Deuteronomy 30:11-20",
+   "ranges": [
+    [
+     5030011,
+     5030020
+    ]
+   ],
+   "title": "Choosing Life Each Day",
+   "key_verse": [
+    5030019,
+    5030019
+   ],
+   "reflect": [
+    {
+     "text": "Every single day presents us with a basic choice between life and blessing, or death and trouble. God's message is not far away in heaven or across the sea, but near to us. True life does not come from living for ourselves. It requires surrendering every part of our lives to God and letting Him lead us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Choosing life means loving the Lord, listening closely to His voice, and holding fast to Him. Simple daily habits, such as reading the Bible and praying, help build our trust in God during difficult seasons. As Tiffany Thibault reminds us, we need God's guidance to help us walk in His ways and cling to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The choice to follow God does not stop with us. When we surrender our lives to God's leadership, that decision extends spiritual blessings to our children. Following Him each day brings goodness not only to our own hearts, but also to the generations that follow.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily routine can you surrender more fully to God's leadership?",
+    "How can daily habits like prayer and Bible reading help you trust God during hard times?"
+   ],
+   "prayer": "Lord God, thank You for placing the gift of life before us. Help us to listen closely to Your voice and surrender our hearts completely to You today. Strengthen our daily walk with You so that our lives may bring blessing to those who follow us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Tiffany Thibault",
+     "work": "A Prayer to Choose Life",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-to-choose-life.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

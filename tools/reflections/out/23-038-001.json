@@ -1,0 +1,73 @@
+{
+ "id": "23-038-001",
+ "title": "Hezekiah’s Illness and Recovery",
+ "refs": [
+  "Isaiah 38:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23038001,
+   "end": 23038008,
+   "ref": "Isaiah 38:1-8",
+   "ranges": [
+    [
+     23038001,
+     23038008
+    ]
+   ],
+   "title": "The Lord Hears Our Prayers",
+   "key_verse": [
+    23038005,
+    23038005
+   ],
+   "reflect": [
+    {
+     "text": "When King Hezekiah became very sick, the message came that he would not recover. Even when a situation seems completely hopeless, we should never hesitate to bring it to God. Hezekiah turned his face to the wall, wept bitter tears, and poured out his heart to the Lord, recalling his faithful walk with God.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God heard his cry and saw his tears. In His kindness, the Lord answered by promising to add fifteen years to Hezekiah's life and to defend the city. Sometimes Satan tries to make us feel unworthy to ask God for help, but we can trust God's grace—His unearned love—to listen to our honest prayers.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This story shows us that prayer has real power before God. His promises are not meant to make us passive or give up. Instead, they encourage us to pray eagerly. Even though our Creator already knows how He will answer, He truly interacts with us in our daily lives and calls us to keep praying for ourselves and others.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a difficult or hopeless situation in your life that you have hesitated to bring to God in prayer?",
+    "How does knowing that God sees your tears encourage you to keep praying?"
+   ],
+   "prayer": "Lord, thank You for hearing our honest prayers and seeing our tears, even when situations seem hopeless. Help us reject feelings of unworthiness and trust Your grace instead. Give us faith to keep praying eagerly for ourselves and others, knowing You truly care for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Power of Prayer",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/power-of-prayer"
+    },
+    "D2": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - August 8, 2005",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-august-8-2005-1343598.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

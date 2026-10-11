@@ -1,0 +1,145 @@
+{
+ "id": "47-010-001",
+ "title": "Paul’s Apostolic Authority",
+ "refs": [
+  "2 Corinthians 10:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 47010005,
+   "end": 47010005,
+   "ref": "2 Corinthians 10:5",
+   "ranges": [
+    [
+     47010005,
+     47010005
+    ]
+   ],
+   "title": "\"Take Captive Every Thought\"",
+   "key_verse": [
+    47010005,
+    47010005
+   ],
+   "reflect": [
+    {
+     "text": "Our minds can easily become a quiet battleground. Doubts, selfish attitudes, and painful memories can build up like high walls inside us over time. Sharon Jaynes notes that recurring deceptive thoughts become fortified mental habits when left unchecked. Soon, cynical or proud ideas try to set themselves up as the final judge of what is true, pushing God's word aside.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Human willpower on its own cannot pull down these inner fortresses. We need God's Word and the Holy Spirit's power to see through the deception. Instead of letting our thoughts wander wherever they want, we are called to stop lies of failure or self-reliance right at the doorway of our minds. We confront every misleading thought immediately with God's truth.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What recurring lies or negative thoughts do you need to stop at the doorway of your mind today?",
+    "How can turning to scripture help you bring proud or fearful thoughts into obedience to Christ?"
+   ],
+   "prayer": "Lord Jesus, take captive every thought and attitude that rises against your truth. Give us the strength through your Spirit to reject lies of pride and failure right away. Help our minds rest in your loving Word and follow you in humble obedience each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Corinthians 10:5",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Sharon Jaynes",
+     "work": "Taking Every Thought Captive - Part 4: Reject the Lie",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-aug-6-2007-11550102.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "As F. B. Meyer writes, faith humbles us and \"leads captive in the chains of love.\" When we surrender our reasoning to Jesus, he frees us from pride and teaches us to trust him completely. Submitting every thought to Christ brings real peace and clears away everything that blinds us to his love.",
+     "problem": "Neither 2 Corinthians 10 nor D1 teaches that submitting thoughts to Christ brings peace, nor does D1 state that this clears away what blinds us to God's love (D1 speaks of removing whatever blurs the clear surface of the mirroring intellect)."
+    }
+   ],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 47010012,
+   "end": 47010012,
+   "ref": "2 Corinthians 10:12",
+   "ranges": [
+    [
+     47010012,
+     47010012
+    ]
+   ],
+   "title": "\"Measuring Themselves by Themselves\"",
+   "key_verse": [
+    47010012,
+    47010012
+   ],
+   "reflect": [
+    {
+     "text": "It is tempting to look at other people to figure out how well we are doing. In Corinth, some teachers made up their own benchmarks to commend themselves and compete for status. Charles Swindoll points out that comparing yourself to others leads either to smug pride or feelings of inferiority. Measuring our worth by human performance is foolish because it leaves us chasing moving targets that never satisfy.",
+     "sources": [
+      "D2",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "When we copy others or hunt for human approval through titles and reputation, we miss the life God created us to live. God made each person with unique gifts and differences on purpose, not for uniform imitation. Comparing ourselves with those around us can tempt us to put on a disguise and pursue someone else's calling while neglecting our own.",
+     "sources": [
+      "D2",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Paul chose not to join this petty game of rivalry. Instead, he found his confidence by serving faithfully within the specific work God had assigned to him. True peace comes when we stop using human yardsticks and anchor our identity in Jesus. Grounded in his Word, we can celebrate how God made us and focus on doing his good will.",
+     "sources": [
+      "D2",
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of life are you most tempted to measure your value by comparing yourself to others?",
+    "How does resting in who you are in Christ free you to pursue your own God-given calling?"
+   ],
+   "prayer": "Lord, forgive us when we look to the opinions and achievements of others to find our worth. Thank you for creating us with distinct gifts and a purpose that comes from you alone. Teach us to rest in Christ and faithfully serve you without pride or envy. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Comparison",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-july-12-2021.html"
+    },
+    "D4": {
+     "author": "Meg Bucher",
+     "work": "The Standards That Matter",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/the-standards-that-matter-bible-study-minute-june-5-2018.html"
+    },
+    "D5": {
+     "author": "Katherine Britton",
+     "work": "Don't Dare to Compare",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/dont-dare-to-compare-crosswalk-the-devotional-nov-30-2010-11640440.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

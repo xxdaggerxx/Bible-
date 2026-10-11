@@ -1,0 +1,66 @@
+{
+ "id": "01-003-001",
+ "title": "The Serpent’s Deception",
+ "refs": [
+  "Genesis 3:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1003001,
+   "end": 1003007,
+   "ref": "Genesis 3:1-7",
+   "ranges": [
+    [
+     1003001,
+     1003007
+    ]
+   ],
+   "title": "Doubt, Deception, and the Fall",
+   "key_verse": [
+    1003006,
+    1003006
+   ],
+   "reflect": [
+    {
+     "text": "Temptation often begins quietly. In the garden, the enemy did not start with an open attack. Instead, he planted a question to make Eve doubt what God had said. The serpent twisted God's generous gift into a strict rule, making God look unkind. Satan still searches for ways to distort the truth, just as he tried to misquote Scripture when tempting Jesus. To stay safe from such deceptions, we must keep God's Word hidden deep in our hearts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When Eve and Adam chose to eat the forbidden fruit, human innocence was shattered. That single choice brought sin into the human story and broke their unhindered friendship with God. Sin damaged every part of human life. It clouded our thinking, hardened our hearts, and twisted our desires away from God toward ourselves. Even now, we struggle with this fallen nature, often making excuses or blaming others instead of honestly confessing our sins to God.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When are you most tempted to question God's goodness or twist His instructions?",
+    "How can knowing God's Word help you be honest about your mistakes rather than making excuses?"
+   ],
+   "prayer": "Lord God, help us to hold tightly to Your Word so we are not misled by subtle doubts. Soften our hearts when we fail so that we do not make excuses or blame others. Teach us to trust Your goodness and bring our sins openly to You.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "Casting Doubt",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-october-3-2026.html"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "Sin’s Consequences",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/sins-consequences"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

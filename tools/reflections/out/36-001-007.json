@@ -1,0 +1,67 @@
+{
+ "id": "36-001-007",
+ "title": "The Day of the LORD",
+ "refs": [
+  "Zephaniah 1:7-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 36001007,
+   "end": 36001018,
+   "ref": "Zephaniah 1:7-18",
+   "ranges": [
+    [
+     36001007,
+     36001018
+    ]
+   ],
+   "title": "God Searches Every Heart",
+   "key_verse": [
+    36001012,
+    36001012
+   ],
+   "reflect": [
+    {
+     "text": "In Zephaniah's day, God's people had turned away from Him. They followed idols, copied pagan ways, and told themselves that the Lord would do nothing, good or bad. Because of this, God warned of a coming day of judgment. No sin in the city was hidden from Him, and neither silver nor gold could rescue anyone from His holy anger.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God promised to search Jerusalem with lamps, reaching into every dark corner. F. B. Meyer explains that God does this \"not for His vision alone, but for ours.\" God already knows everything, but He wants us to see our hidden wrongs so we can hate them and leave them behind. He uses our conscience, the events of daily life, and the truth of His Word like bright candles to expose our hearts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When God uncovers our complacency, our comfortable feeling that sin does not matter, He calls us to wake up. Even when His judgment sounds terrifying, the call is to humble ourselves before Him. Those who turn from pride and seek the Lord find that He is their safe hiding place in the storm.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any part of your life where you have become complacent, imagining that God does not notice?",
+    "How can you let the light of God's Word search your heart today?"
+   ],
+   "prayer": "Lord God, search our hearts and shine Your light into every secret corner of our lives. Forgive us for becoming comfortable with sin or pretending You will not act. Teach us to walk in humble obedience and find our refuge in You alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Zephaniah 1:12",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

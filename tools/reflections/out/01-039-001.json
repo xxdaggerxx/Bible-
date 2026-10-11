@@ -1,0 +1,121 @@
+{
+ "id": "01-039-001",
+ "title": "Joseph and Potiphar’s Wife",
+ "refs": [
+  "Genesis 39:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1039008,
+   "end": 1039009,
+   "ref": "Genesis 39:8-9",
+   "ranges": [
+    [
+     1039008,
+     1039009
+    ]
+   ],
+   "title": "\"How Could I Sin Against God?\"",
+   "key_verse": [
+    1039009,
+    1039009
+   ],
+   "reflect": [
+    {
+     "text": "When Potiphar's wife tempted Joseph day after day, he stood firm on deep inner convictions. Mere rules on the outside were not enough; his heart was anchored in truth. Joseph deeply respected the trust his master gave him, knowing that authority is meant to serve rather than exploit others. He also honored the sacred covenant of marriage, seeing adultery as a terrible evil. Above all, Joseph treasured God as supreme and truly satisfying. Loving God more than any fleeting pleasure gave him the power to say no repeatedly.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "God often allows our strength to be tested so that we can see what is in our hearts. Our character forms quietly over time, but hard choices reveal where we really stand. As F. B. Meyer observed, a person who chooses what is pure will \"choose them more easily next time.\" Every good choice makes us stronger for the next battle. Even when our integrity brings false accusations or hardship, we can leave our cause with God, trusting Him to vindicate us in His own time.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What convictions help you say no when you are tempted to compromise?",
+    "How does trusting God to defend you help when doing the right thing brings unfair treatment?"
+   ],
+   "prayer": "Lord, help us to treasure You above all earthly pleasures. Teach us to respect the people around us and honor the trust they place in us. Strengthen our hearts to choose what is good each day, and give us patience to wait on You when we are misunderstood. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 39:9",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D4": {
+     "author": "Marshall Segal",
+     "work": "I Will Not Lie with You",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/i-will-not-lie-with-you"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1039001,
+   "end": 1039012,
+   "ref": "Genesis 39:1-12",
+   "ranges": [
+    [
+     1039001,
+     1039012
+    ]
+   ],
+   "title": "Protected by God's Presence",
+   "key_verse": [
+    1039002,
+    1039002
+   ],
+   "reflect": [
+    {
+     "text": "Joseph was torn away from his family and sold into Egyptian slavery. Life in this broken world is never free from trouble, and we will only find disappointment if we expect an easy road. God allows His people to walk through severe valleys, and He does not always keep us from trials. Instead, He promises to protect us inside our trials through His comforting presence. Knowing the Lord is with us brings steady purpose and peace wherever He places us.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "The Lord also gives us wisdom when sin approaches. Certain temptations cannot be bargained with; they must simply be avoided. As Charles Spurgeon wrote, \"there remains no mode of victory but by flight.\" Joseph did not test how close he could get to danger, nor did he linger to reason with his master's wife. He dropped his cloak and ran outside immediately, choosing to lose his clothing rather than his purity. We too must be quick to turn and flee from every occasion of evil.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering that God is with you bring calm when your circumstances are painful?",
+    "Are there temptations in your life where the only safe choice is to run away?"
+   ],
+   "prayer": "Father, thank You for staying with us in every dark and uncertain valley. Remind us that Your presence gives us strength and hope wherever we are. When sin tempts us, give us the wisdom and courage to run straight to safety. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 25",
+     "on": "Genesis 39:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "Protected by His Presence",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-january-30-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

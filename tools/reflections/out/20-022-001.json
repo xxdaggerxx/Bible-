@@ -1,0 +1,129 @@
+{
+ "id": "20-022-001",
+ "title": "A Good Name",
+ "refs": [
+  "Proverbs 22:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 20022001,
+   "end": 20022001,
+   "ref": "Proverbs 22:1",
+   "ranges": [
+    [
+     20022001,
+     20022001
+    ]
+   ],
+   "title": "\"A Good Name Is More Desirable\"",
+   "key_verse": [
+    20022001,
+    20022001
+   ],
+   "reflect": [
+    {
+     "text": "Material riches like silver and gold can disappear quickly, but a good name lasts. In Scripture, our name is much more than what people call us. It represents our character, our daily choices, and our personal integrity. When we remember our identity as God's children, choosing an honorable life becomes far more precious than accumulating money or possessions.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Bearing the name of Christ brings the daily responsibility to model his grace and purity. Pursuing an honorable name is not a one-time event, but an ongoing journey of matching our actions with God's truth. Living with honesty builds trust with the people around us and gives us lasting peace of mind. Most of all, when we live with integrity, our lives reflect God's holiness, draw others to him, and leave a spiritual legacy that endures.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily routine do your choices best reflect God's character to others?",
+    "How does remembering that you are God's child change the way you value your reputation compared to material things?"
+   ],
+   "prayer": "Lord, thank you for calling me your child and giving me your name. Help me to value integrity and godly character far more than money or earthly success. Guide my daily choices so that my words and actions reflect your grace and lead others toward you. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Whitney Hopler",
+     "work": "A Good Name Is Important - The Crosswalk Devotional - June 25",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/a-good-name-is-important-the-crosswalk-devotional.html"
+    },
+    "D3": {
+     "author": "Lysa TerKeurst",
+     "work": "Remember Who You Are - Encouragement for Today - September 29, 2015",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/remember-who-you-are-encouragement-for-today-september-29-2015.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 20022001,
+   "end": 20022016,
+   "ref": "Proverbs 22:1-16",
+   "ranges": [
+    [
+     20022001,
+     20022016
+    ]
+   ],
+   "title": "Humility, Reverence, and the Path of Life",
+   "key_verse": [
+    20022004,
+    20022004
+   ],
+   "reflect": [
+    {
+     "text": "The path of disobedience is filled with painful thorns and traps. God allows us to feel the sting of wrong paths as a merciful warning signal, showing us that we need to turn back to him in repentance. Even when we face suffering that is not directly our fault, bearing trials patiently with Christ guards our souls and shapes our character.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Walking securely on God's path requires true humility. Biblical humility begins with reverent awe before God. It means recognizing our human limits while fully trusting who God says we are. This kind of humility shows itself both in quiet service behind the scenes and in stepping forward in courageous obedience when God calls.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "To honor God with holy fear and to love him are closely joined; as F. B. Meyer noted, they are \"two sides of the same coin.\" When we love God deeply, we revere him and avoid anything that would grieve his heart. Living in humble reverence before our Maker rewards us with true life, spiritual honor, and enduring wealth.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How can viewing painful moments as warning signals help you turn back toward God?",
+    "Where is God asking you to show humble obedience right now, whether in quiet service or by stepping up?"
+   ],
+   "prayer": "Heavenly Father, teach me to walk in reverent awe of your holiness and love. Give me a humble heart that knows its limits, trusts your guidance, and gladly serves others. Keep my feet from harmful paths and lead me into the true life found in honoring you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Proverbs 22:5",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "Jill Beran",
+     "work": "“What is that?” - Encouragement Café - November 7, 2014",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/what-is-that-encouragement-caf-november-7-2014.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

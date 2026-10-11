@@ -1,0 +1,82 @@
+{
+ "id": "28-011-001",
+ "title": "Out of Egypt I Called My Son",
+ "refs": [
+  "Hosea 11:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 28011003,
+   "end": 28011004,
+   "ref": "Hosea 11:3-4",
+   "ranges": [
+    [
+     28011003,
+     28011004
+    ]
+   ],
+   "title": "\"I Led Them with Cords of Kindness\"",
+   "key_verse": [
+    28011004,
+    28011004
+   ],
+   "reflect": [
+    {
+     "text": "Like a loving parent teaching a small child to take their first steps, God guides our spiritual walk. He watches over us with outstretched arms, ready to catch us whenever we stumble or fall. Growing in faith takes time, and our steps are often clumsy or hesitant. Yet God never grows discouraged with us, nor does He leave us to struggle on our own. Instead of clinging to stubborn self-reliance, we can find true joy in letting our Father steady our feet and hold our hands.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "When we wander off or stumble into sin, shame and regret often make us want to hide. We might try to bury our guilt in endless busyness, but that never brings peace. In those moments, God does not pull us back harshly. Instead, He draws us with gentle cords of love, inviting us to bring our burdens to Him in honest prayer. Spurgeon noted that God calls us to \"cast thy cares on me.\" When we receive His tender forgiveness, our cold hearts are warmed to trust Him more and to show that same patient kindness to others.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you trying to walk in your own strength instead of letting God support you?",
+    "How does God's gentle, loving welcome encourage you to come to Him when you stumble?"
+   ],
+   "prayer": "Father, thank You for holding our hands and catching us every time we falter. Forgive us for wandering away or trying to carry our burdens by ourselves. Draw our hearts near with Your cords of love, and help us walk in Your tender care each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 20",
+     "on": "Hosea 11:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hosea 11:3",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Lynn Cowell",
+     "work": "When I Stray",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/when-i-stray-encouragement-for-today-jan-15-2013.html"
+    },
+    "D4": {
+     "author": "Amy Carroll",
+     "work": "When I Need Some Help",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/when-i-need-some-help-encouragement-for-today-november-13-2015.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

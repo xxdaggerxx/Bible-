@@ -1,0 +1,67 @@
+{
+ "id": "23-010-005",
+ "title": "Judgment on Assyria",
+ "refs": [
+  "Isaiah 10:5-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23010005,
+   "end": 23010019,
+   "ref": "Isaiah 10:5-19",
+   "ranges": [
+    [
+     23010005,
+     23010019
+    ]
+   ],
+   "title": "God's Care in Times of Discipline",
+   "key_verse": [
+    23010012,
+    23010012
+   ],
+   "reflect": [
+    {
+     "text": "In Isaiah 10, the Lord speaks of disciplining His people through Assyria, yet the proud king of Assyria boasts as if he did it all by his own wisdom. While God will surely judge such pride, He does not delight in destroying people. As F. B. Meyer reminds us, God lengthens the time for repentance because He does not desire the sinner's death, but wants people to turn and live.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even when His people walk through hard trials, God is never detached or indifferent. Some religions imagine a god who cares only for quiet detachment, but our God is very different. His rest is filled with deep thought and care for His children. In all His dealings with us, His heart flows with what Meyer describes as \"eternal tides of desire and gracious help.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We are weak and needy, so we cannot endure trials in our own strength. Thankfully, Christ continually intercedes and prays for us day and night, keeping us from drifting beyond hope. Because He faithfully watches over us, we can lay aside our self-reliance and join Him in watchful prayer, trusting His unfailing care.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Christ constantly prays for you comfort you during seasons of trouble?",
+    "In what areas of your life do you need to stop relying on your own strength and rest in God's care?"
+   ],
+   "prayer": "Lord God, thank You that You are full of mercy and that You patiently give us time to turn back to You. We thank You that Christ pleads for us day and night so that we do not wander beyond hope. Help us to put away all pride and rest in Your continuous, loving care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 10:12",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,122 @@
+{
+ "id": "51-001-024",
+ "title": "Paul’s Suffering for the Church",
+ "refs": [
+  "Colossians 1:24-29"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 51001027,
+   "end": 51001027,
+   "ref": "Colossians 1:27",
+   "ranges": [
+    [
+     51001027,
+     51001027
+    ]
+   ],
+   "title": "\"Christ in You, the Hope of Glory\"",
+   "key_verse": [
+    51001027,
+    51001027
+   ],
+   "reflect": [
+    {
+     "text": "When you turned to Jesus, He came to live inside your heart. Like a long-lost son returning home in disguise, He was present even before you understood who He was. As F. B. Meyer reminds us, when we realize who has come to stay, we see that \"all His riches are yours, to be shared and enjoyed.\" You do not have to face the demands of daily life feeling helpless and weary, because His limitless spiritual wealth meets your every need.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus does not dwell within believers simply to stay hidden away. He wants His mighty resurrection power to flow out into our daily actions. Instead of holding back in fear or doubt, we can trust His quiet strength within us. This mystery becomes clearly visible to our neighbors through simple, selfless acts of service. When we care for the sick, show warm hospitality, and practice gentle kindness, people catch a real glimpse of Jesus living in us.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you rely on your own weak strength each day, or do you draw on Christ who lives within you?",
+    "What simple act of service or kindness can you do this week so that others see Jesus in you?"
+   ],
+   "prayer": "Lord Jesus, thank You for making Your home inside our hearts and sharing Your riches with us. Take away our fear and timidity, and help us rely on Your power rather than our own. May our everyday acts of kindness and humble service show others that You are truly alive in us. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Colossians 1:27",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Kelly Balarie",
+     "work": "Are You Living Christ’s Full Power?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-january-6-2017.html"
+    },
+    "D4": {
+     "author": "Robin Dugall",
+     "work": "Do People See Jesus in You?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/do-people-see-jesus-in-you-homeword-december-14.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 51001024,
+   "end": 51001029,
+   "ref": "Colossians 1:24-29",
+   "ranges": [
+    [
+     51001024,
+     51001029
+    ]
+   ],
+   "title": "Presenting Everyone Mature in Christ",
+   "key_verse": [
+    51001028,
+    51001028
+   ],
+   "reflect": [
+    {
+     "text": "Paul worked tirelessly, enduring hardship and laboring with all the energy God gave him, so that he could present every believer mature and complete in Christ. Yet when we look honestly at our own daily lives, we quickly see how far from perfect we are. Every harsh word that slips from our mouths and every regretful tear reminds us of our flaws. If we look only at our own hearts, we will find plenty of sin and failure rather than perfection.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In the midst of this struggle, Scripture offers deep comfort. As Charles Spurgeon reminds us, believers are already \"complete in him\" and accepted before God right now. There is also a glorious promise still ahead, when every remaining stain of sin will be wiped away. Christ takes what was broken and stained, cleanses us thoroughly, and will one day present His church faultless before the throne, without any spot or blemish.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you are discouraged by your daily mistakes and shortcomings, how does knowing you are accepted in Christ bring you peace?",
+    "How does the hope of standing faultless before God one day encourage you to keep growing in faith today?"
+   ],
+   "prayer": "Father, we confess that we often stumble in our words and actions, proving how imperfect we are on our own. Thank You for counting us complete through Your Son, and for accepting us by His grace. Keep working in our lives until the day You present us holy and blameless in Your presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 28",
+     "on": "Colossians 1:28",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -92,6 +92,10 @@ class ChapterLayout(
     val headings: List<HeadingBlock> = emptyList(),
     /** The expand-to-fit gaps this layout was built with (MRG-10). */
     val spacers: Map<Int, Float> = emptyMap(),
+    /** Hard words to mark with a dotted line (STD-23), as character ranges in the text. */
+    val hardWords: List<IntRange> = emptyList(),
+    /** Verses that point to Christ (AID-13), underlined in gold: their text as character ranges. */
+    val christVerses: List<IntRange> = emptyList(),
 ) {
 
     val textLength = text.layoutInput.text.length
@@ -414,7 +418,7 @@ class PlacedPage(val geo: PageGeometry, val top: Float) {
     val layout get() = geo.layout
 }
 
-private val PAGE_DENSITY = Density(1f, 1f)
+internal val PAGE_DENSITY = Density(1f, 1f)
 
 /** Scale for offsets from a line's baseline in line coordinates; keeps every offset inside one line's slot. */
 private const val LINE_K = 4000f
@@ -443,13 +447,21 @@ fun buildChapterLayout(
     red: Map<Int, List<IntRange>> = emptyMap(),
     /** Words that differ from the version beside it (SPLIT-5): verse → character ranges. */
     diffs: Map<Int, List<IntRange>> = emptyMap(),
+    /** Hard words to mark (STD-23): verse → character ranges in its text. */
+    hard: Map<Int, List<IntRange>> = emptyMap(),
+    /** Verses that point to Christ (AID-13): their verse numbers. */
+    christ: Set<Int> = emptySet(),
+    /** The text size (READ-3): 1 is normal. The page stays the same width, so bigger text takes more lines. */
+    scale: Float = 1f,
     linkify: (String) -> List<RefLink> = { emptyList() },
 ): ChapterLayout {
     val builder = AnnotatedString.Builder()
     val starts = IntArray(data.verses.size)
     val verseNos = IntArray(data.verses.size)
+    val hardWords = ArrayList<IntRange>()
+    val christVerses = ArrayList<IntRange>()
     val numberStyle = SpanStyle(
-        fontSize = 13.sp,
+        fontSize = (13 * scale).sp,
         fontWeight = FontWeight.Bold,
         color = Color(0xFFA07B45),
         baselineShift = BaselineShift(0.4f),
@@ -465,6 +477,8 @@ fun buildChapterLayout(
         builder.append(v.text)
         red[v.verse]?.forEach { r -> builder.addStyle(RED_LETTER, at + r.first, at + r.last + 1) }
         diffs[v.verse]?.forEach { r -> builder.addStyle(SpanStyle(background = DIFF_MARK), at + r.first, at + r.last + 1) }
+        hard[v.verse]?.forEach { r -> hardWords += (at + r.first)..(at + r.last) }
+        if (v.verse in christ && v.text.isNotBlank()) christVerses += at..(at + v.text.trimEnd().length - 1)
         // Between verses: a new line, or in paragraphs a space unless the next verse starts one.
         // Either way one character, so text positions are the same in every layout.
         if (i < data.verses.lastIndex) {
@@ -472,12 +486,12 @@ fun buildChapterLayout(
             builder.append(if (paragraphs == null || next in paragraphs) "\n" else " ")
         }
     }
-    val textStyle = TextStyle(fontFamily = font, fontSize = Page.FONT.sp, lineHeight = (Page.LINE * spacing.factor).sp)
+    val textStyle = TextStyle(fontFamily = font, fontSize = (Page.FONT * scale).sp, lineHeight = (Page.LINE * spacing.factor * scale).sp)
     val constraints = Constraints(maxWidth = Page.TEXT_W.toInt())
     val text = measurer.measure(builder.toAnnotatedString(), textStyle, constraints = constraints, density = PAGE_DENSITY)
     val titleLayout = measurer.measure(
         text = AnnotatedString(title ?: "$bookName ${data.chapter}"),
-        style = TextStyle(fontFamily = font, fontSize = 40.sp, fontWeight = FontWeight.Bold),
+        style = TextStyle(fontFamily = font, fontSize = (40 * scale.coerceAtMost(1.3f)).sp, fontWeight = FontWeight.Bold),
         constraints = constraints,
         density = PAGE_DENSITY,
     )
@@ -490,11 +504,11 @@ fun buildChapterLayout(
         val lines = ArrayList<TextLayoutResult>()
         val links = HashMap<Int, List<RefLink>>()
         for (h in hs.sortedBy { it.level }) {
-            lines += measureHeading(measurer, font, h.text, h.level, constraints)
+            lines += measureHeading(measurer, font, h.text, h.level, constraints, scale)
             if (h.refs.isNotBlank()) {
                 val refLinks = linkify(h.refs)
                 if (refLinks.isNotEmpty()) links[lines.size] = refLinks
-                lines += measureRefs(measurer, font, h.refs, refLinks, constraints)
+                lines += measureRefs(measurer, font, h.refs, refLinks, constraints, scale)
             }
         }
         val top = if (line == 0) HeadingBlock.FIRST_TOP_PAD else HeadingBlock.TOP_PAD
@@ -508,14 +522,15 @@ fun buildChapterLayout(
         val i = verseNos.indexOf(verse)
         if (i <= 0 || h <= 0f) null else HeadingBlock(text.getLineForOffset(starts[i]), emptyList(), h)
     }
-    return ChapterLayout(data.version, data.book, data.chapter, titleLayout, text, starts, verseNos, gaps + blocks, spacers)
+    return ChapterLayout(data.version, data.book, data.chapter, titleLayout, text, starts, verseNos, gaps + blocks, spacers, hardWords, christVerses)
 }
 
 /**
  * Moves a stroke drawn on the words of [from] (line coordinates) onto the same character in
- * [to]: the character under the middle of the stroke keeps the same place relative to it.
+ * [to]: the character under the middle of the stroke keeps the same place relative to it. When the
+ * text is a different size ([scale] = new size / old size), the stroke grows or shrinks with it.
  */
-fun reflowPoints(points: FloatArray, from: ChapterLayout, to: ChapterLayout): FloatArray {
+fun reflowPoints(points: FloatArray, from: ChapterLayout, to: ChapterLayout, scale: Float = 1f): FloatArray {
     val shown = from.displayPoints(points)
     var minX = Float.MAX_VALUE; var maxX = -Float.MAX_VALUE; var minY = Float.MAX_VALUE; var maxY = -Float.MAX_VALUE
     for (i in shown.indices step 3) {
@@ -525,7 +540,15 @@ fun reflowPoints(points: FloatArray, from: ChapterLayout, to: ChapterLayout): Fl
     val offset = from.offsetAt((minX + maxX) / 2f, (minY + maxY) / 2f)
     val a = from.charCenter(offset)
     val b = to.charCenter(offset.coerceAtMost(to.textLength - 1).coerceAtLeast(0))
-    return to.linePoints(shown.translated(b.x - a.x, b.y - a.y))
+    if (scale == 1f) return to.linePoints(shown.translated(b.x - a.x, b.y - a.y))
+    val moved = FloatArray(shown.size) { i ->
+        when (i % 3) {
+            0 -> b.x + (shown[i] - a.x) * scale
+            1 -> b.y + (shown[i] - a.y) * scale
+            else -> shown[i]
+        }
+    }
+    return to.linePoints(moved)
 }
 
 /**
@@ -542,21 +565,21 @@ fun verseStartOffsets(verses: List<Verse>): IntArray {
     return out
 }
 
-private fun measureHeading(measurer: TextMeasurer, font: FontFamily, text: String, level: Int, c: Constraints): TextLayoutResult {
+private fun measureHeading(measurer: TextMeasurer, font: FontFamily, text: String, level: Int, c: Constraints, scale: Float = 1f): TextLayoutResult {
     val style = when (level) {
-        0 -> TextStyle(fontFamily = font, fontSize = 20.sp, fontWeight = FontWeight.Bold, letterSpacing = 2.sp)
-        1 -> TextStyle(fontFamily = font, fontSize = 23.sp, fontWeight = FontWeight.Bold)
-        else -> TextStyle(fontFamily = font, fontSize = 20.sp, fontStyle = FontStyle.Italic)
+        0 -> TextStyle(fontFamily = font, fontSize = (20 * scale).sp, fontWeight = FontWeight.Bold, letterSpacing = 2.sp)
+        1 -> TextStyle(fontFamily = font, fontSize = (23 * scale).sp, fontWeight = FontWeight.Bold)
+        else -> TextStyle(fontFamily = font, fontSize = (20 * scale).sp, fontStyle = FontStyle.Italic)
     }
     return measurer.measure(AnnotatedString(text), style, constraints = c, density = PAGE_DENSITY)
 }
 
 /** The parallel-passage line under a heading, with each reference styled as a link. */
-private fun measureRefs(measurer: TextMeasurer, font: FontFamily, refs: String, links: List<RefLink>, c: Constraints): TextLayoutResult {
+private fun measureRefs(measurer: TextMeasurer, font: FontFamily, refs: String, links: List<RefLink>, c: Constraints, scale: Float = 1f): TextLayoutResult {
     val text = AnnotatedString.Builder(refs).apply {
         for (l in links) addStyle(SpanStyle(color = LINK_COLOR, textDecoration = TextDecoration.Underline), l.start, l.end)
     }.toAnnotatedString()
-    val style = TextStyle(fontFamily = font, fontSize = 15.sp, fontStyle = FontStyle.Italic, color = Color(0xFF8A7A62))
+    val style = TextStyle(fontFamily = font, fontSize = (15 * scale).sp, fontStyle = FontStyle.Italic, color = Color(0xFF8A7A62))
     return measurer.measure(text, style, constraints = c, density = PAGE_DENSITY)
 }
 

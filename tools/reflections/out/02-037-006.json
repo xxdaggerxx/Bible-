@@ -1,0 +1,61 @@
+{
+ "id": "02-037-006",
+ "title": "The Mercy Seat",
+ "refs": [
+  "Exodus 37:6-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2037006,
+   "end": 2037009,
+   "ref": "Exodus 37:6-9",
+   "ranges": [
+    [
+     2037006,
+     2037009
+    ]
+   ],
+   "title": "Approaching God at the Mercy Seat",
+   "key_verse": [
+    2037006,
+    2037006
+   ],
+   "reflect": [
+    {
+     "text": "The mercy seat was a cover made of pure gold, placed over the ark. Underneath it lay the stone tablets of God's law, which people had failed to keep. Yet this golden lid covered them, and priests sprinkled blood there year after year to make peace with God. This lid points us forward to Jesus and His complete obedience, which reached even to death on a cross. As F. B. Meyer writes, Christ's obedience is \"priceless in the Divine esteem.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus held nothing back when He offered Himself for us. He poured out His lifeblood to meet what justice required and to show us the greatness of His love. Through His sacrifice, the mercy seat becomes the place where we meet God. In Jesus, we can step forward with boldness into God's holy presence. We are now His dearly loved children, though we must never forget that we are sinners saved by His blood.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus covered your brokenness change the way you come to God?",
+    "In what ways can you remember each day that you are both a loved child and a rescued sinner?"
+   ],
+   "prayer": "Lord Jesus, thank You for giving Your life to cover our sins and bring us peace. Help us to draw near to God with confidence and humble hearts. Teach us to live today as Your beloved children who are deeply thankful for Your mercy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 37:6",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

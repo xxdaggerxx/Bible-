@@ -1,0 +1,67 @@
+{
+ "id": "13-023-012",
+ "title": "The Kohathites",
+ "refs": [
+  "1 Chronicles 23:12-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13023012,
+   "end": 13023020,
+   "ref": "1 Chronicles 23:12-20",
+   "ranges": [
+    [
+     13023012,
+     13023020
+    ]
+   ],
+   "title": "Called to Pray, Serve, and Bless",
+   "key_verse": [
+    13023013,
+    13023013
+   ],
+   "reflect": [
+    {
+     "text": "Aaron and his sons were set apart to burn incense, minister before God, and speak blessings in His name. When we follow Jesus and turn away from sin, we share in this sacred work. Aaron's three duties give us a clear pattern for our daily walk with God: intercession, ministry, and blessing.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Burning fragrant incense points to intercession, which is praying on behalf of others. A true sign that we are growing in grace is when our prayers are filled with the names of both friends and foes. Along with prayer, God calls us to ministry. We have many different chores and duties each day, but we can lift them all up by doing everything for the honor of our King.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Finally, just as the high priest came out of the sanctuary to bless the waiting crowd, we must step out to bless those around us. F. B. Meyer writes, \"He who is nearest God is closest man.\" It is not enough to spend quiet time with God alone. We need to go into our daily lives and let our smiles, kind words, and thoughtful actions bring God's peace to the people who know us best.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Who is one person, whether friend or foe, that you can lift up in prayer today?",
+    "How can you turn a routine daily task into an act of service for the King?"
+   ],
+   "prayer": "Lord, set our hearts apart from sin so that we may serve you faithfully. Teach us to pray earnestly for others and to do all our daily work for your glory. Help us step out each day to bring your kindness and blessing to the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 23:13",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

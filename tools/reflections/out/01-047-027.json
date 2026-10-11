@@ -1,0 +1,66 @@
+{
+ "id": "01-047-027",
+ "title": "The Israelites Prosper in Goshen",
+ "refs": [
+  "Genesis 47:27-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1047027,
+   "end": 1047031,
+   "ref": "Genesis 47:27-31",
+   "ranges": [
+    [
+     1047027,
+     1047031
+    ]
+   ],
+   "title": "Faithful to the Very End",
+   "key_verse": [
+    1047030,
+    1047030
+   ],
+   "reflect": [
+    {
+     "text": "As Jacob drew near the end of his life in Egypt, he asked his son Joseph for a sacred promise. He asked Joseph to place his hand under his thigh, which was an ancient custom used to seal a binding vow of loyalty. Making and keeping solemn commitments to dying loved ones is a lasting and meaningful responsibility for families.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jacob insisted that he must not be buried in Egypt, but carried back to the burial place of his fathers. Even though his family was thriving and safe in Goshen, he refused to treat Egypt as the true Promised Land. Earlier in life, Jacob had often relied on deceit and trickery. Yet in his old age, he showed deep spiritual maturity by keeping his eyes fixed on God's covenant promises.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Once Joseph gave his solemn word, Jacob bowed at the head of his bed. He finished his earthly journey not in fear or clinging to comfort, but by turning his heart in reverent worship to God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you show faithful loyalty when making promises to your family?",
+    "What helps you remember that this present world is not your true resting place?"
+   ],
+   "prayer": "Lord, help us to be faithful to the promises we make to those we love. Keep our hearts from settling into worldly comfort when You have promised us something greater. Teach us to grow in faith throughout our lives, so that we may finish our days in quiet worship of You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Final Promise",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-feb-21-2008-11568786.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

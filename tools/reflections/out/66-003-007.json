@@ -1,0 +1,121 @@
+{
+ "id": "66-003-007",
+ "title": "To the Church in Philadelphia",
+ "refs": [
+  "Revelation 3:7-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 66003008,
+   "end": 66003008,
+   "ref": "Revelation 3:8",
+   "ranges": [
+    [
+     66003008,
+     66003008
+    ]
+   ],
+   "title": "\"I Have Placed Before You an Open Door\"",
+   "key_verse": [
+    66003008,
+    66003008
+   ],
+   "reflect": [
+    {
+     "text": "Jesus spoke to the believers in Philadelphia with kindness, offering them an open door of opportunity without a single word of rebuke. Even though they felt weak and had only a little strength, they stayed faithful to His word and did not back down under pressure. Today, Christ still gives us doors to share our faith, serve others, and enjoy Christian friendship. Stepping through does not require great personal might, because Jesus Himself provides the strength and companionship we need.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Because Jesus took away our sins and gave us His own goodness, we also have an open door of daily closeness with God. As Charles Spurgeon wrote, \"I will enter in by the open door of communion with God.\" Nothing is locked against us anymore. We can freely explore the deep truths of Scripture, speak to our Father in private prayer, and live useful lives for Him, knowing that no one can shut the path He has opened.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What opportunities to serve or talk with God has Jesus placed before you this week?",
+    "How can remembering that Christ supplies your strength help you step forward when you feel weak?"
+   ],
+   "prayer": "Lord Jesus, thank You for opening the way for us to know You and to serve others. When we feel small or lacking in strength, remind us that You are with us. Help us to walk through every door You open with quiet obedience. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 10",
+     "on": "Revelation 3:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Jill Briscoe",
+     "work": "The Door of Opportunity",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-women/the-door-of-opportunity-one-year-devotions-for-women-december-25.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 66003007,
+   "end": 66003013,
+   "ref": "Revelation 3:7-13",
+   "ranges": [
+    [
+     66003007,
+     66003013
+    ]
+   ],
+   "title": "Held Secure in the King's Love",
+   "key_verse": [
+    66003012,
+    66003012
+   ],
+   "reflect": [
+    {
+     "text": "Jesus reveals Himself as the holy and true One who holds the keys to God's eternal home. No person or evil power can lock out those who belong to Him. When we come to the gates of heaven, human pride or our own good deeds will never grant us entrance. Instead, our only hope is humble trust in Christ and what He did on the cross. Faith in Jesus is the true key that unlocks the door to everlasting life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In this world, the enemy often tries to discourage us by whispering that our struggles are pointless and that God does not care. Yet Jesus promises that those who oppose His people will one day recognize how deeply He loves them. For everyone who stands firm in Him, Christ promises eternal stability. He compares us to pillars in God's temple that can never be shaken or removed. We can face hard times with peace, resting safely in His unchanging love.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When doubts arise about your worth, how does Jesus' steady love give you courage to stand firm?",
+    "What difference does it make to know that your future with God is as solid and unshakeable as a pillar?"
+   ],
+   "prayer": "Lord Jesus, thank You for securing our place in Your presence through Your sacrifice on the cross. Silence the lies that say our efforts are wasted or that we are forgotten. Keep us steady in hard times, and let us rest in Your unfailing love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 15",
+     "on": "Revelation 3:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Beth Moore",
+     "work": "Day 350: Revelation 3:9–13",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-350-revelation-3-913.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,83 @@
+{
+ "id": "59-004-001",
+ "title": "A Warning against Pride",
+ "refs": [
+  "James 4:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 59004006,
+   "end": 59004006,
+   "ref": "James 4:6",
+   "ranges": [
+    [
+     59004006,
+     59004006
+    ]
+   ],
+   "title": "\"He Gives Grace to the Humble\"",
+   "key_verse": [
+    59004006,
+    59004006
+   ],
+   "reflect": [
+    {
+     "text": "Pride damages our lives and separates us from God and others. It often grows out of insecurity, pushing us to trust in human power, wealth, or self-rule instead of the Lord. Trying to earn our own worth or handle our guilt on our own always leaves us empty, cutting us off from the blessings of God's kingdom.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The good news is that God offers a cure through His grace, His kindness we do not deserve. When we admit our weakness, God meets us with restoring forgiveness. As Charles Spurgeon wrote, \"humble hearts lie in the valleys where streams of grace are flowing.\" Just as water flows downward, God's gift of grace pours out to those who take a lowly place before Him.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "True humility does not mean boasting about being humble. Instead, it means seeing ourselves honestly as needy people who depend entirely on God. When we turn away from worldly security and come to Him with repentant hearts, He lifts us up and pours out even more grace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to rely on human security rather than turning to God?",
+    "How can remembering God's undeserved kindness help you stay humble today?"
+   ],
+   "prayer": "Lord, forgive us for the pride that keeps us from trusting You. Help us to stop relying on our own strength or the approval of this world. Give us humble hearts so we may welcome Your restoring grace and walk closely with You.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 22",
+     "on": "James 4:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "He Gives More Grace",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/he-gives-more-grace"
+    },
+    "D3": {
+     "author": "Mary Southerland",
+     "work": "The Spiritual Cancer",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-may-10-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

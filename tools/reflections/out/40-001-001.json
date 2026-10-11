@@ -1,0 +1,91 @@
+{
+ "id": "40-001-001",
+ "title": "The Genealogy of Jesus",
+ "refs": [
+  "Matthew 1:1-17",
+  "Luke 3:23-38"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40001001,
+   "end": 40001017,
+   "ref": "Matthew 1:1-17; Luke 3:23-38",
+   "ranges": [
+    [
+     40001001,
+     40001017
+    ],
+    [
+     42003023,
+     42003038
+    ]
+   ],
+   "title": "The Family Tree of Jesus",
+   "key_verse": [
+    40001001,
+    40001001
+   ],
+   "reflect": [
+    {
+     "text": "The family lists in Matthew and Luke show that the gospel took place in real human history. Matthew traces Jesus through King David and Abraham to show that God kept His covenant promises, His special agreements made across many generations. Luke goes all the way back to Adam, reminding us that Jesus came to bring salvation to people from every nation.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Matthew breaks ancient customs by naming women who had scandalous or outsider backgrounds. The inclusion of people like Ruth and Rahab shows that the Lord looks at faith and the condition of the heart, not worldly standing or past failure. Christ stepped into our fallen human nature without sinning, showing that no sinner is outside His reach and welcoming repentant people into His family.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "Luke highlights that Jesus is truly human, connected to all of us as a son of Adam. Right before Jesus faced testing in the wilderness, this list points back to where humanity began. Where the first Adam failed under temptation and brought judgment, Christ completely conquered Satan through His obedience, giving us grace and peace with God.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing Jesus entered a family line with broken people give you hope about your own past?",
+    "How can Jesus' victory over temptation help you when you face struggles today?"
+   ],
+   "prayer": "Lord Jesus, thank You for stepping into our real human history to save us. We praise You for staying faithful and winning the victory where Adam failed. Thank You for welcoming outsiders into Your family and offering us Your grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "Family Tree",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/family-tree-one-year-devotions-for-men-august-15.html"
+    },
+    "D2": {
+     "author": "R.C. Sproul",
+     "work": "Tracing the Genealogy of Jesus",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/tracing-genealogy-jesus"
+    },
+    "D3": {
+     "author": "Guy Richard",
+     "work": "What's in a Genealogy?",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/whats-in-a-genealogy"
+    },
+    "D4": {
+     "author": "Joel Beeke",
+     "work": "Jesus' Family Tree",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jesus-family-tree"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

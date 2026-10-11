@@ -1,0 +1,134 @@
+{
+ "id": "41-016-009",
+ "title": "Jesus Appears to Mary Magdalene",
+ "refs": [
+  "Mark 16:9-11",
+  "John 20:10-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 41016009,
+   "end": 41016009,
+   "ref": "Mark 16:9",
+   "ranges": [
+    [
+     41016009,
+     41016009
+    ]
+   ],
+   "title": "\"He Appeared First to Mary Magdalene\"",
+   "key_verse": [
+    41016009,
+    41016009
+   ],
+   "reflect": [
+    {
+     "text": "Before meeting Jesus, Mary Magdalene lived in misery and helplessness, possessed by seven demons. No human help could rescue her from that suffering. But Jesus spoke with power and cast the evil spirits out completely. His grace changed her whole life, turning her agony into peace and making her a living example of His healing power.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "In deep gratitude, Mary became a faithful follower. She gave her own resources to support Jesus and walked with Him through hardship. While others fled, she stayed near the cross in His suffering and watched where His body was laid. She was the last to leave His tomb at night and the first to arrive in the morning. Our past sins and brokenness do not keep us from the closest fellowship with Jesus. Those who give most and stay near Him receive His richest blessings.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The risen Lord honoured Mary's faithful love by showing Himself to her before anyone else. He spoke just one word, her name, and her tears vanished. In return, she answered with one heartfelt word of total surrender: \"Rabboni,\" meaning Master. When we recognise His voice and yield our wills to Him, He turns our deepest sorrow into quiet joy.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does Jesus' power to rescue and welcome Mary encourage you regarding your own past?",
+    "In what practical ways can you offer your time and resources to serve Christ faithfully today?"
+   ],
+   "prayer": "Lord Jesus, thank You for Your mighty grace that delivers us from darkness and brings us into peace. Keep our hearts faithful to You in every trial, just as Mary remained near You. Teach us to yield our wills gladly to Your command, acknowledging You as our loving Master. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 15",
+     "on": "Mark 16:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 9",
+     "on": "Mark 16:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 41016009,
+   "end": 41016011,
+   "ref": "Mark 16:9-11; John 20:10-18",
+   "ranges": [
+    [
+     41016009,
+     41016011
+    ],
+    [
+     43020010,
+     43020018
+    ]
+   ],
+   "title": "Hearing the Master's Voice",
+   "key_verse": [
+    41016009,
+    41016009
+   ],
+   "reflect": [
+    {
+     "text": "Mary stood weeping outside the empty tomb, overwhelmed by heartbreak. Even after speaking with the radiant angels, she did not realise who was standing beside her. Her eyes deceived her, leading her to believe that Jesus was simply the gardener. In times of heavy grief or confusion, our natural senses often fail to perceive that the Lord is right beside us.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Everything changed in a single moment when Jesus spoke her name. Many people had called Mary by name throughout her life, but only Jesus spoke it with such deep tenderness and sweetness. Her ears could not be mistaken. In His risen body, the familiar warmth of His voice remained. The Master knows each of His followers individually, calling us by our own names with personal care.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Jesus waits for the one response that sums up a lifetime of devotion, the joyful cry of \"Master.\" When our love for Christ grows deep, our eyes are opened to recognise His presence in every sorrow and disappointment. Having heard His voice, we cannot keep the comfort to ourselves, but must go and tell others that our Lord lives.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What sadness or fear might be clouding your eyes from seeing Jesus with you right now?",
+    "How can you listen more carefully for the gentle voice of the Shepherd calling you by name?"
+   ],
+   "prayer": "Risen Lord, open our ears to hear Your voice when our sight is clouded by tears and confusion. Thank You for knowing our names and loving us with unending tenderness. Help us to answer You with devoted hearts and to share Your comfort with those who are grieving. Amen.",
+   "sources": {
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "John 20:16",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,82 @@
+{
+ "id": "66-014-001",
+ "title": "The Lamb and the 144,000",
+ "refs": [
+  "Revelation 14:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66014001,
+   "end": 66014005,
+   "ref": "Revelation 14:1-5",
+   "ranges": [
+    [
+     66014001,
+     66014005
+    ]
+   ],
+   "title": "Standing Victorious with the Lamb",
+   "key_verse": [
+    66014001,
+    66014001
+   ],
+   "reflect": [
+    {
+     "text": "When John looks into heaven, his eyes rest directly on Jesus, the Lamb of God. Jesus stands in victory on Mount Zion, surrounded by His redeemed people. They bear the Father's name on their foreheads, showing that God truly guards and keeps them secure. Because the Lamb has conquered sin and darkness, heaven resounds with a mighty song of triumph. For believers, being with Christ is the very heart and joy of heaven.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "This crowd sings a new song that no one else can learn. Their praise is not something learned secondhand from someone else. Instead, it rises out of lives redeemed from the earth and tested by hardship. God places fresh songs of hope into our hearts during difficult wilderness seasons. When we entrust our pain and struggles to Jesus, He turns them into lasting victories that cannot be stolen.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Today, we may look to the Lamb through our tears, but we already share in His triumph. As His faithful people, we follow Him wherever He leads and gather to worship Him with joy. One day every sorrow will fade, and our fellowship with Jesus will be complete. Until then, our daily lives echo this victory song.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What difficult experiences has God helped you through that give you your own personal song of praise?",
+    "How does knowing that you belong securely to the Lamb give you courage to follow Him today?"
+   ],
+   "prayer": "Lord Jesus, thank You for taking away our sins and winning the final victory over darkness. Help us to follow You faithfully through hard seasons and trust that our lives are secure in Your hands. May our hearts continually rejoice in Your presence, both now and forever. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 17",
+     "on": "Revelation 14:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 357: Revelation 14:1–5",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-357-revelation-14-15.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "A Song of Victory",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/a-song-of-victory"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

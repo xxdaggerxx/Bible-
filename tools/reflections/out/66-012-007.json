@@ -1,0 +1,128 @@
+{
+ "id": "66-012-007",
+ "title": "The War in Heaven",
+ "refs": [
+  "Revelation 12:7-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 66012011,
+   "end": 66012012,
+   "ref": "Revelation 12:11-12",
+   "ranges": [
+    [
+     66012011,
+     66012012
+    ]
+   ],
+   "title": "\"They Have Conquered Him\"",
+   "key_verse": [
+    66012011,
+    66012011
+   ],
+   "reflect": [
+    {
+     "text": "When the devil whispers that we are not good enough for God, he tries to weigh down our conscience with past wrongs. We can never approach God based on our own spiritual performance or personal goodness. Our spiritual power against the enemy and our freedom from guilt do not come from our good deeds. Instead, our direct access to God and our answered prayers rest completely on the shed blood of Jesus on the cross.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Along with the blood of Jesus, we overcome through the word of our testimony. As F. B. Meyer notes, darkness cannot stand against the light when God's people witness faithfully \"by life and lip.\" This means keeping a clean conscience in daily work rather than chasing money, and gladly choosing obedience to Christ even if it brings hardship or poverty. The devil rages because he knows his time is short, but those who remain loyal to Jesus above their own lives are assured of final victory.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel guilty or unworthy before God, do you look to your own deeds or to the blood of Jesus?",
+    "In what practical part of your daily routine is God asking you to choose a clean conscience over worldly gain?"
+   ],
+   "prayer": "Lord Jesus, thank You for washing away our sins by Your blood and giving us peace with God. Help us to speak and live boldly for Your truth without compromise. Keep our consciences pure, and give us courage to follow You even when it costs us worldly comfort. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Revelation 12:11-12",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D4": {
+     "author": "Greg Laurie",
+     "work": "Forget about Being Worthy",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-may-19-2022.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 66012007,
+   "end": 66012012,
+   "ref": "Revelation 12:7-12",
+   "ranges": [
+    [
+     66012007,
+     66012012
+    ]
+   ],
+   "title": "The Defeat of the Dragon",
+   "key_verse": [
+    66012007,
+    66012007
+   ],
+   "reflect": [
+    {
+     "text": "The battle between Michael and the dragon pictures the decisive defeat Satan suffered through the life, death, and resurrection of Jesus. Because the Lord fully paid for our sins, the devil has lost his standing as a legal accuser before God. His power is broken, and his courtroom charges against believers have been permanently silenced. Although unseen spiritual warfare continues on earth, the ultimate verdict has already been decided at the cross.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Because of this conflict, peace between good and evil is impossible. Jesus is the sworn enemy of sin, and every Christian is called to be an active soldier in His army. We must not be foolish and expect a life free of trials, nor can we afford to become spiritually lazy. The enemy attacks relentlessly with every foul weapon he has, so we need to be watchful and firm every day.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even when spiritual warfare brings hardship and suffering, we do not fight in fear. We know how this war ends. The ancient dragon will be completely cast out and destroyed, while Jesus crowns all who remain faithful to Him. Knowing this certain outcome gives us strength to stand firm through every earthly struggle.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever catch yourself expecting an easy Christian life without spiritual opposition?",
+    "How does knowing that Satan is already a defeated enemy encourage you to stand firm during hard times?"
+   ],
+   "prayer": "Almighty God, thank You for silencing the enemy through the victory of Jesus Christ. Guard us against spiritual laziness, and strengthen us to resist sin and evil every day. When we face trials, give us enduring faith as we look forward to the day when Your kingdom comes in fullness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 30",
+     "on": "Revelation 12:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Michael Battles Satan",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/michael-battles-satan"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

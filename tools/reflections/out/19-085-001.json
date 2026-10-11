@@ -1,0 +1,128 @@
+{
+ "id": "19-085-001",
+ "title": "You Showed Favor to Your Land",
+ "refs": [
+  "Psalms 85:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19085006,
+   "end": 19085006,
+   "ref": "Psalms 85:6",
+   "ranges": [
+    [
+     19085006,
+     19085006
+    ]
+   ],
+   "title": "\"Will You Not Revive Us Again?\"",
+   "key_verse": [
+    19085006,
+    19085006
+   ],
+   "reflect": [
+    {
+     "text": "We often see communities and entire nations slowly slide away from faith, drifting into spiritual apathy and moral decline. When our hearts grow cold, we cannot engineer our own renewal through human plans or projects. Real revival is a miracle that only God can bring. Even when we feel weak and notice our moral faltering, it is never too late for the Lord to restore us if we take our stand in humble prayer.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "Spiritual awakening catches fire when God's people return to His Word. Daily devotion to Scripture gives the Holy Spirit the fuel He uses to change us from the inside out. When we face our sins honestly, God does not leave us in sorrow. His mercy turns our grief into a strong, lasting happiness. The real aim and crowning gift of revival is that we truly rejoice in the Lord again.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Where have you noticed your own heart or community growing spiritually cold or distant from God?",
+    "How can you make more room each day for God's Word to revive your joy in Him?"
+   ],
+   "prayer": "Lord God, please revive our cold hearts and draw us back to You. Forgive us for drifting into apathy, and use Your Word to awaken a fresh joy in Christ. Restore Your people, and help us rejoice in You once more. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ray Ortlund",
+     "work": "The Awakening We Need: Why the Reformed Pray for Revival",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-awakening-we-need"
+    },
+    "D4": {
+     "author": "David Mathis",
+     "work": "Revival in the Making: God’s Central Means for Spiritual Renewal",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/revival-in-the-making"
+    },
+    "D5": {
+     "author": "Adrian Rogers",
+     "work": "Will We See Revival in Our Nation Again?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-april-28-2021.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19085001,
+   "end": 19085013,
+   "ref": "Psalms 85:1-13",
+   "ranges": [
+    [
+     19085001,
+     19085013
+    ]
+   ],
+   "title": "God's Peace and Righteousness Meet",
+   "key_verse": [
+    19085010,
+    19085010
+   ],
+   "reflect": [
+    {
+     "text": "In this psalm, we see the wonderful harmony of God's character. God is holy and just, which means He cannot overlook sin. Yet He is also rich in mercy, reaching out to save those who are helpless and undeserving. As F. B. Meyer wrote of the cross, \"the righteousness of God was satisfied, and the peace of man secured.\" Jesus took our sin upon Himself so that God's law was honored and we were brought into lasting peace with Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because the Lord promises peace to His people, we must take care to listen to what He says. Constant activity and hurry often drown out His voice, leaving us confused and without direction. Past generations suffered when they ignored God's voice and turned back to foolish habits. When we pause to hear God through Scripture and faithful teaching, His truth protects us from danger and guides our daily steps.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily routine do hurry and noise keep you from stopping to listen to God?",
+    "How does knowing that Jesus satisfied God's justice on the cross give you peace today?"
+   ],
+   "prayer": "Heavenly Father, thank You for the cross, where Your righteousness and mercy met to save us. Help us to slow down our hurried lives so we can listen carefully to Your voice. Keep us from turning back to foolish ways, and guide our steps in Your peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 85:10",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Stuart Briscoe",
+     "work": "Listen Carefully",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/listen-carefully-one-year-devotions-for-men-january-15.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,79 @@
+{
+ "id": "13-029-010",
+ "title": "David’s Prayer of Blessing",
+ "refs": [
+  "1 Chronicles 29:10-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13029010,
+   "end": 13029020,
+   "ref": "1 Chronicles 29:10-20",
+   "ranges": [
+    [
+     13029010,
+     13029020
+    ]
+   ],
+   "title": "Everything Belongs to God",
+   "key_verse": [
+    13029014,
+    13029014
+   ],
+   "reflect": [
+    {
+     "text": "God is the supreme ruler over all creation. Earthly rulers and their kingdoms quickly fade, but God's kingdom stands forever. Everything in the world belongs to Him, and every gift, possession, and position we have comes directly from His care. The same powerful hands that sustain the universe are also full of fatherly love and generosity toward us.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Holding tightly to our material things can trap our hearts in worldly worries and pull us down. True joy and freedom come when we let go of our possessions to serve God's kingdom. King David felt deeply humbled by the privilege of giving. He knew that we cannot truly give anything to God that was not already His to begin with.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "David reminded the people that our time on earth is very brief, passing like a shadow or a quick breath. Even so, as F. B. Meyer wrote, our lives can become \"sources of enduring blessing to coming time.\" When God lives and works within us, our temporary days can produce fruit that outlasts our time on earth.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering that all your possessions already belong to God help you hold them more loosely?",
+    "Since our days on earth are short, how can you invest what God has given you into things that will last?"
+   ],
+   "prayer": "Lord God, everything in heaven and earth belongs to You, and every blessing we have comes from Your loving hand. Please loosen our grip on earthly things so we may give generously and find true joy in serving Your kingdom. Work in our brief lives today so that what we do brings lasting good to others and glory to Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 29:15",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Katherine Britton",
+     "work": "Defying Gravity",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-nov-4-2009-11610725.html"
+    },
+    "D3": {
+     "author": "Scotty Smith",
+     "work": "Reveling and Resting in the “Godness” of God: Praying through 1 Chronicles 29:11-12 (ESV)",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/scotty-smith/reveling-and-resting-in-the-godness-of-god-praying-through-1-chronicles-2911-12-esv/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

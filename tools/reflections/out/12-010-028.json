@@ -1,0 +1,75 @@
+{
+ "id": "12-010-028",
+ "title": "Jehu Repeats Jeroboam’s Sins",
+ "refs": [
+  "2 Kings 10:28-33"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 12010031,
+   "end": 12010031,
+   "ref": "2 Kings 10:31",
+   "ranges": [
+    [
+     12010031,
+     12010031
+    ]
+   ],
+   "title": "\"With All His Heart\"",
+   "key_verse": [
+    12010031,
+    12010031
+   ],
+   "reflect": [
+    {
+     "text": "Jehu accomplished dramatic outward work for God. He destroyed Baal worship and carried out judgment against Ahab's house just as the Lord commanded. Yet his obedience stopped halfway. He kept the golden calves at Bethel and Dan, revealing that his heart was divided. Jehu thrived during intense, high-energy battles, but he lacked the patience for a steady walk with God. We can fall into that same pattern if we chase spiritual excitement and emotional rushes rather than seeking God in quiet, daily faithfulness.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "It is often much easier to confront the wrongs in other people than to deal honestly with our own souls. As F. B. Meyer observed, \"We may keep other people's vineyards, and neglect our own.\" Jehu was eager to tear down another family's idols, yet he protected his own compromises. God does not merely want useful outward service driven by personal pride. He calls us to yield completely to Him, letting His light reach every hidden corner of our lives.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you ever tempted to focus on the faults of others while overlooking secret compromises in your own life?",
+    "What helps you stay faithful to God in regular, quiet routines instead of only during exciting spiritual moments?"
+   ],
+   "prayer": "Lord, please keep our hearts from divided loyalties and self-serving zeal. Teach us to walk with You humbly in our ordinary, day-to-day decisions. Search our lives, take away any hidden sins, and help us follow You with our whole heart.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 10:31",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day Forty-One",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/whispers-of-hope-10-weeks-of-devotional-praye/whispers-of-hope-10-weeks-of-devotional-prayer-woh04-content-40.html"
+    },
+    "D3": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 05/04/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-05-or-04-or-2002-1133410.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

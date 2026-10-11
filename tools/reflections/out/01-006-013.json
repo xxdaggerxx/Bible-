@@ -1,0 +1,68 @@
+{
+ "id": "01-006-013",
+ "title": "Preparing the Ark",
+ "refs": [
+  "Genesis 6:13-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1006013,
+   "end": 1006022,
+   "ref": "Genesis 6:13-22",
+   "ranges": [
+    [
+     1006013,
+     1006022
+    ]
+   ],
+   "title": "Trusting God's Plan for Deliverance",
+   "key_verse": [
+    1006022,
+    1006022
+   ],
+   "reflect": [
+    {
+     "text": "God told Noah that judgment was coming upon the earth, but He also gave him detailed instructions to build a massive ark for shelter. Constructing such a huge vessel far away from any water required extraordinary trust in God. Noah heard God's word and put it into practice. Because Noah walked closely with God, he gladly worked for Him, moved by a healthy reverence and a desire not to displease his Lord.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Noah was saved by faith as he entrusted his life entirely to God's gracious plan. Our good deeds cannot earn salvation, but true faith always shows itself in real, practical obedience. Just like the detailed design of the tabernacle, God's plan for the ark points forward to Jesus Christ. Christ is the true refuge who shields us from wrath. Today, believers rest in the very same covenant promises, placing our trust in the Savior who has already come to save us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does your faith in God show itself in your everyday actions and obedience?",
+    "In what ways are you resting in Jesus as your true shelter and refuge?"
+   ],
+   "prayer": "Lord God, thank You for providing Jesus as our safe refuge from judgment. Teach us to walk closely with You each day and listen to Your word. Give us genuine faith that leads to joyful, reverent obedience. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "A Supreme Act of Faith",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/a-supreme-act-of-faith-greg-laurie-daily-devotion-may-12-2015.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "An Ark of Gopher Wood",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/ark-gopher-wood"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

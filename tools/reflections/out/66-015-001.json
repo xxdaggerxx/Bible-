@@ -1,0 +1,67 @@
+{
+ "id": "66-015-001",
+ "title": "The Song of Moses and the Lamb",
+ "refs": [
+  "Revelation 15:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66015001,
+   "end": 66015004,
+   "ref": "Revelation 15:1-4",
+   "ranges": [
+    [
+     66015001,
+     66015004
+    ]
+   ],
+   "title": "The Song of the Overcomers",
+   "key_verse": [
+    66015003,
+    66015003
+   ],
+   "reflect": [
+    {
+     "text": "In this vision, John sees God's people standing victorious after a long time of trial and oppression. This scene echoes the ancient story of Israel standing delivered by the Red Sea, but now it is pictured on the grand stage of eternity. The believers have overcome evil through their suffering, and the stormy troubles of earthly life are now behind them, spread out as still as a sea of glass touched by the fire of God's holy judgments.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When Israel was saved from Pharaoh, the whole nation sang with joyful praise. Yet that victory song was small compared to the song that will sound from God's people throughout all history. Believers from the days of Moses and followers of Jesus the Lamb join together as one enormous choir, praising God for His mighty deliverance.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "From their place in eternity, the saints can look back across the whole story of how God worked in the world. As F. B. Meyer notes, they are seen \"acknowledging that all His ways had been righteous and true.\" Even when life was hard to understand on earth, they now see clearly that God is holy, perfectly fair, and worthy of all worship.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face trials today, does it help to know that God will bring your struggles to a calm, victorious end?",
+    "How can trusting that God's ways are always true change how you praise Him right now?"
+   ],
+   "prayer": "Lord God Almighty, your works are great and wonderful. Even when I walk through storms and troubles, help me remember that your ways are always righteous and true. Teach me to trust your holy rule and join my voice in praising your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Revelation 15:3",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,130 @@
+{
+ "id": "19-121-001",
+ "title": "I Lift Up My Eyes to the Hills",
+ "refs": [
+  "Psalms 121:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19121001,
+   "end": 19121003,
+   "ref": "Psalms 121:1-3",
+   "ranges": [
+    [
+     19121001,
+     19121003
+    ]
+   ],
+   "title": "\"My Help Comes from the Lord\"",
+   "key_verse": [
+    19121002,
+    19121002
+   ],
+   "reflect": [
+    {
+     "text": "Feeling overwhelmed by difficulties is a normal part of life, not a sign that our faith has failed. In hard seasons, we often look around for support, hoping created things like wealth, skills, or other people will save us. Yet the mountains point us higher. Instead of relying on our own strength or earthly help, we look up to the Lord who made heaven and earth. He is far bigger than any obstacle in front of us.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "Our daily walk can feel like hiking a narrow mountain trail. Loose stones, slippery ground, and tired feet make it easy to stumble. Charles Spurgeon notes that life is \"like traveling among the Alps,\" where falling would be easy without God. But God tirelessly works to protect those who trust Him. He never sleeps, loses focus, or takes a break from guarding your steps. Because He holds you up, you can trade your worry for quiet confidence.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel overwhelmed, do you tend to rely on your own abilities or turn your eyes to the Maker of heaven and earth?",
+    "How does knowing that God never sleeps bring you peace when your path feels slippery?"
+   ],
+   "prayer": "Lord, when our burdens feel too heavy and our steps uncertain, help us look up to You. Thank You for watching over our walk and holding our feet steady on the steepest paths. We give up our self-reliance and rest in Your tireless care today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 10",
+     "on": "Psalms 121:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 121:1",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "John Piper",
+     "work": "God Works for You",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/god-works-for-you"
+    },
+    "D5": {
+     "author": "Lekeisha Maldon",
+     "work": "A Prayer for the Overwhelmed Heart",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/a-prayer-for-the-overwhelmed-heart.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19121001,
+   "end": 19121008,
+   "ref": "Psalms 121:1-8",
+   "ranges": [
+    [
+     19121001,
+     19121008
+    ]
+   ],
+   "title": "The Keeper of Israel",
+   "key_verse": [
+    19121004,
+    19121004
+   ],
+   "reflect": [
+    {
+     "text": "The Lord watches over both the homes and the hearts of His people without pause. No tiredness or slight nap ever overcomes Him. Just as a sentry stands guard over a king or a soldier protects a walled city, the Lord stays on watch. Even when we lie down defenseless, like Jacob sleeping with a stone for his pillow, God remains fully awake to shelter our heads. Because our Protector never shuts His eyes, we can lie down and rest in full peace.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God treasures His people the way a wealthy person protects precious jewels. As Charles Spurgeon explains, God \"never ceases actively to care for us\" and never lacks the power to keep us safe. He guards our coming and going so that we do not wander away into sin or ruin. When we place our lives into His faithful hands, we are preserved from harm, and His watchful care keeps our faith from growing sluggish or cold.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What worries keep you awake at night instead of resting in God's constant watch?",
+    "In what ways does knowing God values you like precious treasure help you trust His protection?"
+   ],
+   "prayer": "Lord, thank You for standing watch over our lives and our homes day and night. Guard our hearts so that we do not wander into sin, and keep our love for You alive and strong. Help us sleep in quiet peace tonight, knowing we are safe in Your care. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 13",
+     "on": "Psalms 121:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

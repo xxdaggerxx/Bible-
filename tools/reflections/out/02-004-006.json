@@ -1,0 +1,61 @@
+{
+ "id": "02-004-006",
+ "title": "Moses’ Hand",
+ "refs": [
+  "Exodus 4:6-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2004006,
+   "end": 2004009,
+   "ref": "Exodus 4:6-9",
+   "ranges": [
+    [
+     2004006,
+     2004009
+    ]
+   ],
+   "title": "Believing, Trusting, and Serving God",
+   "key_verse": [
+    2004008,
+    2004008
+   ],
+   "reflect": [
+    {
+     "text": "When God spoke to Moses, He provided signs to help the people listen and believe. We often think like the world around us, assuming that seeing must always come before believing. But true faith works the other way around. As F. B. Meyer observes, \"Seeing is believing; Jesus says, Believing is seeing.\" We do not come to know God through endless debates or intellectual arguments. Instead, we come to know Him by walking in His footsteps, obeying His word, and enjoying close fellowship with Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Putting our faith in Jesus is also the real cure for a troubled heart. We can only find true rest when we shift the responsibility of our lives into the hands of our faithful Redeemer. Trusting Him replaces our grief with quiet joy. Christ is always the one who does the work. When we yield ourselves completely to Him in faith and obedience, our lives become clear channels through which He can work with great power.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you waiting to see proof before you are willing to trust God?",
+    "What worries can you hand over to Christ today so that He can work freely through you?"
+   ],
+   "prayer": "Lord, help us to trust you even before we see what lies ahead. We place our troubled hearts and the heavy burdens of our lives into your faithful hands. Teach us to follow you in obedience and stay close to you each day. Please use our lives as channels through which you can do your good work. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 4:9",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,72 @@
+{
+ "id": "29-003-001",
+ "title": "The LORD Judges the Nations",
+ "refs": [
+  "Joel 3:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 29003014,
+   "end": 29003016,
+   "ref": "Joel 3:14-16",
+   "ranges": [
+    [
+     29003014,
+     29003016
+    ]
+   ],
+   "title": "\"Multitudes in the Valley of Decision\"",
+   "key_verse": [
+    29003014,
+    29003014
+   ],
+   "reflect": [
+    {
+     "text": "Joel pictures vast crowds gathered in the valley of decision as God's day draws near. In life, worthwhile goals are never reached by staying passive bystanders. Real freedom asks us to take up the weight of responsibility instead of standing still. Chronic hesitation leaves us paralyzed and unproductive, but maturity means finding the courage to make tough, decisive choices.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This valley gathering is not a cheerful celebration, but a serious meeting for divine reckoning. God speaks with absolute royal authority, roaring like a king until heaven and earth shake before His foes. There is no place for sinners to escape from God, except by running to seek refuge in Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Here God reveals His remarkable character, serving at once as both Judge and Savior. The very Lord who deals firmly with evil acts as an unbreakable stronghold for His own people. Even when everything else trembles, those who belong to Him find a safe shelter.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life have you been hesitating instead of taking responsibility and making a clear choice?",
+    "How does knowing that the Lord is both a holy Judge and a secure refuge give you peace?"
+   ],
+   "prayer": "Lord God, grant us courage to stop hesitating and act with maturity and responsibility. Help us remember that there is no hiding from You, only hiding in You. Thank You for being our King, our Judge, and our safe shelter when the earth trembles. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Erik Raymond",
+     "work": "The Lion's Diverse Excellencies",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/erik-raymond/15860/"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Responsibility",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-oct-12-2010-11639390.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

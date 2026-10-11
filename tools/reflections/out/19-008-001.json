@@ -1,0 +1,74 @@
+{
+ "id": "19-008-001",
+ "title": "How Majestic Is Your Name!",
+ "refs": [
+  "Psalms 8:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19008003,
+   "end": 19008004,
+   "ref": "Psalms 8:3-4",
+   "ranges": [
+    [
+     19008003,
+     19008004
+    ]
+   ],
+   "title": "\"What Is Man?\"",
+   "key_verse": [
+    19008004,
+    19008004
+   ],
+   "reflect": [
+    {
+     "text": "When we step outside at night and look up at the moon and stars, we quickly feel tiny. The universe is unimaginably vast, and human beings seem small and frail by comparison. Like David, we might wonder why the great Creator of all those distant stars would pay any attention to us at all.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet Scripture tells us that God keeps each of us in His thoughts all the time. Other people may forget about us or barely notice us, but our heavenly Father never does. He knows every detail of our daily lives, and He values us deeply. His care does not depend on how well we perform or whether we are perfect. Instead, His love flows freely from who He is.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because the Lord cares for us so completely, we do not have to carry our anxieties alone. We can bring our daily fears, troubles, and quiet worries straight to Him. Knowing that the Maker of the universe constantly thinks of us gives us a secure place to rest.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God constantly thinks of you change the way you face your daily worries?",
+    "What small details of your life can you hand over to the Lord today?"
+   ],
+   "prayer": "Lord, when we look at the vast heavens, we are amazed that You care for people as small and frail as us. Thank You for keeping us in Your thoughts and loving us because of who You are, not how well we perform. Help us to bring our daily worries to You and rest in Your constant care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jeff Schreve",
+     "work": "Looking Up to the God Who Loves Me",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/looking-up-to-the-god-who-loves-me-from-his-heart-week-of-march-6.html"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "Thinking of You",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-september-8-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

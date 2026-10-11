@@ -1,0 +1,67 @@
+{
+ "id": "18-008-001",
+ "title": "Bildad: Job Should Repent",
+ "refs": [
+  "Job 8:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18008001,
+   "end": 18008022,
+   "ref": "Job 8:1-22",
+   "ranges": [
+    [
+     18008001,
+     18008022
+    ]
+   ],
+   "title": "Rooted in God, Not Worldly Comfort",
+   "key_verse": [
+    18008011,
+    18008011
+   ],
+   "reflect": [
+    {
+     "text": "In his speech, Bildad asks whether reeds can flourish without water. As Charles Spurgeon observes, a water reed is hollow and spongy inside, lacking true firmness. It bends easily with every passing breeze and stays green only because of the mud and moisture around it. The moment the water dries up, the plant quickly withers because its life depends completely on its outward conditions.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This image challenges us to look honestly at our own hearts. Do we seek and serve the Lord only when life is comfortable, respectable, and easy? Anyone who follows Christ merely for earthly benefits or worldly approval is like that hollow reed. When trouble comes or joys are taken away, a shallow faith cannot survive.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Real faith does not depend on pleasant surroundings. God's people can endure and even flourish in seasons of drought and hardship. Indeed, as Spurgeon reminds us, a believer often grows best when worldly comforts fade away, choosing to love Christ for Himself rather than for what He provides.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you tend to seek God only when circumstances are comfortable, or do you still hold fast to Him in hard times?",
+    "What helps you love and follow Jesus for who He is rather than just for the earthly blessings He gives?"
+   ],
+   "prayer": "Lord, search our hearts and keep us from having a shallow or hollow faith. Do not let our love for You depend on pleasant circumstances or earthly comforts. Grant us grace to flourish even in seasons of loss, finding our true life in You alone.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 27",
+     "on": "Job 8:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

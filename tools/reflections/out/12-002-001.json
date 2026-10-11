@@ -1,0 +1,66 @@
+{
+ "id": "12-002-001",
+ "title": "Elijah Taken Up to Heaven",
+ "refs": [
+  "2 Kings 2:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12002001,
+   "end": 12002014,
+   "ref": "2 Kings 2:1-14",
+   "ranges": [
+    [
+     12002001,
+     12002014
+    ]
+   ],
+   "title": "Learning to Stand on Your Own Faith",
+   "key_verse": [
+    12002011,
+    12002011
+   ],
+   "reflect": [
+    {
+     "text": "Elisha cared deeply for his mentor, Elijah, and did not want to leave his side. As the time drew near for Elijah to be taken away, Elisha struggled with grief and anxiety. God gives us spiritual mentors as wonderful gifts to help us grow, but their true purpose is discipleship rather than an unhealthy dependency.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God often allows times of separation from human leaders and teachers we lean on. He does this so that we can learn to know Him directly for ourselves. Mentors are meant to guide us to the Lord, not take His place in our lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When Elijah was gone, Elisha picked up his fallen cloak. In the same way, believers still hold on to the spiritual mantle left behind by faithful mentors. We can step forward with confidence, carrying the wisdom, memories, and lessons of faith they shared with us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you leaned too much on a human teacher instead of seeking God directly?",
+    "What wisdom or faithful lessons from mentors can you carry forward in your walk today?"
+   ],
+   "prayer": "Dear Lord, thank You for the teachers and mentors who have guided me toward You. Help me not to depend too much on people, but to seek and trust You directly. Give me grace to carry forward the faithful wisdom I have been given as I walk with You each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day Sixty-One",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/whispers-of-hope-10-weeks-of-devotional-praye/whispers-of-hope-10-weeks-of-devotional-prayer-woh04-content-60.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

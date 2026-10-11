@@ -1,0 +1,66 @@
+{
+ "id": "23-001-021",
+ "title": "The Corruption of Zion",
+ "refs": [
+  "Isaiah 1:21-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23001021,
+   "end": 23001031,
+   "ref": "Isaiah 1:21-31",
+   "ranges": [
+    [
+     23001021,
+     23001031
+    ]
+   ],
+   "title": "Restoring What Was Diluted",
+   "key_verse": [
+    23001025,
+    23001025
+   ],
+   "reflect": [
+    {
+     "text": "While Jesus famously turned water into wine, Jerusalem did the reverse. The city turned pure silver into worthless waste and watered down its fine wine. This spiritual fall did not happen overnight. It came from gradual compromises, ignored corruption, and leaders who stopped caring about justice for the weak.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God promised to step in with decisive action. He pledged to melt away the dross, the impure waste mixed into metal, and bring back faithful leaders. Stuart Briscoe reminds us that divine discipline is \"restorative rather than vindictive.\" God does not correct us out of simple anger. Instead, He exposes our hidden compromises to heal our souls and bring us back to spiritual health.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we drift away, the Lord uses this purifying discipline to clean out what harms us. For everyone who turns back to God in true repentance, there is hope. He promises to remove our impurities and redeem us, giving us a fresh start in His righteousness.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there small compromises in your life that are slowly watering down your walk with God?",
+    "How does knowing God's discipline is meant to restore you change the way you receive His correction?"
+   ],
+   "prayer": "Lord, search our hearts and show us where we have compromised or drifted from You. Thank You that Your discipline is meant to restore us rather than push us away. Purge away our hidden impurities and make our lives faithful and pure again. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "Watered Down Wine",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/watered-down-wine-one-year-devotions-for-men-january-3.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

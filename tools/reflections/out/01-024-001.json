@@ -1,0 +1,135 @@
+{
+ "id": "01-024-001",
+ "title": "A Wife for Isaac",
+ "refs": [
+  "Genesis 24:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1024012,
+   "end": 1024014,
+   "ref": "Genesis 24:12-14",
+   "ranges": [
+    [
+     1024012,
+     1024014
+    ]
+   ],
+   "title": "\"Please Grant Me Success Today\"",
+   "key_verse": [
+    1024012,
+    1024012
+   ],
+   "reflect": [
+    {
+     "text": "When Abraham sent his servant on an important mission to find a wife for Isaac, the servant did not depend on his own wisdom. Even before resting after his long journey, he made prayer his very first priority. Praying for success is good and right when our goals honor God and bless other people. When we fail to bring our big tasks to God, it shows we are relying on ourselves instead of trusting Him.",
+     "sources": [
+      "D2",
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "The servant repeatedly called the Lord the God of his master. Because he had seen how faithful God was to Abraham, he boldly asked for help for his master's sake. In the same way, we can bring our requests to our heavenly Father in the name of our Master, Jesus. We can be confident that God delights to show kindness for the sake of His Son.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Facing a daunting task, the servant asked God for clear direction through an act of generous hospitality. Today, believers are guided by the Holy Spirit and the Bible rather than special signs. Even so, we can trust God's care and expect Him to lead us whenever we seek His will.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face an important decision or task, do you tend to pray first or rely on your own strength?",
+    "How does praying in Jesus' name give you confidence when you talk to God?"
+   ],
+   "prayer": "Heavenly Father, help us to turn to You before we begin our work. Teach us to seek Your guidance and trust Your kindness in every responsibility we carry. We bring our requests to You today in the name of our Master, Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 24:12",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Confirmation",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/confirmation"
+    },
+    "D3": {
+     "author": "Rick Warren",
+     "work": "Ask God for Help",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-january-26-2025.html"
+    },
+    "D5": {
+     "author": "Dr. Michael Youssef",
+     "work": "A Prayer for Guidance",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-week-of-november-2-11610595.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1024001,
+   "end": 1024014,
+   "ref": "Genesis 24:1-14",
+   "ranges": [
+    [
+     1024001,
+     1024014
+    ]
+   ],
+   "title": "Seeking God's Guidance in Daily Life",
+   "key_verse": [
+    1024014,
+    1024014
+   ],
+   "reflect": [
+    {
+     "text": "Abraham trusted his servant to find a wife from his own kindred, and the servant showed true faithfulness by seeking the Lord's favor before taking action. He did not look for shallow qualities. Instead, he went straight to the town well, a place of hard work, to find a woman who showed real diligence and hospitality. He understood that godly character shows itself in ordinary, everyday service.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Scripture warns believers never to put God to the test. Yet the servant shows us that it is entirely appropriate to ask God for clarity between choices that are already good and lawful. God's true guidance will never lead us to pray or act against His commands. When we stay within the clear boundaries of His revealed Word, we can trust Him to guide our steps.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you look for godly character like diligence and kindness in your daily relationships?",
+    "Are the choices you are currently bringing to God aligned with what He has taught in His Word?"
+   ],
+   "prayer": "Lord God, give us hearts that value diligence, kindness, and obedience to Your Word. Guide our steps as we make choices each day, and keep our desires aligned with Your truth. Help us to act with faithfulness and honor You in all we do. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "A Servant's Prayer",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/servants-prayer"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

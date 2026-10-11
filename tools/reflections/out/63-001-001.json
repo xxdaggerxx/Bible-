@@ -1,0 +1,73 @@
+{
+ "id": "63-001-001",
+ "title": "A Greeting from the Elder",
+ "refs": [
+  "2 John 1:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 63001001,
+   "end": 63001003,
+   "ref": "2 John 1:1-3",
+   "ranges": [
+    [
+     63001001,
+     63001003
+    ]
+   ],
+   "title": "Walking Together in Truth and Love",
+   "key_verse": [
+    63001003,
+    63001003
+   ],
+   "reflect": [
+    {
+     "text": "John writes to believers with deep affection rooted in God's truth. When divine truth enters our hearts, it makes a permanent home there and guides our lives like a master of the house. This truth will stay with us forever, giving us comfort, strength, and joy through every season. Because we share this lasting hope in Christ, we are called to welcome and love our fellow believers warmly.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Authentic Christian discipleship always holds truth and love together. In the early church, believers opened their homes to traveling teachers, which meant they needed discernment to avoid supporting false teaching. We must remember that truth and love can never be separated. Turning away from love betrays the truth, and giving up the truth is never truly loving.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's truth humbles us rather than making us proud. We need to guard against using sound doctrine as a weapon to harm others, while still caring enough to lovingly address sin and stand against error. As we receive grace, mercy, and peace from the Father and the Son, we can hold firmly to the truth while actively loving those around us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you make sure that your care for others remains grounded in God's truth?",
+    "Are there times when you are tempted to use correct teaching harshly instead of speaking in love?"
+   ],
+   "prayer": "Lord God, thank you for placing your eternal truth in our hearts to bring us lasting comfort and joy. Help us to keep truth and love united in everything we say and do. Give us the wisdom to stand against error while showing gentle kindness and grace to our brothers and sisters in Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Truth and Love",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/truth-and-love"
+    },
+    "D2": {
+     "author": "Truth For Life",
+     "work": "The Truth of God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-october-25-2021.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

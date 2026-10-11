@@ -1,0 +1,122 @@
+{
+ "id": "26-036-016",
+ "title": "A New Heart and a New Spirit",
+ "refs": [
+  "Ezekiel 36:16-38"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 26036026,
+   "end": 26036026,
+   "ref": "Ezekiel 36:26",
+   "ranges": [
+    [
+     26036026,
+     26036026
+    ]
+   ],
+   "title": "\"A Heart of Flesh\"",
+   "key_verse": [
+    26036026,
+    26036026
+   ],
+   "reflect": [
+    {
+     "text": "Every human being starts life with a heart that naturally resists God. We cannot soften our own stubbornness. Whether God changes someone through a dramatic turnaround or through quiet, ordinary ways like a parent's teaching and regular preaching, every conversion is a miraculous work of grace. Taking away a lifeless heart of stone and giving an alive, sensitive heart is always a wondrous act of God.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "A heart of flesh is gentle and sensitive. Unlike a stone heart that ignores wrong choices, a tender heart hurts even over an impure thought and quickly grieves sin. It does not fight God's guidance. Instead, it yields to his will, and its affections burn with love for the Saviour. As Charles Spurgeon noted, \"a tender heart is the best defence against sin.\" This new heart is ready to welcome every spiritual gift and live for God.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you notice your heart softening when God points out sin, or do you tend to brush it off?",
+    "How can you thank God today for the quiet miracle of changing your heart to love him?"
+   ],
+   "prayer": "Lord, thank you for removing our cold, stubborn hearts and giving us hearts that are alive to you. Keep our consciences tender so that we turn away from sin and joyfully follow your will. Help our love for Jesus grow warmer every day. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 15",
+     "on": "Ezekiel 36:26",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Robert Rothwell",
+     "work": "Spectacular Conversions",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/spectacular-conversions"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 26036016,
+   "end": 26036038,
+   "ref": "Ezekiel 36:16-38",
+   "ranges": [
+    [
+     26036016,
+     26036038
+    ]
+   ],
+   "title": "Cleansed and Restored by Grace",
+   "key_verse": [
+    26036025,
+    26036025
+   ],
+   "reflect": [
+    {
+     "text": "God promises to completely wash his people from their uncleanness and their idols. We cannot scrub away our own guilt, but God guarantees that he will do it himself. Through the blood of Jesus and the renewing work of the Holy Spirit, he washes away our deepest sins, such as pride and stubborn unbelief. He also frees us from idols, breaking our hold on things we love more than him. Because God himself gives this promise, we can be confident that his cleansing is sure.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Even though God freely plans to restore and bless his people, he tells them that they must seek him for it. Prayer is always the forerunner of mercy. When God gets ready to give great gifts, he first stirs his people to ask earnestly. Seeking God in prayer does not earn the blessing, but it prepares our hearts to value it. As Charles Spurgeon wrote, \"prayer makes our mercies more precious than diamonds.\" When God answers, we recognize his goodness and give him the praise.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What idols or stubborn sins do you need God to cleanse from your life today?",
+    "How does bringing your needs to God in prayer help you appreciate his answers when they arrive?"
+   ],
+   "prayer": "Lord God, thank you for promising to wash us clean from all our sins and false gods. Teach us to seek you earnestly in prayer for the mercies you have promised to give. Help us to treasure your gifts and give you all the glory for your faithful work in our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 19",
+     "on": "Ezekiel 36:37",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 30",
+     "on": "Ezekiel 36:25",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

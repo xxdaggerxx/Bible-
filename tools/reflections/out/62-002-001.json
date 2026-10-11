@@ -1,0 +1,143 @@
+{
+ "id": "62-002-001",
+ "title": "Jesus Our Advocate",
+ "refs": [
+  "1 John 2:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 62002001,
+   "end": 62002001,
+   "ref": "1 John 2:1",
+   "ranges": [
+    [
+     62002001,
+     62002001
+    ]
+   ],
+   "title": "\"We Have an Advocate\"",
+   "key_verse": [
+    62002001,
+    62002001
+   ],
+   "reflect": [
+    {
+     "text": "John writes to urge us not to sin. God's grace, His kindness we do not deserve, is never an excuse to treat sin lightly or live carelessly. Seeing that Jesus suffered on the cross for our sins reminds us how serious our wrongs truly are. Yet, we still experience the painful struggle between wanting to obey God and stumbling into wrongdoing.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "When we do fail, God does not want us to fall into despair. John does not say that sin strips away our helper. Instead, we still have an advocate before the Father, someone who speaks in our defense. As Charles Spurgeon wrote, it is Jesus's \"business and delight it is to save.\"",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "God Himself chose and appointed Jesus Christ for this task, so He has full authority to speak for us. Because Jesus is completely righteous, He satisfies God's justice. He took our punishment on the cross and now offers His own perfect record in place of our failures. Knowing this leads us away from sin and back to humble repentance.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you stumble into sin, do you tend to make excuses, fall into despair, or turn to Jesus for mercy?",
+    "How does knowing that Jesus pleads for you before the Father encourage you to turn away from sin today?"
+   ],
+   "prayer": "Lord Jesus, thank You for standing before the Father to speak on our behalf. Forgive us for the times we treat sin lightly or turn away from Your ways. Help us to rest in Your perfect righteousness and turn to You with honest, repentant hearts every day. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 4",
+     "on": "1 John 2:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Our Advocate",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/our-advocate"
+    },
+    "D5": {
+     "author": "Stuart Briscoe",
+     "work": "Cheap Grace - One Year Devotions for Men",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/cheap-grace-one-year-devotions-for-men-february-2.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 62002001,
+   "end": 62002006,
+   "ref": "1 John 2:1-6",
+   "ranges": [
+    [
+     62002001,
+     62002006
+    ]
+   ],
+   "title": "Knowing Him and Walking in His Ways",
+   "key_verse": [
+    62002006,
+    62002006
+   ],
+   "reflect": [
+    {
+     "text": "John explains that true knowledge of God always shows itself in our daily lives. We cannot separate abiding in the love of Jesus from obeying His commands. When we are careless about holiness, which means living a life set apart to please God, we lose the sweet awareness of His near presence. Obeying Christ opens our hearts to experience His love and peace without a cloud of sin between us.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Following Jesus's example is also vital for our own spiritual health and joy. When we follow closely in His footsteps, our souls are protected from the sickness of sin, and we are lifted above worldly worries. Walking far from Jesus leaves us feeling uneasy and unsafe, but staying close to Him fills us with real gladness and growing strength.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Finally, walking as Jesus walked matters for the sake of others and for Christ Himself. Inconsistent believers harm the cause of God more than outside enemies. When our lives match our words, we honor the Savior we love and help others see His goodness.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily routine do your actions struggle to match your words about following Jesus?",
+    "How has choosing obedience brought you a greater sense of God's peace and joy in the past?"
+   ],
+   "prayer": "Father, teach us to love Your commands and follow closely in the footsteps of Jesus. Keep our hearts sensitive to sin so nothing dims the joy of Your love. Make our lives an honest reflection of Christ so that others may see Him and praise Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 17",
+     "on": "1 John 2:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 1",
+     "on": "1 John 2:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

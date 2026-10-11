@@ -1,0 +1,67 @@
+{
+ "id": "43-010-040",
+ "title": "John’s Testimony Confirmed",
+ "refs": [
+  "John 10:40-42"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43010040,
+   "end": 43010042,
+   "ref": "John 10:40-42",
+   "ranges": [
+    [
+     43010040,
+     43010042
+    ]
+   ],
+   "title": "Speaking True Words About Jesus",
+   "key_verse": [
+    43010040,
+    43010040
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus returned to the place where John had first baptized, the crowds remembered the prophet who had died. People often forget good leaders quickly. Yet the people still remembered John. \"Your life may be without miracle,\" F. B. Meyer observes, and many of us live very ordinary lives without fame or great influence over crowds.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even though John worked no miracles, the people realized that everything he said about Jesus was true. John had simply pointed others to Christ as the Lamb of God. You do not need extraordinary talent or dramatic deeds to serve God well. What matters most is speaking true words about who Jesus is.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The words John spoke bore fruit long after his death, leading many people in that place to believe in the Savior. Like seeds buried in the ground, honest words about Christ can rest quietly in someone's memory for years. God can use our everyday witness to draw others to trust in Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you speak truthfully about Jesus to those around you this week?",
+    "Does it encourage you to know that God uses simple, faithful words rather than extraordinary deeds?"
+   ],
+   "prayer": "Lord Jesus, help us to be faithful witnesses who speak the truth about who You are. Teach us to point others to You even when our lives seem quiet and ordinary. May the simple words we speak about Your grace take root in people's hearts and bring them to faith. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "John 10:41",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

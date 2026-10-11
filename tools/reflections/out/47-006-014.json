@@ -1,0 +1,88 @@
+{
+ "id": "47-006-014",
+ "title": "Do Not Be Unequally Yoked",
+ "refs": [
+  "2 Corinthians 6:14-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 47006014,
+   "end": 47006018,
+   "ref": "2 Corinthians 6:14-18",
+   "ranges": [
+    [
+     47006014,
+     47006018
+    ]
+   ],
+   "title": "Belonging to God and Living for Him",
+   "key_verse": [
+    47006016,
+    47006016
+   ],
+   "reflect": [
+    {
+     "text": "The picture of being unequally yoked comes from farming, where strapping two different animals together holds back the stronger one and makes work clumsy. In our closest relationships, such as marriage, differences in character and faith can pull both people down. When partners share the same foundation and encourage each other, heavy duties become a shared joy rather than exhausting toil.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "This call to care about our bonds exists because God has brought believers into a close relationship with Himself. He promises to live among us, walk with us, and be our Father. As Charles Spurgeon wrote, believers and God share a \"mutual interest\" where each belongs to the other. God has bought us with Christ's blood and loves us deeply. Because He thinks of us and walks with us every day, we are invited to make Him our greatest treasure.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because we belong to the heavenly King, our lives should look different from the world around us. We are called to step away from sinful patterns and live for Christ in everything we do. If a choice is right, we do it even if we lose out; if it is wrong, we refuse it for our Master's sake. Remembering our place as God's beloved sons and daughters gives us purpose to stay true to Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing you belong to God shape the close friendships and partnerships you choose?",
+    "What is one daily choice where you can honour God even if it costs you something?"
+   ],
+   "prayer": "Father, thank You for making us Your people and walking with us each day. Give us wisdom to build relationships that honour You and strengthen our faith. Help us live with quiet courage, choosing what is right for Jesus' sake. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 5",
+     "on": "2 Corinthians 6:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 11",
+     "on": "2 Corinthians 6:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 28",
+     "on": "2 Corinthians 6:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Charles R. Swindoll",
+     "work": "Equally Yoked - Today's Insight - July 5, 2022",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-july-5-2022.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

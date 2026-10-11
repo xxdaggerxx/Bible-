@@ -1,0 +1,68 @@
+{
+ "id": "49-002-011",
+ "title": "One in Christ",
+ "refs": [
+  "Ephesians 2:11-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 49002014,
+   "end": 49002014,
+   "ref": "Ephesians 2:14",
+   "ranges": [
+    [
+     49002014,
+     49002014
+    ]
+   ],
+   "title": "\"He Himself Is Our Peace\"",
+   "key_verse": [
+    49002014,
+    49002014
+   ],
+   "reflect": [
+    {
+     "text": "Throughout history, human rulers have built massive stone walls, and every single one of those walls has eventually fallen. Yet we also build powerful, invisible barriers. Sin separated humanity from God and stirred up deep hostility between different groups of people. In the past, many people even turned God's law into a wall of self-righteous pride instead of shining as a welcoming light to the nations. Our own bitter attitudes and stubborn wills can seem just as impossible to break down.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus stepped into this broken world to bring true peace. By fulfilling the law and giving His flesh on the cross, He completely destroyed the dividing wall of hostility. God's people are no longer marked by ancient cultural boundaries, but by our personal connection to Jesus. Charles R. Swindoll notes that no barrier is \"greater than the conquering power of Christ.\" Because Jesus Himself is our peace, we must never hide behind walls of superiority or refuse to share God's grace, His undeserved kindness, with others.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there invisible walls of bitterness or pride that you have built toward someone else?",
+    "How can knowing that Jesus destroyed every barrier help you share His kindness with people who seem far from Him?"
+   ],
+   "prayer": "Lord Jesus, thank You for tearing down the wall of hostility between us and God through Your cross. Forgive us when we build barriers of pride, bitterness, or stubbornness against other people. Teach us to rest in the peace You made and to share Your free grace with everyone around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Jesus Our Peace",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jesus-our-peace"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "All Walls Finally Fall",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-may-13-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

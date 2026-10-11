@@ -1,0 +1,74 @@
+{
+ "id": "26-006-008",
+ "title": "A Remnant to Be Blessed",
+ "refs": [
+  "Ezekiel 6:8-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 26006008,
+   "end": 26006009,
+   "ref": "Ezekiel 6:8-9",
+   "ranges": [
+    [
+     26006008,
+     26006009
+    ]
+   ],
+   "title": "\"Your Survivors Will Remember Me\"",
+   "key_verse": [
+    26006009,
+    26006009
+   ],
+   "reflect": [
+    {
+     "text": "Even when God declared judgment on Israel, He did not abandon His people completely. He promised that a small remnant would survive the sword and live in exile. God used the bitter pain of foreign captivity to wake them up. In their hardship, the survivors would finally pause and remember the Lord whom they had turned away from.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We often fail to see the true cost of our sin while we are caught up in it. In the quiet loneliness of captivity, the people had time to look back on the damage they had caused. The deepest pain was realizing how their rebellion had wounded God. As F. B. Meyer wrote, \"Our sin can give God the heartbreak, because He loves us so.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's discipline was meant to produce true repentance in His people. Genuine sorrow goes beyond simply throwing away idols or regretting the consequences of our choices. It means recognizing how deeply our unfaithfulness has grieved God and turning back to Him with wholehearted love.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that sin grieves God's loving heart change how you view your own disobedience?",
+    "What does wholehearted love for God look like in your daily life today?"
+   ],
+   "prayer": "Father, forgive us for the ways our hearts wander from You and bring grief to Your Spirit. Help us to see the seriousness of our sin before it brings sorrow. Draw us back to Yourself in genuine repentance, and teach us to love You with our whole hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 6:9",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Learning God's Lessons",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/learning-gods-lessons"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

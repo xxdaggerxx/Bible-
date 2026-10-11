@@ -1,0 +1,74 @@
+{
+ "id": "54-002-009",
+ "title": "Instructions to Women",
+ "refs": [
+  "1 Timothy 2:9-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 54002011,
+   "end": 54002012,
+   "ref": "1 Timothy 2:11-12",
+   "ranges": [
+    [
+     54002011,
+     54002012
+    ]
+   ],
+   "title": "\"Learn in Quietness\"",
+   "key_verse": [
+    54002012,
+    54002012
+   ],
+   "reflect": [
+    {
+     "text": "Paul writes about how God orders the local church family. When he asks women to learn in quietness, he is not telling them to stay silent or stopping them from singing and praying in worship. Instead, he invites women into active learning with an attentive heart. Christian women share full dignity in Christ. They are encouraged to grow deeply in God's word and use their discipleship gifts to build up the church.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "At the same time, God gives specific boundaries for authority in the church assembly. Paul explains that the pastoral office—the role of church elders who give authoritative teaching from Scripture and lead the congregation—is reserved for qualified men. This boundary does not stop women from serving. Scripture celebrates women who share and teach the faith in appropriate ways without holding the governing office of elder.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God gave men and women complementary callings, meaning different roles that work together to help the whole church. Church elders should actively seek, value, and welcome the insights and counsel of godly women. When men and women honor God's design and serve together with mutual respect, Christ's body grows strong and healthy.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can our church encourage women to keep growing in Scripture and using their gifts to serve?",
+    "In what ways can church leaders and members work together to value the wisdom of godly women?"
+   ],
+   "prayer": "Lord, thank you for giving men and women equal worth and complementary roles in your church. Give us humble and attentive hearts as we learn your word together. Help our leaders and members to serve side by side in mutual respect, honoring your good design for your people. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Female Authority",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/female-authority"
+    },
+    "D2": {
+     "author": "Robert W. Yarbrough",
+     "work": "What Exactly Does 1 Timothy 2:12 Teach?",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/1-timothy-2-12-teach/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

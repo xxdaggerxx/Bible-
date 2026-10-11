@@ -1,0 +1,66 @@
+{
+ "id": "02-036-001",
+ "title": "The People Bring More than Enough",
+ "refs": [
+  "Exodus 36:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2036001,
+   "end": 2036007,
+   "ref": "Exodus 36:1-7",
+   "ranges": [
+    [
+     2036001,
+     2036007
+    ]
+   ],
+   "title": "Moving When God Stirs Your Heart",
+   "key_verse": [
+    2036003,
+    2036003
+   ],
+   "reflect": [
+    {
+     "text": "When God calls us to give, He often stirs our hearts first. That inner tug can awaken deep empathy and care for people around us. Even so, it is very easy to stall. Fear, doubt, and overthinking can quickly creep in, causing us to delay what God has prompted us to do.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The people of Israel showed us what true generosity looks like in practice. They did not stop at willing feelings; they backed up their hearts with steady, practical action. Morning after morning, they brought freewill gifts for the sanctuary until the builders had more than enough to do the work.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Real spiritual blessing does not come simply from feeling moved. It comes when we step forward in prompt obedience. When God stirs your heart to share your gifts, the best response is to act right away rather than letting second thoughts hold you back.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Has fear or overthinking ever caused you to delay acting on a generous thought?",
+    "How can you take a practical step of obedience the next time God prompts you to give?"
+   ],
+   "prayer": "Lord, thank you for stirring our hearts with love and empathy for others. Forgive us for the times we let fear or doubt hold us back from doing good. Give us willing hearts that follow your promptings with joyful and immediate obedience. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Lynn Cowell",
+     "work": "Move When You’re Moved",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-may-11-2016.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

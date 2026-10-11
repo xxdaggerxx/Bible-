@@ -1,0 +1,75 @@
+{
+ "id": "02-002-011",
+ "title": "The Rejection and Flight of Moses",
+ "refs": [
+  "Exodus 2:11-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2002011,
+   "end": 2002012,
+   "ref": "Exodus 2:11-12",
+   "ranges": [
+    [
+     2002011,
+     2002012
+    ]
+   ],
+   "title": "\"Looking This Way and That\"",
+   "key_verse": [
+    2002012,
+    2002012
+   ],
+   "reflect": [
+    {
+     "text": "When Moses saw an Egyptian hurting a fellow Hebrew, he acted quickly out of his own feelings and strength instead of waiting for God. He looked horizontally in both directions to see if anyone was watching, but he forgot to look up toward God. Capable and gifted believers often face this same temptation. We easily rush ahead with our own plans instead of seeking divine guidance and waiting for God's timing.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Taking matters into his own hands brought fast trouble, fear, and an attempt to bury his crime in the sand. When we act on our own human impulses, we are often forced into cover-ups and lies to hide our guilt, shame, and sin. Yet human schemes cannot truly hide our messes, and trying to bury our failures only isolates us from others and from God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "While our own efforts cannot even hide a single mistake, God easily accomplishes complete victory when He is in charge. Hiding our sin keeps us trapped, but bringing our failures into the open invites God's healing. Unburdening ourselves through honest confession allows us to receive His grace and step into the good life He intends for us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there situations where you are rushing ahead with your own strength instead of looking up to God?",
+    "Is there a failure or secret guilt you have tried to bury that you need to confess to God today?"
+   ],
+   "prayer": "Lord, forgive us for relying on our own strength and looking all around instead of looking up to You. Help us not to hide our guilt or bury our mistakes in fear. We bring our failures into the open today, trusting Your healing grace and waiting on Your guidance. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Rev. Kyle Norman",
+     "work": "Burying Sins in the Sand",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/burying-sins-in-the-sand-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "God Gets It Done",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-october-23-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

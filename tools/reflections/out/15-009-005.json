@@ -1,0 +1,60 @@
+{
+ "id": "15-009-005",
+ "title": "Ezra’s Prayer of Confession",
+ "refs": [
+  "Ezra 9:5-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 15009005,
+   "end": 15009015,
+   "ref": "Ezra 9:5-15",
+   "ranges": [
+    [
+     15009005,
+     15009015
+    ]
+   ],
+   "title": "Confession and the Need for a Savior",
+   "key_verse": [
+    15009015,
+    15009015
+   ],
+   "reflect": [
+    {
+     "text": "When the people returned from exile, they soon fell into serious sin by marrying neighbors who worshiped other gods. God had forbidden this not because of race or culture, but to protect them from spiritual compromise and idolatry. When Ezra heard about this, he fell on his knees in deep shame. He did not make any excuses for the people. His honest prayer gives us a clear model of true confession, showing how we should admit our guilt openly before a holy God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even after God showed mercy by bringing a remnant home from captivity, the people sinned again. Their ongoing struggle proved that simply returning to their homeland could not fix their hearts. It showed their deep need for a greater Savior who could truly deliver them from sin. For Christians today, this passage also reminds us to protect our walk with God. We are called to keep our faith pure, including choosing to marry only fellow believers in Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you confess your sins to God, do you offer excuses or do you speak honestly like Ezra?",
+    "In what areas of your life, such as your close relationships, do you need to guard against spiritual compromise?"
+   ],
+   "prayer": "Lord God, You are righteous and we have no excuses for our sins before You. Thank You for showing us mercy and giving us a greater Savior in Jesus Christ. Help us to guard our hearts, honor Your commands, and remain faithful in all our relationships. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Problem of Intermarriage",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/problem-of-intermarriage"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,136 @@
+{
+ "id": "47-008-001",
+ "title": "Generosity Commended",
+ "refs": [
+  "2 Corinthians 8:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 47008009,
+   "end": 47008009,
+   "ref": "2 Corinthians 8:9",
+   "ranges": [
+    [
+     47008009,
+     47008009
+    ]
+   ],
+   "title": "\"For Your Sakes He Became Poor\"",
+   "key_verse": [
+    47008009,
+    47008009
+   ],
+   "reflect": [
+    {
+     "text": "Before coming to earth, Jesus Christ lived in eternal riches, glory, and honour. Yet our sin broke our relationship with a holy God. As Charles Spurgeon explains, holy fellowship was impossible unless the Savior stepped down and shared His own wealth with us. Without His rescue, we were spiritually ruined and had nothing good to offer God.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jesus entered human history and gave up His earthly dignity, dying on a cross to save us. He became completely poor so that He could clothe us in His righteousness and wash away our guilt. By taking our poverty upon Himself, He lifted us up into true friendship and peace with God.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "This rescue is not just an idea for the mind. When we understand how deeply Christ gave of Himself for us, it changes how we live each day. Knowing that the Lord became destitute to make us rich in God inspires us to be genuinely generous toward others.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus gave up His riches to bring you close to God change how you view your own life?",
+    "In what practical ways can Christ's sacrifice inspire you to care for others in need?"
+   ],
+   "prayer": "Lord Jesus, thank You for leaving Your heavenly glory and becoming poor so that we could be forgiven and welcomed into God's family. You washed away our sin and gave us eternal riches in Yourself. Help us remember Your great sacrifice today, and shape our hearts to share Your love with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 24",
+     "on": "2 Corinthians 8:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Truth For Life",
+     "work": "He Became Poor",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-december-24-2019.html"
+    },
+    "D4": {
+     "author": "Joe Holland",
+     "work": "Threefold Redemption",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/threefold-redemption"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 47008001,
+   "end": 47008015,
+   "ref": "2 Corinthians 8:1-15",
+   "ranges": [
+    [
+     47008001,
+     47008015
+    ]
+   ],
+   "title": "Excelling in the Grace of Giving",
+   "key_verse": [
+    47008007,
+    47008007
+   ],
+   "reflect": [
+    {
+     "text": "Giving generously is not just an ordinary human effort. It is a grace—a gift of God's kindness at work in our hearts, just like faith, speech, and spiritual knowledge. We see this in the Macedonian believers, who gave richly to help others even while facing severe trials and deep poverty.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Many of us find it hard to give freely because we hold on to our money tightly. We sometimes worry that if we share what we have, we might run out in the future. We also forget that everything we own actually belongs to God. We are simply stewards—managers taking care of another person's property—using what He gives us for His purposes.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Giving in a regular, planned way according to our income is one of the clearest tests of our faith. When we ask God to soften our reluctance, He helps us discover the quiet joy of generous giving. We can begin to trust Him with our needs and freely offer back what is already His.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you tend to view your money and possessions as your own, or as resources God has trusted you to manage?",
+    "What fears or worries sometimes hold you back from giving regularly and gladly?"
+   ],
+   "prayer": "Heavenly Father, You have given us every good thing we have. Please forgive us when we worry about the future or hold back our resources out of fear. Teach us to be faithful managers of Your gifts, and grow in us the grace of generous giving. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Corinthians 8:7",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

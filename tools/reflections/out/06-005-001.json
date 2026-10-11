@@ -1,0 +1,81 @@
+{
+ "id": "06-005-001",
+ "title": "The Circumcision and Passover at Gilgal",
+ "refs": [
+  "Joshua 5:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6005001,
+   "end": 6005012,
+   "ref": "Joshua 5:1-12",
+   "ranges": [
+    [
+     6005001,
+     6005012
+    ]
+   ],
+   "title": "Rest and Obedience in the Promised Land",
+   "key_verse": [
+    6005012,
+    6005012
+   ],
+   "reflect": [
+    {
+     "text": "After crossing the Jordan, Israel stood before strong enemies and needed reassurance of God's presence and favor. Receiving the fulfillment of God's promises called for personal obedience from His people. Before taking the land, the new generation renewed their covenant bond through circumcision. Reinstating this sign qualified them to celebrate the Passover, commemorating their redemption and pointing ahead to a transformed heart and the work of Christ.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Outward ceremonies cannot save anyone on their own, but genuine saving faith always proves itself through obedience. By submitting to God's commands and keeping the Passover, Israel honored the Lord. The weary wilderness journey was finally over, and the daily manna stopped because God provided the rich harvest of Canaan for His people to enjoy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This rest points to the peace God gives to all who trust in Him. As Charles Spurgeon wrote, believers already experience \"glory begun below\" as they rest in Christ's love. Whether our days are spent serving God on earth or being called home to heaven, we can find true peace by feeding on Jesus today.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does your faith in God show itself in your everyday obedience to Him?",
+    "In what ways can you rest in Christ's love today rather than carrying unnecessary worry?"
+   ],
+   "prayer": "Lord, thank You for Your unfailing faithfulness and the peace You give us in Christ. Give us obedient hearts that gladly trust and follow Your word. Help us to rest in Your love each day and find our true nourishment in Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 1",
+     "on": "Joshua 5:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Israel Obeys the Covenant",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/israel-obeys-the-covenant"
+    },
+    "D3": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 03/14/05",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-03-or-14-or-05-1315803.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

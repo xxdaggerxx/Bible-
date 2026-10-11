@@ -1,0 +1,18 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://billygraham.org/devotions",
+  "https://insight.org/",
+  "https://learn.ligonier.org/devotionals/lord-saves-his-servants",
+  "https://www.biblegateway.com/passage/?search=2+Kings+24-25%2C2+Chronicles+36%2CJeremiah+39%3A1-10&version=NASB",
+  "https://www.biblegateway.com/passage/?search=Jeremiah%2039&version=MSG",
+  "https://www.biblegateway.com/passage/?search=Jeremiah+37-39&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Jeremiah+39%3A15-17&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Jeremiah+39&version=NIV",
+  "https://www.davidjeremiah.org/",
+  "https://www.desiringgod.org/"
+ ],
+ "cost": 0.045731524999999995,
+ "model": "google/gemini-3.8-flash"
+}

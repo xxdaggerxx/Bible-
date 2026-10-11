@@ -1,0 +1,122 @@
+{
+ "id": "50-003-001",
+ "title": "Righteousness through Faith in Christ",
+ "refs": [
+  "Philippians 3:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 50003007,
+   "end": 50003009,
+   "ref": "Philippians 3:7-9",
+   "ranges": [
+    [
+     50003007,
+     50003009
+    ]
+   ],
+   "title": "\"I Count All Things as Loss\"",
+   "key_verse": [
+    50003008,
+    50003008
+   ],
+   "reflect": [
+    {
+     "text": "Many people try to build confidence before God through family background, religious heritage, or moral effort. Yet the Apostle Paul realized that none of these things can make us acceptable to God. When he saw the glory of Jesus, he counted his former achievements as total loss. True righteousness—being declared right in God's sight—cannot be earned by keeping rules. It is a gift given only through faith in Christ, and we must continually rest in His grace rather than our own good works.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Knowing Jesus reshapes what we treasure. Earthly advantages and possessions pale when compared to Him. Remembering the riches we have in Christ protects our hearts from temptation. This knowledge must be personal; we cannot know the Lord second-hand through another person's faith. It is not mere head knowledge, but a deep love that satisfies our thirst and carries us through hard trials. As Charles Spurgeon noted, \"An ounce of heart knowledge is worth a ton of head learning.\"",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you tempted to rely on your own good deeds rather than resting completely in Christ?",
+    "How does the treasure of knowing Jesus personally change your daily priorities?"
+   ],
+   "prayer": "Lord Jesus, thank You that our right standing with God comes through faith in You and not through our own works. Teach us to value knowing You above every worldly gain or personal achievement. Guard our hearts with Your peace and help us find our deepest joy in You alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 14",
+     "on": "Philippians 3:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Adrian Rogers (Love Worth Finding)",
+     "work": "Nothing Compares to the Value of Jesus",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-june-10-2024.html"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "The Righteousness of God by Faith",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-righteousness-of-god-by-faith"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 50003001,
+   "end": 50003011,
+   "ref": "Philippians 3:1-11",
+   "ranges": [
+    [
+     50003001,
+     50003011
+    ]
+   ],
+   "title": "The Power of His Resurrection",
+   "key_verse": [
+    50003010,
+    50003010
+   ],
+   "reflect": [
+    {
+     "text": "The truth that Jesus rose from the dead is the cornerstone of Christian faith. It is the solid foundation of our salvation and brings deep comfort to our souls. Yet believing the teaching of the resurrection is only the beginning. Like a root that is meant to blossom into a beautiful flower, the doctrine leads us into personal fellowship with our living Lord. Through faith, we are invited to walk with Him and converse with Him every day.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Knowing Jesus means experiencing the power of His resurrection in our daily lives. When we trust Him, He gives us new life as new creations. Because He walked out of the tomb, we are called to leave behind the dark grave-clothes of worldliness and doubt. We do not have to stay trapped in old habits of unbelief. Instead, the risen Saviour shares His living power with us, lifting us to walk with Him in newness of life.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you still holding onto the grave-clothes of doubt or worldliness?",
+    "How can walking in the power of Christ's resurrection bring you hope today?"
+   ],
+   "prayer": "Risen Lord, thank You for breaking the power of death and giving us new life. Help us to leave behind the old ways of unbelief and worldliness. Teach us to walk closely with You each day, rejoicing in the living power of Your resurrection. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 22",
+     "on": "Philippians 3:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

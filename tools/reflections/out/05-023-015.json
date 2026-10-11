@@ -1,0 +1,66 @@
+{
+ "id": "05-023-015",
+ "title": "Miscellaneous Laws",
+ "refs": [
+  "Deuteronomy 23:15-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5023015,
+   "end": 5023025,
+   "ref": "Deuteronomy 23:15-25",
+   "ranges": [
+    [
+     5023015,
+     5023025
+    ]
+   ],
+   "title": "Generosity and Respect for Property",
+   "key_verse": [
+    5023024,
+    5023024
+   ],
+   "reflect": [
+    {
+     "text": "God gave His people rules for how to care for one another and respect each other's work. In Deuteronomy, someone walking through a neighbor's vineyard or grainfield could eat their fill to satisfy immediate hunger. But they were not allowed to take grain with a sickle or fill a basket to carry away. These commands show God's care for hungry travelers while keeping clear boundaries.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As D. A. Carson points out, these laws strike a wise balance. They avoid the extremes of strict selfishness on one hand and taking away all private property on the other. Allowing someone to eat on the spot softens hard walls between neighbors and builds a community where people look out for one another. It offers quick relief to those in need without placing an unfair burden on the person who owns the field.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At the same time, forbidding baskets and sickles stopped people from stealing. It protected the owner's honest labor and kept incentives for hard work intact. God's laws show us that true generosity and respect for what belongs to others go hand in hand.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can we balance being generous to people in need while also respecting other people's hard work?",
+    "What is one practical way you can show care to a neighbor this week?"
+   ],
+   "prayer": "Lord God, thank You for Your wise laws that teach us to love our neighbors well. Help us to share what we have with people who are in need, and give us respect for the work and property of others. Teach us to live together in genuine kindness and peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible – Deut. 23, Psalms 112—113, Isaiah 50, and Revelation 20",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/deut-23-psalms-112-113-isaiah-50-revelation-20/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

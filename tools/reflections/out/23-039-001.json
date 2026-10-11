@@ -1,0 +1,81 @@
+{
+ "id": "23-039-001",
+ "title": "Hezekiah Shows His Treasures",
+ "refs": [
+  "Isaiah 39:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23039001,
+   "end": 23039008,
+   "ref": "Isaiah 39:1-8",
+   "ranges": [
+    [
+     23039001,
+     23039008
+    ]
+   ],
+   "title": "Remembering the Giver in Good Times",
+   "key_verse": [
+    23039004,
+    23039004
+   ],
+   "reflect": [
+    {
+     "text": "King Hezekiah was a good king whom God had healed, but he was not the perfect savior his people needed. When visitors came from Babylon, he welcomed them and proudly showed off all his silver, gold, and weapons. Instead of telling them how God had rescued him, he wanted to impress them and win foreign friends. He made the mistake of treating God like an emergency helper for hard times, while relying on his own wealth when life was good.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Beneath this display was the danger of pride. As F. B. Meyer reminds us, we must learn the habit of \"looking from the gifts to the Giver.\" Hezekiah forgot that everything he owned had come from God, and that he was only a manager of the Lord's blessings. Showing off to Babylon brought a heavy consequence. Isaiah warned that all this treasure, and even Hezekiah's own family, would one day be carried away into exile.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Our choices often shape our spiritual walk. When God blesses us, we can easily grow proud and let our guard down. Although Hezekiah accepted the prophet's hard message with humble thanks, his mistake is a clear warning for us. True faith means walking with God every day, trusting Him just as deeply in times of peace as we do in hard times.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When things are going well, do you tend to take credit for your blessings or thank God for them?",
+    "How can you rely on God today instead of treating Him only as help for emergencies?"
+   ],
+   "prayer": "Lord, thank You for all the good things You have given us. Forgive us when pride creeps in and we take credit for Your gifts. Help us to trust You every day, in good times just as much as in hard times. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 39:4",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Hezekiah's Failure",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/hezekiahs-failure"
+    },
+    "D3": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - August 8",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-aug-8-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

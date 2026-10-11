@@ -1,0 +1,127 @@
+{
+ "id": "02-033-012",
+ "title": "The Promise of God’s Presence",
+ "refs": [
+  "Exodus 33:12-23"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2033014,
+   "end": 2033014,
+   "ref": "Exodus 33:14",
+   "ranges": [
+    [
+     2033014,
+     2033014
+    ]
+   ],
+   "title": "\"My Presence Will Go with You\"",
+   "key_verse": [
+    2033014,
+    2033014
+   ],
+   "reflect": [
+    {
+     "text": "Life often brings major decisions and difficult crossroads. When you face an unknown path, it is easy to feel alone and anxious. Moses felt that same uncertainty when he had to lead God's people forward. He wondered how he could carry such a heavy weight on his own.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God did not tell Moses to solve every problem by himself. Instead, He promised His own guiding presence. As Charles Spurgeon wrote, \"The Lord Himself will keep us company.\" His presence includes His care, favor, and power. Trusting that God accompanies us removes fear and second-guessing, replacing our worry with quiet peace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This promise means we do not have to wait until our journey is over to find peace. God gives us rest even while we are moving forward or facing hard trials. To be with God is true rest, because the Prince of Peace is with us in every step we take.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What difficult choice or journey is causing you to worry today?",
+    "How does knowing God is with you relieve the pressure to figure everything out on your own?"
+   ],
+   "prayer": "Lord, thank You for promising to go with us wherever we are called to walk. When we feel anxious about the road ahead, remind us that we are never alone. Give us Your peace, and teach our hearts to rest in Your presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 27",
+     "on": "Exodus 33:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Cindi McMenamin",
+     "work": "When You Long for Rest",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/when-you-long-for-rest-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 2033012,
+   "end": 2033023,
+   "ref": "Exodus 33:12-23",
+   "ranges": [
+    [
+     2033012,
+     2033023
+    ]
+   ],
+   "title": "Sheltered in the Rock",
+   "key_verse": [
+    2033022,
+    2033022
+   ],
+   "reflect": [
+    {
+     "text": "Like Moses, believers often long to see God and behold His glory. Yet God's radiant holiness is so pure and powerful that sinful human beings cannot look directly upon His face and live. His majesty is far greater than mortal eyes can bear.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "In His mercy, the Lord made a way to reveal Himself safely. He placed Moses in the cleft of a rock and covered him with His hand. God allowed His goodness to pass by while shielding Moses from His face, showing grace even while protecting His servant from consuming glory.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God's sheltering care points us to something even greater. The invisible God has now made Himself known to us through Jesus Christ coming in human flesh. We also hold the hope that when Jesus returns, our faith will become sight, and we will finally see Him face to face.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Why is it comforting to know that God protects us even as He reveals His goodness?",
+    "How does looking at Jesus help you understand who the invisible God is?"
+   ],
+   "prayer": "Almighty God, Your holiness and glory are greater than we can comprehend. Thank You for sheltering us in Your mercy and revealing Your goodness through Jesus Christ. Help us trust Your Word until the day our faith becomes sight. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Kim Riddlebarger",
+     "work": "Seeing God Face to Face",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/seeing-god-face-face"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

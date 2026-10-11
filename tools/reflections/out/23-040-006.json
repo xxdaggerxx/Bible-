@@ -1,0 +1,66 @@
+{
+ "id": "23-040-006",
+ "title": "The Enduring Word",
+ "refs": [
+  "Isaiah 40:6-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23040006,
+   "end": 23040008,
+   "ref": "Isaiah 40:6-8",
+   "ranges": [
+    [
+     23040006,
+     23040008
+    ]
+   ],
+   "title": "God's Word Stands Forever",
+   "key_verse": [
+    23040008,
+    23040008
+   ],
+   "reflect": [
+    {
+     "text": "Old, well-preserved things can connect us to history. When we look back at what has survived through the years, it gives us helpful perspective in our modern trials. In an even greater way, the ancient Scriptures have stood the test of time. People have attacked and criticized the Bible for centuries, but it has never lost its power.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Human life and all our achievements are temporary. Isaiah says that people are like grass, and all their glory is like the flowers of the field. They bloom for a moment, and then they wither and fall away. Earthly creations quickly fade, but God's word remains solid and unshaken through every age.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Resting on this enduring truth gives us strong footing for the future. We do not have to worry about what is fading around us. Instead, trusting God's permanent word fills us with fresh courage, gratitude, and the stamina we need to face every trial ahead.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Which fading earthly achievements are you tempted to rely on instead of God's enduring word?",
+    "How does knowing that the Scriptures have survived centuries of attacks give you courage today?"
+   ],
+   "prayer": "Lord, thank you that your word never fades or loses its power. When earthly things wither around us, help us find our footing in your lasting truth. Please grant us courage, gratitude, and stamina to face whatever lies ahead. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Something Old",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/article-library/individual/something-old"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

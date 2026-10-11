@@ -1,0 +1,125 @@
+{
+ "id": "13-001-001",
+ "title": "From Adam to Abraham",
+ "refs": [
+  "1 Chronicles 1:1-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 13001001,
+   "end": 13001001,
+   "ref": "1 Chronicles 1:1",
+   "ranges": [
+    [
+     13001001,
+     13001001
+    ]
+   ],
+   "title": "\"Adam, Seth, Enosh\"",
+   "key_verse": [
+    13001001,
+    13001001
+   ],
+   "reflect": [
+    {
+     "text": "Reading these ancient names can feel like walking through an old graveyard. These men lived, loved, and suffered, but now only their names remain on the page. In this world, our own lives will pass away just as quickly, like grass in a field. Yet every single person fulfilled a necessary part in God's plan. They passed on the torch of life to the next generation, preparing the way for those who followed, and each one was known and loved by God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's careful attention to all these names shows that He also cares for every detail of our lives today. Your struggles and hardships are not random accidents. God directs all things with purpose, calling you to trust Him completely rather than depending only on your own human understanding.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God directs every detail of your life help you trust Him with current hardships?",
+    "Are you relying on Jesus for spiritual life today rather than leaning on your own understanding?"
+   ],
+   "prayer": "Lord God, thank You that our lives are never forgotten or overlooked by You. Help us to trust Your good purposes in our hardships instead of relying on our own understanding. Keep us united to Jesus Christ so that our lives bring glory to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 1:1",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D3": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - May 11, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-may-11-2010-11631409.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "God was sovereignly guiding each generation along the way toward the Messiah. The first Adam brought death through sin, but he points us forward to Jesus Christ, the last Adam, who gives us life-giving spiritual renewal. For this reason, F. B. Meyer urges us to be \"grafted into the second — the Lord Jesus\" so that we may produce fruit for God.",
+     "problem": "Neither the passage nor the cited devotionals state that the first Adam brought death through sin."
+    }
+   ],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 13001001,
+   "end": 13001027,
+   "ref": "1 Chronicles 1:1-27",
+   "ranges": [
+    [
+     13001001,
+     13001027
+    ]
+   ],
+   "title": "Anchored in Real History",
+   "key_verse": [
+    13001027,
+    13001027
+   ],
+   "reflect": [
+    {
+     "text": "Long lists of family names can seem repetitive and dry when we first read them. Yet when we take time to pray and look closely, we discover important spiritual truths under the surface. This opening chapter firmly anchors God's covenant people in real space-and-time history, showing that our faith rests on solid ground.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The biblical writer places Adam in the very same family line as well-known ancestors like Abraham. Scripture does not weave made-up myths into genuine human history. Every name in this family record belonged to a real person who walked this earth, showing us that the Bible tells the true story of humanity.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Remembering this real historical lineage gives believers reassuring certainty as we walk with God today. Our Christian faith is not built on clever human inventions or imaginative fairy tales. It is rooted in what God has actually done across human generations, giving us confidence to trust Him every day.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that the Bible records real human history strengthen your trust in God's promises?",
+    "When you read parts of the Bible that feel dry, how can prayer help you discover God's truth there?"
+   ],
+   "prayer": "Heavenly Father, thank You for anchoring our faith in real human history rather than clever myths. Open our eyes to see Your truth even in long family records. Give us quiet confidence each day as we walk with You, trusting all that You have done. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Kevin DeYoung",
+     "work": "What You Find In Your Quiet Times",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/kevin-deyoung/what-you-find-in-your-quiet-times/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "02-030-017",
+ "title": "The Bronze Basin",
+ "refs": [
+  "Exodus 30:17-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2030017,
+   "end": 2030021,
+   "ref": "Exodus 30:17-21",
+   "ranges": [
+    [
+     2030017,
+     2030021
+    ]
+   ],
+   "title": "Continual Cleansing for God's Priests",
+   "key_verse": [
+    2030020,
+    2030020
+   ],
+   "reflect": [
+    {
+     "text": "God commanded Moses to place a bronze basin of water between the tent of meeting and the altar. Aaron and his sons were instructed to wash their hands and their feet every time they approached to serve the Lord, so that they would not die. This basin was not an object to be used once and then set aside. The priests had to wash there again and again throughout their service.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Just as our physical bodies require regular washing long after we are born, Christians need continual spiritual cleansing after being born again. We sometimes make the mistake of viewing the gospel as only a starting message meant for unbelievers. Yet Scripture calls all believers a kingdom of priests, and we still need the gospel's purifying power applied to our hearts every day.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We need this ongoing cleansing because we still stumble into sin. Thankfully, Christ does not leave us to clean ourselves. He continually washes His people through His blood, renews us by the Holy Spirit, and intercedes for us before the Father.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you tend to think of the gospel only as an entry point for faith, or do you look to it every day for cleansing?",
+    "What sins or burdens do you need to bring to Christ today for His washing and renewal?"
+   ],
+   "prayer": "Lord God, thank You for the ongoing cleansing we have in Jesus Christ. Forgive us for the times we treat the gospel as something we only needed at the beginning of our faith. Wash our hearts by Your Holy Spirit and help us to walk before You with clean hands and a clear conscience today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Daniel R. Hyde",
+     "work": "Continually Washed by the Gospel",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/continually-washed-gospel"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

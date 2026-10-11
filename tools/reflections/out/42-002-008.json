@@ -1,0 +1,150 @@
+{
+ "id": "42-002-008",
+ "title": "The Shepherds and the Angels",
+ "refs": [
+  "Luke 2:8-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 42002019,
+   "end": 42002019,
+   "ref": "Luke 2:19",
+   "ranges": [
+    [
+     42002019,
+     42002019
+    ]
+   ],
+   "title": "\"Treasured Up All These Things\"",
+   "key_verse": [
+    42002019,
+    42002019
+   ],
+   "reflect": [
+    {
+     "text": "Mary heard the amazing report brought by the shepherds and did not let it slip away. She held these events in her memory, thought deeply about what they meant, and embraced them with her whole heart. To ponder means to weigh something carefully. Instead of skimming across the surface like a bird over water, she let the truth sink down deep. She was not just thinking about surprising events; she was deeply valuing Jesus Himself.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "We can follow Mary's quiet example every day. Our minds may not always understand everything God does, but our love can still hold tightly to Christ. Taking time to treasure His goodness gives our faith a quiet place to grow strong. Delighting in the Lord and cherishing the people around us opens our eyes to see God at work, helping us speak hope and life to others.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What truths about Jesus have you heard recently that you need to take time to weigh and treasure in your heart?",
+    "How might quietly cherishing God's goodness help you speak words of encouragement to someone today?"
+   ],
+   "prayer": "Lord Jesus, teach us to treasure Your work in our hearts instead of hurrying past it. Help our minds to meditate on Your truth and our love to hold You fast. May Your goodness fill our lives so that we bring hope and light to others. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 27",
+     "on": "Luke 2:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "Catherine Claire Larson",
+     "work": "The Treasurers",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-april-10-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 42002008,
+   "end": 42002020,
+   "ref": "Luke 2:8-20",
+   "ranges": [
+    [
+     42002008,
+     42002020
+    ]
+   ],
+   "title": "Good News of Great Joy",
+   "key_verse": [
+    42002010,
+    42002010
+   ],
+   "reflect": [
+    {
+     "text": "In the middle of an ordinary night shift, simple shepherds were startled by the shining glory of God. Their initial terror gave way to great joy when an angel announced that the promised Savior had arrived to rescue mankind. This good news was not reserved for a special few. People from every walk of life need Jesus, and God chose humble workers to receive this wonderful invitation first.",
+     "sources": [
+      "D4",
+      "D6",
+      "D7"
+     ]
+    },
+    {
+     "text": "The shepherds did not remain frozen in their fear or hesitate in the fields. They hurried straight to Bethlehem to see the newborn King for themselves. Experiencing the reality of Christ firsthand changed everything for them. When you receive life-changing news, you naturally feel an urgent desire to tell others, and the shepherds immediately began telling everyone they met what they had witnessed.",
+     "sources": [
+      "D4",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "How does the good news that Jesus came to save all people give you joy today?",
+    "What keeps you from telling others about the peace and forgiveness you have found in Christ?"
+   ],
+   "prayer": "Father, thank You for sending Your Son to rescue us and for bringing good news to everyday people. Fill our hearts with holy wonder so that our lives overflow with praise. Give us boldness to share the message of Jesus with everyone who needs Him. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 26",
+     "on": "Luke 2:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 28",
+     "on": "Luke 2:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Adrian Rogers",
+     "work": "Are You Excited to Share the Good News?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-december-20-2023.html"
+    },
+    "D6": {
+     "author": "Lynette Kittle",
+     "work": "The Shepherds’ Invitation: Come and See",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/the-shepherds-invitation-come-and-see-the-crosswalk-devotional.html"
+    },
+    "D7": {
+     "author": "Will Graham",
+     "work": "Will Graham Advent Devotional Week Two: Shepherds",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/articles/will-graham-advent-devotional-week-two-shepherds"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "When the shepherds returned to their fields, they were filled with holy wonder and praise. What they saw with their own eyes matched exactly what the Lord had told them. As Charles Spurgeon wrote, \"holy wonder will lead you to grateful worship.\" When we look at Jesus and receive His promised rest and peace, our hearts are filled with awe. That deep joy moves us to praise God and boldly share His gospel with the world.",
+     "problem": "Neither D1, D3, nor the passage teaches that this joy moves us to boldly share the gospel with the world; this application comes from D4 and D6, which are not cited for this paragraph, while D1 notes that quiet believers may not be able to imitate the shepherds in telling others."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

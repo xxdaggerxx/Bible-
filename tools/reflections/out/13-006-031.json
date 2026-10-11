@@ -1,0 +1,67 @@
+{
+ "id": "13-006-031",
+ "title": "The Temple Musicians",
+ "refs": [
+  "1 Chronicles 6:31-47"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13006031,
+   "end": 13006047,
+   "ref": "1 Chronicles 6:31-47",
+   "ranges": [
+    [
+     13006031,
+     13006047
+    ]
+   ],
+   "title": "Ministering with Song Before the Lord",
+   "key_verse": [
+    13006033,
+    13006033
+   ],
+   "reflect": [
+    {
+     "text": "In this family record, Heman is remembered simply as a singer who served before the house of the Lord. That brief description tells us a great deal about his character. It would be a wonderful thing if our lives could also be remembered for serving God with song. God calls us to be singers not just on Sundays or with our voices alone, but continually and from deep within our hearts, even in seasons of grief.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "To live as singers in every circumstance requires three things. First, God Himself must place the new song in our mouths. Second, we must be fully surrendered and dedicated to Him, offering our whole lives as a sacrifice. Third, we must stay close to God and avoid straying into a foreign land, where the Lord's song cannot be sung.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Singing to the Lord brings heaven into our hearts and quickens our steps when the journey feels long and weary. F. B. Meyer reminds us that praise turns every act into thanksgiving and scares off the devil. Even when life feels dark or lonely, singing to God brightens our way and carries us through the deepest valleys.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is your heart singing praise to God throughout each day, or only when life is easy?",
+    "What might help you offer your whole life to God so that your daily tasks become acts of praise?"
+   ],
+   "prayer": "Lord, please place a new song in our mouths so that we may praise You in every season. Help us give ourselves completely to You and stay close to Your presence each day. When our path feels dark or weary, lift our hearts with songs of thanksgiving. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 6:33",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

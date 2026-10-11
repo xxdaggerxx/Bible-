@@ -1,0 +1,79 @@
+{
+ "id": "48-002-001",
+ "title": "The Council at Jerusalem",
+ "refs": [
+  "Galatians 2:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 48002001,
+   "end": 48002010,
+   "ref": "Galatians 2:1-10",
+   "ranges": [
+    [
+     48002001,
+     48002010
+    ]
+   ],
+   "title": "Freedom, Fellowship, and Caring for Others",
+   "key_verse": [
+    48002009,
+    48002009
+   ],
+   "reflect": [
+    {
+     "text": "Paul went to Jerusalem to stand up for the true message of Jesus. Some people wanted Gentile believers to follow religious rules, such as circumcision, to be saved. Paul refused to give in to them. Trying to earn God's acceptance through our own effort or good performance only leads us back into spiritual slavery. True freedom comes when we rest in Christ alone, knowing that grace is completely enough.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The leaders in Jerusalem welcomed Paul and Barnabas with the right hand of fellowship. These apostles came from different backgrounds and had distinct callings, but they did not demand that everyone look or serve the exact same way. Christian unity does not mean cloning ourselves. Instead, we are invited to notice God's grace at work in other people and encourage them in the work God has prepared for them.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "The leaders asked only that Paul remember the poor, which he was eager to do. God could easily give wealth to all His children, but He allows some to experience need. This gives those with enough a sweet opportunity to show genuine love for Jesus through deeds, not just words. When we care for fellow believers who lack resources, Jesus receives our kindness as if it were done directly to Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you tempted to rely on your own good performance rather than resting in the grace of Christ?",
+    "How can you partner with or support other believers whose backgrounds or ministry callings look different from yours?"
+   ],
+   "prayer": "Lord, thank You for the freedom we have through grace rather than our own striving. Teach us to welcome our brothers and sisters in Christ with open hearts and to celebrate the different ways You work in each of us. Open our eyes to those in need around us, and give us willing hands to show our love for You through our care for them. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 17",
+     "on": "Galatians 2:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "John Sartelle",
+     "work": "For the Love of Slavery",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/love-of-slavery"
+    },
+    "D3": {
+     "author": "Beth Moore",
+     "work": "Day 302: Galatians 2:1–10",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-302-galatians-2-110.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

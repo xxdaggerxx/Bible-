@@ -1,0 +1,133 @@
+{
+ "id": "19-097-001",
+ "title": "Let the Earth Rejoice",
+ "refs": [
+  "Psalms 97:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19097011,
+   "end": 19097011,
+   "ref": "Psalms 97:11",
+   "ranges": [
+    [
+     19097011,
+     19097011
+    ]
+   ],
+   "title": "\"Light Is Sown for the Righteous\"",
+   "key_verse": [
+    19097011,
+    19097011
+   ],
+   "reflect": [
+    {
+     "text": "Doing what is right often feels costly. When we choose obedience, make sacrifices, or bear pain patiently, it can feel like throwing good grain into the cold ground. A farmer scatters valuable seed and watches it disappear beneath the dirt. Sowing can feel discouraging because we give up something precious today without seeing what will come of it tomorrow.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "We naturally look for an immediate harvest, but God's light is often planted deep before it springs up. F. B. Meyer notes how ancient forests were buried in the earth to give us warmth and light long after. In the same way, every quiet choice to honor God is a seed that will one day yield a rich crop. Even when others misunderstand us, Spurgeon reminds us we need not rush. God has appointed a certain harvest of peace and song for everyone who walks uprightly with Him.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life does doing what is right feel hidden or unrewarded right now?",
+    "How can trusting God's promised harvest help you wait with patience today?"
+   ],
+   "prayer": "Lord, thank You that no act of obedience is wasted in Your sight. When doing right feels hard or goes unnoticed, give us patience to trust Your timing. Fill our hearts with quiet hope as we wait for the gladness You have promised to bring. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 23",
+     "on": "Psalms 97:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 97:11",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19097001,
+   "end": 19097012,
+   "ref": "Psalms 97:1-12",
+   "ranges": [
+    [
+     19097001,
+     19097012
+    ]
+   ],
+   "title": "The Lord Reigns over All",
+   "key_verse": [
+    19097001,
+    19097001
+   ],
+   "reflect": [
+    {
+     "text": "The opening truth of this psalm gives us solid ground for peace: the Lord reigns as King over all things. Great storms, flashing lightning, and shaking mountains remind us of His supreme majesty. He holds complete power over the earth, the rage of the seas, and every rising and falling ruler. Even dark spiritual forces and death itself are held under His firm control. Because God sits on a throne built on righteousness and justice, we have no reason to be shaken by the troubles around us.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "Standing before such a holy and mighty King calls for a change in how we live. His pure majesty exposes the wrong in our hearts and leads us to turn from hidden sins. Scripture tells those who love the Lord to hate evil. Sin once blinded our eyes to Jesus, poisoned our lives, and pulled us toward ruin before God's grace rescued us. Spurgeon reminds us that the best cure for loving wrong things is to stay close to Jesus. Walking with Him keeps our conscience clean and fills us with genuine joy under His safe rule.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Which truths about God's sovereign rule bring comfort to you when the world feels chaotic?",
+    "How does remembering what sin once did in your life help you turn away from evil today?"
+   ],
+   "prayer": "Almighty God, You reign in justice and power over every storm, ruler, and fear. Search our hearts, forgive our secret sins, and help us turn completely away from evil. Keep us walking close to Jesus each day, resting in the safety of Your kingdom. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 7",
+     "on": "Psalms 97:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 12",
+     "on": "Psalms 97:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "Ann Spangler",
+     "work": "Praying the Names of God - October 7",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/prayingnamesgod/praying-the-names-of-god-october-19.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

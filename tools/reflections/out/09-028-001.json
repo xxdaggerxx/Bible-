@@ -1,0 +1,66 @@
+{
+ "id": "09-028-001",
+ "title": "The Philistines Gather against Israel",
+ "refs": [
+  "1 Samuel 28:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9028001,
+   "end": 9028006,
+   "ref": "1 Samuel 28:1-6",
+   "ranges": [
+    [
+     9028001,
+     9028006
+    ]
+   ],
+   "title": "When God Seems Silent",
+   "key_verse": [
+    9028006,
+    9028006
+   ],
+   "reflect": [
+    {
+     "text": "When King Saul saw the large Philistine army gathered for war, terror gripped his heart. He called out to the Lord for help, but heaven remained completely silent. God did not speak to him in dreams, through the sacred lots, or by the prophets. Saul desperately wanted guidance, but he heard nothing.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord did not withhold His voice for no reason. Throughout his reign, Saul sometimes felt sorry when trouble came, but he consistently refused genuine repentance, which means turning completely away from sin to obey God. Saul's ongoing, unconfessed disobedience had cut him off from hearing the Lord. He wanted deliverance from his enemies, yet he was unwilling to submit his life to God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When God seems quiet in our lives, He may be waiting for us to face specific sins we have ignored. Before we ask Him to rescue us from hard situations, we must come to Him with honest confession. He desires our wholehearted obedience and repentance far more than quick relief from our troubles.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any unconfessed sin in your life that you need to bring to God today?",
+    "When you face difficult circumstances, do you seek God only for relief or also for the grace to obey Him?"
+   ],
+   "prayer": "Lord, search our hearts and reveal any sin we have tried to hide from You. Forgive us for times when we have only wanted an easy way out of trouble instead of real repentance. Teach us to listen to Your voice and follow You with honest, obedient hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 36: 1 Samuel 28:1–7",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-36-1-samuel-28-17.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

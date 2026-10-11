@@ -1,0 +1,60 @@
+{
+ "id": "02-029-038",
+ "title": "The Daily Offerings",
+ "refs": [
+  "Exodus 29:38-44"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2029038,
+   "end": 2029044,
+   "ref": "Exodus 29:38-44",
+   "ranges": [
+    [
+     2029038,
+     2029044
+    ]
+   ],
+   "title": "Meeting God at the Door",
+   "key_verse": [
+    2029042,
+    2029042
+   ],
+   "reflect": [
+    {
+     "text": "In Exodus, God commanded His people to bring burnt offerings every single day, once in the morning and once at twilight. These gifts were brought right to the entrance of the Tent of Meeting. That sacred doorway was the special place where the Lord promised to meet His people and speak with them. A linen fence with only one gate surrounded the holy dwelling of God, clearly separating His pure presence from the camp outside.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This ancient boundary helps us understand what Jesus has done for us. That physical curtain pictures the righteousness of Christ, which sets believers apart from the ways of the world. Just as there was only one entrance into the Tabernacle, Jesus serves as the true Door for everyone who trusts in Him. When we come through Him, we are welcomed into real, lasting fellowship with God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing Jesus is the Door change the way you approach God each day?",
+    "In what ways does following Christ set your life apart from the world?"
+   ],
+   "prayer": "Lord God, thank You for providing a way for us to meet with You. Thank You for Jesus, the true Door, who makes us clean and brings us near to Your presence. Help us to live set apart for You and to walk in close fellowship with You today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Jan. 27, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-jan-27-2010-11625420.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

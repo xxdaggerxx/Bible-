@@ -1,0 +1,135 @@
+{
+ "id": "02-012-014",
+ "title": "The Feast of Unleavened Bread",
+ "refs": [
+  "Exodus 12:14-28"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2012026,
+   "end": 2012027,
+   "ref": "Exodus 12:26-27",
+   "ranges": [
+    [
+     2012026,
+     2012027
+    ]
+   ],
+   "title": "\"What Does This Service Mean to You?\"",
+   "key_verse": [
+    2012026,
+    2012026
+   ],
+   "reflect": [
+    {
+     "text": "God commanded Israel to celebrate the Passover as an ongoing memorial of their rescue from Egypt. He designed this special meal so it would awaken the natural curiosity of their children. When the young ones asked what the celebration meant to them, parents had a clear and intentional opening to teach them about the Lord's great saving power.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "In Egypt, the blood of a slaughtered lamb on the doorframe kept judgment away from Israelite homes. That sacrifice pointed forward to Jesus Christ as the true Lamb of God. Today, believers find safe shelter from divine judgment only through the sacrifice of Jesus. Remembering what He did turns our hearts toward deep gratitude for His death and resurrection.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because of this, Christian parents are challenged to build meaningful family traditions at home. Setting aside regular times to talk about God's rescue gives parents repeated chances to communicate the gospel of grace to their children.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What family habits or conversations help you remember how God has rescued you?",
+    "How can you share the story of Jesus with the younger people around you?"
+   ],
+   "prayer": "Lord God, thank You for sending Jesus as the true Lamb to save us from judgment. Help us remember Your faithfulness with grateful hearts. Teach us to share the good news of Your grace with the next generation. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Lynette Kittle",
+     "work": "A Prayer to Remember God’s Faithfulness at Passover",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-to-remember-gods-faithfulness-at-passover-your-daily-prayer.html"
+    },
+    "D2": {
+     "author": "One Year Devotions for Men",
+     "work": "Passover - One Year Devotions for Men",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/passover-one-year-devotions-for-men-may-19.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 2012014,
+   "end": 2012028,
+   "ref": "Exodus 12:14-28",
+   "ranges": [
+    [
+     2012014,
+     2012028
+    ]
+   ],
+   "title": "A Holy Feast and an Innocent Substitute",
+   "key_verse": [
+    2012014,
+    2012014
+   ],
+   "reflect": [
+    {
+     "text": "God commanded Israel to keep the Feast of Unleavened Bread as a lasting memorial that combined worship with active remembering. Eating bread without yeast reminded the people of their hurried exit from Egypt and their calling to live as a separate, holy nation. Because yeast often represents sin in Scripture, this practice reminds believers today to remove sinful compromises from their personal lives and churches.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "God also told the people to pause from daily work during this time. This commands believers to stop worldly striving and rest peacefully in God's presence. At the same time, Moses told the elders to put the lamb's blood on their doorframes so the destroyer would pass over them. This event revealed an essential biblical truth: guilty people are spared only when an innocent substitute dies in their place.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "That first Passover finds its complete fulfillment in Jesus Christ through the new covenant. Christ is our true Passover Lamb, and we are called to trust Him completely as our Deliverer.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there sinful habits or compromises that you need to remove from your daily life?",
+    "How does knowing Christ is your innocent substitute allow you to stop striving and rest in Him?"
+   ],
+   "prayer": "Heavenly Father, thank You for providing Jesus Christ as the innocent substitute for our sins. Show us any compromises in our lives that we need to turn away from. Help us stop our worldly striving so we may rest quietly in Your presence. Amen.",
+   "sources": {
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Exodus 12:21-51, Luke 15, Job 30, 1 Corinthians 16",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/exodus-1221-51-luke-15-job-30-1-corinthians-16/"
+    },
+    "D4": {
+     "author": "Tammy Kennington",
+     "work": "What is the Feast of Unleavened Bread in the Bible?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/what-feast-of-unleavened-bread-bible.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

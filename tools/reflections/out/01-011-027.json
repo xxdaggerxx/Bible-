@@ -1,0 +1,66 @@
+{
+ "id": "01-011-027",
+ "title": "Terah’s Descendants",
+ "refs": [
+  "Genesis 11:27-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1011027,
+   "end": 1011032,
+   "ref": "Genesis 11:27-32",
+   "ranges": [
+    [
+     1011027,
+     1011032
+    ]
+   ],
+   "title": "Following God the Whole Way",
+   "key_verse": [
+    1011031,
+    1011031
+   ],
+   "reflect": [
+    {
+     "text": "Terah set out with his family from Ur to go to Canaan, but when they reached Haran, they stopped and settled down. God calls us to worship him alone rather than turning to the idols and values of the world around us. Following God requires trusting his quiet guidance and continuing forward wherever he leads us, even when that path pushes us beyond what is familiar and comfortable.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It is easy to halt midway and delay our obedience, but settling early can leave our spiritual life dry and barren. Full obedience asks us not to stay comfortable in Haran when God has called us toward Canaan. Even when the road feels long or uncertain, God remains true to every promise he has made.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Living by faith is not just for our own walk today. We are also called to guard our trust in the Lord and pass it faithfully down to our children and future generations. When we continue forward in faith, we help show those who follow us how to trust God with their whole lives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any area in your life where you have stopped halfway instead of following God fully?",
+    "How can you help share your faith in God with the next generation?"
+   ],
+   "prayer": "Lord, help us to worship you alone and not the false things around us. Give us strength to keep moving forward in faith instead of settling where it is easy. Please keep our hearts close to your promises and help us pass this faith on to those who come after us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Sylvia Schroeder",
+     "work": "What Can We Learn from Abraham’s Father Terah?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/what-we-learn-abrahams-father-terah.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

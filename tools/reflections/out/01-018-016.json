@@ -1,0 +1,83 @@
+{
+ "id": "01-018-016",
+ "title": "Abraham Intercedes for Sodom",
+ "refs": [
+  "Genesis 18:16-33"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1018016,
+   "end": 1018033,
+   "ref": "Genesis 18:16-33",
+   "ranges": [
+    [
+     1018016,
+     1018033
+    ]
+   ],
+   "title": "Drawing Near to Plead for Others",
+   "key_verse": [
+    1018025,
+    1018025
+   ],
+   "reflect": [
+    {
+     "text": "Abraham stepped forward to speak with the Lord about the city of Sodom. He approached God with deep humility and holy fear, remembering that he was only dust and ashes before the Creator. Yet he did not stay silent. He boldly drew close to plead for others, asking step by step for mercy. As F. B. Meyer noted, \"We never get so near God as when we plead for others.\"",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Sometimes we struggle to keep praying when we do not see immediate answers, and we are tempted to give up. But God never grew tired or annoyed with Abraham's repeated requests. Even though God's eternal plans never fail or change, prayer is never pointless. Scripture shows that God chooses to use our prayers as the very means through which He carries out His good will.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because God invites us to talk with Him, we can bring our requests with confident faith. When God seems to wait, He is drawing us deeper into His presence. We are called to persist in prayer for our families, our neighborhoods, and our nations, trusting that the Judge of all the earth welcomes our cries and will always do what is right.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you pray for other people, do you come to God with both boldness and humble reverence?",
+    "Who in your community or family can you persist in praying for this week?"
+   ],
+   "prayer": "Lord God, thank You for inviting us to draw near and speak to You. Teach us to pray with humble hearts and bold faith, never giving up as we ask for Your mercy. Please use our prayers for our neighbors and nations according to Your good will. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 18:23",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "God-Moving Prayer",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-moving-prayer"
+    },
+    "D3": {
+     "author": "Michael A. Youssef, Ph.D.",
+     "work": "Abraham’s Persistent Prayer",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-july-6-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

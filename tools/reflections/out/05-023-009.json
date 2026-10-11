@@ -1,0 +1,67 @@
+{
+ "id": "05-023-009",
+ "title": "Uncleanness in the Camp",
+ "refs": [
+  "Deuteronomy 23:9-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5023009,
+   "end": 5023014,
+   "ref": "Deuteronomy 23:9-14",
+   "ranges": [
+    [
+     5023009,
+     5023014
+    ]
+   ],
+   "title": "A Holy Camp for God's Presence",
+   "key_verse": [
+    5023014,
+    5023014
+   ],
+   "reflect": [
+    {
+     "text": "When the people of Israel went out to battle, they had to be especially careful to keep their camp clean and free from evil. Their battles were not theirs to fight alone. God Himself walked through the camp to protect them and give them victory over their enemies. As F. B. Meyer notes, the battle was not theirs, but God's.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God was present among them, the camp had to be holy, set apart for Him. Even ordinary physical uncleanness had to be covered and removed. If God saw anything offensive as He walked through the camp, He would turn away. His presence with them depended on their care to stay clean.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This gives us a deep lesson in our own fight against temptation and evil. God is always walking through the everyday avenues of our lives. He sees our secret habits, our relationships, and our quiet thoughts. If we want to rely on His presence and power to deliver us, we must keep our hearts and lives clean so we do not cause Him to turn away.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What hidden thoughts or habits do you need to bring to God so your daily life stays clean before Him?",
+    "How does knowing that God walks with you change how you face temptation today?"
+   ],
+   "prayer": "Lord, search our hearts today and reveal anything that displeases You. Help us keep our thoughts and daily ways clean as You walk beside us. Thank You for fighting our battles and staying near to protect us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Deuteronomy 23:14",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,136 @@
+{
+ "id": "24-017-012",
+ "title": "Jeremiah’s Prayer for Deliverance",
+ "refs": [
+  "Jeremiah 17:12-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 24017014,
+   "end": 24017014,
+   "ref": "Jeremiah 17:14",
+   "ranges": [
+    [
+     24017014,
+     24017014
+    ]
+   ],
+   "title": "\"Heal Me, O LORD\"",
+   "key_verse": [
+    24017014,
+    24017014
+   ],
+   "reflect": [
+    {
+     "text": "When our bodies or souls hurt, we quickly see our limits. Human effort and willpower cannot break the grip of sin, addiction, or deep discouragement. As Charles Spurgeon reminds us, it is \"the sole prerogative of God to remove spiritual disease.\" Human doctors can care for our bodies, but only the Lord has the ultimate power to heal both body and heart.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God invites us to come to Him just as we are, whether our faith feels weak or our lives feel messy. We do not need clever or polished words when we pray. We can simply ask Him for help with an honest heart. When we surrender our struggles to Jesus, He begins to restore us. He can take our brokenness and turn it into a message of hope that encourages others.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "The final burden of healing does not rest on our shoulders or on any doctor. It belongs entirely to God. Even when physical healing does not come in the way we want, we can rest knowing that God remains good, in control, and completely trustworthy.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What habit, hurt, or sickness do you need to bring to God instead of trying to fix it by your own strength?",
+    "How can trusting Jesus as the Great Physician give you peace today, even when answers take time?"
+   ],
+   "prayer": "Lord, heal us in body and soul, because only You have the power to make us whole. Forgive us for trying to fix our brokenness by our own strength, and teach us to surrender our struggles to You. Thank You for holding our lives in Your wise and loving hands. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 30",
+     "on": "Jeremiah 17:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Micca Monda Campbell",
+     "work": "When Your Mess Becomes Your Message",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-jan-25-2010-11625304.html"
+    },
+    "D4": {
+     "author": "Wendy van Eyck",
+     "work": "A Prayer of Healing for Sick Family and Friends",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-of-healing-for-sick-family-and-friends-your-daily-prayer-february-17-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 24017012,
+   "end": 24017018,
+   "ref": "Jeremiah 17:12-18",
+   "ranges": [
+    [
+     24017012,
+     24017018
+    ]
+   ],
+   "title": "A Refuge in the Storm",
+   "key_verse": [
+    24017017,
+    24017017
+   ],
+   "reflect": [
+    {
+     "text": "We often wish the Christian life were always smooth and bright with sunshine. Yet believers face seasons of darkness and heavy clouds. When trouble arrives, we might wonder if God has forgotten us or if our faith is failing. But walking with God does not mean we will escape hardship. Even His dearest children must walk through difficult trials.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we are young in faith, God often gives us a gentle path, caring for us like a tender lamb. But as we grow, He permits rougher weather to build our spiritual strength. Hard times strip away our self-reliance, which is our bad habit of trusting in ourselves rather than in God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Winds and storms have a good purpose in our lives. They blow away our pride and plant our roots deeper into Jesus Christ. When trouble surrounds us, we discover that God is our true shelter, and we learn just how precious our hope in Him really is.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways have recent hard times shown you the danger of relying on your own strength?",
+    "How has God proved to be your safe refuge when storms have hit your life?"
+   ],
+   "prayer": "Lord, thank You for being our safe shelter when life feels dark and hard. Use the trials we face to pull us away from self-reliance and root our faith deeper in Christ. Help us to find our quiet peace in You today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 29",
+     "on": "Jeremiah 17:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

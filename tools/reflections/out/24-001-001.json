@@ -1,0 +1,137 @@
+{
+ "id": "24-001-001",
+ "title": "The Call of Jeremiah",
+ "refs": [
+  "Jeremiah 1:1-19"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 24001005,
+   "end": 24001005,
+   "ref": "Jeremiah 1:5",
+   "ranges": [
+    [
+     24001005,
+     24001005
+    ]
+   ],
+   "title": "\"Before I Formed You in the Womb\"",
+   "key_verse": [
+    24001005,
+    24001005
+   ],
+   "reflect": [
+    {
+     "text": "Before you took your first breath, God already knew you completely. He had a clear purpose for your life before you were even formed. We often look at our personal weaknesses and insecurities and wonder if God can really use us. Yet our perceived shortcomings never cancel God's calling. He understands every season and detail of our lives, and He sets us apart to live differently from the culture around us as we share His truth with others.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "True success in life never comes from chasing worldly approval. Instead, it comes from discovering the personal plan God has prepared for you. God uniquely shaped your personality, spiritual gifts, abilities, and life experiences to point you toward your calling. He understands both your strengths and your limits. As you pray, read His Word, and take obedient next steps, the Lord will faithfully supply all the strength and help you need.",
+     "sources": [
+      "D3",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "What gifts, abilities, or experiences has God given you that might point toward His purpose for your life?",
+    "In what area of your life do you need to seek God's direction rather than the approval of others?"
+   ],
+   "prayer": "Lord God, thank You for knowing and loving me before I was born. Help me to trust the gifts and path You have given me instead of focusing on my weaknesses. Guide my steps each day as I seek to follow Your Word and honor You. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Rick Warren",
+     "work": "God’s Plans for You Started Before You Were Born",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-may-30-2017.html"
+    },
+    "D5": {
+     "author": "Emma Danzey",
+     "work": "Before I Knew You, I Formed You",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/before-i-knew-you-i-formed-you-the-crosswalk-devotional.html"
+    },
+    "D6": {
+     "author": "Mary Southerland",
+     "work": "What’s the Plan?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-october-17-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 24001001,
+   "end": 24001019,
+   "ref": "Jeremiah 1:1-19",
+   "ranges": [
+    [
+     24001001,
+     24001019
+    ]
+   ],
+   "title": "God Calls and Protects His Servant",
+   "key_verse": [
+    24001008,
+    24001008
+   ],
+   "reflect": [
+    {
+     "text": "God called Jeremiah to speak to Judah during a painful time of moral decline. Even though Jeremiah felt too young and shrank back from such a heavy task, God had already ordained his prophetic mission in eternity past. This reminds us that God sovereignly gives a purpose to every believer, and He deeply values human life from the moment of conception. When God calls us into service, our lack of experience or personal weakness does not hinder Him. He gladly displays His strength through our weakness.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "Jeremiah did not need to invent his own message or choose his own audience. He simply had to speak what God commanded and rely on God's strength. We face the same call to follow our marching orders without letting fear take hold. When fear creeps in, cowardice can lead us into sin. Charles Spurgeon urged believers to \"fear to fear,\" reminding us that God is always with His servants in the struggle. People may oppose or ridicule us, but the Lord will deliver us and provide all we need.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When are you most tempted to let fear or feelings of inadequacy stop you from obeying God?",
+    "How does the promise of God's presence give you courage when facing difficult situations?"
+   ],
+   "prayer": "Lord, help us not to shrink back in fear when You call us to obey Your Word. Give us courage to stand firm and trust that You are always present to deliver us. Teach us to rely on Your power rather than our own strength. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 13",
+     "on": "Jeremiah 1:6-7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 17",
+     "on": "Jeremiah 1:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Jeremiah the Weeping Prophet",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jeremiah-weeping-prophet"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "24-005-014",
+ "title": "Judgment Proclaimed",
+ "refs": [
+  "Jeremiah 5:14-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24005014,
+   "end": 24005031,
+   "ref": "Jeremiah 5:14-31",
+   "ranges": [
+    [
+     24005014,
+     24005031
+    ]
+   ],
+   "title": "The Weak Sand and God's Great Power",
+   "key_verse": [
+    24005022,
+    24005022
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God reminds His people of His power by pointing to the ocean shore. A single grain of sand seems completely insignificant. Yet the Lord uses soft banks of sand to stop the surging sea. Man-made stone walls can be broken by the waves, but God commands the waters to stay within their borders.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "F. B. Meyer pointed out that sand is a picture of God's humble people. In difficult times, persecutors have attacked the church like raging waves. Still, God answered the quiet prayers and patient tears of ordinary believers, turning back their foes. The Lord delights to bring down pride by using things the world thinks are weak.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When our troubles seem like a storm we cannot survive, we can trust the God who guards the shore. As F. B. Meyer wrote, 'What cannot His power accomplish for me' when storms rage? We do not need worldly strength, because God's power is shown in our quiet patience and trust.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When trials feel like overwhelming waves, how does remembering God's rule over creation help you?",
+    "In what ways can you bring quiet patience and prayer to a difficult situation today?"
+   ],
+   "prayer": "Lord God, You set limits for the oceans and control the greatest storms. Thank You for using weak and humble people to show Your mighty power. Help us to trust Your protection and rely on You when troubles surround us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 5:22",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

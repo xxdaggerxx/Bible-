@@ -1,0 +1,67 @@
+{
+ "id": "10-012-026",
+ "title": "The Capture of Rabbah",
+ "refs": [
+  "2 Samuel 12:26-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10012026,
+   "end": 10012031,
+   "ref": "2 Samuel 12:26-31",
+   "ranges": [
+    [
+     10012026,
+     10012031
+    ]
+   ],
+   "title": "Forgiven and Restored to Useful Service",
+   "key_verse": [
+    10012029,
+    10012029
+   ],
+   "reflect": [
+    {
+     "text": "After David's terrible fall into sin, we might expect his victories to come to an end. Rabbah was the very place connected to the death of Uriah. Yet when Joab sent word that the city was about to fall, David led the army and captured it. This shows us how God responds to those who are truly sorry and confess their wrong.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we turn from our sin, God does far more than just pardon us. As F. B. Meyer notes, God not only forgives, but \"reinstates in opportunities of usefulness.\" In the same way that Jesus later restored Peter after he denied Him, God gave David back his place of service. God's grace, His undeserved kindness, is greater than our worst failures.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Sometimes people who have stumbled fear they can never serve God again. If we doubt God's complete forgiveness, we will hold ourselves back. God wants us to dare to believe in His restoring love, knowing He can still give us meaningful work and victories for Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever felt that past failures disqualified you from being useful to God?",
+    "How does knowing that God restores the repentant encourage you to serve Him again?"
+   ],
+   "prayer": "Lord, thank You for Your abundant grace and complete forgiveness when we turn to You in sorrow for our sins. Please heal our doubts and help us trust Your restoring love. Give us the courage to step forward and serve You faithfully once more. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Samuel 12:29",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "35-001-005",
+ "title": "The LORD’s Answer",
+ "refs": [
+  "Habakkuk 1:5-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 35001005,
+   "end": 35001011,
+   "ref": "Habakkuk 1:5-11",
+   "ranges": [
+    [
+     35001005,
+     35001011
+    ]
+   ],
+   "title": "Sheltered from the Evening Wolves",
+   "key_verse": [
+    35001008,
+    35001008
+   ],
+   "reflect": [
+    {
+     "text": "Habakkuk describes a ruthless enemy whose cavalry attacks like hungry evening wolves. Charles Spurgeon notes that a wolf at sunset is fierce because it has spent the day hungry. In a similar way, our fears and doubts can grow ferocious after an exhausting day. When we face troubles at work or unkind words from others, anxious thoughts howl in our minds, asking where God is. These worries swallow up every comfort and leave us feeling just as empty.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Dark times also make us vulnerable to spiritual attacks and misleading teachers who try to scatter God's people. When our day is gloomy and faith feels weak, these threats fall upon us to tear down our trust. Yet Jesus is the Great Shepherd who laid down his life for his flock. He protects us from every harm and makes us lie down in quiet rest.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God can also do a wonderful work of grace, his undeserved favor, in the hardest lives. He has the power to change fierce opponents into gentle, teachable believers, causing the wolf to live peacefully with the lamb. Because the Lord rules over every power, we can bring both our anxious fears and our fiercest enemies to him in prayer.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or doubts tend to howl in your mind when you are worn out by a difficult day?",
+    "How can remembering Jesus as your protecting Shepherd bring you peace tonight?"
+   ],
+   "prayer": "Lord Jesus, you are the Great Shepherd who watches over your sheep. Slay our hungry doubts and quiet our troubled minds with your peace. Guard your people against every danger, and let your grace soften even the hardest hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 10",
+     "on": "Habakkuk 1:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

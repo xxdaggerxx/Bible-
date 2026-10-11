@@ -1,0 +1,75 @@
+{
+ "id": "42-001-046",
+ "title": "Mary’s Song",
+ "refs": [
+  "Luke 1:46-56"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42001046,
+   "end": 42001056,
+   "ref": "Luke 1:46-56",
+   "ranges": [
+    [
+     42001046,
+     42001056
+    ]
+   ],
+   "title": "God Lifts Up the Lowly",
+   "key_verse": [
+    42001052,
+    42001052
+   ],
+   "reflect": [
+    {
+     "text": "Our world often celebrates fame, power, and promoting oneself. Mary did the exact opposite. When she learned she would carry the Savior, she did not look for praise or think of herself as great. Instead, she pointed all the honor toward God. She was amazed that the holy God would care for a lowly servant like her. Mary shows us that God is magnified when our souls rejoice in Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Mary knew the ancient scriptures well. She recognized that God always works by choosing what the world treats as weak and unimportant. The Lord does not look for powerful rulers to help Him. Instead, He displays His true strength by rescuing those who cannot save themselves. He scatters those who are proud and self-sufficient, but He welcomes the humble.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God's holiness runs directly against human pride. If we try to rely on our own importance, we miss His kindness. But when we come to Him acknowledging our need, He extends His generational mercy to us. He lifts up the lowly and fills hungry hearts with good things.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to rely on your own strength or seek recognition from others?",
+    "How can you bring your weakness to God today and find joy in His mercy?"
+   ],
+   "prayer": "Father, thank You that You look upon the weak and humble with mercy. Forgive us when we depend on our own pride or seek the praise of this world. Teach us to find our deepest joy in You, trusting Your great power to lift us up.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "The Holy and the Lowly",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/the-holy-and-the-lowly-one-year-devotions-for-men-january-26.html"
+    },
+    "D2": {
+     "author": "David Mathis",
+     "work": "A Christmas Carol for the Weak",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/a-christmas-carol-for-the-weak"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,76 @@
+{
+ "id": "36-001-001",
+ "title": "Zephaniah Prophesies Judgment on Judah",
+ "refs": [
+  "Zephaniah 1:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 36001004,
+   "end": 36001005,
+   "ref": "Zephaniah 1:4-5",
+   "ranges": [
+    [
+     36001004,
+     36001005
+    ]
+   ],
+   "title": "\"Swear by the Lord and by Milcom\"",
+   "key_verse": [
+    36001005,
+    36001005
+   ],
+   "reflect": [
+    {
+     "text": "In Zephaniah's day, some people tried to keep one foot in each camp. They went to worship the Lord, but they also bowed down to the false god Milcom. They seemed to think this divided loyalty would keep them safe. Yet God detests double-dealing. Attempting to worship both the Lord and worldly idols is a dangerous compromise that displeases God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God asks for all of our devotion, not just a share of it. As Charles Spurgeon wrote, \"Christ will be all or nothing.\" God's judgment rightly comes upon those who say they belong to Him while holding on to evil in secret. Because the Lord rules over all, He leaves no room in our hearts for rival masters.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This passage calls us to examine ourselves honestly. It is easy to look like a faithful Christian on the outside through religious habits. But we need to ask if our hearts are truly right with God. True faith turns away from worldly compromises and rests on Christ alone.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where you try to follow God while also holding on to worldly compromises?",
+    "What helps you give your whole heart and undivided loyalty to Christ?"
+   ],
+   "prayer": "Lord, search our hearts and reveal any divided loyalty within us. Forgive us for the times we have tried to compromise between Your truth and worldly desires. Give us grace to turn away from every rival god and follow Jesus with our whole being. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 14",
+     "on": "Zephaniah 1:4-5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Truth For Life",
+     "work": "Guilty of Double-dealing",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-november-14-2015.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,156 @@
+{
+ "book": 19,
+ "chapter": 121,
+ "first": 1,
+ "last": 8,
+ "ref": "Psalms 121",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "A traveler looks up toward the mountains and asks where his help will come from. Hills in the ancient world were full of steep trails, wild animals, and robbers, showing how weak human travelers are on their own. The question reminds us that true safety cannot be found in human strength or earthly power.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars view this psalm as the song of an exile living on the plains of Babylon, looking longingly toward the distant mountains of his homeland.",
+     "sources": [
+      "https://biblehub.com/commentaries/psalms/121-1.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The speaker answers his own question with complete confidence. Real help comes only from the Lord, who created the entire universe out of nothing. Because God made both heaven and earth, no danger or difficulty is too big for Him to handle.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The Lord promises to keep our feet steady on rough and slippery ground so that we do not stumble into ruin. Unlike human watchmen who grow tired and need rest, God never dozes off on His watch. We can walk through life with peace because our Guardian is always alert.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine explained that a person's foot slips through pride, just as the devil fell, so this verse is a prayer for God to keep believers humble and steady in love.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801121.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The watchful care promised to the individual traveler also shields the entire family of God. The Lord stands guard over Israel like an untiring sentinel through the darkest night, never falling into a light slumber or deep sleep. Because God never closes His eyes, His church is always safe.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine taught that Christ is the true keeper of Israel who never sleeps, and that believers must look to Him rather than trusting in human leaders who doze and die.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801121.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The Lord Himself serves as a personal protector and shelter for each believer. He stays right by our side at our right hand, ready to defend us in battle and refresh us in heavy labor. His presence is like a cool shade protecting a weary traveler from intense heat.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine understood the right hand as a symbol of our faith and eternal hope, with God protecting our spiritual life rather than worldly comforts.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801121.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "God shields His people from the burning sun during the day and from the damp, chilling cold of the night. This means the Lord protects His children around the clock, both from obvious dangers and from hidden perils. We can trust Him to keep us safe in all seasons and at all hours.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine interpreted these forces spiritually, where the burning sun represents wrong ideas about God and the moon represents false teachings about the Church.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801121.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The Lord promises to guard His people against all real evil and to preserve their souls. This does not mean believers will never face pain, but that trials will not be allowed to destroy their spiritual life. Whatever happens to our earthly bodies, our inner life is secure with God forever.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine pointed to Christian martyrs who lost their physical bodies, showing that God's promise to preserve the soul refers to eternal life rather than saving the earthly body from death.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801121.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "Going out and coming in describes all the daily work, travels, and routines of life from morning until evening. It also pictures the whole span of our days, from our beginnings in youth to our final departure at death. God's watchful care over His children never ends and will safely lead us into eternity.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 1: removed sources ['Spurgeon']",
+  "v. 2: removed sources ['Spurgeon']",
+  "v. 3: removed sources ['Spurgeon']",
+  "v. 7: removed sources ['Spurgeon']",
+  "v. 8: removed sources ['Spurgeon']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,69 @@
+{
+ "id": "15-008-024",
+ "title": "Priests to Guard the Offerings",
+ "refs": [
+  "Ezra 8:24-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 15008024,
+   "end": 15008031,
+   "ref": "Ezra 8:24-31",
+   "ranges": [
+    [
+     15008024,
+     15008031
+    ]
+   ],
+   "title": "Guarding What God Has Entrusted to Us",
+   "key_verse": [
+    15008029,
+    15008029
+   ],
+   "reflect": [
+    {
+     "text": "Ezra and the returning exiles had to carry an enormous treasure of gold and silver across a dangerous desert. Instead of relying on human soldiers, Ezra trusted in God's protective hand. At the same time, he set apart consecrated priests and Levites to guard these sacred gifts. As Ligonier Ministries notes, appointing holy caretakers protected the wealth from outside bandits and guarded against internal dishonesty.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This journey shows a relationship of shared trust. F. B. Meyer called this a \"reciprocal trust.\" God promised to keep the travelers safe on their perilous way, while the priests had to take care of the sacred vessels of His house. In the same way, we commit our lives and our future safely into God's hands, and He entrusts us with sacred gifts like His Word and the gospel. He calls us to guard what He gives us with integrity until our journey is complete.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What sacred truths or gifts has God entrusted to your care?",
+    "How can you show integrity and faithfulness in guarding what God has given you?"
+   ],
+   "prayer": "Lord God, thank You for watching over us and keeping us safe in every danger. Help us to be faithful and honest caretakers of the gospel and Your holy Word. Grant us clean hearts so that we may guard Your truth and honor You all our days. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezra 8:29",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Journey to Jerusalem",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/journey-to-jerusalem"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

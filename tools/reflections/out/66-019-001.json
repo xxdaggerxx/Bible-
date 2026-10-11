@@ -1,0 +1,66 @@
+{
+ "id": "66-019-001",
+ "title": "Rejoicing in Heaven",
+ "refs": [
+  "Revelation 19:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66019001,
+   "end": 66019005,
+   "ref": "Revelation 19:1-5",
+   "ranges": [
+    [
+     66019001,
+     66019005
+    ]
+   ],
+   "title": "Praising Our Sovereign God",
+   "key_verse": [
+    66019001,
+    66019001
+   ],
+   "reflect": [
+    {
+     "text": "John hears the roar of a great multitude shouting praise to God in heaven. This vision reminds us of the wonderful future awaiting God's people when Christ returns for His bride. Earthly wedding celebrations cannot compare to that glory. Salvation is a holy promise, binding us to Him with a pledge of belonging. God has even given believers the Holy Spirit as an enduring seal. Remembering this glorious future should lead our hearts into immediate worship today.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Around us, rapid technological shifts and changes in society remind us that God's word and its prophecies are trustworthy. When the world feels unpredictable, we do not have to react with fear, confusion, or anger. God remains completely sovereign over all events, and He will accomplish His plans in His perfect timing. Knowing He rules should help us fix our eyes on Jesus' return and eagerly share the gospel with others while we have the opportunity.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing you belong securely to Christ help ease your worries about the changing world?",
+    "In what ways can you share the hope of Christ with someone this week?"
+   ],
+   "prayer": "Lord God, thank You for sealing us with Your Holy Spirit and promising us a joyful future with You. Help us not to fear the rapid changes around us, knowing You are completely in control. Give us courage to worship You faithfully and share the good news of Jesus with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "Espoused to Christ - Love Worth Finding - September 21",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-september-21.html"
+    },
+    "D2": {
+     "author": "Daily Disciples Ministries",
+     "work": "Daily Disciples - February 29",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-february-29.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

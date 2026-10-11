@@ -1,0 +1,75 @@
+{
+ "id": "03-021-001",
+ "title": "Holiness Required of Priests",
+ "refs": [
+  "Leviticus 21:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3021001,
+   "end": 3021015,
+   "ref": "Leviticus 21:1-15",
+   "ranges": [
+    [
+     3021001,
+     3021015
+    ]
+   ],
+   "title": "Called to Live as Holy Priests",
+   "key_verse": [
+    3021008,
+    3021008
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God gave strict instructions to the priests concerning their personal conduct, family relationships, and mourning customs. Because the priests represented the Lord before the people, they were held to a higher standard of accountability. God set these boundaries so that His holy name and His sanctuary would never be dishonored or treated as ordinary.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Through Christ, believers are now called to live as a royal priesthood. We are chosen to represent God continually and to set a godly example in the world. This separation for God touches the smallest details of life, including our home relationships, our choices of entertainment, and what we read. Actions that others might consider normal may not be right for someone set apart to serve the Lord.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Living up to such a high calling can feel impossible on our own. Yet God Himself promises to sanctify us, which means making us holy for His service. As F. B. Meyer notes, God sets us apart through \"the precious blood of Christ\" and the Holy Spirit, shaping our thoughts, desires, and daily choices to please Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing you represent the Lord change the way you choose your everyday entertainment and habits?",
+    "In what area of your personal or home life is God calling you to reflect His holiness more clearly?"
+   ],
+   "prayer": "Lord God, thank You for setting us apart to belong to You and represent You to the world. Please clean our hearts through the blood of Christ and guide us by Your Holy Spirit. Help us to honor Your holy name in every small detail of our daily lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 21:8",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 02/08/2003",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-02-or-08-or-2003-1184770.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

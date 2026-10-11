@@ -1,0 +1,74 @@
+{
+ "id": "46-006-001",
+ "title": "Lawsuits among Believers",
+ "refs": [
+  "1 Corinthians 6:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46006001,
+   "end": 46006008,
+   "ref": "1 Corinthians 6:1-8",
+   "ranges": [
+    [
+     46006001,
+     46006008
+    ]
+   ],
+   "title": "Resolving Disputes with Grace",
+   "key_verse": [
+    46006007,
+    46006007
+   ],
+   "reflect": [
+    {
+     "text": "Our culture often teaches us to demand our rights and take people to court whenever we feel wronged. Sadly, Christians can fall into this same trap. Instead of seeking direct reconciliation, believers sometimes drag each other before secular judges over everyday disagreements. Living this way ignores God's design, because securing a legal victory is never worth harming our own souls or damaging Christian love.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Paul explains that taking petty conflicts before outside courts shows spiritual pride rather than true wisdom. When we air our internal fights in front of unbelievers, we hurt the church's public witness. It dishonors the message of reconciliation, which is the good news of how God brought us into peaceful friendship with himself.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "While civil law serves an important purpose against evil, Christians must handle their own grievances with patience and grace. We should exhaust every option of private arbitration within the church family before looking outside. Protecting love and unity among believers is far more important than insisting on winning an argument.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When another believer treats you unfairly, do you focus on demanding your rights or on seeking peace?",
+    "How does resolving our conflicts with grace protect what others think about Jesus and his church?"
+   ],
+   "prayer": "Father, give us humble hearts when we face disagreements with other believers. Help us to pursue peace and treat others with patience rather than demanding our own way. May the way we forgive and resolve conflicts bring honor to your name.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Settling Disputes Among Believers",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/settling-disputes-among-believers"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "The Legal Swamp, Part One",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-june-6-7-2009-11604437.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

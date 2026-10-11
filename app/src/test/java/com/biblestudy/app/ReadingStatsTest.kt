@@ -4,6 +4,7 @@ import com.biblestudy.app.data.ChapterReading
 import com.biblestudy.app.model.BookInfo
 import com.biblestudy.app.ui.ReadingStats
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Test
 import java.time.LocalDate
 
@@ -56,5 +57,28 @@ class ReadingStatsTest {
         assertEquals("40 s", ReadingStats.duration(40))
         assertEquals("12 min", ReadingStats.duration(725))
         assertEquals("1 h 5 min", ReadingStats.duration(3900))
+    }
+
+    @Test
+    fun milestonesAreEarnedAndTheNearestIsNext() {
+        val chapters = (1..21).map { ChapterReading(43, it, 600, 1, 1, 0) }
+        val days = (0..7).map { Triple(today.minusDays(it.toLong()).toString(), 900, 0) }
+        val s = ReadingStats.compute(days, chapters, books, today)
+        val got = s.achievements.associate { it.id to it.earned }
+        assertEquals(true, got["first"])
+        assertEquals(true, got["week"]) // 8 days in a row
+        assertEquals(true, got["ten"])
+        assertEquals(true, got["book"]) // all of John
+        assertEquals(false, got["hours"]) // 2 hours
+        assertEquals(false, got["month"])
+        // This list of books has only John in the New Testament, so the Gospels and the NT are done.
+        assertEquals(21, s.achievements.single { it.id == "gospels" }.have)
+        assertEquals(true, got["nt"])
+        assertEquals(false, got["bible"])
+        val next = s.nextGoal!!
+        assertEquals(s.achievements.filter { !it.earned }.maxOf { it.progress }, next.progress, 0f)
+        // Nothing read: nothing earned, and the first step is next.
+        val none = ReadingStats.compute(emptyList(), emptyList(), books, today)
+        assertTrue(none.achievements.none { it.earned })
     }
 }

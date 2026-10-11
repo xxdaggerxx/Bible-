@@ -1,0 +1,76 @@
+{
+ "book": 19,
+ "chapter": 131,
+ "first": 1,
+ "last": 3,
+ "ref": "Psalms 131",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David turns directly to the Lord to state that he is free from pride. He checks himself in three places: his inner heart, his outward look toward others, and his daily ambitions. He did not seek honor beyond his place, nor did he demand to understand things God has kept hidden. True humility means accepting our station and walking faithfully within the calling God has set for us.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some commentators believe this psalm was written during the Babylonian captivity to show how humble Jewish captives learned to conduct themselves under foreign rulers, rather than being written directly by David.",
+     "sources": [
+      "Adam Clarke"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The writer describes calming his restless desires until his soul is peaceful. He pictures a weaned child who rests quietly against its mother, no longer fretting or crying for milk, but satisfied just to be with her. This quiet trust does not come naturally; it is won through discipline when God gently separates our hearts from worldly comforts so we find full satisfaction in Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Early Latin tradition read this verse as a warning against being separated from the simple milk of church faith too early, while medieval teachers compared weaning to moving from baptism into the mature discipline of confirmation.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801131.htm",
+      "https://www.newadvent.org/summa/3189.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Having shared his personal peace, the writer calls the entire nation to follow his example. Israel must set aside proud self-reliance and place all their confidence in the Lord. This patient hope must start in the present moment and continue without end.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine taught that Israel must hold to hope during this earthly life, because once believers reach eternity, hope will no longer be needed when God gives the reality itself.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801131.htm"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [
+  "v. 1: removed sources ['Keil & Delitzsch']",
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

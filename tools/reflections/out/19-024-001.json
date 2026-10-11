@@ -1,0 +1,137 @@
+{
+ "id": "19-024-001",
+ "title": "The Earth Is the LORD’s",
+ "refs": [
+  "Psalms 24:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19024001,
+   "end": 19024002,
+   "ref": "Psalms 24:1-2",
+   "ranges": [
+    [
+     19024001,
+     19024002
+    ]
+   ],
+   "title": "\"The Earth Is the LORD’s\"",
+   "key_verse": [
+    19024001,
+    19024001
+   ],
+   "reflect": [
+    {
+     "text": "Everything in this world belongs solely to God. The Lord made the land, the seas, and every living creature according to His own wisdom and design. Because He is the supreme Creator and Ruler, He sustains all things every single day. It makes no sense for human beings to critique or second-guess the way God made the world. Rather than doubting His creative order, we should praise Him and honor the work of His hands.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Remembering God's ownership changes how we live. We are not owners who can do whatever we please; we are temporary tenants trusted to take good care of His gifts. Greed often tempts people to use and abuse nature for selfish gain instead of honoring God's design. But when we remember that everything belongs to Him, we find real peace. We do not have to carry the weight of running the world. Even in our weakness, we can rest securely under His loving rule.",
+     "sources": [
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God owns everything change the way you care for His world and the things He has given you?",
+    "Where can you choose to rest in God's care today instead of feeling anxious about your life?"
+   ],
+   "prayer": "Lord, we praise You because the whole earth and everything in it belongs to You. Forgive us when we act like selfish owners instead of faithful caretakers. Help us to rest in Your loving care and honor You in all we do. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Jack Graham (PowerPoint Ministries)",
+     "work": "Finding God’s Goodness In Creation",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-march-4-2013.html"
+    },
+    "D5": {
+     "author": "Betty Dunn",
+     "work": "Why “the Earth Is the Lord's” Should Comfort and Convict Us",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/why-the-earth-is-the-lords-should-comfort-and-convict-us.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19024001,
+   "end": 19024010,
+   "ref": "Psalms 24:1-10",
+   "ranges": [
+    [
+     19024001,
+     19024010
+    ]
+   ],
+   "title": "Who May Ascend the Lord’s Hill?",
+   "key_verse": [
+    19024003,
+    19024003
+   ],
+   "reflect": [
+    {
+     "text": "Who can come near to God? The psalm tells us that God looks for clean hands and a pure heart. Outward obedience matters, but as Charles Spurgeon notes, \"true religion is heart-work.\" We cannot just wash the outside while our inner life stays unclean. We need our hands cleansed by Jesus, and our hearts made pure within. Those who truly seek God do not chase the empty pleasures of this world or speak deceitful lies. Instead, their joy is found in God, and their words are honest and true.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet we cannot win this battle for purity in our own strength. We need the King of glory to enter our lives. F. B. Meyer reminds us that it is not enough to acknowledge God on His throne in heaven; Christ must come inside to reign and guard our hearts against the enemy. When Jesus died and rose again, He proved He is the Lord mighty in battle. He defeated the powers of darkness and broke the power of guilt.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When we open our hearts to this victorious King, He makes His home with us and subdues our stubborn wills. He breaks our old hatred and sin, giving us peace. As He guards us from within, He also gives us strength to overcome temptation and live faithfully for Him in the world.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you seeking God with an honest, devoted heart, or are you chasing empty things that cannot satisfy?",
+    "In what areas of your daily life do you need to let Christ enter and take full control?"
+   ],
+   "prayer": "Lord Jesus, cleanse our hands and make our hearts pure by Your grace. Enter the doors of our lives and reign over our thoughts, words, and desires. Give us victory over sin as You guard our hearts in Your peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 4",
+     "on": "Psalms 24:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 3",
+     "on": "Psalms 24:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 24:7",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

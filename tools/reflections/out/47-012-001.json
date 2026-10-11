@@ -1,0 +1,66 @@
+{
+ "id": "47-012-001",
+ "title": "Paul’s Revelation",
+ "refs": [
+  "2 Corinthians 12:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 47012001,
+   "end": 47012004,
+   "ref": "2 Corinthians 12:1-4",
+   "ranges": [
+    [
+     47012001,
+     47012004
+    ]
+   ],
+   "title": "Caught Up to Paradise",
+   "key_verse": [
+    47012002,
+    47012002
+   ],
+   "reflect": [
+    {
+     "text": "Paul tells us about a man caught up to the third heaven, which he also calls Paradise. Scripture shows us three distinct heavens: the sky and atmosphere around the earth, outer space filled with stars and galaxies, and the third heaven above them all. No space telescope or scientific instrument can ever observe this third heaven, because it is the transcendent dwelling place of God Himself. While people often imagine God's presence as unimaginably distant and remote, His holy presence may actually be closer to us than we think.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Today, some people use dramatic spiritual stories or near-death claims to gain popularity and fame. Paul did the exact opposite. He waited fourteen years before mentioning this encounter, and he even spoke in the third person so he would not lift himself up over things he was not permitted to describe. True Christian validity does not rest on private mystical claims or remarkable visions. Instead, our faith is firmly anchored in public, readable truth, and it shines most clearly through joyful endurance in weakness and suffering.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you find yourself looking for dramatic spiritual encounters rather than resting in God's daily truth?",
+    "How can relying on the clear words of Scripture help you endure hard times with joy?"
+   ],
+   "prayer": "Lord God, thank You that Your presence is near to us even though Your heavenly dwelling is beyond human sight. Keep us from boasting or seeking attention for ourselves, and teach us to rely on the clear truth of Your Word. Help us to endure weakness with joy as we trust in You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "The Third Heaven",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-daily-devotion-oct-16-2012.html"
+    },
+    "D2": {
+     "author": "John Piper",
+     "work": "To Heaven and Back with No Fanfare",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/to-heaven-and-back-with-no-fanfare"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

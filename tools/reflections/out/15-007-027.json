@@ -1,0 +1,69 @@
+{
+ "id": "15-007-027",
+ "title": "Ezra Blesses God",
+ "refs": [
+  "Ezra 7:27-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 15007027,
+   "end": 15007028,
+   "ref": "Ezra 7:27-28",
+   "ranges": [
+    [
+     15007027,
+     15007028
+    ]
+   ],
+   "title": "The Gracious Hand of God",
+   "key_verse": [
+    15007028,
+    15007028
+   ],
+   "reflect": [
+    {
+     "text": "Ezra faced a massive task. He had to lead a great company of people across a dangerous desert, guard sacred treasures of gold and silver, and set up judges in the land. By his own strength, he was not equal to such a heavy calling. Yet he burst into praise, recognizing that earthly kings do not truly direct history. Powerful rulers may seem in charge, but God directs their hearts according to His own plans. Any kindness or favor Ezra received from the king came ultimately from the Lord's steadfast love.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Knowing that God's gracious hand was upon him gave Ezra courage to step out and lead. As F. B. Meyer writes, the hand that held Ezra is the very hand that \"holds the waters in its hollow\" and was later nailed to the cross. That divine touch brings strength to anyone walking the path God has set before them. When our duties feel far too big for us, we can ask God for help, trust His mighty care to protect us before others, and remember to thank Him when He provides.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What task are you facing right now that feels too big for your own strength?",
+    "How can you thank God today for the favor and help He has shown you through other people?"
+   ],
+   "prayer": "Lord God, thank You that You rule over all leaders and hold our lives securely in Your hands. When our daily callings feel heavier than we can bear, give us courage through Your gracious touch. Guide our steps, grant us favor in our work, and help us give all the praise to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezra 7:28",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Piety of Ezra",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/piety-of-ezra"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

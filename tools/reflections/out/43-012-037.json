@@ -1,0 +1,67 @@
+{
+ "id": "43-012-037",
+ "title": "Belief and Unbelief",
+ "refs": [
+  "John 12:37-50"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43012037,
+   "end": 43012050,
+   "ref": "John 12:37-50",
+   "ranges": [
+    [
+     43012037,
+     43012050
+    ]
+   ],
+   "title": "Coming Out of the Darkness",
+   "key_verse": [
+    43012037,
+    43012037
+   ],
+   "reflect": [
+    {
+     "text": "The world around us can feel as dark as midnight. In this passage, many people saw Jesus and his miracles, yet they still struggled to believe or were afraid to admit it. But Jesus cried out with a message of hope. He entered our world as a true light, so that anyone who trusts in him does not have to stay sitting in the gloom. That welcome is wide enough to include you and me.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Believing in Jesus means stepping out from the shadows of sin, doubt, and dread. As Charles Spurgeon reminds us, \"If we have faith we have the privilege of sunlight.\" Even when sadness or troubles hang over us like a heavy cloud, we do not need to remain trapped in the dark. Jesus came to lead us out into broad daylight.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus did not come to earth in vain. Just as the morning sun rises and scatters darkness across the land, Jesus brings freedom and joy to everyone who relies on him. When we look to him alone, we find hope and a new reason to rejoice each day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What dark worries or doubts are you holding onto right now?",
+    "How can looking to Jesus help you walk in his light today?"
+   ],
+   "prayer": "Lord Jesus, thank you for coming into our dark world to bring true light and life. Forgive us when fear or doubt keeps us from trusting you fully. Help us to look to you each day and enjoy the warmth of your light. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 10",
+     "on": "John 12:46",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

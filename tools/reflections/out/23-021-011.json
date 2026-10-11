@@ -1,0 +1,75 @@
+{
+ "id": "23-021-011",
+ "title": "The Burden against Edom",
+ "refs": [
+  "Isaiah 21:11-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23021011,
+   "end": 23021012,
+   "ref": "Isaiah 21:11-12",
+   "ranges": [
+    [
+     23021011,
+     23021012
+    ]
+   ],
+   "title": "Watchman, What of the Night?",
+   "key_verse": [
+    23021011,
+    23021011
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, a weary voice calls across the desert in the dark, asking the watchman how much of the night remains. The prophet stands on the heights looking for the first signs of dawn. His answer sounds mysterious: morning is coming, but night is coming too. For God's people, the morning brings relief and light, but for those living apart from God, a shadow of judgment still lingers.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Like the watchman, we need to stay alert in this present world. Sins and errors creep out in times of darkness, so we must watch and pray. Yet we do not watch alone. As Charles Spurgeon reminds us, our \"heavenly Protector foresees all the attacks\" and prays for us so that our faith will not fail. Even when the night feels long, Christ remains our steady guide, keeping all His promises secure.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The prophet's words look ahead to a final day. A glorious morning is coming when Christ returns for His people, bringing them home. But that same day will be a dark night for those who turn away from Him. Still, the watchman invites the seeker to come back and ask again. Anyone who turns from darkness to God will be welcomed into the joy of the morning.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily walk do you need to be more alert and watch unto prayer?",
+    "How does the promise of Christ's return bring you comfort in times of trouble?"
+   ],
+   "prayer": "Lord Jesus, thank You for being our faithful protector who watches over us in every dark hour. Help us to stay alert against temptation and to rest securely in Your promises. Bring light into our hearts today, and lead those who are lost in darkness to turn to You and find life. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 6",
+     "on": "Isaiah 21:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 21:11",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

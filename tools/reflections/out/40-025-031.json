@@ -1,0 +1,80 @@
+{
+ "id": "40-025-031",
+ "title": "The Sheep and the Goats",
+ "refs": [
+  "Matthew 25:31-46"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40025040,
+   "end": 40025040,
+   "ref": "Matthew 25:40",
+   "ranges": [
+    [
+     40025040,
+     40025040
+    ]
+   ],
+   "title": "\"You Did It for Me\"",
+   "key_verse": [
+    40025040,
+    40025040
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus talks about caring for vulnerable people, He says that showing them kindness is the same as serving Him directly. The world around us often overlooks or rejects those who are struggling. When we surrender our lives to Christ, we learn to look at others without judgment. Our quiet acts of genuine care often speak much louder than spoken words alone.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "We do not have to travel overseas to find people who need help. The brokenhearted are already in our neighborhoods and workplaces. Sometimes their need is physical, but often it is spiritual emptiness hidden behind busy routines or material wealth. Even the painful seasons we have walked through can help us notice and comfort those who are hurting.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Reaching out can feel awkward, and our minds quickly come up with excuses to stay safe. Yet stepping out of our comfort zone to answer God's gentle nudges lets us serve as Christ's hands and feet. Stepping into places of human need lets His light shine through us and brings true spiritual joy.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Who around you might be quietly hurting or overlooked today?",
+    "What fears or excuses tend to keep you from reaching out to someone in need?"
+   ],
+   "prayer": "Lord Jesus, give us eyes free from prejudice so we can see people as You see them. Help us lay aside our excuses and step out of our comfort zones to serve those who are hurting. Let Your love shine through our actions today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Tracie Miles",
+     "work": "Listen to Your Heart, Not Your Head",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-december-10-2018.html"
+    },
+    "D2": {
+     "author": "Laura MacCorkle",
+     "work": "Finding Your Calcutta",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-oct-24-2008-11583348.html"
+    },
+    "D3": {
+     "author": "Brian Kolodiejchuk",
+     "work": "A Prayer to Be the Hands and Feet of Christ",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-to-be-the-hands-and-feed-of-christ-your-daily-prayer-may-1-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

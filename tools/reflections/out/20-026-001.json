@@ -1,0 +1,67 @@
+{
+ "id": "20-026-001",
+ "title": "Similitudes and Instructions",
+ "refs": [
+  "Proverbs 26:1-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 20026001,
+   "end": 20026028,
+   "ref": "Proverbs 26:1-28",
+   "ranges": [
+    [
+     20026001,
+     20026028
+    ]
+   ],
+   "title": "Living Skillfully in a Complicated World",
+   "key_verse": [
+    20026020,
+    20026020
+   ],
+   "reflect": [
+    {
+     "text": "God gives us proverbs to help us live skillfully in everyday situations. These sayings are general guides rather than rigid rules that fit every single moment. Sometimes they place contrasting instructions side by side, such as whether to answer a foolish person or stay quiet. In those moments, we need discernment. We must evaluate the person and the situation to see if they are teachable before deciding how to respond.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Wisdom also shapes how we handle harmful talk from others. Just as a fire dies when it runs out of wood, conflicts quickly end when gossip stops spreading. When someone whispers an unkind rumor to you, you do not have to repeat it. As F. B. Meyer wrote, let it \"stop with you, locked in the secret of your own breast.\" Refusing to share malicious words keeps others from being deeply hurt.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When someone brings you an unkind story about another person, do you let the fire go out by keeping it to yourself?",
+    "How can you practice discernment before deciding whether to answer someone who is acting foolishly?"
+   ],
+   "prayer": "Lord, give us wisdom to understand our circumstances and to know when we should speak or stay silent. Help us evaluate whether others are open to learning before we respond to them. Please keep us from passing on gossip, and help us choose to let harmful words stop with us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Proverbs 26:20",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Proverbs",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/book-of-proverbs"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,61 @@
+{
+ "id": "23-008-001",
+ "title": "Assyrian Invasion Prophesied",
+ "refs": [
+  "Isaiah 8:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23008001,
+   "end": 23008010,
+   "ref": "Isaiah 8:1-10",
+   "ranges": [
+    [
+     23008001,
+     23008010
+    ]
+   ],
+   "title": "God Is With Us in Every Need",
+   "key_verse": [
+    23008010,
+    23008010
+   ],
+   "reflect": [
+    {
+     "text": "In difficult times, we can trust that God provides His personal care to every home and person. Long ago in the wilderness, the pillar of cloud by day and fire by night rested over the main tent of worship. Today, God offers that same constant guidance and light to each family. Even when loved ones are far away, we are kept together in God's care. In Him there is no true distance, because we all rest in His presence.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Through the Holy Spirit, God now makes His home in our hearts. He gives us direction when we must move forward, and He brings quiet rest when we need to stop. When life feels dark, His light shines most clearly. As F. B. Meyer writes, God is \"always adapting His help to our need.\" Whether we face a sudden storm or scorching heat, the Lord becomes our shield, keeping us safe because He is with us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of your life right now do you need God's guidance or protection?",
+    "How does knowing that God is close comfort you when loved ones are far away?"
+   ],
+   "prayer": "Lord, thank You for being with us and making Your home in our hearts. Please guide our steps today and bring light to our dark places. Protect our families wherever they are, and shelter us in every storm. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 8:7",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

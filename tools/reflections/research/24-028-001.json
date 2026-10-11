@@ -1,0 +1,17 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "https://billygraham.org/devotions",
+  "https://www.biblegateway.com/passage/?search=Jeremiah+28%3A1-11&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Jeremiah+28%3A5-17&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Jeremiah+28%3A5-9&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Jeremiah+28&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Jeremiah+28&version=KJV",
+  "https://www.biblegateway.com/passage/?search=Jeremiah+28&version=NASB",
+  "https://www.biblegateway.com/passage/?search=Jeremiah+28&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Jeremiah+28&version=NKJV",
+  "https://www.biblegateway.com/passage/?search=Jeremiah+28-29&version=NIV"
+ ],
+ "cost": 0.04033985,
+ "model": "google/gemini-3.8-flash"
+}

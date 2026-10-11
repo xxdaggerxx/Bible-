@@ -1,0 +1,98 @@
+{
+ "book": 28,
+ "chapter": 3,
+ "first": 1,
+ "last": 5,
+ "ref": "Hosea 3",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "God tells Hosea to go and love his unfaithful wife once again, mirroring the Lord's deep love for Israel. Even though the Israelites ran after false gods and enjoyed the raisin cakes offered at pagan feasts, God did not stop loving them. His mercy reaches out to save those who have wandered away and do not deserve His kindness.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholic commentary views the woman as a picture of repentant Israel waiting for full restoration, showing that God continues to offer grace and never hates sinners as persons.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/hcc/hosea-3.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Hosea pays fifteen pieces of silver along with a supply of barley to bring his wife back. This modest payment was about the price of an ordinary slave, and barley was considered the cheapest, coarsest food. The low cost showed the poor and desperate state she had fallen into, picturing how deeply ruined Israel was by sin.",
+   "meaning_sources": [
+    "Wesley",
+    "Keil & Delitzsch",
+    "Adam Clarke",
+    "https://biblehub.com/commentaries/pulpit/hosea/3.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Hosea tells the woman she must live quietly with him for a long time without being unfaithful or belonging to any other man. During this time of waiting, he also promises to remain faithful and keep himself for her. This period of quiet discipline gave her time to leave her old life behind and prepare for full reconciliation.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Adam Clarke",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Israel must endure a long period without any king or prince of their own, living like an abandoned widow. They would have neither lawful temple sacrifices nor pagan idols and sacred stones, leaving them without any public religious practice. God placed them in this isolated condition to cure them of false gods and strip away their pride.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "After this long season of discipline, the people of Israel will turn back and seek the Lord and David their king. This King David refers to the promised Messiah, Jesus Christ, who came from the royal line of David. They will come to God with reverent awe and trembling, drawn by a deep wonder at His mercy and goodness.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Methodists traditionally understand these last days as the gospel age that began with Christ's first coming.",
+     "sources": [
+      "https://wesley.nnu.edu/john-wesley/john-wesleys-notes-on-the-bible/notes-on-the-book-of-hosea/"
+     ]
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals believe this prophecy points ahead to a future thousand-year earthly reign of Christ, when the Jewish people will turn to Him.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/hosea-3/",
+      "https://www.studylight.org/commentaries/eng/gab/hosea-3.html"
+     ]
+    }
+   ],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

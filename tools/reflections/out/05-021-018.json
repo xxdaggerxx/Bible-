@@ -1,0 +1,73 @@
+{
+ "id": "05-021-018",
+ "title": "A Rebellious Son",
+ "refs": [
+  "Deuteronomy 21:18-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5021018,
+   "end": 5021021,
+   "ref": "Deuteronomy 21:18-21",
+   "ranges": [
+    [
+     5021018,
+     5021021
+    ]
+   ],
+   "title": "Dealing with Defiance in the Home",
+   "key_verse": [
+    5021018,
+    5021018
+   ],
+   "reflect": [
+    {
+     "text": "God takes persistent defiance in the family with utmost seriousness. This Old Testament passage was not an excuse for parents to mistreat a child. Rather, it addressed an older son who lived under his parents' roof and stubbornly refused to change his ways. The family turned to the town elders only after repeated, patient attempts at discipline had completely failed.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Disrespect toward parents is dangerous because it eventually leads to rebellion against God and the wider community. For this reason, parents carry a sacred duty to guide their children toward what is right. As Charles R. Swindoll warns, parents should not sacrifice their home's moral standards through passive neglect. Leaving a child undisciplined leaves them wholly unprepared for the real challenges of adult life.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "At the same time, guidance in the home must always be shaped by love. Discipline should never be given out of bitterness or a desire to get even. Its purpose is to correct and heal. Whenever correction is needed, parents should be quick to restore close fellowship and reassure their children of their ongoing love.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does respecting authority at home help prepare someone to honor God and others?",
+    "In what ways can correction in the family be handled with patience and love rather than anger?"
+   ],
+   "prayer": "Lord, help our families to honor You through mutual respect and wise guidance. Teach us to address disobedience with patience and love rather than bitterness. May our homes be places where truth is upheld and where warmth and fellowship are always restored. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Dealing with Defiance",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-june-4-2014.html"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 3/8/2001",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-3-or-8-or-2001-550292.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

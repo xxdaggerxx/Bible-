@@ -1,0 +1,61 @@
+{
+ "id": "24-024-001",
+ "title": "The Good and Bad Figs",
+ "refs": [
+  "Jeremiah 24:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24024001,
+   "end": 24024010,
+   "ref": "Jeremiah 24:1-10",
+   "ranges": [
+    [
+     24024001,
+     24024010
+    ]
+   ],
+   "title": "A Heart to Know the Lord",
+   "key_verse": [
+    24024007,
+    24024007
+   ],
+   "reflect": [
+    {
+     "text": "In this vision, God promised to give His people a heart to know Him. We do not truly know God only with our heads, but through our hearts and our love. When an unloving spirit enters our lives, it clouds our view of God, just as mist on a windowpane hides a lovely view outside. A heart that truly knows and loves God is not something we can manufacture by ourselves. It is His loving gift to us, and He invites us simply to ask Him for it.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God wants us to know Him as the unchanging Lord who comes down to rescue and save us. This truth matters most when we fall into sin or feel worn out by our repeated failures. As F. B. Meyer writes, our sins cannot \"surprise God, or staunch His love, or wear out His patience.\" He does not choose us because we are good or worthy in ourselves, but purely out of His tender mercy. He offers Himself to be our God and gives us the strength we need each day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any unloving attitude toward others in your heart that might be clouding your view of God?",
+    "When you feel discouraged by your own failures, how does knowing God's unending patience give you peace?"
+   ],
+   "prayer": "Lord, thank You for Your promise to give us a heart to know and love You. Forgive us when cold and unloving thoughts cloud our vision of who You are. Thank You that our weaknesses do not exhaust Your patience or turn away Your mercy. Please be our portion and the strength of our hearts today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 24:7",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

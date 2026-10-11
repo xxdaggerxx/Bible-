@@ -1,0 +1,149 @@
+{
+ "id": "40-027-032",
+ "title": "The Crucifixion",
+ "refs": [
+  "Matthew 27:32-44",
+  "Mark 15:21-32",
+  "Luke 23:26-43",
+  "John 19:16-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40027032,
+   "end": 40027044,
+   "ref": "Matthew 27:32-44; Mark 15:21-32; Luke 23:26-43; John 19:16-27",
+   "ranges": [
+    [
+     40027032,
+     40027044
+    ],
+    [
+     41015021,
+     41015032
+    ],
+    [
+     42023026,
+     42023043
+    ],
+    [
+     43019016,
+     43019027
+    ]
+   ],
+   "title": "Love and Mercy at the Cross",
+   "key_verse": [
+    42023033,
+    42023033
+   ],
+   "reflect": [
+    {
+     "text": "When the soldiers led Jesus away, He carried a burden far heavier than timber. Like the scapegoat of the Old Testament, He took upon Himself the guilt of our sins so that our wrongs might be carried away forever. He even refused the drugged wine offered to Him. He chose to endure the full measure of suffering required to rescue us, without turning aside to lessen the pain. As we watch Him walk to Calvary, we realize with sorrow that our own wrongdoing helped place that heavy load upon His shoulders.",
+     "sources": [
+      "D1",
+      "D4",
+      "D6"
+     ]
+    },
+    {
+     "text": "Even in the darkness of the crucifixion, Calvary is where we find our deepest comfort and see the boundless love of God. While enduring terrible pain, Jesus chose to forgive, asking His Father to pardon the people who harmed Him. He also welcomed a dying criminal who confessed his guilt and trusted in Jesus as King. To that helpless man, Jesus gave a certain promise of eternal paradise. In the middle of judgment, the cross displays grace, which is God's kindness to those who do not deserve it.",
+     "sources": [
+      "D5",
+      "D7",
+      "D8",
+      "D9",
+      "D10"
+     ]
+    },
+    {
+     "text": "This scene also shows us what it means to follow Jesus. Like Simon carrying the cross behind Him, believers are called to endure hardships and mockings in this life. Jesus saves us from sin and from God's final wrath, but He does not exempt us from daily trials. Yet we can take comfort knowing that Christ already carried the heaviest part of the burden. Our sorrows last only for a little while before giving way to everlasting glory with Him.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus bore the full punishment for your sin bring you comfort today?",
+    "In what area of your life can you let go of resentment and offer forgiveness to someone who hurt you?"
+   ],
+   "prayer": "Lord Jesus, thank You for bearing our sins and enduring the cross to save us from eternal judgment. Soften our hearts so we may trust in Your finished work and rest in the promise of eternal life with You. Help us to extend Your patient forgiveness to others and to follow You faithfully through every trial. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 3",
+     "on": "John 19:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 5",
+     "on": "Luke 23:26",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 8",
+     "on": "Luke 23:31",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 9",
+     "on": "Luke 23:27",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 10",
+     "on": "Luke 23:33",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D6": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 18",
+     "on": "Mark 15:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D7": {
+     "author": "Trisha Keehn",
+     "work": "Love Leads with Forgiveness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/beloved-women/beloved-women-september-10-2020.html"
+    },
+    "D8": {
+     "author": "Gabriel N.E. Fluhrer",
+     "work": "What Does Luke 23:43 Mean?",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/what-does-luke-23-43-mean"
+    },
+    "D9": {
+     "author": "Will Graham",
+     "work": "Will Graham Devotion: The Criminal on the Cross",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/articles/will-graham-devotion-the-criminal-on-the-cross"
+    },
+    "D10": {
+     "author": "Mark Jones",
+     "work": "The Most Unlikely Believer in the Bible",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-most-unlikely-believer-in-the-bible"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

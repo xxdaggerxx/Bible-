@@ -1,0 +1,127 @@
+{
+ "id": "23-050-004",
+ "title": "The Servant’s Obedience",
+ "refs": [
+  "Isaiah 50:4-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23050004,
+   "end": 23050004,
+   "ref": "Isaiah 50:4",
+   "ranges": [
+    [
+     23050004,
+     23050004
+    ]
+   ],
+   "title": "\"To sustain the weary with a word\"",
+   "key_verse": [
+    23050004,
+    23050004
+   ],
+   "reflect": [
+    {
+     "text": "Life can leave us deeply exhausted. Daily duties, long seasons of waiting, spiritual battles, or harsh criticism often drain our strength. If we do not address this deep tiredness, it can quietly put out our hope and steal our joy. Yet God does not leave us to struggle alone, nor does He offer a quick fix. Instead, He gives us His own tireless presence each day to uphold us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God also invites us to care for others who are worn out. Our words have great power, much like a hot flame that can either cut down or carefully mend. Careless comments burn and hurt people, but thoughtful speech brings life and lifts a fainting spirit. When we let our speech be shaped by God, our words can build others up instead of tearing them down.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "To be of help, we need to listen before we speak. God wakes us morning by morning so we can learn His will and receive an instructed ear. When we seek Him at the start of each day, He teaches us what to say. He gives us gentle, guided words that can bring comfort and strength to tired hearts.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What weariness are you carrying today that you need to hand over to God?",
+    "Who around you needs an encouraging, gentle word from you today?"
+   ],
+   "prayer": "Lord God, thank You for meeting me each morning with Your tireless care. Open my ears to listen to Your voice before I speak to others. Give me gentle, guided words today so I can bring comfort and strength to those who are weary. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Hope for the Weary - Today's Insight - March 8, 2021",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-march-8-2021.html"
+    },
+    "D3": {
+     "author": "Luann Prater",
+     "work": "Fire Up or Torch? - Encouragement Café - November 20",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/fire-up-or-torch-encouragement-cafe-january-13.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 23050004,
+   "end": 23050011,
+   "ref": "Isaiah 50:4-11",
+   "ranges": [
+    [
+     23050004,
+     23050011
+    ]
+   ],
+   "title": "The Lord God Will Help Me",
+   "key_verse": [
+    23050007,
+    23050007
+   ],
+   "reflect": [
+    {
+     "text": "These verses point forward to Jesus, the faithful Servant who gave His back to be beaten and His face to shame. When Christ died on the cross as our substitute, taking our place for our sins, He experienced true abandonment by the Father. Yet even in that awful suffering, Jesus placed His complete trust in God and set His face like flint.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because Jesus bore that sorrow for us, you will never be left alone. Our daily troubles are small compared to what our Lord endured for our sake. Since He stood firm and trusted God under such great weight, we can be confident that our heavenly Father will help us too.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Whatever tasks or hardships you face today, you can step forward with courage. You can say with true boldness, \"The Lord God will help me,\" as Charles Spurgeon reminds us. If the Almighty is on your side, nothing is too heavy for you to bear, and no shame or doubt needs to cloud your joy.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing Jesus was forsaken for you give you courage in your own trials?",
+    "What difficulty are you facing today where you need to rely on God's promised help?"
+   ],
+   "prayer": "Lord Jesus, thank You for suffering in my place so that I will never be abandoned. When trials and fears arise, help me to set my face like flint and trust in Your help. Take away my doubts and give me joy as I walk boldly with You today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 8",
+     "on": "Isaiah 50:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

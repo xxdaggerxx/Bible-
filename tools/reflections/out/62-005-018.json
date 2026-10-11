@@ -1,0 +1,66 @@
+{
+ "id": "62-005-018",
+ "title": "The True God",
+ "refs": [
+  "1 John 5:18-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 62005018,
+   "end": 62005021,
+   "ref": "1 John 5:18-21",
+   "ranges": [
+    [
+     62005018,
+     62005021
+    ]
+   ],
+   "title": "Kept Safe by the Son of God",
+   "key_verse": [
+    62005018,
+    62005018
+   ],
+   "reflect": [
+    {
+     "text": "We cannot keep our faith alive by our own personal strength. Left to ourselves, we would quickly fail. Instead, we rely completely on Jesus, who constantly prays for us and watches over us. Because He protects those who are born of God, sin no longer has dominating power over our daily lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This does not mean that Christians never make mistakes or do wrong things. We still stumble into sin. Even so, true believers will not stay in hardened, unrepentant rebellion against God. When you feel an earnest desire to repent and ask for forgiveness, it is proof that sin has lost its ultimate hold on your heart.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "While the world around us remains in the grip of the evil one, believers are kept completely safe from final spiritual destruction. Jesus guards you so that the enemy cannot destroy your soul. Knowing that He holds onto you gives you true peace each day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you stumble into sin, how does turning back to God show that He is at work in you?",
+    "In what ways can you lean on Jesus' protection rather than your own strength today?"
+   ],
+   "prayer": "Lord Jesus, thank You for watching over me and holding onto my faith when I am weak. Forgive me for the times I stumble, and give me a heart that quickly turns back to You in repentance. Help me to rest securely in Your protection today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "He Who Was Born of God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/he-who-was-born-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

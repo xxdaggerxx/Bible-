@@ -1,0 +1,67 @@
+{
+ "id": "19-044-001",
+ "title": "Redeem Us, O God",
+ "refs": [
+  "Psalms 44:1-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19044001,
+   "end": 19044026,
+   "ref": "Psalms 44:1-26",
+   "ranges": [
+    [
+     19044001,
+     19044026
+    ]
+   ],
+   "title": "You Are My King",
+   "key_verse": [
+    19044004,
+    19044004
+   ],
+   "reflect": [
+    {
+     "text": "The psalmist looks back at how God saved His people in the past, and then makes a personal declaration: God is his King. To truly say this from the heart, we must fully surrender ourselves to Him. Many believers struggle to find strength against strong temptations because they have never made this quiet, complete surrender. Our best human resolutions are easily washed away like sandcastles when the tide comes in.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus comes to us as both Prince and Savior, but He must be our ruler first. As F. B. Meyer notes, \"The kingship of Jesus is always associated with victory.\" When we honestly acknowledge His rule over our lives, He begins to take charge of our battles. Even when we feel weak and helpless, we can overcome because the Lord fights on our behalf.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When fierce temptations or heavy trials press in, we do not have to depend on our own weak power. We can look up to the living Christ and cry out to Him as our King to command deliverance. God will never ignore such an appeal from a believer who trusts Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you surrendered your whole life to Jesus as your King, or are you still relying on your own strength?",
+    "What temptation or struggle do you need to bring under Christ's rule today?"
+   ],
+   "prayer": "Lord Jesus, You are my King and my Savior. Please take first place in my heart and rule over every part of my life. When trials and temptations press hard against me, fight for me and grant me Your victory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 44:4",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "26-020-027",
+ "title": "Israel’s Rebellion in the Land",
+ "refs": [
+  "Ezekiel 20:27-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26020027,
+   "end": 26020032,
+   "ref": "Ezekiel 20:27-32",
+   "ranges": [
+    [
+     26020027,
+     26020032
+    ]
+   ],
+   "title": "Bound to God",
+   "key_verse": [
+    26020032,
+    26020032
+   ],
+   "reflect": [
+    {
+     "text": "The people of Israel wanted to be like the nations around them. They wondered why they had to carry the demands of God when other nations chose their own gods and did whatever they liked. Yet God told them that their wish would never happen. Because He had entered into a covenant with them, a sacred promise, they could not simply throw off their bond to Him. His own holy name was tied to their lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Belonging to God is a serious calling. When we wander into wrongdoing, we cannot simply escape the pain of it. If we choose to walk into sinful paths, we will have to retrace our steps, and the way back can bring sharp sorrow. We cannot simply live like the rest of the world, because God loves us too much to let us run away into ruin.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This truth also brings deep comfort. Just as we are bound to God, He is bound to us. As F. B. Meyer notes, we cannot leave God, but \"He cannot leave us.\" He remembers His covenant and defends His own name. Even when we stumble or wander, God does not change, and He will hold us fast.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever feel tempted to blend in with the world and ignore God's ways?",
+    "How does knowing that God will never abandon His covenant give you courage to return to Him?"
+   ],
+   "prayer": "Lord God, thank You for binding us to Yourself in Your faithful love. Forgive us for the times we wish to go our own way and copy the world around us. Keep our steps steady, and bring us back whenever we wander. For the sake of Your holy name, hold us close. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 20:32",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

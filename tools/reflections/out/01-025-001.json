@@ -1,0 +1,66 @@
+{
+ "id": "01-025-001",
+ "title": "Abraham and Keturah",
+ "refs": [
+  "Genesis 25:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1025001,
+   "end": 1025006,
+   "ref": "Genesis 25:1-6",
+   "ranges": [
+    [
+     1025001,
+     1025006
+    ]
+   ],
+   "title": "Giving While You Are Living",
+   "key_verse": [
+    1025006,
+    1025006
+   ],
+   "reflect": [
+    {
+     "text": "In his later years, Abraham showed thoughtful and responsible care for his whole household. He had learned from his past mistakes, when he had sent Hagar and Ishmael away with very little. This time, Abraham made careful arrangements for his sons born to Keturah. Before sending them off to establish their own families, he gave them gifts and resources while he was still alive.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At the same time, Abraham carefully protected God's covenant promise by leaving his main inheritance to Isaac. Distributing gifts during his own lifetime helped prevent future family conflicts over his possessions. It also allowed Abraham the joy of seeing his children blessed with his own eyes.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "By choosing to practice generosity while he lived, Abraham was able to finish his days with deep peace, satisfaction, and contentment. His wise planning honored God's promises to Isaac while making sure all of his sons were treated with care.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you practice generosity toward others during your life rather than waiting for later?",
+    "In what ways can thoughtful planning help bring peace and prevent conflict in your family?"
+   ],
+   "prayer": "Lord, help us to be wise and generous with what you have given us. Show us how to bless others while we are living and care well for our families. Give us peace and contentment as we follow your guidance each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Chuck Swindoll",
+     "work": "Giving While You’re Living",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-september-19-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

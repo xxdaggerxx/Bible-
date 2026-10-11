@@ -1,0 +1,135 @@
+{
+ "id": "02-018-013",
+ "title": "Jethro Advises Moses",
+ "refs": [
+  "Exodus 18:13-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2018017,
+   "end": 2018018,
+   "ref": "Exodus 18:17-18",
+   "ranges": [
+    [
+     2018017,
+     2018018
+    ]
+   ],
+   "title": "\"You Cannot Handle It Alone\"",
+   "key_verse": [
+    2018018,
+    2018018
+   ],
+   "reflect": [
+    {
+     "text": "Moses thought he was doing the right thing by judging every single matter from morning until night. But trying to carry every responsibility alone leads to rising stress, anxiety, and deep exhaustion. We often fall into this same trap. We try to be completely self-sufficient, forgetting that God made us to live and work within a community.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "It is easy to confuse exhaustion with faithfulness. We end up taking on burdens that God never asked us to carry, assuming that we must fix every problem ourselves. Pride can make us believe that asking for help is a sign of weakness. But reaching out to others is not a failure. It is an act of humility and love.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Jethro warned Moses that trying to meet every need alone ends up hurting everyone. Instead of having to choose between total burnout and quitting, we can share the load. We can invite trustworthy, capable people to help carry our responsibilities. When we let go of minor matters and focus on our true priorities, both we and the people around us can flourish.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy responsibilities are you carrying alone that you could share with others?",
+    "How might pride be keeping you from asking for the help you need?"
+   ],
+   "prayer": "Lord, help us remember that we were never created to carry every burden by ourselves. Forgive our pride when we resist asking for help, and teach us to rely on our community. Give us the wisdom to release the tasks that are not ours to hold. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Stress Reduction: Spreading Out the Workload",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/stress-reduction-spreading-out-the-workload1"
+    },
+    "D3": {
+     "author": "Brent Rinehart",
+     "work": "You Don’t Have to Do it on Your Own",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/you-dont-have-to-do-it-on-your-own-the-crosswalk-devotional.html"
+    },
+    "D4": {
+     "author": "Rachel Wojo",
+     "work": "A Prayer for Carrying More Than You Were Made to Carry",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-carrying-more-than-you-were-made-to-carry.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 2018013,
+   "end": 2018027,
+   "ref": "Exodus 18:13-27",
+   "ranges": [
+    [
+     2018013,
+     2018027
+    ]
+   ],
+   "title": "Testing Advice in God's Presence",
+   "key_verse": [
+    2018023,
+    2018023
+   ],
+   "reflect": [
+    {
+     "text": "Jethro offered Moses very sensible guidance. As F. B. Meyer observed, it is wise to draw out the \"latent capacities\" of those around us by giving them meaningful work to do. We accomplish far more when we equip others than when we try to do everything ourselves. Often an outside observer can spot the blind spots in our routine and point us toward a better path.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even though Jethro's plan was practical, he cautioned Moses not to adopt it unless God had directed it. Human advice can sound wise, but we must always take it into God's presence before acting on it. We need to be quiet before Him and ask for His will. God's voice is quiet and distinct, bringing clarity to our minds and directing our steps.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because the world is filled with many competing opinions, Meyer noted that we must test every human teaching. We can check advice by asking whether it honors Christ, humbles our human pride, agrees with the Bible, and fits the proven experience of God's people. When we test all counsel against God's truth, we can move forward with peace and certainty.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When someone gives you good advice, do you take time to bring it to God in prayer first?",
+    "How can testing advice against Scripture protect you from following the wrong voices?"
+   ],
+   "prayer": "Heavenly Father, thank You for the wise people You place in our lives. Help us bring every suggestion into Your presence to see if it matches Your Word. Teach us to listen for Your quiet voice and follow only Your direction. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 18:23",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

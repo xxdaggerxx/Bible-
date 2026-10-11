@@ -1,0 +1,73 @@
+{
+ "id": "19-141-001",
+ "title": "Come Quickly to Me",
+ "refs": [
+  "Psalms 141:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19141001,
+   "end": 19141010,
+   "ref": "Psalms 141:1-10",
+   "ranges": [
+    [
+     19141001,
+     19141010
+    ]
+   ],
+   "title": "Bringing Our Prayers and Words to God",
+   "key_verse": [
+    19141002,
+    19141002
+   ],
+   "reflect": [
+    {
+     "text": "In Psalm 141, David lifts his hands in prayer, asking God to hear him right away. He pictures his words rising like sweet incense, which priests burned every morning and evening in the ancient tabernacle. God welcomes our honest thoughts in that same way. Every moment of the day gives us an opportunity to talk with Him, and starting and ending each day in prayer keeps our lives steady. When we pray, we join a great chorus of believers throughout history who praise the Lord together.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "David also knew that honoring God requires watching how we speak. Even though David had fought wild animals and giant soldiers, he knew the tongue could be just as dangerous. The words we say reveal what is truly inside our hearts. Because our own willpower is not strong enough to control our speech, we need the Lord to set a guard over our lips. With God's help, we can listen carefully before speaking and choose not to reply with angry words when people mistreat us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Turning to God means giving Him both our prayers and our daily speech. When we bring our honest requests to Him morning and evening, He helps us stay clean in heart, watch our words, and walk in safety.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How might setting aside time to pray at the start and end of each day shape the way you live?",
+    "When is it most difficult for you to pause and listen instead of speaking quickly?"
+   ],
+   "prayer": "Lord, may our prayers rise to You like sweet incense each day. Please place a guard over our mouths, and teach us to listen before we speak. Strengthen us by Your grace so we do not return harsh words when others hurt us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Shirlee Abbott",
+     "work": "Morning and Evening, Set Your Prayers Before the Lord",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-november-12-2024.html"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "One Mouth, Two Ears",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-august-29-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

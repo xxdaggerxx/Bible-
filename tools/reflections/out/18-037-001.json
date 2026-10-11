@@ -1,0 +1,76 @@
+{
+ "id": "18-037-001",
+ "title": "Elihu Proclaims God’s Majesty",
+ "refs": [
+  "Job 37:1-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18037001,
+   "end": 18037024,
+   "ref": "Job 37:1-24",
+   "ranges": [
+    [
+     18037001,
+     18037024
+    ]
+   ],
+   "title": "Sensing God's Majesty in the Storm",
+   "key_verse": [
+    18037014,
+    18037014
+   ],
+   "reflect": [
+    {
+     "text": "Watching a powerful storm unfold displays the great might of God. Thunder and lightning roll across the sky at His command, reminding us that He rules over all creation. In our busy modern lives, we often rely on forecasts and indoor comforts, which can dull our sense of wonder. Yet when heavy rain or snow halts our daily work, we are stopped in our tracks. The uncontrollable weather shows us just how small and limited we really are.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Pausing to consider these natural wonders is good for our souls because it fosters true humility. God's roaring power may terrify His enemies, but to His children it brings quiet awe. The Almighty God who directs the winds also cares for our weakness and supplies us with His strength. Even dark and stormy clouds have a bright side facing heaven. As F. B. Meyer notes, God's light shines on our troubles from above, and every storm passes before His cleansing wind.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When bad weather disrupts your schedule, how might it help you remember your own limits and God's power?",
+    "How can knowing that God guides every storm comfort you in your current troubles?"
+   ],
+   "prayer": "Lord God, thank You for showing Your majesty through the wind, thunder, and rain. Forgive us when we ignore Your power or forget how small we are. Please give us Your strength in our weakness, and help us trust You through every dark cloud in our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 37:21",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Jennifer Benson Schuldt",
+     "work": "God In The Storm",
+     "site": "Our Daily Bread",
+     "url": "https://military.odb.org/god-in-the-storm/"
+    },
+    "D3": {
+     "author": "David Mathis",
+     "work": "The Wonders of His Weather: Sensing God’s Majesty in the Storm",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-wonders-of-his-weather"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

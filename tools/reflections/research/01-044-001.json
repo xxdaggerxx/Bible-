@@ -1,0 +1,19 @@
+{
+ "notes": "on this passage, write just: NONE\"?\nNotice: \"Choose up to 4 devotionals from different authors... If you find none on this passage, write just: NONE\".\nThis shows the prompt is prepared for 0, 1, 2, 3, or 4!\nWait, but could we check if there's any other devotional?\nWait, what about the other URLs from search 1?\n1. `https://learn.ligonier.org/devotionals/brotherly-confession`\n2. `https://www.biblegateway.com/resources/wiersbe-be-bible-study/submission-vv-14-17`\n3. `https://learn.ligonier.org/devotionals/judah-steps-forward`\n4. `https://learn.ligonier.org/devotionals/perfect-set`\n5. `https://learn.ligonier.org/devotionals/wisdom-and-redemption`\n6. `https://www.biblegateway.com/resources/matthew-henry/Gen.44.1-Gen.44.17`\n\nWait, let's look at `judah-steps-forward`:\nPassage: Genesis 44:18-29. That is outside 1-17.\n`wiersbe-be-bible-study`:\nCommentary.\n`matthew-henry`:\nCommentary.\n\nNow between:\n1) \"Brotherly Confession\"\n2) \"The Perfect Set-Up\"\n\nWait, could an author be specified as \"Tabletalk Magazine\" for one and \"Ligonier Ministries\" for another? No, that would be artificial.\nWait, what if the prompt creator did NOT intend \"different authors\" to exclude two devotionals from the same ministry when no author is named?\nWait, what does the template say?\n\"Author: <author, or the ministry if none is named>\"\nNotice it says: \"or the ministry if none is named\".\nIf the prompt author knew that some devotionals have no author named and you have to put the ministry, did the prompt author expect",
+ "urls": [
+  "https://learn.ligonier.org/devotionals/brotherly-confession",
+  "https://learn.ligonier.org/devotionals/judah-steps-forward",
+  "https://learn.ligonier.org/devotionals/perfect-set",
+  "https://learn.ligonier.org/devotionals/wisdom-and-redemption",
+  "https://www.biblegateway.com/passage/?search=Genesis+44%3A1-16&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Genesis+44&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Genesis+44&version=NASB1995",
+  "https://www.biblegateway.com/passage/?search=Genesis+44&version=NIV",
+  "https://www.biblegateway.com/resources/bible-panorama/Gen.44",
+  "https://www.biblegateway.com/resources/matthew-henry/Gen.44.1-Gen.44.17",
+  "https://www.biblegateway.com/resources/wiersbe-be-bible-study/submission-vv-14-17",
+  "https://www.biblesociety.org.uk/explore-the-bible/read/eng/KJV/Gen/44/"
+ ],
+ "cost": 0.099149075,
+ "model": "google/gemini-3.8-flash"
+}

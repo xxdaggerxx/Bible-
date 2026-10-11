@@ -1,0 +1,122 @@
+{
+ "id": "09-020-010",
+ "title": "Jonathan and David Renew Their Covenant",
+ "refs": [
+  "1 Samuel 20:10-29"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 9020014,
+   "end": 9020015,
+   "ref": "1 Samuel 20:14-15",
+   "ranges": [
+    [
+     9020014,
+     9020015
+    ]
+   ],
+   "title": "\"Treat Me with the Lord's Loving Devotion\"",
+   "key_verse": [
+    9020014,
+    9020014
+   ],
+   "reflect": [
+    {
+     "text": "God brings believers together to support one another through intense trials. When David feared for his life under King Saul, anxiety led him to stumble. Overwhelmed by danger, David forgot God's past help and relied on human cleverness, making up an excuse to miss the king's feast. Yet Jonathan did not become defensive about his family. Instead, he listened to David's honest distress, stood by him in faithful friendship, and promised to discover his father's true intentions.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "In their covenant, Jonathan asked David to always treat him and his family with the Lord's loving devotion. He recognized that God was with David, and he trusted David to show lasting mercy rather than harm his future children. Even though hardship and sorrow lay ahead, their friendship remained anchored in God. When life feels out of our control, we should reject self-pity, remember the Lord's proven faithfulness, and hold fast to godly friends who point us back to Him.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel overwhelmed by stressful situations, do you tend to trust in human schemes or remember God's past help?",
+    "How can you be a safe and honest friend to someone who is wrestling with fear?"
+   ],
+   "prayer": "Lord God, thank You for placing faithful companions in our lives when we are afraid. Forgive us when fear makes us forget Your past care. Help us to speak honestly, reject self-pity, and extend Your lasting love to others. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Michael Youssef, Ph.D.",
+     "work": "Living in Light of Your Testimony",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-week-of-august-19-2024.html"
+    },
+    "D4": {
+     "author": "Beth Moore",
+     "work": "Day 25: 1 Samuel 20:1–17",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-25-1-samuel-20-117.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 9020010,
+   "end": 9020029,
+   "ref": "1 Samuel 20:10-29",
+   "ranges": [
+    [
+     9020010,
+     9020029
+    ]
+   ],
+   "title": "Faithful Love and the Empty Seat",
+   "key_verse": [
+    9020018,
+    9020018
+   ],
+   "reflect": [
+    {
+     "text": "Jonathan showed remarkable humility and selfless loyalty toward David. In those days, a new king would often wipe out the household of the previous ruler to secure his throne. Jonathan recognized God's hand on David, yet he did not act with jealousy or bitterness. Instead, he made a covenant of lasting kindness with David, risking his own royal future and personal safety to protect his friend. Followers of Christ are called to imitate this kind of selfless loyalty by actively looking out for the good of others in the church.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "To carry out this plan of safety, David had to leave his usual place at King Saul's feast. An empty seat at home can bring real pain to those who love us, so we should take care not to leave our places in the family circle needlessly vacant. Even more, as F. B. Meyer urges, let not your place \"be empty in the house of God.\" When we gather for worship, prayer, and the Lord's Supper, our presence encourages our brothers and sisters and strengthens the whole church.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways can you put the welfare of your fellow believers ahead of your own pride or comfort?",
+    "Are you faithfully filling your seat at home and in the regular gatherings of God's people?"
+   ],
+   "prayer": "Heavenly Father, give us the humble and selfless spirit that Jonathan showed to David. Teach us to pursue the well-being of our brothers and sisters in Christ. Help us to be faithfully present in our homes and among Your gathered people. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 20:18",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Jonathan’s Covenant with David",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jonathans-covenant-with-david"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

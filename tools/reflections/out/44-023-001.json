@@ -1,0 +1,75 @@
+{
+ "id": "44-023-001",
+ "title": "Paul before the Sanhedrin",
+ "refs": [
+  "Acts 23:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44023011,
+   "end": 44023011,
+   "ref": "Acts 23:11",
+   "ranges": [
+    [
+     44023011,
+     44023011
+    ]
+   ],
+   "title": "\"Take Courage\"",
+   "key_verse": [
+    44023011,
+    44023011
+   ],
+   "reflect": [
+    {
+     "text": "After facing the violent anger of the council, Paul was locked away alone. He was likely frightened and shaken by what had happened. But Jesus did not just watch from a distance. The Lord came close to Paul right in his cell to bring personal comfort, meeting his deep emotional need with courage.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The Lord promised Paul that he would also speak for Him in Rome. As Charles Spurgeon wrote, \"you are immortal till your work is done.\" No hatred from enemies, slander, or secret plans can cut a believer down before God's purpose is finished. If the Lord still has work for you to do, He will keep you safe to complete it.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This reassurance came at just the right moment, strengthening Paul before new danger arose. When we feel overwhelmed or afraid while serving God, we can remember that Jesus stands near us in our darkest hours. We can also pray for missionaries and others facing danger, trusting God to watch over them.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel anxious or alone, how does knowing Jesus stands near you give you courage?",
+    "How does trusting that God will preserve you until your work is done help you face hard situations?"
+   ],
+   "prayer": "Lord Jesus, thank You for drawing close to us when we are afraid and weary. Give us courage to keep living and speaking for You, trusting that our lives are held safely in Your hands. Please protect and strengthen everyone who faces danger for sharing Your good news. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 8",
+     "on": "Acts 23:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 285: Acts 23:11–22",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-285-acts-23-1122.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

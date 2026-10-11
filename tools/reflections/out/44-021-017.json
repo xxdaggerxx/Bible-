@@ -1,0 +1,66 @@
+{
+ "id": "44-021-017",
+ "title": "Paul’s Arrival at Jerusalem",
+ "refs": [
+  "Acts 21:17-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44021017,
+   "end": 44021026,
+   "ref": "Acts 21:17-26",
+   "ranges": [
+    [
+     44021017,
+     44021026
+    ]
+   ],
+   "title": "Pursuing Peace with Fellow Believers",
+   "key_verse": [
+    44021020,
+    44021020
+   ],
+   "reflect": [
+    {
+     "text": "When Paul arrived in Jerusalem, the church leaders welcomed him warmly and praised God for his work among the Gentiles. Soon, however, the elders shared a serious concern. Many thousands of Jewish believers were zealous for the law of Moses, and they had heard troubling rumors about Paul.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "These false reports claimed that Paul was telling people to abandon their customs. It is especially painful when misunderstandings come from fellow Christians rather than outside enemies. Instead of insisting on his own rights, Paul listened to the elders. To maintain peace and unity, he agreed to join four men in their purification rites.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul showed that we can find common ground with other believers without compromising the true gospel. When tensions or wrong impressions arise in the church, God calls us to act with humility and pursue peace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you usually react when another Christian misunderstands your actions or motives?",
+    "Where can you seek common ground with other believers this week without compromising God's truth?"
+   ],
+   "prayer": "Lord, grant us humble hearts when disagreements or misunderstandings arise among your people. Help us to pursue peace and seek common ground with others while holding fast to the truth of your gospel. Guide our words and actions so that we may build up unity in your church. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 278: Acts 21:15–25",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-278-acts-21-1525.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "14-013-004",
+ "title": "Civil War against Jeroboam",
+ "refs": [
+  "2 Chronicles 13:4-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14013004,
+   "end": 14013022,
+   "ref": "2 Chronicles 13:4-22",
+   "ranges": [
+    [
+     14013004,
+     14013022
+    ]
+   ],
+   "title": "Relying on God in the Battle",
+   "key_verse": [
+    14013014,
+    14013014
+   ],
+   "reflect": [
+    {
+     "text": "Abijah warned King Jeroboam that fighting against God's covenant could never succeed. Even though Jeroboam brought a far larger army and set a secret trap, human schemes cannot defeat the Lord. Although Abijah was an imperfect leader, Judah chose in this moment to honor God's true worship and trust His promises rather than their own military power.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When the men of Judah turned around, they discovered enemies both in front of them and behind them. Our own lives can feel like that when regrets from our past trail behind us while worries about tomorrow block our way forward. Yet, as F. B. Meyer observed, \"the way upward is always kept clear.\" Earthly troubles may surround us on every side, but nothing can block our cry to God or stop His loving care.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In their sudden distress, Judah cried out to the Lord, the priests sounded the trumpets, and God routed their foes. When we place God between ourselves and our difficulties, no enemy can overcome us. Relying on His faithful presence assures us that Christ holds the final victory for everyone who trusts Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel trapped by past mistakes behind you and future worries ahead, how can you turn your eyes upward to God?",
+    "What helps you rely on God's strength instead of depending only on your own ability?"
+   ],
+   "prayer": "Lord God, thank You that no trial can cut us off from Your help and love. When troubles seem to close in on every side, teach us to cry out to You in faith. Help us to put You between ourselves and our fears, trusting that Christ has won the final victory for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 13:14",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Folly of Fighting the Lord",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/folly-of-fighting-the-lord"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

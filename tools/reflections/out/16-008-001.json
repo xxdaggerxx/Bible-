@@ -1,0 +1,73 @@
+{
+ "id": "16-008-001",
+ "title": "Ezra Reads the Law",
+ "refs": [
+  "Nehemiah 8:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 16008001,
+   "end": 16008012,
+   "ref": "Nehemiah 8:1-12",
+   "ranges": [
+    [
+     16008001,
+     16008012
+    ]
+   ],
+   "title": "Finding Joy in God's Word",
+   "key_verse": [
+    16008012,
+    16008012
+   ],
+   "reflect": [
+    {
+     "text": "When the leaders read and explained God's Word clearly, the people finally understood it. At first, this clear teaching exposed their past failures and moved them to weep with deep sorrow over their sins. But their leaders told them to stop weeping. This was a holy day meant for celebration because God is forgiving, and they could find their true strength and refuge in the Lord's joy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God gave us Scripture so that He could reveal Himself to us, allowing us to truly know and enjoy Him. When our spiritual understanding is shallow, our joy remains weak. But Israel showed that true delight honors God when it is anchored in an accurate knowledge of who He is and what He is like. As our understanding of God's glory grows, our delight in Him increases too.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Hearing and understanding the truth mobilized the entire community and sparked a real spiritual revival. God's people were called to turn their attention toward feasting, rejoicing, and sharing food with anyone in need. Genuine joy in God's Word does not stay hidden; it changes our hearts and leads us to obey Him by blessing others.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does understanding God's character through the Bible bring you greater joy?",
+    "When God's Word reminds you of His forgiveness, how can you share that goodness with someone in need?"
+   ],
+   "prayer": "Lord God, thank You for revealing Yourself to us through Your Word. Help us to understand the Scriptures clearly so that our delight in You will grow strong. When our failures make us grieve, remind us of Your forgiveness. Teach us to celebrate Your goodness and share what we have with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "The Joy of the Lord",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/the-joy-of-the-lord"
+    },
+    "D2": {
+     "author": "John Piper",
+     "work": "Truer Knowledge Brings Greater Joy",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/truer-knowledge-brings-greater-joy"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

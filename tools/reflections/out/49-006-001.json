@@ -1,0 +1,73 @@
+{
+ "id": "49-006-001",
+ "title": "Children and Parents",
+ "refs": [
+  "Ephesians 6:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 49006001,
+   "end": 49006004,
+   "ref": "Ephesians 6:1-4",
+   "ranges": [
+    [
+     49006001,
+     49006004
+    ]
+   ],
+   "title": "Honoring and Guiding in the Lord",
+   "key_verse": [
+    49006001,
+    49006001
+   ],
+   "reflect": [
+    {
+     "text": "God asks children living under parental care to listen to and obey their parents. This is not just a polite suggestion, but a clear moral command from the Lord. When children learn to honor their parents from the heart, it lays the groundwork for respecting God's authority later in life. God also attaches a promise of well-being to this command, helping protect children from unnecessary trouble and conflict.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "At the same time, God places an important limit on fathers and parents. Instead of ruling with harsh or unchecked power, fathers are called to show restraint. It is easy to frustrate children through harshness, being inconsistent, playing favorites, or constantly finding fault. Scripture calls parents to gently guide and feed their children's hearts over many years with biblical teaching and discipline.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Living together faithfully as a family is a long-term investment that requires patience. Whether we are learning to honor authority or caring for young hearts, this ongoing work depends on God's grace, which is his undeserved help and kindness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways can you show genuine honor toward your parents or leaders this week?",
+    "If you guide or care for children, how can you practice gentleness and avoid frustrating them?"
+   ],
+   "prayer": "Lord, help us to honor you by respecting the family roles you have given us. Grant parents patience, restraint, and wisdom as they guide their households. Fill our homes with your grace so that we may grow together in peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg",
+     "work": "A Word to Fathers - Truth For Life - July 9, 2026",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-july-9-2026.html"
+    },
+    "D2": {
+     "author": "Laura Bailey",
+     "work": "Why It Matters That We Honor Our Parents - The Crosswalk Devotional - August 15",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/honoring-our-parents-well-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

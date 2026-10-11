@@ -1,0 +1,67 @@
+{
+ "id": "09-030-007",
+ "title": "David Destroys the Amalekites",
+ "refs": [
+  "1 Samuel 30:7-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9030007,
+   "end": 9030020,
+   "ref": "1 Samuel 30:7-20",
+   "ranges": [
+    [
+     9030007,
+     9030020
+    ]
+   ],
+   "title": "To Whom Do You Belong?",
+   "key_verse": [
+    9030013,
+    9030013
+   ],
+   "reflect": [
+    {
+     "text": "When David found an abandoned young man in the field, he asked him an important question: \"To whom do you belong?\" In life, there is no neutral middle ground. As Charles Spurgeon reminds us, \"No neutralities can exist in religion.\" We are either serving Jesus under His banner, or we are serving Satan, the prince of darkness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "To discover whose servant you are, take an honest look at your life. Have you been born again into God's family, and are you trusting in Jesus? Look at the work you spend your time doing, the company of friends you keep, and the way you speak. A servant naturally reflects the ways and teachings of their master.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Serving sin is a cruel master, but Jesus is the Lord of love who welcomes all who run to Him. If you belong to Christ, give your life fully to Him. Obey His word, love Him with all your heart, put your trust only in Him, and stand firmly for His kingdom so others can see whose you are.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When people look at your speech, choices, and friendships, is it clear that you belong to Jesus?",
+    "Is there any area of your daily life where you need to obey Christ more completely as your Master?"
+   ],
+   "prayer": "Lord Jesus, I belong to You because You bought me with Your love. Help me to serve and obey You gladly with my whole heart. Guard my words and actions today so that others can clearly see that You are my King. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 12",
+     "on": "1 Samuel 30:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

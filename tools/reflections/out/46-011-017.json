@@ -1,0 +1,87 @@
+{
+ "id": "46-011-017",
+ "title": "Sharing in the Lord’s Supper",
+ "refs": [
+  "1 Corinthians 11:17-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46011017,
+   "end": 46011034,
+   "ref": "1 Corinthians 11:17-34",
+   "ranges": [
+    [
+     46011017,
+     46011034
+    ]
+   ],
+   "title": "Remembering Christ Together at the Table",
+   "key_verse": [
+    46011026,
+    46011026
+   ],
+   "reflect": [
+    {
+     "text": "Jesus gave us the Lord's Supper because our hearts can easily forget Him. Daily business and earthly distractions often pull our attention away from the Savior who loved us. To help our weak memories, God gave us bread and wine as physical signs. These tangible elements portray Jesus' body and blood given on the cross. Whenever we eat and drink in faith, we openly announce His saving death until He comes back.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This meal is also meant to bring the whole church together. In Corinth, wealthy members rushed ahead, created cliques, and humiliated the poor who had nothing to eat. As Keith Mathison points out, failing to discern the Lord's body includes despising fellow believers who belong to that same body. The cross levels all social and economic divisions among God's people.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Because the Supper is holy, we should never treat it as an empty routine. Paul calls us to examine our hearts and conduct before we take part. This self-examination is not meant to keep us away until we are sinless. Rather, it leads us to turn from our sins, rely on Christ for grace, and love our brothers and sisters so that our gathering brings blessing instead of discipline.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly distractions tend to crowd out your thoughts of Christ and His cross during the week?",
+    "How can you show genuine care and honor toward other believers when your church family gathers for the Lord's Supper?"
+   ],
+   "prayer": "Lord Jesus, thank You for giving us this meal to help our forgetful hearts remember Your sacrifice on the cross. Help us examine ourselves with honest repentance, trusting entirely in Your grace rather than our own goodness. Teach us to love and value every member of Your body so our worship brings You honor. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 26",
+     "on": "1 Corinthians 11:24",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Lord’s Supper and Proclamation",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lords-supper-and-proclamation"
+    },
+    "D3": {
+     "author": "Tom Ascol",
+     "work": "Worthy Partaking: Examining the Heart",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/worthy-partaking-examining-heart"
+    },
+    "D4": {
+     "author": "Keith Mathison",
+     "work": "Discerning the Body",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/discerning-body"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

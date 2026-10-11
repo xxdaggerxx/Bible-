@@ -1,0 +1,82 @@
+{
+ "id": "28-003-001",
+ "title": "Hosea Redeems His Wife",
+ "refs": [
+  "Hosea 3:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 28003001,
+   "end": 28003005,
+   "ref": "Hosea 3:1-5",
+   "ranges": [
+    [
+     28003001,
+     28003005
+    ]
+   ],
+   "title": "God's Steadfast Love Redeems Us",
+   "key_verse": [
+    28003001,
+    28003001
+   ],
+   "reflect": [
+    {
+     "text": "Hosea's choice to buy back his unfaithful wife shows us God's unconditional love. Hosea put aside his pride, his hurt, and his right to walk away or punish her. Instead, he paid a price to bring her home. This picture reminds us of how God rescues us from the slavery of sin. Our rescue does not depend on our own goodness, but entirely on the Lord's mercy and unfailing love.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "After bringing her home, Hosea set a time of quiet waiting. This pictured Israel's coming exile away from their temple and sacrifices. That season of discipline was purposeful and temporary, designed to bring them back to God. When we look back at our own lives, we can see how God has patiently carried us. He has fed us, put up with our complaints, and forgiven our wrongs through His grace, the kindness we do not deserve.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Knowing that God never stops loving us gives us hope for tomorrow. As Charles Spurgeon wrote, meditating on \"the love of the Lord\" refreshes our hearts and makes us love Him more. This secure love also changes how we treat people around us. Because Christ took the first step to redeem us, we are called to let go of bitterness and pride so we can pursue healing in our relationships.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you look back at how patient God has been with your faults, how does that help you trust His love for your future?",
+    "Is there a relationship where God is asking you to set aside pride or bitterness and take the first step toward peace?"
+   ],
+   "prayer": "Lord, thank You for loving us even when we turn away and fail You. Help us remember Your daily patience and forgiveness whenever we face hard times or discipline. Give us humble hearts to let go of bitterness and to offer grace to others, just as You have redeemed us.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 4",
+     "on": "Hosea 3:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Mary Southerland",
+     "work": "The Power of Forgiveness Part 1",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-jan-17-2012.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Hosea Redeems His Wife",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/hosea-redeems-his-wife"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

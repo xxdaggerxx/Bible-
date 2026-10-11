@@ -1,0 +1,61 @@
+{
+ "id": "26-007-014",
+ "title": "The Desolation of Israel",
+ "refs": [
+  "Ezekiel 7:14-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26007014,
+   "end": 26007027,
+   "ref": "Ezekiel 7:14-27",
+   "ranges": [
+    [
+     26007014,
+     26007027
+    ]
+   ],
+   "title": "When Wealth Cannot Save",
+   "key_verse": [
+    26007019,
+    26007019
+   ],
+   "reflect": [
+    {
+     "text": "Ezekiel describes a terrible day of crisis and alarm. The battle trumpet sounds, but courage fails completely. Hands go limp, knees turn weak, and fear takes over as God judges sin. In everyday life, people lean on silver and gold to solve their problems and unlock the treasures of this world. But when the supreme crisis comes and God's wrath falls, money suddenly becomes useless. The people even toss their wealth into the street, because coins cannot protect their lives or fill their empty souls.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God made us for eternity, not just for this brief life. Storing up riches and goods can never quiet a guilty conscience or give the soul true peace and purity. As F. B. Meyer reminds us, the happiest person is one who \"lives a pilgrim life,\" knowing that our real home and lasting treasure are with God. When we hold tightly to possessions instead of trusting the Lord, we lose sight of what matters forever.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly things are you most tempted to rely on for safety instead of trusting God?",
+    "How would your daily choices change if you saw yourself as a pilgrim traveling to an enduring city?"
+   ],
+   "prayer": "Lord, forgive us for putting our hope in money and material comfort. Remind us that our souls were made for eternity with you. Help us to hold our possessions lightly and seek the lasting treasures of your kingdom. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 7:19",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

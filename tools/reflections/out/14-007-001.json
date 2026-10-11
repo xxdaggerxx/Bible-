@@ -1,0 +1,67 @@
+{
+ "id": "14-007-001",
+ "title": "Fire from Heaven",
+ "refs": [
+  "2 Chronicles 7:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14007001,
+   "end": 14007003,
+   "ref": "2 Chronicles 7:1-3",
+   "ranges": [
+    [
+     14007001,
+     14007003
+    ]
+   ],
+   "title": "God Answers and Fills His House",
+   "key_verse": [
+    14007001,
+    14007001
+   ],
+   "reflect": [
+    {
+     "text": "When Solomon finished praying, God answered right away. As F. B. Meyer writes, \"if we make room for God, He always comes and fills.\" When we confess our sins, God forgives us without delay, and when we offer ourselves to him, he welcomes us. The Lord desires to draw near and let his glory shine into our lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The fire from heaven also shows us God's presence and purity. Just as strong heat purifies metal and burns away waste, God's Holy Spirit cleanses our hearts from evil. In the temple, the altar fire was never supposed to go out. We can keep this fire burning in our daily lives by feeding it with prayer and quiet time thinking about God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This fire also points to sweet fellowship with God. Part of the offering was consumed on the altar, and part was eaten by the worshiper, like sharing a meal. In the same way, we have communion, or close friendship, with God today as we trust in Christ and share our lives with him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you feed the fire of God's presence in your heart through prayer today?",
+    "What is one area of your life where you need to make room for God to cleanse you?"
+   ],
+   "prayer": "Lord, thank you that you hear us when we pray and promise to dwell with us. Cleanse our hearts by your Holy Spirit, and help us stay close to you. Keep the flame of prayer burning faithfully in our lives today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 7:1",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

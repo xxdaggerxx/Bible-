@@ -1,0 +1,91 @@
+{
+ "id": "66-001-009",
+ "title": "John’s Vision on Patmos",
+ "refs": [
+  "Revelation 1:9-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66001009,
+   "end": 66001020,
+   "ref": "Revelation 1:9-20",
+   "ranges": [
+    [
+     66001009,
+     66001020
+    ]
+   ],
+   "title": "The Living Lord of His Church",
+   "key_verse": [
+    66001017,
+    66001017
+   ],
+   "reflect": [
+    {
+     "text": "When the apostle John saw the risen Jesus in all His glory, he fell at His feet in reverent awe and trembling. This vision uses rich pictures to reveal Christ's majestic greatness rather than a literal physical appearance. Yet the Lord tenderly laid His right hand on John and told him not to be afraid. Jesus appeared dressed in a robe with a golden sash around His chest, showing that He never stops serving His people. As our royal priest, He actively watches over us and intercedes for us without ceasing.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "Jesus told John that He is the First and the Last, the Living One who conquered death and now lives forever. He was there before anything was created, and He directs all history to its end, designing our circumstances with purpose. Because He loved us first, went to the cross, and rose again, He holds the keys of death and the grave. Christ has removed death's ultimate power, which gives His followers steady courage when facing persecution and trials.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "The vision also shows Jesus holding the stars and walking among the golden lampstands, securely guarding and upholding His churches. Because our Lord never lays down His work for us, we must follow His example. We are called to bind God's truth tightly around our lives so that the world does not trip us up, honoring Christ for who He is in every season.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus has conquered death give you peace when you face fear or trials?",
+    "What is one practical way you can wrap God's truth around your thoughts and actions today?"
+   ],
+   "prayer": "Lord Jesus, thank You for conquering death and holding our lives securely in Your hands. When fear or trials make us tremble, remind us of Your majestic power and Your constant care for us. Help us to keep Your truth wrapped tightly around our hearts so we may honor You each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 6",
+     "on": "Revelation 1:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Revelation 1:11",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Steffen Mueller",
+     "work": "Jesus, the First and the Last",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jesus-first-and-last"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Power over Death",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/power-over-death"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

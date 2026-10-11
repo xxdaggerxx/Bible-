@@ -1,0 +1,82 @@
+{
+ "id": "18-041-001",
+ "title": "The LORD’s Power Shown in Leviathan",
+ "refs": [
+  "Job 41:1-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18041001,
+   "end": 18041034,
+   "ref": "Job 41:1-34",
+   "ranges": [
+    [
+     18041001,
+     18041034
+    ]
+   ],
+   "title": "Who Can Stand Before the Lord?",
+   "key_verse": [
+    18041010,
+    18041010
+   ],
+   "reflect": [
+    {
+     "text": "God describes Leviathan as a terrifying sea creature that no human can tame, capture, or control. This monster portrays scary forces of evil that feel far too strong for us. Yet as Christopher Ash notes, Leviathan is still a creature that remains held firmly on the Lord's leash. Evil cannot go beyond God's sovereign boundaries, which brings comfort when we suffer.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God asks Job an important question: if no human can face Leviathan, who can dare to stand before the Creator? Looking at God's unmatched greatness shows how small we really are. Instead of demanding reasons for our pain, we are called to lay down our pride, stop questioning God's wisdom, and trust the One who rules all things.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "On our own, we cannot stand in the presence of a holy God because our hidden faults are laid bare before Him. But Jesus makes a way for us to draw near. By dying on the cross, Christ defeated the powers of evil and welcomed us into God's presence, turning our fear into peace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to demand answers from God instead of trusting His wise care?",
+    "How does knowing that Jesus conquered evil help you feel secure during hard times?"
+   ],
+   "prayer": "Lord God, Your greatness is beyond anything we can imagine, and nothing in creation is beyond Your rule. Forgive us for our pride and for questioning Your ways when life is painful. Thank You that Jesus conquered evil and made a way for us to stand peacefully in Your presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 41:10",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Christopher Ash",
+     "work": "God’s Sovereignty Over Leviathan and Behemoth",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/gods-sovereignty-behemoth-leviathan/"
+    },
+    "D3": {
+     "author": "Bible Pathway",
+     "work": "Bible Pathway - June 25, 2011",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-june-25-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

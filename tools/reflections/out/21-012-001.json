@@ -1,0 +1,74 @@
+{
+ "id": "21-012-001",
+ "title": "Remember Your Creator",
+ "refs": [
+  "Ecclesiastes 12:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 21012001,
+   "end": 21012001,
+   "ref": "Ecclesiastes 12:1",
+   "ranges": [
+    [
+     21012001,
+     21012001
+    ]
+   ],
+   "title": "\"Remember Your Creator\"",
+   "key_verse": [
+    21012001,
+    21012001
+   ],
+   "reflect": [
+    {
+     "text": "Scripture warns us that hard seasons of trouble will come to everyone. Often, we discover life's true purpose only after learning difficult lessons through personal experience. When we surrender our lives to God, He gives us real clarity and spiritual focus. Committing ourselves to the Creator early in life builds a solid foundation before painful days and old age arrive.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "In the Bible, remembering God means taking real action to serve Him. True joy comes when we choose to obey God's Word rather than following our own impulses. Preparing our hearts spiritually during peaceful days creates a helpful reservoir of strength that we can draw on when adversity hits.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Exhaustion and emotional crises can easily strain our patience and our closest relationships, such as marriage. Getting through overwhelming trials requires leaning on God's strength instead of our own human willpower. In those stressful moments, we need His help to sustain our love and intentionally recall the good qualities of those we care about.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you relying on God's strength to sustain your love and patience, or on your own willpower?",
+    "What is one active step of obedience you can take today to build a strong spiritual foundation for the future?"
+   ],
+   "prayer": "Lord God, help us to surrender our lives to You and remember You in every season. When trials and exhaustion test our patience, please give us Your strength to love others faithfully. Teach us to obey Your Word each day so that our hearts are ready for whatever adversity comes. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "A Long-Awaited Insight",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/a-long-awaited-insight"
+    },
+    "D2": {
+     "author": "Carla Barnhill",
+     "work": "When Trouble Divides Us",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/niv-devotions-for-couples/niv-devotions-for-couples-week-of-feb-8.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

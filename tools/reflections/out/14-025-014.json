@@ -1,0 +1,60 @@
+{
+ "id": "14-025-014",
+ "title": "Amaziah Rebuked for Idolatry",
+ "refs": [
+  "2 Chronicles 25:14-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14025014,
+   "end": 14025016,
+   "ref": "2 Chronicles 25:14-16",
+   "ranges": [
+    [
+     14025014,
+     14025016
+    ]
+   ],
+   "title": "The Danger of a Divided Heart",
+   "key_verse": [
+    14025015,
+    14025015
+   ],
+   "reflect": [
+    {
+     "text": "After winning a great battle, King Amaziah did something completely foolish. Instead of honoring the Lord for the military victory, he brought home the gods of the defeated army and bowed down to them. Turning to things that could not even save their own people was utter foolishness. When we give our loyalty to other things instead of God, our divided heart leads to spiritual ruin. Following God with only half our heart always pulls us into trouble.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God sent a prophet to warn Amaziah, but pride blinded the king. Amaziah overestimated his own importance and refused to hear the truth. He threatened the prophet and ordered him to be silent. Rejecting God's correction and shutting out His word sealed the king's destruction. Harboring pride brings terrible deception, making us think we know better than God and cutting us off from the help we need.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where divided loyalties are pulling you away from wholehearted devotion to God?",
+    "How do you usually respond when God uses someone to correct your pride?"
+   ],
+   "prayer": "Lord, please keep our hearts humble so we do not think too highly of ourselves. Forgive us for the times our loyalties are divided and we chase things that cannot help us. Give us ears to listen when You send correction, and lead us in full obedience to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 05/28/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-05-or-28-or-2002-1133460.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

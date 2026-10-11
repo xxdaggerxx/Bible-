@@ -1,0 +1,66 @@
+{
+ "id": "07-008-032",
+ "title": "Gideon’s Death",
+ "refs": [
+  "Judges 8:32-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7008032,
+   "end": 7008035,
+   "ref": "Judges 8:32-35",
+   "ranges": [
+    [
+     7008032,
+     7008035
+    ]
+   ],
+   "title": "Remembering God's Goodness",
+   "key_verse": [
+    7008034,
+    7008034
+   ],
+   "reflect": [
+    {
+     "text": "Right after Gideon died, the people of Israel fell into ungrateful sin and turned away to worship false gods. God had granted them astonishing victories and rescued them from all their enemies. Yet in a very short time, they forgot the Lord their God and lost sight of the wonderful things He had done for them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It is easy to wonder how Israel could forget so quickly, but we share the exact same human weakness. We often take God's blessings for granted and lose sight of His past faithfulness. Without realizing it, our hearts can slowly drift away from the One who has delivered us time and time again.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Stopping this kind of spiritual decline takes real intentionality. We must make a deliberate choice to remember God's goodness. Each day, we need to ask the Holy Spirit to keep God's truths fresh in our minds, so our gratitude stays alive and our faith remains steady.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life have you begun to forget God's past faithfulness and help?",
+    "How can you intentionally ask the Holy Spirit to keep God's goodness fresh in your mind today?"
+   ],
+   "prayer": "Lord, forgive us for how quickly we forget Your goodness and deliverances. Please fill us with Your Holy Spirit and keep Your truth fresh in our hearts every day. Help us to stay thankful and faithful to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "Do You Quickly Forget God’s Goodness? - Love Worth Finding - July 17",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-july-17-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

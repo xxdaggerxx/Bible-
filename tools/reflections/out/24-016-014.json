@@ -1,0 +1,81 @@
+{
+ "id": "24-016-014",
+ "title": "God Will Restore Israel",
+ "refs": [
+  "Jeremiah 16:14-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24016014,
+   "end": 24016021,
+   "ref": "Jeremiah 16:14-21",
+   "ranges": [
+    [
+     24016014,
+     24016021
+    ]
+   ],
+   "title": "Our Strength and Refuge in Trouble",
+   "key_verse": [
+    24016019,
+    24016019
+   ],
+   "reflect": [
+    {
+     "text": "God sometimes calls His servants to walk through seasons of deep hardship and loneliness. The prophet Jeremiah felt completely isolated, like a bird attacked by the rest of the flock. He had to live without family and bear witness to coming judgment. Yet when there was no one else around to care for him, he ran to the Lord. In times of trouble, we can do the same. As F. B. Meyer noted, prayer is \"the flight of the lonely man to the only God.\" God is our refuge and safe fortress.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The people around Jeremiah had turned to idols that were powerless to help them. We may not bow down to statues of wood or stone, but our hearts still chase after false gods like wealth, pride, or even loving our family members more than God. Charles Spurgeon reminds us that these things are not real gods. When trials come, they cannot save us. It is foolish to turn away from the living God to trust in things that have no true power.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even though Judah sinned and faced exile, God did not leave them without hope. He promised a future restoration so great that it would outshine their old deliverance from Egypt. God's choice to bring back a people who broke His covenant shows His deep mercy. This great rescue points us directly to the salvation we now have in Jesus Christ, where God's power forgives our sins and gathers us home.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What false gods or worldly comforts are you tempted to rely on instead of God?",
+    "When you feel lonely or burdened, how can running to God bring you rest?"
+   ],
+   "prayer": "Lord, You are our strength, our fortress, and our safe hiding place in days of trouble. Forgive us for the times we look to worldly things or our own pride instead of trusting in You. Thank You for Your great mercy that forgives our sins and restores us through Jesus Christ. Teach our hearts to rest quietly in Your love today.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 4",
+     "on": "Jeremiah 16:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 16:19",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Destruction and Restoration",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/destruction-and-restoration"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,68 @@
+{
+ "id": "44-022-022",
+ "title": "Paul the Roman Citizen",
+ "refs": [
+  "Acts 22:22-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44022022,
+   "end": 44022030,
+   "ref": "Acts 22:22-30",
+   "ranges": [
+    [
+     44022022,
+     44022030
+    ]
+   ],
+   "title": "Faithful Witness and God's Protection",
+   "key_verse": [
+    44022025,
+    44022025
+   ],
+   "reflect": [
+    {
+     "text": "The crowd in Jerusalem listened peacefully to Paul until he spoke about God sending him to the Gentiles. That message made the people furious because they believed God belonged only to their own nation. As D. A. Carson explains, treating God as the property of only one group of people distorts Scripture and damages mission work. Even though the crowd rejected what he said, Paul did what God asked. Real spiritual success is not about pleasing a crowd or seeing quick results. It is about staying faithful and planting seeds that the Holy Spirit can use later.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When the Roman commander ordered Paul to be whipped, Paul asked if it was legal to flog a Roman citizen without a trial. God had prepared Paul's background before he was born, giving him a citizenship that shielded him in this dangerous moment. Paul used his legal rights to show that faith in Christ is not unlawful, creating protection for other believers as well. Because Paul trusted the God who called him, he was willing to face anger and danger to finish his work.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do we ever act as though God cares more about our own group or nation than others?",
+    "How can knowing God prepared your life story help you stay faithful when you face opposition?"
+   ],
+   "prayer": "Lord, thank you that your good news is meant for people of every culture and background. Help us to obey you faithfully, even when people reject the message. Give us wisdom and courage to use our lives and rights to serve your kingdom. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 282: Acts 22:22–29",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-282-acts-22-2229.html"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Genesis 23, Matthew 22, Nehemiah 12, and Acts 22",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/genesis-23-matthew-22-nehemiah-12-acts-22/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "48-004-001",
+ "title": "Sons and Heirs",
+ "refs": [
+  "Galatians 4:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 48004001,
+   "end": 48004007,
+   "ref": "Galatians 4:1-7",
+   "ranges": [
+    [
+     48004001,
+     48004007
+    ]
+   ],
+   "title": "No Longer Slaves, but Children of God",
+   "key_verse": [
+    48004007,
+    48004007
+   ],
+   "reflect": [
+    {
+     "text": "At just the right moment in history, God sent His Son into the world. Jesus came as a real human being, born of a woman and living under God's law. He obeyed the law completely in our place. By doing this, He paid the debt of our sin so that we could be set free and welcomed into God's family as adopted children.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Our world often teaches us to earn approval, so we might be tempted to treat God like an employer rather than a loving Father. But Jesus did not rescue us just to make us hired workers. He gave His life to secure our legal standing and remove our fear of judgment, bringing us into the safety of His family.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God even placed the Spirit of His Son into our hearts, creating deep closeness so we can cry out to Him as our Father. Because of Jesus, you are no longer a slave under the rules of the world. You are a true heir, and the greatest treasure of your inheritance is God Himself.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever find yourself trying to earn God's approval like a worker instead of resting as His child?",
+    "How does knowing that God Himself is your greatest treasure change how you speak to Him today?"
+   ],
+   "prayer": "Heavenly Father, thank You for sending Your Son to redeem us and welcome us into Your family. Forgive us when we treat You like a boss instead of our loving Father. Help us to walk in the freedom of Your adopted children and enjoy close fellowship with You through Your Spirit. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Marshall Segal",
+     "work": "Live Like Sons and Daughters of the King",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/live-like-sons-and-daughters-of-the-king"
+    },
+    "D2": {
+     "author": "R. Fowler White",
+     "work": "Christmas According to the Apostle Paul",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/christmas-according-apostle-paul"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

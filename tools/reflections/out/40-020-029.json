@@ -1,0 +1,85 @@
+{
+ "id": "40-020-029",
+ "title": "The Blind Men by the Road",
+ "refs": [
+  "Matthew 20:29-34",
+  "Mark 10:46-52",
+  "Luke 18:35-43"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40020029,
+   "end": 40020034,
+   "ref": "Matthew 20:29-34; Mark 10:46-52; Luke 18:35-43",
+   "ranges": [
+    [
+     40020029,
+     40020034
+    ],
+    [
+     41010046,
+     41010052
+    ],
+    [
+     42018035,
+     42018043
+    ]
+   ],
+   "title": "Crying Out to Jesus in Faith",
+   "key_verse": [
+    41010052,
+    41010052
+   ],
+   "reflect": [
+    {
+     "text": "The blind men sitting by the road were easily ignored by the busy crowd. Yet when they heard that Jesus was passing by, their deep need drove them to cry out for His mercy. People around them told them to be quiet, but their faith made them shout even louder. Jesus noticed them and stopped. He cares deeply for people whom society often overlooks, and He welcomes persistent faith that refuses to be silenced by discouraging voices.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When the men came near, Jesus asked them directly what they wanted Him to do. He does not want us to settle for quiet passivity or vague wishes. Instead, the Lord invites us to speak clearly and bring our real, specific needs to Him in prayer. The blind men answered plainly that they wanted to see, trusting that Jesus had both the power and the kindness to help them.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus touched them, restored their sight, and commended their faith. Receiving His transforming mercy did not just solve their physical problem; it changed their direction completely. Immediately, they set out to follow Jesus along the road, praising God. When we experience the mercy of Christ, our natural response is to follow Him each day as His disciples.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What specific need do you need to bring boldly to Jesus today instead of keeping quiet?",
+    "How has experiencing the mercy of Jesus helped you follow Him in your everyday walk?"
+   ],
+   "prayer": "Lord Jesus, thank You that You stop to listen when we cry out to You. Give us the courage to bring our deepest needs to You with honest, bold faith. As You show us Your mercy, lead us to follow You faithfully every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jon Bloom",
+     "work": "A Picture of Prevailing Prayer",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/a-picture-of-prevailing-prayer"
+    },
+    "D2": {
+     "author": "Pamela Palmer",
+     "work": "How to Have Powerful Faith like Bartimaeus in the Bible",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/how-to-have-a-powerful-faith-like-bartimaeus.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

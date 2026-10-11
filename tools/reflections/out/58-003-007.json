@@ -1,0 +1,75 @@
+{
+ "id": "58-003-007",
+ "title": "Do Not Harden Your Hearts",
+ "refs": [
+  "Hebrews 3:7-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58003007,
+   "end": 58003011,
+   "ref": "Hebrews 3:7-11",
+   "ranges": [
+    [
+     58003007,
+     58003011
+    ]
+   ],
+   "title": "Hearing God's Voice Today",
+   "key_verse": [
+    58003008,
+    58003008
+   ],
+   "reflect": [
+    {
+     "text": "When Scripture speaks, the Holy Spirit is talking directly to us today. The writer of Hebrews looks back at the ancient Israelites in the desert to teach us a vital lesson. Even though they saw God do incredible things for forty years, they doubted His care and grumbled against Him. They chose their own judgment over God's promises, and because of their stubborn unbelief, they missed out on the rest God wanted to give them. This story stands as an important warning for us today.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "All of us battle a natural tendency to doubt God and go our own way. When we feed that doubt, our hearts turn hard, like stone that God's Word cannot penetrate. It is possible to know Bible facts and defend the truth while our hearts remain shut tight against what God is saying. Turning away from Jesus is a terrible tragedy, because the salvation He won for us is far greater than Israel's rescue from Egypt.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God wants our hearts to stay tender and receptive. To keep from drifting into cold unbelief, we need the Holy Spirit working in us and daily encouragement from fellow believers. When we hear His voice and trust Him, we find the real spiritual rest He has prepared for His people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an area in your life right now where doubt or frustration is making your heart resistant to God?",
+    "Who can you encourage today so that you both stay firm in trusting Jesus?"
+   ],
+   "prayer": "Lord, help us to listen carefully when You speak to us through Your Word. Please soften our hearts by Your Holy Spirit so we do not drift into doubt or stubborn pride. Keep us walking closely with You and with other believers each day.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Harden Not Your Hearts",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/harden-not-your-hearts"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "Guarding Against Unbelief",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-july-17-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

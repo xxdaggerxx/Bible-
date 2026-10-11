@@ -1,0 +1,72 @@
+{
+ "id": "19-137-001",
+ "title": "By the Rivers of Babylon",
+ "refs": [
+  "Psalms 137:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19137001,
+   "end": 19137009,
+   "ref": "Psalms 137:1-9",
+   "ranges": [
+    [
+     19137001,
+     19137009
+    ]
+   ],
+   "title": "Holding to Hope in a Broken Land",
+   "key_verse": [
+    19137004,
+    19137004
+   ],
+   "reflect": [
+    {
+     "text": "When God's people were held captive in Babylon, their captors demanded songs of joy. Yet genuine, joyful worship cannot be forced by oppressors or driven by guilt. It requires God-given freedom. Even while enduring the painful fallout of past failure in exile, the psalmist refused to abandon hope. He pledged never to forget Jerusalem, making the community's commitment to God his own deep resolve. Believers going through difficult times can stay confident that God's bond with them is unbreakable.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The psalm ends with very raw words about judgment. These strong cries are not an appeal for personal revenge, but a plea for God's divine justice. In seasons of deep grief, we are invited to bring our honest pain to the Lord, remembering our loss while trusting His promise of ultimate deliverance.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "For us today, the gospel shows the greatest answer to wrath and pain, because Christ bore terrible suffering on the cross to set believers free. Earthly afflictions test us, but God uses them to shape us into the image of Christ. We can honestly mourn our trials without letting despair overpower our hope in God's promises.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face trials or the results of past failure, what helps you remember that God's bond with you is unbreakable?",
+    "How can bringing your deepest grief to God protect your heart from despair?"
+   ],
+   "prayer": "Lord, thank You that Your love and covenant promises never fail, even when we walk through dark valleys. Help us bring our honest grief to You instead of seeking revenge or falling into despair. Shape us through our trials to be more like Jesus, who suffered to set us free. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Remember God’s Promises",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-september-30-2013.html"
+    },
+    "D2": {
+     "author": "Aaron Armstrong",
+     "work": "What Do We Do with Psalm 137?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/what-do-we-do-with-psalm-137-bible-study-minute-september-20-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

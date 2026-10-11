@@ -1,0 +1,66 @@
+{
+ "id": "04-015-032",
+ "title": "A Sabbath-Breaker Stoned",
+ "refs": [
+  "Numbers 15:32-36"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4015032,
+   "end": 4015036,
+   "ref": "Numbers 15:32-36",
+   "ranges": [
+    [
+     4015032,
+     4015036
+    ]
+   ],
+   "title": "Quiet Pride and God's Authority",
+   "key_verse": [
+    4015035,
+    4015035
+   ],
+   "reflect": [
+    {
+     "text": "In this story, a man was found gathering firewood on the Sabbath day. This was not an innocent misunderstanding or a simple mistake. It happened right after God warned His people about high-handed, defiant sins. The man knowingly and willfully broke God's direct command, boldly setting aside God's authority.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We often think of pride as something loud and boastful. Yet as Marshall Segal reminds us, pride does not always show off in public. It can work quietly through everyday tasks and regular chores. When we treat God's words as optional so we can get our own work done, we show the same quiet arrogance.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "True faith does not demand its own way. Instead, faith gives up self-reliance to rest and work according to God's wisdom and His timing. When we pause and obey His word, we show that we truly trust Him to care for us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ordinary parts of your daily routine do you struggle with relying on yourself instead of God?",
+    "How can you practice trusting God's timing and wisdom with your work this week?"
+   ],
+   "prayer": "Lord, forgive us when quiet pride leads us to put our own plans ahead of your word. Help us let go of our self-reliance and trust your perfect wisdom. Teach us to rest and work according to your good timing.",
+   "sources": {
+    "D1": {
+     "author": "Marshall Segal",
+     "work": "Pride Doesn’t Always Parade",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/pride-doesnt-always-parade"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

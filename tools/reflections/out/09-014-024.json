@@ -1,0 +1,75 @@
+{
+ "id": "09-014-024",
+ "title": "Jonathan Eats the Honey",
+ "refs": [
+  "1 Samuel 14:24-36"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9014024,
+   "end": 9014036,
+   "ref": "1 Samuel 14:24-36",
+   "ranges": [
+    [
+     9014024,
+     9014036
+    ]
+   ],
+   "title": "Trusting God Rather Than Man-Made Rules",
+   "key_verse": [
+    9014027,
+    9014027
+   ],
+   "reflect": [
+    {
+     "text": "In the middle of a hard battle, King Saul made a foolish vow. Driven by his own pride, he commanded his soldiers not to eat until evening. This harsh rule exhausted the army and kept them from winning a complete victory. God had placed wild honey in the forest to refresh the weary men, but fear of Saul's oath kept them from eating. Saul acted like a Pharisee, inventing strict burdens that God had never asked for.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jonathan had not heard his father's command. When he dipped his staff into the honeycomb and ate, his strength returned and his eyes brightened. He saw right away that his father's harsh vow had brought trouble to the land. God gives physical blessings like food to sustain our bodies, and we are meant to receive them with thankfulness and self-control. While material sweetness must be enjoyed in moderation, we can delight in God's Word without any limit.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This story reminds us not to bind other people with rules that go beyond Scripture. When we rely on our own rigid ideas instead of God, we only harm and exhaust those around us. Instead, we can gratefully receive the daily gifts God gives to renew our strength, while walking in the freedom and wisdom of His truth.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there man-made rules you sometimes place on yourself or others that Scripture does not require?",
+    "How can you enjoy God's everyday gifts with thankfulness while seeking nourishment from His Word?"
+   ],
+   "prayer": "Lord, thank you for providing the good things we need to sustain us each day. Help us enjoy your earthly gifts with moderation and feast on your Word without end. Guard our hearts from making up harsh rules, and teach us to walk simply in the truth of Scripture. Amen.",
+   "sources": {
+    "D1": {
+     "author": "David Mathis",
+     "work": "What Is Sweeter Than Honey?",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/what-is-sweeter-than-honey"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Saul “Troubles the Land”",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/saul-troubles-the-land"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

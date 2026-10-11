@@ -1,0 +1,67 @@
+{
+ "id": "03-009-001",
+ "title": "Aaron’s First Offerings",
+ "refs": [
+  "Leviticus 9:1-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3009001,
+   "end": 3009024,
+   "ref": "Leviticus 9:1-24",
+   "ranges": [
+    [
+     3009001,
+     3009024
+    ]
+   ],
+   "title": "The Priest Who Blesses His People",
+   "key_verse": [
+    3009023,
+    3009023
+   ],
+   "reflect": [
+    {
+     "text": "In this chapter, Aaron offered sacrifices before the glory of the Lord appeared to Israel. Atonement, which means making things right between sinful people and a holy God, required an innocent substitute to bear guilt. Even wrongs committed through ignorance or neglect bring real guilt and need repentance. Yet those animal offerings were only temporary coverings for sin. They pointed forward to Jesus Christ, who offered Himself as the final sacrifice and now serves as our eternal High Priest.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "After the offerings were finished, Aaron lifted his hands to bless the congregation. F. B. Meyer observed that this moment offers a picture of Christ coming forth \"to bless the world.\" Jesus departed this earth while blessing His disciples, and His heart remains full of mercy toward us today. When we spend time in His company, His likeness begins to shape our lives. We learn to return kindness for wrong, offering genuine blessing to those around us until God is glorified.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus permanently took away your guilt give you peace when you fail?",
+    "Who is one person you can show patient kindness toward this week to reflect the mercy of Jesus?"
+   ],
+   "prayer": "Lord Jesus, thank You for giving Your life as the perfect sacrifice to take away our sins. We thank You that You live to bless and pray for us today. Teach us to remain close to You so that our lives reflect Your gentle, forgiving love to everyone we meet. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 9:22",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Feb. 4, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-feb-4-2010-11625793.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

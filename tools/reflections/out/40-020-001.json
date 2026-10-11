@@ -1,0 +1,99 @@
+{
+ "id": "40-020-001",
+ "title": "The Parable of the Workers",
+ "refs": [
+  "Matthew 20:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40020001,
+   "end": 40020016,
+   "ref": "Matthew 20:1-16",
+   "ranges": [
+    [
+     40020001,
+     40020016
+    ]
+   ],
+   "title": "The Landowner's Generous Grace",
+   "key_verse": [
+    40020015,
+    40020015
+   ],
+   "reflect": [
+    {
+     "text": "Jesus tells of a landowner who goes out repeatedly to hire workers, even at the very end of the day. God seeks us out and welcomes people into His kingdom at every stage of life, whether in their youth or in their older years. As Charles Spurgeon notes, \"God is a good paymaster,\" giving us an easy conscience and real joy in serving Him right now.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "When evening came, every worker received the same pay, causing the first group to grumble. Yet the owner was completely fair, keeping his exact promise to the early workers while freely showing extra kindness to the last. Salvation and eternal life are sovereign gifts of grace, meaning God's kindness that we do not deserve, rather than wages we earn through our own labor.",
+     "sources": [
+      "D3",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Because our sins deserve judgment rather than reward, we should never look at others with envy when God is generous to them. Instead, we can celebrate that our Lord always keeps His word and freely shares the joy of heaven with all who come to Him.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever felt envious when God seemed to show extra kindness to someone else?",
+    "How does knowing that heaven is a gift of grace change the way you serve Christ today?"
+   ],
+   "prayer": "Lord Jesus, thank you for calling us into your kingdom and giving us eternal life by your grace. Forgive us when we grumble or compare ourselves with others. Teach us to rejoice in your boundless mercy, and give us peace as we serve you today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 20",
+     "on": "Matthew 20:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 8",
+     "on": "Matthew 20:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Stuart Briscoe",
+     "work": "An Honest Day’s Pay?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/an-honest-day-s-pay-one-year-devotions-for-men-december-19.html"
+    },
+    "D4": {
+     "author": "John MacArthur",
+     "work": "The Principles of the Parable of the Vineyard",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/B181207/the-principles-of-the-parable-of-the-vineyard"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "The Parable of the Laborers in the Vineyard",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/parable-laborers-vineyard"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

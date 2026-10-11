@@ -56,6 +56,11 @@ object StudyInk {
     const val CROSSREF = -5
     /** A book introduction: chapter is the book, verse the part (background, purpose and so on). */
     const val INTRO = -6
+    /** Bible aids (AID-11): a custom or feast, or a symbol or number; chapter is the entry's key. */
+    const val CUSTOM = -8
+    const val SYMBOL = -9
+    /** A reflection (REF-10): chapter is its first verse, verse its last (chapter and verse) * 100 + paragraph. */
+    const val REFLECTION = -10
 
     /** The third value of a highlight's single point: marks it as a character range. */
     const val RANGE = -7777f
@@ -168,6 +173,11 @@ fun InkableText(vm: StudyViewModel, doc: InkDoc, text: AnnotatedString, modifier
                         val ev = awaitPointerEvent(PointerEventPass.Initial)
                         val c = ev.changes.firstOrNull { it.id == down.id } ?: break
                         if (!c.pressed) break
+                        // A second finger before the first moves: they scroll the article instead (PH-3).
+                        if (!pen && !moved && ev.changes.count { it.pressed } > 1) {
+                            live.clear(); vm.sound.stop()
+                            return@awaitEachGesture
+                        }
                         if (!moved && (c.position - down.position).getDistance() < viewConfiguration.touchSlop / 2f) continue
                         moved = true
                         c.consume()
@@ -236,7 +246,7 @@ fun InkableText(vm: StudyViewModel, doc: InkDoc, text: AnnotatedString, modifier
                     val layer = visible[s.layerId] ?: continue
                     if (StudyInk.isRange(s)) continue
                     val alpha = (if (s.highlighter) 0.4f else 1f) * layer.opacity
-                    drawInk(l.drawnPoints(s), Color(s.color).copy(alpha = alpha), s.width * density / 2f)
+                    drawInk(l.drawnPoints(s), Color(inkOn(vm.theme, s.color)).copy(alpha = alpha), s.width * density / 2f)
                 }
                 // The picked writing is outlined.
                 if (l != null && picked.isNotEmpty()) for (st in mine) {
@@ -259,7 +269,7 @@ fun InkableText(vm: StudyViewModel, doc: InkDoc, text: AnnotatedString, modifier
                 }
                 if (liveTool == Tool.PEN || liveTool == Tool.HIGHLIGHTER) {
                     val hl = liveTool == Tool.HIGHLIGHTER
-                    drawInk(live.toList(), Color(if (hl) vm.highlightColor else vm.penColor).copy(alpha = if (hl) 0.4f else 1f), vm.currentWidth(hl) * density / 2f)
+                    drawInk(live.toList(), Color(if (hl) vm.highlightColor else inkOn(vm.theme, vm.penColor)).copy(alpha = if (hl) 0.4f else 1f), vm.currentWidth(hl) * density / 2f)
                 }
             },
     )

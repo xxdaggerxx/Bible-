@@ -1,0 +1,116 @@
+{
+ "id": "11-011-001",
+ "title": "Solomon’s Foreign Wives",
+ "refs": [
+  "1 Kings 11:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 11011004,
+   "end": 11011004,
+   "ref": "1 Kings 11:4",
+   "ranges": [
+    [
+     11011004,
+     11011004
+    ]
+   ],
+   "title": "\"His Wives Turned His Heart Away\"",
+   "key_verse": [
+    11011004,
+    11011004
+   ],
+   "reflect": [
+    {
+     "text": "Solomon started his reign with extraordinary blessings and God-given wisdom. Yet even the strongest person has vulnerable areas where temptation can strike. Solomon's spiritual collapse did not happen overnight. Instead, it came through small daily compromises. He failed to guard his inner affections. As F. B. Meyer observed, Solomon was led \"by silken cords, a captive\" toward false worship. It was a gradual drift rather than an instant fall.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Whom we love deeply influences who we become. Our closest companions shape the direction and current of our lives. When Solomon chose forbidden relationships, those earthly bonds steadily enticed his affections away from the Lord. We must remember that God cares about where our hearts truly rest. Unlike his father David, who confessed his sins and turned back in repentance, Solomon persisted in his disobedience. In the end, God does not just ask for impressive achievements, wise words, or religious routines. He desires our sincere, wholehearted devotion each day.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there small compromises in your life that are quietly pulling your heart away from God?",
+    "How can you guard your heart so that your love for the Lord remains wholehearted?"
+   ],
+   "prayer": "Lord, keep our hearts fully devoted to you each day. Help us to guard against the quiet compromises that slowly pull us away from your truth. Give us humble spirits like David to repent quickly whenever we wander. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Kings 11:4",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Lysa TerKeurst",
+     "work": "The Unraveling of a Legacy",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-october-31-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 11011001,
+   "end": 11011008,
+   "ref": "1 Kings 11:1-8",
+   "ranges": [
+    [
+     11011001,
+     11011008
+    ]
+   ],
+   "title": "The Danger of Defiance",
+   "key_verse": [
+    11011002,
+    11011002
+   ],
+   "reflect": [
+    {
+     "text": "Open rebellion against God rarely appears out of nowhere. It almost always grows out of earlier seeds of compromise that quietly take root over time. In this passage, Solomon openly defied the clear commands of Scripture. God had plainly warned His people not to intermarry with the surrounding nations, yet Solomon deliberately pursued and clung to these forbidden relationships. He treated God's law as something optional, choosing his personal desires over the Lord's clear instruction.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "When we push past the clear boundaries of God's Word, we often begin resisting godly counsel and accountability. Solomon embraced a dangerous, unchecked independence, refusing to let anyone correct his choices. By shutting out wise guidance, he opened the door to greater ruin. Persisting in willful defiance slowly deadened his spiritual senses and priorities, ultimately turning his heart completely away from the Lord. Unchecked rebellion always carries us much farther into danger than we ever planned to go.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an area in your life where you are resisting godly advice or biblical accountability?",
+    "What clear instructions in Scripture might you be tempted to treat as optional rather than essential?"
+   ],
+   "prayer": "Heavenly Father, protect us from stubborn pride and willful defiance. Give us teachable hearts that listen to your Word and welcome the accountability of wise Christian friends. Keep us from excusing compromise, and help us obey your commands with joy. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Chuck Swindoll",
+     "work": "Defiance: A Biblical Warning",
+     "site": "Insight for Living",
+     "url": "https://insight.org/article/defiance-a-biblical-warning"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,127 @@
+{
+ "id": "42-018-009",
+ "title": "The Pharisee and the Tax Collector",
+ "refs": [
+  "Luke 18:9-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 42018014,
+   "end": 42018014,
+   "ref": "Luke 18:14",
+   "ranges": [
+    [
+     42018014,
+     42018014
+    ]
+   ],
+   "title": "\"The One Who Humbles Himself\"",
+   "key_verse": [
+    42018014,
+    42018014
+   ],
+   "reflect": [
+    {
+     "text": "When we come before God, we have no reason to boast. In prayer, we quickly realize we have no goodness of our own to offer Him. As Charles Spurgeon wrote, \"the way upward is downhill.\" When we honestly see our need and lower ourselves, God meets us with His kindness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Social standing or outward success does not show spiritual maturity. A quiet and sincere heart honors God far more than any display of self-importance. Humble sinners find genuine peace with God, while boastful people miss out on His favor.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God delights to lift up those who do not rely on their own track record. He gives true joy, a clearer understanding of His Word, and close fellowship to people who stay small in their own eyes. To receive God's grace, we must continually depend on His goodness rather than our own efforts.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to rely on your own performance instead of God's grace?",
+    "How can you practice quiet humility before the Lord this week?"
+   ],
+   "prayer": "Lord, help me to see myself honestly and turn away from all pride. Strip away my self-reliance so that I may lean fully on Your goodness. Lift me up into closer fellowship with You as I rest in Your mercy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 7",
+     "on": "Luke 18:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Susie Larson",
+     "work": "Humility at the Table of Grace",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/humility-at-the-table-of-grace-bible-study-minute-august-6-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 42018009,
+   "end": 42018014,
+   "ref": "Luke 18:9-14",
+   "ranges": [
+    [
+     42018009,
+     42018014
+    ]
+   ],
+   "title": "Two Prayers at the Temple",
+   "key_verse": [
+    42018013,
+    42018013
+   ],
+   "reflect": [
+    {
+     "text": "In this parable, Jesus contrasts two very different approaches to God. The Pharisee did not truly seek God in prayer; instead, he used his words to show off and boast about how religious he was. Looking down on others with religious pride can actually keep people from finding faith.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The tax collector chose a completely different path. He stood far off, admitted his guilt with complete honesty, and made no excuses for his sins. He simply cried out for God to have mercy on him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God loves sinners deeply and does not turn away from those who acknowledge their faults. Because of his sincere and heartfelt plea, the tax collector received full justification, being made right with God on the spot.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever find yourself comparing your spiritual life to others, or do you come to God with honest confession?",
+    "What keeps you from simply asking for God's mercy when you fall short?"
+   ],
+   "prayer": "Heavenly Father, thank You that You love sinners and welcome honest hearts. Forgive me when I make excuses or look down on others around me. Have mercy on me and keep my prayers genuine and sincere before You. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "The Tax Collector and the Pharisee",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-april-7-2022.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

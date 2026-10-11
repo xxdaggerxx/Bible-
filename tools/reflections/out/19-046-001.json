@@ -1,0 +1,123 @@
+{
+ "id": "19-046-001",
+ "title": "God Is Our Refuge and Strength",
+ "refs": [
+  "Psalms 46:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19046001,
+   "end": 19046002,
+   "ref": "Psalms 46:1-2",
+   "ranges": [
+    [
+     19046001,
+     19046002
+    ]
+   ],
+   "title": "\"God Is Our Refuge and Strength\"",
+   "key_verse": [
+    19046001,
+    19046001
+   ],
+   "reflect": [
+    {
+     "text": "When severe troubles shake our lives and the ground seems to give way, we quickly see that we cannot save ourselves. Human help is often far away when a sudden crisis hits, like an anchor left at home during a sea storm. Yet God is immediately near. He is an ever-present help, closer to us than our dearest friend, and He makes His strength known right in the middle of our storms.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "God does not want us to look at His promises from afar like items in a museum. As Charles Spurgeon wrote, \"He loves to be employed by us.\" Too often we run to everyone else with our worries while ignoring our Lord. Christ invites us to cast all our burdens upon His shoulders. When we bring Him our grief, our daily sins, and our weakness, we find that He truly protects us and satisfies our hearts.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy burden or fear have you been trying to carry on your own instead of bringing it to God?",
+    "How does knowing God is immediately present change the way you face unexpected trouble?"
+   ],
+   "prayer": "Lord, forgive us for running to our own solutions when trouble comes. Thank You for being our immediate refuge and staying close beside us. Teach us to lean on Your strength today and lay every burden in Your hands. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 3",
+     "on": "Psalms 46:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Dec. 22",
+     "on": "Psalms 46:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Marshall Segal",
+     "work": "When the Ground Gives Way",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/when-the-ground-gives-way"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19046001,
+   "end": 19046011,
+   "ref": "Psalms 46:1-11",
+   "ranges": [
+    [
+     19046001,
+     19046011
+    ]
+   ],
+   "title": "Be Still and Know",
+   "key_verse": [
+    19046010,
+    19046010
+   ],
+   "reflect": [
+    {
+     "text": "Psalm 46 shows us a chaotic world where kingdoms crumble and nations rage with anger. In the middle of all this commotion, God speaks directly to us and tells us to be still. Being still does not mean sitting idly or being lazy. Instead, it means putting an end to our frantic striving and letting go of the need to fix everything by ourselves.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "We learn to practice this holy stillness by spending quiet time in scripture, talking to God in prayer, and remembering how faithful He has always been. The names given to God in this song teach us about His character. He is the Lord of hosts, an invincible protector who rules the universe, and He is also the God of Jacob, a deeply personal refuge for ordinary people. Resting in His sovereign care, which means His supreme and loving control over all events, allows us to have steady peace even in unsettling times.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you frantically striving instead of being still before God?",
+    "How can remembering God's past faithfulness help you trust His protection today?"
+   ],
+   "prayer": "Heavenly Father, quiet our restless hearts when the world around us feels chaotic. Help us to stop striving in our own strength and remember that You are God. Thank You for being our invincible protector and our personal shelter. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Sarah E. Frazer",
+     "work": "The Importance of “Being Still” Before God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/the-importance-of-being-still-before-god-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

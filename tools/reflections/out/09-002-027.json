@@ -1,0 +1,79 @@
+{
+ "id": "09-002-027",
+ "title": "A Prophecy against the House of Eli",
+ "refs": [
+  "1 Samuel 2:27-36"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 9002030,
+   "end": 9002030,
+   "ref": "1 Samuel 2:30",
+   "ranges": [
+    [
+     9002030,
+     9002030
+    ]
+   ],
+   "title": "\"Those Who Honor Me I Will Honor\"",
+   "key_verse": [
+    9002030,
+    9002030
+   ],
+   "reflect": [
+    {
+     "text": "God promises that when we put Him first, He will honor us. Our hearts can easily wander into selfish choices, even after we have experienced God's kindness. When we drift away toward worldly goals, we lose the peace, purpose, and closeness found in His presence. Yet God invites us to return, and He graciously offers His blessing to anyone who chooses to put Him first.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Honoring God also shapes how we treat the people around us. Shirley Dobson points out how Queen Esther showed patient respect and humility rather than making sudden demands. Choosing to treat others with dignity instead of focusing on their flaws brings mutual respect. When we choose honor in our relationships, we help create a peaceful and loving home.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Eli and his sons failed to honor God in their household and sacred duties, and they lost their place of service. True dignity does not come from winning praise from the world, but from God. Even if standing up for what is right brings shame from others, God notices our faithful choices. We can honor Him today through what we say, through practical obedience, and by giving our time and resources to serve Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What is one practical way you can put God first in your choices today?",
+    "How can you show more patient respect and honor to someone in your home this week?"
+   ],
+   "prayer": "Lord God, keep our hearts from drifting into selfish desires and help us put You first. Teach us to honor You through our daily obedience, our words, and our giving. Give us humble hearts to treat others with patience and dignity. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 4",
+     "on": "1 Samuel 2:30",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Shirley M. Dobson",
+     "work": "A King and His Queen",
+     "site": "BibleGateway",
+     "url": "https://www.biblegateway.com/devotionals/night-light-couples/today"
+    },
+    "D3": {
+     "author": "Time with God",
+     "work": "Time with God - August 23",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/timewithgod/time-with-god-august-23.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

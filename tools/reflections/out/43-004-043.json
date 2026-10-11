@@ -1,0 +1,61 @@
+{
+ "id": "43-004-043",
+ "title": "Jesus Heals the Official’s Son",
+ "refs": [
+  "John 4:43-54"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43004043,
+   "end": 43004054,
+   "ref": "John 4:43-54",
+   "ranges": [
+    [
+     43004043,
+     43004054
+    ]
+   ],
+   "title": "Taking Jesus at His Word",
+   "key_verse": [
+    43004043,
+    43004043
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, people were eager for miracles and wonders before they would believe. When we demand startling experiences or special signs from God, we act as if we can set the conditions for His mercy. We might tell ourselves that we need a dramatic dream, or an overwhelming shock of emotion, before we can safely trust Christ. Yet as Charles Spurgeon observed, our royal Lord \"spurns all dictation\" from those who come to Him for help. We come as people in deep need of mercy, not as rulers who get to tell God how to act.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Instead of waiting for extraordinary marvels, we are invited to rest simply on what Jesus says. The royal official heard the Lord speak a promise and chose to take Him at His word. The gospel itself is already the greatest wonder of all, showing us that God loved the world enough to send His only Son. Because Jesus is truth itself and cannot lie, His promises to welcome and save us are completely reliable. His word alone is enough for us to trust Him today.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you waiting for a special sign or feeling before you fully trust what Jesus has promised?",
+    "How does knowing that Jesus cannot lie help you rest in His word today?"
+   ],
+   "prayer": "Lord Jesus, forgive us when we look for signs instead of simply trusting what You have said. You are the truth, and Your promises never fail. Help us to take You at Your word and find our rest in the good news of Your love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 2",
+     "on": "John 4:48",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

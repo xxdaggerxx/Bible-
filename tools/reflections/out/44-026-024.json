@@ -1,0 +1,73 @@
+{
+ "id": "44-026-024",
+ "title": "Festus Interrupts Paul’s Defense",
+ "refs": [
+  "Acts 26:24-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44026024,
+   "end": 44026032,
+   "ref": "Acts 26:24-32",
+   "ranges": [
+    [
+     44026024,
+     44026032
+    ]
+   ],
+   "title": "Trusting God's Unfolding Plan",
+   "key_verse": [
+    44026029,
+    44026029
+   ],
+   "reflect": [
+    {
+     "text": "We often know what God wants to do in our lives, but we can struggle with his timing and his methods. Paul knew God wanted him to reach Rome, but he likely never expected to travel there as a prisoner. God often works out his plans in ways we would never design or imagine for ourselves.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even though he was in chains, Paul did not view his trial as a defeat. Instead, he saw it as an opportunity to point his listeners to Christ. When Festus rudely shouted that he was out of his mind, Paul answered with calm courtesy and dignity. His message was built on his personal encounter with the risen Lord rather than dry debate.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul shared the gospel with clarity and conviction, while leaving the final outcome to God. When the questions of how and when remain unanswered in our own journeys, we do not have to worry. We can faithfully share our faith and rest securely in who God is.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you view an unexpected or difficult situation today as an opportunity to point others to Christ?",
+    "When God's timing or methods confuse you, what helps you rest securely in who he is?"
+   ],
+   "prayer": "Lord God, thank you that your plans are at work even when things happen in ways we did not expect. Give us the courage to speak of Jesus with clarity and calm respect, no matter our circumstances. When we do not understand how or when our prayers will be answered, help us to rest in your faithful character. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "Taking Opportunities",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/taking-opportunities-one-year-devotions-for-men-december-26.html"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 289: Acts 26:24–32",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-289-acts-26-2432.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

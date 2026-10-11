@@ -1,0 +1,59 @@
+{
+ "id": "51-001-001",
+ "title": "Greetings from Paul and Timothy",
+ "refs": [
+  "Colossians 1:1-2"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 51001001,
+   "end": 51001002,
+   "ref": "Colossians 1:1-2",
+   "ranges": [
+    [
+     51001001,
+     51001002
+    ]
+   ],
+   "title": "The Sufficiency and Supremacy of Christ",
+   "key_verse": [
+    51001002,
+    51001002
+   ],
+   "reflect": [
+    {
+     "text": "Paul wrote this letter while he was locked in prison for sharing the good news. Even while suffering in chains, his attention remained fixed on Jesus. From the very start, Paul highlights the supremacy of Christ over all things. Jesus is not simply an inspiring human leader. He is co-equal and co-eternal with God the Father, possessing full divine authority and sharing God's eternal nature.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways might you be tempted to look for peace or spiritual security outside of Christ?",
+    "How can you ask the Holy Spirit to help you see the sufficiency of Jesus in your daily walk?"
+   ],
+   "prayer": "Heavenly Father, thank you that your Son, Jesus Christ, is fully God and completely sufficient for all our needs. Send your Holy Spirit to guide our minds so that we can understand your truth. Help us to stand firm against false ideas and live faithfully for Jesus every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "To the Saints in Colossae",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/saints-colossae"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "The believers in Colossae were dealing with new, false teachings that threatened to pull them away from the truth. Paul wrote to show them that Christ is completely sufficient for our salvation. We do not need secret knowledge or extra rules to be accepted by God. Because our minds cannot fully grasp these deep truths on our own, we need the Holy Spirit to guide us so we can understand who Jesus is and live out his truth every day.",
+     "problem": "The claim that believers 'do not need secret knowledge or extra rules to be accepted by God' introduces specific details about the nature of the false teaching (Gnostic or legalistic elements) that are not mentioned in the passage or in Devotional 1."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

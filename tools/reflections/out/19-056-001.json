@@ -1,0 +1,152 @@
+{
+ "id": "19-056-001",
+ "title": "Be Merciful to Me, O God",
+ "refs": [
+  "Psalms 56:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19056003,
+   "end": 19056003,
+   "ref": "Psalms 56:3",
+   "ranges": [
+    [
+     19056003,
+     19056003
+    ]
+   ],
+   "title": "\"When I Am Afraid\"",
+   "key_verse": [
+    19056003,
+    19056003
+   ],
+   "reflect": [
+    {
+     "text": "Every morning brings unexpected demands, and fresh problems can quickly stir up our worries. We often find ourselves fretting over our health, finances, or relationships because we are afraid of what might happen. Letting imaginary troubles dominate our minds drains away our spiritual and emotional energy. Yet persistent fear and steady faith cannot live side by side for long in our hearts.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "King David faced deadly danger among his enemies, yet he made an active choice to rely on the Lord. Conquering fear does not happen by accident. It requires an intentional decision to place our confidence in God. Real trust means choosing to lean our full weight upon Him, depending on His care rather than our own strength.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Our faith grows over time as we pray regularly and meditate on God's word. Remembering how the Lord carried us through past troubles gives us confidence in today's storms. We can set aside our anxieties and find true rest, knowing that our God is completely capable and trustworthy in every circumstance.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What specific worry about the future is draining your energy today?",
+    "How can remembering God's past help enable you to actively rest in Him right now?"
+   ],
+   "prayer": "Lord, when unexpected troubles make me anxious, teach me to make a conscious choice to trust You. Help me to rest in Your capable hands and fill my heart with peace. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Charles R. Swindoll",
+     "work": "Trust, Part Two",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-october-13-2017.html"
+    },
+    "D5": {
+     "author": "Greg Grandchamp",
+     "work": "Choosing Faith Over Fear Tonight",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/choosing-faith-over-fear-tonight.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19056001,
+   "end": 19056013,
+   "ref": "Psalms 56:1-13",
+   "ranges": [
+    [
+     19056001,
+     19056013
+    ]
+   ],
+   "title": "God Is for Us in Every Trial",
+   "key_verse": [
+    19056009,
+    19056009
+   ],
+   "reflect": [
+    {
+     "text": "When troubles drag on for a long time, we are often tempted to doubt God's power. Instead of questioning whether God is able, we can look back at His faithfulness and remember that He can do all things. God uses our painful trials to shape and refine our character. In every hardship, He watches over us intimately. As Angie Velasquez Thornton observes, God numbers our wanderings and keeps every single tear in His book.",
+     "sources": [
+      "D3",
+      "D6"
+     ]
+    },
+    {
+     "text": "Knowing that God remembers our sorrow keeps us from despair. David was confident that his enemies would turn back because the Lord was on his side. God proved this boundless love by giving His Son for us. As Charles Spurgeon writes, \"the voice of prayer will always ensure his help.\" Because the King of kings is our protector, we can call on Him with full confidence that He hears us.",
+     "sources": [
+      "D1",
+      "D6"
+     ]
+    },
+    {
+     "text": "Through Christ, God has delivered our souls from death and given us eternal life. Since He has done the greatest work, He will not leave our daily walk unfinished. He will give us the grace to keep our feet from slipping on rough ground. Even before our troubles are resolved, we can bring Him offerings of thanks, knowing we are safe in His light.",
+     "sources": [
+      "D2",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God keeps count of your tears comfort you in ongoing trials?",
+    "Why can you thank God for His deliverance even before your current troubles disappear?"
+   ],
+   "prayer": "Lord God, thank You for holding every one of my tears and standing on my side through every trial. Thank You for saving my soul through Christ and keeping my feet from stumbling. Help me to praise Your word and thank You with joy today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 13",
+     "on": "Psalms 56:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 56:13",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 56:11",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D6": {
+     "author": "Angie Velasquez Thornton",
+     "work": "Tears in Heaven (Psalm 56)",
+     "site": "The Gospel Coalition",
+     "url": "https://ca.thegospelcoalition.org/columns/femmes-scriptura/tears-in-heaven-psalm-56/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

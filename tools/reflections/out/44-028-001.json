@@ -1,0 +1,66 @@
+{
+ "id": "44-028-001",
+ "title": "Ashore on Malta",
+ "refs": [
+  "Acts 28:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44028001,
+   "end": 44028010,
+   "ref": "Acts 28:1-10",
+   "ranges": [
+    [
+     44028001,
+     44028010
+    ]
+   ],
+   "title": "Kindness on a Cold Shore",
+   "key_verse": [
+    44028002,
+    44028002
+   ],
+   "reflect": [
+    {
+     "text": "When shipwreck survivors washed ashore on Malta, cold and soaking wet, the islanders met them with remarkable hospitality. These strangers built a fire and welcomed everyone without checking their background, social status, or beliefs first. Ordinary courtesy does the minimum, but unusual kindness goes out of its way to care for people who are hurting. In small and practical ways, unexpected warmth can show God's love to those in deep distress.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As Paul helped gather sticks for that fire, a poisonous viper bit his hand. The locals watched closely, quickly assuming that divine justice was catching up with a guilty murderer. Even though these islanders had never heard the gospel before, they already had a sense that a higher moral judge existed. God places this basic awareness of justice in human hearts everywhere, using it to draw people toward seeking Him and finding true salvation.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Who around you is facing a hard season and might need unexpected, practical kindness today?",
+    "How can God use your everyday actions to point others toward His true character?"
+   ],
+   "prayer": "Lord, give us eyes to see people who are cold, tired, or hurting today. Help us offer unusual kindness that welcomes others without judging where they come from. Please use our simple care to show people who You are and draw their hearts to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Karen Ehman",
+     "work": "How to Scatter Unusual Kindness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-march-28-2017.html"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 293: Acts 28:1–6",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-293-acts-28-16.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,89 @@
+{
+ "id": "23-040-001",
+ "title": "Prepare the Way for the LORD",
+ "refs": [
+  "Isaiah 40:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23040001,
+   "end": 23040005,
+   "ref": "Isaiah 40:1-5",
+   "ranges": [
+    [
+     23040001,
+     23040005
+    ]
+   ],
+   "title": "God Brings Comfort and Prepares the Way",
+   "key_verse": [
+    23040005,
+    23040005
+   ],
+   "reflect": [
+    {
+     "text": "God speaks words of tender comfort to people who have suffered through long trials. Their painful exile is not the end of their story. Real peace does not come from our own human efforts, but from God forgiving our sins and returning to dwell with us. As F. B. Meyer noted, our hearts find true comfort when we look to what Jesus endured to bring us pardon.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The call to build a highway through the desert points to a fresh rescue. God calls us to prepare the way for His presence. We make the rough ground smooth through repentance, which means turning away from wrong habits and trusting Him. Even in deep personal valleys and hard times, God shapes our hearts so we can receive Jesus and show His goodness to others.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "When the Lord arrives, His victory will not stay hidden. His glorious character will be displayed for all humanity to see, and Jesus will reign over every nation. Even when evil seems strong and God seems to delay, we do not need to lose heart. We are on the winning side when we trust in our mighty King.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What sinful habit or personal struggle do you need to surrender to God so your heart is ready for Him?",
+    "How does knowing that Christ will ultimately reign over the whole earth give you peace today?"
+   ],
+   "prayer": "Lord God, thank You for comforting us with full forgiveness and promising that evil will not win. Clear away the sin and doubt in our hearts as we make room for Your presence. Teach us to trust in Your strength during our hardest trials, and help us live for the day when Your glory is seen across the earth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 24",
+     "on": "Isaiah 40:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 40:1",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Lord Returns to His People",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lord-returns-his-people"
+    },
+    "D4": {
+     "author": "Jessica Van Roekel",
+     "work": "A Prayer to Prepare Our Hearts",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-to-prepare-our-hearts.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

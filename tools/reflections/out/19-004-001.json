@@ -1,0 +1,129 @@
+{
+ "id": "19-004-001",
+ "title": "Answer Me When I Call!",
+ "refs": [
+  "Psalms 4:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19004008,
+   "end": 19004008,
+   "ref": "Psalms 4:8",
+   "ranges": [
+    [
+     19004008,
+     19004008
+    ]
+   ],
+   "title": "\"Sleep in Peace\"",
+   "key_verse": [
+    19004008,
+    19004008
+   ],
+   "reflect": [
+    {
+     "text": "Many of us struggle to fall asleep when our minds are racing. We often lie awake trying to control tomorrow's problems or turning to worldly comforts to feel safe. Routines and quiet rooms may help us relax, but real rest comes only from God. He alone knows what the future holds, and He gives us the exact strength and rest we need for each day.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "David wrote these words during a time of severe danger and deep unrest. People opposed him, yet he could lie down and sleep in peace. He did not let fear rule him because he knew the Lord had set him apart. David trusted God for safety and praised Him in the middle of trouble.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "We can find that same lasting peace when we surrender our inner storms to the Lord. Instead of carrying heavy worries on our own, we can lay them at our heavenly Father's feet. True peace comes from resting in the presence of the God who loves and delights in us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What worries are you trying to control tonight instead of giving them to God?",
+    "How does knowing God cares for you help you rest peacefully?"
+   ],
+   "prayer": "Lord, we confess that we often try to carry our worries and control what we cannot change. Please take the heavy burdens from our hearts and calm our racing thoughts. Help us to rest tonight in Your faithful care, knowing that You alone keep us safe. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Lia Girard",
+     "work": "A Psalm for Peaceful Sleep (Psalm 4:8)",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-april-2.html"
+    },
+    "D3": {
+     "author": "Sophia Bricker",
+     "work": "Slumber and Song",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/slumber-and-song.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19004001,
+   "end": 19004008,
+   "ref": "Psalms 4:1-8",
+   "ranges": [
+    [
+     19004001,
+     19004008
+    ]
+   ],
+   "title": "Turning Glory into Shame",
+   "key_verse": [
+    19004002,
+    19004002
+   ],
+   "reflect": [
+    {
+     "text": "In Psalm 4, David asks how long people will drag his honor into shame and pursue empty lies. Charles Spurgeon explains that this question points directly to how the world treated Jesus, the true King. When God sent His Son to save us, people met Him not with true worship, but with mockery and contempt.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The honors the world offered Christ were actually cruel insults. Instead of a royal procession, they forced Him to carry His own cross while crowds mocked Him. Instead of fine wine, they gave Him vinegar and gall. A squad of rough soldiers gambled for His clothes as His only guard of honor. The world gave Him no royal throne except the painful cross between two thieves, despising His true title as King.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Human beings turned the glory of the Son of God into utter shame. Yet the cross was not the end of His story. That same Jesus, who endured the deepest shame for our sake, will bring unending joy to all His people and His angels forever.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does looking at the shame Jesus suffered on the cross change how you view your King?",
+    "In what ways do people around us still reject Jesus or treat His glory lightly?"
+   ],
+   "prayer": "Lord Jesus, thank You for enduring mockery, pain, and shame on the cross for us. Forgive us for the times we treat Your love lightly or seek what is worthless. We look forward to the day when all creation sees Your true glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 7",
+     "on": "Psalms 4:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

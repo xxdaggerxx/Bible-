@@ -1,0 +1,83 @@
+{
+ "id": "40-008-014",
+ "title": "Jesus Heals at Peter’s House",
+ "refs": [
+  "Matthew 8:14-17",
+  "Mark 1:29-34",
+  "Luke 4:38-41"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 41001029,
+   "end": 41001031,
+   "ref": "Mark 1:29-31",
+   "ranges": [
+    [
+     41001029,
+     41001031
+    ]
+   ],
+   "title": "\"He Took Her by the Hand\"",
+   "key_verse": [
+    41001031,
+    41001031
+   ],
+   "reflect": [
+    {
+     "text": "Jesus does not stay only in formal places of worship. He walks right into an ordinary, humble home with all its daily cares and troubles. When illness strikes Simon's household, the family brings their worry straight to Him without waiting. Jesus cares deeply about our private family lives. He is ready to enter our rooms today, listen to our troubles, and help us when we are completely powerless to help ourselves.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead of staying at a distance, Jesus shows tender care by drawing near to the sick woman. He bends down and gently takes her by the hand. His healing touch shows that He is the servant who carries our burdens and diseases. Her sudden, complete recovery gives us a small preview of the resurrection life, when Christ will remove all pain and sickness forever.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "As soon as her health returns, Peter's mother-in-law stands up and begins to serve her guests. Her actions show us what Christian life is all about. We find true joy and purpose not by living for ourselves, but by using our strength to gladly serve others in thankfulness for what Jesus has done.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What personal worry or family need do you want to place into Jesus's hands today?",
+    "How can you use your daily strength to serve the people around you out of thankfulness to Christ?"
+   ],
+   "prayer": "Lord Jesus, thank you for caring about our ordinary homes and drawing near to us when we are weak. Forgive our sins and bring healing to the broken places in our families. Give us thankful hearts so we can spend our lives serving you and the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 2",
+     "on": "Mark 1:30",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 112: Mark 1:29–30",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-112-mark-1-2930.html"
+    },
+    "D3": {
+     "author": "Rebecca McLaughlin",
+     "work": "Jesus Through Peter’s Mother-in-Law’s Eyes",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/peter-mother-in-law/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

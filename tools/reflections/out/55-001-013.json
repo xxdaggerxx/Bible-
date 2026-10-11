@@ -1,0 +1,66 @@
+{
+ "id": "55-001-013",
+ "title": "Holding to Sound Teaching",
+ "refs": [
+  "2 Timothy 1:13-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 55001013,
+   "end": 55001018,
+   "ref": "2 Timothy 1:13-18",
+   "ranges": [
+    [
+     55001013,
+     55001018
+    ]
+   ],
+   "title": "Holding Fast to the Truth",
+   "key_verse": [
+    55001014,
+    55001014
+   ],
+   "reflect": [
+    {
+     "text": "Paul urged Timothy to keep going in his work by holding tightly to sound, true instruction. We are called to protect the truth of the Bible and pass it on faithfully to reliable teachers who will guide others. Even when others turn away, God calls us to stay true to His message.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Serving God faithfully over a long time is not something we can do on our own. We face hardships, suffering, and opposition. Because of this, we need the Holy Spirit, who lives inside every believer, to help us stand firm and endure through difficult days.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As we stay faithful to God's Word day after day, something wonderful happens in our hearts. Our ongoing loyalty to His truth strengthens our confidence that our faith in Jesus Christ is genuine. Holding fast to sound teaching keeps us rooted in Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you rely on the Holy Spirit to help you hold firmly to God's truth when difficulties arise?",
+    "In what ways does sticking closely to Scripture strengthen your confidence in Jesus?"
+   ],
+   "prayer": "Heavenly Father, thank You for the truth You have given us in Your Word. Please help us rely on Your Holy Spirit to stand firm through hardship and opposition. Keep us faithful to Your teaching, and help us pass it on to others. In Jesus' name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Consistency in Ministry",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/consistency-in-ministry"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

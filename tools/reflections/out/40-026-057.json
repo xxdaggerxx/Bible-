@@ -1,0 +1,84 @@
+{
+ "id": "40-026-057",
+ "title": "Jesus before the Sanhedrin",
+ "refs": [
+  "Matthew 26:57-68",
+  "Mark 14:53-65",
+  "Luke 22:66-71"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40026057,
+   "end": 40026068,
+   "ref": "Matthew 26:57-68; Mark 14:53-65; Luke 22:66-71",
+   "ranges": [
+    [
+     40026057,
+     40026068
+    ],
+    [
+     41014053,
+     41014065
+    ],
+    [
+     42022066,
+     42022071
+    ]
+   ],
+   "title": "Looking Past Shame to Future Glory",
+   "key_verse": [
+    40026064,
+    40026064
+   ],
+   "reflect": [
+    {
+     "text": "Jesus stood before His accusers surrounded by harsh words, false stories, and unfair mockery. Yet He chose purposeful silence instead of defending Himself in anger. Because Jesus was secure in who He was and what His Father sent Him to do, He felt no need to fight back or prove Himself to the crowd. He knows firsthand how deeply rejection hurts, and His quiet trust shows us that patient restraint allows truth and character to outshine cruel treatment.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even in this humiliating moment, treated like a criminal, Jesus looked straight ahead to what was coming. He reminded the high priest that they would one day see the Son of Man sitting at the right hand of power and returning on the clouds of heaven. Charles Spurgeon called this \"holy foresight,\" as Jesus looked past current suffering to His coming triumph. The mocking and spitting could not lessen the true glory of His crown.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we face slander, illness, or unfair criticism, we can ask the Lord for the wisdom and strength to stay steadfast. We do not need to lash out in defense. Instead, we can look beyond today's difficulties to the day we will behold Christ's glory. Focusing on that sure hope gives us patience and courage to endure whatever troubles meet us along the way.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When others treat you unfairly, how can resting in your identity in God help you choose restraint instead of anger?",
+    "How can looking ahead to Christ's future glory give you courage during hard times today?"
+   ],
+   "prayer": "Lord Jesus, thank You for understanding the pain of being ridiculed and falsely accused. Grant us Your calm strength so we do not react with bitterness when we are opposed. Help us look beyond our present hardships and fix our eyes on the lasting glory of Your kingdom. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 30",
+     "on": "Matthew 26:64",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Rebecca Barlow Jordan",
+     "work": "Daily in Your Presence - July 22",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/dailypresence/daily-in-your-presence-july-22-1408740.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

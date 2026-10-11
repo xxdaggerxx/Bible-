@@ -1,0 +1,90 @@
+{
+ "id": "40-022-023",
+ "title": "The Sadducees and the Resurrection",
+ "refs": [
+  "Matthew 22:23-33",
+  "Mark 12:18-27",
+  "Luke 20:27-40"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40022023,
+   "end": 40022033,
+   "ref": "Matthew 22:23-33; Mark 12:18-27; Luke 20:27-40",
+   "ranges": [
+    [
+     40022023,
+     40022033
+    ],
+    [
+     41012018,
+     41012027
+    ],
+    [
+     42020027,
+     42020040
+    ]
+   ],
+   "title": "The God of the Living",
+   "key_verse": [
+    40022032,
+    40022032
+   ],
+   "reflect": [
+    {
+     "text": "The Sadducees did not believe that the dead would rise because they saw no direct mention of it in the books of Moses. They brought Jesus an extreme riddle about a woman who married seven brothers in turn, hoping to make the resurrection look absurd. They wrongly assumed that the future life would simply repeat earthly life.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jesus told them that their real problem was not knowing the Scriptures or God's power. Neglecting God's Word leads to deep spiritual confusion. Jesus explained that marriage was created for this present world. In the resurrection, earthly marriage will not exist, giving way to a life where divine love is fully perfected.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jesus then proved the resurrection using the story of the burning bush. When God said He is the God of Abraham, Isaac, and Jacob, He spoke in the present tense. Death cannot break God's covenant bond, so these fathers of faith are still alive with Him. Believers are assured of eternal life because our Lord is the God of the living.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that death cannot break God's bond with you bring you comfort today?",
+    "In what areas might you be limiting what God can do because you do not fully know His Word or power?"
+   ],
+   "prayer": "Lord God, thank You for the promise that You are the God of the living. Teach us to study Your Word carefully and to trust Your almighty power. Keep our hearts secure in Your everlasting love, both now and in the age to come. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Marriage at the Resurrection",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/marriage-resurrection"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The God of the Living",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-living"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Sadducees Ask About Marriage",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/sadducees-ask-about-marriage"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "43-001-014",
+ "title": "The Word Became Flesh",
+ "refs": [
+  "John 1:14-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43001014,
+   "end": 43001018,
+   "ref": "John 1:14-18",
+   "ranges": [
+    [
+     43001014,
+     43001018
+    ]
+   ],
+   "title": "Full of Grace and Truth",
+   "key_verse": [
+    43001014,
+    43001014
+   ],
+   "reflect": [
+    {
+     "text": "Jesus came to live among us as the Son of God, completely full of grace and truth. Grace means God's free kindness and mercy to people who do not deserve it. Jesus has shown this grace to us by softening our stubborn hearts, forgiving all our sins when we came to Him trembling, and turning our sorrow into joy. He is also full of truth, which means that every single promise He makes never fails.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because of who Jesus is, He holds a complete supply of everything we will ever need. In Him lives all the fullness of God in human flesh. His life makes us right with God, His death conquered the power of evil, and His blood washes away our sin. Day by day, He gives us grace to forgive us, change our hearts, protect us, and lead us safely to the end.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "No matter what trials we face, this supply never runs dry. As Charles Spurgeon wrote, \"this fulness is inexhaustible, and is treasured up where all the needy may reach it.\" In sorrow, Jesus gives us comfort, and in dark times, He brings us light. Because He is rich in grace, we can always come to Him and ask freely for all the help we need.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of your life right now do you need to ask Jesus for His grace and help?",
+    "How have you experienced Jesus keeping His promises when you were sorrowful or struggling?"
+   ],
+   "prayer": "Lord Jesus, thank You for coming to live among us and pouring out Your unending grace and truth. We thank You for softening our stubborn hearts, forgiving our sins, and keeping all Your promises. Please supply all our needs today from Your rich fullness, and help us rest in Your constant comfort.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 27",
+     "on": "John 1:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 10",
+     "on": "John 1:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "19-013-001",
+ "title": "How Long, O LORD?",
+ "refs": [
+  "Psalms 13:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19013001,
+   "end": 19013006,
+   "ref": "Psalms 13:1-6",
+   "ranges": [
+    [
+     19013001,
+     19013006
+    ]
+   ],
+   "title": "Trusting God While You Wait",
+   "key_verse": [
+    19013005,
+    19013005
+   ],
+   "reflect": [
+    {
+     "text": "When hard times drag on, our souls can feel completely worn out. It is easy to feel bitter or slip into self-pity if we try to rely only on our own strength. But crying out to God and asking how long our troubles will last is not giving up on Him. It is an honest expression of faith. We are bringing our real pain directly to the Lord, trusting that He appoints both the depth and duration of our trials.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Praying honestly moves us from feeling hopeless to depending on God with humble hearts. When we ask Him to give light to our eyes, we are asking for His perspective and for inner spiritual joy to return. Bringing our requests to God helps us stop merely venting, allowing us to hand our struggles and our enemies over into His care.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "True faith does not wait until trouble is gone before giving praise to God. As we look back on His steadfast love, our fears begin to shrink. Through the cross and resurrection of Jesus, we have permanent proof that God will treat us with deep kindness. Because of His promises, we can sing and rejoice in His rescue even before our circumstances change.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy sorrow or burden do you need to take honestly to God today instead of trying to carry it alone?",
+    "How can remembering God's faithful love help you praise Him even before your current trial ends?"
+   ],
+   "prayer": "Lord God, thank You that we can bring all our honest grief and difficult questions to You. Please renew our perspective, give light to our eyes, and restore our spiritual joy. Help us rely on Your steadfast love and praise You even while we wait for Your deliverance. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Scott Hubbard",
+     "work": "Will You Praise Him While You Wait?",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/will-you-praise-him-while-you-wait"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "Looking to God - Today's Insight - May 11, 2018",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-may-11-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

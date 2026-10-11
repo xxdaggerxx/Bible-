@@ -1,0 +1,97 @@
+# Builds the signed APK and publishes it as a GitHub Release. APKs are too big to keep in the
+# repository (GitHub's 100 MB file limit), so releases live here instead.
+#
+# It runs when a push changes the version (app/build.gradle.kts) and that version has no release
+# yet: the release and its tag vX.Y.Z are made here, because the build sessions can't push tags.
+# It can also be run by hand (Actions -> Release -> Run workflow), or by pushing a tag vX.Y.Z.
+#
+# The online Bible keys come from youversion.properties in the repository (key=, esv=, nlt=), or else
+# from the repository's Actions secrets YOUVERSION_KEY, ESV_KEY and NLT_KEY.
+name: Release
+
+on:
+  push:
+    branches: ["**"]
+    tags: ["v*"]
+    paths:
+      - app/build.gradle.kts
+      - .github/workflows/release.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Find the version
+        id: version
+        run: |
+          version=$(sed -n 's/.*versionName = "\(.*\)".*/\1/p' app/build.gradle.kts | head -1)
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "tag=v$version" >> "$GITHUB_OUTPUT"
+          if git ls-remote --exit-code --tags origin "refs/tags/v$version" >/dev/null && [ "${GITHUB_REF}" != "refs/tags/v$version" ]; then
+            echo "v$version is already released; nothing to do."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-java@v4
+        if: steps.version.outputs.skip != 'true'
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+        if: steps.version.outputs.skip != 'true'
+
+      - name: Check the online Bible keys are set
+        if: steps.version.outputs.skip != 'true'
+        env:
+          YOUVERSION_KEY: ${{ secrets.YOUVERSION_KEY }}
+          ESV_KEY: ${{ secrets.ESV_KEY }}
+          NLT_KEY: ${{ secrets.NLT_KEY }}
+        run: |
+          # The build reads youversion.properties first, then these variables.
+          prop() { [ -f youversion.properties ] && sed -n "s/^$1=//p" youversion.properties | tr -d '[:space:]'; }
+          missing=""
+          [ -n "$(prop key)" ] || [ -n "$YOUVERSION_KEY" ] || missing="$missing key/YOUVERSION_KEY"
+          [ -n "$(prop esv)" ] || [ -n "$ESV_KEY" ] || missing="$missing esv/ESV_KEY"
+          [ -n "$(prop nlt)" ] || [ -n "$NLT_KEY" ] || missing="$missing nlt/NLT_KEY"
+          if [ -n "$missing" ]; then
+            echo "::error::Missing online Bible keys:$missing. Put them in youversion.properties or the Actions secrets, then re-run this workflow."
+            exit 1
+          fi
+
+      - name: Build the signed APK
+        if: steps.version.outputs.skip != 'true'
+        env:
+          YOUVERSION_KEY: ${{ secrets.YOUVERSION_KEY }}
+          ESV_KEY: ${{ secrets.ESV_KEY }}
+          NLT_KEY: ${{ secrets.NLT_KEY }}
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon
+          cp app/build/outputs/apk/release/app-release.apk "InkAndWord-${{ steps.version.outputs.version }}.apk"
+          ls -l InkAndWord-*.apk
+
+      - name: Publish the release
+        if: steps.version.outputs.skip != 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          target_commitish: ${{ github.sha }}
+          name: Ink & Word ${{ steps.version.outputs.version }}
+          make_latest: true
+          body: |
+            Download **InkAndWord-${{ steps.version.outputs.version }}.apk** below on your Android tablet or phone and tap it to install. It updates over the installed app and keeps your notes.
+            What's new is in the README under "New in version ${{ steps.version.outputs.version }}".
+          files: InkAndWord-*.apk

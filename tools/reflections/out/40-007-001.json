@@ -1,0 +1,93 @@
+{
+ "id": "40-007-001",
+ "title": "Judging Others",
+ "refs": [
+  "Matthew 7:1-6",
+  "Luke 6:37-42"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40007001,
+   "end": 40007006,
+   "ref": "Matthew 7:1-6; Luke 6:37-42",
+   "ranges": [
+    [
+     40007001,
+     40007006
+    ],
+    [
+     42006037,
+     42006042
+    ]
+   ],
+   "title": "Looking at Ourselves Before Judging Others",
+   "key_verse": [
+    40007002,
+    40007002
+   ],
+   "reflect": [
+    {
+     "text": "It is easy for human nature to look closely at other people's faults while ignoring our own guilt. We often project our own hidden struggles onto those around us and obsess over tiny specks in their lives. Jesus reminds us that we cannot see into another person's heart. Instead of acting superior, we are called to examine our own lives first and focus on personal integrity.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "When we compare ourselves with our neighbors, our standard is far too low. F. B. Meyer reminds us that our true measure is Jesus, and we still fall far short of his perfection. Yet God is patiently shaping us through life's trials so that we will one day reflect his character. Knowing how much we still need his grace keeps us humble when we want to criticize someone else.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus also teaches that the standard we use for others will be measured back to us. If we treat people harshly or stingily, we can expect the same in return. Instead of holding back, we can offer generous sympathy, forgiveness, and love from God's unlimited resources. Approaching others with humble kindness rather than condemnation allows God's goodness to flow through us.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to notice small faults in others while overlooking your own?",
+    "How can remembering God's generous mercy toward you help you offer greater patience and forgiveness to those around you?"
+   ],
+   "prayer": "Lord, please forgive us when we judge others quickly while overlooking our own sins. Help us to keep our eyes on Jesus as our true standard and to treat our neighbors with generous love, mercy, and patience. May your kindness shape our hearts so we can offer genuine help without looking down on anyone.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Matthew 7:2",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Luke 6:40",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "The Speck and the Log",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-september-26-2024.html"
+    },
+    "D4": {
+     "author": "Greg Laurie",
+     "work": "Fault Finders",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/fault-finders-greg-laurie-daily-devotion-may-14.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

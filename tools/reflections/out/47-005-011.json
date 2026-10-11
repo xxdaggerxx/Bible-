@@ -1,0 +1,130 @@
+{
+ "id": "47-005-011",
+ "title": "Ambassadors for Christ",
+ "refs": [
+  "2 Corinthians 5:11-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 47005020,
+   "end": 47005020,
+   "ref": "2 Corinthians 5:20",
+   "ranges": [
+    [
+     47005020,
+     47005020
+    ]
+   ],
+   "title": "\"We Are Ambassadors for Christ\"",
+   "key_verse": [
+    47005020,
+    47005020
+   ],
+   "reflect": [
+    {
+     "text": "As Christians, our true home is in heaven, but God has stationed us here on earth to represent his kingdom. Our citizenship in heaven comes before any earthly loyalties, politics, or personal preferences. Being Christ's ambassador does not mean we get diplomatic immunity from trials. In fact, we should expect opposition as we serve him. Even so, we can use our earthly rights and daily situations to reflect Jesus and share his message of peace.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "God sends us to carry his message of reconciliation to people who are hurting. To do this, God does not look for great human credentials, expert knowledge, or personal strength. He does not need our self-reliance. What he desires is an obedient and willing heart. When we trust him and step out in faith to speak his truth, God works through us and displays his own power.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Where has God placed you right now to reflect Jesus to the people around you?",
+    "How can you offer God a willing heart today instead of relying on your own strength?"
+   ],
+   "prayer": "Lord, thank you for making us citizens of your heavenly kingdom and calling us to represent you on earth. Give us willing and obedient hearts to share your message with those who are hurting. Help us to mirror Jesus faithfully, even when we face trials and opposition. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Gwen Smith",
+     "work": "A Willing Heart - Girlfriends in God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-mar-11-2009-11600550.html"
+    },
+    "D5": {
+     "author": "Jason Soroski",
+     "work": "How to Represent Christ in Our Culture",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/spiritual-life/how-to-represent-christ-in-our-culture.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 47005011,
+   "end": 47005021,
+   "ref": "2 Corinthians 5:11-21",
+   "ranges": [
+    [
+     47005011,
+     47005021
+    ]
+   ],
+   "title": "Reconciled to God Through Christ",
+   "key_verse": [
+    47005018,
+    47005018
+   ],
+   "reflect": [
+    {
+     "text": "Every gift of the good news flows directly from God's loving heart. Through Jesus, God makes us a new creation and breaks the power of living only for ourselves. Best of all, God placed our sins onto Christ so that we could receive the righteousness of God, which means being declared completely right with him. If we grieve over our daily failures, we can rest knowing our acceptance does not depend on our own goodness. Because Christ took our place, God sees us as complete in his Son, clothed in his righteousness and free from condemnation.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "When we think about all Christ has done for us, his love urges us forward. Spurgeon reminds us that our love should not be \"shut up, like a stagnant pool.\" Real love shows itself in generous action, self-denial, and joyful work for God. Even if our lives seem poor, tired, or troubled on the outside, God is renewing our spirits within. Instead of focusing only on the small, temporary things of this world, we can fix our eyes on the eternal riches God has prepared for us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that you are fully accepted in Christ bring peace when you struggle with your faults?",
+    "In what practical ways can the love of Christ move you to serve others this week?"
+   ],
+   "prayer": "Lord, thank you for reconciling us to yourself and clothing us in the righteousness of Christ. Keep us from looking only at the troubles of this world, and fill our hearts with your eternal joy. Let your deep love move us to serve you with active, generous lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 4",
+     "on": "2 Corinthians 5:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 21",
+     "on": "2 Corinthians 5:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Corinthians 5:18",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "54-005-003",
+ "title": "Honoring True Widows",
+ "refs": [
+  "1 Timothy 5:3-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 54005003,
+   "end": 54005016,
+   "ref": "1 Timothy 5:3-16",
+   "ranges": [
+    [
+     54005003,
+     54005016
+    ]
+   ],
+   "title": "Putting Hope in God When Left Alone",
+   "key_verse": [
+    54005005,
+    54005005
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, Paul shares how the church should care for widows, especially those who are left without any family to support them. Losing someone dear can bring deep loneliness and grief. Yet as F. B. Meyer encourages, we should not look down into sorrow or the grave, but look up into the face of God. The loved ones we cherish are God's good gifts to us, and God remains faithful even when they are gone.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When you feel desolate or have no earthly support left, you can place your full hope in the Lord. He promises to watch over you, supply what you need, and surround you with His protecting love. You do not have to walk through life isolated, because God invites you to lean on Him as your true companion and provider.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Scripture shows that a person left alone can find purpose in steady prayer night and day. Meyer points out that comfort grows when we do not shut ourselves up with our grief, but instead reach out to help others who are hurting. Lifting others in prayer and sharing God's kindness eases our own sorrow.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face loss or loneliness, do you look down at your grief or look up to God for comfort?",
+    "How can praying for other people who are hurting help bring peace to your own heart?"
+   ],
+   "prayer": "Lord God, thank You for being near to those who feel desolate and alone. Help us to put our complete hope in You for daily care and protection. Teach us to pray faithfully and to comfort others who are walking through sorrow. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Timothy 5:5",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

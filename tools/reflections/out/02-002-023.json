@@ -1,0 +1,73 @@
+{
+ "id": "02-002-023",
+ "title": "God Hears the Cry of the Israelites",
+ "refs": [
+  "Exodus 2:23-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2002023,
+   "end": 2002025,
+   "ref": "Exodus 2:23-25",
+   "ranges": [
+    [
+     2002023,
+     2002025
+    ]
+   ],
+   "title": "God Hears and Takes Notice",
+   "key_verse": [
+    2002024,
+    2002024
+   ],
+   "reflect": [
+    {
+     "text": "When the people of Israel groaned under the heavy weight of slavery, their cries reached God. Scripture repeats God's name to show that He is in total control. Even before the Israelites could see any relief, God was already working behind the scenes to help them.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God was not surprised by their misery. Long before their troubles began, He knew what they would face through His covenant, His special promise to Abraham. In our hard times, God is deeply aware of every painful detail. Our trials fit into His timing, and through Christ, He secures an even greater rescue that turns our suffering toward eternal good.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Waiting on the Lord requires patience. His provision often begins moving toward us before we even speak our requests. Because God knows our needs completely, we can lay down our worry. We can trade our anxiety for quiet peace, trusting that His help is already on its way.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face a difficult trial, how does knowing that God already sees your pain bring you comfort?",
+    "What worry can you release to God today as you wait on His plan?"
+   ],
+   "prayer": "Father, thank you that you hear our cries and take notice of our pain. Help us to wait with patience when we cannot yet see what you are doing. Teach us to rest in your peace, trusting that your help is already moving toward us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jon Bloom",
+     "work": "God Knows",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/god-knows"
+    },
+    "D2": {
+     "author": "Whitney Capps",
+     "work": "On Its Way – Part 1",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-aug-12-2008-11580361.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

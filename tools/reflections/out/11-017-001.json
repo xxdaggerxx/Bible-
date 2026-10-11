@@ -1,0 +1,73 @@
+{
+ "id": "11-017-001",
+ "title": "The Ravens Feed Elijah",
+ "refs": [
+  "1 Kings 17:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11017001,
+   "end": 11017007,
+   "ref": "1 Kings 17:1-7",
+   "ranges": [
+    [
+     11017001,
+     11017007
+    ]
+   ],
+   "title": "God's Creative Provision Step by Step",
+   "key_verse": [
+    11017004,
+    11017004
+   ],
+   "reflect": [
+    {
+     "text": "God called Elijah to leave his familiar life and hide by a quiet brook. When God gives us direction, His provision always comes with it. Elijah was not shown the entire future; he was simply told where to go next. Difficult disruptions can jolt us out of our ordinary routines, but they also draw us into deeper spiritual growth as we learn to trust God one step and one day at a time.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "While Elijah was alone, God cared for him in an astonishing way. He commanded ravens, which were considered unclean birds, to bring him food twice a day. God often works outside of ordinary human expectations. His care is creative, personal, and rarely predictable. Surrendering control to God means allowing Him to provide for us however He chooses, while we patiently keep our eyes open for unexpected help.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Eventually, the brook dried up because there was no rain in the land. God did not reveal Elijah's next assignment until that water source was completely gone. We might want to see the whole path ahead, but God asks us to rely on Him in the present moment. We can trust that the same God who provides through unusual means will also lead us when old comforts run dry.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life might God be asking you to trust Him one step at a time instead of needing to see the whole future?",
+    "Are you keeping your eyes open to receive God's help in ways you did not expect?"
+   ],
+   "prayer": "Lord, thank You for caring for us in creative and unexpected ways. Teach us to surrender control and receive Your help, even when it looks different from what we imagined. When life feels uncertain and our routines change, give us the faith to follow You one day at a time. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jennifer Dukes Lee",
+     "work": "Lord, Send the Ravens",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-march-11-2026.html"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "A Step at a Time",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/a-step-at-a-time1"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

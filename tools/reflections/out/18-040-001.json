@@ -1,0 +1,85 @@
+{
+ "id": "18-040-001",
+ "title": "Job Humbles Himself before the LORD",
+ "refs": [
+  "Job 40:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18040001,
+   "end": 18040005,
+   "ref": "Job 40:1-5",
+   "ranges": [
+    [
+     18040001,
+     18040005
+    ]
+   ],
+   "title": "Silent Before the Almighty",
+   "key_verse": [
+    18040004,
+    18040004
+   ],
+   "reflect": [
+    {
+     "text": "Job stayed faithful through deep pain, but he also felt he deserved an explanation and came close to questioning God's fairness. When the Almighty speaks, Job suddenly sees how small he really is. We are finite creatures, lacking the wisdom or authority to put God on trial. Faced with the majestic greatness of God, Job drops his arguments and places his hand over his mouth.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Like Job, we often want to defend ourselves or complain when life hurts. Yet, as F. B. Meyer observed, a true walk with God begins when we learn \"that we are of small account.\" When we stand before God's holiness, our pride melts away. Even great servants of God throughout Scripture realized how small and sinful they were when they saw the Lord.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Admitting that we are unworthy should never keep us from coming to God. Charles Spurgeon reminds us that Jesus came specifically to call sinners. God quiets our proud words so that we can turn to Him in genuine repentance. When we stop making excuses and confess our need, the Lord pardons us by His grace—His undeserved love—and covers us in His righteousness.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where might you be complaining or demanding explanations from God instead of trusting Him?",
+    "How does knowing that Jesus welcomes sinners help you admit your weakness and come to Him honestly?"
+   ],
+   "prayer": "Lord God, You are great and holy, while we are small and often full of pride. Forgive us for questioning Your ways and trying to justify ourselves. Quiet our complaints, wash us clean through Jesus, and help us rest in Your unfailing mercy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 6",
+     "on": "Job 40:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 40:4",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Job 40",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/exodus-22-john-1-job-40-2-corinthians-10/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "66-016-001",
+ "title": "The First Six Bowls of Wrath",
+ "refs": [
+  "Revelation 16:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66016001,
+   "end": 66016016,
+   "ref": "Revelation 16:1-16",
+   "ranges": [
+    [
+     66016001,
+     66016016
+    ]
+   ],
+   "title": "Watching and Waiting for the Lord",
+   "key_verse": [
+    66016015,
+    66016015
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God pours out His judgment on an unrepentant world as the nations gather for battle. Right in the middle of these events, Jesus reminds us that He comes like a thief, and those who stay awake are blessed. Early Christians faced fierce persecution, but as Charles Spurgeon warned, our danger in \"these soft and silken days\" can be even greater.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It is easy to be lulled to sleep when life is comfortable. The world flatters us with hollow promises, tempting us to chase wealth, become proud, or drown in everyday worries. The enemy does not care whether he attacks us openly or traps us quietly, as long as our love for Christ fades and our confidence in Him is destroyed.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of this, we need to be watchful now more than ever. A shallow faith with an empty religious mask will not stand. We need real trust in Jesus and a genuine love for Him. By the power of the Holy Spirit, we can stay spiritually awake and live as conquerors who are ready for our Lord.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly comforts or everyday worries are most likely to distract you from your love for Jesus?",
+    "How can you actively stay spiritually awake each day as you wait for the Lord?"
+   ],
+   "prayer": "Lord Jesus, help us not to fall asleep in our faith or be deceived by the comforts of this world. Guard our hearts from pride and anxiety, and fill us with a deep love for You. Keep us watchful and ready until the day You return. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 26",
+     "on": "Revelation 16:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

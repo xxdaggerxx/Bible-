@@ -1,0 +1,136 @@
+{
+ "id": "10-007-018",
+ "title": "David’s Prayer of Thanksgiving",
+ "refs": [
+  "2 Samuel 7:18-29"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 10007025,
+   "end": 10007025,
+   "ref": "2 Samuel 7:25",
+   "ranges": [
+    [
+     10007025,
+     10007025
+    ]
+   ],
+   "title": "\"Do as You Have Promised\"",
+   "key_verse": [
+    10007025,
+    10007025
+   ],
+   "reflect": [
+    {
+     "text": "God never intended His promises to sit forgotten like waste paper. As Charles Spurgeon wrote, \"Nothing pleases our Lord better than to see his promises put in circulation.\" God's words are meant to be used in daily prayer. He is never troubled when we come asking Him to fulfill His word, and He does not become poorer by giving us what He promised. He delights to answer needy souls who take Him at His word.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Notice how David prayed these words. He went in and sat before the Lord in quiet rest. This was the posture of someone talking openly with a dear friend. Because God had already made His loving plans clear, David could rest in those purposes. Even though God is completely faithful to His word, He still invites us to claim His promises and ask in childlike faith for Him to do what He said.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What promise from God's word can you bring to Him in prayer today?",
+    "How does resting in God's promises change the way you speak with Him?"
+   ],
+   "prayer": "Lord, thank You that Your promises are reliable and true. Help us to bring Your words back to You in simple, childlike faith. Teach us to sit in Your peace and trust You to do all that You have said. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 15",
+     "on": "2 Samuel 7:25",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Samuel 7:25",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 10007018,
+   "end": 10007029,
+   "ref": "2 Samuel 7:18-29",
+   "ranges": [
+    [
+     10007018,
+     10007029
+    ]
+   ],
+   "title": "David's Prayer of Thanksgiving",
+   "key_verse": [
+    10007026,
+    10007026
+   ],
+   "reflect": [
+    {
+     "text": "David wanted to build a temple for God, but God said no. Instead of becoming bitter or resentful over this disappointment, David responded with humble praise. He knew that he had been raised from obscurity purely by God's grace, which is His undeserved kindness. God had given him an even greater promise of an enduring family line, a covenant that ultimately points forward to the eternal kingdom of Jesus Christ.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "When David asked God to establish his house forever, his main goal was not his own fame. He pleaded for God to keep this promise so that the Lord's name would be magnified forever. As we look at David's example, we learn to seek God's blessings not for our own pride, but so that others will honor and praise God.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "We can bring our own families, neighbors, and future generations before God with this same bold confidence. We do not pray because we doubt God, but because we believe Him. His promises give us a solid foundation to ask Him to save our loved ones, heal our sick, and help our children walk faithfully with Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you usually react when God says no to a good plan you had?",
+    "In what ways can your prayers focus more on honoring God's name than your own comfort?"
+   ],
+   "prayer": "Heavenly Father, thank You for Your undeserved kindness to us through Jesus Christ. When our plans are redirected, keep our hearts free from bitterness and full of gratitude. Help us to seek Your honor above all else and to trust Your good purposes for our lives and families. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 22",
+     "on": "2 Samuel 7:29",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Michael Youssef, Ph.D.",
+     "work": "Bringing Our Disappointments to God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-week-of-august-26-2024.html"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "David Thanks the Lord",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/david-thanks-the-lord"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

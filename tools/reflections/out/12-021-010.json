@@ -1,0 +1,66 @@
+{
+ "id": "12-021-010",
+ "title": "Manasseh’s Idolatries Rebuked",
+ "refs": [
+  "2 Kings 21:10-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12021010,
+   "end": 12021018,
+   "ref": "2 Kings 21:10-18",
+   "ranges": [
+    [
+     12021010,
+     12021018
+    ]
+   ],
+   "title": "God’s Patience and the Call to Repent",
+   "key_verse": [
+    12021012,
+    12021012
+   ],
+   "reflect": [
+    {
+     "text": "Even though King Manasseh had a godly father in King Hezekiah, he turned his back on that good heritage. Instead, he led Judah into horrific false worship, idolatry, and terrible violence against innocent people. Under his rule, Judah fell into such deep rebellion that they acted even worse than the Canaanite nations the Lord had driven out of the land long before.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In response to this evil, the Lord spoke through His prophets to warn them. He announced that an unavoidable disaster was coming upon Jerusalem, and the people would be handed over to their enemies. Manasseh’s story shows us that God is deeply patient, but His patience is not limitless. When a people persistently choose rebellion over obedience, God's righteous judgment will eventually come.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This sobering history offers a serious warning for our own lives. We must never presume upon God's grace, which is His undeserved favor, by thinking our sins do not matter. Instead, whenever God calls us to turn away from our wrongdoing, we should humble ourselves and repent immediately.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where you have taken God's patience for granted instead of turning away from sin?",
+    "How can remembering God's holy justice encourage you to repent quickly whenever He corrects you?"
+   ],
+   "prayer": "Lord, thank You for Your great patience and undeserved kindness toward us. Help us never to take Your grace for granted or persist in things that displease You. Give us humble hearts to hear Your warnings and turn back to You without delay. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Manasseh’s Reign of Terror",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/Manassehs-Reign-of-Terror"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}
