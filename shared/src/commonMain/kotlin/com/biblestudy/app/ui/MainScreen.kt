@@ -73,6 +73,9 @@ fun StudyApp(vm: StudyViewModel) {
             var dialog by remember { mutableStateOf<DialogKind?>(null) }
             val snackbar = remember { SnackbarHostState() }
 
+            LaunchedEffect(vm.searchRequested) {
+                if (vm.searchRequested) { vm.searchRequested = false; if (dialog == null) dialog = DialogKind.SEARCH }
+            }
             LaunchedEffect(vm.message) {
                 val m = vm.message ?: return@LaunchedEffect
                 vm.message = null

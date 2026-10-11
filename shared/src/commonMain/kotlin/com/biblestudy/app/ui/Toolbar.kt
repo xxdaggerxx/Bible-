@@ -205,7 +205,7 @@ fun StudyToolbar(
                     DropdownMenuItem(text = { Text("Person or place card\u2026") }, onClick = { insertMenu = false; insertDialog = "name" })
                     DropdownMenuItem(text = { Text("Sketch page\u2026") }, onClick = { insertMenu = false; insertDialog = "sketch" })
                     HorizontalDivider()
-                    for (src in ImageSource.entries) {
+                    for (src in imageSourcesHere) {
                         DropdownMenuItem(
                             text = { Text("Picture: " + src.label.replaceFirstChar { it.lowercase() }) },
                             onClick = { insertMenu = false; onInsertImage(src) },

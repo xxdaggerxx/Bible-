@@ -43,7 +43,7 @@ kotlin {
             implementation(compose.materialIconsExtended)
             implementation(compose.ui)
             implementation(compose.components.resources)
-            implementation("org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4")
+            api("org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4")
             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
             implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
             api("com.squareup.okio:okio:3.10.2")
@@ -69,6 +69,12 @@ kotlin {
         }
         // Desktop and iOS share SQLite bundled with the app (Android uses its own).
         getByName("bundledMain").dependencies { implementation("androidx.sqlite:sqlite-bundled:2.5.1") }
+        val desktopTest by getting {
+            dependencies {
+                implementation(kotlin("test"))
+                implementation(compose.desktop.currentOs)
+            }
+        }
         val desktopMain by getting {
             dependencies {
                 implementation(compose.desktop.common)

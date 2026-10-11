@@ -51,6 +51,13 @@ import com.biblestudy.app.model.Tool
 import com.biblestudy.app.model.VerseId
 import com.biblestudy.app.model.VerseTarget
 import com.biblestudy.app.model.translated
+import androidx.compose.ui.input.key.Key
+import androidx.compose.ui.input.key.isAltPressed
+import androidx.compose.ui.input.key.isCtrlPressed
+import androidx.compose.ui.input.key.isMetaPressed
+import androidx.compose.ui.input.key.isShiftPressed
+import androidx.compose.ui.input.key.key
+import androidx.compose.ui.input.key.type
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.isActive
@@ -3255,6 +3262,29 @@ class StudyViewModel(val host: Host) : ViewModel() {
 
     /** A chapter export waiting for the active panel to draw it. */
     var exportRequest by mutableStateOf<ExportRequest?>(null)
+
+    /** Set by the keyboard shortcut for search (PLAT-4); the screen opens Search and clears it. */
+    var searchRequested by mutableStateOf(false)
+
+    /**
+     * Keyboard shortcuts on computers (PLAT-4): Ctrl+Z undo, Ctrl+Y or Ctrl+Shift+Z redo, Ctrl+F
+     * search, Alt+Left and Alt+Right Back and Forward (Cmd instead of Ctrl on a Mac). Returns
+     * whether the key was used.
+     */
+    fun shortcut(key: androidx.compose.ui.input.key.KeyEvent): Boolean {
+        if (key.type != androidx.compose.ui.input.key.KeyEventType.KeyDown) return false
+        val cmd = key.isCtrlPressed || key.isMetaPressed
+        when {
+            cmd && key.key == Key.Z && key.isShiftPressed -> redo()
+            cmd && key.key == Key.Z -> undo()
+            cmd && key.key == Key.Y -> redo()
+            cmd && key.key == Key.F -> searchRequested = true
+            key.isAltPressed && key.key == Key.DirectionLeft -> back()
+            key.isAltPressed && key.key == Key.DirectionRight -> forward()
+            else -> return false
+        }
+        return true
+    }
 
     /** A file name for exporting the active panel's chapter, e.g. "John 3 (BSB)". */
     fun exportName(): String {

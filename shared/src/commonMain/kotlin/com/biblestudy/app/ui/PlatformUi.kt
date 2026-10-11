@@ -52,3 +52,6 @@ expect val bibleFont: FontFamily
 val LocalAppContext = androidx.compose.runtime.staticCompositionLocalOf<com.biblestudy.app.platform.AppContext> {
     error("No AppContext provided")
 }
+
+/** Where a picture can come from on this device (Insert → Picture). */
+expect val imageSourcesHere: List<ImageSource>

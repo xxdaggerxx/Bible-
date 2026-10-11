@@ -10,4 +10,7 @@ object AppConfig {
     var youVersionKey: String = ""
     var esvKey: String = ""
     var nltKey: String = ""
+    /** Google sign-in for sync on computers (an OAuth "Desktop app" client); blank turns it off. */
+    var googleDesktopId: String = ""
+    var googleDesktopSecret: String = ""
 }

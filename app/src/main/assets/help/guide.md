@@ -57,6 +57,18 @@ Ink & Word works on phones too, with or without a pen. It looks like it does on 
 - **Margins fold away.** The margins are hidden at the side of the page. Tap the ‹ tab at the edge to slide them in, and again to put them away.
 - **Big windows fill the screen**, such as Settings and the book picker.
 
+## On a computer
+
+Ink & Word also runs on Windows, Mac and Linux computers, the same app in a window.
+
+- **The mouse is your pen.** Pick the pen, highlighter or another tool in the toolbar, then draw with the mouse or a drawing tablet. To read without drawing, tap the lock (read mode): then the mouse scrolls and taps like a finger.
+- **Scroll with the wheel** (or two fingers on a touchpad). Hold Shift to scroll sideways, Ctrl to zoom.
+- **Right-click on the words** to select them, as holding a finger still does on a tablet.
+- **Keyboard shortcuts:** Ctrl+Z undo, Ctrl+Y (or Ctrl+Shift+Z) redo, Ctrl+F search, Alt+← and Alt+→ Back and Forward. On a Mac use Cmd instead of Ctrl.
+- **Any window size.** Make the window narrow and it uses the phone layout; wide, the tablet layout.
+- **Your notes** are kept in your user folder (Windows *%APPDATA%\Ink & Word*, Mac *~/Library/Application Support/Ink & Word*, Linux *~/.local/share/ink-and-word*). To bring your notes from a tablet, back them up there and restore the backup here (see *Export, backup and restore*). Sync with Google Drive isn't available on computers yet.
+- **Pictures** come from a file or the clipboard (*Insert → Picture*); there's no camera.
+
 ## Highlighting and underlining
 
 - **Highlight.** Pick the highlighter and swipe over words. It snaps to whole words. (Turn off *Snap to words* in its menu to highlight freehand.)

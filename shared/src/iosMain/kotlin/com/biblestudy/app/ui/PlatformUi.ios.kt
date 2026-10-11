@@ -42,3 +42,5 @@ actual fun smallestScreenWidthDp(): Int {
 }
 
 actual val bibleFont: FontFamily = FontFamily.Serif
+
+actual val imageSourcesHere: List<ImageSource> = ImageSource.entries

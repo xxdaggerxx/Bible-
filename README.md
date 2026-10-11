@@ -1,10 +1,12 @@
-# Ink & Word — version 2.10.2
+# Ink & Word — version 2.10.3
 
-**Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet, and since version 2.0 on Android phones too, drawing with a finger.
+**Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet, and since version 2.0 on Android phones too, drawing with a finger. Since version 2.10.3 it also runs on Windows, Mac and Linux computers.
 
 ## Download the app
 
 Each version is on the repository's **Releases** page (on GitHub, *Releases* on the right of the main page). Open the latest one and download **InkAndWord-x.y.z.apk** on your tablet or phone, then tap it to install (Android asks you to allow installing from that source). It installs over the previous version and keeps your notes.
+
+On a computer, download **InkAndWord-x.y.z.msi** (Windows), **.dmg** (Mac) or **.deb** (Linux) from the same release and open it to install. The Mac and Windows installers aren't signed yet: on a Mac, right-click the app and choose *Open* the first time; on Windows, choose *More info → Run anyway* if SmartScreen asks.
 
 Releases are built by GitHub itself: when a push changes the version in `app/build.gradle.kts`, the *Release* workflow (`.github/workflows/release.yml`) builds the signed APK and publishes it as the release `vX.Y.Z` (it skips versions already released). It can also be run by hand from the *Actions* tab. The online Bible keys come from `youversion.properties` in the repository (or the Actions secrets `YOUVERSION_KEY`, `ESV_KEY` and `NLT_KEY`); the workflow stops if any is missing. APKs are no longer kept in the repository's `releases/` folder: at about 100 MB they hit GitHub's limit for one file.
 
@@ -19,6 +21,8 @@ Releases are built by GitHub itself: when a push changes the version in `app/bui
 5. In Android Studio, pick your tablet in the device dropdown at the top and press the green **Run ▶** button. The app installs and opens. It stays installed like any other app.
 
 **Build an APK file instead.** Use *Build → Build App Bundle(s) / APK(s) → Build APK(s)*. The file appears in `app/build/outputs/apk/debug/`. Copy it to the tablet and open it; Android will ask you to allow installing from that source.
+
+**Run the computer version.** From the project folder, `./gradlew :desktop:run` (Windows: `gradlew.bat :desktop:run`) opens the app in a window; `./gradlew :desktop:packageDistributionForCurrentOS` makes the installer for the computer you're on, in `desktop/build/compose/binaries/`. It needs Java 17 or later.
 
 ## Building and updating the app (signing key)
 
@@ -72,6 +76,14 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 2.10.3
+
+- **Ink & Word on Windows, Mac and Linux.** The same app, with the same Bibles, study views and notes, now runs on computers (step 4 of the plan below). Install it from the release's *.msi*, *.dmg* or *.deb*. The window can be any size; narrow, it uses the phone layout.
+- **Mouse and keyboard.** The mouse draws with the tool picked in the toolbar, like a pen (a drawing tablet works the same way); the scroll wheel scrolls (Shift for sideways, Ctrl to zoom); a right-click on the words selects them, as holding a finger still does. Shortcuts: Ctrl+Z undo, Ctrl+Y or Ctrl+Shift+Z redo, Ctrl+F search, Alt+← and Alt+→ Back and Forward (Cmd instead of Ctrl on a Mac).
+- **Your notes on a computer** are kept in the usual place for each system: *%APPDATA%\Ink & Word* on Windows, *~/Library/Application Support/Ink & Word* on a Mac, *~/.local/share/ink-and-word* on Linux. To bring notes from the tablet, make a backup there (*⋮ → Back up my notes…*) and restore it on the computer (*Settings → Backup → Restore from backup…*); the tablet keeps its notes. A test opens a real notes database from the Android app with the computer version and checks every row is read back unchanged.
+- **Behind the scenes: one code base.** All the app's screens and data code now live in a shared module (`shared/`) that builds for Android, computers and (not yet finished) iPad and iPhone; the Android app is a thin shell with the same app ID, signing key and files, so it updates over the installed app as before. Nothing changes on Android, except that a mouse wheel and a right-click now work there too.
+- Known gaps: **sync with Google Drive isn't available on computers yet**: it needs a Google sign-in set up for the desktop app (a Google Cloud "Desktop app" client, `google.desktop.id`/`google.desktop.secret` in `youversion.properties` or the Actions secrets); until then, move notes with a backup. On a computer a PDF export is pictures of the pages (the text can't be selected, unlike on Android). Holding Back or Forward for the list of steps needs a long press, which a mouse can't do yet. There's no camera on a computer, so *Insert → Picture* offers files and the clipboard only. The installers aren't signed. Each installer carries its own Java and the Bibles, about 300 MB installed.
+
 ## New in version 2.10.2
 
 - **Your notes are saved before every update.** The first time a new version starts, before it opens your notes, it saves them and your pictures as an ordinary backup, *bible-study-before-2.10.2.zip*, in the app's Backups folder (*Android/data/com.biblestudy.app/files/Backups*, where automatic backups go when no folder is chosen). The newest 3 are kept. It takes a moment on the first start after an update. If Android ever finds the notes database damaged, the damaged file is copied to the same folder before Android removes it.
@@ -83,10 +95,10 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
 The app is written in Kotlin with Jetpack Compose. Compose Multiplatform runs the same code on iOS and on desktops, so the app is being moved, step by step, to one code base:
 
 1. **Notes kept safe** (2.10.2): the real-notes test and the backup before each update.
-2. **Data code without Android parts**: the database, JSON and internet code made to work on every platform, with the same files and formats. Android keeps opening the notes the way it always has.
-3. **A shared module** holding the app, with the Android app as a thin shell. Same app ID and signing key, so it updates over the installed app.
-4. **Desktop**: Windows, Mac and Linux.
-5. **iPad, then iPhone**, with Apple Pencil.
+2. **Data code without Android parts**: the database, JSON and internet code made to work on every platform, with the same files and formats. Android keeps opening the notes the way it always has (2.10.3).
+3. **A shared module** holding the app, with the Android app as a thin shell. Same app ID and signing key, so it updates over the installed app (2.10.3).
+4. **Desktop**: Windows, Mac and Linux (2.10.3; sync on computers still to come).
+5. **iPad, then iPhone**, with Apple Pencil. The shared code already compiles for iOS; still to do are the iOS parts (file pickers, sound, the AI chat, sign-in, Apple Pencil ink), an Xcode project, and building on a Mac with the owner's Apple Developer account for TestFlight.
 
 Notes move between devices with sync (Google Drive) or a backup zip; nothing is moved off the Android tablet. A web version was considered and left out: the 145 MB of Bibles and commentaries, notes that a browser can clear, and online Bible keys that would be public.
 

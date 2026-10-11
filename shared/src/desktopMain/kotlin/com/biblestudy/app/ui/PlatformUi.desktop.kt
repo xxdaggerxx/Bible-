@@ -6,7 +6,11 @@ import androidx.compose.ui.platform.LocalWindowInfo
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.platform.Font
+import com.biblestudy.app.platform.DesktopDriveSignIn
 import com.biblestudy.app.platform.PickedFile
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.awt.FileDialog
 import java.awt.Frame
 import java.awt.Toolkit
@@ -59,9 +63,15 @@ actual fun rememberPickFolder(onPicked: (PickedFile?) -> Unit): () -> Unit = {
 }
 
 @Composable
-actual fun rememberDriveSignIn(onResult: (Any?) -> Unit): (request: Any) -> Unit = { request ->
-    // The desktop sign-in runs in the browser and hands back its result itself (see DesktopDriveSignIn).
-    onResult(request)
+actual fun rememberDriveSignIn(onResult: (Any?) -> Unit): (request: Any) -> Unit {
+    val scope = androidx.compose.runtime.rememberCoroutineScope()
+    // Google's page opens in the browser; the token comes back here when the user has allowed it.
+    return { request ->
+        scope.launch {
+            val token = withContext(Dispatchers.IO) { runCatching { (request as? DesktopDriveSignIn)?.signInInBrowser() }.getOrNull() }
+            onResult(token)
+        }
+    }
 }
 
 /** Computers have no share sheet: the text goes to the clipboard. */
@@ -85,3 +95,6 @@ actual val bibleFont: FontFamily = FontFamily(
     Font("font/gentium_book_plus_regular.ttf"),
     Font("font/gentium_book_plus_bold.ttf", FontWeight.Bold),
 )
+
+/** No camera or photo gallery on a computer: a picture file, or one copied. */
+actual val imageSourcesHere: List<ImageSource> = listOf(ImageSource.FILES, ImageSource.CLIPBOARD)

@@ -94,6 +94,9 @@ import androidx.compose.ui.input.pointer.PointerInputChange
 import androidx.compose.ui.input.pointer.PointerInputScope
 import androidx.compose.ui.input.pointer.PointerType
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.input.pointer.isCtrlPressed
+import androidx.compose.ui.input.pointer.isSecondaryPressed
+import androidx.compose.ui.input.pointer.isShiftPressed
 import androidx.compose.ui.input.pointer.positionChanged
 import androidx.compose.ui.input.pointer.util.VelocityTracker
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
@@ -376,6 +379,8 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
                     }
                     // Pen hover (INK-13): where the pen will touch, before it lands.
                     .pointerInput(ctl) { trackHover(ctl) { vm.sideButton } }
+                    // A mouse wheel or touchpad scrolls; with Ctrl it zooms; a right-click selects words (PLAT-4).
+                    .pointerInput(ctl) { wheel(ctl) }
             ) {
                 drawRect(theme.surround)
                 val pages = ctl.pages()
@@ -1211,6 +1216,7 @@ private suspend fun PointerInputScope.readerGestures(
         fling?.cancel()
         ctl.touched()
 
+
         if (!down.isPen() && !ctl.recentlyPenned()) {
             val left = ctl.marginGripAt(down.position)
             if (left != null) {
@@ -1419,6 +1425,38 @@ private suspend fun AwaitPointerEventScope.trackPen(
 }
 
 /** Follows a hovering pen (INK-13) without taking any input from the gestures. */
+private suspend fun PointerInputScope.wheel(ctl: ReaderController) {
+    val step = 64.dp.toPx() // one notch of the wheel
+    awaitPointerEventScope {
+        while (true) {
+            val e = awaitPointerEvent()
+            // A right-click does what holding a finger still does: selects the words (PLAT-4).
+            if (e.type == androidx.compose.ui.input.pointer.PointerEventType.Press && e.buttons.isSecondaryPressed) {
+                val c = e.changes.firstOrNull() ?: continue
+                ctl.touched()
+                if (ctl.startTextSelect(c.position)) {
+                    c.consume()
+                    trackTextSelect(c, ctl)
+                }
+                continue
+            }
+            if (e.type != androidx.compose.ui.input.pointer.PointerEventType.Scroll) continue
+            val c = e.changes.firstOrNull() ?: continue
+            val d = c.scrollDelta
+            if (d == Offset.Zero) continue
+            ctl.touched()
+            if (e.keyboardModifiers.isCtrlPressed) {
+                ctl.transform(c.position, Offset.Zero, if (d.y < 0) 1.1f else 1f / 1.1f)
+            } else {
+                val shift = e.keyboardModifiers.isShiftPressed
+                val pan = if (shift && d.x == 0f) Offset(-d.y * step, 0f) else Offset(-d.x * step, -d.y * step)
+                ctl.transform(c.position, pan, 1f)
+            }
+            c.consume()
+        }
+    }
+}
+
 private suspend fun PointerInputScope.trackHover(ctl: ReaderController, sideButton: () -> SideButton) {
     awaitPointerEventScope {
         while (true) {

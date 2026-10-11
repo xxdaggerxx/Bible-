@@ -88,3 +88,5 @@ actual val bibleFont: FontFamily = FontFamily(
     Font(R.font.gentium_book_plus_regular),
     Font(R.font.gentium_book_plus_bold, FontWeight.Bold),
 )
+
+actual val imageSourcesHere: List<ImageSource> = ImageSource.entries

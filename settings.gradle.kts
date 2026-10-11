@@ -17,4 +17,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "BibleStudy"
-include(":app", ":shared")
+include(":app", ":shared", ":desktop")
