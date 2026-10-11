@@ -1,0 +1,519 @@
+<title>Ink &amp; Word</title>
+<meta name="description" content="Ink & Word is a free study Bible for Android tablets and phones. Write on the page, study with commentaries, Hebrew and Greek, and devotionals, all offline.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=Figtree:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap">
+<style>
+/* Layout: a night-ink page; screenshots sit like pages on a desk, with gold handwritten margin notes pointing at what matters. */
+:root {
+  --bg: #0e1322;          /* ink-blue night page */
+  --surface: #161d33;
+  --surface-2: #1d2541;
+  --fg: #ece6d8;          /* parchment text */
+  --muted: #a3a8bd;
+  --rule: rgba(236, 230, 216, .12);
+  --gold: #d9aa52;        /* the gold of Points to Christ */
+  --gold-ink: #e8bf6c;    /* handwritten notes */
+  --blue: #7e9be0;        /* quill blue */
+  --on-gold: #1a1406;
+  --shadow: 0 30px 60px -20px rgba(0, 0, 0, .65);
+  --font-display: "Gentium Book Plus", "Iowan Old Style", Georgia, serif;
+  --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-hand: "Caveat", "Segoe Print", "Bradley Hand", cursive;
+  --step-0: 1.0625rem;
+  --step-1: 1.25rem;
+  --step-2: 1.625rem;
+  --step-3: clamp(1.9rem, 3.4vw, 2.6rem);
+  --step-4: clamp(2.6rem, 6vw, 4.4rem);
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f4f2ec; --surface: #ffffff; --surface-2: #ebe8df; --fg: #18203a; --muted: #555c72;
+    --rule: rgba(24, 32, 58, .14); --gold: #9b6a12; --gold-ink: #a26f12; --blue: #2f4f9e; --on-gold: #fffaf0;
+    --shadow: 0 30px 60px -25px rgba(24, 32, 58, .35); color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #f4f2ec; --surface: #ffffff; --surface-2: #ebe8df; --fg: #18203a; --muted: #555c72;
+  --rule: rgba(24, 32, 58, .14); --gold: #9b6a12; --gold-ink: #a26f12; --blue: #2f4f9e; --on-gold: #fffaf0;
+  --shadow: 0 30px 60px -25px rgba(24, 32, 58, .35); color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; overflow-x: hidden; background: var(--bg); color: var(--fg);
+  font: 400 var(--step-0)/1.6 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--gold); }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.12; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.wrap { width: min(1180px, 100%); margin-inline: auto; padding-inline: clamp(16px, 4vw, 40px); }
+.eyebrow { font: 600 .8rem/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+.lede { color: var(--muted); font-size: var(--step-1); max-width: 60ch; }
+.hand { font-family: var(--font-hand); color: var(--gold-ink); font-weight: 600; line-height: 1.1; }
+
+/* Top bar */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--fg); text-decoration: none; font: 700 1.2rem/1 var(--font-display); }
+.brand img { width: 34px; height: 34px; border-radius: 9px; }
+.top nav { display: flex; gap: 22px; align-items: center; font-size: .95rem; }
+.top nav a { color: var(--muted); text-decoration: none; }
+.top nav a:hover { color: var(--fg); }
+@media (max-width: 760px) { .top nav .navlink { display: none; } }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 999px; font: 600 1rem/1 var(--font-body); text-decoration: none; border: 1px solid transparent; cursor: pointer; }
+.btn-gold { background: var(--gold); color: var(--on-gold); }
+.btn-gold:hover { filter: brightness(1.08); }
+.btn-ghost { border-color: var(--rule); color: var(--fg); background: transparent; }
+.btn-ghost:hover { border-color: var(--gold); }
+.btn-small { padding: 10px 16px; font-size: .9rem; }
+.btn svg { width: 20px; height: 20px; flex: none; }
+
+/* Hero */
+.hero { padding-block: clamp(48px, 8vw, 96px) clamp(40px, 6vw, 72px); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: clamp(32px, 5vw, 64px); align-items: center; }
+@media (max-width: 900px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } }
+.hero h1 { font-size: var(--step-4); letter-spacing: -.01em; margin-top: 14px; }
+.underline-word { position: relative; white-space: nowrap; }
+.underline-word svg { position: absolute; left: -2%; bottom: -.18em; width: 104%; height: .42em; overflow: visible; }
+.underline-word path { fill: none; stroke: var(--gold); stroke-width: 5; stroke-linecap: round; stroke-dasharray: 400; stroke-dashoffset: 0; animation: draw 1.3s .4s cubic-bezier(.6,.1,.3,1) backwards; }
+@keyframes draw { from { stroke-dashoffset: 400; } }
+.hero .lede { margin-top: 22px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; align-items: center; }
+.ios-note { margin-top: 16px; font-size: .95rem; color: var(--muted); }
+.ios-note a { color: var(--fg); }
+.device { position: relative; }
+.tablet { background: #05070d; padding: 12px; border-radius: 26px; box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,.08); }
+.tablet img { border-radius: 14px; aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
+.margin-note { position: absolute; display: flex; align-items: flex-end; gap: 6px; font-size: clamp(1.25rem, 2vw, 1.6rem); transform: rotate(-3deg); pointer-events: none; }
+.margin-note svg { width: 70px; height: 50px; flex: none; }
+.margin-note path { fill: none; stroke: var(--gold-ink); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.hero .margin-note { left: -6px; bottom: -48px; }
+@media (max-width: 900px) { .hero .margin-note { position: static; margin-top: 14px; transform: rotate(-2deg); } .hero .margin-note svg { display: none; } }
+
+/* Promise strip */
+.promise { border-block: 1px solid var(--rule); }
+.promise ul { list-style: none; margin: 0; padding-block: 22px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.promise li { display: flex; align-items: center; justify-content: center; gap: 10px; font: 600 1.05rem/1.2 var(--font-body); text-align: center; }
+.promise li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); flex: none; }
+@media (max-width: 700px) { .promise ul { grid-template-columns: repeat(2, minmax(0, 1fr)); } .promise li { justify-content: flex-start; } }
+
+section { padding-block: clamp(56px, 8vw, 104px); }
+.section-head { display: grid; gap: 14px; margin-bottom: clamp(28px, 4vw, 48px); max-width: 760px; }
+.section-head h2 { font-size: var(--step-3); }
+
+/* Film placeholder */
+.film { position: relative; aspect-ratio: 16 / 9; width: 100%; border-radius: 20px; overflow: hidden; background: var(--surface); box-shadow: var(--shadow); border: 1px solid var(--rule); }
+.film img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .28; filter: blur(2px) saturate(.8); }
+.film .film-inner { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 16px; text-align: center; padding: 16px; }
+.play { width: 84px; height: 84px; border-radius: 50%; display: grid; place-items: center; background: var(--gold); color: var(--on-gold); }
+.play svg { width: 32px; height: 32px; margin-left: 4px; }
+.film .hand { font-size: clamp(1.5rem, 3vw, 2.2rem); }
+.film small { color: var(--muted); font-size: .95rem; }
+.film video { position: absolute; inset: 0; width: 100%; height: 100%; display: block; background: #0e1322; }
+.film-credit { margin-top: 12px; color: var(--muted); font-size: .85rem; }
+
+/* Pillars */
+.pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 36px); }
+@media (max-width: 860px) { .pillars { grid-template-columns: minmax(0, 1fr); } }
+.pillar { padding-top: 22px; border-top: 2px solid var(--gold); display: grid; gap: 10px; align-content: start; }
+.pillar h3 { font-size: var(--step-2); }
+.pillar p { color: var(--muted); }
+
+/* Feature rows */
+.features { display: grid; gap: clamp(64px, 9vw, 120px); }
+.feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+.feature.flip > .feature-text { order: 2; }
+@media (max-width: 900px) { .feature, .feature.flip { grid-template-columns: minmax(0, 1fr); } .feature.flip > .feature-text { order: 0; } }
+.feature-text { display: grid; gap: 16px; align-content: start; min-width: 0; }
+.feature-text h3 { font-size: var(--step-3); }
+.feature-text p { color: var(--muted); max-width: 52ch; }
+.feature-text ul { margin: 4px 0 0; padding-left: 1.1em; color: var(--fg); display: grid; gap: 6px; }
+.feature-text li::marker { color: var(--gold); }
+.shot { position: relative; min-width: 0; }
+.shot .tablet { padding: 10px; border-radius: 22px; }
+.shot .margin-note { right: 4%; top: -40px; }
+.shot .margin-note.below { top: auto; bottom: -46px; left: 6%; right: auto; transform: rotate(-2deg); }
+@media (max-width: 900px) { .shot .margin-note { position: static; margin-bottom: 10px; } .shot .margin-note.below { margin: 12px 0 0; } .shot .margin-note svg { display: none; } }
+.scripture { font-family: var(--font-display); font-style: italic; color: var(--fg); border-left: 2px solid var(--gold); padding-left: 14px; }
+.scripture cite { display: block; font-style: normal; font-family: var(--font-body); font-size: .85rem; color: var(--muted); margin-top: 4px; }
+.duo { display: grid; grid-template-columns: 1.4fr 1fr; gap: 14px; align-items: end; }
+.duo .tablet:last-child { margin-bottom: -28px; }
+
+/* Library */
+.library { background: var(--surface); border-block: 1px solid var(--rule); }
+.shelf { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 16px; overflow: hidden; }
+@media (max-width: 900px) { .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 460px) { .shelf { grid-template-columns: minmax(0, 1fr); } }
+.shelf div { background: var(--surface); padding: 22px 20px; display: grid; gap: 6px; align-content: start; }
+.shelf strong { font: 700 2rem/1 var(--font-display); color: var(--gold); font-variant-numeric: tabular-nums; }
+.shelf span { font-weight: 600; }
+.shelf p { color: var(--muted); font-size: .92rem; }
+
+/* Devices */
+.devices .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+@media (max-width: 860px) { .devices .wrap { grid-template-columns: minmax(0, 1fr); } }
+.phones { display: flex; justify-content: center; gap: clamp(14px, 3vw, 28px); }
+.phone { width: min(240px, 44%); background: #05070d; padding: 9px; border-radius: 34px; box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,.08); }
+.phone img { border-radius: 26px; width: 100%; aspect-ratio: 9 / 19.5; object-fit: cover; object-position: top; }
+.phone:nth-child(2) { transform: translateY(36px); }
+
+/* Trust */
+.trust { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 3vw, 32px) clamp(28px, 5vw, 64px); }
+@media (max-width: 760px) { .trust { grid-template-columns: minmax(0, 1fr); } }
+.trust div { display: grid; gap: 8px; padding-left: 18px; border-left: 1px solid var(--rule); }
+.trust h3 { font-size: var(--step-1); }
+.trust p { color: var(--muted); }
+
+/* FAQ */
+.faq { display: grid; gap: 0; border-top: 1px solid var(--rule); max-width: 820px; }
+.faq details { border-bottom: 1px solid var(--rule); }
+.faq summary { cursor: pointer; list-style: none; padding: 20px 40px 20px 0; position: relative; font: 700 var(--step-1)/1.3 var(--font-display); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 4px; top: 16px; font: 400 1.6rem/1 var(--font-body); color: var(--gold); }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { padding: 0 0 22px; color: var(--muted); max-width: 66ch; }
+
+/* Sign-up */
+.signup { background: var(--surface-2); border-radius: 24px; padding: clamp(28px, 5vw, 56px); display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: center; }
+@media (max-width: 860px) { .signup { grid-template-columns: minmax(0, 1fr); } }
+.signup h2 { font-size: var(--step-3); }
+.signup p { color: var(--muted); margin-top: 12px; }
+form { display: grid; gap: 12px; }
+label { font-weight: 600; font-size: .95rem; }
+input[type="email"] { width: 100%; padding: 14px 16px; border-radius: 12px; border: 1px solid var(--rule); background: var(--bg); color: var(--fg); font: inherit; }
+.checks { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.checks label { font-weight: 500; display: flex; gap: 8px; align-items: center; }
+.checks input { accent-color: var(--gold); width: 18px; height: 18px; }
+.form-msg { font-size: .95rem; color: var(--gold); min-height: 1.4em; }
+
+footer { border-top: 1px solid var(--rule); padding-block: 36px; color: var(--muted); font-size: .92rem; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px 32px; }
+footer nav { display: flex; flex-wrap: wrap; gap: 18px; }
+footer a { color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .underline-word path { animation: none; }
+}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="img/logo.png" alt="">Ink &amp; Word</a>
+    <nav aria-label="Page">
+      <a class="navlink" href="#features">Features</a>
+      <a class="navlink" href="#library">What's included</a>
+      <a class="navlink" href="#faq">Questions</a>
+      <a class="btn btn-gold btn-small" href="#get">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Free study Bible for Android</span>
+        <h1>A study Bible you can <span class="underline-word">write in<svg viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 20 C 60 8, 140 26, 200 14 S 280 10, 296 16"/></svg></span>.</h1>
+        <p class="lede">Underline, highlight and write in the margins with your pen or finger. Study with commentaries, Hebrew and Greek, and devotionals beside the text. Everything works offline.</p>
+        <div class="cta-row">
+          <a class="btn btn-gold" href="#get">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 3.5v17a1 1 0 0 0 1.5.87l14.7-8.5a1 1 0 0 0 0-1.74L5.5 2.63A1 1 0 0 0 4 3.5Z"/></svg>
+            Coming soon to Google Play
+          </a>
+          <a class="btn btn-ghost" href="#film">Watch the film</a>
+        </div>
+        <p class="ios-note">On iPhone or iPad? <a href="#get">Tell me when it's ready</a>.</p>
+      </div>
+      <div class="device">
+        <div class="tablet"><img src="img/ink-john3.webp" alt="John 3 in Ink & Word with &quot;born again&quot; circled, verse 5 highlighted, and margin sketches: a moon by &quot;by night&quot;, &quot;New birth!&quot; with an arrow, a cross on a hill and wind lines labelled &quot;Born of the Spirit&quot;" width="1600" height="1000"></div>
+        <div class="margin-note hand"><svg viewBox="0 0 70 50" aria-hidden="true"><path d="M6 44 C 20 40, 40 30, 58 10 M58 10 l-12 3 M58 10 l-2 12"/></svg>sketch right in the margins</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="promise">
+    <ul class="wrap" aria-label="Promises">
+      <li>Free, for good</li>
+      <li>No ads</li>
+      <li>No account</li>
+      <li>Works offline</li>
+    </ul>
+  </div>
+
+  <section id="film">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">The film</span>
+        <h2>See Ink &amp; Word in 72 seconds</h2>
+      </div>
+      <div class="film">
+        <video controls playsinline preload="metadata" poster="img/film-poster.jpg" aria-label="Ink &amp; Word launch film, 72 seconds, with music and no narration">
+          <source src="inkandword-film.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p class="film-credit">Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0.</p>
+    </div>
+  </section>
+
+  <section style="padding-top: 0">
+    <div class="wrap pillars">
+      <div class="pillar">
+        <span class="eyebrow">Write</span>
+        <h3>Mark it like paper</h3>
+        <p>Underlines, highlights, arrows and margin notes stay on their words, even when you change the version or the text size.</p>
+      </div>
+      <div class="pillar">
+        <span class="eyebrow">Study</span>
+        <h3>Go deeper beside the text</h3>
+        <p>Twelve commentaries, Hebrew and Greek word by word, a Bible dictionary, topics and maps, side by side with the passage you're reading.</p>
+      </div>
+      <div class="pillar">
+        <span class="eyebrow">Understand</span>
+        <h3>Read it in plain English</h3>
+        <p>The Ink &amp; Word Commentary explains every verse simply. It is summarised from popular commentators, and every note names its sources.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" style="padding-top: 0">
+    <div class="wrap features">
+
+      <article class="feature">
+        <div class="feature-text">
+          <span class="eyebrow">Your Bible, your ink</span>
+          <h3>Draw what the passage means to you</h3>
+          <p>Sketch a shepherd's crook beside Psalm 23, letter a verse in the margin, or circle a word and draw an arrow to your note. Margin sketches stay beside their verse in every Bible version.</p>
+          <ul>
+            <li>Pen, pencil and highlighter, with layers you can show or hide</li>
+            <li>Highlights snap neatly to the words</li>
+            <li>Sketch pages for timelines, maps and diagrams, with nine ready-made</li>
+          </ul>
+        </div>
+        <div class="shot">
+          <div class="margin-note hand">drawn in the app<svg viewBox="0 0 70 50" aria-hidden="true"><path d="M6 8 C 24 12, 44 22, 60 42 M60 42 l-1 -12 M60 42 l-11 -4"/></svg></div>
+          <div class="tablet"><img src="img/ink-psalm23.webp" alt="Psalm 23 in Ink & Word with margin sketches: a shepherd's crook, a sheep, still waters, and the words My Shepherd, I shall not want" width="1600" height="1000" loading="lazy"></div>
+        </div>
+      </article>
+
+      <article class="feature flip">
+        <div class="feature-text">
+          <span class="eyebrow">Tap any verse</span>
+          <h3>Every verse explained, in words you'd use</h3>
+          <p>Tap a verse and the Ink &amp; Word Commentary opens on it: a short, clear note with its sources. Where churches read a verse differently, <em>Where Christians differ</em> gives each tradition's view fairly.</p>
+          <ul>
+            <li>Matthew Henry, Spurgeon, Calvin and nine more classic commentaries one tap away</li>
+            <li>Cross-references to every related passage</li>
+            <li>The commentary scrolls with the Bible as you read</li>
+          </ul>
+        </div>
+        <div class="shot">
+          <div class="margin-note hand">it follows your reading<svg viewBox="0 0 70 50" aria-hidden="true"><path d="M6 8 C 24 12, 44 22, 60 42 M60 42 l-1 -12 M60 42 l-11 -4"/></svg></div>
+          <div class="tablet"><img src="img/commentary.webp" alt="The Ruth 1 passage beside the Ink & Word Commentary, with notes on verses 15 to 17 and a Where Christians differ section" width="1600" height="1000" loading="lazy"></div>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-text">
+          <span class="eyebrow">Hebrew and Greek</span>
+          <h3>See the words behind the words</h3>
+          <p>Every verse word by word in the original Hebrew or Greek, with how it sounds and what it means. Tap a word to see every place the Bible uses it.</p>
+          <blockquote class="scripture">For God so loved the world…<cite>John 3:16 · <i>ēgapēsen</i>, from <i>agapaō</i>, Strong's G25</cite></blockquote>
+        </div>
+        <div class="shot">
+          <div class="tablet"><img src="img/greek.webp" alt="John 3:17 word by word in Greek, beside a word study of the Greek word gar" width="1600" height="1000" loading="lazy"></div>
+          <div class="margin-note hand below">tap a word for its story</div>
+        </div>
+      </article>
+
+      <article class="feature flip">
+        <div class="feature-text">
+          <span class="eyebrow">Ink &amp; Word Reflections</span>
+          <h3>Quiet time with the passage you're reading</h3>
+          <p>2,519 short reflections across the whole Bible, each with a few questions to ask yourself and a prayer. They are summarised from popular devotionals, from Spurgeon and F. B. Meyer to ministries readers know today, and each names its sources.</p>
+          <blockquote class="scripture">The LORD is my shepherd; I shall not want.<cite>Psalm 23:1</cite></blockquote>
+        </div>
+        <div class="shot">
+          <div class="margin-note hand">ask yourself · pray<svg viewBox="0 0 70 50" aria-hidden="true"><path d="M6 8 C 24 12, 44 22, 60 42 M60 42 l-1 -12 M60 42 l-11 -4"/></svg></div>
+          <div class="tablet"><img src="img/reflections.webp" alt="Psalm 23 beside an Ink & Word Reflection with Ask yourself questions and a prayer" width="1600" height="1000" loading="lazy"></div>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-text">
+          <span class="eyebrow">Points to Christ</span>
+          <h3>Follow the thread to Jesus</h3>
+          <p>A dotted gold line marks about 380 Old Testament verses that point to Christ, prophecies and pictures alike. Tap one to see how, with the New Testament passages that fulfil it.</p>
+          <ul>
+            <li><em>Chapter at a glance</em>: who, where, and where it fits in the story</li>
+            <li>Hard words, people, places and customs explained with a tap</li>
+          </ul>
+        </div>
+        <div class="shot">
+          <div class="duo">
+            <div class="tablet"><img src="img/ink-isaiah53.webp" alt="Isaiah 53 with a dotted gold line under the verses that point to Christ, and a margin sketch of a cross with By his stripes we are healed, 1 Pet 2:24" width="1600" height="1000" loading="lazy"></div>
+            <div class="tablet"><img src="img/christ-card.webp" alt="The Points to Christ card for Isaiah 53:5, fulfilled in 1 Peter 2:24" width="1600" height="1000" loading="lazy"></div>
+          </div>
+          <div class="margin-note hand below">Isaiah 53 → 1 Peter 2:24</div>
+        </div>
+      </article>
+
+      <article class="feature flip">
+        <div class="feature-text">
+          <span class="eyebrow">Keep going</span>
+          <h3>A gentle nudge to keep reading</h3>
+          <p>See how much of the Bible you've read, keep a daily streak and earn milestones from <em>First step</em> to <em>The whole Bible</em>. Your reading adds up across your phone and tablet.</p>
+        </div>
+        <div class="shot">
+          <div class="tablet"><img src="img/stats.webp" alt="Reading stats: the share of the Bible read, a six-day streak, time read and milestones" width="1600" height="1000" loading="lazy"></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="library" id="library">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Everything included</span>
+        <h2>A whole study library, on your device</h2>
+        <p class="lede">No subscriptions and nothing to unlock. It's all there from the first time you open the app.</p>
+      </div>
+      <div class="shelf">
+        <div><strong>3</strong><span>Bibles built in</span><p>KJV, Berean Standard Bible and World English Bible, with the NIV and more online.</p></div>
+        <div><strong>12</strong><span>Commentaries</span><p>The Ink &amp; Word Commentary, Matthew Henry, Calvin, Spurgeon's Treasury of David and more.</p></div>
+        <div><strong>2,519</strong><span>Reflections</span><p>Devotional readings across the whole Bible, for quiet time.</p></div>
+        <div><strong>66</strong><span>Book introductions</span><p>Author, date, background, outline and key verses for every book.</p></div>
+        <div><strong>4,130</strong><span>People and places</span><p>Who they were, family trees, and where places are on the map.</p></div>
+        <div><strong>380</strong><span>Verses that point to Christ</span><p>Prophecies and pictures, linked to their fulfilment.</p></div>
+        <div><strong>9</strong><span>Ready-made study pages</span><p>The tabernacle, the kings of Israel, Paul's journeys and more, to write on.</p></div>
+        <div><strong>H&nbsp;&amp;&nbsp;G</strong><span>Hebrew and Greek</span><p>Word by word, with Strong's dictionaries and every use of each word.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="devices">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom: 0">
+        <span class="eyebrow">Tablets and phones</span>
+        <h2>Best with a pen. Lovely with a finger.</h2>
+        <p class="lede">Ink &amp; Word was designed around a tablet and pen, like the Galaxy Tab and S Pen. On a phone, draw with one finger and scroll with two. Turn on sync and your notes follow you between devices through your own Google Drive.</p>
+        <p class="hand" style="font-size: 1.6rem; margin-top: 6px">iPhone and iPad are on the way.</p>
+      </div>
+      <div class="phones">
+        <div class="phone"><img src="img/phone.webp" alt="Ink & Word on a phone, reading John 3" width="640" height="1386" loading="lazy"></div>
+        <div class="phone"><img src="img/phone-ink.webp" alt="A finger-drawn underline on John 3 on a phone" width="640" height="1386" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: clamp(40px, 6vw, 64px)">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What you can count on</span>
+        <h2>Made for the church, given freely</h2>
+      </div>
+      <div class="trust">
+        <div><h3>Traditional teaching</h3><p>Book introductions and study notes give the traditional view. Where Christians differ, each view is described fairly and kept apart from the main note.</p></div>
+        <div><h3>Sources named</h3><p>Every commentary note and every reflection names where it comes from, so you can check it against Scripture and the original.</p></div>
+        <div><h3>Your notes are yours</h3><p>No account and no tracking. Your notes stay on your device, or in your own Google Drive if you turn on sync. Back them up to one file any time.</p></div>
+        <div><h3>Free, with no catch</h3><p>Ink &amp; Word is a non-profit gift to the church: no ads, no subscriptions and no in-app purchases.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="padding-top: 0">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Questions</span>
+        <h2>Good to know</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Is it really free?</summary>
+          <p>Yes. Ink &amp; Word is a non-profit project. There are no ads, no subscriptions and nothing to buy inside the app.</p>
+        </details>
+        <details>
+          <summary>Does it need the internet?</summary>
+          <p>No. The built-in Bibles, commentaries, reflections and study tools all work offline. Online Bibles such as the NIV download each chapter the first time you read it, then keep it for offline use.</p>
+        </details>
+        <details>
+          <summary>Which Bible versions are there?</summary>
+          <p>The King James Version, Berean Standard Bible and World English Bible are built in. More versions, such as the NIV, can be added online. You can also import a Bible you have the right to use.</p>
+        </details>
+        <details>
+          <summary>Do I need a pen?</summary>
+          <p>No. A pen like the S Pen gives the best writing experience on a tablet, but you can draw with your finger on any tablet or phone.</p>
+        </details>
+        <details>
+          <summary>Is it on iPhone or iPad?</summary>
+          <p>Not yet. Ink &amp; Word is on Android tablets and phones first, and iPhone and iPad are planned. Leave your email below and we'll tell you when it's ready.</p>
+        </details>
+        <details>
+          <summary>Where do my notes go?</summary>
+          <p>They stay on your device. If you turn on sync, they're also kept in a private folder in your own Google Drive, so your phone and tablet match. Nobody else can see them.</p>
+        </details>
+        <details>
+          <summary>How was the Ink &amp; Word Commentary written?</summary>
+          <p>It was summarised by computer from the classic commentaries in the app, such as Matthew Henry, Barnes and Clarke, and from trusted Christian websites, then checked so that every point names a source that really says it. It wasn't written by one person, so check anything important against the other commentaries and Scripture.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="get" style="padding-top: 0">
+    <div class="wrap">
+      <div class="signup">
+        <div>
+          <span class="eyebrow">Coming soon</span>
+          <h2 style="margin-top: 12px">Be the first to know</h2>
+          <p>Ink &amp; Word is coming to Google Play for Android tablets and phones. Leave your email and we'll send one message when it's ready, and another when iPhone and iPad follow.</p>
+        </div>
+        <form id="signup" novalidate>
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          <div class="checks" role="group" aria-label="Tell me about">
+            <label for="want-android"><input id="want-android" type="checkbox" checked> Android</label>
+            <label for="want-ios"><input id="want-ios" type="checkbox"> iPhone and iPad</label>
+          </div>
+          <button class="btn btn-gold" type="submit">Notify me</button>
+          <p class="form-msg" id="form-msg" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Ink &amp; Word. A free, non-profit study Bible.</p>
+    <nav aria-label="Footer">
+      <a href="#faq">Questions</a>
+      <a href="#library">Credits and licences</a>
+      <a href="#get">Privacy policy</a>
+      <span>Contact: hello@inkandword.example</span>
+    </nav>
+  </div>
+</footer>
+
+<script>
+document.getElementById('signup').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var email = document.getElementById('email');
+  var msg = document.getElementById('form-msg');
+  if (!email.value || !email.checkValidity()) {
+    msg.textContent = 'Enter an email address like name@example.com.';
+    email.focus();
+    return;
+  }
+  msg.textContent = 'This is a preview: sign-ups open when the site goes live, so nothing was saved.';
+});
+</script>

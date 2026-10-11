@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Ink &amp; Word · launch film</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Gentium Book Plus"; src: url("assets/fonts/gentium_book_plus_regular.ttf") format("truetype"); font-weight: 400; }
+      @font-face { font-family: "Gentium Book Plus"; src: url("assets/fonts/gentium_book_plus_bold.ttf") format("truetype"); font-weight: 700; }
+      @font-face { font-family: "Figtree"; src: url("assets/fonts/figtree-400.woff2") format("woff2"); font-weight: 300 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/fonts/caveat-600.woff2") format("woff2"); font-weight: 600; }
+
+      :root {
+        --bg: #0e1322;
+        --bg2: #161d33;
+        --fg: #ece6d8;
+        --muted: #a3a8bd;
+        --gold: #d9aa52;
+        --gold-ink: #e8bf6c;
+        --display: "Gentium Book Plus", Georgia, serif;
+        --body: "Figtree", system-ui, sans-serif;
+        --hand: "Caveat", cursive;
+      }
+      body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--bg); }
+      .clip { position: absolute; inset: 0; }
+      .scene { position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 20%, #1b2442 0%, var(--bg) 60%); overflow: hidden; }
+
+      .eyebrow { font: 600 26px/1 var(--body); letter-spacing: .16em; text-transform: uppercase; color: var(--gold); }
+      .h { font: 700 64px/1.08 var(--display); color: var(--fg); margin: 0; }
+      .hand { font: 600 48px/1.05 var(--hand); color: var(--gold-ink); }
+
+      .head { position: absolute; left: 120px; top: 64px; width: 1680px; height: 150px; }
+      .head .eyebrow { position: absolute; left: 0; top: 0; }
+      .head .h { position: absolute; left: 0; top: 46px; width: 1680px; }
+
+      .tab { position: absolute; padding: 14px; background: #05070d; border-radius: 34px; box-shadow: 0 40px 80px -30px rgba(0,0,0,.8); border: 1px solid rgba(255,255,255,.08); }
+      .screen { position: relative; width: 100%; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 20px; background: #1e1e1e; }
+      .cam { position: absolute; inset: 0; }
+      .cam img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+      .phone { position: absolute; width: 330px; padding: 11px; background: #05070d; border-radius: 46px; box-shadow: 0 40px 80px -30px rgba(0,0,0,.8); border: 1px solid rgba(255,255,255,.08); }
+      .phone img { display: block; width: 100%; aspect-ratio: 9 / 19.5; object-fit: cover; object-position: top; border-radius: 36px; }
+
+      .arrow-note { position: absolute; display: flex; align-items: flex-end; gap: 10px; }
+      .arrow-note svg { width: 90px; height: 60px; }
+      .arrow-note path { fill: none; stroke: var(--gold-ink); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+
+      /* Scene 1 */
+      #s1-wrap { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 34px; }
+      #s1-logo { width: 190px; height: 190px; border-radius: 44px; box-shadow: 0 30px 70px -20px rgba(0,0,0,.8); }
+      #s1-word { font: 700 54px/1 var(--display); letter-spacing: .01em; }
+      #s1-title { font: 700 112px/1.05 var(--display); margin: 0; text-align: center; width: 1600px; }
+      #s1-title .w { display: inline-block; }
+      #s1-under { position: relative; display: inline-block; }
+      #s1-under svg { position: absolute; left: -2%; bottom: -26px; width: 104%; height: 46px; overflow: visible; }
+      #s1-under path { fill: none; stroke: var(--gold); stroke-width: 7; stroke-linecap: round; }
+
+      /* Scene 7 */
+      .stat { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 380px; }
+      .stat b { font: 700 120px/1 var(--display); color: var(--gold); font-variant-numeric: tabular-nums; }
+      .stat span { font: 600 32px/1.2 var(--body); color: var(--fg); text-align: center; }
+      #s7-stats { position: absolute; left: 0; right: 0; top: 330px; display: flex; justify-content: center; gap: 40px; }
+      #s7-promise { position: absolute; left: 0; right: 0; top: 470px; display: flex; justify-content: center; gap: 54px; font: 700 64px/1 var(--display); }
+      #s7-promise .p { display: flex; align-items: center; gap: 54px; }
+      #s7-promise .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--gold); display: block; }
+      #s7-end { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px; }
+      #s7-end img { width: 170px; height: 170px; border-radius: 40px; }
+      #s7-end .name { font: 700 92px/1 var(--display); }
+      #s7-end .tag { font: 400 40px/1.2 var(--display); font-style: italic; color: var(--muted); }
+      #s7-end .cta { margin-top: 18px; padding: 22px 40px; border-radius: 999px; background: var(--gold); color: #1a1406; font: 700 36px/1 var(--body); }
+      #s7-credit { position: absolute; left: 0; right: 0; bottom: 40px; text-align: center; font: 400 22px/1.3 var(--body); color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-width="1920" data-height="1080" data-duration="72">
+
+      <!-- 1 · Open -->
+      <section id="s1" class="clip" data-start="0" data-duration="6.6" data-track-index="0">
+        <div class="scene" id="s1-scene">
+          <div id="s1-wrap">
+            <img id="s1-logo" src="assets/img/logo.png" alt="" />
+            <div id="s1-word">Ink &amp; Word</div>
+            <h1 id="s1-title"><span class="w">A</span> <span class="w">study</span> <span class="w">Bible</span> <span class="w">you</span> <span class="w">can</span> <span class="w" id="s1-under">write in<svg viewBox="0 0 300 30" preserveAspectRatio="none"><path id="s1-path" d="M4 20 C 60 8, 140 26, 200 14 S 280 10, 296 16" /></svg></span><span class="w">.</span></h1>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2 · Write -->
+      <section id="s2" class="clip" data-start="6" data-duration="17.6" data-track-index="1">
+        <div class="scene" id="s2-scene">
+          <div class="head">
+            <div class="eyebrow" id="s2-eye">Your Bible, your ink</div>
+            <h2 class="h" id="s2-h1">Write on the page.</h2>
+            <h2 class="h" id="s2-h2">Sketch in the margins.</h2>
+            <h2 class="h" id="s2-h3">Your notes stay with the verse.</h2>
+          </div>
+          <div class="tab" id="s2-tab" style="left: 290px; top: 214px; width: 1340px;">
+            <div class="screen">
+              <div class="cam" id="s2-cam">
+                <img src="assets/img/john3-0.jpg" alt="" />
+                <img id="s2-i1" src="assets/img/john3-1.jpg" alt="" />
+                <img id="s2-i2" src="assets/img/john3-2.jpg" alt="" />
+                <img id="s2-i3" src="assets/img/john3-3.jpg" alt="" />
+                <img id="s2-i4" src="assets/img/john3-4.jpg" alt="" />
+                <img id="s2-i5" src="assets/img/john3-5.jpg" alt="" />
+                <img id="s2-i6" src="assets/img/john3-6.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 · Study -->
+      <section id="s3" class="clip" data-start="23" data-duration="12.6" data-track-index="2">
+        <div class="scene" id="s3-scene">
+          <div class="head">
+            <div class="eyebrow" id="s3-eye">Tap any verse</div>
+            <h2 class="h" id="s3-h1">Every verse explained in plain English.</h2>
+            <h2 class="h" id="s3-h2">See the Hebrew and Greek behind it.</h2>
+          </div>
+          <div class="tab" id="s3-tab" style="left: 290px; top: 214px; width: 1340px;">
+            <div class="screen">
+              <div class="cam" id="s3-cam1"><img src="assets/img/commentary.jpg" alt="" /></div>
+              <div class="cam" id="s3-cam2"><img src="assets/img/greek.jpg" alt="" /></div>
+            </div>
+          </div>
+          <div class="arrow-note hand" id="s3-note1" style="left: 1560px; top: 150px;">Ink &amp; Word<br />Commentary</div>
+          <div class="arrow-note hand" id="s3-note2" style="left: 1560px; top: 150px;">every word,<br />every use</div>
+        </div>
+      </section>
+
+      <!-- 4 · Quiet time -->
+      <section id="s4" class="clip" data-start="35" data-duration="9.6" data-track-index="3">
+        <div class="scene" id="s4-scene">
+          <div class="head">
+            <div class="eyebrow" id="s4-eye">Ink &amp; Word Reflections</div>
+            <h2 class="h" id="s4-h1">Quiet time with the passage you're reading.</h2>
+          </div>
+          <div class="tab" id="s4-tab" style="left: 120px; top: 214px; width: 1240px;">
+            <div class="screen"><div class="cam" id="s4-cam"><img src="assets/img/reflections.jpg" alt="" /></div></div>
+          </div>
+          <div id="s4-side" style="position: absolute; left: 1420px; top: 330px; width: 400px; display: flex; flex-direction: column; gap: 18px;">
+            <b id="s4-num" style="font: 700 128px/1 var(--display); color: var(--gold); font-variant-numeric: tabular-nums;">0</b>
+            <span style="font: 600 36px/1.25 var(--body);">short reflections across the whole Bible</span>
+            <span class="hand" id="s4-hand" style="margin-top: 30px;">Ask yourself · Pray</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 · Points to Christ -->
+      <section id="s5" class="clip" data-start="44" data-duration="10.6" data-track-index="4">
+        <div class="scene" id="s5-scene">
+          <div class="head">
+            <div class="eyebrow" id="s5-eye">Points to Christ</div>
+            <h2 class="h" id="s5-h1">Follow the thread to Jesus.</h2>
+          </div>
+          <div class="tab" id="s5-tab" style="left: 120px; top: 214px; width: 1300px;">
+            <div class="screen"><div class="cam" id="s5-cam"><img src="assets/img/isaiah53.jpg" alt="" /></div></div>
+          </div>
+          <div class="tab" id="s5-card" style="left: 1060px; top: 560px; width: 760px;">
+            <div class="screen"><div class="cam" id="s5-cam2"><img src="assets/img/christ-card.jpg" alt="" /></div></div>
+          </div>
+          <div class="hand" id="s5-note" style="position: absolute; left: 1460px; top: 330px; width: 440px;">Isaiah 53 → 1 Peter 2:24</div>
+        </div>
+      </section>
+
+      <!-- 6 · Everywhere -->
+      <section id="s6" class="clip" data-start="54" data-duration="8.6" data-track-index="5">
+        <div class="scene" id="s6-scene">
+          <div class="head">
+            <div class="eyebrow" id="s6-eye">Tablets and phones</div>
+            <h2 class="h" id="s6-h1">Tablet or phone. Your notes sync.</h2>
+          </div>
+          <div class="tab" id="s6-tab" style="left: 120px; top: 240px; width: 1080px;">
+            <div class="screen"><div class="cam"><img src="assets/img/stats.jpg" alt="" /></div></div>
+          </div>
+          <div class="phone" id="s6-p1" style="left: 1250px; top: 230px;"><img src="assets/img/phone.jpg" alt="" /></div>
+          <div class="phone" id="s6-p2" style="left: 1560px; top: 300px;"><img src="assets/img/phone-ink.jpg" alt="" /></div>
+          <div class="hand" id="s6-note" style="position: absolute; left: 520px; top: 960px;">reading streaks and milestones</div>
+        </div>
+      </section>
+
+      <!-- 7 · Close -->
+      <section id="s7" class="clip" data-start="62" data-duration="10" data-track-index="6">
+        <div class="scene" id="s7-scene">
+          <div id="s7-a" style="position: absolute; inset: 0;">
+            <div class="eyebrow" id="s7-eye" style="position: absolute; left: 0; right: 0; top: 220px; text-align: center;">Everything included, on your device</div>
+            <div id="s7-stats">
+              <div class="stat" id="s7-st1"><b>12</b><span>commentaries</span></div>
+              <div class="stat" id="s7-st2"><b>2,519</b><span>reflections</span></div>
+              <div class="stat" id="s7-st3"><b>66</b><span>book introductions</span></div>
+              <div class="stat" id="s7-st4"><b>4,130</b><span>people and places</span></div>
+            </div>
+          </div>
+          <div id="s7-b" style="position: absolute; inset: 0;">
+            <div id="s7-promise">
+              <div class="p" id="s7-p1">Free</div>
+              <div class="p" id="s7-p2"><i class="dot"></i>No ads</div>
+              <div class="p" id="s7-p3"><i class="dot"></i>No account</div>
+              <div class="p" id="s7-p4"><i class="dot"></i>Works offline</div>
+            </div>
+          </div>
+          <div id="s7-end">
+            <img id="s7-logo" src="assets/img/logo.png" alt="" />
+            <div class="name" id="s7-name">Ink &amp; Word</div>
+            <div class="tag" id="s7-tag">A study Bible you can write in.</div>
+            <div class="cta" id="s7-cta">Coming soon to Google Play</div>
+          </div>
+          <div id="s7-credit">Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0</div>
+        </div>
+      </section>
+
+      <audio id="bgm" src="assets/audio/heartwarming.mp3" data-start="0" data-duration="72" data-track-index="9" data-volume="0.85"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const E = "power3.out";
+      const fadeUp = (sel, at, dur = 0.8, y = 30) => tl.fromTo(sel, { opacity: 0, y }, { opacity: 1, y: 0, duration: dur, ease: E }, at);
+      const fadeIn = (sel, at, dur = 0.6) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: dur, ease: "power1.out" }, at);
+      // Ink appearing: the next stage is revealed left to right across the x-range (percent) where it differs.
+      const ink = (sel, at, x0, x1, dur = 1.2) =>
+        tl.fromTo(sel, { clipPath: `inset(0% ${100 - x0}% 0% 0%)` }, { clipPath: `inset(0% ${100 - x1}% 0% 0%)`, duration: dur, ease: "none" }, at);
+      // Scene crossfades: each scene fades in over the one before it.
+      const enter = (sel, at) => fadeIn(sel, at, 0.6);
+
+      // 1 · Open (0–6)
+      tl.fromTo("#s1-logo", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 1.0, ease: E }, 0.3);
+      fadeUp("#s1-word", 0.9, 0.8, 16);
+      tl.fromTo("#s1-title .w", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.7, ease: E, stagger: 0.16 }, 2.0);
+      tl.fromTo("#s1-path", { strokeDasharray: 400, strokeDashoffset: 400 }, { strokeDashoffset: 0, duration: 1.1, ease: "power2.inOut" }, 3.4);
+
+      // 2 · Write (6–23)
+      const S2 = 6;
+      enter("#s2-scene", S2);
+      fadeUp("#s2-eye", S2 + 0.3, 0.7, 14);
+      fadeUp("#s2-h1", S2 + 0.5);
+      tl.fromTo("#s2-tab", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1.1, ease: E }, S2 + 0.2);
+      ["#s2-i1", "#s2-i2", "#s2-i3", "#s2-i4", "#s2-i5", "#s2-i6"].forEach((s) => tl.set(s, { clipPath: "inset(0% 100% 0% 0%)" }, 0));
+      ink("#s2-i1", S2 + 2.0, 4, 57, 1.3);     // highlight verse 5
+      ink("#s2-i2", S2 + 3.7, 18, 29, 0.9);    // circle "born again"
+      // At 0:12 the camera moves into the margin.
+      tl.fromTo("#s2-cam", { scale: 1 }, { scale: 1.75, transformOrigin: "84% 50%", duration: 1.6, ease: "power2.inOut" }, S2 + 5.6);
+      tl.to("#s2-h1", { opacity: 0, duration: 0.4 }, S2 + 5.6);
+      fadeUp("#s2-h2", S2 + 5.9);
+      ink("#s2-i3", S2 + 7.4, 67, 95, 1.4);    // moon, stars, BY NIGHT
+      ink("#s2-i4", S2 + 9.2, 27, 90, 1.6);    // NEW BIRTH and the arrow
+      ink("#s2-i5", S2 + 11.2, 65, 82, 1.3);   // cross on a hill
+      ink("#s2-i6", S2 + 12.9, 78, 95, 1.4);   // wind, BORN OF THE SPIRIT
+      tl.to("#s2-cam", { scale: 1, duration: 1.5, ease: "power2.inOut" }, S2 + 14.6);
+      tl.to("#s2-h2", { opacity: 0, duration: 0.4 }, S2 + 14.6);
+      fadeUp("#s2-h3", S2 + 14.9);
+
+      // 3 · Study (23–35)
+      const S3 = 23;
+      enter("#s3-scene", S3);
+      fadeUp("#s3-eye", S3 + 0.3, 0.7, 14);
+      fadeUp("#s3-h1", S3 + 0.5);
+      tl.fromTo("#s3-tab", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1.0, ease: E }, S3 + 0.2);
+      tl.set("#s3-cam2", { opacity: 0 }, 0);
+      tl.fromTo("#s3-cam1", { scale: 1 }, { scale: 1.6, transformOrigin: "100% 40%", duration: 2.2, ease: "power2.inOut" }, S3 + 2.0);
+      fadeUp("#s3-note1", S3 + 3.4, 0.7, 14);
+      tl.to("#s3-note1", { opacity: 0, duration: 0.4 }, S3 + 6.4);
+      tl.to("#s3-h1", { opacity: 0, duration: 0.4 }, S3 + 6.4);
+      tl.to("#s3-cam2", { opacity: 1, duration: 0.7 }, S3 + 6.5);
+      fadeUp("#s3-h2", S3 + 6.7);
+      tl.fromTo("#s3-cam2", { scale: 1 }, { scale: 1.5, transformOrigin: "100% 38%", duration: 2.2, ease: "power2.inOut" }, S3 + 7.6);
+      fadeUp("#s3-note2", S3 + 9.0, 0.7, 14);
+
+      // 4 · Quiet time (35–44)
+      const S4 = 35;
+      enter("#s4-scene", S4);
+      fadeUp("#s4-eye", S4 + 0.3, 0.7, 14);
+      fadeUp("#s4-h1", S4 + 0.5);
+      tl.fromTo("#s4-tab", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1.0, ease: E }, S4 + 0.2);
+      tl.fromTo("#s4-cam", { scale: 1 }, { scale: 1.55, transformOrigin: "100% 62%", duration: 2.6, ease: "power2.inOut" }, S4 + 2.2);
+      fadeUp("#s4-side", S4 + 1.2, 0.8, 20);
+      const n4 = { v: 0 };
+      tl.fromTo(n4, { v: 0 }, { v: 2519, duration: 2.2, ease: "power2.out", onUpdate: () => { document.getElementById("s4-num").textContent = Math.round(n4.v).toLocaleString("en-US"); } }, S4 + 1.4);
+      fadeUp("#s4-hand", S4 + 5.0, 0.7, 14);
+
+      // 5 · Points to Christ (44–54)
+      const S5 = 44;
+      enter("#s5-scene", S5);
+      fadeUp("#s5-eye", S5 + 0.3, 0.7, 14);
+      fadeUp("#s5-h1", S5 + 0.5);
+      tl.fromTo("#s5-tab", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1.0, ease: E }, S5 + 0.2);
+      tl.fromTo("#s5-cam", { scale: 1 }, { scale: 1.12, transformOrigin: "0% 40%", duration: 4.0, ease: "power2.inOut" }, S5 + 1.6);
+      tl.fromTo("#s5-card", { opacity: 0, x: 120 }, { opacity: 1, x: 0, duration: 1.1, ease: E }, S5 + 5.0);
+      fadeUp("#s5-note", S5 + 6.4, 0.7, 14);
+
+      // 6 · Everywhere (54–62)
+      const S6 = 54;
+      enter("#s6-scene", S6);
+      fadeUp("#s6-eye", S6 + 0.3, 0.7, 14);
+      fadeUp("#s6-h1", S6 + 0.5);
+      tl.fromTo("#s6-tab", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1.0, ease: E }, S6 + 0.4);
+      tl.fromTo("#s6-p1", { opacity: 0, y: 90 }, { opacity: 1, y: 0, duration: 1.0, ease: E }, S6 + 1.6);
+      tl.fromTo("#s6-p2", { opacity: 0, y: 90 }, { opacity: 1, y: 0, duration: 1.0, ease: E }, S6 + 2.4);
+      fadeUp("#s6-note", S6 + 4.0, 0.7, 14);
+
+      // 7 · Close (62–72)
+      const S7 = 62;
+      enter("#s7-scene", S7);
+      fadeUp("#s7-eye", S7 + 0.2, 0.6, 14);
+      tl.fromTo(["#s7-st1", "#s7-st2", "#s7-st3", "#s7-st4"], { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.7, ease: E, stagger: 0.35 }, S7 + 0.4);
+      tl.to("#s7-a", { opacity: 0, duration: 0.5 }, S7 + 3.4);
+      tl.set(["#s7-p1", "#s7-p2", "#s7-p3", "#s7-p4"], { opacity: 0 }, 0);
+      tl.fromTo(["#s7-p1", "#s7-p2", "#s7-p3", "#s7-p4"], { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: E, stagger: 0.4 }, S7 + 3.8);
+      tl.to("#s7-b", { opacity: 0, duration: 0.5 }, S7 + 6.0);
+      tl.set(["#s7-logo", "#s7-name", "#s7-tag", "#s7-cta", "#s7-credit"], { opacity: 0 }, 0);
+      tl.fromTo("#s7-logo", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.9, ease: E }, S7 + 6.4);
+      fadeUp("#s7-name", S7 + 6.7, 0.8, 20);
+      fadeUp("#s7-tag", S7 + 7.1, 0.8, 16);
+      fadeUp("#s7-cta", S7 + 7.6, 0.8, 16);
+      fadeIn("#s7-credit", S7 + 7.8, 0.8);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
