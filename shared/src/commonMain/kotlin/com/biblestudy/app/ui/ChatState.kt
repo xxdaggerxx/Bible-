@@ -135,7 +135,7 @@ class ChatState(
         scope.launch {
             val result = background {
                 runCatching { service.ask(key, siteList, only, history, prompt(q, passages), hasVerses) }
-                    .getOrElse { ChatResult.Failed("Something went wrong: ${it.message ?: it.javaClass.simpleName}") }
+                    .getOrElse { ChatResult.Failed("Something went wrong: ${it.message ?: it::class.simpleName}") }
             }
             entries += when (result) {
                 is ChatResult.Answer -> ChatEntry(false, result.text, sources = result.sources)

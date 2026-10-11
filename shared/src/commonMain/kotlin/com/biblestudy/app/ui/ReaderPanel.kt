@@ -1,7 +1,6 @@
 package com.biblestudy.app.ui
 
 import okio.buffer
-import android.content.Intent
 import androidx.compose.animation.core.AnimationState
 import androidx.compose.animation.core.animateDecay
 import androidx.compose.animation.splineBasedDecay
@@ -32,7 +31,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.graphics.drawscope.scale
 import androidx.compose.ui.graphics.StrokeCap
-import androidx.compose.ui.viewinterop.AndroidView
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.model.SideButton
 import com.biblestudy.app.model.TextFont
@@ -102,7 +100,6 @@ import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.platform.LocalClipboardManager
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.LocalFontFamilyResolver
@@ -119,7 +116,6 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.biblestudy.app.shared.R
 import com.biblestudy.app.data.BibleRepository
 import com.biblestudy.app.data.RefLinks
 import com.biblestudy.app.model.ChapterData
@@ -1153,7 +1149,7 @@ private fun DrawScope.drawLiveLayer(vm: StudyViewModel, ctl: ReaderController, t
                 val k = ctl.resizeScale
                 val grown = Rect(b.left, b.top, b.left + b.width * k, b.top + b.height * k)
                 val r = grown.inflate(10f / zoom).translate(ctl.moveOffset.x, ctl.moveOffset.y + page.top)
-                rotate(Math.toDegrees(ctl.rotateAngle.toDouble()).toFloat(), pivot = b.center.plus(Offset(0f, page.top))) {
+                rotate((ctl.rotateAngle * 180f / kotlin.math.PI.toFloat()), pivot = b.center.plus(Offset(0f, page.top))) {
                     drawRect(SELECT_BLUE.copy(alpha = 0.06f), topLeft = r.topLeft, size = r.size)
                     drawRect(
                         SELECT_BLUE, topLeft = r.topLeft, size = r.size,

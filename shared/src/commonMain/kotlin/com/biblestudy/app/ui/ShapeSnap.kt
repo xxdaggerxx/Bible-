@@ -80,7 +80,7 @@ object ShapeSnap {
     private fun arrow(ax: Float, ay: Float, bx: Float, by: Float, len: Float): FloatArray {
         val a = atan2(by - ay, bx - ax)
         val head = max(12f, 0.18f * len)
-        val spread = Math.toRadians(28.0).toFloat()
+        val spread = (28.0 * kotlin.math.PI / 180).toFloat()
         val h1x = bx - head * cos(a - spread); val h1y = by - head * sin(a - spread)
         val h2x = bx - head * cos(a + spread); val h2y = by - head * sin(a + spread)
         return floatArrayOf(ax, ay, P, bx, by, P, h1x, h1y, P, bx, by, P, h2x, h2y, P)
@@ -93,7 +93,7 @@ object ShapeSnap {
         val steps = 64
         return FloatArray((steps + 1) * 3) { i ->
             val k = i / 3
-            val t = (2 * Math.PI * k / steps).toFloat()
+            val t = (2 * kotlin.math.PI * k / steps).toFloat()
             when (i % 3) { 0 -> cx + rx * cos(t); 1 -> cy + ry * sin(t); else -> P }
         }
     }

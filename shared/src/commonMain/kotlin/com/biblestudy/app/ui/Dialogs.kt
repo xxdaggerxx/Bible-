@@ -97,7 +97,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.LinkAnnotation
@@ -1714,7 +1713,6 @@ fun AboutDialog(onDismiss: () -> Unit) {
 @Composable
 /** [onDismiss] is told whether the reader was sent to a passage (so the book picker can close too). */
 fun BookIntroDialog(vm: StudyViewModel, book: Int, onDismiss: (navigated: Boolean) -> Unit) {
-    val context = LocalContext.current
     val intro = remember(book) { BookIntros.get(vm.ctx, book) }
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
     val version = vm.activeVersion
@@ -1844,7 +1842,6 @@ fun BookIntroBody(vm: StudyViewModel, book: Int, intro: com.biblestudy.app.data.
 /** The introduction to the book being read, beside the text (SPLIT-7). */
 @Composable
 fun BookIntroPane(vm: StudyViewModel, modifier: Modifier) {
-    val context = LocalContext.current
     val panel = vm.studyPanel()
     val book = panel.book.coerceIn(1, 66)
     val intro = remember(book) { BookIntros.get(vm.ctx, book) }

@@ -1407,7 +1407,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
 
     /** Wraps to -π..π and settles on 15° steps when close to one. */
     private fun snapAngle(a: Float): Float {
-        val pi = Math.PI.toFloat()
+        val pi = kotlin.math.PI.toFloat()
         var x = a
         while (x > pi) x -= 2 * pi
         while (x < -pi) x += 2 * pi

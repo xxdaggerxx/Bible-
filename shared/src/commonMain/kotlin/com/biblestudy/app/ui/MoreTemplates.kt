@@ -32,7 +32,7 @@ object MoreTemplates {
 
     /** A map of a lon/lat box drawn into the page, with a way to place points on it. */
     private class MapArea(val lonMin: Float, val lonMax: Float, val latMin: Float, val latMax: Float, val x0: Float, val y0: Float, val w: Float) {
-        private val k = cos(Math.toRadians(((latMin + latMax) / 2).toDouble())).toFloat()
+        private val k = cos(((latMin + latMax) / 2).toDouble() * kotlin.math.PI / 180).toFloat()
         val h = w * (latMax - latMin) / ((lonMax - lonMin) * k)
         fun at(lat: Float, lon: Float) = (x0 + (lon - lonMin) / (lonMax - lonMin) * w) to (y0 + (latMax - lat) / (latMax - latMin) * h)
         fun inside(lon: Float, lat: Float) = lon in lonMin..lonMax && lat in latMin..latMax

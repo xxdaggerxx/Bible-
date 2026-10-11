@@ -1,5 +1,7 @@
 package com.biblestudy.app.ui
 
+import okio.use
+
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTransformGestures
@@ -108,14 +110,14 @@ fun PlaceMap(vm: StudyViewModel, place: NameEntry, modifier: Modifier = Modifier
                         val perPx = span / size.height
                         span = (span / zoom).coerceIn(0.4f, 40f)
                         cLat = (cLat + pan.y * perPx).coerceIn(10f, 48f)
-                        cLon = (cLon - pan.x * perPx / cos(Math.toRadians(cLat.toDouble())).toFloat()).coerceIn(-8f, 60f)
+                        cLon = (cLon - pan.x * perPx / cos(cLat.toDouble() * kotlin.math.PI / 180).toFloat()).coerceIn(-8f, 60f)
                     }
                 }
         ) {
             drawRect(SEA)
             val m = map ?: return@Canvas
             val k = size.height / span
-            val kx = k * cos(Math.toRadians(cLat.toDouble())).toFloat()
+            val kx = k * cos(cLat.toDouble() * kotlin.math.PI / 180).toFloat()
             fun x(lon: Float) = size.width / 2 + (lon - cLon) * kx
             fun y(lat: Float) = size.height / 2 - (lat - cLat) * k
             fun shape(pts: FloatArray, close: Boolean) = Path().apply {

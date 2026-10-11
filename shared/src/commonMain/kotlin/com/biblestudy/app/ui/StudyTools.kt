@@ -439,7 +439,7 @@ fun AidsPane(vm: StudyViewModel, symbols: Boolean, modifier: Modifier) {
             val on = com.biblestudy.app.data.AidSwitches(hard = false, names = false, customs = !symbols, symbols = symbols)
             // In the order they come in the chapter, then the rest A to Z.
             val here = com.biblestudy.app.data.Aids.marks(context, vm.study, panel.version, panel.book, panel.chapter, verses, on)
-                .toSortedMap().values.flatten().map { it.key }.distinct()
+                .entries.sortedBy { it.key }.flatMap { it.value }.map { it.key }.distinct()
             val byId = all.associateBy { it.id }
             (here.mapNotNull { byId[it] } + all.filter { it.id !in here }.sortedBy { it.title.removePrefix("The ") }).map(::entry)
         }

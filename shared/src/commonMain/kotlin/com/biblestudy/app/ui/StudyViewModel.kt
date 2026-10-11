@@ -52,7 +52,7 @@ import com.biblestudy.app.model.VerseId
 import com.biblestudy.app.model.VerseTarget
 import com.biblestudy.app.model.translated
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.asCoroutineDispatcher
+import kotlinx.coroutines.IO
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -2331,7 +2331,7 @@ class StudyViewModel(val host: Host) : ViewModel() {
     var pendingLoads by mutableIntStateOf(0)
         private set
     // Counted outside Compose's snapshots so no update can be lost; the state above mirrors it.
-    private val loadsInFlight = java.util.concurrent.atomic.AtomicInteger()
+    private val loadsInFlight = kotlinx.atomicfu.atomic(0)
     private fun loadStarted() { pendingLoads = loadsInFlight.incrementAndGet() }
     private fun loadFinished() { pendingLoads = loadsInFlight.decrementAndGet() }
 
@@ -2697,8 +2697,8 @@ class StudyViewModel(val host: Host) : ViewModel() {
             (x - pivot.x) * c - (y - pivot.y) * sn + pivot.x,
             (x - pivot.x) * sn + (y - pivot.y) * c + pivot.y,
         )
-        val q = kotlin.math.round(angle / (Math.PI.toFloat() / 2f)).toInt()
-        val quarter = kotlin.math.abs(angle - q * Math.PI.toFloat() / 2f) < 0.02f
+        val q = kotlin.math.round(angle / (kotlin.math.PI.toFloat() / 2f)).toInt()
+        val quarter = kotlin.math.abs(angle - q * kotlin.math.PI.toFloat() / 2f) < 0.02f
         changeSelection { a ->
             when (a) {
                 is InkStroke -> {
@@ -2830,7 +2830,7 @@ class StudyViewModel(val host: Host) : ViewModel() {
     fun allTags(): List<String> = tags.values.flatten().distinct().sortedBy { it.lowercase() }
 
     fun setTags(item: String, set: Set<String>) {
-        val clean = set.map { it.trim() }.filter { it.isNotEmpty() }.toSortedSet()
+        val clean = set.map { it.trim() }.filter { it.isNotEmpty() }.sorted().toSet()
         if (clean.isEmpty()) tags.remove(item) else tags[item] = clean
         io { user.setTags(item, clean) }
     }
@@ -3448,7 +3448,7 @@ class StudyViewModel(val host: Host) : ViewModel() {
             } catch (e: kotlinx.coroutines.CancellationException) {
                 throw e
             } catch (e: Exception) {
-                syncError = "Sync didn't finish: ${e.message ?: e.javaClass.simpleName}. It will try again."
+                syncError = "Sync didn't finish: ${e.message ?: e::class.simpleName}. It will try again."
                 if (announce) message = syncError
             } finally {
                 syncing = false

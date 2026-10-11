@@ -1352,7 +1352,8 @@ class FeatureTest {
         // Bookmarks tab: open one, or take it off.
         compose.onNodeWithText("Romans 8").performClick()
         compose.onNodeWithTag("pickerTab2").performClick()
-        compose.onNodeWithText("For God so loved the world", substring = true).assertExists()
+        // The bookmarked verses' text is read in the background.
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("For God so loved the world", substring = true).fetchSemanticsNodes().isNotEmpty() }
         snap("152-bookmarks")
         compose.onNodeWithText("John 3:16").performClick()
         waitForLoaded()
