@@ -60,7 +60,9 @@ class JSONObject() {
     override fun toString(): String = toElement().toString()
 
     companion object {
-        /** JSON null, as a value. */
+        /** JSON null, as a value. (Named differently for iOS, where NULL is a C macro.) */
+        @OptIn(kotlin.experimental.ExperimentalObjCName::class)
+        @kotlin.native.ObjCName("nullValue")
         val NULL: Any = JsonNull
     }
 }
