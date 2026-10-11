@@ -11,6 +11,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -19,7 +20,16 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.automirrored.filled.Chat
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Draw
+import androidx.compose.material.icons.filled.EditNote
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
+import androidx.compose.material.icons.filled.FormatQuote
+import androidx.compose.material.icons.filled.MenuBook
+import androidx.compose.material.icons.filled.School
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.SpaceDashboard
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DropdownMenu
@@ -39,6 +49,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -53,29 +64,12 @@ import androidx.compose.ui.unit.dp
 fun PanelViewMenu(vm: StudyViewModel, slot: Slot, expanded: Boolean, onDismiss: () -> Unit) {
     DropdownMenu(expanded = expanded, onDismissRequest = onDismiss) {
         val current = (slot as? Slot.Study)?.kind
-        // The views under a few headings (SPLIT-7), the Bible first.
-        for ((g, group) in PaneKind.groups.withIndex()) {
-            val (heading, kinds) = group
-            Text(
-                heading, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.padding(start = 16.dp, top = if (g == 0) 8.dp else 12.dp, bottom = 2.dp),
-            )
-            if (g == 0) DropdownMenuItem(
-                text = { Text("Bible") },
-                onClick = { onDismiss(); if (current != null) vm.setSlotView(slot, null) },
-                leadingIcon = if (current == null) { { Icon(Icons.Filled.Check, contentDescription = null) } } else null,
-            )
-            for (k in kinds) {
-                if (k == PaneKind.CHAT && !vm.chat.enabled && current != k) continue
-                val elsewhere = k != current && k in vm.tab.studies && k != PaneKind.COMMENTARY
-                DropdownMenuItem(
-                    text = { Text(k.label) },
-                    enabled = !elsewhere,
-                    onClick = { onDismiss(); if (k != current) vm.setSlotView(slot, k) },
-                    leadingIcon = if (k == current) { { Icon(Icons.Filled.Check, contentDescription = null) } } else null,
-                )
-            }
-        }
+        ViewChoices(
+            vm, current, bible = true,
+            disabled = { k -> k != current && k in vm.tab.studies && k != PaneKind.COMMENTARY },
+            onBible = { onDismiss(); if (current != null) vm.setSlotView(slot, null) },
+            onPick = { k -> onDismiss(); if (k != current) vm.setSlotView(slot, k) },
+        )
         HorizontalDivider()
         if (vm.tab.shown < 2) {
             DropdownMenuItem(text = { Text("Add a panel beside") }, onClick = { onDismiss(); vm.addPanel() })
@@ -98,6 +92,65 @@ fun PanelViewMenu(vm: StudyViewModel, slot: Slot, expanded: Boolean, onDismiss: 
             DropdownMenuItem(text = { Text(if (vm.tab.shown > 1) "Close panel" else "Close tab") }, onClick = { onDismiss(); vm.closeSlot(slot) })
         }
     }
+}
+
+/**
+ * The views to choose from in a menu (SPLIT-7): the Bible, Sketch pages, My notes, Search and AI
+ * chat each on a line with an icon, then *This verse* and *Study*, which fold open to their views.
+ * The heading holding [current] starts open; opening one closes the other, so the menu stays short.
+ */
+@Composable
+internal fun ViewChoices(
+    vm: StudyViewModel,
+    current: PaneKind?,
+    bible: Boolean,
+    disabled: (PaneKind) -> Boolean = { false },
+    onBible: () -> Unit = {},
+    onPick: (PaneKind) -> Unit,
+) {
+    val check: @Composable () -> Unit = { Icon(Icons.Filled.Check, contentDescription = "Showing") }
+    if (bible) DropdownMenuItem(
+        text = { Text("Bible") }, onClick = onBible,
+        leadingIcon = { Icon(Icons.Filled.MenuBook, contentDescription = null) },
+        trailingIcon = if (current == null) check else null,
+    )
+    for (k in PaneKind.main) {
+        if (k == PaneKind.CHAT && !vm.chat.enabled && current != k) continue
+        DropdownMenuItem(
+            text = { Text(k.label) }, enabled = !disabled(k), onClick = { onPick(k) },
+            leadingIcon = { Icon(viewIcon(k), contentDescription = null) },
+            trailingIcon = if (k == current) check else null,
+        )
+    }
+    var open by remember { mutableStateOf(PaneKind.folders.indexOfFirst { current in it.second }) }
+    for ((i, folder) in PaneKind.folders.withIndex()) {
+        val (heading, kinds) = folder
+        val here = kinds.firstOrNull { it == current }
+        DropdownMenuItem(
+            text = {
+                Text(
+                    if (here != null && open != i) "$heading \u00b7 ${here.label}" else heading,
+                    maxLines = 1, overflow = TextOverflow.Ellipsis,
+                )
+            },
+            onClick = { open = if (open == i) -1 else i },
+            modifier = Modifier.testTag("folder:$heading"),
+            leadingIcon = { Icon(if (i == 0) Icons.Filled.FormatQuote else Icons.Filled.School, contentDescription = null) },
+            trailingIcon = { Icon(if (open == i) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore, contentDescription = if (open == i) "Fold" else "Open") },
+        )
+        if (open == i) for (k in kinds) DropdownMenuItem(
+            text = { Text(k.label) }, enabled = !disabled(k), onClick = { onPick(k) },
+            contentPadding = PaddingValues(start = 56.dp, end = 12.dp),
+            trailingIcon = if (k == current) check else null,
+        )
+    }
+}
+
+private fun viewIcon(k: PaneKind): ImageVector = when (k) {
+    PaneKind.SKETCHES -> Icons.Filled.Draw
+    PaneKind.NOTES -> Icons.Filled.EditNote
+    PaneKind.SEARCH -> Icons.Filled.Search
+    else -> Icons.AutoMirrored.Filled.Chat
 }
 
 /** The button that opens [PanelViewMenu]. */

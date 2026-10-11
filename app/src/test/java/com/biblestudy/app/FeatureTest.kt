@@ -1902,6 +1902,10 @@ class FeatureTest {
         // The panel menu turns the Bible panel into a dictionary (SPLIT-7).
         compose.onNodeWithContentDescription("Panel view").performClick()
         snap("130-panel-menu")
+        // Short: the study views fold under This verse and Study.
+        compose.onNodeWithText("Dictionary").assertDoesNotExist()
+        compose.onNodeWithTag("folder:Study").performClick()
+        snap("130b-panel-menu-study")
         compose.onNodeWithText("Dictionary").performClick()
         waitForLoaded()
         assertEquals(listOf<Slot>(Slot.Study(PaneKind.DICTIONARY)), vm.tab.slots())
@@ -1921,6 +1925,7 @@ class FeatureTest {
         snap("132-top-and-bottom")
         // The Bible panel becomes topics: two study views, the passage kept out of sight.
         compose.onNodeWithContentDescription("Panel view").performClick()
+        compose.onNodeWithTag("folder:Study").performClick()
         compose.onNodeWithText("Topics").performClick()
         waitForLoaded()
         assertEquals(listOf<Slot>(Slot.Study(PaneKind.DICTIONARY, 0), Slot.Study(PaneKind.TOPICS, 1)), vm.tab.slots())
@@ -2114,6 +2119,7 @@ class FeatureTest {
 
         // Two commentaries side by side in one tab, each with its own choice.
         compose.onNodeWithContentDescription("Panel view").performClick()
+        compose.onNodeWithTag("folder:Study").performClick()
         compose.onAllNodesWithText("Commentary").onLast().performScrollTo().performClick()
         waitForLoaded()
         assertEquals(listOf(PaneKind.COMMENTARY, PaneKind.COMMENTARY), vm.tab.studies.toList())
@@ -2205,6 +2211,7 @@ class FeatureTest {
         // Greek word by word, and a word study in the panel beside it.
         compose.runOnUiThread { vm.sidePane = PaneKind.ORIGINAL }
         compose.onNodeWithContentDescription("Panel view").performClick()
+        compose.onNodeWithTag("folder:This verse").performClick()
         compose.onNodeWithText("Word study").performScrollTo().performClick()
         waitForLoaded()
         assertEquals(listOf(PaneKind.WORDSTUDY, PaneKind.ORIGINAL), vm.tab.studies.toList())
@@ -2427,6 +2434,7 @@ class FeatureTest {
         // The pane's one menu picks what it shows.
         compose.onNodeWithContentDescription("Choose what the pane shows").performClick()
         snap("86b-pane-menu")
+        compose.onNodeWithTag("folder:Study").performClick()
         compose.onNodeWithText("Dictionary").performClick()
         assertEquals(PaneKind.DICTIONARY, vm.sidePane)
         // Easton's: names in the chapter are suggested.
@@ -3017,9 +3025,9 @@ class FeatureTest {
     fun anySketchPageOpensBesideTheText() {
         compose.runOnUiThread { vm.addReadyMadePages() }
         waitForLoaded()
-        // Panels \u2192 Beside the text: Sketch pages lists every page.
+        // Panels \u2192 Beside the text \u2192 Sketch pages lists every page.
         compose.onNodeWithContentDescription("Panels").performClick()
-        compose.onNodeWithText("Beside the text: Sketch pages").performClick()
+        compose.onNodeWithText("Sketch pages").performClick()
         compose.onNodeWithTag("sketchesPane").assertExists()
         snap("121-sketches-pane")
         compose.onNodeWithText("The tabernacle").performClick()
@@ -3061,7 +3069,7 @@ class FeatureTest {
         compose.runOnUiThread { vm.goTo(0, 43, 3, remember = false) }
         waitForLoaded()
         compose.onNodeWithContentDescription("Panels").performClick()
-        compose.onNodeWithText("Beside the text: Sketch pages").performClick()
+        compose.onNodeWithText("Sketch pages").performClick()
         compose.onNodeWithTag("sketchesPane").assertExists()
         compose.onNodeWithTag("newSketchPage").performClick()
         compose.onNode(androidx.compose.ui.test.hasSetTextAction()).performTextInput("Map of Paul's journeys")

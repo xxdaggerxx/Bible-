@@ -193,12 +193,14 @@ enum class PaneKind(val label: String) {
     ;
 
     companion object {
-        /** The views under headings, as the panel menus list them (SPLIT-7). The Bible itself goes first. */
-        val groups: List<Pair<String, List<PaneKind>>> = listOf(
-            "Reading" to listOf(SKETCHES),
+        /**
+         * How the panel menus list the views (SPLIT-7): the Bible and these few first, each on its
+         * own line, then the rest folded under two headings so the menu stays short.
+         */
+        val main: List<PaneKind> = listOf(SKETCHES, NOTES, SEARCH, CHAT)
+        val folders: List<Pair<String, List<PaneKind>>> = listOf(
             "This verse" to listOf(VERSE, COMPARE, ORIGINAL, WORDSTUDY, CROSSREFS),
-            "Study" to listOf(COMMENTARY, REFLECTIONS, DICTIONARY, TOPICS, NAMES, CUSTOMS, SYMBOLS, CHRIST, INTRO),
-            "Notes, search and AI" to listOf(NOTES, SEARCH, CHAT),
+            "Study" to listOf(COMMENTARY, REFLECTIONS, INTRO, DICTIONARY, TOPICS, NAMES, CUSTOMS, SYMBOLS, CHRIST),
         )
     }
 }

@@ -72,6 +72,10 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 2.9.2
+
+- **A shorter panel menu.** It had grown to over twenty lines. Now *Bible*, *Sketch pages*, *My notes*, *Search* and *AI chat* are at the top with icons, and the other views fold under **This verse** and **Study**: tap a heading to open it. The heading holding the view you're on opens by itself, with a ✓ by the view. Closed, the menu is about ten lines. The panels button's *Beside the text* list is folded the same way.
+
 ## New in version 2.9.0
 
 - **Reflections**, a new view under **Study** in a panel's menu: 2,519 short devotional reflections on 2,032 passages across the whole Bible, for quiet time with what you're reading. Some are on a whole passage (*The Feeding of the Five Thousand*), some on a single saying (*"I am the vine"*). Each has **Read** (the passage and key verse, tappable to read them in your version), a few short paragraphs, **Ask yourself** and **Pray**.
