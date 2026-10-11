@@ -87,7 +87,7 @@ fun SettingsDialog(
     }
     BigDialog({ vm.savePrefs(); onDismiss() }) {
         Column {
-            DialogTitle("Settings", { vm.savePrefs(); onDismiss() })
+            DialogTitle("Settings", { vm.savePrefs(); onDismiss() }, help = HelpTopic.SETTINGS)
             // Find a setting by name (a few words of it are enough).
             var query by remember { mutableStateOf("") }
             OutlinedTextField(

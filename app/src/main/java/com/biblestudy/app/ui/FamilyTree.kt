@@ -182,7 +182,7 @@ fun FamilyTreeDialog(vm: StudyViewModel, startUid: String, onDismiss: () -> Unit
     val scope = rememberCoroutineScope()
     BigDialog(onDismiss) {
         Column {
-            DialogTitle(tree?.let { "Family of ${it.name}" } ?: "Family tree", onDismiss)
+            DialogTitle(tree?.let { "Family of ${it.name}" } ?: "Family tree", onDismiss, help = HelpTopic.NAMES)
             Text(
                 "Tap anyone to see their family.",
                 style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,

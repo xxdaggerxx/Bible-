@@ -208,7 +208,7 @@ fun ReadingStatsDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     }
     BigDialog(onDismiss) {
         Column(Modifier.testTag("readingStats")) {
-            DialogTitle("Reading stats", onDismiss)
+            DialogTitle("Reading stats", onDismiss, help = HelpTopic.STATS)
             val s = stats ?: run { Text("Loading…"); return@Column }
             BoxWithConstraints(Modifier.weight(1f)) {
                 val wide = maxWidth >= 600.dp

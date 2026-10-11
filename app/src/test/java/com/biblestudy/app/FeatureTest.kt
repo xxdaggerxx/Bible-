@@ -2948,6 +2948,23 @@ class FeatureTest {
         compose.onNodeWithText("Words of Jesus in red").assertExists()
         compose.onNodeWithText("Verse numbers").assertDoesNotExist()
         snap("115-settings-search")
+        // Its ? opens Help at Settings, over the window (DOC-2); closing Help leaves Settings open.
+        compose.onNodeWithTag("help:Settings").performClick()
+        compose.onNodeWithTag("helpSection").assertExists()
+        compose.onNodeWithText("Reset settings to defaults", substring = true).assertExists()
+        snap("115b-help-from-settings")
+        compose.onAllNodesWithContentDescription("Close").onLast().performClick()
+        compose.onNodeWithTag("helpSection").assertDoesNotExist()
+        compose.onNodeWithTag("settingsSearch").assertExists()
+        compose.onNodeWithContentDescription("Close").performClick()
+
+        // The panel menu's Help item opens the section about what the panel shows.
+        compose.onAllNodesWithContentDescription("Panel view").onFirst().performClick()
+        compose.onNodeWithText("Help: panels").performClick()
+        compose.onNodeWithText("Panels and tabs").assertExists()
+        compose.onNodeWithTag("helpSection").assertExists()
+        compose.onNodeWithContentDescription("All topics").performClick()
+        compose.onNodeWithTag("helpSearch").assertExists()
         compose.onNodeWithContentDescription("Close").performClick()
 
         // A sketch page can be linked to another passage.

@@ -2,6 +2,8 @@
 
 Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; look for the open Bible with a quill. Everything works without the internet. Your notes save the moment you lift the pen. Tap a heading below to read it, or type in the search box to find something.
 
+**Help wherever you are.** Look for the small ? at the top of a window (Settings, Search, Layers, My notes, Reading stats, a verse's pop-up, a word study and more). Tap it and Help opens at the part about that window; close Help and you're back where you were. For a panel, tap the panel button at its top left, then *Help: …* at the bottom of the menu (*Help: panels* on a Bible panel). The full guide is always in *⋮ → Help*; ← at the top of a topic shows all of them.
+
 ## Getting around
 
 - **Pick a passage.** Tap the chapter name at the top of a panel (e.g. *John 3*). Choose a book, then a chapter, then a verse. Small coloured dots show where you have notes.

@@ -171,7 +171,7 @@ fun WordStudyDialog(vm: StudyViewModel, start: WordStudy, onDismiss: () -> Unit)
     BigDialog(onDismiss) {
         Column(Modifier.testTag("wordStudy")) {
             WordStudyBody(vm, start, onDismiss) { title, back ->
-                DialogTitle(title, onDismiss, leading = back?.let { b ->
+                DialogTitle(title, onDismiss, help = HelpTopic.WORD_STUDIES, leading = back?.let { b ->
                     { IconButton(onClick = b) { Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back") } }
                 })
             }

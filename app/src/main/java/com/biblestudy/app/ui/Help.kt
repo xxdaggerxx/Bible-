@@ -44,6 +44,9 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.material.icons.automirrored.filled.HelpOutline
+import androidx.compose.material3.IconButton
+import androidx.compose.runtime.staticCompositionLocalOf
 
 /**
  * One section of the Help guide: its heading and its lines (paragraphs, "- " bullets and
@@ -118,13 +121,73 @@ object HelpGuide {
     }
 }
 
-/** Help (⋮ → Help): the guide's sections, searchable; tap a heading to open it. */
+/**
+ * The Help sections the app's ? buttons open (DOC-2). Each is a "## " heading in the guide;
+ * HelpGuideTest checks they're all there.
+ */
+object HelpTopic {
+    const val GETTING_AROUND = "Getting around"
+    const val PANELS = "Panels and tabs"
+    const val VERSE = "Verse details"
+    const val ORIGINAL = "Hebrew and Greek word by word"
+    const val WORD_STUDIES = "Word studies"
+    const val SEARCH = "Searching"
+    const val STUDY = "Dictionary, topics and commentary"
+    const val COMMENTARIES = "Commentaries"
+    const val REFLECTIONS = "Reflections"
+    const val CHAT = "AI chat (online)"
+    const val CUSTOMS = "Customs & feasts, Symbols & numbers"
+    const val NAMES = "Names and places"
+    const val SKETCHES = "Sketch pages"
+    const val NOTES = "My notes"
+    const val STATS = "Reading stats"
+    const val LAYERS = "Layers"
+    const val SETTINGS = "Settings"
+
+    val all = listOf(GETTING_AROUND, PANELS, VERSE, ORIGINAL, WORD_STUDIES, SEARCH, STUDY, COMMENTARIES,
+        REFLECTIONS, CHAT, CUSTOMS, NAMES, SKETCHES, NOTES, STATS, LAYERS, SETTINGS)
+
+    /** The section about a panel's view; the Bible's is about panels. */
+    fun of(kind: PaneKind?): String = when (kind) {
+        null -> PANELS
+        PaneKind.SEARCH -> SEARCH
+        PaneKind.NOTES -> NOTES
+        PaneKind.DICTIONARY, PaneKind.TOPICS -> STUDY
+        PaneKind.COMMENTARY -> COMMENTARIES
+        PaneKind.REFLECTIONS -> REFLECTIONS
+        PaneKind.NAMES -> NAMES
+        PaneKind.CUSTOMS, PaneKind.SYMBOLS -> CUSTOMS
+        PaneKind.SKETCHES -> SKETCHES
+        PaneKind.CHAT -> CHAT
+        PaneKind.ORIGINAL -> ORIGINAL
+        PaneKind.WORDSTUDY -> WORD_STUDIES
+        PaneKind.VERSE, PaneKind.COMPARE, PaneKind.CROSSREFS -> VERSE
+        PaneKind.INTRO, PaneKind.CHRIST -> GETTING_AROUND
+    }
+}
+
+/** Opens Help at a section (by its heading), from anywhere in the app. */
+val LocalHelp = staticCompositionLocalOf<(String) -> Unit> { {} }
+
+/** A small ? that opens Help at [topic] (DOC-2). */
 @Composable
-fun HelpDialog(onDismiss: () -> Unit) {
+fun HelpButton(topic: String) {
+    val help = LocalHelp.current
+    IconButton(onClick = { help(topic) }, modifier = Modifier.testTag("help:$topic")) {
+        Icon(Icons.AutoMirrored.Filled.HelpOutline, contentDescription = "Help: $topic", tint = MaterialTheme.colorScheme.outline)
+    }
+}
+
+/**
+ * Help (⋮ → Help): the guide's sections, searchable; tap a heading to open it. With [topic]
+ * (from a ? button) it opens at that section; ← goes to all topics.
+ */
+@Composable
+fun HelpDialog(topic: String? = null, onDismiss: () -> Unit) {
     val context = LocalContext.current
     val (intro, sections) = remember { HelpGuide.load(context) }
     var query by remember { mutableStateOf("") }
-    var open by remember { mutableStateOf<HelpSection?>(null) }
+    var open by remember(topic) { mutableStateOf(sections.firstOrNull { it.title == topic }) }
     val listState = rememberLazyListState()
     BigDialog(onDismiss) {
         Column {

@@ -150,11 +150,12 @@ internal fun BigDialog(onDismiss: () -> Unit, content: @Composable () -> Unit) {
 }
 
 @Composable
-internal fun DialogTitle(title: String, onClose: () -> Unit, leading: (@Composable () -> Unit)? = null, actions: (@Composable () -> Unit)? = null) {
+internal fun DialogTitle(title: String, onClose: () -> Unit, leading: (@Composable () -> Unit)? = null, help: String? = null, actions: (@Composable () -> Unit)? = null) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         leading?.invoke()
         Text(title, style = MaterialTheme.typography.headlineSmall, modifier = Modifier.weight(1f))
         actions?.invoke()
+        help?.let { HelpButton(it) }
         IconButton(onClick = onClose) { Icon(Icons.Filled.Close, contentDescription = "Close") }
     }
 }
@@ -187,7 +188,7 @@ fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
             val c = chapter
             when {
                 b == null -> {
-                    DialogTitle("Choose a book", onDismiss)
+                    DialogTitle("Choose a book", onDismiss, help = HelpTopic.GETTING_AROUND)
                     // Books, the chapters read lately (READ-8) and bookmarks (NOTE-3).
                     TabRow(selectedTabIndex = pickerTab, modifier = Modifier.padding(bottom = 8.dp)) {
                         for ((i, name) in listOf("Books", "Recently read", "Bookmarks").withIndex()) {
@@ -410,7 +411,7 @@ private fun GridCell(text: String, marks: Marks? = null, label: String = text, r
 fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     BigDialog(onDismiss) {
         Column {
-            DialogTitle("Search", onDismiss)
+            DialogTitle("Search", onDismiss, help = HelpTopic.SEARCH)
             SearchPane(vm, Modifier.weight(1f), onOpened = onDismiss, inPane = false)
         }
     }
@@ -644,7 +645,7 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
     val version = vm.activeVersion
     BigDialog(onDismiss) {
         Column {
-            DialogTitle("${vm.refLabel(id)} ($version)", onDismiss, actions = { CopyVerseButton(vm, id, version) })
+            DialogTitle("${vm.refLabel(id)} ($version)", onDismiss, help = HelpTopic.VERSE, actions = { CopyVerseButton(vm, id, version) })
             // The note is saved when the window closes (the details leave the screen).
             VerseDetails(vm, t, version, inPanel = false, onDone = onDismiss, modifier = Modifier.weight(1f))
         }
@@ -1118,7 +1119,7 @@ fun LayersDialog(vm: StudyViewModel, onExportLayer: (Long) -> Unit = {}, onDismi
 
     BigDialog(onDismiss) {
         Column {
-            DialogTitle("Layers", onDismiss)
+            DialogTitle("Layers", onDismiss, help = HelpTopic.LAYERS)
             Text(
                 "Layers are global: hiding a layer hides it on every page. New ink goes on the selected layer. " +
                     "Layers higher in this list draw on top.",
@@ -1292,7 +1293,7 @@ fun MyNotesDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     var tab by remember { mutableStateOf(0) }
     BigDialog(onDismiss) {
         Column {
-            DialogTitle("My notes", onDismiss)
+            DialogTitle("My notes", onDismiss, help = HelpTopic.NOTES)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 FilterChip(selected = tab == 0, onClick = { tab = 0 }, label = { Text("Notes") })
                 FilterChip(selected = tab == 1, onClick = { tab = 1 }, label = { Text("Highlights") })
@@ -1729,7 +1730,7 @@ fun BookIntroDialog(vm: StudyViewModel, book: Int, onDismiss: (navigated: Boolea
 
     BigDialog({ onDismiss(false) }) {
         Column {
-            DialogTitle("About ${info.name}", { onDismiss(false) })
+            DialogTitle("About ${info.name}", { onDismiss(false) }, help = HelpTopic.GETTING_AROUND)
             if (intro == null) {
                 Text("No introduction for this book yet.")
                 return@Column

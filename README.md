@@ -72,6 +72,11 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 2.10.1
+
+- **Help where you need it.** A small ? at the top of the main windows (Settings, Search, Layers, My notes, Reading stats, the book picker, a book's introduction, the verse pop-up, word studies and family trees) opens Help straight at the section about that window, on top of it; closing Help leaves you where you were. Each panel's menu ends with *Help: …* for what the panel shows (*Help: Commentary*, *Help: Sketch pages*; *Help: panels* on a Bible panel). ← in a topic goes to all of Help. No new toolbar buttons.
+- Known gaps: the toolbar's own tools (pen, highlighter, lasso and the colour menu) have no ? of their own; *⋮ → Help* covers them. Help is a separate window, so it covers the screen it explains.
+
 ## New in version 2.10.0
 
 - **Pictures in Help.** 32 Help topics now show a screenshot of what they describe, with a caption: the book picker, the toolbar and pen colours, a highlight being changed, the margins, the lasso, layers, the verse pop-up, Greek word by word, word studies, search, panels and tabs, the commentary, Reflections, the AI chat, Names & places and family trees, sketch pages, reading stats, Settings and more. Search in Help also finds a picture's caption. The pictures are cropped from the screenshots the tests take (`tools/build_help_images.py`), so they can be made again when the screens change; together they add about 1 MB.

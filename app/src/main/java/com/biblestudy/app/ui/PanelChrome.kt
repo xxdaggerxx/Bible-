@@ -21,6 +21,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.automirrored.filled.Chat
+import androidx.compose.material.icons.automirrored.filled.HelpOutline
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Draw
 import androidx.compose.material.icons.filled.EditNote
@@ -90,6 +91,14 @@ fun PanelViewMenu(vm: StudyViewModel, slot: Slot, expanded: Boolean, onDismiss: 
         if (vm.tab.shown > 1 || vm.tabs.size > 1) {
             DropdownMenuItem(text = { Text(if (vm.tab.shown > 1) "Close panel" else "Close tab") }, onClick = { onDismiss(); vm.closeSlot(slot) })
         }
+        HorizontalDivider()
+        // Help about what this panel shows (DOC-2).
+        val help = LocalHelp.current
+        DropdownMenuItem(
+            text = { Text("Help: ${current?.label ?: "panels"}") },
+            leadingIcon = { Icon(Icons.AutoMirrored.Filled.HelpOutline, contentDescription = null) },
+            onClick = { onDismiss(); help(HelpTopic.of(current)) },
+        )
     }
 }
 
