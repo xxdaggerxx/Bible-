@@ -208,7 +208,7 @@ data class MarginText(
 
 /** A highlight on a text box's words (HL-11). */
 data class TextMark(val start: Int, val end: Int, val color: Int, val underline: Boolean) {
-    fun encode() = "$start-$end-${Integer.toHexString(color)}" + if (underline) "-u" else ""
+    fun encode() = "$start-$end-${color.toUInt().toString(16)}" + if (underline) "-u" else ""
 
     companion object {
         fun parse(s: String): TextMark? {
@@ -315,7 +315,7 @@ data class Sketch(
         fun idOf(book: Int) = (book - SKETCH_BOOK).toLong()
 
         /** A shared id for a new page: ready-made pages ([created] 1 to 999) have the same one on every device. */
-        fun newUid(created: Long) = if (created in 1..999) "ready-$created" else java.util.UUID.randomUUID().toString().replace("-", "")
+        fun newUid(created: Long) = if (created in 1..999) "ready-$created" else com.biblestudy.app.platform.randomHex(32)
     }
 }
 

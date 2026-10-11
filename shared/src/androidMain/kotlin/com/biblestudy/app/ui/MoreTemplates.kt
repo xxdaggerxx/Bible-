@@ -12,7 +12,7 @@ import kotlin.math.sin
  * The ready-made pages added in 1.1 (SKT-5): two maps, a harmony of the life of Christ, the
  * twelve tribes and the temples. Places and dates follow the traditional view.
  */
-internal object MoreTemplates {
+object MoreTemplates {
     private const val LEFT = 40f
     private const val RIGHT = 1260f
     private const val INK = 0xFF6D4C41.toInt()

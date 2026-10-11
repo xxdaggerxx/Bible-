@@ -3,6 +3,7 @@
     <!-- Only the AI chat goes online (AI-1); everything else works offline. -->
     <uses-permission android:name="android.permission.INTERNET" />
     <application
+        android:name=".InkAndWordApp"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

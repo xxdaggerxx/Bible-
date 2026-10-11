@@ -298,7 +298,7 @@ private fun ChatBubble(vm: StudyViewModel, e: ChatEntry, onPassage: (Passage) ->
 }
 
 /** A message as copied: the passages and question, or the answer with its sources listed. */
-internal fun copyText(e: ChatEntry): String = buildString {
+fun copyText(e: ChatEntry): String = buildString {
     for (p in e.passages) append(p.label).append(": ").append(p.text).append("\n")
     append(e.text)
     if (e.sources.isNotEmpty()) {
@@ -322,7 +322,7 @@ private fun SourceRow(n: Int, s: ChatSource, onOpen: () -> Unit) {
  * An answer as shown: simple Markdown (headings, lists, **bold**), with Bible references made
  * into links that open the passage pop-over.
  */
-internal fun answerText(vm: StudyViewModel, md: String, onPassage: (Passage) -> Unit): AnnotatedString {
+fun answerText(vm: StudyViewModel, md: String, onPassage: (Passage) -> Unit): AnnotatedString {
     val body = buildAnnotatedString {
         md.lines().forEachIndexed { i, raw ->
             if (i > 0) append('\n')

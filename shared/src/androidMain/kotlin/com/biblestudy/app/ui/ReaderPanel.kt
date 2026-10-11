@@ -118,7 +118,7 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.biblestudy.app.R
+import com.biblestudy.app.shared.R
 import com.biblestudy.app.data.BibleRepository
 import com.biblestudy.app.data.RefLinks
 import com.biblestudy.app.model.ChapterData

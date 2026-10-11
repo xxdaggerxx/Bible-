@@ -418,7 +418,7 @@ class PlacedPage(val geo: PageGeometry, val top: Float) {
     val layout get() = geo.layout
 }
 
-internal val PAGE_DENSITY = Density(1f, 1f)
+val PAGE_DENSITY = Density(1f, 1f)
 
 /** Scale for offsets from a line's baseline in line coordinates; keeps every offset inside one line's slot. */
 private const val LINE_K = 4000f

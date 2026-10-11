@@ -108,7 +108,7 @@ fun PanelViewMenu(vm: StudyViewModel, slot: Slot, expanded: Boolean, onDismiss: 
  * when it holds [current]. A view no longer in the menu ([PaneKind.offMenu]) is listed while shown.
  */
 @Composable
-internal fun ViewChoices(
+fun ViewChoices(
     vm: StudyViewModel,
     current: PaneKind?,
     bible: Boolean,

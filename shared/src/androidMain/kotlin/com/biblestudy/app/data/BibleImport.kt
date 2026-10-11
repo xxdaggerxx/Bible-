@@ -35,7 +35,7 @@ object BibleImport {
     private val USFM = ("GEN EXO LEV NUM DEU JOS JDG RUT 1SA 2SA 1KI 2KI 1CH 2CH EZR NEH EST JOB PSA PRO ECC SNG ISA JER LAM " +
         "EZK DAN HOS JOL AMO OBA JON MIC NAM HAB ZEP HAG ZEC MAL MAT MRK LUK JHN ACT ROM 1CO 2CO GAL EPH PHP " +
         "COL 1TH 2TH 1TI 2TI TIT PHM HEB JAS 1PE 2PE 1JN 2JN 3JN JUD REV").split(" ")
-    internal val OSIS = ("Gen Exod Lev Num Deut Josh Judg Ruth 1Sam 2Sam 1Kgs 2Kgs 1Chr 2Chr Ezra Neh Esth Job Ps Prov Eccl " +
+    val OSIS = ("Gen Exod Lev Num Deut Josh Judg Ruth 1Sam 2Sam 1Kgs 2Kgs 1Chr 2Chr Ezra Neh Esth Job Ps Prov Eccl " +
         "Song Isa Jer Lam Ezek Dan Hos Joel Amos Obad Jonah Mic Nah Hab Zeph Hag Zech Mal Matt Mark Luke " +
         "John Acts Rom 1Cor 2Cor Gal Eph Phil Col 1Thess 2Thess 1Tim 2Tim Titus Phlm Heb Jas 1Pet 2Pet " +
         "1John 2John 3John Jude Rev").split(" ")
@@ -51,7 +51,7 @@ object BibleImport {
      * closing punctuation, and the word ranges spoken by Jesus. [startRed] is whether the verse
      * starts inside his words; the third value is whether it ends inside them.
      */
-    internal fun stripRed(s: String, startRed: Boolean): Triple<String, String, Boolean> {
+    fun stripRed(s: String, startRed: Boolean): Triple<String, String, Boolean> {
         var red = startRed
         val out = StringBuilder()
         val flags = ArrayList<Boolean>()
@@ -74,7 +74,7 @@ object BibleImport {
     }
 
     /** Word-index ranges "a-b,c-d" of the words that are true. */
-    internal fun wordRanges(flags: List<Boolean>): String {
+    fun wordRanges(flags: List<Boolean>): String {
         val out = ArrayList<String>()
         var start = -1
         for (i in 0..flags.size) {

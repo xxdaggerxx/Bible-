@@ -115,7 +115,7 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.compose.ui.window.Popup
 import androidx.compose.ui.window.PopupProperties
-import com.biblestudy.app.BuildConfig
+import com.biblestudy.app.AppConfig
 import com.biblestudy.app.data.BibleRepository
 import com.biblestudy.app.data.StudyRepository
 import com.biblestudy.app.data.BookIntros
@@ -135,7 +135,7 @@ import kotlinx.coroutines.withContext
 
 /** A large dialog sized for tablets. */
 @Composable
-internal fun BigDialog(onDismiss: () -> Unit, content: @Composable () -> Unit) {
+fun BigDialog(onDismiss: () -> Unit, content: @Composable () -> Unit) {
     // On a phone the window fills the screen (PH-7).
     val phone = androidx.compose.ui.platform.LocalConfiguration.current.smallestScreenWidthDp in 1 until 600
     Dialog(onDismissRequest = onDismiss, properties = DialogProperties(usePlatformDefaultWidth = false)) {
@@ -150,7 +150,7 @@ internal fun BigDialog(onDismiss: () -> Unit, content: @Composable () -> Unit) {
 }
 
 @Composable
-internal fun DialogTitle(title: String, onClose: () -> Unit, leading: (@Composable () -> Unit)? = null, help: String? = null, actions: (@Composable () -> Unit)? = null) {
+fun DialogTitle(title: String, onClose: () -> Unit, leading: (@Composable () -> Unit)? = null, help: String? = null, actions: (@Composable () -> Unit)? = null) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         leading?.invoke()
         Text(title, style = MaterialTheme.typography.headlineSmall, modifier = Modifier.weight(1f))
@@ -657,7 +657,7 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
  * version after them, from a menu under a copy button.
  */
 @Composable
-internal fun CopyVerseButton(vm: StudyViewModel, id: Int, version: String) {
+fun CopyVerseButton(vm: StudyViewModel, id: Int, version: String) {
     val clipboard = androidx.compose.ui.platform.LocalClipboardManager.current
     var open by remember { mutableStateOf(false) }
     Box {
@@ -1342,7 +1342,7 @@ private fun SketchList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Uni
  * [open] shows the new page the way tapping a page in that list would.
  */
 @Composable
-internal fun MySketchesHeader(vm: StudyViewModel, modifier: Modifier = Modifier, open: (com.biblestudy.app.model.Sketch) -> Unit) {
+fun MySketchesHeader(vm: StudyViewModel, modifier: Modifier = Modifier, open: (com.biblestudy.app.model.Sketch) -> Unit) {
     var making by remember { mutableStateOf(false) }
     Row(modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
         Text("My sketch pages", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.weight(1f))
@@ -1357,7 +1357,7 @@ internal fun MySketchesHeader(vm: StudyViewModel, modifier: Modifier = Modifier,
 
 /** A sketch page in a list: its name, the verse it's on (or "On its own"), paper and date. */
 @Composable
-internal fun SketchRow(vm: StudyViewModel, s: com.biblestudy.app.model.Sketch, onOpen: () -> Unit) {
+fun SketchRow(vm: StudyViewModel, s: com.biblestudy.app.model.Sketch, onOpen: () -> Unit) {
     Column(
         Modifier.fillMaxWidth().clickable(onClick = onOpen).padding(vertical = 10.dp).testTag("sketchRow")
     ) {
@@ -1678,7 +1678,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
     AlertDialog(
         onDismissRequest = onDismiss,
         confirmButton = { TextButton(onClick = onDismiss) { Text("Close") } },
-        title = { Text("Ink & Word \u2014 version ${BuildConfig.VERSION_NAME}") },
+        title = { Text("Ink & Word \u2014 version ${AppConfig.versionName}") },
         text = {
             Column(Modifier.verticalScroll(rememberScrollState())) {
                 Text("Works completely offline. Your notes stay on this tablet unless you make a backup.")

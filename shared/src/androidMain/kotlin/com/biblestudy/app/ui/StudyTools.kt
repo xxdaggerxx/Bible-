@@ -668,7 +668,7 @@ private fun NearestEntries(vm: StudyViewModel, id: String, book: Int, chapter: I
     StudyText(body, onPassage = onPassage)
 }
 
-internal fun commentaryHeading(vm: StudyViewModel, s: CommentarySection, chapter: Int): String = when {
+fun commentaryHeading(vm: StudyViewModel, s: CommentarySection, chapter: Int): String = when {
     VerseId.chapter(s.start) == 0 -> "Introduction to ${vm.bible.book(VerseId.book(s.start)).name}"
     VerseId.verse(s.start) == 0 -> "Introduction to chapter ${VerseId.chapter(s.start)}"
     VerseId.chapter(s.start) != VerseId.chapter(s.end) || VerseId.chapter(s.start) != chapter -> vm.refLabel(s.start, s.end)

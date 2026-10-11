@@ -806,7 +806,7 @@ class FeatureTest {
         waitForLoaded()
         // Lay out John 1 the way the reader does, to find the "Genesis 1:1\u20132" link under its first heading.
         val measurer = TextMeasurer(createFontFamilyResolver(compose.activity), Density(1f, 1f), LayoutDirection.Ltr)
-        val font = FontFamily(Font(R.font.gentium_book_plus_regular), Font(R.font.gentium_book_plus_bold, FontWeight.Bold))
+        val font = FontFamily(Font(com.biblestudy.app.shared.R.font.gentium_book_plus_regular), Font(com.biblestudy.app.shared.R.font.gentium_book_plus_bold, FontWeight.Bold))
         val layout = buildChapterLayout(
             measurer, font, "John", ChapterData("KJV", 43, 1, vm.text("KJV").chapter(43, 1), vm.headings(43, 1)), vm.lineSpacing,
         ) { RefLinks.parseList(it, vm.bible.books) }
@@ -3901,7 +3901,7 @@ class FeatureTest {
         // A sketch already split across verses: moving it with the lasso puts it back in one piece,
         // pinned to its topmost verse, without moving it more than asked.
         val measurer = TextMeasurer(createFontFamilyResolver(compose.activity), Density(1f, 1f), LayoutDirection.Ltr)
-        val font = FontFamily(Font(R.font.gentium_book_plus_regular), Font(R.font.gentium_book_plus_bold, FontWeight.Bold))
+        val font = FontFamily(Font(com.biblestudy.app.shared.R.font.gentium_book_plus_regular), Font(com.biblestudy.app.shared.R.font.gentium_book_plus_bold, FontWeight.Bold))
         val layout = buildChapterLayout(
             measurer, font, "John", ChapterData("KJV", 43, 3, vm.text("KJV").chapter(43, 3), vm.headings(43, 3)), vm.lineSpacing,
         ) { RefLinks.parseList(it, vm.bible.books) }

@@ -138,7 +138,7 @@ class BibleRepository(context: Context, val version: BibleVersion) {
     }
 
     /** The open database, for an imported version's word tags, red letters and paragraphs (see [StudyRepository.ownDb]). */
-    internal val database: SQLiteDatabase get() = db
+    val database: SQLiteDatabase get() = db
 
     /** Every verse, in Bible order. */
     fun allVerses(): List<Pair<Int, String>> =

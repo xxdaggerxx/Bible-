@@ -47,7 +47,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
-import com.biblestudy.app.BuildConfig
+import com.biblestudy.app.AppConfig
 import com.biblestudy.app.data.BibleRepository
 import com.biblestudy.app.model.SideButton
 import com.biblestudy.app.model.TextFont
@@ -234,30 +234,30 @@ fun SettingsDialog(
                         dismissButton = { TextButton(onClick = { clearing = false }) { Text("Cancel") } },
                     )
                 }
-                if (com.biblestudy.app.BuildConfig.NLT_KEY.isEmpty() || vm.nltKey.isNotEmpty()) {
+                if (com.biblestudy.app.AppConfig.nltKey.isEmpty() || vm.nltKey.isNotEmpty()) {
                     var nlt by remember { mutableStateOf(vm.nltKey) }
                     OutlinedTextField(
                         value = nlt, onValueChange = { nlt = it; vm.changeNltKey(it) }, singleLine = true,
                         label = { Text("NLT API key (Tyndale)") },
-                        supportingText = { Text(if (com.biblestudy.app.BuildConfig.NLT_KEY.isEmpty()) "For the NLT: from api.nlt.to" else "Leave empty to use the one built in") },
+                        supportingText = { Text(if (com.biblestudy.app.AppConfig.nltKey.isEmpty()) "For the NLT: from api.nlt.to" else "Leave empty to use the one built in") },
                         modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
                     )
                 }
-                if (com.biblestudy.app.BuildConfig.ESV_KEY.isEmpty() || vm.esvKey.isNotEmpty()) {
+                if (com.biblestudy.app.AppConfig.esvKey.isEmpty() || vm.esvKey.isNotEmpty()) {
                     var esv by remember { mutableStateOf(vm.esvKey) }
                     OutlinedTextField(
                         value = esv, onValueChange = { esv = it; vm.changeEsvKey(it) }, singleLine = true,
                         label = { Text("ESV API key (Crossway)") },
-                        supportingText = { Text(if (com.biblestudy.app.BuildConfig.ESV_KEY.isEmpty()) "For the ESV: from api.esv.org" else "Leave empty to use the one built in") },
+                        supportingText = { Text(if (com.biblestudy.app.AppConfig.esvKey.isEmpty()) "For the ESV: from api.esv.org" else "Leave empty to use the one built in") },
                         modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
                     )
                 }
-                if (com.biblestudy.app.BuildConfig.YOUVERSION_KEY.isEmpty() || vm.youVersionKey.isNotEmpty()) {
+                if (com.biblestudy.app.AppConfig.youVersionKey.isEmpty() || vm.youVersionKey.isNotEmpty()) {
                     var key by remember { mutableStateOf(vm.youVersionKey) }
                     OutlinedTextField(
                         value = key, onValueChange = { key = it; vm.changeYouVersionKey(it) }, singleLine = true,
                         label = { Text("YouVersion app key") },
-                        supportingText = { Text(if (com.biblestudy.app.BuildConfig.YOUVERSION_KEY.isEmpty()) "Needed for online Bibles: from platform.youversion.com" else "Leave empty to use the one built in") },
+                        supportingText = { Text(if (com.biblestudy.app.AppConfig.youVersionKey.isEmpty()) "Needed for online Bibles: from platform.youversion.com" else "Leave empty to use the one built in") },
                         modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
                     )
                 }
@@ -328,7 +328,7 @@ fun SettingsDialog(
 
                 Group("About")
                 Matches("About", "version", "credits", "licences") {
-                Text("Ink & Word, version ${BuildConfig.VERSION_NAME}. Works offline; only online Bibles and the AI chat use the internet.")
+                Text("Ink & Word, version ${AppConfig.versionName}. Works offline; only online Bibles and the AI chat use the internet.")
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(vertical = 4.dp)) {
                     TextButton(onClick = { versions = true }) { Text("About these versions") }
                     TextButton(onClick = onAbout) { Text("Credits") }

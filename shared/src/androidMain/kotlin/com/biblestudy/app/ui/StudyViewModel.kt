@@ -314,9 +314,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     init {
-        com.biblestudy.app.data.YouVersion.key = prefs.getString("youversionKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.BuildConfig.YOUVERSION_KEY
-        com.biblestudy.app.data.Esv.key = prefs.getString("esvKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.BuildConfig.ESV_KEY
-        com.biblestudy.app.data.Nlt.key = prefs.getString("nltKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.BuildConfig.NLT_KEY
+        com.biblestudy.app.data.YouVersion.key = prefs.getString("youversionKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.AppConfig.youVersionKey
+        com.biblestudy.app.data.Esv.key = prefs.getString("esvKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.AppConfig.esvKey
+        com.biblestudy.app.data.Nlt.key = prefs.getString("nltKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.AppConfig.nltKey
         BibleRepository.onlineEvents = onlineEvents
         viewModelScope.launch(Dispatchers.Main) { expireOnline() } // posted: runs once the whole model is set up
         // Back online: chapters that couldn't be fetched are tried again.
@@ -337,7 +337,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     /** Online chapters verse cards have asked for this session (see [cardVerses]). */
-    internal val cardFetches = HashSet<String>()
+    val cardFetches = HashSet<String>()
 
     /**
      * How long downloaded chapters of online Bibles are kept after they were last read, in days
@@ -382,7 +382,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun changeYouVersionKey(k: String) {
         youVersionKey = k.trim()
         prefs.edit { putString("youversionKey", youVersionKey) }
-        com.biblestudy.app.data.YouVersion.key = youVersionKey.ifEmpty { com.biblestudy.app.BuildConfig.YOUVERSION_KEY }
+        com.biblestudy.app.data.YouVersion.key = youVersionKey.ifEmpty { com.biblestudy.app.AppConfig.youVersionKey }
         onlineBibles = null
     }
 
@@ -393,7 +393,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun changeNltKey(k: String) {
         nltKey = k.trim()
         prefs.edit { putString("nltKey", nltKey) }
-        com.biblestudy.app.data.Nlt.key = nltKey.ifEmpty { com.biblestudy.app.BuildConfig.NLT_KEY }
+        com.biblestudy.app.data.Nlt.key = nltKey.ifEmpty { com.biblestudy.app.AppConfig.nltKey }
         onlineBibles = null
     }
 
@@ -404,7 +404,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun changeEsvKey(k: String) {
         esvKey = k.trim()
         prefs.edit { putString("esvKey", esvKey) }
-        com.biblestudy.app.data.Esv.key = esvKey.ifEmpty { com.biblestudy.app.BuildConfig.ESV_KEY }
+        com.biblestudy.app.data.Esv.key = esvKey.ifEmpty { com.biblestudy.app.AppConfig.esvKey }
         onlineBibles = null
     }
 
@@ -464,7 +464,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         return o.savedChapters() to bible.books.filter { it.id in o.books }.sumOf { it.chapters }
     }
     // Before this version first opens the notes, they're saved as a backup (DATA-8).
-    init { com.biblestudy.app.data.DataSafety.beforeOpening(app, com.biblestudy.app.BuildConfig.VERSION_CODE, com.biblestudy.app.BuildConfig.VERSION_NAME) }
+    init { com.biblestudy.app.data.DataSafety.beforeOpening(app, com.biblestudy.app.AppConfig.versionCode, com.biblestudy.app.AppConfig.versionName) }
     val user = UserDb(app)
     private val imagesDir = File(app.filesDir, "images").apply { mkdirs() }
 
