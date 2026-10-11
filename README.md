@@ -746,8 +746,9 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 
 ## Next milestones
 
-- **Next: offline smart search:** all versions at once, every verse with the same Hebrew or Greek word, grouped by Nave's topics. No AI and no internet needed.
-- **On hold:** the AI search and study plan (section 29 of the requirements), replaced for now by the online AI chat (1.6) and offline smart search.
+- **Next: smart search (2.10):** one search box across all versions; topic results with every verse using the topic's Hebrew or Greek words, grouped by Nave's subtopics with key passages first; people's lives and places; and the app's own commentary notes, chapter overviews, Bible aids and reflections searched too. No AI and no internet needed. Planned in section 29 of the requirements (rewritten in v0.97); no new AI indexing of the Bible is needed, since the Ink & Word Commentary and Reflections already cover every verse.
+- **Then (2.11):** a short topic list for gaps in Nave's (e.g. "the word of God"), deeper word studies, and the AI chat answering from the app's own content first.
+- **Later:** meaning-based search only if the test searches need it; sermons with summaries and links.
 - **Waiting on permission:** NIV and NLT. Once you have the files, *Settings → Bibles → Import a Bible…* adds them.
 
 ## Credits
