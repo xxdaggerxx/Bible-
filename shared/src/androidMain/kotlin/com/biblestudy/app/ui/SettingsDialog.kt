@@ -1,5 +1,6 @@
 package com.biblestudy.app.ui
 
+import com.biblestudy.app.platform.length
 import androidx.compose.material3.Slider
 import androidx.compose.ui.platform.testTag
 import androidx.compose.material3.Icon
@@ -182,7 +183,7 @@ fun SettingsDialog(
                 // The version manager (BIB-5) and importing (BIB-4).
                 Matches("Bibles", "versions", "import a Bible", "translations", *BibleRepository.ALL.map { it.code + " " + it.name }.toTypedArray()) {
                 for (v in BibleRepository.ALL) {
-                    val size = remember(v.code, vm.onlineArrivals) { BibleRepository.fileOf(context, v).length() }
+                    val size = remember(v.code, vm.onlineArrivals) { BibleRepository.fileOf(vm.ctx, v).length() }
                     Row(Modifier.fillMaxWidth().padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
                         Column(Modifier.weight(1f)) {
                             Text("${v.code} \u2014 ${v.name}")
@@ -290,10 +291,10 @@ fun SettingsDialog(
                         ).joinToString(" \u00b7 ").ifEmpty { "On" }
                     },
                     vm.syncOn,
-                ) { on -> if (on) vm.turnOnSync(launchSignIn) else vm.turnOffSync() }
+                ) { on -> if (on) vm.turnOnSync { launchSignIn(it as android.content.IntentSender) } else vm.turnOffSync() }
                 if (vm.syncOn) Matches("Sync now", "Google Drive", "sign in") {
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(vertical = 4.dp)) {
-                        if (vm.syncNeedsSignIn) Button(onClick = { vm.turnOnSync(launchSignIn) }) { Text("Sign in again") }
+                        if (vm.syncNeedsSignIn) Button(onClick = { vm.turnOnSync { launchSignIn(it as android.content.IntentSender) } }) { Text("Sign in again") }
                         OutlinedButton(onClick = { vm.syncNow(announce = true) }, enabled = !vm.syncing, modifier = Modifier.testTag("syncNow")) { Text("Sync now") }
                     }
                 }
@@ -400,7 +401,7 @@ fun SettingsDialog(
             confirmButton = {
                 TextButton(onClick = {
                     val uris = picked
-                    vm.importBible(names, { i -> context.contentResolver.openInputStream(uris[i])!! }, code, name, copyright)
+                    vm.importBible(names, { i -> vm.host.open(com.biblestudy.app.platform.PickedFile(uris[i].toString())) }, code, name, copyright)
                     picked = emptyList()
                 }) { Text("Import") }
             },

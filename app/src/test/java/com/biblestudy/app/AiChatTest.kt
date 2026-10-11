@@ -3,6 +3,7 @@ package com.biblestudy.app
 import com.anthropic.core.jsonMapper
 import com.anthropic.models.messages.Message
 import com.biblestudy.app.data.AiChat
+import com.biblestudy.app.data.AiChatSdk
 import com.biblestudy.app.data.ChatResult
 import com.biblestudy.app.data.ChatSource
 import com.biblestudy.app.data.ChatTurn
@@ -31,7 +32,7 @@ class AiChatTest {
     @Test
     fun citedAnswerKeepsItsSourcesAndMarks() {
         val m = message("$search, {\"type\":\"text\",\"text\":\"Here is what they say. \"}, " + cited("Grace is unearned favour (Ephesians 2:8).", "https://www.gotquestions.org/grace.html", "What is grace?"))
-        val r = AiChat.read(m.content(), sites) as ChatResult.Answer
+        val r = AiChatSdk.read(m.content(), sites) as ChatResult.Answer
         assertEquals("Here is what they say. Grace is unearned favour (Ephesians 2:8).[1]", r.text)
         assertEquals(listOf(ChatSource("What is grace?", "https://www.gotquestions.org/grace.html")), r.sources)
         assertEquals("gotquestions.org", r.sources[0].site)
@@ -40,19 +41,19 @@ class AiChatTest {
     @Test
     fun noSearchOrNoCitationsMeansNoAnswer() {
         // Answered from its own knowledge, without searching.
-        assertEquals(ChatResult.NotFound(), AiChat.read(message("{\"type\":\"text\",\"text\":\"Grace is favour.\"}").content(), sites))
+        assertEquals(ChatResult.NotFound(), AiChatSdk.read(message("{\"type\":\"text\",\"text\":\"Grace is favour.\"}").content(), sites))
         // Searched, but cited nothing.
-        assertEquals(ChatResult.NotFound(listOf("grace")), AiChat.read(message("$search, {\"type\":\"text\",\"text\":\"Grace is favour.\"}").content(), sites))
+        assertEquals(ChatResult.NotFound(listOf("grace")), AiChatSdk.read(message("$search, {\"type\":\"text\",\"text\":\"Grace is favour.\"}").content(), sites))
         // Cited a page that isn't on the chosen sites.
-        assertEquals(ChatResult.NotFound(listOf("grace")), AiChat.read(message("$search, " + cited("Grace is favour.", "https://example.com/g", "Elsewhere")).content(), sites))
+        assertEquals(ChatResult.NotFound(listOf("grace")), AiChatSdk.read(message("$search, " + cited("Grace is favour.", "https://example.com/g", "Elsewhere")).content(), sites))
         // Searching the whole web, any page it cites counts.
-        val web = AiChat.read(message("$search, " + cited("Grace is favour.", "https://example.com/g", "Elsewhere")).content(), sites, onlySites = false) as ChatResult.Answer
+        val web = AiChatSdk.read(message("$search, " + cited("Grace is favour.", "https://example.com/g", "Elsewhere")).content(), sites, onlySites = false) as ChatResult.Answer
         assertEquals("example.com", web.sources.single().site)
     }
 
     @Test
     fun requestSearchesOnlyTheChosenSites() {
-        val p = AiChat.params(sites, true, listOf(com.biblestudy.app.data.ChatTurn(true, "Q1"), com.biblestudy.app.data.ChatTurn(false, "A1")), "Q2")
+        val p = AiChatSdk.params(sites, true, listOf(com.biblestudy.app.data.ChatTurn(true, "Q1"), com.biblestudy.app.data.ChatTurn(false, "A1")), "Q2")
         val json = jsonMapper().writeValueAsString(p._body())
         // Searched directly, so the answer can cite each page.
         assertTrue(json, json.contains("\"allowed_callers\":[\"direct\"]"))
@@ -64,7 +65,7 @@ class AiChatTest {
         assertEquals("server-side-fallback-2026-07-01", p._headers().values("anthropic-beta").single())
 
         // The whole web, the chosen sites first: no domain limit, and the sites named in the instructions.
-        val web = jsonMapper().writeValueAsString(AiChat.params(sites, false, emptyList(), "Q")._body())
+        val web = jsonMapper().writeValueAsString(AiChatSdk.params(sites, false, emptyList(), "Q")._body())
         assertFalse(web, web.contains("allowed_domains"))
         assertTrue(web, web.contains("Search these trusted sites first: gotquestions.org, ligonier.org"))
         assertTrue(web, web.contains("Start with a short overview"))

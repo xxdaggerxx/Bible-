@@ -429,7 +429,7 @@ fun DictionaryPane(vm: StudyViewModel, modifier: Modifier) {
 @Composable
 fun AidsPane(vm: StudyViewModel, symbols: Boolean, modifier: Modifier) {
     val panel = vm.studyPanel()
-    val context = vm.getApplication<android.app.Application>()
+    val context = vm.ctx
     fun mine(e: com.biblestudy.app.data.AidEntry) = (e.kind == com.biblestudy.app.data.AidKind.CUSTOM) != symbols
     fun entry(e: com.biblestudy.app.data.AidEntry) = StudyEntry(e.key, e.title, e.article)
     val suggestions by produceState(emptyList<StudyEntry>(), panel.book, panel.chapter, panel.version, symbols) {
@@ -597,7 +597,7 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier, fixed: Stri
         )
         when {
             list == null -> Text(
-                if (com.biblestudy.app.data.Commentaries.isUnpacked(vm.getApplication(), id)) "Loading…"
+                if (com.biblestudy.app.data.Commentaries.isUnpacked(vm.ctx, id)) "Loading…"
                 else "Getting ${info.short} ready (the first time only)…",
             )
             !info.covers(panel.book) -> Text("${info.short} covers the ${info.covers}. Choose another commentary for ${vm.bible.book(panel.book).name}.")
@@ -656,7 +656,7 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier, fixed: Stri
 private fun NearestEntries(vm: StudyViewModel, id: String, book: Int, chapter: Int, onPassage: (Passage) -> Unit) {
     val near by produceState<Pair<CommentarySection?, CommentarySection?>?>(null, id, book, chapter) {
         value = background {
-            runCatching { com.biblestudy.app.data.Commentaries.nearest(vm.getApplication(), id, VerseId.of(book, chapter, 0), VerseId.of(book, chapter, 999)) }
+            runCatching { com.biblestudy.app.data.Commentaries.nearest(vm.ctx, id, VerseId.of(book, chapter, 0), VerseId.of(book, chapter, 999)) }
                 .getOrDefault(null to null)
         }
     }

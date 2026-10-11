@@ -83,30 +83,30 @@ fun StudyApp(vm: StudyViewModel) {
             }
 
             val pickImage = rememberLauncherForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
-                if (uri != null) vm.insertImage(uri)
+                if (uri != null) vm.insertImage(com.biblestudy.app.platform.PickedFile(uri.toString()))
             }
             val openImageFile = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
-                if (uri != null) vm.insertImage(uri)
+                if (uri != null) vm.insertImage(com.biblestudy.app.platform.PickedFile(uri.toString()))
             }
-            var cameraUri by rememberSaveable { mutableStateOf<android.net.Uri?>(null) }
+            var cameraUri by rememberSaveable { mutableStateOf<String?>(null) }
             val takePhoto = rememberLauncherForActivityResult(ActivityResultContracts.TakePicture()) { ok ->
-                cameraUri?.takeIf { ok }?.let { vm.insertImage(it) }
+                cameraUri?.takeIf { ok }?.let { vm.insertImage(com.biblestudy.app.platform.PickedFile(it)) }
             }
             val backupLauncher = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/zip")) { uri ->
-                if (uri != null) vm.backup(uri)
+                if (uri != null) vm.backup(com.biblestudy.app.platform.PickedFile(uri.toString()))
             }
             // Chapter export (DATA-5): pick where to save, then the active panel draws it.
             // Set when exporting one layer from the Layers window (LAY-11).
             var exportLayer by remember { mutableStateOf<Long?>(null) }
             val exportPdf = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/pdf")) { uri ->
-                if (uri != null) vm.exportRequest = ExportRequest(uri, pdf = true, layer = exportLayer)
+                if (uri != null) vm.exportRequest = ExportRequest(com.biblestudy.app.platform.PickedFile(uri.toString()), pdf = true, layer = exportLayer)
                 exportLayer = null
             }
             val exportPng = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("image/png")) { uri ->
-                if (uri != null) vm.exportRequest = ExportRequest(uri, pdf = false)
+                if (uri != null) vm.exportRequest = ExportRequest(com.biblestudy.app.platform.PickedFile(uri.toString()), pdf = false)
             }
             val restoreLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
-                if (uri != null) vm.restore(uri)
+                if (uri != null) vm.restore(com.biblestudy.app.platform.PickedFile(uri.toString()))
             }
 
             Scaffold(
@@ -123,8 +123,8 @@ fun StudyApp(vm: StudyViewModel) {
                                     pickImage.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
                                 ImageSource.CAMERA -> {
                                     val uri = vm.newCameraUri()
-                                    cameraUri = uri
-                                    runCatching { takePhoto.launch(uri) }.onFailure { vm.message = "No camera app is available." }
+                                    cameraUri = uri.id
+                                    runCatching { takePhoto.launch(android.net.Uri.parse(uri.id)) }.onFailure { vm.message = "No camera app is available." }
                                 }
                                 ImageSource.FILES -> openImageFile.launch(arrayOf("image/*"))
                                 ImageSource.CLIPBOARD -> vm.pasteImage()

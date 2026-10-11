@@ -693,7 +693,7 @@ private fun AidCards(vm: StudyViewModel, version: String, verseId: Int, verseTex
     val on = vm.aidSwitches()
     if (word < 0 || !(on.names || on.customs || on.symbols)) return false
     val found by produceState<List<Pair<com.biblestudy.app.data.AidMark, Any>>?>(null, version, verseId, verseText, word, on) {
-        value = background { com.biblestudy.app.data.Aids.at(vm.getApplication(), vm.study, version, verseId, verseText, word, on) }
+        value = background { com.biblestudy.app.data.Aids.at(vm.ctx, vm.study, version, verseId, verseText, word, on) }
     }
     val list = found ?: return false
     if (list.isEmpty()) return false
@@ -740,7 +740,7 @@ private fun AidCards(vm: StudyViewModel, version: String, verseId: Int, verseTex
 @Composable
 private fun ChristCard(vm: StudyViewModel, id: Int, onPassage: (com.biblestudy.app.data.Passage) -> Unit) {
     val e by produceState<com.biblestudy.app.data.ChristEntry?>(null, id) {
-        value = background { com.biblestudy.app.data.Christ.at(vm.getApplication(), id) }
+        value = background { com.biblestudy.app.data.Christ.at(vm.ctx, id) }
     }
     val entry = e ?: return
     Surface(
@@ -774,7 +774,7 @@ private fun HardWordCard(vm: StudyViewModel, version: String, verseText: String,
     if (!vm.hardWords || word < 0) return
     val hard = remember(version, verseText, word) {
         com.biblestudy.app.data.StudyRepository.words(verseText).getOrNull(word)
-            ?.let { com.biblestudy.app.data.HardWords.lookup(vm.getApplication(), version, verseText.substring(it)) }
+            ?.let { com.biblestudy.app.data.HardWords.lookup(vm.ctx, version, verseText.substring(it)) }
     } ?: return
     val article by produceState<Long?>(null, hard.term) {
         value = if (hard.term.isEmpty()) null else background { vm.study.dictionaryEntry(hard.term)?.id }
@@ -885,7 +885,7 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
         val n = note
         val status = when {
             !cInfo.covers(t.book) -> "${cInfo.short} covers the ${cInfo.covers}. Choose another commentary for ${vm.bible.book(t.book).name}."
-            n == null -> if (com.biblestudy.app.data.Commentaries.isUnpacked(vm.getApplication(), cid)) "Loading…"
+            n == null -> if (com.biblestudy.app.data.Commentaries.isUnpacked(vm.ctx, cid)) "Loading…"
                 else "Getting ${cInfo.short} ready (the first time only)…"
             n.section == null -> "${cInfo.short} has no notes on this verse. Try another commentary."
             else -> null
@@ -1716,7 +1716,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
 /** [onDismiss] is told whether the reader was sent to a passage (so the book picker can close too). */
 fun BookIntroDialog(vm: StudyViewModel, book: Int, onDismiss: (navigated: Boolean) -> Unit) {
     val context = LocalContext.current
-    val intro = remember(book) { BookIntros.get(context, book) }
+    val intro = remember(book) { BookIntros.get(vm.ctx, book) }
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
     val version = vm.activeVersion
     val info = vm.bible.book(book)
@@ -1848,7 +1848,7 @@ fun BookIntroPane(vm: StudyViewModel, modifier: Modifier) {
     val context = LocalContext.current
     val panel = vm.studyPanel()
     val book = panel.book.coerceIn(1, 66)
-    val intro = remember(book) { BookIntros.get(context, book) }
+    val intro = remember(book) { BookIntros.get(vm.ctx, book) }
     var shown by remember(book) { mutableStateOf<Passage?>(null) }
     val index = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
     Column(modifier) {

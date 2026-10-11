@@ -1,9 +1,9 @@
 package com.biblestudy.app.ui
 
-import android.media.AudioAttributes
-import android.media.AudioFormat
-import android.media.AudioTrack
-import android.os.Build
+import com.biblestudy.app.platform.PcmOut
+import com.biblestudy.app.platform.openPcmOut
+import com.biblestudy.app.platform.startThread
+import com.biblestudy.app.platform.uptimeMillis
 import kotlin.math.abs
 import kotlin.math.exp
 import kotlin.math.hypot
@@ -20,7 +20,7 @@ import kotlin.math.sqrt
  *
  * The sounds are recordings (free sounds from Pixabay, made into seamless loops by
  * tools/build_sounds.py), played by [Sampler]. If they can't be loaded, [Synth] makes a similar
- * sound from filtered noise. An [AudioTrack] plays it on a background thread through media volume,
+ * sound from filtered noise. The platform's sound output plays it on a background thread through media volume,
  * and only while the pen is on the page.
  *
  * @param loadLoops reads the recorded loops (called once, off the main thread).
@@ -51,14 +51,14 @@ class WritingSound(private val loadLoops: () -> Map<Texture, FloatArray>? = { nu
         private val rate: Int = RATE,
         seed: Long = 1L,
     ) : Voice {
-        @Volatile override var texture = Texture.PEN
-        @Volatile override var target = 0f
-        @Volatile override var brightness = 0f
+        @kotlin.concurrent.Volatile override var texture = Texture.PEN
+        @kotlin.concurrent.Volatile override var target = 0f
+        @kotlin.concurrent.Volatile override var brightness = 0f
 
         private var level = 0f
         private var pos = 0.0
         private var low = 0f
-        private val random = java.util.Random(seed)
+        private val random = kotlin.random.Random(seed)
 
         /** Each stroke starts somewhere new in the loop, so strokes don't all sound the same. */
         override fun restart() {
@@ -91,9 +91,9 @@ class WritingSound(private val loadLoops: () -> Map<Texture, FloatArray>? = { nu
 
     /** The made-up sound, used when the recordings can't be loaded. */
     class Synth(private val rate: Int = RATE, seed: Long = 1L) : Voice {
-        @Volatile override var texture = Texture.PEN
-        @Volatile override var target = 0f
-        @Volatile override var brightness = 0f
+        @kotlin.concurrent.Volatile override var texture = Texture.PEN
+        @kotlin.concurrent.Volatile override var target = 0f
+        @kotlin.concurrent.Volatile override var brightness = 0f
 
         private var level = 0f
         private var low = 0f
@@ -149,18 +149,17 @@ class WritingSound(private val loadLoops: () -> Map<Texture, FloatArray>? = { nu
         }
     }
 
-    @Volatile var enabled = true
+    @kotlin.concurrent.Volatile var enabled = true
     /** 0..1, from Settings. */
-    @Volatile var volume = 0.6f
+    @kotlin.concurrent.Volatile var volume = 0.6f
 
     /** The recordings once loaded (on the audio thread, on the first stroke), else the made-up sound. */
-    @Volatile private var voice: Voice = Synth()
-    @Volatile private var loaded = false
+    @kotlin.concurrent.Volatile private var voice: Voice = Synth()
+    @kotlin.concurrent.Volatile private var loaded = false
     private val synth: Voice get() = voice
-    private var track: AudioTrack? = null
-    private var thread: Thread? = null
-    @Volatile private var running = false
-    @Volatile private var lastMove = 0L
+    private var track: PcmOut? = null
+    @kotlin.concurrent.Volatile private var running = false
+    @kotlin.concurrent.Volatile private var lastMove = 0L
     private var lastX = 0f
     private var lastY = 0f
     private var lastT = 0L
@@ -204,30 +203,13 @@ class WritingSound(private val loadLoops: () -> Map<Texture, FloatArray>? = { nu
 
     private fun ensureRunning() {
         if (running) return
-        val t = runCatching { makeTrack() }.getOrNull() ?: return
+        val t = openPcmOut(RATE, CHUNK * 2) ?: return
         track = t
         running = true
-        thread = Thread({ loop(t) }, "writing-sound").apply { priority = Thread.MAX_PRIORITY; start() }
+        startThread("writing-sound") { loop(t) }
     }
 
-    private fun makeTrack(): AudioTrack {
-        val min = AudioTrack.getMinBufferSize(RATE, AudioFormat.CHANNEL_OUT_MONO, AudioFormat.ENCODING_PCM_16BIT)
-        val b = AudioTrack.Builder()
-            .setAudioAttributes(
-                AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_MEDIA)
-                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION).build()
-            )
-            .setAudioFormat(
-                AudioFormat.Builder().setSampleRate(RATE).setEncoding(AudioFormat.ENCODING_PCM_16BIT)
-                    .setChannelMask(AudioFormat.CHANNEL_OUT_MONO).build()
-            )
-            .setBufferSizeInBytes(maxOf(min, CHUNK * 4))
-            .setTransferMode(AudioTrack.MODE_STREAM)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) b.setPerformanceMode(AudioTrack.PERFORMANCE_MODE_LOW_LATENCY)
-        return b.build().also { it.play() }
-    }
-
-    private fun loop(t: AudioTrack) {
+    private fun loop(t: PcmOut) {
         val f = FloatArray(CHUNK)
         val pcm = ShortArray(CHUNK)
         if (!loaded) {
@@ -244,18 +226,18 @@ class WritingSound(private val loadLoops: () -> Map<Texture, FloatArray>? = { nu
                 if (now() - lastMove > 1000L) break
                 synth.render(f)
                 for (i in f.indices) pcm[i] = (f[i] * 32767f).toInt().toShort()
-                t.write(pcm, 0, min(pcm.size, CHUNK))
+                t.write(pcm, min(pcm.size, CHUNK))
             }
         } catch (_: Throwable) {
         } finally {
             running = false
-            runCatching { t.stop(); t.release() }
+            t.close()
             if (track === t) track = null
         }
     }
 
     /** Real elapsed time (not the wall clock, which can stand still or jump). */
-    private fun now() = System.nanoTime() / 1_000_000L
+    private fun now() = uptimeMillis()
 
     fun release() {
         running = false
@@ -270,19 +252,21 @@ class WritingSound(private val loadLoops: () -> Map<Texture, FloatArray>? = { nu
         private const val CHUNK = 256
 
         /** The recorded loops in assets/sounds, one per tool. */
-        fun loadLoops(assets: android.content.res.AssetManager): Map<Texture, FloatArray> =
-            Texture.entries.associateWith { t -> assets.open("sounds/${t.name.lowercase()}.wav").use { readWav(it.readBytes()) } }
+        fun loadLoops(assets: com.biblestudy.app.platform.Assets): Map<Texture, FloatArray> =
+            Texture.entries.associateWith { t -> readWav(okio.Buffer().apply { assets.open("sounds/${t.name.lowercase()}.wav").use { writeAll(it) } }.readByteArray()) }
 
         /** The samples (-1..1) of a 16-bit mono WAV file. */
         fun readWav(bytes: ByteArray): FloatArray {
-            val b = java.nio.ByteBuffer.wrap(bytes).order(java.nio.ByteOrder.LITTLE_ENDIAN)
+            fun u8(i: Int) = bytes[i].toInt() and 0xFF
+            fun int(i: Int) = u8(i) or (u8(i + 1) shl 8) or (u8(i + 2) shl 16) or (u8(i + 3) shl 24)
+            fun short(i: Int) = ((u8(i) or (u8(i + 1) shl 8)).toShort())
             var at = 12
             while (at + 8 <= bytes.size) {
-                val id = String(bytes, at, 4, Charsets.US_ASCII)
-                val size = b.getInt(at + 4)
+                val id = bytes.decodeToString(at, at + 4)
+                val size = int(at + 4)
                 if (id == "data") {
                     val n = minOf(size, bytes.size - at - 8) / 2
-                    return FloatArray(n) { b.getShort(at + 8 + it * 2) / 32768f }
+                    return FloatArray(n) { short(at + 8 + it * 2) / 32768f }
                 }
                 at += 8 + size + (size and 1)
             }

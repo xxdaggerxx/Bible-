@@ -5,6 +5,7 @@ import com.biblestudy.app.data.BibleImport
 import com.biblestudy.app.data.BibleRepository
 import com.biblestudy.app.data.ImportStudy
 import com.biblestudy.app.data.StudyRepository
+import com.biblestudy.app.data.save
 import com.biblestudy.app.model.SearchScope
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -47,11 +48,11 @@ class BibleImportTest {
             <verse sID="John.3.17" osisID="John.3.17"/>Not to condemn.<verse eID="John.3.17"/>
             </chapter></div></osisText></osis>
         """.trimIndent()
-        val a = BibleImport.parseOsis(milestones.byteInputStream())
+        val a = BibleImport.parseOsis(milestones)
         assertEquals("For God so loved the world, that he gave.", a.verses[43003016])
         assertEquals("Not to condemn.", a.verses[43003017])
         val containers = """<osis><osisText><div><verse osisID="Gen.1.1">In the beginning.</verse></div></osisText></osis>"""
-        assertEquals("In the beginning.", BibleImport.parseOsis(containers.byteInputStream()).verses[1001001])
+        assertEquals("In the beginning.", BibleImport.parseOsis(containers).verses[1001001])
     }
 
     @Test
@@ -90,7 +91,7 @@ class BibleImportTest {
             <p><verse sID="John.3.18" osisID="John.3.18 John.3.19"/>Whoever believes.<q eID="q1"/> Then<verse eID="John.3.18"/></p>
             </chapter></div></osisText></osis>
         """.trimIndent()
-        val p = BibleImport.parseOsis(osis.byteInputStream())
+        val p = BibleImport.parseOsis(osis)
         assertEquals("For God so loved the world, he said.", p.verses[43003016])
         assertEquals("0-5", p.red[43003016])
         assertEquals("0-4", p.red[43003017])
@@ -107,13 +108,13 @@ class BibleImportTest {
 
     private val app get() = ApplicationProvider.getApplicationContext<android.app.Application>()
 
-    private val opened = ArrayList<android.database.sqlite.SQLiteDatabase>()
+    private val opened = ArrayList<com.biblestudy.app.platform.SqlDb>()
 
     /** App files survive between tests in a run: leave no imported versions or open databases behind. */
     @After
     fun removeImported() {
         opened.forEach { it.close() }
-        for (code in listOf("ESV", "NLT", "NLT2")) BibleRepository.removeImported(app, code)
+        for (code in listOf("ESV", "NLT", "NLT2")) BibleRepository.removeImported(com.biblestudy.app.platform.AndroidAppContext(app), code)
     }
 
     /** Imports a test passage as [code], with word tags and the rest, and returns the study library reading it. */

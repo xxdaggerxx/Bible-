@@ -1,11 +1,10 @@
 package com.biblestudy.app.ui
 
-import android.app.Application
-import android.content.Context
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.graphics.ImageDecoder
-import android.net.Uri
+import com.biblestudy.app.platform.*
+import okio.Path
+import okio.Path.Companion.toPath
+import okio.buffer
+import okio.use
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
@@ -18,9 +17,7 @@ import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.runtime.snapshots.SnapshotStateMap
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.ImageBitmap
-import androidx.compose.ui.graphics.asImageBitmap
-import androidx.core.content.edit
-import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.biblestudy.app.data.BibleRepository
 import com.biblestudy.app.data.Passage
@@ -59,11 +56,6 @@ import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.io.File
-import java.util.concurrent.Executors
-import java.util.zip.ZipEntry
-import java.util.zip.ZipInputStream
-import java.util.zip.ZipOutputStream
 import kotlin.math.max
 import kotlin.math.roundToInt
 
@@ -138,7 +130,7 @@ enum class WidthClass { COMPACT, MEDIUM, EXPANDED;
  * at most two panels.
  */
 class Workspace(val name: String, private val tabsJson: String, val active: Int) {
-    fun toJson(): String = org.json.JSONObject().put("tabs", org.json.JSONArray(tabsJson)).put("active", active).toString()
+    fun toJson(): String = com.biblestudy.app.platform.JSONObject().put("tabs", com.biblestudy.app.platform.JSONArray(tabsJson)).put("active", active).toString()
 
     /** The layout's tabs, made fresh each time it is opened. */
     fun tabs(place: (Int, Int, String?) -> Triple<Int, Int, String>): List<TabState> =
@@ -146,28 +138,28 @@ class Workspace(val name: String, private val tabsJson: String, val active: Int)
 
     companion object {
         fun fromJson(name: String, json: String): Workspace? = runCatching {
-            val o = org.json.JSONObject(json)
+            val o = com.biblestudy.app.platform.JSONObject(json)
             if (o.has("tabs")) return@runCatching Workspace(name, o.getJSONArray("tabs").toString(), o.optInt("active"))
             // Before 1.2: up to three Bible panels, a study pane, linking and sizes.
             val p = o.getJSONArray("panels")
             val pane = PaneKind.entries.firstOrNull { it.name == o.optString("pane") }
             val w = o.optJSONArray("weights")
             fun panel(i: Int) = p.getJSONObject(i).let {
-                org.json.JSONObject().put("b", it.getInt("b")).put("c", it.getInt("c")).put("v", it.getString("v"))
+                com.biblestudy.app.platform.JSONObject().put("b", it.getInt("b")).put("c", it.getInt("c")).put("v", it.getString("v"))
             }
-            val tabs = org.json.JSONArray()
-            val first = org.json.JSONObject()
-            val firstPanels = org.json.JSONArray()
+            val tabs = com.biblestudy.app.platform.JSONArray()
+            val first = com.biblestudy.app.platform.JSONObject()
+            val firstPanels = com.biblestudy.app.platform.JSONArray()
             for (i in 0 until minOf(p.length(), 2)) firstPanels.put(panel(i))
             first.put("panels", firstPanels)
             first.put("linked", o.optBoolean("linked") && p.length() >= 2)
             if (w != null && w.length() >= 2) first.put("split", w.getDouble(0) / (w.getDouble(0) + w.getDouble(1)))
-            if (pane != null && p.length() == 1) first.put("studies", org.json.JSONArray().put(pane.name))
+            if (pane != null && p.length() == 1) first.put("studies", com.biblestudy.app.platform.JSONArray().put(pane.name))
             tabs.put(first)
             if (p.length() > 2 || (pane != null && p.length() > 1)) {
-                val second = org.json.JSONObject()
-                second.put("panels", org.json.JSONArray().put(panel(if (p.length() > 2) 2 else 0)))
-                if (pane != null && p.length() > 1) second.put("studies", org.json.JSONArray().put(pane.name))
+                val second = com.biblestudy.app.platform.JSONObject()
+                second.put("panels", com.biblestudy.app.platform.JSONArray().put(panel(if (p.length() > 2) 2 else 0)))
+                if (pane != null && p.length() > 1) second.put("studies", com.biblestudy.app.platform.JSONArray().put(pane.name))
                 tabs.put(second)
             }
             Workspace(name, tabs.toString(), 0)
@@ -180,7 +172,7 @@ enum class AutoBackup(val label: String, val days: Int) { OFF("Off", 0), DAILY("
 
 /** A chapter to export as a PDF or picture (DATA-5), handled by the active panel. */
 /** Export the active panel's chapter (DATA-5); with [layer], only that layer's notes (LAY-11). */
-data class ExportRequest(val uri: Uri, val pdf: Boolean, val layer: Long? = null)
+data class ExportRequest(val uri: PickedFile, val pdf: Boolean, val layer: Long? = null)
 
 /** What the study pane beside the Bible panels shows (SPLIT-2). */
 enum class PaneKind(val label: String) {
@@ -217,24 +209,27 @@ data class Place(val book: Int, val chapter: Int, val verse: Int)
 /** A chapter read lately (READ-8): where you were in it, and when. */
 data class RecentRead(val book: Int, val chapter: Int, val verse: Int, val at: Long)
 
-class StudyViewModel(app: Application) : AndroidViewModel(app) {
-    private val prefs = app.getSharedPreferences("study", Context.MODE_PRIVATE)
-    init { BibleRepository.loadImported(app) } // before panels restore their versions
+class StudyViewModel(val host: Host) : ViewModel() {
+    /** The app's folders, bundled data, settings and databases on this platform. */
+    val ctx: AppContext = host.ctx
+    private val prefs = ctx.prefs("study")
+    init { BibleRepository.loadImported(ctx) } // before panels restore their versions
     /** The KJV: book names, chapter counts and cross-references come from here for every version. */
-    val bible = BibleRepository(app, BibleRepository.KJV)
+    val bible = BibleRepository(ctx, BibleRepository.KJV)
     private val texts = HashMap<String, BibleRepository>().apply { put(bible.code, bible) }
 
     /** The text of one version, opened (and copied out of the APK) the first time it's needed. */
-    @Synchronized
-    fun text(code: String): BibleRepository = texts.getOrPut(code) {
+    private val textsLock = Lock()
+
+    fun text(code: String): BibleRepository = locked(textsLock) { texts.getOrPut(code) {
         val v = BibleRepository.ALL.firstOrNull { it.code == code } ?: BibleRepository.KJV
-        if (v.code == bible.code) bible else BibleRepository(getApplication(), v).also { r ->
+        if (v.code == bible.code) bible else BibleRepository(ctx, v).also { r ->
             // An online Bible's chapters get word tags, words of Jesus and paragraphs as they come (BIB-12).
             r.online?.study = { db, parsed ->
                 com.biblestudy.app.data.ImportStudy.addChapter(db, r.code, parsed, study, onlineTagger, guessRed = !r.online.marksRed(), web = text(BibleRepository.WEB.code))
             }
         }
-    }
+    } }
 
     /** Tags the words of online Bibles' chapters for word studies; made the first time one comes. */
     private val onlineTagger by lazy { com.biblestudy.app.data.ImportStudy.tagger(study, BibleRepository.BUNDLED.map { text(it.code) }) }
@@ -300,7 +295,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         override fun failed(code: String, book: Int, chapter: Int, error: Exception) {
             viewModelScope.launch(Dispatchers.Main) {
                 onlineFailed = true
-                val now = System.currentTimeMillis()
+                val now = nowMillis()
                 if (now - lastOnlineWarning < 30_000) return@launch
                 lastOnlineWarning = now
                 val where = "$code ${bible.book(book).name} $chapter"
@@ -320,14 +315,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         BibleRepository.onlineEvents = onlineEvents
         viewModelScope.launch(Dispatchers.Main) { expireOnline() } // posted: runs once the whole model is set up
         // Back online: chapters that couldn't be fetched are tried again.
-        runCatching {
-            val cm = app.getSystemService(android.net.ConnectivityManager::class.java)
-            cm?.registerDefaultNetworkCallback(object : android.net.ConnectivityManager.NetworkCallback() {
-                override fun onAvailable(network: android.net.Network) {
-                    viewModelScope.launch(Dispatchers.Main) { retryOnline() }
-                }
-            })
-        }
+        host.watchNetwork { viewModelScope.launch(Dispatchers.Main) { retryOnline() } }
     }
 
     /** Tries again the online chapters that couldn't be fetched: the pages waiting for them are laid out again. */
@@ -444,9 +432,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 runCatching {
                     val full = if (info.id >= com.biblestudy.app.data.Esv.ID) info // the ESV and NLT carry their own
                         else com.biblestudy.app.data.YouVersion.bible(info.id) ?: info // with its copyright
-                    val v = com.biblestudy.app.data.OnlineBible.create(getApplication(), full, bible.books)
-                    synchronized(this@StudyViewModel) { texts.remove(v.code) }
-                    BibleRepository.addImported(getApplication(), v)
+                    val v = com.biblestudy.app.data.OnlineBible.create(ctx, full, bible.books)
+                    locked(textsLock) { texts.remove(v.code) }
+                    BibleRepository.addImported(ctx, v)
                     v
                 }
             }
@@ -464,12 +452,12 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         return o.savedChapters() to bible.books.filter { it.id in o.books }.sumOf { it.chapters }
     }
     // Before this version first opens the notes, they're saved as a backup (DATA-8).
-    init { com.biblestudy.app.data.DataSafety.beforeOpening(app, com.biblestudy.app.AppConfig.versionCode, com.biblestudy.app.AppConfig.versionName) }
-    val user = UserDb(app)
-    private val imagesDir = File(app.filesDir, "images").apply { mkdirs() }
+    init { com.biblestudy.app.data.DataSafety.beforeOpening(ctx, com.biblestudy.app.AppConfig.versionCode, com.biblestudy.app.AppConfig.versionName) }
+    val user = UserDb(ctx)
+    private val imagesDir = (ctx.filesDir / "images").mkdirs()
 
     /** All database writes go through one thread, so they happen in order. */
-    private val dbDispatcher = Executors.newSingleThreadExecutor().asCoroutineDispatcher()
+    private val dbDispatcher = Dispatchers.IO.limitedParallelism(1)
 
     // ---------- tool & display settings ----------
     var tool by mutableStateOf(runCatching { Tool.valueOf(prefs.getString("tool", "PEN")!!) }.getOrDefault(Tool.PEN))
@@ -483,7 +471,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      * a foldable opened out becomes a tablet. Phones draw with a finger, start in read mode, and
      * show margins and a second panel collapsed.
      */
-    var phone by mutableStateOf(app.resources.configuration.smallestScreenWidthDp in 1 until 600)
+    var phone by mutableStateOf(host.smallestWidthDp in 1 until 600)
 
     /** On a phone, which of the tab's two panels is shown; the other is a bar to tap (PH-6). */
     var phoneShown by mutableIntStateOf(0)
@@ -619,7 +607,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         private set
 
     /** Pen-on-paper sounds while writing (INK-15), and how loud (0..1). */
-    val sound = WritingSound { WritingSound.loadLoops(getApplication<Application>().assets) }
+    val sound = WritingSound { WritingSound.loadLoops(ctx.assets) }
     var writingSounds by mutableStateOf(prefs.getBoolean("writingSounds", true))
         private set
     var soundVolume by mutableFloatStateOf(prefs.getFloat("soundVolume", 0.6f))
@@ -805,7 +793,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      * (SYNC-1), so two devices making an item in the same millisecond don't pick the same id.
      */
     fun newId(): Long {
-        val t = System.currentTimeMillis() * 1000 + idSalt
+        val t = nowMillis() * 1000 + idSalt
         lastId = if (t > lastId) t else lastId + 1
         return lastId
     }
@@ -901,7 +889,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** A screen in words, for the Back and Forward lists: "John 3 and Commentary · 2 tabs". */
     fun screenLabel(s: Screen): String = runCatching {
-        val all = org.json.JSONArray(s.tabs)
+        val all = com.biblestudy.app.platform.JSONArray(s.tabs)
         val t = all.getJSONObject(s.active.coerceIn(0, all.length() - 1))
         val parts = ArrayList<String>()
         val hidden = t.optBoolean("hidden")
@@ -911,7 +899,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             val b = p.optInt("b", 43)
             parts += sketchOf(b)?.name ?: "${bible.book(b.coerceIn(1, 66)).name} ${p.optInt("c", 1)}"
         }
-        val st = t.optJSONArray("studies") ?: org.json.JSONArray()
+        val st = t.optJSONArray("studies") ?: com.biblestudy.app.platform.JSONArray()
         for (i in 0 until st.length()) PaneKind.entries.firstOrNull { it.name == st.optString(i) }?.let { parts += it.label }
         parts.joinToString(" and ") + if (all.length() > 1) " \u00b7 ${all.length()} tabs" else ""
     }.getOrDefault("Earlier screen")
@@ -937,8 +925,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         if (Sketch.isSketch(book) && sketchOf(book) != null) Triple(book, 1, validVersion(version)) else validPlace(book, chapter, version)
 
     /** A tab's arrangement without where its panels are, to tell whether only the passages differ. */
-    private fun shapeOf(o: org.json.JSONObject): String {
-        val c = org.json.JSONObject(o.toString())
+    private fun shapeOf(o: com.biblestudy.app.platform.JSONObject): String {
+        val c = com.biblestudy.app.platform.JSONObject(o.toString())
         val ps = c.getJSONArray("panels")
         for (i in 0 until ps.length()) ps.getJSONObject(i).let { p -> listOf("b", "c", "t", "v", "zl", "zland", "zport").forEach { p.remove(it) } }
         return c.toString()
@@ -948,8 +936,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         restoring = true
         try {
             selection = null; passagePop = null; linkPos = null; commentaryPos = null
-            val saved = org.json.JSONArray(s.tabs)
-            val now = org.json.JSONArray(TabState.listToJson(tabs))
+            val saved = com.biblestudy.app.platform.JSONArray(s.tabs)
+            val now = com.biblestudy.app.platform.JSONArray(TabState.listToJson(tabs))
             val sameShape = saved.length() == now.length() && (0 until saved.length()).all { shapeOf(saved.getJSONObject(it)) == shapeOf(now.getJSONObject(it)) }
             if (sameShape) {
                 // Only the passages differ: move the panels there, keeping everything else as it is.
@@ -1088,7 +1076,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun savedTabsJson(): String = tabsJson(tabs)
 
     private fun tabsJson(list: List<TabState>): String {
-        val json = org.json.JSONArray(TabState.listToJson(list))
+        val json = com.biblestudy.app.platform.JSONArray(TabState.listToJson(list))
         // Sketch pages are saved as their passages.
         list.forEachIndexed { t, tab ->
             val ps = json.getJSONObject(t).getJSONArray("panels")
@@ -1470,7 +1458,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     // ---------- Bibles: version manager and import (BIB-4, BIB-5) ----------
 
     /** Imports a Bible file (or several); runs off the main thread. */
-    fun importBible(names: List<String>, open: (Int) -> java.io.InputStream, code: String, name: String, copyright: String) {
+    fun importBible(names: List<String>, open: (Int) -> okio.Source, code: String, name: String, copyright: String) {
         val c = code.trim().uppercase()
         if (c.isEmpty() || name.isBlank() || copyright.isBlank()) { message = "Give the version a short code, a name and its copyright line."; return }
         if (BibleRepository.BUNDLED.any { it.code == c }) { message = "$c is already built in. Choose another code."; return }
@@ -1480,19 +1468,19 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             val result = withContext(Dispatchers.IO) {
                 runCatching {
                     // A version being replaced is read from its new file afterwards.
-                    synchronized(this@StudyViewModel) { texts.remove(c) }
-                    val addStudy = { db: android.database.sqlite.SQLiteDatabase, parsed: com.biblestudy.app.data.BibleImport.Parsed? -> buildStudy(db, c, parsed) }
+                    locked(textsLock) { texts.remove(c) }
+                    val addStudy = { db: SqlDb, parsed: com.biblestudy.app.data.BibleImport.Parsed? -> buildStudy(db, c, parsed) }
                     if (names.size == 1 && names[0].lowercase().endsWith(".db")) {
-                        open(0).use { com.biblestudy.app.data.BibleImport.saveAppDb(getApplication(), it, c, name.trim(), copyright.trim(), addStudy) }
+                        com.biblestudy.app.data.BibleImport.saveAppDb(ctx, open(0), c, name.trim(), copyright.trim(), addStudy)
                     } else {
                         val parsed = com.biblestudy.app.data.BibleImport.parse(names, open)
-                        com.biblestudy.app.data.BibleImport.save(getApplication(), parsed, c, name.trim(), copyright.trim(), bible.books, addStudy)
+                        com.biblestudy.app.data.BibleImport.save(ctx, parsed, c, name.trim(), copyright.trim(), bible.books, addStudy)
                     }
                 }
             }
             importing = false
             importStatus = null
-            synchronized(this@StudyViewModel) { texts.remove(c) }
+            locked(textsLock) { texts.remove(c) }
             message = result.fold({ "${it.code} added, with word studies. Pick it from the version menu." }, { "Couldn't import: ${it.message}" })
         }
     }
@@ -1505,7 +1493,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         private set
 
     /** Word tags, words of Jesus and paragraphs for imported version [code] (see [ImportStudy]). */
-    private fun buildStudy(db: android.database.sqlite.SQLiteDatabase, code: String, parsed: com.biblestudy.app.data.BibleImport.Parsed?) {
+    private fun buildStudy(db: SqlDb, code: String, parsed: com.biblestudy.app.data.BibleImport.Parsed?) {
         com.biblestudy.app.data.ImportStudy.build(db, code, parsed, study, BibleRepository.BUNDLED.map { text(it.code) }) { f ->
             val status = "Preparing word studies\u2026 ${(f * 100).toInt()}%"
             viewModelScope.launch(Dispatchers.Main) { if (importing) importStatus = status }
@@ -1522,7 +1510,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
                 for (v in todo) runCatching {
-                    android.database.sqlite.SQLiteDatabase.openDatabase(v.asset, null, android.database.sqlite.SQLiteDatabase.OPEN_READWRITE).use { db ->
+                    ctx.sql.open(v.asset).use { db ->
                         if (!com.biblestudy.app.data.ImportStudy.isBuilt(db)) {
                             withContext(Dispatchers.Main) { importing = true }
                             buildStudy(db, v.code, null)
@@ -1538,8 +1526,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun removeBible(code: String) {
         panels.forEachIndexed { i, p -> if (p.version == code) setVersion(i, "KJV") }
         if (newPanelVersion == code) newPanelVersion = null
-        synchronized(this) { texts.remove(code) }
-        BibleRepository.removeImported(getApplication(), code)
+        locked(textsLock) { texts.remove(code) }
+        BibleRepository.removeImported(ctx, code)
         message = "$code removed."
     }
 
@@ -1574,7 +1562,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      * Makes a sketch page and opens it in the active panel. With [link] it's tied to that verse and
      * opens from a badge beside it (SKT-2); without, it stands alone and opens from My notes.
      */
-    fun createSketch(name: String, paper: Paper, link: Triple<Int, Int, Int>? = sketchLinkHere(), open: Boolean = true, created: Long = System.currentTimeMillis()): Sketch {
+    fun createSketch(name: String, paper: Paper, link: Triple<Int, Int, Int>? = sketchLinkHere(), open: Boolean = true, created: Long = nowMillis()): Sketch {
         // Small ids, never reused: a sketch's book number is SKETCH_BOOK + id.
         val id = maxOf(prefs.getLong("nextSketch", 1L), (sketches.maxOfOrNull { it.id } ?: 0L) + 1)
         prefs.edit { putLong("nextSketch", id + 1) }
@@ -1674,12 +1662,12 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      */
     fun addReadyMadePages(announce: Boolean = false, onlyNew: Boolean = false) {
         val layer = layers.firstOrNull() ?: return
-        val startedAt = System.currentTimeMillis() - 1000
+        val startedAt = nowMillis() - 1000
         var added = 0
         // Pages made before (by name), so a new version adds its new pages but not ones you deleted.
         val made = prefs.getStringSet("readyMadeNames", null)?.toMutableSet()
             ?: (if (prefs.getBoolean("readyMadeAdded", false)) SketchTemplates.all.take(4).map { it.name }.toMutableSet() else mutableSetOf())
-        val env = TemplateEnv(runCatching { LandsMap.load(getApplication()) }.getOrNull())
+        val env = TemplateEnv(runCatching { LandsMap.load(ctx) }.getOrNull())
         SketchTemplates.all.forEachIndexed { i, t ->
             if (sketches.any { it.readyMade && it.name == t.name }) { made += t.name; return@forEachIndexed }
             if (onlyNew && t.name in made) return@forEachIndexed
@@ -1740,7 +1728,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         }
         sketches.removeAll { it.id == s.id }
         marginStrokesFor(s.book, 1).clear(); imagesFor(s.book, 1).clear(); textsFor(s.book, 1).clear()
-        io { user.deleteSketch(s).forEach { File(imagesDir, it).delete() } }
+        io { user.deleteSketch(s).forEach { (imagesDir / it).delete() } }
     }
 
     /**
@@ -1910,17 +1898,17 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     private var visitSeconds = 0
     private var visitRead = false
 
-    fun startReadingClock(now: Long = android.os.SystemClock.uptimeMillis()) { lastTick = now }
+    fun startReadingClock(now: Long = uptimeMillis()) { lastTick = now }
 
     /** A touch or pen stroke: the reader is here (ANL-1). */
-    fun userActive(now: Long = android.os.SystemClock.uptimeMillis()) { lastActive = now }
+    fun userActive(now: Long = uptimeMillis()) { lastActive = now }
 
     /**
      * Counts the time since the last tick for the chapter at the top of the active panel (ANL-1),
      * unless the app is in the background or untouched for two minutes. A chapter counts as read
      * (ANL-2) once a visit to it has lasted a minute and most of it has been in view.
      */
-    fun readingTick(now: Long = android.os.SystemClock.uptimeMillis()) {
+    fun readingTick(now: Long = uptimeMillis()) {
         val since = (now - lastTick).coerceIn(0L, 30_000L)
         lastTick = now
         if (!foreground || now - lastActive > IDLE_MS || since < 1000) return
@@ -1930,7 +1918,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val book = p.book; val chapter = p.chapter
         if (Sketch.isSketch(book)) {
             // Time on a sketch page counts as study time for its passage's day, not as reading.
-            val day = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(java.util.Date())
+            val day = today()
             val seconds = (since / 1000).toInt()
             io { user.addStudy(day, seconds) }
             readingGeneration++
@@ -1944,13 +1932,13 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val seconds = (since / 1000).toInt()
         visitSeconds += seconds
         val study = sidePane != null || wordStudy != null || studyOpen
-        val day = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(java.util.Date())
+        val day = today()
         io { user.addReading(day, book, chapter, seconds, study) }
         if (!visitRead && visitSeconds >= 60) {
             val last = verseCount(book, chapter)
             if (p.seenTo >= (last * 0.8f).toInt()) {
                 visitRead = true
-                io { user.markRead(book, chapter, System.currentTimeMillis()) }
+                io { user.markRead(book, chapter, nowMillis()) }
             }
         }
         readingGeneration++
@@ -1970,7 +1958,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Word studies, dictionary, topics and commentary; opened on first use. */
     val study by lazy {
-        StudyRepository(getApplication()).also { s ->
+        StudyRepository(ctx).also { s ->
             // Imported versions keep their word tags, red letters and paragraphs in their own database.
             s.ownDb = { code -> if (BibleRepository.ALL.any { it.code == code && it.imported }) text(code).database else null }
         }
@@ -1992,7 +1980,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
     // ---------- AI chat, online (AI-1 to AI-7) ----------
 
-    val chat by lazy { ChatState(getApplication(), viewModelScope) { com.biblestudy.app.data.RefLinks.find(it, bible.books).isNotEmpty() } }
+    val chat by lazy { ChatState(ctx, viewModelScope) { com.biblestudy.app.data.RefLinks.find(it, bible.books).isNotEmpty() } }
 
     /** Opens the AI chat in a panel beside the text. */
     /** The little chat window over the text (AI-10), opened by the chat bubble. */
@@ -2135,8 +2123,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     suspend fun loadCommentary(id: String, book: Int, chapter: Int): List<com.biblestudy.app.data.CommentarySection> =
         withContext(Dispatchers.IO) {
             if (id == com.biblestudy.app.data.Commentaries.CONCISE) study.commentary(book, chapter)
-            else runCatching { com.biblestudy.app.data.Commentaries.chapter(getApplication(), id, book, chapter) }.getOrElse { e ->
-                android.util.Log.w("Commentaries", "Couldn't open $id", e)
+            else runCatching { com.biblestudy.app.data.Commentaries.chapter(ctx, id, book, chapter) }.getOrElse { e ->
+                println("Commentaries: couldn't open $id: $e")
                 withContext(Dispatchers.Main) { message = "Couldn't open ${com.biblestudy.app.data.Commentaries.info(id).short}: ${e.message}" }
                 emptyList()
             }
@@ -2227,7 +2215,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     /** Saved sets of shown layers, e.g. "Sermon prep" (LAY-10): name → the layers shown. */
     val layerPresets = mutableStateMapOf<String, Set<Long>>().apply {
         runCatching {
-            val o = org.json.JSONObject(prefs.getString("layerPresets", "{}")!!)
+            val o = com.biblestudy.app.platform.JSONObject(prefs.getString("layerPresets", "{}")!!)
             for (k in o.keys()) {
                 val a = o.getJSONArray(k)
                 put(k, (0 until a.length()).map { a.getLong(it) }.toSet())
@@ -2236,8 +2224,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     private fun saveLayerPresets() {
-        val o = org.json.JSONObject()
-        for ((k, v) in layerPresets) o.put(k, org.json.JSONArray(v.toList()))
+        val o = com.biblestudy.app.platform.JSONObject()
+        for ((k, v) in layerPresets) o.put(k, com.biblestudy.app.platform.JSONArray(v.toList()))
         prefs.edit { putString("layerPresets", o.toString()) }
     }
 
@@ -2303,7 +2291,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         selection = null
         io {
             val files = user.deleteLayer(id)
-            files.forEach { File(imagesDir, it).delete() }
+            files.forEach { (imagesDir / it).delete() }
         }
     }
 
@@ -2981,7 +2969,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         record(Edit(emptyList(), listOf(img)))
     }
 
-    fun insertImage(uri: Uri) {
+    fun insertImage(uri: PickedFile) {
         val index = activePanel.coerceIn(0, panels.lastIndex)
         val p = panels[index]
         val layer = activeLayer() ?: return
@@ -3015,40 +3003,23 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Puts a picture copied to the clipboard (e.g. a screenshot) into the margin (MRG-7). */
     fun pasteImage() {
-        val app = getApplication<Application>()
-        val clip = (app.getSystemService(Context.CLIPBOARD_SERVICE) as android.content.ClipboardManager).primaryClip
-        val uri = clip?.takeIf { it.itemCount > 0 }?.getItemAt(0)?.uri
-        val isImage = uri != null && (clip.description.hasMimeType("image/*") || app.contentResolver.getType(uri)?.startsWith("image/") == true)
-        if (uri == null || !isImage) {
+        val pic = host.clipboardImage()
+        if (pic == null) {
             message = "There's no picture on the clipboard. Copy an image first, then paste."
             return
         }
-        insertImage(uri)
+        insertImage(pic)
     }
 
-    /** A file for the camera to save a photo into, shared with it through the app's FileProvider. */
-    fun newCameraUri(): Uri {
-        val app = getApplication<Application>()
-        val dir = File(app.cacheDir, "camera").apply { mkdirs() }
-        dir.listFiles()?.forEach { it.delete() } // earlier photos have already been copied
-        val file = File(dir, "photo-${System.currentTimeMillis()}.jpg")
-        return androidx.core.content.FileProvider.getUriForFile(app, app.packageName + ".files", file)
-    }
+    /** A file for the camera to save a photo into. */
+    fun newCameraUri(): PickedFile = host.newCameraFile()
 
-    private fun importImage(uri: Uri, id: Long): Pair<String, Float>? = try {
-        val source = ImageDecoder.createSource(getApplication<Application>().contentResolver, uri)
-        val bmp = ImageDecoder.decodeBitmap(source) { decoder, info, _ ->
-            val w = info.size.width; val h = info.size.height
-            val scale = 1600f / max(w, h).toFloat()
-            if (scale < 1f) decoder.setTargetSize((w * scale).roundToInt().coerceAtLeast(1), (h * scale).roundToInt().coerceAtLeast(1))
-            decoder.allocator = ImageDecoder.ALLOCATOR_SOFTWARE
-        }
-        val png = bmp.hasAlpha()
+    private fun importImage(uri: PickedFile, id: Long): Pair<String, Float>? = try {
+        val bytes = host.open(uri).buffer().use { it.readByteArray() }
+        val (data, png, aspect) = Pictures.prepare(bytes, 1600) ?: throw okio.IOException("Not a picture")
         val name = "img_$id." + if (png) "png" else "jpg"
-        File(imagesDir, name).outputStream().use { out ->
-            bmp.compress(if (png) Bitmap.CompressFormat.PNG else Bitmap.CompressFormat.JPEG, 88, out)
-        }
-        name to (bmp.height.toFloat() / bmp.width.toFloat())
+        (imagesDir / name).writeBytes(data)
+        name to aspect
     } catch (e: Exception) {
         null
     }
@@ -3059,16 +3030,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         if (requestedBitmaps.add(file)) {
             viewModelScope.launch {
                 val bmp = withContext(Dispatchers.IO) {
-                    val f = File(imagesDir, file)
-                    if (!f.exists()) null else {
-                        val opts = BitmapFactory.Options().apply { inJustDecodeBounds = true }
-                        BitmapFactory.decodeFile(f.path, opts)
-                        var sample = 1
-                        while (max(opts.outWidth, opts.outHeight) / (sample * 2) >= 1200) sample *= 2
-                        BitmapFactory.decodeFile(f.path, BitmapFactory.Options().apply { inSampleSize = sample })
-                    }
+                    val f = imagesDir / file
+                    if (!f.exists()) null else Pictures.decode(f.readBytes(), 1200)
                 }
-                if (bmp != null) bitmaps[file] = bmp.asImageBitmap()
+                if (bmp != null) bitmaps[file] = bmp
             }
         }
         return null
@@ -3154,7 +3119,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val old = bookmarkAt(book, chapter, verse)
         if (old != null) removeBookmark(old)
         else {
-            val b = com.biblestudy.app.model.Bookmark(newId(), book, chapter, verse, System.currentTimeMillis(), "")
+            val b = com.biblestudy.app.model.Bookmark(newId(), book, chapter, verse, nowMillis(), "")
             bookmarks.add(0, b)
             io { user.addBookmark(b) }
         }
@@ -3169,7 +3134,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Chapters read lately, newest first, each with the verse you were at (READ-8). Kept on this tablet. */
     val recent = mutableStateListOf<RecentRead>().apply {
-        runCatching { org.json.JSONArray(prefs.getString("recent", "[]")) }.getOrNull()?.let { a ->
+        runCatching { com.biblestudy.app.platform.JSONArray(prefs.getString("recent", "[]")!!) }.getOrNull()?.let { a ->
             for (i in 0 until a.length()) a.optJSONObject(i)?.let { o -> add(RecentRead(o.getInt("b"), o.getInt("c"), o.getInt("v"), o.getLong("t"))) }
         }
     }
@@ -3186,7 +3151,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         recentSeconds += seconds
         if (recentSeconds < RECENT_AFTER_S) return
         val top = recent.firstOrNull()
-        val now = System.currentTimeMillis()
+        val now = nowMillis()
         if (top != null && top.book == book && top.chapter == chapter) {
             if (top.verse == verse && now - top.at < 60_000) return
             recent[0] = top.copy(verse = verse, at = now)
@@ -3201,51 +3166,38 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun clearRecent() { recent.clear(); recentKey = -1; saveRecent() }
 
     private fun saveRecent() {
-        val a = org.json.JSONArray(recent.map { org.json.JSONObject().put("b", it.book).put("c", it.chapter).put("v", it.verse).put("t", it.at) })
+        val a = com.biblestudy.app.platform.JSONArray(recent.map { com.biblestudy.app.platform.JSONObject().put("b", it.book).put("c", it.chapter).put("v", it.verse).put("t", it.at) })
         prefs.edit { putString("recent", a.toString()) }
     }
 
     // ---------- backup & restore ----------
 
     /** Writes everything (the notes database and pictures) as one zip. Call on [dbDispatcher]. */
-    private fun writeBackup(os: java.io.OutputStream) {
+    private fun writeBackup(sink: okio.Sink) {
         user.checkpoint()
-        val dbFile = getApplication<Application>().getDatabasePath(UserDb.NAME)
-        ZipOutputStream(os).use { zip ->
-            zip.putNextEntry(ZipEntry("userdata.db"))
-            dbFile.inputStream().use { it.copyTo(zip) }
-            zip.closeEntry()
-            imagesDir.listFiles()?.forEach { f ->
-                zip.putNextEntry(ZipEntry("images/${f.name}"))
-                f.inputStream().use { it.copyTo(zip) }
-                zip.closeEntry()
-            }
+        val dbFile = ctx.getDatabasePath(UserDb.NAME)
+        sink.buffer().use { out ->
+            val zip = Zip.Writer(out)
+            zip.putEntry("userdata.db", fs.source(dbFile))
+            imagesDir.listFiles()?.forEach { f -> zip.putEntry("images/${f.name}", fs.source(f)) }
             // Imported Bibles (BIB-4) go too, so a new tablet gets them back.
             val imported = BibleRepository.ALL.filter { it.imported }
             if (imported.isNotEmpty()) {
-                zip.putNextEntry(ZipEntry("bibles/imported.json"))
-                zip.write(BibleRepository.importedJson().toByteArray())
-                zip.closeEntry()
+                zip.putEntry("bibles/imported.json", BibleRepository.importedJson().encodeToByteArray())
                 for (v in imported) {
                     if (v.online > 0) continue // online Bibles are downloaded again, not backed up (BIB-12)
-                    val f = File(v.asset)
+                    val f = v.asset.toPath()
                     if (!f.exists()) continue
-                    zip.putNextEntry(ZipEntry("bibles/${f.name}"))
-                    f.inputStream().use { it.copyTo(zip) }
-                    zip.closeEntry()
+                    zip.putEntry("bibles/${f.name}", fs.source(f))
                 }
             }
+            zip.finish()
         }
     }
 
-    fun backup(uri: Uri) {
+    fun backup(uri: PickedFile) {
         viewModelScope.launch {
-            val ok = withContext(dbDispatcher) {
-                runCatching {
-                    getApplication<Application>().contentResolver.openOutputStream(uri)?.use { writeBackup(it) }
-                        ?: error("Couldn't write file")
-                }.isSuccess
-            }
+            val ok = withContext(dbDispatcher) { runCatching { writeBackup(host.create(uri)) }.isSuccess }
             message = if (ok) "Backup saved." else "Backup failed."
         }
     }
@@ -3253,44 +3205,41 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     // ---------- automatic backups (DATA-6) ----------
 
     var autoBackup by mutableStateOf(runCatching { AutoBackup.valueOf(prefs.getString("autoBackup", "OFF")!!) }.getOrDefault(AutoBackup.OFF))
-    /** A folder the user chose for automatic backups (a document-tree URI), or null for app storage. */
+    /** A folder the user chose for automatic backups (a document-tree URI on Android), or null for app storage. */
     var backupFolder by mutableStateOf(prefs.getString("backupFolder", null))
     var lastAutoBackup by mutableLongStateOf(prefs.getLong("lastAutoBackup", 0L))
         private set
 
     /** Where backups go when no folder is chosen: Android/data/<app>/files/Backups. */
-    private val appBackupDir: File get() = File(getApplication<Application>().getExternalFilesDir(null) ?: getApplication<Application>().filesDir, "Backups")
+    private val appBackupDir: Path get() = ctx.externalFilesDir / "Backups"
 
     /** A readable name for where automatic backups go. */
-    fun backupFolderName(): String = backupFolder?.let { Uri.parse(it).lastPathSegment?.substringAfterLast(':')?.ifEmpty { null } ?: "Chosen folder" }
-        ?: "App storage (Android/data)"
+    fun backupFolderName(): String = backupFolder?.let { host.folderName(PickedFile(it)) } ?: "App storage (Android/data)"
 
     /**
      * Makes an automatic backup if one is due (DATA-6): run when the app goes to the background.
      * Keeps the [KEEP_BACKUPS] newest automatic backups. Returns the job, or null if none was due.
      */
-    fun autoBackupIfDue(now: Long = System.currentTimeMillis(), force: Boolean = false): kotlinx.coroutines.Job? {
+    fun autoBackupIfDue(now: Long = nowMillis(), force: Boolean = false): kotlinx.coroutines.Job? {
         val every = autoBackup.days
         if (every == 0 && !force) return null
         if (!force && now - lastAutoBackup < every * 24L * 3600_000L - 3600_000L) return null
         lastAutoBackup = now
         prefs.edit { putLong("lastAutoBackup", now) }
-        val name = "bible-study-auto-" + java.text.SimpleDateFormat("yyyy-MM-dd-HHmmss", java.util.Locale.US).format(java.util.Date(now)) + ".zip"
+        val name = "bible-study-auto-" + stamp(now) + ".zip"
         val folder = backupFolder
-        val app = getApplication<Application>()
         return viewModelScope.launch(dbDispatcher) {
             runCatching {
                 if (folder != null) {
-                    val tree = Uri.parse(folder)
-                    val dir = android.provider.DocumentsContract.buildDocumentUriUsingTree(tree, android.provider.DocumentsContract.getTreeDocumentId(tree))
-                    val doc = android.provider.DocumentsContract.createDocument(app.contentResolver, dir, "application/zip", name)
-                        ?: error("Couldn't create the backup file")
-                    app.contentResolver.openOutputStream(doc)?.use { writeBackup(it) }
-                    pruneTree(tree)
+                    val tree = PickedFile(folder)
+                    writeBackup(host.writeInFolder(tree, name))
+                    host.listFolder(tree, "bible-study-auto-").sortedDescending().drop(KEEP_BACKUPS).forEach {
+                        runCatching { host.deleteInFolder(tree, it) }
+                    }
                 } else {
-                    val dir = appBackupDir.apply { mkdirs() }
-                    File(dir, name).outputStream().use { writeBackup(it) }
-                    dir.listFiles { f -> f.name.startsWith("bible-study-auto-") }?.sortedByDescending { it.name }
+                    val dir = appBackupDir.mkdirs()
+                    writeBackup(fs.sink(dir / name))
+                    dir.listFiles()?.filter { it.name.startsWith("bible-study-auto-") }?.sortedByDescending { it.name }
                         ?.drop(KEEP_BACKUPS)?.forEach { it.delete() }
                 }
             }.onFailure { withContext(Dispatchers.Main) { message = "Automatic backup failed: ${it.message}" } }
@@ -3298,26 +3247,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     /** The automatic backups kept in app storage, newest first (for Settings and tests). */
-    fun appBackups(): List<File> =
-        appBackupDir.listFiles { f -> f.name.startsWith("bible-study-auto-") }?.sortedByDescending { it.name } ?: emptyList()
-
-    private fun pruneTree(tree: Uri) {
-        val app = getApplication<Application>()
-        val children = android.provider.DocumentsContract.buildChildDocumentsUriUsingTree(
-            tree, android.provider.DocumentsContract.getTreeDocumentId(tree),
-        )
-        val found = ArrayList<Pair<String, String>>()
-        app.contentResolver.query(
-            children,
-            arrayOf(android.provider.DocumentsContract.Document.COLUMN_DOCUMENT_ID, android.provider.DocumentsContract.Document.COLUMN_DISPLAY_NAME),
-            null, null, null,
-        )?.use { c -> while (c.moveToNext()) found += c.getString(0) to c.getString(1) }
-        found.filter { it.second.startsWith("bible-study-auto-") }.sortedByDescending { it.second }.drop(KEEP_BACKUPS).forEach { (id, _) ->
-            runCatching {
-                android.provider.DocumentsContract.deleteDocument(app.contentResolver, android.provider.DocumentsContract.buildDocumentUriUsingTree(tree, id))
-            }
-        }
-    }
+    fun appBackups(): List<Path> =
+        appBackupDir.listFiles()?.filter { it.name.startsWith("bible-study-auto-") }?.sortedByDescending { it.name } ?: emptyList()
 
     // ---------- export (DATA-5) ----------
 
@@ -3330,40 +3261,40 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         return "${text(p.version).book(p.book).name} ${p.chapter} (${p.version})"
     }
 
-    fun restore(uri: Uri) {
+    fun restore(uri: PickedFile) {
         viewModelScope.launch {
             val ok = withContext(dbDispatcher) {
                 runCatching {
-                    val app = getApplication<Application>()
-                    val tmp = File(app.cacheDir, "restore").apply { deleteRecursively(); mkdirs() }
-                    app.contentResolver.openInputStream(uri)?.use { input ->
-                        ZipInputStream(input).use { zip ->
-                            while (true) {
-                                val e = zip.nextEntry ?: break
-                                val name = e.name
-                                val safe = name == "userdata.db" ||
-                                    ((name.startsWith("images/") || name.startsWith("bibles/")) && !name.contains("..") && name.count { it == '/' } == 1)
-                                if (!e.isDirectory && safe) {
-                                    val out = File(tmp, name)
-                                    out.parentFile?.mkdirs()
-                                    out.outputStream().use { zip.copyTo(it) }
-                                }
+                    val tmp = (ctx.cacheDir / "restore").apply { deleteRecursively() }.mkdirs()
+                    // Copied in first: a zip is read from its directory at the end.
+                    val zipFile = ctx.cacheDir / "restore.zip"
+                    host.open(uri).use { input -> zipFile.sink().use { it.writeAll(input) } }
+                    run {
+                        Zip.readFile(zipFile) { name, isDirectory, data ->
+                            val safe = name == "userdata.db" ||
+                                ((name.startsWith("images/") || name.startsWith("bibles/")) && !name.contains("..") && name.count { it == '/' } == 1)
+                            if (!isDirectory && safe) {
+                                val out = tmp / name
+                                out.parent?.mkdirs()
+                                out.sink().use { it.writeAll(data) }
                             }
+                            true
                         }
-                    } ?: error("Couldn't read file")
-                    val newDb = File(tmp, "userdata.db")
+                    }
+                    val newDb = tmp / "userdata.db"
                     require(newDb.exists()) { "Not an Ink & Word backup" }
                     user.close()
-                    val dbFile = app.getDatabasePath(UserDb.NAME)
-                    File(dbFile.path + "-wal").delete()
-                    File(dbFile.path + "-shm").delete()
+                    val dbFile = ctx.getDatabasePath(UserDb.NAME)
+                    (dbFile.toString() + "-wal").toPath().delete()
+                    (dbFile.toString() + "-shm").toPath().delete()
                     newDb.copyTo(dbFile, overwrite = true)
                     imagesDir.listFiles()?.forEach { it.delete() }
-                    File(tmp, "images").listFiles()?.forEach { it.copyTo(File(imagesDir, it.name), overwrite = true) }
-                    File(tmp, "bibles/imported.json").takeIf { it.exists() }?.let {
-                        BibleRepository.restoreImported(app, it.readText(), File(tmp, "bibles"), bible.books)
+                    (tmp / "images").listFiles()?.forEach { it.copyTo(imagesDir / it.name, overwrite = true) }
+                    (tmp / "bibles" / "imported.json").takeIf { it.exists() }?.let {
+                        BibleRepository.restoreImported(ctx, it.readText(), tmp / "bibles", bible.books)
                     }
                     tmp.deleteRecursively()
+                    zipFile.delete()
                     com.biblestudy.app.data.Sync.markAllChanged(user.writableDatabase) // restored notes win when syncing
                     user.layers() to Unit
                 }
@@ -3430,31 +3361,31 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** This install, for naming its change files. A backup restored here doesn't bring another device's. */
     private val syncDevice: String = prefs.getString("syncDevice", null)
-        ?: java.util.UUID.randomUUID().toString().replace("-", "").take(12).also { prefs.edit { putString("syncDevice", it) } }
+        ?: randomHex(12).also { prefs.edit { putString("syncDevice", it) } }
 
     /** The tests' stand-in for Google Drive; null in the app. */
     var testSyncStore: com.biblestudy.app.data.SyncStore? = null
 
     /** Where sync asks Google for access; the screen shows Google's sign-in when it's needed. */
-    private val drive by lazy { DriveAuth(getApplication()) }
+    private val drive get() = host.drive
 
     /**
      * Turns sync on from Settings: asks for access to the app's own Drive folder ([signIn] shows
      * Google's screen the first time), then syncs.
      */
-    fun turnOnSync(signIn: (android.content.IntentSender) -> Unit) {
+    fun turnOnSync(signIn: (Any) -> Unit) {
         if (testSyncStore != null) { syncConnected(null); return }
         viewModelScope.launch {
-            when (val r = runCatching { drive.authorize() }.getOrElse { DriveAuth.Result.Failed(it.message ?: "unknown error") }) {
-                is DriveAuth.Result.Token -> syncConnected(r.token)
-                is DriveAuth.Result.NeedsSignIn -> signIn(r.intent)
-                is DriveAuth.Result.Failed -> { syncError = "Couldn't connect to Google Drive: ${r.reason}"; message = syncError }
+            when (val r = runCatching { drive.authorize() }.getOrElse { DriveSignIn.Result.Failed(it.message ?: "unknown error") }) {
+                is DriveSignIn.Result.Token -> syncConnected(r.token)
+                is DriveSignIn.Result.NeedsSignIn -> signIn(r.request)
+                is DriveSignIn.Result.Failed -> { syncError = "Couldn't connect to Google Drive: ${r.reason}"; message = syncError }
             }
         }
     }
 
     /** Google's sign-in screen came back. */
-    fun onSyncSignIn(data: android.content.Intent?) {
+    fun onSyncSignIn(data: Any?) {
         val token = runCatching { drive.tokenFrom(data) }.getOrNull()
         if (token == null) {
             message = "Google Drive wasn't connected."
@@ -3493,10 +3424,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             syncing = true
             try {
                 val store = testSyncStore ?: run {
-                    val t = token ?: when (val r = runCatching { drive.authorize() }.getOrElse { DriveAuth.Result.Failed(it.message ?: "offline") }) {
-                        is DriveAuth.Result.Token -> r.token
-                        is DriveAuth.Result.NeedsSignIn -> { syncNeedsSignIn = true; syncError = "Google needs you to allow access again."; return@launch }
-                        is DriveAuth.Result.Failed -> { syncError = "Couldn't reach Google Drive (${r.reason})."; return@launch }
+                    val t = token ?: when (val r = runCatching { drive.authorize() }.getOrElse { DriveSignIn.Result.Failed(it.message ?: "offline") }) {
+                        is DriveSignIn.Result.Token -> r.token
+                        is DriveSignIn.Result.NeedsSignIn -> { syncNeedsSignIn = true; syncError = "Google needs you to allow access again."; return@launch }
+                        is DriveSignIn.Result.Failed -> { syncError = "Couldn't reach Google Drive (${r.reason})."; return@launch }
                     }
                     com.biblestudy.app.data.DriveStore(t)
                 }
@@ -3504,7 +3435,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 // Off the database thread, so pages keep loading while it waits for Google Drive.
                 val result = withContext(Dispatchers.IO) { engine.sync() }
                 syncError = null; syncNeedsSignIn = false
-                lastSync = System.currentTimeMillis()
+                lastSync = nowMillis()
                 prefs.edit { putLong("lastSync", lastSync) }
                 if (result.changed) reloadUserData(keepUndo = true)
                 if (announce) message = when {
@@ -3533,7 +3464,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     /** A local number for a sketch page from another device, never one this device has used. */
-    private fun syncSketchId(db: android.database.sqlite.SQLiteDatabase): Long {
+    private fun syncSketchId(db: SqlDb): Long {
         val id = maxOf(prefs.getLong("nextSketch", 1L), com.biblestudy.app.data.Sync.maxSketchId(db) + 1)
         prefs.edit { putLong("nextSketch", id + 1) }
         return id
@@ -3564,7 +3495,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         prefs.edit { putBoolean("readyIdsAdopted", true) }
         val ready = sketches.filter { it.readyMade }
         if (ready.isEmpty()) return
-        val env = TemplateEnv(runCatching { LandsMap.load(getApplication()) }.getOrNull())
+        val env = TemplateEnv(runCatching { LandsMap.load(ctx) }.getOrNull())
         val top = 40f // where placeOnSketch starts on an empty page
         for (s in ready) runCatching {
             val t = SketchTemplates.all.getOrNull((s.created - 1).toInt()) ?: return@runCatching
@@ -3644,6 +3575,6 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     override fun onCleared() {
         sound.release()
         super.onCleared()
-        dbDispatcher.close()
+
     }
 }

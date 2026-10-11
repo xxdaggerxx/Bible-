@@ -11,7 +11,7 @@ import org.robolectric.RobolectricTestRunner
 
 @RunWith(RobolectricTestRunner::class)
 class RefLinksTest {
-    private val books = BibleRepository(ApplicationProvider.getApplicationContext(), BibleRepository.KJV).books
+    private val books = BibleRepository(com.biblestudy.app.platform.AndroidAppContext(ApplicationProvider.getApplicationContext()), BibleRepository.KJV).books
 
     private fun list(s: String) = RefLinks.parseList(s, books).map { s.substring(it.start, it.end) to it.passage }
     private fun find(s: String) = RefLinks.find(s, books).map { s.substring(it.start, it.end) to it.passage }

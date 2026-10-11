@@ -255,7 +255,7 @@ private fun NotesPane(vm: StudyViewModel, modifier: Modifier) {
 private fun ChristPane(vm: StudyViewModel, modifier: Modifier) {
     val context = androidx.compose.ui.platform.LocalContext.current
     val all by produceState(emptyList<com.biblestudy.app.data.ChristEntry>()) {
-        value = background { com.biblestudy.app.data.Christ.all(context) }
+        value = background { com.biblestudy.app.data.Christ.all(vm.ctx) }
     }
     var only by remember { mutableStateOf<Boolean?>(null) } // null: all; true: prophecies; false: pictures
     var shown by remember { mutableStateOf<Passage?>(null) }

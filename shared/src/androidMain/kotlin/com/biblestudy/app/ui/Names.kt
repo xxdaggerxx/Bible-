@@ -63,20 +63,18 @@ import com.biblestudy.app.data.Passage
 import com.biblestudy.app.model.VerseId
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import java.nio.ByteBuffer
-import java.nio.ByteOrder
 import kotlin.math.cos
 
 /** The Bible lands outline (assets/map/lands.bin, built by tools/build_map.py from Natural Earth). */
 class LandsMap(val land: List<FloatArray>, val lakes: List<FloatArray>, val rivers: List<FloatArray>) {
     companion object {
-        @Volatile private var cached: LandsMap? = null
+        @kotlin.concurrent.Volatile private var cached: LandsMap? = null
+        private val lock = com.biblestudy.app.platform.Lock()
 
-        fun load(context: Context): LandsMap = cached ?: synchronized(this) {
+        fun load(context: com.biblestudy.app.platform.AppContext): LandsMap = cached ?: com.biblestudy.app.platform.locked(lock) {
             cached ?: run {
-                val bytes = context.assets.open("map/lands.bin").use { it.readBytes() }
-                val b = ByteBuffer.wrap(bytes).order(ByteOrder.LITTLE_ENDIAN)
-                fun section() = List(b.int) { FloatArray(b.int * 2) { b.float } }
+                val b = okio.Buffer().apply { context.assets.open("map/lands.bin").use { writeAll(it) } }
+                fun section() = List(b.readIntLe()) { FloatArray(b.readIntLe() * 2) { Float.fromBits(b.readIntLe()) } }
                 LandsMap(section(), section(), section()).also { cached = it }
             }
         }
@@ -96,7 +94,7 @@ private val PIN = Color(0xFFC62828)
 @Composable
 fun PlaceMap(vm: StudyViewModel, place: NameEntry, modifier: Modifier = Modifier) {
     val context = LocalContext.current
-    val map by produceState<LandsMap?>(null) { value = background { LandsMap.load(context) } }
+    val map by produceState<LandsMap?>(null) { value = background { LandsMap.load(vm.ctx) } }
     val landmarks by produceState(emptyList<NameEntry>()) { value = background { vm.study.landmarks() } }
     val lat0 = place.lat ?: return
     val lon0 = place.lon ?: return

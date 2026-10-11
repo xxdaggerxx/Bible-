@@ -1,5 +1,6 @@
 package com.biblestudy.app.ui
 
+import okio.buffer
 import android.content.Intent
 import androidx.compose.animation.core.AnimationState
 import androidx.compose.animation.core.animateDecay
@@ -178,11 +179,11 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         }
         // Hard words (STD-23) and Bible aids (AID-1 to AID-12): the first mention of each in the chapter.
         val hard = if (!aidsOn.any) emptyMap() else background {
-            com.biblestudy.app.data.Aids.marks(vm.getApplication(), vm.study, v, b, c, data.verses.map { it.verse to it.text }, aidsOn)
+            com.biblestudy.app.data.Aids.marks(vm.ctx, vm.study, v, b, c, data.verses.map { it.verse to it.text }, aidsOn)
                 .mapValues { (_, l) -> l.map { it.range } }
         }
         // Verses that point to Christ (AID-13), in the Old Testament.
-        val christ = if (!christOn || b >= 40) emptySet() else background { com.biblestudy.app.data.Christ.verses(vm.getApplication(), b, c) }
+        val christ = if (!christOn || b >= 40) emptySet() else background { com.biblestudy.app.data.Christ.verses(vm.ctx, b, c) }
         // Side by side with another version of this book: mark where the wording differs (SPLIT-5).
         val diffs = if (other == null) emptyMap() else withContext(Dispatchers.Default) {
             val theirs = vm.text(other).chapter(b, c).associate { it.verse to it.text }
@@ -341,7 +342,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         }
         // Drawn on the main thread, like the screen, since drawing fills the view model's caches.
         val ok = runCatching {
-            vm.getApplication<android.app.Application>().contentResolver.openOutputStream(req.uri)?.use {
+            vm.host.create(req.uri).buffer().outputStream()?.use {
                 val v = com.biblestudy.app.data.BibleRepository.ALL.firstOrNull { b -> b.code == panel.version } ?: vm.bible.version
                 val footer = ChapterExport.footerFor(v, "${vm.bible.book(panel.book).name} ${panel.chapter}")
                 if (req.pdf) ChapterExport.pdf(it, g.width, g.height, footer, draw) else ChapterExport.png(it, g.width, g.height, footer, draw)

@@ -45,7 +45,7 @@ fun GlanceBar(vm: StudyViewModel, index: Int) {
     if (!vm.showGlance || Sketch.isSketch(panel.book)) return
     val b = panel.book
     val c = panel.chapter
-    val card by produceState<ChapterGlance?>(null, b, c) { value = background { Glance.get(vm.getApplication(), b, c) } }
+    val card by produceState<ChapterGlance?>(null, b, c) { value = background { Glance.get(vm.ctx, b, c) } }
     val g = card ?: return
     val open = vm.glanceOpen
     Surface(color = MaterialTheme.colorScheme.surfaceContainerLow) {

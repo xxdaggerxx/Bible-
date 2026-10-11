@@ -1,11 +1,10 @@
 package com.biblestudy.app.ui
 
-import android.content.Context
+import com.biblestudy.app.platform.AppContext
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.core.content.edit
 import com.biblestudy.app.data.AiChat
 import com.biblestudy.app.data.ChatResult
 import com.biblestudy.app.data.ChatService
@@ -15,8 +14,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import org.json.JSONArray
-import org.json.JSONObject
+import com.biblestudy.app.platform.JSONArray
+import com.biblestudy.app.platform.JSONObject
 
 /** Bible text sent to the chat (AI-6): a reference, its version and its words. */
 data class ChatPassage(val label: String, val text: String)
@@ -39,13 +38,13 @@ data class ChatEntry(
  * backups.
  */
 class ChatState(
-    context: Context,
+    context: AppContext,
     private val scope: CoroutineScope,
     /** Whether a text names a Bible passage (AI-8). */
     private val hasVerses: (String) -> Boolean,
 ) {
-    private val prefs = context.getSharedPreferences("ai_chat", Context.MODE_PRIVATE)
-    private val secret = context.getSharedPreferences("ai_key", Context.MODE_PRIVATE)
+    private val prefs = context.prefs("ai_chat")
+    private val secret = context.prefs("ai_key")
 
     /** Shows the chat bubble and the AI chat panel view. */
     var enabled by mutableStateOf(prefs.getBoolean("enabled", true))
@@ -70,7 +69,7 @@ class ChatState(
     var service: ChatService = AiChat.claude
 
     init {
-        runCatching { JSONArray(prefs.getString("entries", "[]")) }.getOrNull()?.let { a ->
+        runCatching { JSONArray(prefs.getString("entries", "[]")!!) }.getOrNull()?.let { a ->
             for (i in 0 until a.length()) entryFrom(a.getJSONObject(i))?.let { entries += it }
         }
     }

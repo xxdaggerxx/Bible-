@@ -6,8 +6,8 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import org.json.JSONArray
-import org.json.JSONObject
+import com.biblestudy.app.platform.JSONArray
+import com.biblestudy.app.platform.JSONObject
 
 /** What one of a tab's (at most two) panels shows (SPLIT-7). */
 sealed class Slot {
@@ -103,7 +103,7 @@ class TabState {
                 val ps = o.getJSONArray("panels")
                 for (i in 0 until minOf(ps.length(), 2)) {
                     val j = ps.getJSONObject(i)
-                    val (b, c, v) = place(j.optInt("b", 43), j.optInt("c", 3), j.optString("v", null))
+                    val (b, c, v) = place(j.optInt("b", 43), j.optInt("c", 3), (if (j.has("v")) j.optString("v") else null))
                     panels.add(PanelState(b, c).apply {
                         version = v
                         val t = j.optInt("t", 1)

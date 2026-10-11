@@ -4,6 +4,9 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import androidx.test.core.app.ApplicationProvider
 import com.biblestudy.app.data.DataSafety
+import com.biblestudy.app.platform.AndroidAppContext
+import com.biblestudy.app.platform.AndroidSqlDb
+import okio.Path.Companion.toOkioPath
 import com.biblestudy.app.data.UserDb
 import com.biblestudy.app.model.Bookmark
 import com.biblestudy.app.model.Highlight
@@ -38,6 +41,7 @@ import java.util.zip.ZipFile
 @RunWith(RobolectricTestRunner::class)
 class DataSafetyTest {
     private val app = ApplicationProvider.getApplicationContext<android.app.Application>()
+    private val ctx = AndroidAppContext(app)
     private val opened = ArrayList<UserDb>()
 
     @After
@@ -142,7 +146,7 @@ class DataSafetyTest {
         db.writableDatabase // runs any upgrade
         db.checkpoint()
         // Every table, column and value the old version wrote is still there (new columns may be added).
-        assertEquals(expected, dump(db.readableDatabase, columnsOf(expected)))
+        assertEquals(expected, dump((db.readableDatabase as AndroidSqlDb).db, columnsOf(expected)))
 
         // And the app reads it back the same.
         assertEquals(Content.layers, db.layers())
@@ -175,11 +179,11 @@ class DataSafetyTest {
     fun theFirstStartOfANewVersionBacksUpTheNotesBeforeOpeningThem() {
         install("2.10.0")
         val dir = File(app.filesDir, "safety-test").apply { deleteRecursively() }
-        val zip = DataSafety.beforeOpening(app, 999, "9.9.9", dir)
+        val zip = DataSafety.beforeOpening(ctx, 999, "9.9.9", dir.toOkioPath())?.toFile()
         assertNotNull(zip)
         assertEquals("bible-study-before-9.9.9.zip", zip!!.name)
         // Only once per version.
-        assertNull(DataSafety.beforeOpening(app, 999, "9.9.9", dir))
+        assertNull(DataSafety.beforeOpening(ctx, 999, "9.9.9", dir.toOkioPath())?.toFile())
 
         // The zip is an ordinary backup: the notes database, unchanged, and every picture.
         val out = File(app.cacheDir, "safety-unzip").apply { deleteRecursively(); mkdirs() }
@@ -193,7 +197,7 @@ class DataSafetyTest {
         assertArrayEquals(File(app.filesDir, "images/sketch-1.png").readBytes(), File(out, "images/sketch-1.png").readBytes())
 
         // A later version makes its own; only the newest few are kept.
-        for (v in 1000..1004) DataSafety.beforeOpening(app, v, "v$v", dir)?.setLastModified(v * 1000L)
+        for (v in 1000..1004) DataSafety.beforeOpening(ctx, v, "v$v", dir.toOkioPath())?.toFile()?.setLastModified(v * 1000L)
         assertEquals(DataSafety.KEEP, dir.listFiles()!!.count { it.name.startsWith(DataSafety.PREFIX) })
     }
 
@@ -201,7 +205,7 @@ class DataSafetyTest {
     fun aNewInstallHasNothingToBackUp() {
         app.getDatabasePath(UserDb.NAME).delete()
         val dir = File(app.filesDir, "safety-new").apply { deleteRecursively() }
-        assertNull(DataSafety.beforeOpening(app, 999, "9.9.9", dir))
+        assertNull(DataSafety.beforeOpening(ctx, 999, "9.9.9", dir.toOkioPath())?.toFile())
         assertTrue(!dir.exists() || dir.listFiles()!!.isEmpty())
     }
 

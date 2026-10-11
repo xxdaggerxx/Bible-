@@ -10,8 +10,16 @@ import androidx.activity.viewModels
 import com.biblestudy.app.ui.StudyApp
 import com.biblestudy.app.ui.StudyViewModel
 import com.biblestudy.app.ui.StylusState
+import com.biblestudy.app.platform.AndroidHost
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewmodel.initializer
+import androidx.lifecycle.viewmodel.viewModelFactory
 
 class MainActivity : ComponentActivity() {
+    /** The shared app's view model, on Android's [AndroidHost] (also what ViewModelProvider(this) makes). */
+    override val defaultViewModelProviderFactory: ViewModelProvider.Factory
+        get() = viewModelFactory { initializer { StudyViewModel(AndroidHost(application)) } }
+
     private val vm: StudyViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {

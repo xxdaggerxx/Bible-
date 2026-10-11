@@ -44,6 +44,9 @@ import com.biblestudy.app.model.SearchScope
 import com.biblestudy.app.model.Tool
 import com.biblestudy.app.ui.Page
 import com.biblestudy.app.ui.StudyViewModel
+import okio.source
+import com.biblestudy.app.platform.delete
+import com.biblestudy.app.platform.length
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
@@ -1001,7 +1004,7 @@ class FeatureTest {
         compose.onNodeWithText("About Romans").assertExists()
 
         // A key verse opens its card over the window, not behind it on the screen underneath.
-        val key = com.biblestudy.app.data.BookIntros.get(compose.activity, 45)!!.keyVerses.first()
+        val key = com.biblestudy.app.data.BookIntros.get(vm.ctx, 45)!!.keyVerses.first()
         compose.onNodeWithText("Connections").performScrollTo() // just below the key verses
         compose.onNodeWithText(vm.passageLabel(key)).performClick()
         compose.waitForIdle()
@@ -1465,7 +1468,7 @@ class FeatureTest {
         compose.onNodeWithText("Picture: paste from clipboard").performClick()
         assertTrue(vm.message.orEmpty().contains("no picture on the clipboard"))
         // The camera gets a file it can write to through the app's FileProvider.
-        val uri = vm.newCameraUri()
+        val uri = android.net.Uri.parse(vm.newCameraUri().id)
         assertEquals("content", uri.scheme)
         assertEquals(compose.activity.packageName + ".files", uri.authority)
     }
@@ -2167,7 +2170,7 @@ class FeatureTest {
             .onFailure { snap("148-ai-commentary-failed"); throw AssertionError("message=${vm.message} commentary=${vm.commentaryAt(0)}", it) }
         assertEquals(com.biblestudy.app.data.Commentaries.AI, vm.commentaryAt(0))
         // Every note names its sources.
-        val notes = com.biblestudy.app.data.Commentaries.chapter(vm.getApplication(), com.biblestudy.app.data.Commentaries.AI, 8, 1)
+        val notes = com.biblestudy.app.data.Commentaries.chapter(vm.ctx, com.biblestudy.app.data.Commentaries.AI, 8, 1)
         assertTrue(notes.size >= 15)
         assertTrue(notes.all { "(Sources: " in it.body })
         assertEquals(22, notes.flatMap { (it.start % 1000)..(it.end % 1000) }.toSet().size)
@@ -2188,7 +2191,7 @@ class FeatureTest {
         waitForLoaded()
         runCatching { waitFor(60_000) { compose.onAllNodesWithText("Ask yourself", substring = true).fetchSemanticsNodes().isNotEmpty() } }
             .onFailure { snap("150-reflections-failed"); throw AssertionError("message=${vm.message}", it) }
-        val r = com.biblestudy.app.data.Commentaries.chapter(vm.getApplication(), com.biblestudy.app.data.Commentaries.REFLECTIONS, 19, 23)
+        val r = com.biblestudy.app.data.Commentaries.chapter(vm.ctx, com.biblestudy.app.data.Commentaries.REFLECTIONS, 19, 23)
         assertTrue(r.isNotEmpty())
         assertTrue(r.all { "Written by AI from: " in it.body && "\nPray\n" in it.body && "Read: [[" in it.body })
         // Not in the commentary menu: it has a view of its own.
@@ -2327,7 +2330,7 @@ class FeatureTest {
         val dir = File(compose.activity.cacheDir, "export").apply { mkdirs() }
         for (pdf in listOf(false, true)) {
             val out = File(dir, if (pdf) "john3.pdf" else "john3.png").apply { delete() }
-            compose.runOnUiThread { vm.exportRequest = com.biblestudy.app.ui.ExportRequest(android.net.Uri.fromFile(out), pdf) }
+            compose.runOnUiThread { vm.exportRequest = com.biblestudy.app.ui.ExportRequest(com.biblestudy.app.platform.PickedFile(android.net.Uri.fromFile(out).toString()), pdf) }
             waitFor(10_000) { vm.exportRequest == null }
             compose.waitForIdle()
             // Robolectric's PdfDocument writes nothing, so only the picture's bytes can be checked here.
@@ -2394,7 +2397,7 @@ class FeatureTest {
         // The ESV test passages (src/test/resources/import/esv), imported as the user would.
         val files = File(javaClass.classLoader!!.getResource("import/esv")!!.toURI()).listFiles()!!.sorted()
         compose.runOnUiThread {
-            vm.importBible(files.map { it.name }, { i -> files[i].inputStream() }, "ESV", "English Standard Version", "ESV test passages")
+            vm.importBible(files.map { it.name }, { i -> files[i].inputStream().source() }, "ESV", "English Standard Version", "ESV test passages")
         }
         waitFor(180_000) { !vm.importing }
         assertEquals("ESV added, with word studies. Pick it from the version menu.", vm.message)
@@ -2716,7 +2719,7 @@ class FeatureTest {
         val file = File(dir, "tst.usfm")
         file.writeText("\\id JHN\n\\h John\n\\c 3\n\\p\n\\v 16 Imported words about lovingkindness.\n\\v 17 More imported words.\n")
         compose.runOnUiThread {
-            vm.importBible(listOf("tst.usfm"), { file.inputStream() }, "tst", "Test Version", "Test copyright.")
+            vm.importBible(listOf("tst.usfm"), { file.inputStream().source() }, "tst", "Test Version", "Test copyright.")
         }
         waitFor(15_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "TST" } && !vm.importing }
         assertEquals("Imported words about lovingkindness.", vm.text("TST").verseText(43003016))
@@ -2915,7 +2918,7 @@ class FeatureTest {
         val dir = File(compose.activity.cacheDir, "export").apply { mkdirs() }
         val sizes = vm.layers.map { l ->
             val out = File(dir, "layer${l.id}.png").apply { delete() }
-            compose.runOnUiThread { vm.exportRequest = com.biblestudy.app.ui.ExportRequest(android.net.Uri.fromFile(out), false, l.id) }
+            compose.runOnUiThread { vm.exportRequest = com.biblestudy.app.ui.ExportRequest(com.biblestudy.app.platform.PickedFile(android.net.Uri.fromFile(out).toString()), false, l.id) }
             waitFor(10_000) { vm.exportRequest == null }
             compose.waitForIdle()
             out.readBytes().contentHashCode()
@@ -2983,16 +2986,16 @@ class FeatureTest {
         val dir = File(compose.activity.cacheDir, "import").apply { mkdirs() }
         val file = File(dir, "bak.usfm")
         file.writeText("\\id JHN\n\\c 3\n\\p\n\\v 16 Backed up words.\n")
-        compose.runOnUiThread { vm.importBible(listOf("bak.usfm"), { file.inputStream() }, "BAK", "Backup Test", "Test.") }
+        compose.runOnUiThread { vm.importBible(listOf("bak.usfm"), { file.inputStream().source() }, "BAK", "Backup Test", "Test.") }
         waitFor(15_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "BAK" } && !vm.importing }
         val zip = File(dir, "backup.zip").apply { delete() }
-        compose.runOnUiThread { vm.backup(android.net.Uri.fromFile(zip)) }
+        compose.runOnUiThread { vm.backup(com.biblestudy.app.platform.PickedFile(android.net.Uri.fromFile(zip).toString())) }
         waitFor(15_000) { zip.length() > 0 && vm.message?.contains("ack") == true }
         val names = java.util.zip.ZipFile(zip).use { z -> z.entries().toList().map { it.name } }
         assertTrue(names.toString(), "bibles/imported.json" in names && names.any { it.startsWith("bibles/") && it.endsWith(".db") })
         compose.runOnUiThread { vm.removeBible("BAK") }
         assertTrue(com.biblestudy.app.data.BibleRepository.ALL.none { it.code == "BAK" })
-        compose.runOnUiThread { vm.restore(android.net.Uri.fromFile(zip)) }
+        compose.runOnUiThread { vm.restore(com.biblestudy.app.platform.PickedFile(android.net.Uri.fromFile(zip).toString())) }
         waitFor(15_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "BAK" } }
         assertEquals("Backed up words.", vm.text("BAK").verseText(43003016))
         compose.runOnUiThread { vm.removeBible("BAK") }
@@ -3330,7 +3333,7 @@ class FeatureTest {
     @Test
     fun oldTestamentVersesPointToChrist() {
         // AID-13: a gold line under Old Testament verses that point to Christ; tap one for how.
-        val app: android.content.Context = vm.getApplication()
+        val app = vm.ctx
         assertEquals((1..12).toSet(), com.biblestudy.app.data.Christ.verses(app, 23, 53))
         assertEquals(setOf(14), com.biblestudy.app.data.Christ.verses(app, 23, 7))
         assertTrue(com.biblestudy.app.data.Christ.verses(app, 43, 3).isEmpty()) // never in the New Testament
@@ -3375,7 +3378,7 @@ class FeatureTest {
     @Test
     fun hardWordsAreMarkedAndExplained() {
         // STD-23: hard words get a dotted line the first time they come; tapping one explains it.
-        val app: android.content.Context = vm.getApplication()
+        val app = vm.ctx
         val kjv = vm.text("KJV").chapter(43, 3).map { it.verse to it.text }
         val marks = com.biblestudy.app.data.HardWords.marks(app, "KJV", kjv)
         val marked = marks.flatMap { (v, rs) -> rs.map { r -> kjv.first { it.first == v }.second.substring(r).lowercase() } }
@@ -3466,7 +3469,7 @@ class FeatureTest {
             assertTrue(vm.study.redLetters("NIV", 43, 3, verses)[3]!!.isNotEmpty())
             assertTrue(vm.study.paragraphStarts("NIV", 43, 3).containsAll(listOf(1, 3)))
             assertTrue(vm.study.strongs("NIV", com.biblestudy.app.model.VerseId.of(43, 3, 16)).filterNotNull().size >= 5)
-            val app: android.content.Context = vm.getApplication()
+            val app = vm.ctx
             val hard = com.biblestudy.app.data.HardWords.marks(app, "NIV", verses.toList())
             assertTrue(hard.isNotEmpty())
             var hits = emptyList<com.biblestudy.app.model.SearchHit>()
@@ -3632,7 +3635,7 @@ class FeatureTest {
                 db.execSQL("DELETE FROM meta WHERE key = 'nltEmptyFixed'")
                 db.execSQL("INSERT OR REPLACE INTO fetched(book, chapter, at, read_at) VALUES(52, 1, 1, 1)")
                 db.execSQL("INSERT OR REPLACE INTO fetched(book, chapter, at, read_at) VALUES(58, 4, 1, 1)")
-                val old = com.biblestudy.app.data.OnlineBible("NLT", com.biblestudy.app.data.Nlt.ID, db)
+                val old = com.biblestudy.app.data.OnlineBible("NLT", com.biblestudy.app.data.Nlt.ID, com.biblestudy.app.platform.AndroidSqlDb(db))
                 assertFalse(old.isSaved(52, 1))
                 assertFalse(old.isSaved(58, 4))
                 assertTrue(old.isSaved(43, 3))
@@ -3929,7 +3932,7 @@ class FeatureTest {
     fun bibleAidsMarkPeoplePlacesCustomsAndSymbols() {
         // AID-1 to AID-12: people and places, customs and feasts, symbols and numbers, marked like
         // hard words (first mention in a chapter) and explained at the top of the verse pop-up.
-        val app: android.content.Context = vm.getApplication()
+        val app = vm.ctx
         val all = com.biblestudy.app.data.AidSwitches(hard = true, names = true, customs = true, symbols = true)
         fun marked(version: String, b: Int, c: Int, on: com.biblestudy.app.data.AidSwitches = all): List<Pair<String, com.biblestudy.app.data.AidKind>> {
             val verses = vm.text(version).chapter(b, c).map { it.verse to it.text }
@@ -4028,7 +4031,7 @@ class FeatureTest {
         com.biblestudy.app.data.YouVersion.http = { _ -> throw java.io.IOException("offline") }
         com.biblestudy.app.data.Nlt.http = { url -> if ("ref=John.3&" in url) 200 to nltJohn3 else 200 to "<html><body>No passage</body></html>" }
         com.biblestudy.app.data.Esv.http = { url -> if ("q=43003001" in url) 200 to esvJohn3 else 404 to "{}" }
-        val app: android.content.Context = vm.getApplication()
+        val app = vm.ctx
         val all = com.biblestudy.app.data.AidSwitches(hard = true, names = true, customs = true, symbols = true)
         try {
             compose.runOnUiThread { vm.loadOnlineBibles() }
