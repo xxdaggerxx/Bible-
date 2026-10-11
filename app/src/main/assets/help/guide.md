@@ -389,6 +389,7 @@ Your notes can be the same on your phone and your tablet, through your own Googl
 - **Back up:** *⋮ → Back up my notes…* saves everything (ink, highlights, pictures, notes, sketch pages, layers, reading stats and imported Bibles) in one .zip file.
 - **Automatic backups:** *Settings → Backup* makes one daily or weekly, keeping the newest 5, in a folder you choose (e.g. a synced Google Drive folder).
 - **Restore:** *Settings → Backup → Restore from backup…* puts a backup back on this tablet or a new one. It replaces what's there. With sync on, the restored notes then go to your other devices too.
+- **Before each update:** the first time a new version of the app starts, it saves your notes and pictures as a backup first (*bible-study-before-…zip*, in the same Backups folder as automatic backups; the newest 3 are kept). If an update ever went wrong, that backup can be restored.
 
 ## Settings
 

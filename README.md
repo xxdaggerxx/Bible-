@@ -1,4 +1,4 @@
-# Ink & Word — version 2.9.0
+# Ink & Word — version 2.10.2
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet, and since version 2.0 on Android phones too, drawing with a finger.
 
@@ -71,6 +71,24 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 2.10.2
+
+- **Your notes are saved before every update.** The first time a new version starts, before it opens your notes, it saves them and your pictures as an ordinary backup, *bible-study-before-2.10.2.zip*, in the app's Backups folder (*Android/data/com.biblestudy.app/files/Backups*, where automatic backups go when no folder is chosen). The newest 3 are kept. It takes a moment on the first start after an update. If Android ever finds the notes database damaged, the damaged file is copied to the same folder before Android removes it.
+- **Behind the scenes: a test with real notes.** The tests now hold a notes database written by version 2.10.0, with something in every kind of note (ink on the words and in the margins, highlights, pictures, text boxes, typed notes, bookmarks, layers, tags, sketch pages, reading stats and sync records). Every new version must open it and read every row back unchanged, so an update can't lose notes unnoticed. This is the first step of bringing the app to iPad, iPhone, Windows, Mac and Linux (see *Plans* below).
+- Known gaps: the Backups folder in *Android/data* can't be opened from *Restore from backup…* on Android 11 and later (Android hides it from other apps); copy the file out with a computer, or choose a backup folder of your own in *Settings → Backup* for automatic backups.
+
+## Plans: iPad, iPhone, Windows, Mac and Linux
+
+The app is written in Kotlin with Jetpack Compose. Compose Multiplatform runs the same code on iOS and on desktops, so the app is being moved, step by step, to one code base:
+
+1. **Notes kept safe** (2.10.2): the real-notes test and the backup before each update.
+2. **Data code without Android parts**: the database, JSON and internet code made to work on every platform, with the same files and formats. Android keeps opening the notes the way it always has.
+3. **A shared module** holding the app, with the Android app as a thin shell. Same app ID and signing key, so it updates over the installed app.
+4. **Desktop**: Windows, Mac and Linux.
+5. **iPad, then iPhone**, with Apple Pencil.
+
+Notes move between devices with sync (Google Drive) or a backup zip; nothing is moved off the Android tablet. A web version was considered and left out: the 145 MB of Bibles and commentaries, notes that a browser can clear, and online Bible keys that would be public.
 
 ## New in version 2.10.1
 

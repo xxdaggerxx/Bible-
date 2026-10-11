@@ -463,6 +463,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val o = text(code).online ?: return null
         return o.savedChapters() to bible.books.filter { it.id in o.books }.sumOf { it.chapters }
     }
+    // Before this version first opens the notes, they're saved as a backup (DATA-8).
+    init { com.biblestudy.app.data.DataSafety.beforeOpening(app, com.biblestudy.app.BuildConfig.VERSION_CODE, com.biblestudy.app.BuildConfig.VERSION_NAME) }
     val user = UserDb(app)
     private val imagesDir = File(app.filesDir, "images").apply { mkdirs() }
 

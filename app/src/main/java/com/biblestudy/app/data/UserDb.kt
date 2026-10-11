@@ -30,7 +30,11 @@ data class ChapterReading(val book: Int, val chapter: Int, val seconds: Int, val
 data class MarkRow(val book: Int, val chapter: Int, val verse: Int, val layerId: Long, val start: Int = -1)
 
 /** All of the user's own data: layers, ink, highlights, images, notes and bookmarks. */
-class UserDb(context: Context, name: String = NAME) : SQLiteOpenHelper(context, name, null, 11) {
+class UserDb(context: Context, name: String = NAME) : SQLiteOpenHelper(
+    context, name, null, 11,
+    // A damaged database is copied to the Backups folder before Android deletes it (DATA-8).
+    { db -> DataSafety.keepDamaged(context, db.path); android.database.DefaultDatabaseErrorHandler().onCorruption(db) },
+) {
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(
