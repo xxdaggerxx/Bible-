@@ -1,6 +1,4 @@
 package com.biblestudy.app.data
 
-// TODO(iOS): the same request as AiChatSdk, as an HTTP call (the Java SDK can't run on iOS).
-actual fun claudeChat(baseUrl: String?): ChatService = ChatService { _, _, _, _, _, _ ->
-    ChatResult.Failed("The AI chat isn't available on iPad and iPhone yet.")
-}
+/** On iOS there's no Anthropic SDK that runs, so the chat calls the Claude API over HTTP. */
+actual fun claudeChat(baseUrl: String?): ChatService = AiChatHttp.service(baseUrl)

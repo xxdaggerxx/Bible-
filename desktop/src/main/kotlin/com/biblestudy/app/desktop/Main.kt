@@ -11,7 +11,7 @@ import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
 import com.biblestudy.app.AppConfig
 import com.biblestudy.app.platform.DesktopHost
-import com.biblestudy.app.platform.DesktopPrefs
+import com.biblestudy.app.platform.FilePrefs
 import com.biblestudy.app.ui.StudyApp
 import com.biblestudy.app.ui.StudyViewModel
 import kotlinx.coroutines.delay
@@ -46,7 +46,7 @@ fun main() {
                     vm.savePrefs()
                     scope.launch {
                         withTimeoutOrNull(60_000) { listOfNotNull(vm.autoBackupIfDue(), vm.syncNow()).joinAll() }
-                        DesktopPrefs.flush()
+                        FilePrefs.flush()
                         exitApplication()
                     }
                 }

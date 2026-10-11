@@ -1,3 +1,5 @@
+import java.util.Properties
+
 /**
  * The app itself, shared by every platform (PLAT-1): Android (phones and tablets), desktops
  * (Windows, Mac, Linux) and iOS (iPad, iPhone). Platform parts live in androidMain, desktopMain
@@ -9,6 +11,39 @@ plugins {
     id("org.jetbrains.kotlin.plugin.compose")
     id("org.jetbrains.kotlin.plugin.serialization")
     id("org.jetbrains.compose")
+}
+
+/** The version (from app/build.gradle.kts) and online Bible keys (youversion.properties), for iOS. */
+val generateIosBuildInfo by tasks.registering {
+    val out = layout.buildDirectory.dir("generated/iosBuildInfo")
+    val appText = rootProject.file("app/build.gradle.kts").readText()
+    val keys = Properties().apply {
+        rootProject.file("youversion.properties").takeIf { it.exists() }?.inputStream()?.use { load(it) }
+    }
+    fun key(name: String, env: String) = (keys.getProperty(name) ?: System.getenv(env) ?: "").trim()
+    val values = mapOf(
+        "VERSION_NAME" to Regex("versionName = \"([^\"]+)\"").find(appText)!!.groupValues[1],
+        "YOUVERSION_KEY" to key("key", "YOUVERSION_KEY"),
+        "ESV_KEY" to key("esv", "ESV_KEY"),
+        "NLT_KEY" to key("nlt", "NLT_KEY"),
+    )
+    val code = Regex("versionCode = (\\d+)").find(appText)!!.groupValues[1]
+    inputs.property("values", values)
+    inputs.property("code", code)
+    outputs.dir(out)
+    doLast {
+        val f = out.get().file("com/biblestudy/app/IosBuildInfo.kt").asFile
+        f.parentFile.mkdirs()
+        f.writeText(buildString {
+            appendLine("package com.biblestudy.app")
+            appendLine()
+            appendLine("/** Made by the build: the version and keys. */")
+            appendLine("internal object IosBuildInfo {")
+            appendLine("    const val VERSION_CODE = $code")
+            for ((k, v) in values) appendLine("    const val $k = \"${v.replace("\\", "\\\\").replace("\"", "\\\"").replace("$", "\\$")}\"")
+            appendLine("}")
+        })
+    }
 }
 
 kotlin {
@@ -69,6 +104,8 @@ kotlin {
         }
         // Desktop and iOS share SQLite bundled with the app (Android uses its own).
         getByName("bundledMain").dependencies { implementation("androidx.sqlite:sqlite-bundled:2.5.1") }
+        // iOS gets the version and keys from a file made by the build (Android has BuildConfig).
+        iosMain.get().kotlin.srcDir(generateIosBuildInfo)
         val desktopTest by getting {
             dependencies {
                 implementation(kotlin("test"))

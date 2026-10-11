@@ -3,7 +3,7 @@ package com.biblestudy.app
 import androidx.compose.ui.graphics.Color
 import com.biblestudy.app.data.UserDb
 import com.biblestudy.app.platform.DesktopAppContext
-import com.biblestudy.app.platform.DesktopPrefs
+import com.biblestudy.app.platform.FilePrefs
 import com.biblestudy.app.platform.SqlCursor
 import com.biblestudy.app.platform.SqlDb
 import com.biblestudy.app.ui.ChapterExport
@@ -45,7 +45,7 @@ class DesktopTest {
             putString("version", "KJV"); putInt("book", 43); putBoolean("dark", true)
             putFloat("size", 1.5f); putStringSet("tags", setOf("a", "b"))
         }
-        val again = DesktopPrefs(home.toOkioPath() / "settings" / "study.json")
+        val again = FilePrefs(home.toOkioPath() / "settings" / "study.json")
         assertEquals("KJV", again.getString("version", null))
         assertEquals(43, again.getInt("book", 0))
         assertEquals(true, again.getBoolean("dark", false))
