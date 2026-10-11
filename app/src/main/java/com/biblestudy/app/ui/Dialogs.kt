@@ -1064,7 +1064,7 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
         Text(
             when {
                 !vm.verseCommentary -> "Cross-references: OpenBible.info (CC BY)"
-                cid == com.biblestudy.app.data.Commentaries.AI -> "Written by AI from trusted sources. Check anything important against the other commentaries."
+                cid == com.biblestudy.app.data.Commentaries.AI -> "Summarised from popular commentators. Check anything important against the other commentaries."
                 else -> "${cInfo.name}, ${cInfo.author} (public domain)"
             },
             style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,

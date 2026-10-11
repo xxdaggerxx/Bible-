@@ -44,11 +44,11 @@ object Commentaries {
     const val REFLECTIONS = "reflections"
 
     val reflections = CommentaryInfo(
-        REFLECTIONS, "Reflections", "Reflections", "Written by AI from existing devotionals", "2026", "Whole Bible", null,
+        REFLECTIONS, "Ink & Word Reflections", "Ink & Word Reflections", "Summarised from popular devotionals", "2026", "Whole Bible", null,
         listOf(
             "What" to "Short devotional reflections on Bible passages: a whole story or teaching, or a single saying such as \"I am the vine\". Each has Read, a few short paragraphs to reflect on, questions to ask yourself and a prayer.",
-            "Who" to "Written by AI for Ink & Word (Google's Gemini, through OpenRouter), not by a person. Every reflection is drawn only from existing devotionals, named under it: the classics of Charles Spurgeon (Morning and Evening, Faith's Checkbook) and F. B. Meyer (Our Daily Homily), and modern devotionals from ministries such as Desiring God, Ligonier, Our Daily Bread, In Touch, Grace to You and Crosswalk. Modern devotionals are summarised in Ink & Word's own words, not copied.",
-            "Checked" to "A second AI pass checks each paragraph against the devotionals it names; paragraphs it can't find there are removed. Sources are kept only if they really are on the passage.",
+            "Who" to "Summarised by computer for Ink & Word (Google's Gemini, through OpenRouter), not written by a person. Every reflection is drawn only from existing devotionals, named under it: the classics of Charles Spurgeon (Morning and Evening, Faith's Checkbook) and F. B. Meyer (Our Daily Homily), and modern devotionals from ministries such as Desiring God, Ligonier, Our Daily Bread, In Touch, Grace to You and Crosswalk. Modern devotionals are summarised in Ink & Word's own words, not copied.",
+            "Checked" to "A second pass checks each paragraph against the devotionals it names; paragraphs it can't find there are removed. Sources are kept only if they really are on the passage.",
             "No repeats" to "Reflections may overlap but don't repeat: a saying with its own reflection is left to it by the reflection on the whole passage, and they link to each other (See also). Parallel accounts in the Gospels share one reflection.",
             "Best for" to "Quiet time with a passage you're reading. It is devotional, not a commentary: check anything important against Scripture and the sources named.",
         ),
@@ -155,9 +155,9 @@ object Commentaries {
             ),
         ),
         CommentaryInfo(
-            AI, "Ink & Word AI Commentary", "Ink & Word AI Commentary", "Written by AI from trusted sources", "2026", "Whole Bible", null,
+            AI, "Ink & Word Commentary", "Ink & Word Commentary", "Summarised from popular commentators", "2026", "Whole Bible", null,
             listOf(
-                "Who" to "Written by AI when the app was built, not by a person: Anthropic's Claude for the first part, then Google's Gemini (writing) and DeepSeek (research). Every point names its sources, and a check removed any point whose source couldn't be confirmed.",
+                "Who" to "Summarised by computer when the app was built, not written by a person: Anthropic's Claude for the first part, then Google's Gemini (writing) and DeepSeek (research). Every point names its sources, and a check removed any point whose source couldn't be confirmed.",
                 "What" to "A short note on every verse in plain, everyday English, drawn from the commentaries in this app and from trusted websites: Reformed, Baptist, Methodist, Pentecostal and charismatic, Lutheran and evangelical teachers (such as Ligonier, Desiring God, Grace to You, Enduring Word, the Wesley Center and the Assemblies of God).",
                 "Where Christians differ" to "On verses where Protestant churches disagree (on baptism or spiritual gifts, for example), a short section gives each church's view, fairly and without taking sides.",
                 "Other views" to "Where well known, a short section gives other views: modern scholarship, Catholic and Orthodox readings, and debated popular teaching. They're labelled and kept apart from the main note, which always gives the traditional reading.",
@@ -167,7 +167,7 @@ object Commentaries {
     )
 
     /**
-     * The commentaries in the order the menus show them: the Ink & Word AI Commentary first, the easiest for
+     * The commentaries in the order the menus show them: the Ink & Word Commentary first, the easiest for
      * lay readers (STD-21). [all] keeps its order, since writing on a commentary is filed by it.
      */
     val menu: List<CommentaryInfo> get() = all.sortedBy { if (it.id == AI) 0 else 1 }
@@ -187,7 +187,10 @@ object Commentaries {
     }
 
     /** Where a packed commentary is unpacked; the version changes when the bundled data does. */
-    private fun file(context: Context, id: String) = File(context.filesDir, "commentaries/$id-v1.db")
+    private fun file(context: Context, id: String) = File(context.filesDir, "commentaries/$id-v${versions[id] ?: 1}.db")
+
+    /** Bundled data changed since it first shipped: 2 for Reflections' "Summarised from:" line (2.9.1). */
+    private val versions = mapOf(REFLECTIONS to 2)
 
     fun isUnpacked(context: Context, id: String) = id == CONCISE || file(context, id).exists()
 

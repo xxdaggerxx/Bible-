@@ -1168,17 +1168,17 @@ class FeatureTest {
         // First in the menus; the stored order (which files writing on commentaries) is unchanged.
         assertEquals(com.biblestudy.app.data.Commentaries.AI, com.biblestudy.app.data.Commentaries.menu.first().id)
         assertEquals(com.biblestudy.app.data.Commentaries.CONCISE, com.biblestudy.app.data.Commentaries.all.first().id)
-        // As for a new reader: the AI Commentary, and the pop-up on its Commentary tab.
+        // As for a new reader: the Ink & Word Commentary, and the pop-up on its Commentary tab.
         compose.runOnUiThread { vm.chooseCommentary(com.biblestudy.app.data.Commentaries.AI); vm.showVerseCommentary(true); vm.goTo(0, 43, 3, remember = false) }
         waitForLoaded()
         compose.runOnUiThread { vm.openVerse(43, 3, 16) }
         waitFor(60_000) { compose.onAllNodesWithTag("verseCommentary").fetchSemanticsNodes().isNotEmpty() }
-        compose.onNodeWithText("Ink & Word AI Commentary").assertExists()
+        compose.onNodeWithText("Ink & Word Commentary").assertExists()
         snap("155-ai-commentary-first")
-        // Its menu lists the AI Commentary first.
+        // Its menu lists the Ink & Word Commentary first.
         compose.onNodeWithContentDescription("Choose a commentary").performClick()
         val first = compose.onAllNodesWithText("Whole Bible", substring = true).fetchSemanticsNodes().first()
-        val aiRow = compose.onAllNodesWithText("Ink & Word AI Commentary").fetchSemanticsNodes().last()
+        val aiRow = compose.onAllNodesWithText("Ink & Word Commentary").fetchSemanticsNodes().last()
         assertTrue(aiRow.boundsInRoot.top <= first.boundsInRoot.top)
         compose.runOnUiThread { vm.verseSheet = null; vm.chooseCommentary(com.biblestudy.app.data.Commentaries.CONCISE); vm.showVerseCommentary(false) }
         compose.waitForIdle()
@@ -2128,7 +2128,7 @@ class FeatureTest {
 
     @Test
     fun aLinkedCommentaryFollowsThePageAfterAVerseWasTapped() {
-        // Reported: at Matthew 25:1 the AI Commentary stayed on verse 29, tapped earlier (STD-18).
+        // Reported: at Matthew 25:1 the Ink & Word Commentary stayed on verse 29, tapped earlier (STD-18).
         compose.runOnUiThread { vm.setCommentary(0, com.biblestudy.app.data.Commentaries.AI); vm.sidePane = PaneKind.COMMENTARY; vm.goTo(0, 40, 25, 29, remember = false) }
         waitForLoaded()
         compose.runOnUiThread { vm.openVerse(40, 25, 29) }
@@ -2151,7 +2151,7 @@ class FeatureTest {
         compose.runOnUiThread { vm.goTo(0, 8, 1, 16, remember = false); vm.setCommentary(0, com.biblestudy.app.data.Commentaries.CONCISE); vm.sidePane = PaneKind.COMMENTARY }
         waitForLoaded()
         compose.onNodeWithContentDescription("Choose a commentary").performClick()
-        compose.onNodeWithText("Ink & Word AI Commentary").performClick()
+        compose.onNodeWithText("Ink & Word Commentary").performClick()
         runCatching { waitFor(60_000) { compose.onAllNodesWithText("Verse 16").fetchSemanticsNodes().isNotEmpty() } }
             .onFailure { snap("148-ai-commentary-failed"); throw AssertionError("message=${vm.message} commentary=${vm.commentaryAt(0)}", it) }
         assertEquals(com.biblestudy.app.data.Commentaries.AI, vm.commentaryAt(0))
@@ -2161,9 +2161,9 @@ class FeatureTest {
         assertTrue(notes.all { "(Sources: " in it.body })
         assertEquals(22, notes.flatMap { (it.start % 1000)..(it.end % 1000) }.toSet().size)
         snap("148-ai-commentary")
-        // About says it is written by AI, and how other views are kept apart.
+        // About says it was summarised by computer, and how other views are kept apart.
         compose.onNodeWithContentDescription("About this commentary").performClick()
-        assertTrue(compose.onAllNodesWithText("Written by AI", substring = true).fetchSemanticsNodes().isNotEmpty())
+        assertTrue(compose.onAllNodesWithText("Summarised by computer", substring = true).fetchSemanticsNodes().isNotEmpty())
         assertTrue(compose.onAllNodesWithText("Where Christians differ").fetchSemanticsNodes().isNotEmpty())
         snap("149-ai-commentary-about")
         compose.onNodeWithText("Close").performClick()
@@ -2179,12 +2179,12 @@ class FeatureTest {
             .onFailure { snap("150-reflections-failed"); throw AssertionError("message=${vm.message}", it) }
         val r = com.biblestudy.app.data.Commentaries.chapter(vm.getApplication(), com.biblestudy.app.data.Commentaries.REFLECTIONS, 19, 23)
         assertTrue(r.isNotEmpty())
-        assertTrue(r.all { "Written by AI from: " in it.body && "\nPray\n" in it.body && "Read: [[" in it.body })
+        assertTrue(r.all { "Summarised from: " in it.body && "\nPray\n" in it.body && "Read: [[" in it.body })
         // Not in the commentary menu: it has a view of its own.
         assertTrue(com.biblestudy.app.data.Commentaries.menu.none { it.id == com.biblestudy.app.data.Commentaries.REFLECTIONS })
         snap("150-reflections")
-        compose.onNodeWithContentDescription("About Reflections").performClick()
-        assertTrue(compose.onAllNodesWithText("Written by AI", substring = true).fetchSemanticsNodes().isNotEmpty())
+        compose.onNodeWithContentDescription("About Ink & Word Reflections").performClick()
+        assertTrue(compose.onAllNodesWithText("Summarised by computer", substring = true).fetchSemanticsNodes().isNotEmpty())
         snap("151-reflections-about")
         compose.onNodeWithText("Close").performClick()
         compose.runOnUiThread { vm.sidePane = null }

@@ -1,4 +1,4 @@
-# Ink & Word — version 2.9.0
+# Ink & Word — version 2.9.1
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet, and since version 2.0 on Android phones too, drawing with a finger.
 
@@ -71,6 +71,12 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 2.9.1
+
+- **Renamed: the Ink & Word AI Commentary is now the *Ink & Word Commentary*,** described as *Summarised from popular commentators* in the commentary menu, the verse pop-up and its About ⓘ, which still says how it was made. Some Christians find the word "AI" off-putting, so it's no longer in the name.
+- **Reflections are now *Ink & Word Reflections*,** described as *Summarised from popular devotionals*, in the panel menu and its About ⓘ. Each one ends with *Summarised from: …* (it was *Written by AI from: …*), naming the same devotionals; the reflections themselves are unchanged. Their data is unpacked again once after updating (`reflections-v2.db`), so the new wording shows.
+- Known gaps: the AI chat (online) and the *Chapter at a glance* cards' footnote still say "AI".
 
 ## New in version 2.9.0
 

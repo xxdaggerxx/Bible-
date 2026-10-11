@@ -133,7 +133,7 @@ The details show:
 - **People and places** in the verse. Tap one to read about them.
 - **Your typed note.** Tap *Add a note* to write one; once a verse has a note, it shows here.
 - **Cross-references.** Tap one to read it in a small pop-over without losing your place, then *Go to* or *Open beside*.
-- **Commentary.** The details open on the *Commentary* tab: what the Ink & Word AI Commentary says on this verse, in plain English. Tap the commentary's name to choose another, such as Jamieson-Fausset-Brown or Calvin. *Cross-references* is the tab beside it. *Whole chapter beside the text* opens it in a panel for the whole chapter. The app remembers which tab and commentary you used last.
+- **Commentary.** The details open on the *Commentary* tab: what the Ink & Word Commentary says on this verse, in plain English. Tap the commentary's name to choose another, such as Jamieson-Fausset-Brown or Calvin. *Cross-references* is the tab beside it. *Whole chapter beside the text* opens it in a panel for the whole chapter. The app remembers which tab and commentary you used last.
 - **Related passages:** topics, parallel accounts (other Gospels, Kings and Chronicles) and passages on the same topics.
 
 ## Hebrew and Greek word by word
@@ -173,7 +173,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in every version
 ## Panels and tabs
 
 - **One or two panels.** Each tab shows one panel, or two side by side or one above the other. Drag the divider between them to resize; double-tap it to make them equal.
-- **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view. They're listed under four headings: **Reading** (the Bible, Sketch pages); **This verse** (Verse details, Compare versions, Hebrew/Greek, Word study, Cross-references); **Study** (Commentary, Reflections, Dictionary, Topics, Names & places, Customs & feasts, Symbols & numbers, Points to Christ, About the book, the introduction to the book you're reading); and **Notes, search and AI** (My notes, Search, AI chat). The panels button in the toolbar lists them under the same headings. The same menu has *Add a panel beside*, *Top and bottom* (or *Side by side*), *Open in new tab* and *Close panel*.
+- **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view. They're listed under four headings: **Reading** (the Bible, Sketch pages); **This verse** (Verse details, Compare versions, Hebrew/Greek, Word study, Cross-references); **Study** (Commentary, Ink & Word Reflections, Dictionary, Topics, Names & places, Customs & feasts, Symbols & numbers, Points to Christ, About the book, the introduction to the book you're reading); and **Notes, search and AI** (My notes, Search, AI chat). The panels button in the toolbar lists them under the same headings. The same menu has *Add a panel beside*, *Top and bottom* (or *Side by side*), *Open in new tab* and *Close panel*.
 - **Study views follow your reading.** Cross-references, the dictionary's suggestions, topics and the commentary follow the Bible panel next to them. Choose *Keep on this passage* in a study view's menu to keep it where it is; tap the pin to follow again.
 - **Two study views at once,** e.g. the dictionary above topics: they stay on the passage you were reading. Choose *Bible* in either one to bring the text back.
 - **Link panels** with the link button in a Bible panel's header (it shows when two or more Bible panels are open): they scroll together verse by verse, even in different versions. The button is coloured while they're linked; tap it again to unlink.
@@ -200,26 +200,26 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in every version
 
 ## Commentaries
 
-- **Twelve commentaries.** Tap the commentary's name at the top of the panel to choose one. The Ink & Word AI Commentary is first and opens to start with; the others are Matthew Henry (Concise or Complete), Jamieson-Fausset-Brown, Wesley's Notes, Geneva Notes, Barnes' Notes (New Testament), Adam Clarke, Keil & Delitzsch (Old Testament), Robertson's Word Pictures (New Testament), Calvin, and Spurgeon's Treasury of David (Psalms). The panel remembers the last one you chose.
-- **Ink & Word AI Commentary:** a short note on every verse in plain, everyday English. AI wrote it when the app was made, from the commentaries in the app and from trusted Christian websites. It works offline like the others.
+- **Twelve commentaries.** Tap the commentary's name at the top of the panel to choose one. The Ink & Word Commentary is first and opens to start with; the others are Matthew Henry (Concise or Complete), Jamieson-Fausset-Brown, Wesley's Notes, Geneva Notes, Barnes' Notes (New Testament), Adam Clarke, Keil & Delitzsch (Old Testament), Robertson's Word Pictures (New Testament), Calvin, and Spurgeon's Treasury of David (Psalms). The panel remembers the last one you chose.
+- **Ink & Word Commentary:** a short note on every verse in plain, everyday English, summarised from popular commentators: the commentaries in the app and trusted Christian websites. It was put together when the app was made. It works offline like the others.
 - **Its notes:** the main note gives the traditional reading. Under it, *Sources* names where each point comes from.
 - **Where Christians differ** appears on verses where churches read it differently (for example on baptism or spiritual gifts). It gives the Baptist, Methodist, Pentecostal, Reformed, Lutheran or other view in a line each, without taking sides.
 - **Other views** appears where another view is well known: modern scholarship, Catholic and Orthodox readings, or debated popular teaching. These are kept apart from the main note.
-- The Ink & Word AI Commentary was written by AI, so check anything important against the other commentaries.
+- The Ink & Word Commentary was summarised by computer, not written by a person, so check anything important against the other commentaries.
 - **The first time** you open a commentary it takes a few seconds to get ready; after that it opens straight away.
 - **About this commentary:** tap the ⓘ for who wrote it, when, their background, and what it's best for.
 - **Linked to the Bible:** with the link button on (it is at first), the commentary and the Bible scroll together both ways. Scroll the Bible and the note on the verse at the top stays in view, even after you've tapped another verse; scroll the commentary and the Bible moves to the verses it's on. Tap the link button to scroll them separately.
 - **Two at once:** choose *Commentary* in the other panel's menu too, and give each its own commentary.
 - You can write and highlight on any commentary, as on the dictionary.
 
-## Reflections
+## Ink & Word Reflections
 
-- **What they are:** short devotional reflections on the passage you're reading, for quiet time with it. Choose *Reflections* under **Study** in a panel's menu.
+- **What they are:** short devotional reflections on the passage you're reading, for quiet time with it. Choose *Ink & Word Reflections* under **Study** in a panel's menu.
 - **On a passage or a saying.** Some are on a whole story or teaching (*The Good Shepherd*, John 10), some on a single saying (*"I am the vine"*). Each has **Read** (tap the passage or key verse to read it in your version), a few short paragraphs to reflect on, **Ask yourself** (one or two questions) and **Pray** (a short prayer).
-- **Grounded in real devotionals.** AI wrote them for Ink & Word, but only from existing devotionals, named under each one (*Written by AI from: …*): the classics of Charles Spurgeon and F. B. Meyer, and modern devotionals from ministries such as Desiring God, Ligonier and Our Daily Bread, put into Ink & Word's own words. Check anything important against Scripture and those sources.
+- **Summarised from popular devotionals,** named under each one (*Summarised from: …*): the classics of Charles Spurgeon and F. B. Meyer, and modern devotionals from ministries such as Desiring God, Ligonier and Our Daily Bread, put into Ink & Word's own words. Check anything important against Scripture and those sources.
 - **Overlapping, not repeating.** A saying with its own reflection is left to it by the reflection on the whole passage; **See also** links them. The same event in several Gospels shares one reflection (*Also in* lists the others).
 - **Follows your reading** like the commentary, with the same link button and *Keep on this passage*. Where a chapter has no reflection, it says so and links the nearest ones before and after.
-- **About Reflections:** tap the ⓘ for how they were written and checked.
+- **About Ink & Word Reflections:** tap the ⓘ for how they were written and checked.
 - You can write and highlight on reflections, as on the commentary. They work offline.
 
 ## Compare versions, Hebrew/Greek and word studies beside the text

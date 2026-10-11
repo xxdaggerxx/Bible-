@@ -185,7 +185,7 @@ data class ExportRequest(val uri: Uri, val pdf: Boolean, val layer: Long? = null
 /** What the study pane beside the Bible panels shows (SPLIT-2). */
 enum class PaneKind(val label: String) {
     SEARCH("Search"), CROSSREFS("Cross-references"), NOTES("My notes"),
-    DICTIONARY("Dictionary"), TOPICS("Topics"), COMMENTARY("Commentary"), REFLECTIONS("Reflections"), NAMES("Names & places"),
+    DICTIONARY("Dictionary"), TOPICS("Topics"), COMMENTARY("Commentary"), REFLECTIONS("Ink & Word Reflections"), NAMES("Names & places"),
     CUSTOMS("Customs & feasts"), SYMBOLS("Symbols & numbers"), CHRIST("Points to Christ"),
     SKETCHES("Sketch pages"),
     VERSE("Verse details"), COMPARE("Compare versions"), ORIGINAL("Hebrew/Greek"), WORDSTUDY("Word study"), INTRO("About the book"),
@@ -2088,7 +2088,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /**
      * The commentary a new commentary panel and the verse pop-up open with: the last one chosen,
-     * the AI Commentary to start with (from 1.12 for everyone; the key changed so it's the default again).
+     * the Ink & Word Commentary to start with (from 1.12 for everyone; the key changed so it's the default again).
      */
     var lastCommentary by mutableStateOf(prefs.getString("commentary2", null) ?: com.biblestudy.app.data.Commentaries.AI)
         private set

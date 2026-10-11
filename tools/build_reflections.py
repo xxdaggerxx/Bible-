@@ -785,7 +785,7 @@ def body_of(r, others, names, also):
     parts += [p["text"] for p in r["reflect"]]
     parts.append("Ask yourself\n" + "\n".join("• " + q for q in r["questions"]))
     parts.append("Pray\n" + r["prayer"])
-    parts.append("Written by AI from: " + "; ".join(source_text(x) for x in r["sources"].values()) + ".")
+    parts.append("Summarised from: " + "; ".join(source_text(x) for x in r["sources"].values()) + ".")
     if others:
         parts.append("See also: " + "; ".join(link(o["start"], o["end"], f"{o['title']} · {ref_text(o['start'], o['end'], names)}")
                                               for o in others))
