@@ -2419,7 +2419,8 @@ class FeatureTest {
             waitFor(10_000) { compose.onAllNodesWithText("Word study: \u201cloved\u201d").fetchSemanticsNodes().isNotEmpty() }
             compose.onNodeWithText("Word study: \u201cloved\u201d").performClick()
             waitFor(10_000) { compose.onAllNodesWithText("Used in 2 verses of the ESV", substring = true).fetchSemanticsNodes().isNotEmpty() }
-            compose.onNodeWithText("Greek \u00b7 Strong's G25", substring = true).assertExists()
+            // The word's heading loads on its own, so wait for it too.
+            waitFor(10_000) { compose.onAllNodesWithText("Greek \u00b7 Strong's G25", substring = true).fetchSemanticsNodes().isNotEmpty() }
             assertTrue(vm.study.occurrences("ESV", "G25", { vm.text("ESV").verseText(it) }).any { it.id == 43003016 })
             snap("88-imported-word-study")
         } finally {
