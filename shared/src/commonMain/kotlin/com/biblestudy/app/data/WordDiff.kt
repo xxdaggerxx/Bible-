@@ -6,7 +6,7 @@ package com.biblestudy.app.data
  * of words are marked.
  */
 object WordDiff {
-    private val WORD = Regex("[\\p{L}\\p{M}\\p{N}’']+")
+    private val WORD = Regex("[\\p{L}\\p{M}\\p{Nd}\\p{Nl}\\p{No}’']+")
 
     private fun norm(w: String) = w.lowercase().replace('’', '\'').trim('\'')
 

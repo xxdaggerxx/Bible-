@@ -346,8 +346,8 @@ class BibleRepository(context: AppContext, val version: BibleVersion) {
             val t = text.lowercase().replace('\'', '\u2019')
             return words.any { w ->
                 val stem = Regex.escape(w.trimEnd('*'))
-                val end = if (w.endsWith("*")) "" else "(?![\\p{L}\\p{N}])"
-                Regex("(?<![\\p{L}\\p{N}])$stem$end").containsMatchIn(t)
+                val end = if (w.endsWith("*")) "" else "(?![\\p{L}\\p{Nd}\\p{Nl}\\p{No}])"
+                Regex("(?<![\\p{L}\\p{Nd}\\p{Nl}\\p{No}])$stem$end").containsMatchIn(t)
             }
         }
 
@@ -380,7 +380,7 @@ class BibleRepository(context: AppContext, val version: BibleVersion) {
         }
 
         private fun clean(s: String): String =
-            s.replace(Regex("[^\\p{L}\\p{N}\u2019 ]"), " ").trim().replace(Regex("\\s+"), " ")
+            s.replace(Regex("[^\\p{L}\\p{Nd}\\p{Nl}\\p{No}\u2019 ]"), " ").trim().replace(Regex("\\s+"), " ")
 
         /** Lower-case words from a query, used to bold matches in results. */
         fun terms(raw: String): List<String> =

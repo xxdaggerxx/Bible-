@@ -378,7 +378,7 @@ class StudyRepository(private val context: AppContext) {
         private const val ORIGINAL_VERSION = 1
         const val NT_START = 40_000_000
 
-        private val WORD = Regex("[\\p{L}\\p{M}\\p{N}_’']+")
+        private val WORD = Regex("[\\p{L}\\p{M}\\p{Nd}\\p{Nl}\\p{No}_’']+")
 
         /** Whether [db] has a table called [name] (imported Bibles from before 1.1 have no study tables). */
         fun hasTable(db: SqlDb, name: String): Boolean =

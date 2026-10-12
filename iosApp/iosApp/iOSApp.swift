@@ -6,7 +6,8 @@ import Shared
 struct iOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ComposeView().ignoresSafeArea(.keyboard)
+            // Edge to edge, as on Android: the app keeps clear of the status bar and home indicator itself.
+            ComposeView().ignoresSafeArea()
         }
     }
 }

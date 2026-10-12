@@ -158,5 +158,5 @@ object ImportStudy {
         return out
     }
 
-    private val QUOTES_AND_WORDS = Regex("[“”\"]|[\\p{L}\\p{M}\\p{N}_’']+")
+    private val QUOTES_AND_WORDS = Regex("[“”\"]|[\\p{L}\\p{M}\\p{Nd}\\p{Nl}\\p{No}_’']+")
 }
