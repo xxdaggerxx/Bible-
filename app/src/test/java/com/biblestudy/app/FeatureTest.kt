@@ -1791,7 +1791,7 @@ class FeatureTest {
         snap("78-notes-browser")
 
         // Colour meanings show in the highlighter's menu.
-        compose.onNodeWithContentDescription("Close").performClick()
+        compose.runOnUiThread { vm.sidePane = null }
         compose.runOnUiThread { vm.tool = Tool.HIGHLIGHTER; vm.highlightColor = HIGHLIGHT_COLORS[0] }
         compose.onNodeWithContentDescription("Highlighter colour and size").performClick()
         compose.onNodeWithText("This colour means: Promises").assertExists()
@@ -3011,6 +3011,29 @@ class FeatureTest {
         waitFor(15_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "BAK" } }
         assertEquals("Backed up words.", vm.text("BAK").verseText(43003016))
         compose.runOnUiThread { vm.removeBible("BAK") }
+    }
+
+    @Test
+    fun theToolbarIsShortWithLayersInTheMenu() {
+        // No panels, My notes or layers buttons on the toolbar (UI-5).
+        for (gone in listOf("Panels", "My notes", "Layers")) compose.onNodeWithContentDescription(gone).assertDoesNotExist()
+        // Undo and redo only while drawing.
+        compose.runOnUiThread { vm.readMode = false }
+        compose.onNodeWithContentDescription("Undo").assertExists()
+        compose.runOnUiThread { vm.readMode = true }
+        compose.onNodeWithContentDescription("Undo").assertDoesNotExist()
+        compose.onNodeWithContentDescription("Redo").assertDoesNotExist()
+        snap("70b-toolbar-read-mode")
+        compose.runOnUiThread { vm.readMode = false }
+        // Layers is in the ⋮ menu, naming the layer ink goes on.
+        compose.onNodeWithContentDescription("More").performClick()
+        compose.onNodeWithText("Layers \u00b7 My Notes").performClick()
+        compose.onNodeWithText("Layers").assertExists()
+        compose.onNodeWithContentDescription("Close").performClick()
+        // My notes, Highlights, New tab and Layouts are in the panel menu.
+        compose.onNodeWithContentDescription("Panel view").performClick()
+        for (t in listOf("My notes", "Highlights", "New tab", "Layouts")) compose.onNodeWithText(t).assertExists()
+        snap("70c-panel-menu")
     }
 
     @Test

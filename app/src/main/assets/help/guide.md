@@ -36,7 +36,7 @@ Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; 
 - **The S Pen writes; fingers scroll, pinch and tap.** To draw with a finger too, turn on *Settings → Pen & ink → Draw with finger*. Then one finger draws and two fingers scroll and zoom. A quick tap with one finger still makes a dot.
 - **Your palm is ignored** while you write.
 - **Tools** along the toolbar: pen, highlighter, eraser, lasso and select. Tap the round colour button for colours and sizes. Ink always shows on the page: on the dark page the black pen writes in light ink, like the print, and dark colours (navy, purple, brown) show as lighter shades. Your ink keeps its colour, so it looks right again on a light page and on your other devices.
-![The toolbar: back and forward, read mode, pen, highlighter, eraser, lasso, select, colour](toolbar.webp)
+![The toolbar: back and forward, read mode, pen, highlighter, eraser, lasso, select, colour, undo and redo, insert, search](toolbar.webp)
 ![Tap the round colour button for colours and sizes](pen-colours.webp)
 - **S Pen button.** Hold the side button while the pen touches the page to erase, whatever tool is picked. *Settings → Pen & ink → S Pen button* can make it the lasso instead.
 - **Read mode.** The lock at the far left stops the pen marking the page; the pen then scrolls like a finger. Tap it again to write.
@@ -206,7 +206,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in every version
 
 - **One or two panels.** Each tab shows one panel, or two side by side or one above the other. Drag the divider between them to resize; double-tap it to make them equal.
 - **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view. At the top are *Bible*, *Sketch pages*, *My notes*, *Highlights*, *Search* and *AI chat*. The study views fold under **Study**; tap it to open it: Commentary, Reflections, Dictionary, Topics, Names & places, Customs & feasts, Symbols & numbers. It opens by itself when one of them is showing, with a ✓ by it. Everything about one verse (its details, other versions, Hebrew and Greek, word studies, cross-references) is in the pop-up you get by tapping the verse, and the book's introduction is behind ⓘ in the panel header, so they aren't in this menu. The same menu has *Add a panel beside* (then choose what the new panel shows from its own menu), *Top and bottom* (or *Side by side*), *Open in new tab*, *Close panel*, *New tab*, *Start fresh* and *Layouts*.
-![The panel menu, with Study opened](panel-menu.webp)
+![The panel menu: views at the top, then panels, tabs and layouts](panel-menu.webp)
 - **Study views follow your reading.** Cross-references, the dictionary's suggestions, topics and the commentary follow the Bible panel next to them. Choose *Keep on this passage* in a study view's menu to keep it where it is; tap the pin to follow again.
 - **Two study views at once,** e.g. the dictionary above topics: they stay on the passage you were reading. Choose *Bible* in either one to bring the text back.
 - **Link panels** with the link button in a Bible panel's header (it shows when two or more Bible panels are open): they scroll together verse by verse, even in different versions. The button is coloured while they're linked; tap it again to unlink.
@@ -331,7 +331,7 @@ Choose **My notes** or **Highlights** in a panel's menu (the panel button at its
 - **Highlights** lists every highlighted verse, filtered by colour meaning, layer or tag.
 - Tap anything to go there: the Bible comes back in that panel if the list had taken its place.
 - Your sketch pages are listed under *Sketch pages* in the same menu.
-![My notes in a panel](my-notes.webp)
+![Highlights in a panel, with a filter by colour](my-notes.webp)
 
 ## Reading stats
 
