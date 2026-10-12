@@ -3003,6 +3003,50 @@ class FeatureTest {
     }
 
     @Test
+    fun theToolbarShowsWhenSyncIsAtWork() {
+        // A Drive that waits until the test lets it go, and can be offline.
+        val gate = java.util.concurrent.CountDownLatch(1)
+        var offline = false
+        val inner = MemoryStore()
+        val store = object : com.biblestudy.app.data.SyncStore {
+            override fun list(): List<com.biblestudy.app.data.RemoteFile> {
+                gate.await(20, java.util.concurrent.TimeUnit.SECONDS)
+                if (offline) throw java.io.IOException("offline")
+                return inner.list()
+            }
+            override fun read(f: com.biblestudy.app.data.RemoteFile) = inner.read(f)
+            override fun write(name: String, data: ByteArray) = inner.write(name, data)
+            override fun delete(f: com.biblestudy.app.data.RemoteFile) = inner.delete(f)
+        }
+        // Nothing shows with sync off.
+        compose.onNodeWithTag("syncStatus").assertDoesNotExist()
+        try {
+            // Syncing: a turning sync sign beside the menu (SYNC-12).
+            compose.runOnUiThread { vm.testSyncStore = store; vm.turnOnSync {} }
+            waitFor(10_000) { vm.syncing }
+            compose.onNodeWithContentDescription("Syncing").assertExists()
+            snap("191-toolbar-syncing")
+            // Done: a cloud with a tick for a few seconds, then nothing.
+            gate.countDown()
+            waitFor(15_000) { !vm.syncing && vm.lastSync > 0 }
+            assertEquals(null, vm.syncError)
+            compose.onNodeWithContentDescription("Synced").assertExists()
+            compose.mainClock.advanceTimeBy(5000)
+            compose.waitForIdle()
+            compose.onNodeWithTag("syncStatus").assertDoesNotExist()
+            // A problem stays, and opens Settings, which says what went wrong.
+            offline = true
+            compose.runOnUiThread { vm.syncNow() }
+            waitFor(15_000) { vm.syncError != null && !vm.syncing }
+            compose.onNodeWithContentDescription("Sync problem").performClick()
+            compose.onNodeWithText("Sync didn't finish", substring = true).performScrollTo().assertExists()
+            compose.onNodeWithContentDescription("Close").performClick()
+        } finally {
+            compose.runOnUiThread { vm.turnOffSync(); vm.testSyncStore = null }
+        }
+    }
+
+    @Test
     fun syncBringsTheOtherDevicesNotesHereAndSendsThisOnes() {
         val store = MemoryStore()
         compose.runOnUiThread { vm.testSyncStore = store }

@@ -61,6 +61,15 @@ import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Layers
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Sync
+import androidx.compose.material.icons.filled.SyncProblem
+import androidx.compose.material.icons.filled.CloudDone
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.tween
+import androidx.compose.ui.draw.rotate
 import androidx.compose.material.icons.filled.VerticalSplit
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.DropdownMenu
@@ -305,6 +314,8 @@ fun StudyToolbar(
             Modifier.align(Alignment.CenterEnd), edge, left = false,
         ) { scope.launch { toolScroll.animateScrollBy(toolScroll.viewportSize * 0.7f) } }
         }
+            // Only while sync is on (SYNC-12): it shows when the app is syncing, not as a new button.
+            if (vm.syncOn) SyncStatus(vm, onSettings)
             var menu by remember { mutableStateOf(false) }
             Box(Modifier.padding(end = 8.dp)) {
                 IconButton(onClick = { menu = true }) { Icon(Icons.Filled.MoreVert, contentDescription = "More") }
@@ -326,6 +337,39 @@ fun StudyToolbar(
                     DropdownMenuItem(text = { Text("About & credits") }, onClick = { menu = false; onAbout() })
                 }
             }
+        }
+    }
+}
+
+/**
+ * Whether sync is at work (SYNC-12), beside the ⋮ menu: a turning sync sign while syncing, a cloud
+ * with a tick for a few seconds after, and a warning that stays while sync has a problem (tap it
+ * for Settings). Nothing shows the rest of the time.
+ */
+@Composable
+private fun SyncStatus(vm: StudyViewModel, onSettings: () -> Unit) {
+    var justSynced by remember { mutableStateOf(false) }
+    val first = remember { vm.lastSync }
+    LaunchedEffect(vm.lastSync) {
+        if (vm.lastSync == first) return@LaunchedEffect
+        justSynced = true
+        kotlinx.coroutines.delay(4000)
+        justSynced = false
+    }
+    when {
+        vm.syncing -> {
+            val turn by rememberInfiniteTransition(label = "sync").animateFloat(
+                0f, -360f, infiniteRepeatable(tween(1200, easing = LinearEasing)), label = "turn",
+            )
+            IconButton(onClick = { vm.message = "Syncing your notes with Google Drive…" }, modifier = Modifier.testTag("syncStatus")) {
+                Icon(Icons.Filled.Sync, contentDescription = "Syncing", tint = MaterialTheme.colorScheme.primary, modifier = Modifier.rotate(turn))
+            }
+        }
+        vm.syncError != null -> IconButton(onClick = onSettings, modifier = Modifier.testTag("syncStatus")) {
+            Icon(Icons.Filled.SyncProblem, contentDescription = "Sync problem", tint = MaterialTheme.colorScheme.error)
+        }
+        justSynced -> IconButton(onClick = { vm.message = "Synced with Google Drive." }, modifier = Modifier.testTag("syncStatus")) {
+            Icon(Icons.Filled.CloudDone, contentDescription = "Synced", tint = MaterialTheme.colorScheme.outline)
         }
     }
 }
