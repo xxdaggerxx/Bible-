@@ -1,0 +1,467 @@
+package com.biblestudy.app.ui
+
+import androidx.compose.material.icons.automirrored.filled.HelpOutline
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.gestures.animateScrollBy
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material3.surfaceColorAtElevation
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.platform.testTag
+import kotlinx.coroutines.launch
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.WindowInsetsSides
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.only
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawing
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.windowInsetsPadding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.foundation.combinedClickable
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.LockOpen
+import androidx.compose.material.icons.filled.Lock
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.foundation.layout.Column
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.path
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.material3.IconButtonDefaults
+import androidx.compose.material3.IconToggleButton
+import androidx.compose.material.icons.filled.PanTool
+import androidx.compose.material.icons.filled.Gesture
+import androidx.compose.material.icons.filled.BorderColor
+import androidx.compose.material.icons.filled.Draw
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.AddBox
+import androidx.compose.material.icons.automirrored.filled.Redo
+import androidx.compose.material.icons.automirrored.filled.Undo
+import androidx.compose.material.icons.filled.Image
+import androidx.compose.material.icons.filled.Layers
+import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Sync
+import androidx.compose.material.icons.filled.SyncProblem
+import androidx.compose.material.icons.filled.CloudDone
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.tween
+import androidx.compose.ui.draw.rotate
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.FilterChip
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.material3.VerticalDivider
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
+import com.biblestudy.app.model.SideButton
+import com.biblestudy.app.model.TextFont
+import com.biblestudy.app.model.Tool
+
+@Composable
+fun StudyToolbar(
+    vm: StudyViewModel,
+    onLayers: () -> Unit,
+    onSearch: () -> Unit,
+    onInsertImage: (ImageSource) -> Unit,
+    onBackup: () -> Unit,
+    onExport: (pdf: Boolean) -> Unit,
+    onSettings: () -> Unit,
+    onStats: () -> Unit,
+    onHelp: () -> Unit = {},
+    onAbout: () -> Unit,
+) {
+    // Kept short so it fits a phone (UI-3, UI-5): Back and Forward, read mode, the tools, one button
+    // for the tool's colour and size, undo/redo while drawing, Insert, search and the ⋮ menu (with
+    // Layers). What panels show, tabs and layouts are in each panel's menu; the rest in Settings.
+    Surface(tonalElevation = 3.dp, shadowElevation = 2.dp) {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal)),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+        // The buttons scroll sideways where they don't fit (a phone, PH-1); the ⋮ menu stays in reach.
+        // An arrow at the edge shows there are more (PH-15), and the first time the row slides a little.
+        val toolScroll = rememberScrollState()
+        val scope = rememberCoroutineScope()
+        LaunchedEffect(toolScroll.maxValue > 0) {
+            if (toolScroll.maxValue > 0 && vm.takeToolbarHint()) {
+                kotlinx.coroutines.delay(800)
+                toolScroll.animateScrollTo(minOf(toolScroll.maxValue, 160))
+                kotlinx.coroutines.delay(400)
+                toolScroll.animateScrollTo(0)
+            }
+        }
+        Box(Modifier.weight(1f)) {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .horizontalScroll(toolScroll)
+                .padding(start = 8.dp, top = 4.dp, bottom = 4.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(2.dp),
+        ) {
+            // Back and Forward for the whole screen (NAV-1): passages, panels and tabs as they were.
+            // Hold either one for a list of the screens it goes to.
+            StepButton(
+                vm, Icons.AutoMirrored.Filled.ArrowBack, "Back", vm.backSteps.toList().asReversed().take(10),
+                onStep = vm::back, onPick = { n -> vm.backTo(vm.backSteps.lastIndex - n) },
+            )
+            StepButton(
+                vm, Icons.AutoMirrored.Filled.ArrowForward, "Forward", vm.forwardSteps.toList().asReversed().take(10),
+                onStep = vm::forward, onPick = { n -> vm.forwardTo(vm.forwardSteps.lastIndex - n) },
+            )
+            Divider()
+            // Read mode (PEN-4): a lock that stops the pen marking the page.
+            IconToggleButton(
+                checked = vm.readMode,
+                onCheckedChange = {
+                    vm.readMode = it
+                    vm.message = if (it) "Read mode: the pen scrolls the page and won't mark it." else "Read mode off."
+                },
+                colors = IconButtonDefaults.iconToggleButtonColors(
+                    checkedContainerColor = MaterialTheme.colorScheme.primaryContainer,
+                    checkedContentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                ),
+            ) {
+                Icon(
+                    if (vm.readMode) Icons.Filled.Lock else Icons.Filled.LockOpen,
+                    contentDescription = if (vm.readMode) "Read mode on" else "Read mode off",
+                )
+            }
+            for (t in Tool.entries) {
+                IconToggleButton(
+                    checked = vm.tool == t && !vm.readMode,
+                    // Picking a tool in read mode ends it, ready to draw (PH-3: phones start in read mode).
+                    onCheckedChange = { if (vm.readMode) { vm.readMode = false; vm.message = "Read mode off." }; vm.tool = t },
+                    colors = IconButtonDefaults.iconToggleButtonColors(
+                        checkedContainerColor = MaterialTheme.colorScheme.secondaryContainer,
+                        checkedContentColor = MaterialTheme.colorScheme.onSecondaryContainer,
+                    ),
+                ) { Icon(t.icon(), contentDescription = t.label) }
+            }
+            // Undo and redo only while drawing (UI-5): in read mode there's nothing to undo.
+            if (!vm.readMode) {
+                ToolOptions(vm)
+                Divider()
+                IconButton(onClick = vm::undo, enabled = vm.canUndo) {
+                    Icon(Icons.AutoMirrored.Filled.Undo, contentDescription = "Undo")
+                }
+                IconButton(onClick = vm::redo, enabled = vm.canRedo) {
+                    Icon(Icons.AutoMirrored.Filled.Redo, contentDescription = "Redo")
+                }
+            }
+            Divider()
+            // Insert: pictures (MRG-7); text boxes and shapes join here (UI-1).
+            var insertMenu by remember { mutableStateOf(false) }
+            var insertDialog by remember { mutableStateOf<String?>(null) }
+            when (insertDialog) {
+                "sketch" -> NewSketchDialog(vm, onDismiss = { insertDialog = null })
+                "verse" -> VerseCardDialog(vm) { insertDialog = null }
+                "name" -> NameCardDialog(vm) { insertDialog = null }
+            }
+            Box {
+                IconButton(onClick = { insertMenu = true }) { Icon(Icons.Filled.AddBox, contentDescription = "Insert") }
+                DropdownMenu(expanded = insertMenu, onDismissRequest = { insertMenu = false }) {
+                    DropdownMenuItem(
+                        text = { Text("Text box") },
+                        onClick = { insertMenu = false; vm.insertTextBox() },
+                    )
+                    // Cards are filled-in text boxes (SKT-4); sketch pages are new pages (SKT-1).
+                    DropdownMenuItem(text = { Text("Verse card\u2026") }, onClick = { insertMenu = false; insertDialog = "verse" })
+                    DropdownMenuItem(text = { Text("Person or place card\u2026") }, onClick = { insertMenu = false; insertDialog = "name" })
+                    DropdownMenuItem(text = { Text("Sketch page\u2026") }, onClick = { insertMenu = false; insertDialog = "sketch" })
+                    HorizontalDivider()
+                    for (src in imageSourcesHere) {
+                        DropdownMenuItem(
+                            text = { Text("Picture: " + src.label.replaceFirstChar { it.lowercase() }) },
+                            onClick = { insertMenu = false; onInsertImage(src) },
+                        )
+                    }
+                }
+            }
+            IconButton(onClick = onSearch) { Icon(Icons.Filled.Search, contentDescription = "Search") }
+
+        }
+        val edge = MaterialTheme.colorScheme.surfaceColorAtElevation(3.dp)
+        if (toolScroll.canScrollBackward) ScrollHint(
+            Modifier.align(Alignment.CenterStart), edge, left = true,
+        ) { scope.launch { toolScroll.animateScrollBy(-toolScroll.viewportSize * 0.7f) } }
+        if (toolScroll.canScrollForward) ScrollHint(
+            Modifier.align(Alignment.CenterEnd), edge, left = false,
+        ) { scope.launch { toolScroll.animateScrollBy(toolScroll.viewportSize * 0.7f) } }
+        }
+            // Only while sync is on (SYNC-12): it shows when the app is syncing, not as a new button.
+            if (vm.syncOn) SyncStatus(vm, onSettings)
+            var menu by remember { mutableStateOf(false) }
+            Box(Modifier.padding(end = 8.dp)) {
+                IconButton(onClick = { menu = true }) { Icon(Icons.Filled.MoreVert, contentDescription = "More") }
+                DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                    DropdownMenuItem(
+                        text = { Text("Settings") },
+                        leadingIcon = { Icon(Icons.Filled.Settings, contentDescription = null) },
+                        onClick = { menu = false; onSettings() },
+                    )
+                    // Layers (LAY-1): here rather than on the toolbar (UI-5), with the one ink goes on.
+                    DropdownMenuItem(
+                        text = { Text("Layers" + (vm.activeLayer()?.let { " \u00b7 ${it.name}" } ?: "")) },
+                        leadingIcon = { Icon(Icons.Filled.Layers, contentDescription = null) },
+                        onClick = { menu = false; onLayers() },
+                    )
+                    DropdownMenuItem(text = { Text("Reading stats") }, onClick = { menu = false; onStats() })
+                    DropdownMenuItem(text = { Text("Export chapter as PDF\u2026") }, onClick = { menu = false; onExport(true) })
+                    DropdownMenuItem(text = { Text("Export chapter as picture\u2026") }, onClick = { menu = false; onExport(false) })
+                    DropdownMenuItem(text = { Text("Back up my notes\u2026") }, onClick = { menu = false; onBackup() })
+                    DropdownMenuItem(
+                        text = { Text("Help") },
+                        leadingIcon = { Icon(Icons.AutoMirrored.Filled.HelpOutline, contentDescription = null) },
+                        onClick = { menu = false; onHelp() },
+                    )
+                    DropdownMenuItem(text = { Text("About & credits") }, onClick = { menu = false; onAbout() })
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Whether sync is at work (SYNC-12), beside the ⋮ menu: a turning sync sign while syncing, a cloud
+ * with a tick for a few seconds after, and a warning that stays while sync has a problem (tap it
+ * for Settings). Nothing shows the rest of the time.
+ */
+@Composable
+private fun SyncStatus(vm: StudyViewModel, onSettings: () -> Unit) {
+    var justSynced by remember { mutableStateOf(false) }
+    val first = remember { vm.lastSync }
+    LaunchedEffect(vm.lastSync) {
+        if (vm.lastSync == first) return@LaunchedEffect
+        justSynced = true
+        kotlinx.coroutines.delay(4000)
+        justSynced = false
+    }
+    when {
+        vm.syncing -> {
+            val turn by rememberInfiniteTransition(label = "sync").animateFloat(
+                0f, -360f, infiniteRepeatable(tween(1200, easing = LinearEasing)), label = "turn",
+            )
+            IconButton(onClick = { vm.message = "Syncing your notes with Google Drive…" }, modifier = Modifier.testTag("syncStatus")) {
+                Icon(Icons.Filled.Sync, contentDescription = "Syncing", tint = MaterialTheme.colorScheme.primary, modifier = Modifier.rotate(turn))
+            }
+        }
+        vm.syncError != null -> IconButton(onClick = onSettings, modifier = Modifier.testTag("syncStatus")) {
+            Icon(Icons.Filled.SyncProblem, contentDescription = "Sync problem", tint = MaterialTheme.colorScheme.error)
+        }
+        justSynced -> IconButton(onClick = { vm.message = "Synced with Google Drive." }, modifier = Modifier.testTag("syncStatus")) {
+            Icon(Icons.Filled.CloudDone, contentDescription = "Synced", tint = MaterialTheme.colorScheme.outline)
+        }
+    }
+}
+
+/** The colour and size of the current tool, behind one button (UI-3). */
+@Composable
+private fun ToolOptions(vm: StudyViewModel) {
+    var open by remember { mutableStateOf(false) }
+    val tool = vm.tool
+    if (tool == Tool.LASSO || tool == Tool.SELECT) return
+    Box {
+        val color = when (tool) {
+            Tool.PEN -> Color(inkOn(vm.theme, vm.penColor))
+            Tool.HIGHLIGHTER -> Color(vm.highlightColor)
+            else -> MaterialTheme.colorScheme.surfaceVariant
+        }
+        IconButton(onClick = { open = true }) {
+            Box(
+                Modifier.size(26.dp).clip(CircleShape).background(color)
+                    .border(1.dp, MaterialTheme.colorScheme.outline, CircleShape)
+                    .semantics { contentDescription = "${tool.label} colour and size" },
+                contentAlignment = Alignment.Center,
+            ) {
+                if (tool == Tool.ERASER) Text(if (vm.partialEraser) "P" else "W", style = MaterialTheme.typography.labelSmall)
+            }
+        }
+        DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+            Column(Modifier.padding(horizontal = 12.dp, vertical = 4.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                when (tool) {
+                    Tool.PEN -> {
+                        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            // Shown as they'll look on this page (INK-17): black ink is light on the dark page.
+                            for (c in PEN_COLORS) Swatch(inkOn(vm.theme, c), vm.penColor == c) { vm.penColor = c }
+                        }
+                        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) { SizePicker(vm.penSize) { vm.penSize = it } }
+                    }
+                    Tool.HIGHLIGHTER -> {
+                        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            for (c in HIGHLIGHT_COLORS) Swatch(c, vm.highlightColor == c) { vm.highlightColor = c }
+                        }
+                        vm.meanings[vm.highlightColor]?.let { Text("This colour means: $it", style = MaterialTheme.typography.bodySmall) }
+                        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            FilterChip(selected = !vm.underlineMode, onClick = { vm.underlineMode = false }, label = { Text("Highlight") })
+                            FilterChip(selected = vm.underlineMode, onClick = { vm.underlineMode = true; vm.snapHighlights = true }, label = { Text("Underline") })
+                        }
+                        Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+                            SizePicker(vm.highlightSize) { vm.highlightSize = it }
+                            FilterChip(
+                                selected = vm.snapHighlights,
+                                onClick = { vm.snapHighlights = !vm.snapHighlights },
+                                label = { Text("Snap to words") },
+                            )
+                        }
+                    }
+                    Tool.ERASER -> Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        FilterChip(selected = !vm.partialEraser, onClick = { vm.partialEraser = false }, label = { Text("Whole strokes") })
+                        FilterChip(selected = vm.partialEraser, onClick = { vm.partialEraser = true }, label = { Text("Partial") })
+                    }
+                    else -> {}
+                }
+            }
+        }
+    }
+}
+
+/** Toolbar icon for each tool. */
+private fun Tool.icon(): ImageVector = when (this) {
+    Tool.PEN -> Icons.Filled.Draw
+    Tool.HIGHLIGHTER -> Icons.Filled.BorderColor
+    Tool.ERASER -> EraserIcon
+    Tool.LASSO -> Icons.Filled.Gesture
+    Tool.SELECT -> Icons.Filled.PanTool
+}
+
+/** A simple eraser (Material has none): a tilted block with a band. */
+private val EraserIcon: ImageVector by lazy {
+    ImageVector.Builder("Eraser", 24.dp, 24.dp, 24f, 24f).apply {
+        path(fill = SolidColor(Color.Black)) {
+            moveTo(15.1f, 3.6f); lineTo(20.4f, 8.9f); quadTo(21.2f, 9.7f, 20.4f, 10.5f)
+            lineTo(11.4f, 19.5f); lineTo(19f, 19.5f); lineTo(19f, 21f); lineTo(8.4f, 21f)
+            lineTo(3.6f, 16.2f); quadTo(2.8f, 15.4f, 3.6f, 14.6f); lineTo(13.5f, 3.6f); quadTo(14.3f, 2.8f, 15.1f, 3.6f); close()
+            moveTo(5.2f, 15.4f); lineTo(9f, 19.2f); lineTo(10.2f, 18.1f); lineTo(6.4f, 14.3f); close()
+        }
+    }.build()
+}
+
+/** Where a picture for the margin comes from (MRG-7). */
+enum class ImageSource(val label: String) {
+    GALLERY("From the gallery"), CAMERA("Take a photo"), FILES("From files"), CLIPBOARD("Paste from clipboard")
+}
+
+@Composable
+private fun Divider() {
+    VerticalDivider(Modifier.height(28.dp).padding(horizontal = 2.dp))
+}
+
+@Composable
+private fun Swatch(color: Int, selected: Boolean, onClick: () -> Unit) {
+    Box(
+        Modifier
+            .size(30.dp)
+            .clip(CircleShape)
+            .background(Color(color))
+            .border(
+                width = if (selected) 3.dp else 1.dp,
+                color = if (selected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
+                shape = CircleShape,
+            )
+            .clickable(onClick = onClick)
+    )
+}
+
+@Composable
+private fun SizePicker(current: Int, onPick: (Int) -> Unit) {
+    listOf("S", "M", "L").forEachIndexed { i, label ->
+        FilterChip(selected = current == i, onClick = { onPick(i) }, label = { Text(label) })
+    }
+}
+
+/**
+ * Back or Forward (NAV-1): a tap goes one step; holding it lists the screens it goes to, nearest
+ * first, to jump straight to one.
+ */
+@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
+@Composable
+private fun StepButton(
+    vm: StudyViewModel,
+    icon: androidx.compose.ui.graphics.vector.ImageVector,
+    label: String,
+    steps: List<StudyViewModel.Screen>,
+    onStep: () -> Unit,
+    onPick: (Int) -> Unit,
+) {
+    var list by remember { mutableStateOf(false) }
+    val enabled = steps.isNotEmpty()
+    Box {
+        Box(
+            Modifier
+                .size(48.dp)
+                .clip(androidx.compose.foundation.shape.CircleShape)
+                .combinedClickable(enabled = enabled, role = androidx.compose.ui.semantics.Role.Button, onLongClick = { list = true }, onClick = onStep),
+            contentAlignment = Alignment.Center,
+        ) {
+            Icon(
+                icon, contentDescription = label,
+                tint = if (enabled) MaterialTheme.colorScheme.onSurfaceVariant else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f),
+            )
+        }
+        DropdownMenu(expanded = list, onDismissRequest = { list = false }) {
+            Text(
+                if (label == "Back") "Go back to" else "Go forward to",
+                style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(start = 16.dp, top = 8.dp, bottom = 4.dp),
+            )
+            steps.forEachIndexed { n, s ->
+                DropdownMenuItem(text = { Text(vm.screenLabel(s)) }, onClick = { list = false; onPick(n) })
+            }
+        }
+    }
+}
+
+/** An arrow fading in at the toolbar's edge when more buttons are that way (PH-15); tap it to slide. */
+@Composable
+private fun ScrollHint(modifier: Modifier, edge: Color, left: Boolean, onClick: () -> Unit) {
+    val fade = if (left) listOf(edge, edge, edge.copy(alpha = 0f)) else listOf(edge.copy(alpha = 0f), edge, edge)
+    Box(
+        modifier
+            .width(40.dp)
+            .height(48.dp)
+            .background(androidx.compose.ui.graphics.Brush.horizontalGradient(fade))
+            .clickable(onClick = onClick)
+            .testTag(if (left) "toolbarScrollLeft" else "toolbarScrollRight"),
+        contentAlignment = if (left) Alignment.CenterStart else Alignment.CenterEnd,
+    ) {
+        Icon(
+            if (left) Icons.AutoMirrored.Filled.KeyboardArrowLeft else Icons.AutoMirrored.Filled.KeyboardArrowRight,
+            contentDescription = if (left) "Earlier buttons" else "More buttons",
+            tint = MaterialTheme.colorScheme.primary,
+        )
+    }
+}

@@ -2,26 +2,33 @@
 
 Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; look for the open Bible with a quill. Everything works without the internet. Your notes save the moment you lift the pen. Tap a heading below to read it, or type in the search box to find something.
 
+**Help wherever you are.** Look for the small ? at the top of a window (Settings, Search, Layers, Reading stats, a verse's pop-up, a word study and more). Tap it and Help opens at the part about that window; close Help and you're back where you were. For a panel, tap the panel button at its top left, then *Help: …* at the bottom of the menu (*Help: panels* on a Bible panel). The full guide is always in *⋮ → Help*; ← at the top of a topic shows all of them.
+
 ## Getting around
 
 - **Pick a passage.** Tap the chapter name at the top of a panel (e.g. *John 3*). Choose a book, then a chapter, then a verse. Small coloured dots show where you have notes.
+![Choose a book: tap the chapter name at the top of a panel](book-picker.webp)
 - **Next and previous chapter.** Tap the ‹ and › arrows beside the chapter name, or just keep scrolling: the next chapter follows on.
 - **Recently read.** Tap the chapter name, then *Recently read*. It lists the chapters you've read lately, newest first, with the verse you were at. Tap one to go straight back there. *Clear this list* empties it.
 - **Bookmarks.** Tap a verse, then *Bookmark*. A red ribbon shows beside it. To find your bookmarks, tap the chapter name, then *Bookmarks*. Tap one to go there, or × to take the bookmark off. Tapping *Bookmarked* in the verse's pop-up takes it off too.
 - **Back and forward.** The ← and → arrows at the far left of the toolbar take the whole screen back to how it was, one step at a time. That covers jumping to a passage, opening, closing or changing a panel, and opening, switching or closing a tab. Lost track of where you are? Tap ← until it looks familiar. → goes forward again. The tablet's Back gesture does the same as ←.
 - **Jump back several steps.** Hold ← (or →) for a list of the screens it goes to, such as *Psalms 23 and Commentary* or *Romans 8 · 2 tabs*. Tap one to go straight there.
-- **Start fresh.** In a muddle with panels and tabs? Tap the panels button in the toolbar, then *Start fresh*. You get one tab with one Bible panel, at the passage you're reading. ← brings everything back if you change your mind.
+- **Start fresh.** In a muddle with panels and tabs? Tap the panel button at the top left of a panel, then *Start fresh*. You get one tab with one Bible panel, at the passage you're reading. ← brings everything back if you change your mind.
 - **Tabs remember where you were.** Switch to another tab and back, and each one is still scrolled to the same place.
 - **Zoom.** Pinch with two fingers. Double-tap with a finger to make the page fill the panel's width, and again to go back to your last zoom.
 - **Change the version.** Tap the version name (e.g. *KJV ▾*) and pick another. You stay on the same verse. Below your versions, *Online Bibles · tap to add* lists the ones you can read online (ESV, NIV, NLT and more): tap one and it's added and opened in one go. This list needs the internet.
 - **About a book.** Tap ⓘ in the panel header for the book's introduction: who wrote it, when, why, an outline you can tap, and key verses. When choosing a book, tap its name, then *About this book* at the top of the chapter list.
 - **Chapter at a glance.** Under each Bible panel's header, a slim bar says in one line what's happening in the chapter. Tap it for the card: *Who* and *Where* (tap a name to read about them), *Where it fits* in the Bible's story, and the *Key verse* (tap it to open the verse). Tap the bar again to fold it. AI wrote these cards when the app was made. Turn them off in *Settings → Reading → Chapter at a glance*.
+![Chapter at a glance, opened: who, where, where it fits and the key verse](glance.webp)
 - **Hard words explained.** A faint dotted line goes under hard words the first time they come in a chapter: Bible words like *propitiation*, *Pharisee* or *cubit* in every version, and old words like *wist*, *froward* or *corn* in the KJV. Tap one: the verse opens with the word's meaning in one line at the top. *Read more* opens its Bible dictionary article, when there is one. Old forms like *thee*, *hath* and *cometh* aren't marked: they mean *you*, *has* and *comes*. Turn the lines off in *Settings → Bible aids → Hard words explained*.
+![Tap a dotted word: its meaning shows at the top of the verse](hard-word.webp)
 - **Bible aids.** The same faint dotted line marks more than hard words, the first time each comes in a chapter. Tap one: the verse opens with a short explanation at the top, and *More* for the whole entry.
   - **People & places:** who someone was, or where a place is and why it matters (*Nicodemus: Pharisee who visited Jesus*). The right person is meant, even when two share a name. *More* opens *Names & places* with the family tree and map. In long family lists only the best-known names are marked.
   - **Customs & feasts:** about 130 Jewish customs, feasts and holy days, from the Sabbath, Passover and the Day of Atonement to betrothal, the kinsman-redeemer, the city gate, the Pharisees and Samaritans, and Roman crucifixion. Each is marked in the words each version uses (*Feast of Tabernacles*, *Feast of Booths*), and where a custom is described without being named (the sandal in Ruth 4:7).
   - **Symbols & numbers:** about 120 symbols (the Lamb, the lampstand, horns, water, bread, leaven, oil, colours and more) and the Bible's numbers (seven, twelve, forty, 666, 144,000, a thousand years). They're marked only where the Bible uses them as symbols, mostly in prophecy, Revelation, parables and poetry, not every time the word comes. Where the Bible explains a symbol itself, that comes first; otherwise the traditional reading.
-  - **Points to Christ:** a dotted gold line (round dots, unlike the grey dashes under hard words) goes under the whole of each Old Testament verse that points to Jesus, about 380 verses in 145 passages. There are two kinds: **prophecies** he fulfilled (Isaiah 7:14, Micah 5:2, Psalm 22, Isaiah 53, Zechariah 9:9 and many more), and **pictures of Christ**, people, events and things that foreshadow him (the Passover lamb, the bronze serpent, Melchizedek, the manna, Jonah's three days). Tap the verse: a gold card at the top of the pop-up says which it is, what it shows of Christ, and where the New Testament fulfils or explains it, as links you can tap. To see them all in Bible order, choose *Points to Christ* in a panel's menu (under *Study*), filter by *Prophecies* or *Pictures of Christ*, and tap one to go there. They follow the traditional reading.
+  - **Points to Christ:** a dotted gold line (round dots, unlike the grey dashes under hard words) goes under the whole of each Old Testament verse that points to Jesus, about 380 verses in 145 passages. There are two kinds: **prophecies** he fulfilled (Isaiah 7:14, Micah 5:2, Psalm 22, Isaiah 53, Zechariah 9:9 and many more), and **pictures of Christ**, people, events and things that foreshadow him (the Passover lamb, the bronze serpent, Melchizedek, the manna, Jonah's three days). Tap the verse: a gold card at the top of the pop-up says which it is, what it shows of Christ, and where the New Testament fulfils or explains it, as links you can tap. They follow the traditional reading.
+![Isaiah 53: the gold dots under verses that point to Christ](points-to-christ.webp)
+![Tap one: the gold card says how, with the New Testament as links](points-to-christ-card.webp)
   - Each kind has its own switch in *Settings → Bible aids*. All are on at first.
 
 ## The pen, fingers and the toolbar
@@ -29,9 +36,11 @@ Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; 
 - **The S Pen writes; fingers scroll, pinch and tap.** To draw with a finger too, turn on *Settings → Pen & ink → Draw with finger*. Then one finger draws and two fingers scroll and zoom. A quick tap with one finger still makes a dot.
 - **Your palm is ignored** while you write.
 - **Tools** along the toolbar: pen, highlighter, eraser, lasso and select. Tap the round colour button for colours and sizes. Ink always shows on the page: on the dark page the black pen writes in light ink, like the print, and dark colours (navy, purple, brown) show as lighter shades. Your ink keeps its colour, so it looks right again on a light page and on your other devices.
+![The toolbar: back and forward, read mode, pen, highlighter, eraser, lasso, select, colour, undo and redo, insert, search](toolbar.webp)
+![Tap the round colour button for colours and sizes](pen-colours.webp)
 - **S Pen button.** Hold the side button while the pen touches the page to erase, whatever tool is picked. *Settings → Pen & ink → S Pen button* can make it the lasso instead.
 - **Read mode.** The lock at the far left stops the pen marking the page; the pen then scrolls like a finger. Tap it again to write.
-- **Undo and redo** are the curved arrows.
+- **Undo and redo** are the curved arrows. They show while you're drawing, not in read mode (the lock), where there's nothing to undo.
 - **Shapes.** Draw a line, arrow, box or circle and hold the pen still at the end. It snaps to a neat shape.
 - **Hover.** Hold the S Pen just above the screen and a small mark shows exactly where it will touch: a dot the size of the pen, a bar for the highlighter, a circle for the eraser.
 - **Writing sounds.** A real pen-on-paper sound follows your writing: louder when you write fast or press hard, quiet when you stop. The pen sounds like a pencil, the highlighter like a marker, and the eraser like soft drawing. Turn it off, or change the volume, in *Settings → Pen & ink → Writing sounds*. It plays through the tablet's media volume.
@@ -39,6 +48,7 @@ Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; 
 ## On a phone
 
 Ink & Word works on phones too, with or without a pen. It looks like it does on a tablet, made to fit.
+![On a phone: the same toolbar, sliding sideways](phone.webp)
 
 - **Phones start in read mode.** One finger scrolls and taps, so you can read straight away. Pick the pen, highlighter or another tool in the toolbar and read mode turns off by itself; tap the lock to read again.
 - **Drawing with a finger.** On a phone, *Draw with finger* is on at first. One finger draws; put two fingers down to scroll and pinch to zoom. Lift without moving for a dot.
@@ -47,15 +57,28 @@ Ink & Word works on phones too, with or without a pen. It looks like it does on 
 - **Margins fold away.** The margins are hidden at the side of the page. Tap the ‹ tab at the edge to slide them in, and again to put them away.
 - **Big windows fill the screen**, such as Settings and the book picker.
 
+## On a computer
+
+Ink & Word also runs on Windows, Mac and Linux computers, the same app in a window.
+
+- **The mouse is your pen.** Pick the pen, highlighter or another tool in the toolbar, then draw with the mouse or a drawing tablet. To read without drawing, tap the lock (read mode): then the mouse scrolls and taps like a finger.
+- **Scroll with the wheel** (or two fingers on a touchpad). Hold Shift to scroll sideways, Ctrl to zoom.
+- **Right-click on the words** to select them, as holding a finger still does on a tablet.
+- **Keyboard shortcuts:** Ctrl+Z undo, Ctrl+Y (or Ctrl+Shift+Z) redo, Ctrl+F search, Alt+← and Alt+→ Back and Forward. On a Mac use Cmd instead of Ctrl.
+- **Any window size.** Make the window narrow and it uses the phone layout; wide, the tablet layout.
+- **Your notes** are kept in your user folder (Windows *%APPDATA%\Ink & Word*, Mac *~/Library/Application Support/Ink & Word*, Linux *~/.local/share/ink-and-word*). To bring your notes from a tablet, back them up there and restore the backup here (see *Export, backup and restore*). Sync with Google Drive isn't available on computers yet.
+- **Pictures** come from a file or the clipboard (*Insert → Picture*); there's no camera.
+
 ## Highlighting and underlining
 
 - **Highlight.** Pick the highlighter and swipe over words. It snaps to whole words. (Turn off *Snap to words* in its menu to highlight freehand.)
 - **Underline.** In the highlighter's menu choose *Underline* instead of *Highlight*.
 - **Change or remove a highlight.** Hold a finger on highlighted words. The bar that appears offers other colours and *Remove highlight*.
+![Hold a highlight: colours, Remove highlight and Note](highlight-edit.webp)
 - **Colour meanings.** Give each colour a meaning, such as yellow = promises (*Settings → Highlights → Colour meanings*).
 - **In every version.** A highlight also shows, a shade lighter, over the same verses in the other translations. Erasing or removing it in any version removes it from every version. Turn this off in *Settings → Highlights*.
 - **Text boxes and verse cards.** Swipe the highlighter over a text box or verse card and it snaps to the words there too. On a verse card the highlight is the Bible's own: it shows on the card, on that verse in the Bible and in every version, and erasing it in any of those places erases it everywhere.
-- **Your highlights list.** *My notes → Highlights* lists every highlighted verse in full, with the marked words in their colour. Filter by colour, layer or tag; tap one to go there.
+- **Your highlights list.** Choose *Highlights* in a panel's menu (the panel button at its top left). It lists every highlighted verse in full, with the marked words in their colour. Filter by colour, layer or tag; tap one to go there.
 
 ## Erasing
 
@@ -66,12 +89,14 @@ Ink & Word works on phones too, with or without a pen. It looks like it does on 
 
 ## Selecting text
 
+![Hold a finger on words to select them](text-selection.webp)
 - Hold a finger on a word, then drag to choose more words.
 - The bar that appears lets you *Copy* or *Share* the words with their reference, *Highlight* them, or add a *Note*.
 
 ## The margins
 
 - **Write in the margins.** Anything written or drawn in a margin belongs to its verse and shows in every version.
+![An arrow drawn from the margin to a word](margin-arrow.webp)
 - **Drawings stay in one piece.** Each verse sits a little higher or lower in each version, so a margin drawing moves with its verse. A stroke drawn on or next to a drawing, note or picture in the margin joins it, so the whole drawing moves together. A drawing that came apart in an earlier version: draw round it with the lasso and move it a little; it's put back together where it was.
 - **Margin or words?** Ink written on the words themselves stays with that version only. Each stroke is kept where most of it lies: a stroke that starts on the words but runs mostly into the margin is margin ink, shown in every version, and the other way round. An arrow or line snapped by holding the pen stays with where you started it, so an arrow from a margin note to a word stays with the note.
 - **Left and right margins** are switched on or off in *Settings → Margins & panels*.
@@ -82,6 +107,7 @@ Ink & Word works on phones too, with or without a pen. It looks like it does on 
 
 ## Text boxes
 
+![A text box in the margin, with its references as links](text-box.webp)
 - *Insert (+) → Text box*, then type.
 - Bible references you type, like *Rom 5:8* or *John 3:16-18*, become links.
 - Tap a box to move it, resize it, change its size or colour, edit it or delete it.
@@ -93,6 +119,7 @@ Ink & Word works on phones too, with or without a pen. It looks like it does on 
 
 ## The lasso
 
+![Draw round ink with the lasso, then choose what to do with it](lasso.webp)
 - Pick the lasso and draw a loop around ink, pictures or text boxes.
 - Drag inside the dashed box to move them. Drag the corner handle to resize, or the round handle above to turn.
 - The bar at the top can recolour, *Copy*, *Move to layer* or *Delete*.
@@ -100,7 +127,8 @@ Ink & Word works on phones too, with or without a pen. It looks like it does on 
 
 ## Layers
 
-Layers are like clear sheets over the page. Tap the layers button (it shows the current layer's name, e.g. *My Notes*).
+Layers are like clear sheets over the page. Tap *⋮ → Layers* (it shows the layer you're writing on, e.g. *Layers · My Notes*).
+![The Layers window and a layer's menu](layers.webp)
 
 - **New ink goes on the selected layer.** Tap a layer to select it.
 - **Show, hide or lock** a layer with the eye and lock buttons. Hiding a layer hides it on every page.
@@ -113,15 +141,15 @@ Layers are like clear sheets over the page. Tap the layers button (it shows the 
 - Type in *Typed note*. It shows in every version.
 - The − and + beside *Note on …* make the note cover several verses, e.g. John 3:16–18.
 - References in a note, such as *Psalm 23*, appear as links under it.
-- Notes can have tags, for finding them later in *My notes*.
+- Notes can have tags, for finding them later in the *My notes* view.
 
 ## Verse details
 
 Tap any verse with your finger. Its details open in a pop-up window. Tap outside it, or ×, to close it.
+![Tap a verse: its details open in a pop-up](verse-details.webp)
 
 - **Copy a verse:** tap the copy button at the top, by ×. *Copy reference* copies just the reference ("Hebrews 13:21"); *Copy verse* copies the verse's words with the reference and version after them ("… — Hebrews 13:21 (NLT)"), ready to paste into a message or a note. The *Verse details* panel has the same button.
 - **Prefer them beside the text?** Turn on *Settings → Verse details → Verse details in a panel*. Then the details open in a panel called *Verse details* next to the Bible, and move to each verse you tap. The arrows at its top go to the verse before and after. If both panels are already in use, the pop-up opens instead.
-- You can also choose *Verse details* from a panel's menu at any time.
 - In the panel, a word study shows in the same panel. *Back to the verse* returns.
 - Your typed note is kept as you type, and when you move to another verse.
 
@@ -138,6 +166,7 @@ The details show:
 
 ## Hebrew and Greek word by word
 
+![John 3:16 in Greek, word by word](greek.webp)
 - In Verse details, tap *Hebrew* (Old Testament) or *Greek* (New Testament).
 - Each card shows the original word, how it sounds, what it means here and what kind of word it is (noun, verb…).
 - Hebrew reads right to left, so the first word is on the right.
@@ -148,6 +177,7 @@ The details show:
 
 ## Word studies
 
+![A word study: the Greek word, its meaning and every place it's used](word-study.webp)
 - Tap a word in Verse details (or tap a word on the page with your finger, then *Word study*).
 - You see the Hebrew or Greek word, how it's pronounced, its meaning, how the KJV translates it, and every verse that uses it, counted by book. Tap a verse to go there.
 - **Search by Strong's number:** type *G26* (agapē, love) or *H2617* (chesed, lovingkindness) in Search.
@@ -159,6 +189,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in every version
 
 ## Searching
 
+![Search: results grouped by book](search.webp)
 - Tap the magnifying glass. Pick the version, and the whole Bible, Old or New Testament, or the book you're in.
 - Several words find verses with all of them. Put words in "quotes" for an exact phrase. *OR* finds either word. *lov\** finds love, loved, loveth. *-word* leaves out verses with that word.
 - Type a reference like *jn 3:16* to jump straight there.
@@ -167,22 +198,25 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in every version
 
 ## Links and pop-overs
 
+![Tap a link: the passage opens in a small pop-over](passage-popover.webp)
 - References in headings, notes, text boxes, the dictionary and the commentary are links.
 - Tap one to read the passage in a small pop-over. *Go to* jumps there; *Open beside* shows it in another panel.
 
 ## Panels and tabs
 
 - **One or two panels.** Each tab shows one panel, or two side by side or one above the other. Drag the divider between them to resize; double-tap it to make them equal.
-- **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view. At the top are *Bible*, *Sketch pages*, *My notes*, *Search* and *AI chat*. The rest fold under two headings; tap a heading to open it: **This verse** (Verse details, Compare versions, Hebrew/Greek, Word study, Cross-references) and **Study** (Commentary, Reflections, About the book, Dictionary, Topics, Names & places, Customs & feasts, Symbols & numbers, Points to Christ). The heading holding the view you're on opens by itself, with a ✓ by that view. The panels button in the toolbar lists them the same way under *Beside the text*. The same menu has *Add a panel beside*, *Top and bottom* (or *Side by side*), *Open in new tab* and *Close panel*.
+- **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view. At the top are *Bible*, *Sketch pages*, *My notes*, *Highlights*, *Search* and *AI chat*. The study views fold under **Study**; tap it to open it: Commentary, Reflections, Dictionary, Topics, Names & places, Customs & feasts, Symbols & numbers. It opens by itself when one of them is showing, with a ✓ by it. Everything about one verse (its details, other versions, Hebrew and Greek, word studies, cross-references) is in the pop-up you get by tapping the verse, and the book's introduction is behind ⓘ in the panel header, so they aren't in this menu. The same menu has *Add a panel beside* (then choose what the new panel shows from its own menu), *Top and bottom* (or *Side by side*), *Open in new tab*, *Close panel*, *New tab*, *Start fresh* and *Layouts*.
+![The panel menu: views at the top, then panels, tabs and layouts](panel-menu.webp)
 - **Study views follow your reading.** Cross-references, the dictionary's suggestions, topics and the commentary follow the Bible panel next to them. Choose *Keep on this passage* in a study view's menu to keep it where it is; tap the pin to follow again.
 - **Two study views at once,** e.g. the dictionary above topics: they stay on the passage you were reading. Choose *Bible* in either one to bring the text back.
 - **Link panels** with the link button in a Bible panel's header (it shows when two or more Bible panels are open): they scroll together verse by verse, even in different versions. The button is coloured while they're linked; tap it again to unlink.
 - **Mark word differences** (*Settings → Reading*): when two panels show the same book in different versions, the words that differ are lightly marked.
-- **Tabs, like a browser.** *New tab* is in the panels button (the split-page icon in the toolbar). Once you have two tabs, they show in a strip under the toolbar: tap one to switch, tap **+** for another. Each tab keeps its own panels and places.
+- **Tabs, like a browser.** *New tab* is in a panel's menu. Once you have two tabs, they show in a strip under the toolbar: tap one to switch, tap **+** for another. Each tab keeps its own panels and places.
+![Two tabs](tabs.webp)
 - **Rename, move or close a tab:** hold a finger on it and let go for its menu. To move it, hold and then drag it along the strip.
 - **Open in a new tab:** from a panel's menu, with *New tab* in any passage pop-over (links, cross-references), or by holding a finger on a search result. Your tabs are kept when you close the app.
-- **A sketch page beside the text:** choose *Sketch pages* in a panel's menu or the panels button (*Beside the text*, then *Sketch pages*), then tap any page, yours or ready-made. It opens in the other panel so you can read and draw side by side. Tap another page to swap it in.
-- **Save this layout…** (panels button) keeps all your tabs, with their panels, passages and versions. Opening a saved layout replaces the tabs you have open.
+- **A sketch page beside the text:** choose *Sketch pages* in a panel's menu, then tap any page, yours or ready-made. It opens in the other panel so you can read and draw side by side. Tap another page to swap it in.
+- **Layouts** (in a panel's menu; tap it to open it): *Save this layout…* keeps all your tabs, with their panels, passages and versions. Tap a saved layout to open it; it replaces the tabs you have open. × deletes one.
 
 ## Writing on study views
 
@@ -190,7 +224,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in every version
 - The highlighter snaps to whole words. Undo, layers and backups include this writing too, and writing sounds play as on the Bible page.
 - **The lasso** works here too: draw round some writing, then *Colour* (gives it the colour in use), *Layer* (moves it to another layer) or *Delete*. Tap *Done* when finished.
 - Your writing belongs to that article, so it's there whenever you open it again, in any panel or tab. When a panel is made wider or narrower, the writing moves with its words (a line drawn across two lines of text stretches to follow them).
-- Search results and the My notes list can't be written on, because what's under the pen changes.
+- Search results and the My notes and Highlights lists can't be written on, because what's under the pen changes.
 
 ## Dictionary, topics and commentary
 
@@ -202,6 +236,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in every version
 
 - **Twelve commentaries.** Tap the commentary's name at the top of the panel to choose one. The Ink & Word AI Commentary is first and opens to start with; the others are Matthew Henry (Concise or Complete), Jamieson-Fausset-Brown, Wesley's Notes, Geneva Notes, Barnes' Notes (New Testament), Adam Clarke, Keil & Delitzsch (Old Testament), Robertson's Word Pictures (New Testament), Calvin, and Spurgeon's Treasury of David (Psalms). The panel remembers the last one you chose.
 - **Ink & Word AI Commentary:** a short note on every verse in plain, everyday English. AI wrote it when the app was made, from the commentaries in the app and from trusted Christian websites. It works offline like the others.
+![A commentary beside the Bible, following your reading](commentary.webp)
 - **Its notes:** the main note gives the traditional reading. Under it, *Sources* names where each point comes from.
 - **Where Christians differ** appears on verses where churches read it differently (for example on baptism or spiritual gifts). It gives the Baptist, Methodist, Pentecostal, Reformed, Lutheran or other view in a line each, without taking sides.
 - **Other views** appears where another view is well known: modern scholarship, Catholic and Orthodox readings, or debated popular teaching. These are kept apart from the main note.
@@ -215,6 +250,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in every version
 ## Reflections
 
 - **What they are:** short devotional reflections on the passage you're reading, for quiet time with it. Choose *Reflections* under **Study** in a panel's menu.
+![Reflections on Psalm 23 beside the text](reflections.webp)
 - **On a passage or a saying.** Some are on a whole story or teaching (*The Good Shepherd*, John 10), some on a single saying (*"I am the vine"*). Each has **Read** (tap the passage or key verse to read it in your version), a few short paragraphs to reflect on, **Ask yourself** (one or two questions) and **Pray** (a short prayer).
 - **Grounded in real devotionals.** AI wrote them for Ink & Word, but only from existing devotionals, named under each one (*Written by AI from: …*): the classics of Charles Spurgeon and F. B. Meyer, and modern devotionals from ministries such as Desiring God, Ligonier and Our Daily Bread, put into Ink & Word's own words. Check anything important against Scripture and those sources.
 - **Overlapping, not repeating.** A saying with its own reflection is left to it by the reflection on the whole passage; **See also** links them. The same event in several Gospels shares one reflection (*Also in* lists the others).
@@ -222,17 +258,12 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in every version
 - **About Reflections:** tap the ⓘ for how they were written and checked.
 - You can write and highlight on reflections, as on the commentary. They work offline.
 
-## Compare versions, Hebrew/Greek and word studies beside the text
-
-- In a panel's menu choose *Compare versions* (the verse in every version, with differing words marked), *Hebrew/Greek* (the verse word by word) or *Word study*.
-- They follow the verse you tap in the Bible, or the verse at the top of the page. The arrows step to the verse before or after.
-- With a *Word study* panel open, tapping a word in the Bible or *Word study* on a Hebrew or Greek word shows its study there instead of in a window.
-
 ## AI chat (online)
 
 The one part of the app that uses the internet. It works like a search summary: ask a question, and the AI searches the web (your trusted sites first), reads the best articles and sums them up. It doesn't answer from its own knowledge: if the search finds nothing it can cite, it says so and shows what it searched for.
 
 - **Open it** with the round chat bubble at the bottom right. The chat opens in its own little window over the text. You can keep reading and tapping verses while it's open. Tap × (or the bubble) to close it; your conversation stays.
+![The AI chat window, with its sources and verses](ai-chat.webp)
 - **Want it beside the text instead?** Tap the panel button at the top of the chat window. It moves into a panel next to the Bible. You can also choose *AI chat* from a panel's menu.
 - **The first time,** paste your Claude API key (from console.anthropic.com) and tap *Save key*. It's kept on this tablet only, and isn't in your backups. Each question costs a few cents on your Claude account.
 - **Ask about a passage:** select words with a long press, or hold a finger on a highlight, and tap *Ask AI*. In *Verse details*, tap *Ask AI* to send the whole verse. The passages wait above the question box; tap × on one to leave it out.
@@ -257,14 +288,17 @@ The one part of the app that uses the internet. It works like a search summary: 
 
 - In a panel's menu choose *Names & places*, or tap a name in Verse details.
 - **People:** who they were, their family (each name opens) and every verse that mentions them.
+![Names & places: Nicodemus](person.webp)
 - **Places:** what and where they were, with a small map you can pinch and drag.
 - **Family tree:** tap *Family tree* on a person. It shows grandparents, parents, brothers and sisters, whom they married, and their children. Tap anyone to see their family instead. *Copy to sketch page* draws the tree on the sketch page you're viewing, or on a new one.
+![The family tree of Moses](family-tree.webp)
 
 ## Sketch pages
 
-A sketch page is a whole page for timelines, diagrams, maps and sketch notes. All of them are listed in *My notes → Sketch pages*.
+A sketch page is a whole page for timelines, diagrams, maps and sketch notes. All of them are listed in *Sketch pages*, in a panel's menu.
 
-- **Ready-made pages** are already there when you install the app, under *My notes → Sketch pages → Ready-made pages*:
+- **Ready-made pages** are already there when you install the app, under *Ready-made pages* in the *Sketch pages* list:
+![A ready-made sketch page: Paul's missionary journeys](sketch-page.webp)
   - *The feasts of Israel*: the seven feasts of Leviticus 23 plus Purim and Hanukkah on a year line, each with when it is, what it remembers, how it was kept and how it points to Christ.
   - *The tabernacle*: a plan to scale with each piece of furniture numbered, what each means, and key verses.
   - *The kings of Israel and Judah*: a timeline from 931 to 586 BC (Edwin Thiele's dates), good and evil kings coloured, with the prophets of the time and a link to each king's story.
@@ -275,8 +309,9 @@ A sketch page is a whole page for timelines, diagrams, maps and sketch notes. Al
   - *The twelve tribes*: Jacob's sons by their mothers, and where each tribe's land was.
   - *Solomon's and Herod's temples*: labelled plans of both.
   They're ordinary ink, text boxes and verse cards, so you can write on them, move things, change them or delete them. If you delete one, *Put back deleted ready-made pages* at the bottom of the list brings it back.
-- **Beside the text:** to see a sketch page next to the Bible, choose *Sketch pages* from the panels button and tap the page.
-- **Make your own:** tap **New sketch page** at the top of *My notes → Sketch pages* (or of the *Sketch pages* panel, where it opens beside the text), or use *Insert (+) → Sketch page…*. Give it a name, choose blank, lined, grid or dotted paper, and *Create*.
+- **Beside the text:** to see a sketch page next to the Bible, choose *Sketch pages* in a panel's menu and tap the page.
+- **Make your own:** tap **New sketch page** at the top of the *Sketch pages* list (the page opens beside the text), or use *Insert (+) → Sketch page…*. Give it a name, choose blank, lined, grid or dotted paper, and *Create*.
+![The Sketch pages list, with New sketch page](sketch-list.webp)
 - **Linked or on its own.** In the same window, *Link to …* ties the page to the verse you're reading: a small badge in that verse's margin opens it. Turn the switch off for a page that stands on its own, such as a topic study; open it from *My notes*.
 - **No edges.** A sketch page grows as you use it: there's always at least a page's width of room to the right and a page's height below whatever you've drawn. Drag with a finger to move around, and pinch out to see the whole page at once.
 - **Every pen tool works** on a sketch page, plus shapes, the lasso, layers, pictures and text boxes.
@@ -290,11 +325,18 @@ A sketch page is a whole page for timelines, diagrams, maps and sketch notes. Al
 
 ## My notes
 
-The notes button (a page with a pencil) lists your **Notes**, **Highlights** and **Sketch pages**. Filter by tag, colour meaning or layer, and tap anything to go there.
+Choose **My notes** or **Highlights** in a panel's menu (the panel button at its top left).
+
+- **My notes** lists every typed note and text box, filtered by book or tag.
+- **Highlights** lists every highlighted verse, filtered by colour meaning, layer or tag.
+- Tap anything to go there: the Bible comes back in that panel if the list had taken its place.
+- Your sketch pages are listed under *Sketch pages* in the same menu.
+![Highlights in a panel, with a filter by colour](my-notes.webp)
 
 ## Reading stats
 
 *⋮ → Reading stats* shows your reading as cards, one under another on a phone and two side by side on a tablet:
+![Reading stats on a phone](reading-stats.webp)
 
 - **Through the Bible:** a ring with how much of the Bible you've read, and a bar each for the Old and New Testament.
 - **Daily reading:** how many days in a row you've read (a day counts with a minute of reading), your best run, and this week's days, each with a flame if you read that day.
@@ -333,13 +375,13 @@ Your ink and highlights stay on their words whatever you choose.
   - Each chapter downloads the first time you open it, and the next two come in the background, so reading on doesn't wait. Once read, a chapter stays on the tablet: it opens straight away next time, even with no internet.
   - Everything works with them: ink and highlights, margin notes, word studies, words of Jesus in red, paragraphs, hard words, search, compare versions and the verse pop-up.
   - No internet and a chapter that isn't saved yet? A message says so, and the chapter appears by itself when the tablet is back online.
-  - **Save for offline** downloads the whole Bible, for trips with no internet. The Bibles list shows how many chapters are saved; *Stop* pauses it.
+  - The Bibles list in *Settings → Bibles* shows how many chapters of each are on the tablet.
   - Cross-references show their verses in the online Bible you're reading. A verse whose chapter isn't on the tablet yet shows … for a moment while it downloads (then it's kept).
   - Search finds verses in the chapters on the tablet, and asks YouVersion for the rest when you're online. A search asked once is kept too (in every online Bible), so the same search doesn't go online again.
   - Each chapter ends with the version's copyright line, as YouVersion asks.
   - Backups don't include online Bibles' text; after a restore they download again as you read.
-- **The ESV** comes from Crossway, its publisher, rather than YouVersion, and **the NLT** from Tyndale. They're in the same *Add an online Bible…* list and work exactly like the others: each chapter is kept on the tablet once read, for as long as *Keep downloaded chapters* says, searches are kept, and *Save for offline* downloads the whole Bible. They use an API key from the publisher (api.esv.org, api.nlt.to), typed in *Settings → Bibles*. Saving the ESV for offline takes about an hour and a quarter, because Crossway allows only 60 downloads a minute; you can keep reading meanwhile.
-- **Keep downloaded chapters** (*Settings → Bibles*): how long online Bibles' chapters stay on the tablet after you last read them: 7, 30, 90 or 365 days, or *Always* (the default, which saves the most downloads). A chapter you haven't read for that long is removed when the app starts, and downloads again the next time you read it. Bibles saved for offline always stay.
+- **The ESV** comes from Crossway, its publisher, rather than YouVersion, and **the NLT** from Tyndale. They're in the same *Add an online Bible…* list and work exactly like the others: each chapter is kept on the tablet once read, for as long as *Keep downloaded chapters* says, and searches are kept. They use an API key from the publisher (api.esv.org, api.nlt.to), typed in *Settings → Bibles*.
+- **Keep downloaded chapters** (*Settings → Bibles*): how long online Bibles' chapters stay on the tablet after you last read them: 7, 30, 90 or 365 days, or *Always* (the default, which saves the most downloads). A chapter you haven't read for that long is removed when the app starts, and downloads again the next time you read it. A Bible with every chapter on the tablet stays.
 - **Clear downloaded text…** (*Settings → Bibles*) removes the text of every online Bible from the tablet, to free space or start afresh. Your notes, highlights and ink stay. Chapters download again as you read them, so you'll need the internet.
 - *Remove* takes an imported or online version off the tablet.
 - *About these versions* explains how the translations differ.
@@ -347,11 +389,13 @@ Your ink and highlights stay on their words whatever you choose.
 ## Sync between your devices
 
 Your notes can be the same on your phone and your tablet, through your own Google Drive.
+![Settings → Sync](sync.webp)
 
 - **Turn it on:** *Settings → Sync → Sync with Google Drive*. Choose your Google account and tap *Allow*. Do this once on each device, with the same Google account.
 - **What syncs:** ink, highlights, text boxes, pictures, typed notes, bookmarks, tags, colour meanings, layers, sketch pages and reading stats (the time read on each device is added up).
 - **What stays on each device:** panels, tabs, saved layouts and settings (page colour, text size, font, finger drawing). So the phone can show one panel in large text while the tablet shows three.
 - **When:** when you open the app, when you leave it, and every few minutes while it's open. *Sync now* does it straight away. Without the internet everything still works; it catches up later.
+- **Seeing it sync.** While sync is on, a small sign shows beside the ⋮ menu at the right of the toolbar while the app is syncing: two turning arrows. When it's done, a cloud with a tick shows for a few seconds, then nothing. If sync has a problem (no internet, or Google wants you to sign in again), a red warning sign stays there; tap it for *Settings → Sync*, which says what's wrong. With sync off, nothing shows.
 - **Two devices, one change:** when the same item is changed on both, the later change wins. A typed note changed on both before they synced keeps both texts, one under the other, so nothing is lost.
 - Your notes go into a hidden folder in your Google Drive that only this app can see. It doesn't show among your files and uses a little of your Drive space.
 - If Google asks you to allow access again, *Settings → Sync* shows *Sign in again*.
@@ -363,10 +407,12 @@ Your notes can be the same on your phone and your tablet, through your own Googl
 - **Back up:** *⋮ → Back up my notes…* saves everything (ink, highlights, pictures, notes, sketch pages, layers, reading stats and imported Bibles) in one .zip file.
 - **Automatic backups:** *Settings → Backup* makes one daily or weekly, keeping the newest 5, in a folder you choose (e.g. a synced Google Drive folder).
 - **Restore:** *Settings → Backup → Restore from backup…* puts a backup back on this tablet or a new one. It replaces what's there. With sync on, the restored notes then go to your other devices too.
+- **Before each update:** the first time a new version of the app starts, it saves your notes and pictures as a backup first (*bible-study-before-…zip*, in the same Backups folder as automatic backups; the newest 3 are kept). If an update ever went wrong, that backup can be restored.
 
 ## Settings
 
 *⋮ → Settings* holds every option. Type in the search box at the top to find one, for example *red* or *backup*. *Reset settings to defaults* at the bottom changes settings only, never your notes.
+![Settings, with a search box at the top](settings.webp)
 
 ## Tips
 

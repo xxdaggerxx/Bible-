@@ -32,7 +32,7 @@ import org.robolectric.annotation.GraphicsMode
 class LayoutAnchorTest {
     private val app = ApplicationProvider.getApplicationContext<android.app.Application>()
     private val measurer = TextMeasurer(createFontFamilyResolver(app), Density(1f, 1f), LayoutDirection.Ltr)
-    private val font = FontFamily(Font(R.font.gentium_book_plus_regular), Font(R.font.gentium_book_plus_bold, FontWeight.Bold))
+    private val font = FontFamily(Font(com.biblestudy.app.shared.R.font.gentium_book_plus_regular), Font(com.biblestudy.app.shared.R.font.gentium_book_plus_bold, FontWeight.Bold))
     private val kjv = BibleRepository(app, BibleRepository.KJV)
     private val bsb = BibleRepository(app, BibleRepository.BSB)
 

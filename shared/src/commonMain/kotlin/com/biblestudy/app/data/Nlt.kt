@@ -1,0 +1,156 @@
+package com.biblestudy.app.data
+
+import com.biblestudy.app.platform.*
+import okio.IOException
+
+/**
+ * The NLT, read online from Tyndale's NLT API (api.nlt.to) (BIB-12), as YouVersion doesn't offer it.
+ *
+ * Tyndale's terms for a key: non-commercial use, at most 500 verses a request and 5,000 requests a
+ * day. Kept on the tablet as it's read, like the other online Bibles (a 500-verse window until
+ * 1.20: see [OnlineBible.limitPublishers]).
+ */
+object Nlt {
+    /** The NLT's id among online Bibles (not a YouVersion id). */
+    const val ID = 1_000_002
+
+    const val COPYRIGHT = "Scripture quotations are taken from the Holy Bible, New Living Translation, copyright \u00a9 1996, 2004, 2015 " +
+        "by Tyndale House Foundation. Used by permission of Tyndale House Publishers, Carol Stream, Illinois 60188. All rights reserved."
+
+    val info = YouVersion.Info(
+        ID, "NLT", "New Living Translation", (1..66).toSet(), COPYRIGHT,
+        "A thought-for-thought translation (1996, revised 2015) in natural, everyday English, good for daily reading and " +
+            "newcomers. Read online from Tyndale and kept on this tablet as you read.",
+    )
+
+    /** The API key: built in (BuildConfig) or typed in Settings. */
+    @kotlin.concurrent.Volatile var key: String = ""
+
+    /** Fetches a URL: the status and body. Swapped in tests. */
+    @kotlin.concurrent.Volatile var http: (String) -> Pair<Int, String> = ::get
+
+    private const val BASE = "https://api.nlt.to/api"
+
+    /**
+     * A chapter as USFM (see [toUsfm]). Tyndale answers every problem (busy, a key it doesn't
+     * accept, a name it doesn't know) with an empty page and "OK", and the NLT has every chapter,
+     * so an empty page is an error to try again later, never a chapter kept with no verses.
+     */
+    fun chapterUsfm(book: Int, chapter: Int): String {
+        var wait = 1000L
+        repeat(3) { tryNo ->
+            val html = call("$BASE/passages?ref=${code(book)}.$chapter&version=NLT&key=${enc(key)}")
+            if ("verse_export" in html) return toUsfm(html, book, chapter)
+            if (tryNo < 2) { sleepMillis(wait); wait *= 2 }
+        }
+        throw IOException("The NLT didn't send this chapter. Check the NLT key, or try again in a minute.")
+    }
+
+    /**
+     * Tyndale's name for a book: the OSIS name, except Thessalonians and the letters of John, which
+     * the NLT API doesn't know by their OSIS names (it answers "1Thess.1" with no verses).
+     */
+    private val CODES = mapOf(52 to "1Thes", 53 to "2Thes", 62 to "1Jn", 63 to "2Jn", 64 to "3Jn")
+
+    fun code(book: Int): String = CODES[book] ?: BibleImport.OSIS[book - 1]
+
+    /** The book a Tyndale or OSIS name stands for; 0 if none. */
+    fun bookOf(name: String): Int =
+        CODES.entries.firstOrNull { it.value == name }?.key ?: (BibleImport.OSIS.indexOf(name) + 1)
+
+    private val RESULT = Regex("(?s)<td><a[^>]*>([1-3]?[A-Za-z]+)\\.(\\d+)\\.(\\d+)</a></td>\\s*<td>(.*?)</td>")
+
+    /** Verses matching [query], with their text: (verse id, text). */
+    fun search(query: String): List<Pair<Int, String>> {
+        val q = query.trim()
+        if (q.isEmpty()) return emptyList()
+        val html = call("$BASE/search?text=${enc(q)}&version=NLT&key=${enc(key)}")
+        return RESULT.findAll(html).mapNotNull { m ->
+            val book = bookOf(m.groupValues[1])
+            if (book == 0) return@mapNotNull null
+            val text = YouVersion.decode(m.groupValues[4].replace(Regex("<[^>]*>"), "")).replace(Regex("\\s+"), " ").trim()
+            BibleImport.vid(book, m.groupValues[2].toInt(), m.groupValues[3].toInt()) to text
+        }.toList()
+    }
+
+    private val VERSE = Regex("\\bvn=\"([0-9-]+)\"")
+    private val CHAPTER = Regex("\\bch=\"(\\d+)\"")
+
+    /**
+     * Turns the NLT's chapter HTML into one USFM book holding that chapter, like [Esv.toUsfm]: each
+     * `verse_export` element starts a verse; paragraphs and poetry lines, the words of Jesus
+     * (class "red") and "LORD" in capitals are kept; footnotes, titles and subheadings are left out.
+     */
+    fun toUsfm(html: String, book: Int, chapter: Int): String {
+        val body = html.substringAfter("id=\"bibletext\"", html)
+        val out = StringBuilder("\\id ${YouVersion.BOOKS[book - 1]}\n\\c $chapter\n")
+        val hides = ArrayList<Boolean>()
+        val closers = ArrayList<String>()
+        val uppers = ArrayList<Boolean>()
+        var pos = 0
+        fun hidden() = hides.any { it }
+        fun text(raw: String) = YouVersion.decode(raw).let { if (uppers.any { u -> u }) it.uppercase() else it }
+        for (m in YouVersion.TAG.findAll(body)) {
+            if (!hidden()) out.append(text(body.substring(pos, m.range.first)))
+            pos = m.range.last + 1
+            val closing = m.groupValues[1] == "/"
+            val name = m.groupValues[2].lowercase()
+            val attrs = m.groupValues[3]
+            if (name == "br") { if (!hidden()) out.append(' '); continue }
+            if (name == "verse_export") {
+                // Not nested: a verse starts here (or ends at the closing tag).
+                if (!closing) {
+                    val ch = CHAPTER.find(attrs)?.groupValues?.get(1)?.toIntOrNull()
+                    val vn = VERSE.find(attrs)?.groupValues?.get(1)
+                    if (vn != null && (ch == null || ch == chapter)) out.append("\n\\v ").append(vn).append(' ')
+                }
+                continue
+            }
+            if (closing) {
+                if (hides.isNotEmpty()) {
+                    hides.removeAt(hides.lastIndex); uppers.removeAt(uppers.lastIndex)
+                    val c = closers.removeAt(closers.lastIndex)
+                    if (!hidden()) out.append(c)
+                }
+                continue
+            }
+            val classes = YouVersion.CLASS.find(attrs)?.groupValues?.get(1)?.split(' ')?.filter { it.isNotEmpty() }.orEmpty()
+            var hide = false
+            var close = ""
+            when {
+                name.matches(Regex("h\\d")) -> hide = true
+                classes.any { it == "vn" || it == "tn" || it == "a-tn" || it == "psa-title" || it.startsWith("subhead") || it == "chapter-number" } -> hide = true
+                "red" in classes -> { if (!hidden()) out.append("\\wj "); close = "\\wj*" }
+                name == "p" && classes.any { it.startsWith("poet") } -> if (!hidden()) out.append("\n\\q1\n")
+                name == "p" -> if (!hidden()) out.append("\n\\p\n")
+            }
+            if (name == "a" && "a-tn" in classes) hide = true
+            if (attrs.trimEnd().endsWith("/")) { if (!hidden() && close.isNotEmpty()) out.append(close); continue }
+            hides += hide
+            closers += close
+            uppers += "sc" in classes
+        }
+        if (!hidden() && pos < body.length) out.append(text(body.substring(pos)))
+        return out.toString()
+    }
+
+    private fun call(url: String): String {
+        if (key.isBlank()) throw IOException("No NLT key. Add one in Settings \u2192 Bibles.")
+        var wait = 1000L
+        repeat(4) {
+            val (status, body) = http(url)
+            when {
+                status in 200..299 -> return body
+                status == 429 || status >= 500 -> { sleepMillis(wait); wait *= 2 }
+                status == 401 || status == 403 -> throw YouVersion.HttpException(status, "Tyndale didn't accept the NLT key")
+                else -> throw YouVersion.HttpException(status, "NLT API error $status")
+            }
+        }
+        throw IOException("The NLT API is busy; try again in a minute")
+    }
+
+    private fun get(url: String): Pair<Int, String> =
+        httpRequest(url, headers = emptyMap()).let { it.status to it.text }
+
+    private fun enc(s: String) = urlEncode(s)
+}
