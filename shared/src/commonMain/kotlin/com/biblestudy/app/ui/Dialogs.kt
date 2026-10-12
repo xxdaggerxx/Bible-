@@ -696,36 +696,45 @@ private fun AidCards(vm: StudyViewModel, version: String, verseId: Int, verseTex
     }
     val list = found ?: return false
     if (list.isEmpty()) return false
+    // Short on a phone, or with more than one, so the verse stays in view (AID-9): two lines
+    // each, the rest a tap away. More (the whole entry) sits beside the title.
+    val short = vm.phone || list.size > 1
     for ((_, what) in list) {
         val (title, label, text) = when (what) {
             is com.biblestudy.app.data.NameEntry -> Triple(what.name, if (what.place) "Place" else "Person", what.brief)
             is com.biblestudy.app.data.AidEntry -> Triple(what.title, what.group, what.text)
             else -> continue
         }
+        var whole by remember(what) { mutableStateOf(!short) }
         Surface(
             color = MaterialTheme.colorScheme.secondaryContainer,
             shape = MaterialTheme.shapes.medium,
-            modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp).testTag("aid"),
+            modifier = Modifier.fillMaxWidth().padding(bottom = 6.dp).testTag("aid"),
+            onClick = { whole = !whole },
         ) {
-            Column(Modifier.padding(start = 12.dp, end = 4.dp, top = 8.dp, bottom = 4.dp)) {
-                Text(
-                    buildAnnotatedString {
-                        withStyle(SpanStyle(fontWeight = FontWeight.Bold)) { append(title) }
-                        withStyle(SpanStyle(fontStyle = FontStyle.Italic, color = MaterialTheme.colorScheme.onSurfaceVariant)) { append("  $label") }
-                    },
-                    style = MaterialTheme.typography.bodyLarge,
-                )
-                Text(text, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.padding(top = 2.dp, end = 8.dp))
-                TextButton(
-                    onClick = {
+            Column(Modifier.padding(start = 12.dp, end = 4.dp, top = 2.dp, bottom = 8.dp)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        buildAnnotatedString {
+                            withStyle(SpanStyle(fontWeight = FontWeight.Bold)) { append(title) }
+                            withStyle(SpanStyle(fontStyle = FontStyle.Italic, color = MaterialTheme.colorScheme.onSurfaceVariant)) { append("  $label") }
+                        },
+                        style = MaterialTheme.typography.bodyLarge, maxLines = 1, overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.weight(1f),
+                    )
+                    TextButton(onClick = {
                         when (what) {
                             is com.biblestudy.app.data.NameEntry -> vm.openName(what.id)
                             is com.biblestudy.app.data.AidEntry -> vm.openAid(what)
                         }
                         onOpen()
-                    },
-                    modifier = Modifier.align(Alignment.End),
-                ) { Text("More") }
+                    }) { Text("More") }
+                }
+                Text(
+                    text, style = MaterialTheme.typography.bodyMedium,
+                    maxLines = if (whole) Int.MAX_VALUE else 2, overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.padding(end = 8.dp).testTag(if (whole) "aidWhole" else "aidShort"),
+                )
             }
         }
     }

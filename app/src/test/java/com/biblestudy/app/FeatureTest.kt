@@ -4211,6 +4211,25 @@ class FeatureTest {
 
     @Test
     @Config(qualifiers = "w393dp-h851dp-port-xxhdpi")
+    fun onAPhoneBibleAidsAreShortSoTheVerseStaysInView() {
+        // Revelation 2:1, "seven stars": a number and a symbol. Each card is two lines; tap for the rest.
+        compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.goTo(0, 66, 2, 1, remember = false) }
+        waitForLoaded()
+        val v1 = vm.text("KJV").chapter(66, 2).first { it.verse == 1 }.text
+        val words = com.biblestudy.app.data.StudyRepository.words(v1)
+        compose.runOnUiThread { vm.openVerse(66, 2, 1, words.indexOfFirst { v1.substring(it.first).startsWith("seven stars") }) }
+        waitFor(10_000) { compose.onAllNodesWithTag("aid").fetchSemanticsNodes().isNotEmpty() }
+        assertTrue(compose.onAllNodesWithTag("aidShort", useUnmergedTree = true).fetchSemanticsNodes().isNotEmpty())
+        compose.onAllNodesWithTag("aidWhole", useUnmergedTree = true).assertCountEquals(0)
+        snap("173-phone-aids-short")
+        compose.onAllNodesWithTag("aid")[0].performClick()
+        compose.waitForIdle()
+        compose.onAllNodesWithTag("aidWhole", useUnmergedTree = true).assertCountEquals(1)
+        compose.onNodeWithContentDescription("Close").performClick()
+    }
+
+    @Test
+    @Config(qualifiers = "w393dp-h851dp-port-xxhdpi")
     fun aPhoneShowsEverythingAndDrawsWithAFinger() {
         phoneChecks("393")
         // Margins are tucked away at the edge (PH-5).
