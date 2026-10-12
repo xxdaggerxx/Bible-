@@ -24,8 +24,9 @@ Ink & Word Reflections on Psalm 23; "2,519 reflections" counts up.
 Isaiah 53 with gold dots and a margin cross; at 0:49 the card for 53:5 slides in, fulfilled in 1 Peter 2:24.
 
 ## Frame 6 · Everywhere (54–62s)
-Reading stats on a tablet; two phones. "Tablet or phone. Your notes sync."
+A laptop with the computer version, an iPad and a phone. "iPad, iPhone, Android, Windows and Mac."
+Notes: Apple Pencil · mouse and keyboard · S Pen or finger.
 
 ## Frame 7 · Close (62–72s)
-Library numbers, then "Free · No ads · No account · Works offline", logo, "Coming soon to Google Play",
+Library numbers, then "Free · No ads · No account · Works offline", logo, "iPad · iPhone · Android · Windows · Mac", "Coming soon",
 music credit.

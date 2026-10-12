@@ -69,6 +69,7 @@
       #s7-end img { width: 170px; height: 170px; border-radius: 40px; }
       #s7-end .name { font: 700 92px/1 var(--display); }
       #s7-end .tag { font: 400 40px/1.2 var(--display); font-style: italic; color: var(--muted); }
+      #s7-end .plats { font: 600 34px/1 var(--body); letter-spacing: .04em; color: var(--fg); margin-top: 6px; }
       #s7-end .cta { margin-top: 18px; padding: 22px 40px; border-radius: 999px; background: var(--gold); color: #1a1406; font: 700 36px/1 var(--body); }
       #s7-credit { position: absolute; left: 0; right: 0; bottom: 40px; text-align: center; font: 400 22px/1.3 var(--body); color: var(--muted); }
     </style>
@@ -170,15 +171,18 @@
       <section id="s6" class="clip" data-start="54" data-duration="8.6" data-track-index="5">
         <div class="scene" id="s6-scene">
           <div class="head">
-            <div class="eyebrow" id="s6-eye">Tablets and phones</div>
-            <h2 class="h" id="s6-h1">Tablet or phone. Your notes sync.</h2>
+            <div class="eyebrow" id="s6-eye">Every device you read on</div>
+            <h2 class="h" id="s6-h1">iPad, iPhone, Android, Windows and Mac.</h2>
           </div>
-          <div class="tab" id="s6-tab" style="left: 120px; top: 240px; width: 1080px;">
-            <div class="screen"><div class="cam"><img src="assets/img/stats.jpg" alt="" /></div></div>
+          <div id="s6-laptop" style="position: absolute; left: 560px; top: 250px; width: 900px;">
+            <div style="background: #05070d; padding: 14px; border-radius: 22px 22px 8px 8px; border: 1px solid rgba(255,255,255,.1); box-shadow: 0 40px 80px -30px rgba(0,0,0,.8);"><img src="assets/img/desktop.jpg" alt="" style="display: block; width: 100%; aspect-ratio: 1600 / 1075; object-fit: cover; object-position: top; border-radius: 8px;" /></div>
+            <div style="height: 18px; margin: 0 -60px; background: linear-gradient(#3a3f4f, #1b1f2b); border-radius: 0 0 18px 18px;"></div>
           </div>
-          <div class="phone" id="s6-p1" style="left: 1250px; top: 230px;"><img src="assets/img/phone.jpg" alt="" /></div>
-          <div class="phone" id="s6-p2" style="left: 1560px; top: 300px;"><img src="assets/img/phone-ink.jpg" alt="" /></div>
-          <div class="hand" id="s6-note" style="position: absolute; left: 520px; top: 960px;">reading streaks and milestones</div>
+          <div id="s6-ipad" style="position: absolute; left: 250px; top: 330px; width: 400px; padding: 12px; background: #05070d; border-radius: 30px; border: 1px solid rgba(255,255,255,.08); box-shadow: 0 40px 80px -30px rgba(0,0,0,.8);"><img src="assets/img/ipad.jpg" alt="" style="display: block; width: 100%; aspect-ratio: 820 / 1180; border-radius: 20px;" /></div>
+          <div class="phone" id="s6-p1" style="left: 1400px; top: 380px; width: 250px;"><img src="assets/img/phone.jpg" alt="" /></div>
+          <div class="hand" id="s6-n1" style="position: absolute; left: 280px; top: 960px; width: 360px; text-align: center;">Apple Pencil</div>
+          <div class="hand" id="s6-n2" style="position: absolute; left: 760px; top: 960px; width: 500px; text-align: center;">mouse and keyboard</div>
+          <div class="hand" id="s6-n3" style="position: absolute; left: 1350px; top: 960px; width: 350px; text-align: center;">S Pen or finger</div>
         </div>
       </section>
 
@@ -206,7 +210,8 @@
             <img id="s7-logo" src="assets/img/logo.png" alt="" />
             <div class="name" id="s7-name">Ink &amp; Word</div>
             <div class="tag" id="s7-tag">A study Bible you can write in.</div>
-            <div class="cta" id="s7-cta">Coming soon to Google Play</div>
+            <div class="plats" id="s7-plats">iPad · iPhone · Android · Windows · Mac</div>
+            <div class="cta" id="s7-cta">Coming soon</div>
           </div>
           <div id="s7-credit">Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0</div>
         </div>
@@ -296,10 +301,12 @@
       enter("#s6-scene", S6);
       fadeUp("#s6-eye", S6 + 0.3, 0.7, 14);
       fadeUp("#s6-h1", S6 + 0.5);
-      tl.fromTo("#s6-tab", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1.0, ease: E }, S6 + 0.4);
-      tl.fromTo("#s6-p1", { opacity: 0, y: 90 }, { opacity: 1, y: 0, duration: 1.0, ease: E }, S6 + 1.6);
-      tl.fromTo("#s6-p2", { opacity: 0, y: 90 }, { opacity: 1, y: 0, duration: 1.0, ease: E }, S6 + 2.4);
-      fadeUp("#s6-note", S6 + 4.0, 0.7, 14);
+      tl.fromTo("#s6-laptop", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1.0, ease: E }, S6 + 0.6);
+      tl.fromTo("#s6-ipad", { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 1.0, ease: E }, S6 + 1.6);
+      tl.fromTo("#s6-p1", { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 1.0, ease: E }, S6 + 2.4);
+      fadeUp("#s6-n1", S6 + 3.6, 0.7, 14);
+      fadeUp("#s6-n2", S6 + 4.2, 0.7, 14);
+      fadeUp("#s6-n3", S6 + 4.8, 0.7, 14);
 
       // 7 · Close (62–72)
       const S7 = 62;
@@ -310,11 +317,12 @@
       tl.set(["#s7-p1", "#s7-p2", "#s7-p3", "#s7-p4"], { opacity: 0 }, 0);
       tl.fromTo(["#s7-p1", "#s7-p2", "#s7-p3", "#s7-p4"], { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: E, stagger: 0.4 }, S7 + 3.8);
       tl.to("#s7-b", { opacity: 0, duration: 0.5 }, S7 + 6.0);
-      tl.set(["#s7-logo", "#s7-name", "#s7-tag", "#s7-cta", "#s7-credit"], { opacity: 0 }, 0);
+      tl.set(["#s7-logo", "#s7-name", "#s7-tag", "#s7-plats", "#s7-cta", "#s7-credit"], { opacity: 0 }, 0);
       tl.fromTo("#s7-logo", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.9, ease: E }, S7 + 6.4);
       fadeUp("#s7-name", S7 + 6.7, 0.8, 20);
       fadeUp("#s7-tag", S7 + 7.1, 0.8, 16);
-      fadeUp("#s7-cta", S7 + 7.6, 0.8, 16);
+      fadeUp("#s7-plats", S7 + 7.4, 0.8, 16);
+      fadeUp("#s7-cta", S7 + 7.9, 0.8, 16);
       fadeIn("#s7-credit", S7 + 7.8, 0.8);
 
       window.__timelines["main"] = tl;

@@ -1,5 +1,5 @@
 <title>Ink &amp; Word</title>
-<meta name="description" content="Ink & Word is a free study Bible for Android tablets and phones. Write on the page, study with commentaries, Hebrew and Greek, and devotionals, all offline.">
+<meta name="description" content="Ink & Word is a free study Bible for iPad, iPhone, Android, Windows and Mac. Write on the page, study with commentaries, Hebrew and Greek, and devotionals, all offline.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=Figtree:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap">
@@ -65,6 +65,7 @@ p { margin: 0; }
 .top nav { display: flex; gap: 22px; align-items: center; font-size: .95rem; }
 .top nav a { color: var(--muted); text-decoration: none; }
 .top nav a:hover { color: var(--fg); }
+.top nav a.btn-gold, .top nav a.btn-gold:hover { color: var(--on-gold); }
 @media (max-width: 760px) { .top nav .navlink { display: none; } }
 
 /* Buttons */
@@ -158,12 +159,22 @@ section { padding-block: clamp(56px, 8vw, 104px); }
 .shelf p { color: var(--muted); font-size: .92rem; }
 
 /* Devices */
-.devices .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
-@media (max-width: 860px) { .devices .wrap { grid-template-columns: minmax(0, 1fr); } }
-.phones { display: flex; justify-content: center; gap: clamp(14px, 3vw, 28px); }
-.phone { width: min(240px, 44%); background: #05070d; padding: 9px; border-radius: 34px; box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,.08); }
+.devices .wrap { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(32px, 5vw, 56px); }
+.stage { display: flex; align-items: flex-end; justify-content: center; padding-top: 12px; }
+.stage .ipad { width: 24%; background: #05070d; padding: 1.1%; border-radius: 26px; box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,.08); margin-right: -5%; position: relative; z-index: 2; }
+.stage .ipad img { border-radius: 16px; width: 100%; aspect-ratio: 820 / 1180; object-fit: cover; }
+.stage .laptop { width: 58%; position: relative; z-index: 1; }
+.laptop-screen { background: #05070d; padding: 1.4%; border-radius: 18px 18px 6px 6px; border: 1px solid rgba(255,255,255,.1); box-shadow: var(--shadow); }
+.laptop-screen img { width: 100%; border-radius: 6px; aspect-ratio: 1600 / 1075; object-fit: cover; object-position: top; }
+.laptop-base { height: 14px; margin-inline: -6%; background: linear-gradient(#3a3f4f, #1b1f2b); border-radius: 0 0 14px 14px; }
+.stage .phone { width: 15%; margin-left: -4%; position: relative; z-index: 2; transform: none; }
+.platforms { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 3vw, 32px); }
+@media (max-width: 760px) { .platforms { grid-template-columns: minmax(0, 1fr); } }
+.platforms div { display: grid; gap: 6px; padding-top: 16px; border-top: 2px solid var(--gold); align-content: start; }
+.platforms h3 { font-size: var(--step-1); }
+.platforms p { color: var(--muted); }
+.phone { background: #05070d; padding: 9px; border-radius: 34px; box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,.08); }
 .phone img { border-radius: 26px; width: 100%; aspect-ratio: 9 / 19.5; object-fit: cover; object-position: top; }
-.phone:nth-child(2) { transform: translateY(36px); }
 
 /* Trust */
 .trust { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 3vw, 32px) clamp(28px, 5vw, 64px); }
@@ -221,17 +232,17 @@ footer a { color: var(--muted); }
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow">Free study Bible for Android</span>
+        <span class="eyebrow">Free study Bible · iPad, iPhone, Android, Windows, Mac</span>
         <h1>A study Bible you can <span class="underline-word">write in<svg viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 20 C 60 8, 140 26, 200 14 S 280 10, 296 16"/></svg></span>.</h1>
         <p class="lede">Underline, highlight and write in the margins with your pen or finger. Study with commentaries, Hebrew and Greek, and devotionals beside the text. Everything works offline.</p>
         <div class="cta-row">
           <a class="btn btn-gold" href="#get">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 3.5v17a1 1 0 0 0 1.5.87l14.7-8.5a1 1 0 0 0 0-1.74L5.5 2.63A1 1 0 0 0 4 3.5Z"/></svg>
-            Coming soon to Google Play
+            Get Ink &amp; Word
           </a>
           <a class="btn btn-ghost" href="#film">Watch the film</a>
         </div>
-        <p class="ios-note">On iPhone or iPad? <a href="#get">Tell me when it's ready</a>.</p>
+        <p class="ios-note">Coming soon to the App Store and Google Play, and for Windows and Mac.</p>
       </div>
       <div class="device">
         <div class="tablet"><img src="img/ink-john3.webp" alt="John 3 in Ink & Word with &quot;born again&quot; circled, verse 5 highlighted, and margin sketches: a moon by &quot;by night&quot;, &quot;New birth!&quot; with an arrow, a cross on a hill and wind lines labelled &quot;Born of the Spirit&quot;" width="1600" height="1000"></div>
@@ -370,7 +381,7 @@ footer a { color: var(--muted); }
         <div class="feature-text">
           <span class="eyebrow">Keep going</span>
           <h3>A gentle nudge to keep reading</h3>
-          <p>See how much of the Bible you've read, keep a daily streak and earn milestones from <em>First step</em> to <em>The whole Bible</em>. Your reading adds up across your phone and tablet.</p>
+          <p>See how much of the Bible you've read, keep a daily streak and earn milestones from <em>First step</em> to <em>The whole Bible</em>. Your reading adds up across your devices.</p>
         </div>
         <div class="shot">
           <div class="tablet"><img src="img/stats.webp" alt="Reading stats: the share of the Bible read, a six-day streak, time read and milestones" width="1600" height="1000" loading="lazy"></div>
@@ -400,18 +411,24 @@ footer a { color: var(--muted); }
     </div>
   </section>
 
-  <section class="devices">
+  <section class="devices" id="devices">
     <div class="wrap">
       <div class="section-head" style="margin-bottom: 0">
-        <span class="eyebrow">Tablets and phones</span>
-        <h2>Best with a pen. Lovely with a finger.</h2>
-        <p class="lede">Ink &amp; Word was designed around a tablet and pen, like the Galaxy Tab and S Pen. On a phone, draw with one finger and scroll with two. Turn on sync and your notes follow you between devices through your own Google Drive.</p>
-        <p class="hand" style="font-size: 1.6rem; margin-top: 6px">iPhone and iPad are on the way.</p>
+        <span class="eyebrow">Every device you read on</span>
+        <h2>One study Bible on iPad, iPhone, Android, Windows and Mac.</h2>
+        <p class="lede">The same Bibles, study tools and notes everywhere. Ink &amp; Word was designed around a tablet and pen, and works just as well with a finger on a phone or a mouse on a computer.</p>
       </div>
-      <div class="phones">
+      <div class="stage" aria-hidden="false">
+        <div class="ipad"><img src="img/ipad.webp" alt="Ink & Word on an iPad, reading John 3" width="820" height="1180" loading="lazy"></div>
+        <div class="laptop"><div class="laptop-screen"><img src="img/desktop.webp" alt="Ink & Word in a window on a computer, reading John 3" width="1600" height="1075" loading="lazy"></div><div class="laptop-base"></div></div>
         <div class="phone"><img src="img/phone.webp" alt="Ink & Word on a phone, reading John 3" width="640" height="1386" loading="lazy"></div>
-        <div class="phone"><img src="img/phone-ink.webp" alt="A finger-drawn underline on John 3 on a phone" width="640" height="1386" loading="lazy"></div>
       </div>
+      <div class="platforms">
+        <div><h3>iPad and iPhone</h3><p>Write with Apple Pencil or your finger.</p></div>
+        <div><h3>Android tablets and phones</h3><p>Write with an S Pen or your finger.</p></div>
+        <div><h3>Windows and Mac</h3><p>Draw with the mouse or a drawing tablet, with keyboard shortcuts for the rest.</p></div>
+      </div>
+      <p class="hand" style="font-size: 1.6rem; text-align: center">Turn on sync and your phone and tablet keep the same notes.</p>
     </div>
   </section>
 
@@ -451,15 +468,15 @@ footer a { color: var(--muted); }
         </details>
         <details>
           <summary>Do I need a pen?</summary>
-          <p>No. A pen like the S Pen gives the best writing experience on a tablet, but you can draw with your finger on any tablet or phone.</p>
+          <p>No. A pen like Apple Pencil or the S Pen gives the best writing experience on a tablet, but you can draw with your finger on any tablet or phone, and with the mouse on a computer.</p>
         </details>
         <details>
-          <summary>Is it on iPhone or iPad?</summary>
-          <p>Not yet. Ink &amp; Word is on Android tablets and phones first, and iPhone and iPad are planned. Leave your email below and we'll tell you when it's ready.</p>
+          <summary>Which devices does it run on?</summary>
+          <p>iPad and iPhone, Android tablets and phones, and Windows and Mac computers (Linux too). It's the same app everywhere, with the same Bibles, study tools and notes. On a computer, bring your notes across with a backup file; sync with Google Drive there is coming.</p>
         </details>
         <details>
           <summary>Where do my notes go?</summary>
-          <p>They stay on your device. If you turn on sync, they're also kept in a private folder in your own Google Drive, so your phone and tablet match. Nobody else can see them.</p>
+          <p>They stay on your device. If you turn on sync, they're also kept in a private folder in your own Google Drive, so your phone and tablet match. Nobody else can see them. You can also back everything up to one file and restore it on another device.</p>
         </details>
         <details>
           <summary>How was the Ink &amp; Word Commentary written?</summary>
@@ -475,14 +492,16 @@ footer a { color: var(--muted); }
         <div>
           <span class="eyebrow">Coming soon</span>
           <h2 style="margin-top: 12px">Be the first to know</h2>
-          <p>Ink &amp; Word is coming to Google Play for Android tablets and phones. Leave your email and we'll send one message when it's ready, and another when iPhone and iPad follow.</p>
+          <p>Ink &amp; Word is coming to the App Store and Google Play, and for Windows and Mac. Leave your email and we'll send one message when it's ready on the devices you choose.</p>
         </div>
         <form id="signup" novalidate>
           <label for="email">Email address</label>
           <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
           <div class="checks" role="group" aria-label="Tell me about">
-            <label for="want-android"><input id="want-android" type="checkbox" checked> Android</label>
-            <label for="want-ios"><input id="want-ios" type="checkbox"> iPhone and iPad</label>
+            <label for="want-ios"><input id="want-ios" type="checkbox"> iPad and iPhone</label>
+            <label for="want-android"><input id="want-android" type="checkbox"> Android</label>
+            <label for="want-windows"><input id="want-windows" type="checkbox"> Windows</label>
+            <label for="want-mac"><input id="want-mac" type="checkbox"> Mac</label>
           </div>
           <button class="btn btn-gold" type="submit">Notify me</button>
           <p class="form-msg" id="form-msg" aria-live="polite"></p>

@@ -12,15 +12,16 @@ angle: product-demo
 
 ## Intent
 
-A launch film for Ink & Word, a free, non-profit study Bible app for Android tablets and phones,
+A launch film for Ink & Word, a free, non-profit study Bible app for iPad, iPhone, Android, Windows and Mac,
 shown on the landing page. No narration: on-screen words and a gentle piano bed. Warm, reverent,
 uncluttered. Lead with writing on the page (the thing no other Bible app does), then study depth,
-quiet time, Points to Christ, tablets and phones, and close on "Free. No ads. No account. Works offline."
+quiet time, Points to Christ, every device, and close on "Free. No ads. No account. Works offline."
 
 ## Assets
 
 - assets/img/john3-0..6.jpg: John 3 in the real app, ink added stage by stage (drawn with the app's own pen).
-- assets/img/commentary, greek, reflections, isaiah53, christ-card, stats, psalm23, phone, phone-ink: real app screenshots.
+- assets/img/commentary, greek, reflections, isaiah53, christ-card, phone: real app screenshots.
+- assets/img/ipad.jpg: the iPad app on the iOS simulator (iOS build CI); assets/img/desktop.jpg: the computer version in a window.
 - assets/img/logo.png: the app icon.
 - assets/audio/heartwarming.mp3: "Heartwarming" by Kevin MacLeod (incompetech.com), CC BY 4.0, credited on the end card.
 

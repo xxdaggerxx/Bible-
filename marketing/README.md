@@ -1,6 +1,6 @@
 # Ink & Word launch material
 
-Everything for the public launch: the landing page, the 72-second launch film, and the script that
+Everything for the public launch of Ink & Word on iPad, iPhone, Android, Windows and Mac: the landing page, the 72-second launch film, and the script that
 makes the app screenshots with sketches in the margins. None of it is part of the app or its build.
 
 Never use the word "AI" in launch material. The commentary is the *Ink & Word Commentary*
@@ -15,7 +15,7 @@ else. The film section plays `inkandword-film.mp4`, which isn't committed (it is
 below).
 
 Still placeholders: the sign-up form (it saves nothing yet), the contact address, the privacy policy
-link, and the Google Play button ("Coming soon to Google Play").
+link, and the store buttons ("Coming soon to the App Store and Google Play, and for Windows and Mac").
 
 ## film/
 
@@ -58,3 +58,13 @@ rm app/src/test/java/com/biblestudy/app/MarketingShots.kt
 The PNGs land in `app/build/marketing/`. Lettering is drawn in single strokes at least about 34 px
 tall: in finger-drawing mode a stroke shorter than the touch slop counts as a tap and becomes a dot.
 The other screenshots come from the feature tests (`app/build/screenshots/`).
+
+The device shots are real too: `ipad` is the iPad app on the iOS simulator (the `ios-simulator`
+artifact of the *iOS build* workflow), and `desktop` is the computer version (`./gradlew :desktop:run`)
+captured on a virtual screen:
+
+```bash
+xvfb-run -n 77 -s "-screen 0 2560x1720x24" ./gradlew :desktop:run &
+# once the window is up (a minute or two):
+XAUTHORITY=$(ls /tmp/xvfb-run.*/Xauthority) DISPLAY=:77 import -window root desktop.png
+```
