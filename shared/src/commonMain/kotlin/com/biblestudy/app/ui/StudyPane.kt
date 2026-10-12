@@ -87,7 +87,10 @@ fun StudyPane(vm: StudyViewModel, slot: Slot.Study, modifier: Modifier) {
         when (kind) {
             PaneKind.SEARCH -> SearchPane(vm, inner.padding(top = 8.dp), onOpened = {}, inPane = true)
             PaneKind.CROSSREFS -> CrossRefsPane(vm, inner)
-            PaneKind.NOTES -> NotesPane(vm, inner)
+            // Every typed note and every highlight (NOTE-5, HL-8), the lists that were in My notes:
+            // tapping one shows it in the Bible panel.
+            PaneKind.NOTES -> NotesList(vm, vm.activePanel.coerceIn(0, vm.panels.lastIndex), { vm.showBible() }, inner.padding(top = 8.dp))
+            PaneKind.HIGHLIGHTS -> HighlightsList(vm, vm.activePanel.coerceIn(0, vm.panels.lastIndex), { vm.showBible() }, inner.padding(top = 8.dp))
             PaneKind.DICTIONARY -> DictionaryPane(vm, inner)
             PaneKind.TOPICS -> TopicsPane(vm, inner)
             PaneKind.COMMENTARY -> CommentaryPane(vm, slot.pos, inner.padding(top = 4.dp))
@@ -194,55 +197,6 @@ private fun CrossRefsPane(vm: StudyViewModel, modifier: Modifier) {
             // Topics, parallel accounts and passages that share topics (STD-2, STD-6, STD-9).
             // Added once the list is in, so the list doesn't open scrolled to it.
             if (r != null) item(key = "related") { RelatedPassages(vm, id, version, onShow = { shown = it }) }
-        }
-    }
-}
-
-/** Typed notes and highlighted verses in the chapter shown in the active panel. */
-@Composable
-private fun NotesPane(vm: StudyViewModel, modifier: Modifier) {
-    val panel = vm.studyPanel()
-    val book = panel.book
-    val chapter = panel.chapter
-    val notes = vm.notesFor(book, chapter).values.sortedBy { it.verse }
-    // Highlighted verses, whole (in the version being read).
-    val marks = vm.highlightsFor(panel.version, book, chapter).map { vm.highlightVerses(it) }.distinct().sortedBy { it.first }
-    Column(modifier) {
-        Text("${vm.bible.book(book).name} $chapter", style = MaterialTheme.typography.titleMedium, modifier = Modifier.padding(vertical = 8.dp))
-        if (notes.isEmpty() && marks.isEmpty()) {
-            Text("No typed notes or highlights in this chapter. Tap a verse with your finger to add a note.")
-        }
-        LazyColumn(Modifier.weight(1f)) {
-            items(notes, key = { "n${it.verse}" }) { n ->
-                Column(
-                    Modifier.fillMaxWidth().clickable { vm.openVerse(book, chapter, n.verse) }.padding(vertical = 8.dp)
-                ) {
-                    Text(
-                        vm.refLabel(VerseId.of(book, chapter, n.verse), VerseId.of(book, chapter, n.endVerse)),
-                        style = MaterialTheme.typography.labelLarge,
-                        color = MaterialTheme.colorScheme.primary,
-                    )
-                    Text(n.text)
-                }
-                HorizontalDivider()
-            }
-            if (marks.isNotEmpty()) {
-                item { Text("Highlights", style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 12.dp)) }
-                items(marks, key = { "h${it.first}-${it.second}" }) { (from, to) ->
-                    Column(Modifier.fillMaxWidth().clickable { vm.openVerse(book, chapter, from) }.padding(vertical = 8.dp)) {
-                        Text(
-                            vm.refLabel(VerseId.of(book, chapter, from), VerseId.of(book, chapter, to)),
-                            style = MaterialTheme.typography.labelLarge,
-                            color = MaterialTheme.colorScheme.primary,
-                        )
-                        Text(
-                            (from..to).mapNotNull { vm.text(panel.version).verseText(VerseId.of(book, chapter, it)) }.joinToString(" "),
-                            maxLines = 3, overflow = TextOverflow.Ellipsis,
-                        )
-                    }
-                    HorizontalDivider()
-                }
-            }
         }
     }
 }

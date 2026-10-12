@@ -25,11 +25,14 @@ import androidx.compose.material.icons.automirrored.filled.HelpOutline
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Draw
 import androidx.compose.material.icons.filled.EditNote
+import androidx.compose.material.icons.filled.BorderColor
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.RestartAlt
 import androidx.compose.material.icons.outlined.SpaceDashboard
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DropdownMenu
@@ -91,6 +94,15 @@ fun PanelViewMenu(vm: StudyViewModel, slot: Slot, expanded: Boolean, onDismiss: 
         if (vm.tab.shown > 1 || vm.tabs.size > 1) {
             DropdownMenuItem(text = { Text(if (vm.tab.shown > 1) "Close panel" else "Close tab") }, onClick = { onDismiss(); vm.closeSlot(slot) })
         }
+        // Tabs and layouts (TAB-1, NAV-2, SPLIT-6): here since the toolbar's panels button went (UI-5).
+        HorizontalDivider()
+        DropdownMenuItem(text = { Text("New tab") }, onClick = { onDismiss(); vm.newTab() })
+        if (vm.tabs.size > 1 || vm.tab.shown > 1) DropdownMenuItem(
+            text = { Text("Start fresh") },
+            leadingIcon = { Icon(Icons.Filled.RestartAlt, contentDescription = null) },
+            onClick = { onDismiss(); vm.startFresh(); vm.message = "One panel again. Back (\u2190) undoes it." },
+        )
+        LayoutChoices(vm, onDismiss)
         HorizontalDivider()
         // Help about what this panel shows (DOC-2).
         val help = LocalHelp.current
@@ -98,6 +110,49 @@ fun PanelViewMenu(vm: StudyViewModel, slot: Slot, expanded: Boolean, onDismiss: 
             text = { Text("Help: ${current?.label ?: "panels"}") },
             leadingIcon = { Icon(Icons.AutoMirrored.Filled.HelpOutline, contentDescription = null) },
             onClick = { onDismiss(); help(HelpTopic.of(current)) },
+        )
+    }
+}
+
+/**
+ * Saved layouts (SPLIT-6), folded under *Layouts*: open or delete one, or save what's open now.
+ */
+@Composable
+private fun LayoutChoices(vm: StudyViewModel, onDismiss: () -> Unit) {
+    var open by remember { mutableStateOf(false) }
+    var naming by remember { mutableStateOf(false) }
+    DropdownMenuItem(
+        text = { Text("Layouts") }, onClick = { open = !open },
+        leadingIcon = { Icon(Icons.Outlined.SpaceDashboard, contentDescription = null) },
+        trailingIcon = { Icon(if (open) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore, contentDescription = null) },
+        modifier = Modifier.testTag("folder:Layouts"),
+    )
+    if (open) {
+        val inset = PaddingValues(start = 56.dp, end = 12.dp)
+        for (w in vm.workspaces) DropdownMenuItem(
+            text = { Text(w.name) }, contentPadding = inset,
+            onClick = { onDismiss(); vm.openWorkspace(w) },
+            trailingIcon = {
+                IconButton(onClick = { vm.deleteWorkspace(w) }) { Icon(Icons.Filled.Close, contentDescription = "Delete layout ${w.name}") }
+            },
+        )
+        DropdownMenuItem(text = { Text("Save this layout\u2026") }, contentPadding = inset, onClick = { naming = true })
+    }
+    if (naming) {
+        var name by remember { mutableStateOf("") }
+        AlertDialog(
+            onDismissRequest = { naming = false },
+            title = { Text("Save this layout") },
+            text = {
+                OutlinedTextField(
+                    value = name, onValueChange = { name = it }, singleLine = true,
+                    placeholder = { Text("e.g. Gospels side by side") },
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = { vm.saveWorkspace(name); naming = false; onDismiss() }, enabled = name.isNotBlank()) { Text("Save") }
+            },
+            dismissButton = { TextButton(onClick = { naming = false }) { Text("Cancel") } },
         )
     }
 }
@@ -158,6 +213,7 @@ fun ViewChoices(
 private fun viewIcon(k: PaneKind): ImageVector = when (k) {
     PaneKind.SKETCHES -> Icons.Filled.Draw
     PaneKind.NOTES -> Icons.Filled.EditNote
+    PaneKind.HIGHLIGHTS -> Icons.Filled.BorderColor
     PaneKind.SEARCH -> Icons.Filled.Search
     PaneKind.CHAT -> Icons.AutoMirrored.Filled.Chat
     else -> Icons.Filled.MenuBook

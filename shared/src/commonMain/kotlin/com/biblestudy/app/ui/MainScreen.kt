@@ -53,7 +53,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 
-private enum class DialogKind { PICKER, SEARCH, LAYERS, NOTES, ABOUT, RESTORE, SETTINGS, STATS }
+private enum class DialogKind { PICKER, SEARCH, LAYERS, ABOUT, RESTORE, SETTINGS, STATS }
 
 private val LightColors = lightColorScheme(
     primary = Color(0xFF7A5C2E),
@@ -104,7 +104,6 @@ fun StudyApp(vm: StudyViewModel) {
                         vm = vm,
                         onLayers = { dialog = DialogKind.LAYERS },
                         onSearch = { dialog = DialogKind.SEARCH },
-                        onNotes = { dialog = DialogKind.NOTES },
                         onInsertImage = { src ->
                             when (src) {
                                 ImageSource.GALLERY -> pickImage()
@@ -231,7 +230,6 @@ fun StudyApp(vm: StudyViewModel) {
                     val layer = vm.layers.firstOrNull { it.id == id }?.name ?: "layer"
                     runCatching { exportPdf("${vm.exportName()} - $layer.pdf") }.onFailure { vm.message = "No file app is available." }
                 }) { dialog = null }
-                DialogKind.NOTES -> MyNotesDialog(vm) { dialog = null }
                 DialogKind.ABOUT -> AboutDialog { dialog = null }
                 DialogKind.STATS -> ReadingStatsDialog(vm) { dialog = null }
                 DialogKind.SETTINGS -> SettingsDialog(

@@ -1282,59 +1282,8 @@ fun LayersDialog(vm: StudyViewModel, onExportLayer: (Long) -> Unit = {}, onDismi
 }
 
 // ---------------------------------------------------------------------------------------------
-// My notes: typed notes, highlights and sketch pages
+// My notes and Highlights (panel views): every typed note and every highlight
 // ---------------------------------------------------------------------------------------------
-
-@Composable
-fun MyNotesDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
-    val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
-    // The notes browser (NOTE-5): typed notes and text boxes, highlights, and sketch pages.
-    var tab by remember { mutableStateOf(0) }
-    BigDialog(onDismiss) {
-        Column {
-            DialogTitle("My notes", onDismiss, help = HelpTopic.NOTES)
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                FilterChip(selected = tab == 0, onClick = { tab = 0 }, label = { Text("Notes") })
-                FilterChip(selected = tab == 1, onClick = { tab = 1 }, label = { Text("Highlights") })
-                FilterChip(selected = tab == 2, onClick = { tab = 2 }, label = { Text("Sketch pages") })
-            }
-            Spacer(Modifier.height(8.dp))
-            when (tab) {
-                0 -> NotesList(vm, panelIndex, onDismiss, Modifier.weight(1f))
-                1 -> HighlightsList(vm, panelIndex, onDismiss, Modifier.weight(1f))
-                else -> SketchList(vm, panelIndex, onDismiss, Modifier.weight(1f))
-            }
-        }
-    }
-}
-
-/**
- * Every sketch page (SKT-2): yours, newest first, then the ready-made ones (SKT-5). Each shows the
- * verse it's linked to, or that it stands on its own. Tap one to open it.
- */
-@Composable
-private fun SketchList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Unit, modifier: Modifier) {
-    val mine = vm.sketches.filter { !it.readyMade }.sortedByDescending { it.created }
-    val ready = vm.sketches.filter { it.readyMade }.sortedBy { it.created }
-    val missing = SketchTemplates.all.size > ready.size
-    Column(modifier) {
-        LazyColumn(Modifier.weight(1f)) {
-            item { MySketchesHeader(vm, Modifier.padding(top = 8.dp)) { made -> vm.openSketch(made, panelIndex); onDismiss() } }
-            if (mine.isEmpty()) item {
-                Text(
-                    "None yet. Tap New sketch page to make one, linked to a verse or on its own.",
-                    style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(vertical = 8.dp),
-                )
-            }
-            items(mine, key = { it.id }) { s -> SketchRow(vm, s) { vm.openSketch(s, panelIndex); onDismiss() } }
-            item { Text("Ready-made pages", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 16.dp)) }
-            items(ready, key = { it.id }) { s -> SketchRow(vm, s) { vm.openSketch(s, panelIndex); onDismiss() } }
-            if (missing) item {
-                TextButton(onClick = { vm.addReadyMadePages(announce = true) }) { Text("Put back deleted ready-made pages") }
-            }
-        }
-    }
-}
 
 /**
  * "My sketch pages" with a button to make a new one (SKT-2), at the top of both lists of sketch pages.
@@ -1376,7 +1325,7 @@ fun SketchRow(vm: StudyViewModel, s: com.biblestudy.app.model.Sketch, onOpen: ()
  * first. Tap one to go there.
  */
 @Composable
-private fun NotesList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Unit, modifier: Modifier) {
+internal fun NotesList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Unit, modifier: Modifier) {
     val data by produceState<Pair<List<com.biblestudy.app.data.NoteEntry>, List<com.biblestudy.app.model.MarginText>>?>(
         null, vm.dataGeneration, vm.editCount,
     ) { value = vm.browseNotes() }
@@ -1535,7 +1484,7 @@ fun TagEditor(vm: StudyViewModel, key: String, onDismiss: () -> Unit) {
 
 /** Every highlight in Bible order, with its words in their colour; filter by colour or layer (HL-8). */
 @Composable
-private fun HighlightsList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Unit, modifier: Modifier) {
+internal fun HighlightsList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Unit, modifier: Modifier) {
     val entries by produceState<List<HighlightEntry>?>(null, vm.dataGeneration, vm.editCount) { value = vm.highlightEntries() }
     var colorFilter by remember { mutableStateOf<Int?>(null) }
     var layerFilter by remember { mutableStateOf<Long?>(null) }

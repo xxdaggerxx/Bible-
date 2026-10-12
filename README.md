@@ -1,4 +1,4 @@
-# Ink & Word — version 2.10.4
+# Ink & Word — version 2.10.5
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet, and since version 2.0 on Android phones too, drawing with a finger. Since version 2.10.3 it also runs on Windows, Mac and Linux computers.
 
@@ -75,6 +75,15 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 2.10.5
+
+- **A shorter toolbar, for phones especially.** Four buttons are gone from the toolbar:
+  - **Layers** is in the ⋮ menu (*Layers · My Notes* names the layer you're writing on).
+  - **The panels button** is gone. Everything it did is in each panel's own menu (the button at a panel's top left): *Add a panel beside*, then choose what the new panel shows from its menu; *New tab*; *Start fresh*; and *Layouts*, which folds open to your saved layouts and *Save this layout…*. The left and right margins are switched in *Settings → Margins & panels*.
+  - **My notes** is gone as a window. *My notes* (every typed note and text box) and the new *Highlights* (every highlighted verse) are views in the panel menu, with the same filters; tapping one goes there. Sketch pages are under *Sketch pages* in the same menu.
+  - **Undo and redo** show only while drawing, not in read mode.
+- Known gaps: opening a study view beside the text is now two steps (*Add a panel beside*, then pick the view) instead of the panels button's one; a view picked in a tab's only panel takes the Bible's place until you tap something in it or choose *Bible*.
 
 ## New in version 2.10.4
 

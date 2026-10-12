@@ -632,8 +632,8 @@ class FeatureTest {
         assertEquals(2, vm.tabs.size)
         assertEquals(45 to 8, vm.panels[0].book to vm.panels[0].chapter)
 
-        // Start fresh (NAV-2): one tab, one panel, where you're reading; Back undoes it.
-        compose.onNodeWithContentDescription("Panels").performClick()
+        // Start fresh (NAV-2), in the panel menu: one tab, one panel, where you're reading; Back undoes it.
+        compose.onAllNodesWithContentDescription("Panel view").onFirst().performClick()
         compose.onNodeWithText("Start fresh").performClick()
         waitForLoaded()
         assertEquals(1, vm.tabs.size)
@@ -951,8 +951,8 @@ class FeatureTest {
         val h = highlightWordAt(Offset((Page.COL_PAD + 250f) * zoom(), 600f))
         compose.runOnUiThread { vm.goTo(0, 1, 1, remember = false) }
         waitForLoaded()
-        compose.onNodeWithContentDescription("My notes").performScrollTo().performClick()
-        compose.waitForIdle()
+        // Highlights is a view in the panel menu (UI-5); in the tab's only panel it takes the Bible's place.
+        compose.onNodeWithContentDescription("Panel view").performClick()
         compose.onNodeWithText("Highlights").performClick()
         waitFor(5_000) { compose.onAllNodesWithText("John 3:", substring = true).fetchSemanticsNodes().isNotEmpty() }
         // The whole verse is listed, not just the highlighted word.
@@ -960,8 +960,10 @@ class FeatureTest {
         val verse = vm.text(h.version).verseText(com.biblestudy.app.model.VerseId.of(43, 3, vm.highlightVerses(h).first))!!
         assertEquals(verse, shown)
         snap("42-highlights-list")
+        // Tapping one brings the Bible back, at that verse.
         compose.onAllNodesWithText("John 3:", substring = true)[0].performClick()
         waitForLoaded()
+        assertEquals(null, vm.sidePane)
         assertEquals(43, vm.panels[0].book)
         assertEquals(3, vm.panels[0].chapter)
         assertEquals(h.version, vm.panels[0].version)
@@ -1370,15 +1372,17 @@ class FeatureTest {
     @Test
     fun aTabHoldsTwoPanelsAndNewTabsHoldMore() {
         assertEquals(2, vm.maxPanels)
-        compose.onNodeWithContentDescription("Panels").performScrollTo().performClick()
-        compose.onNodeWithText("Add a Bible panel").performClick()
+        // The panel menu adds a panel beside (the toolbar's panels button went in 2.11, UI-5).
+        compose.onNodeWithContentDescription("Panel view").performClick()
+        compose.onNodeWithText("Add a panel beside").performClick()
         waitForLoaded()
         assertEquals(2, vm.panels.size)
         for (i in 0..1) compose.onNodeWithTag("reader$i").assertExists()
-        // A third doesn't fit: the menu offers a new tab instead.
-        compose.onNodeWithContentDescription("Panels").performClick()
-        compose.onNodeWithText("Add a Bible panel").assertIsNotEnabled()
-        compose.onNodeWithText("Close other panel").performClick()
+        // A third doesn't fit: the menu offers to swap the arrangement and a new tab instead.
+        compose.onAllNodesWithContentDescription("Panel view")[1].performClick()
+        compose.onNodeWithText("Add a panel beside").assertDoesNotExist()
+        compose.onNodeWithText("New tab").assertExists()
+        compose.onNodeWithText("Close panel").performClick()
         waitForLoaded()
         assertEquals(1, vm.panels.size)
     }
@@ -1771,7 +1775,7 @@ class FeatureTest {
             vm.setNote(VerseTarget(19, 23, 1), "The Lord is my shepherd")
             vm.setMeaning(HIGHLIGHT_COLORS[0], "Promises")
         }
-        compose.onNodeWithContentDescription("My notes").performClick()
+        compose.runOnUiThread { vm.sidePane = PaneKind.NOTES }
         waitFor(5_000) { compose.onAllNodesWithText("God so loved").fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("The Lord is my shepherd").assertExists()
 
@@ -1861,14 +1865,15 @@ class FeatureTest {
             vm.setStacked(true)
         }
         waitForLoaded()
-        compose.onNodeWithContentDescription("Panels").performClick()
-        compose.onNodeWithText("Save this layout\u2026").performScrollTo().performClick()
+        compose.onAllNodesWithContentDescription("Panel view").onFirst().performClick()
+        compose.onNodeWithTag("folder:Layouts").performClick()
+        compose.onNodeWithText("Save this layout\u2026").performClick()
         compose.onNodeWithText("e.g. Gospels side by side").performTextInput("Baptism of Jesus")
         compose.onNodeWithText("Save").performClick()
         compose.waitForIdle()
         assertEquals(listOf("Baptism of Jesus"), vm.workspaces.map { it.name })
 
-        // Change everything, then bring the layout back from the panels menu: it replaces the tabs.
+        // Change everything, then bring the layout back from the panel menu: it replaces the tabs.
         compose.runOnUiThread {
             while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex)
             while (vm.panels.size > 1) vm.closePanel(vm.panels.lastIndex)
@@ -1876,8 +1881,9 @@ class FeatureTest {
             vm.sidePane = null
         }
         waitForLoaded()
-        compose.onNodeWithContentDescription("Panels").performClick()
-        compose.onNodeWithText("Layout: Baptism of Jesus").performClick()
+        compose.onNodeWithContentDescription("Panel view").performClick()
+        compose.onNodeWithTag("folder:Layouts").performClick()
+        compose.onNodeWithText("Baptism of Jesus").performClick()
         waitForLoaded()
         assertEquals(2, vm.tabs.size)
         assertEquals(1, vm.activeTab)
@@ -2499,7 +2505,9 @@ class FeatureTest {
 
     @Test
     fun aLayerCanBeFadedAndRecolouredFromItsMenu() {
-        compose.onNodeWithText("My Notes").performClick()
+        // Layers is in the ⋮ menu, with the layer ink goes on (UI-5).
+        compose.onNodeWithContentDescription("More").performClick()
+        compose.onNodeWithText("Layers \u00b7 My Notes").performClick()
         compose.onNodeWithText("Layers").assertExists()
         compose.onNodeWithContentDescription("More for My Notes").performClick()
         snap("91-layer-menu")
@@ -2638,14 +2646,13 @@ class FeatureTest {
         compose.runOnUiThread { vm.fingerDraw = false }
         snap("96-sketch-page")
 
-        // Back to John 3; the sketch page reopens from My notes.
+        // Back to John 3; the sketch page opens again.
         compose.onNodeWithContentDescription("Back").performClick()
         waitForLoaded()
         assertEquals(43 to 3, vm.panels[0].book to vm.panels[0].chapter)
         snap("97-sketch-badge")
-        compose.onNodeWithContentDescription("My notes").performScrollTo().performClick()
-        compose.onNodeWithText("Sketch pages").performClick()
-        compose.onNodeWithText("Born again").performClick()
+        // (Opening it from the Sketch pages view is tested in anySketchPageOpensBesideTheText.)
+        compose.runOnUiThread { vm.openSketch(sk, 0) }
         waitForLoaded()
         assertEquals(sk.book, vm.panels[0].book)
         // Kept in the notes database, and not listed among typed notes.
@@ -2835,14 +2842,16 @@ class FeatureTest {
         // They aren't badges in any chapter's margin.
         assertTrue(vm.sketchesIn(43, 3).none { it.readyMade })
 
-        // Open one from My notes \u2192 Sketch pages.
-        compose.onNodeWithContentDescription("My notes").performClick()
+        // Open one from the panel menu's Sketch pages: it opens beside the Bible.
+        compose.onNodeWithContentDescription("Panel view").performClick()
         compose.onNodeWithText("Sketch pages").performClick()
         compose.onNodeWithText("Ready-made pages").assertExists()
         snap("116-sketch-list")
         compose.onNodeWithText("The feasts of Israel").performClick()
         waitForLoaded()
-        assertEquals(ready[0].book, vm.panels[0].book)
+        assertEquals(ready[0].book, vm.panels[1].book)
+        compose.runOnUiThread { vm.closePanel(1); vm.openSketch(ready[0], 0) }
+        waitForLoaded()
         snap("117-feasts")
         for ((t, shot) in ready.drop(1).zip(listOf("118-tabernacle", "119-kings", "120-adam-to-jesus", "130-paul", "131-exodus", "132-life-of-christ", "133-tribes", "134-temples"))) {
             compose.runOnUiThread { vm.openSketch(t, 0) }
@@ -2904,7 +2913,8 @@ class FeatureTest {
         // A saved view of layers comes back with one tap.
         val second = compose.runOnIdle { vm.addLayer("Sermon"); vm.layers.last().id }
         compose.runOnUiThread { vm.showOnlyLayer(second); vm.saveLayerPreset("Sermon prep"); vm.setAllLayersVisible(true) }
-        compose.onNodeWithContentDescription("Layers").performClick()
+        compose.onNodeWithContentDescription("More").performClick()
+        compose.onNodeWithText("Layers", substring = true).performClick()
         compose.onNodeWithText("Sermon prep").performClick()
         assertEquals(listOf(second), vm.layers.filter { it.visible }.map { it.id })
         snap("112-layer-views")
@@ -3117,8 +3127,8 @@ class FeatureTest {
     fun anySketchPageOpensBesideTheText() {
         compose.runOnUiThread { vm.addReadyMadePages() }
         waitForLoaded()
-        // Panels \u2192 Beside the text \u2192 Sketch pages lists every page.
-        compose.onNodeWithContentDescription("Panels").performClick()
+        // The panel menu's Sketch pages lists every page.
+        compose.onNodeWithContentDescription("Panel view").performClick()
         compose.onNodeWithText("Sketch pages").performClick()
         compose.onNodeWithTag("sketchesPane").assertExists()
         snap("121-sketches-pane")
@@ -3143,27 +3153,14 @@ class FeatureTest {
     fun bothListsOfSketchPagesMakeANewPage() {
         compose.runOnUiThread { vm.goTo(0, 43, 3, remember = false) }
         waitForLoaded()
-        // My notes \u2192 Sketch pages: the new page opens in the panel and My notes closes.
-        compose.onNodeWithContentDescription("My notes").performClick()
+        // The Sketch pages panel: the new page opens beside the Bible.
+        compose.onNodeWithContentDescription("Panel view").performClick()
         compose.onNodeWithText("Sketch pages").performClick()
+        compose.onNodeWithTag("sketchesPane").assertExists()
         compose.onNodeWithTag("newSketchPage").assertIsDisplayed()
         snap("198-sketch-list-new-button")
         compose.onNodeWithTag("newSketchPage").performClick()
         assertEquals(2, compose.onAllNodesWithText("New sketch page").fetchSemanticsNodes().size) // the button and the window
-        compose.onNode(androidx.compose.ui.test.hasSetTextAction()).performTextInput("Timeline of Acts")
-        compose.onNodeWithText("Create").performClick()
-        waitForLoaded()
-        val first = vm.sketches.single { it.name == "Timeline of Acts" }
-        assertEquals(first.book, vm.panels[0].book)
-        assertTrue(compose.onAllNodesWithText("Ready-made pages").fetchSemanticsNodes().isEmpty())
-
-        // The Sketch pages panel: the new page opens beside the Bible.
-        compose.runOnUiThread { vm.goTo(0, 43, 3, remember = false) }
-        waitForLoaded()
-        compose.onNodeWithContentDescription("Panels").performClick()
-        compose.onNodeWithText("Sketch pages").performClick()
-        compose.onNodeWithTag("sketchesPane").assertExists()
-        compose.onNodeWithTag("newSketchPage").performClick()
         compose.onNode(androidx.compose.ui.test.hasSetTextAction()).performTextInput("Map of Paul's journeys")
         compose.onNodeWithText("Create").performClick()
         waitForLoaded()
@@ -3172,7 +3169,7 @@ class FeatureTest {
         assertEquals(43, vm.panels[0].book) // the Bible stays where it was
         assertEquals(second.book, vm.panels[1].book)
         snap("199-new-sketch-beside")
-        compose.runOnUiThread { vm.closePanel(1); vm.deleteSketch(first); vm.deleteSketch(second) }
+        compose.runOnUiThread { vm.closePanel(1); vm.deleteSketch(second) }
         waitForLoaded()
     }
 

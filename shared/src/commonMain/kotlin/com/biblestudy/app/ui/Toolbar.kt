@@ -30,14 +30,9 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.RestartAlt
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material3.TextButton
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material.icons.filled.LockOpen
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.ui.semantics.semantics
@@ -56,7 +51,6 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.AddBox
 import androidx.compose.material.icons.automirrored.filled.Redo
 import androidx.compose.material.icons.automirrored.filled.Undo
-import androidx.compose.material.icons.filled.EditNote
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Layers
 import androidx.compose.material.icons.filled.MoreVert
@@ -70,8 +64,6 @@ import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.ui.draw.rotate
-import androidx.compose.material.icons.filled.VerticalSplit
-import androidx.compose.material3.AssistChip
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.FilterChip
@@ -101,7 +93,6 @@ fun StudyToolbar(
     vm: StudyViewModel,
     onLayers: () -> Unit,
     onSearch: () -> Unit,
-    onNotes: () -> Unit,
     onInsertImage: (ImageSource) -> Unit,
     onBackup: () -> Unit,
     onExport: (pdf: Boolean) -> Unit,
@@ -110,9 +101,9 @@ fun StudyToolbar(
     onHelp: () -> Unit = {},
     onAbout: () -> Unit,
 ) {
-    // Kept short so it fits without scrolling (UI-3): tools, one button for the tool's colour and
-    // size, undo/redo, layers, Insert, panels, search, my notes and a small menu. Everything
-    // else lives in Settings.
+    // Kept short so it fits a phone (UI-3, UI-5): Back and Forward, read mode, the tools, one button
+    // for the tool's colour and size, undo/redo while drawing, Insert, search and the ⋮ menu (with
+    // Layers). What panels show, tabs and layouts are in each panel's menu; the rest in Settings.
     Surface(tonalElevation = 3.dp, shadowElevation = 2.dp) {
         Row(
             Modifier
@@ -180,20 +171,18 @@ fun StudyToolbar(
                     ),
                 ) { Icon(t.icon(), contentDescription = t.label) }
             }
-            if (!vm.readMode) ToolOptions(vm)
-            Divider()
-            IconButton(onClick = vm::undo, enabled = vm.canUndo) {
-                Icon(Icons.AutoMirrored.Filled.Undo, contentDescription = "Undo")
+            // Undo and redo only while drawing (UI-5): in read mode there's nothing to undo.
+            if (!vm.readMode) {
+                ToolOptions(vm)
+                Divider()
+                IconButton(onClick = vm::undo, enabled = vm.canUndo) {
+                    Icon(Icons.AutoMirrored.Filled.Undo, contentDescription = "Undo")
+                }
+                IconButton(onClick = vm::redo, enabled = vm.canRedo) {
+                    Icon(Icons.AutoMirrored.Filled.Redo, contentDescription = "Redo")
+                }
             }
-            IconButton(onClick = vm::redo, enabled = vm.canRedo) {
-                Icon(Icons.AutoMirrored.Filled.Redo, contentDescription = "Redo")
-            }
             Divider()
-            AssistChip(
-                onClick = onLayers,
-                label = { Text(vm.activeLayer()?.name ?: "Layers", maxLines = 1) },
-                leadingIcon = { Icon(Icons.Filled.Layers, contentDescription = "Layers") },
-            )
             // Insert: pictures (MRG-7); text boxes and shapes join here (UI-1).
             var insertMenu by remember { mutableStateOf(false) }
             var insertDialog by remember { mutableStateOf<String?>(null) }
@@ -222,88 +211,7 @@ fun StudyToolbar(
                     }
                 }
             }
-            // Panels: more Bible panels (ADP-3), the study pane (SPLIT-2) and the margins.
-            var panelsMenu by remember { mutableStateOf(false) }
-            var naming by remember { mutableStateOf(false) }
-            if (naming) {
-                var name by remember { mutableStateOf("") }
-                AlertDialog(
-                    onDismissRequest = { naming = false },
-                    title = { Text("Save this layout") },
-                    text = {
-                        OutlinedTextField(
-                            value = name, onValueChange = { name = it }, singleLine = true,
-                            placeholder = { Text("e.g. Gospels side by side") },
-                        )
-                    },
-                    confirmButton = {
-                        TextButton(onClick = { vm.saveWorkspace(name); naming = false }, enabled = name.isNotBlank()) { Text("Save") }
-                    },
-                    dismissButton = { TextButton(onClick = { naming = false }) { Text("Cancel") } },
-                )
-            }
-            Box {
-                IconButton(onClick = { panelsMenu = true }) {
-                    Icon(Icons.Filled.VerticalSplit, contentDescription = "Panels")
-                }
-                DropdownMenu(expanded = panelsMenu, onDismissRequest = { panelsMenu = false }) {
-                    // Lost? One tab, one Bible panel, at the passage being read (NAV-2).
-                    DropdownMenuItem(
-                        text = { Text("Start fresh") },
-                        leadingIcon = { Icon(Icons.Filled.RestartAlt, contentDescription = null) },
-                        enabled = vm.tabs.size > 1 || vm.tab.shown > 1,
-                        onClick = { vm.startFresh(); panelsMenu = false; vm.message = "One panel again. Back (\u2190) undoes it." },
-                    )
-                    HorizontalDivider()
-                    // Tabs (TAB-1): each keeps its own one or two panels.
-                    DropdownMenuItem(text = { Text("New tab") }, onClick = { vm.newTab(); panelsMenu = false })
-                    DropdownMenuItem(
-                        text = { Text("Add a Bible panel") },
-                        enabled = vm.tab.shown < vm.maxPanels,
-                        onClick = { vm.addPanel(); panelsMenu = false },
-                    )
-                    if (vm.tab.shown > 1) {
-                        DropdownMenuItem(text = { Text("Close other panel") }, onClick = {
-                            vm.closeStudies()
-                            val keep = vm.panels[vm.activePanel.coerceIn(0, vm.panels.lastIndex)]
-                            while (vm.panels.size > 1) vm.closePanel(vm.panels.indexOfFirst { it !== keep })
-                            panelsMenu = false
-                        })
-                    }
-                    HorizontalDivider()
-                    // Beside the text: the views, folded the same way as the panel menu.
-                    Text(
-                        "Beside the text", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary,
-                        modifier = Modifier.padding(start = 16.dp, top = 10.dp, bottom = 2.dp),
-                    )
-                    ViewChoices(vm, vm.sidePane, bible = false) { k -> vm.togglePane(k); panelsMenu = false }
-                    HorizontalDivider()
-                    // Saved layouts (SPLIT-6).
-                    for (w in vm.workspaces) {
-                        DropdownMenuItem(
-                            text = { Text("Layout: ${w.name}") },
-                            onClick = { vm.openWorkspace(w); panelsMenu = false },
-                            trailingIcon = {
-                                IconButton(onClick = { vm.deleteWorkspace(w) }) {
-                                    Icon(Icons.Filled.Close, contentDescription = "Delete layout ${w.name}")
-                                }
-                            },
-                        )
-                    }
-                    DropdownMenuItem(text = { Text("Save this layout\u2026") }, onClick = { panelsMenu = false; naming = true })
-                    HorizontalDivider()
-                    DropdownMenuItem(
-                        text = { Text("Left margin" + if (vm.marginLeft) "  \u2713" else "") },
-                        onClick = { vm.marginLeft = !vm.marginLeft; panelsMenu = false },
-                    )
-                    DropdownMenuItem(
-                        text = { Text("Right margin" + if (vm.marginRight) "  \u2713" else "") },
-                        onClick = { vm.marginRight = !vm.marginRight; panelsMenu = false },
-                    )
-                }
-            }
             IconButton(onClick = onSearch) { Icon(Icons.Filled.Search, contentDescription = "Search") }
-            IconButton(onClick = onNotes) { Icon(Icons.Filled.EditNote, contentDescription = "My notes") }
 
         }
         val edge = MaterialTheme.colorScheme.surfaceColorAtElevation(3.dp)
@@ -324,6 +232,12 @@ fun StudyToolbar(
                         text = { Text("Settings") },
                         leadingIcon = { Icon(Icons.Filled.Settings, contentDescription = null) },
                         onClick = { menu = false; onSettings() },
+                    )
+                    // Layers (LAY-1): here rather than on the toolbar (UI-5), with the one ink goes on.
+                    DropdownMenuItem(
+                        text = { Text("Layers" + (vm.activeLayer()?.let { " \u00b7 ${it.name}" } ?: "")) },
+                        leadingIcon = { Icon(Icons.Filled.Layers, contentDescription = null) },
+                        onClick = { menu = false; onLayers() },
                     )
                     DropdownMenuItem(text = { Text("Reading stats") }, onClick = { menu = false; onStats() })
                     DropdownMenuItem(text = { Text("Export chapter as PDF\u2026") }, onClick = { menu = false; onExport(true) })

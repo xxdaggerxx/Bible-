@@ -150,7 +150,7 @@ object HelpTopic {
     fun of(kind: PaneKind?): String = when (kind) {
         null -> PANELS
         PaneKind.SEARCH -> SEARCH
-        PaneKind.NOTES -> NOTES
+        PaneKind.NOTES, PaneKind.HIGHLIGHTS -> NOTES
         PaneKind.DICTIONARY, PaneKind.TOPICS -> STUDY
         PaneKind.COMMENTARY -> COMMENTARIES
         PaneKind.REFLECTIONS -> REFLECTIONS

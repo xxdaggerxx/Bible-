@@ -183,7 +183,7 @@ data class ExportRequest(val uri: PickedFile, val pdf: Boolean, val layer: Long?
 
 /** What the study pane beside the Bible panels shows (SPLIT-2). */
 enum class PaneKind(val label: String) {
-    SEARCH("Search"), CROSSREFS("Cross-references"), NOTES("My notes"),
+    SEARCH("Search"), CROSSREFS("Cross-references"), NOTES("My notes"), HIGHLIGHTS("Highlights"),
     DICTIONARY("Dictionary"), TOPICS("Topics"), COMMENTARY("Commentary"), REFLECTIONS("Reflections"), NAMES("Names & places"),
     CUSTOMS("Customs & feasts"), SYMBOLS("Symbols & numbers"), CHRIST("Points to Christ"),
     SKETCHES("Sketch pages"),
@@ -196,7 +196,7 @@ enum class PaneKind(val label: String) {
          * How the panel menus list the views (SPLIT-7): the Bible and these few first, each on its
          * own line, then the study views folded under a heading so the menu stays short.
          */
-        val main: List<PaneKind> = listOf(SKETCHES, NOTES, SEARCH, CHAT)
+        val main: List<PaneKind> = listOf(SKETCHES, NOTES, HIGHLIGHTS, SEARCH, CHAT)
         val folders: List<Pair<String, List<PaneKind>>> = listOf(
             "Study" to listOf(COMMENTARY, REFLECTIONS, DICTIONARY, TOPICS, NAMES, CUSTOMS, SYMBOLS),
         )
@@ -1226,11 +1226,6 @@ class StudyViewModel(val host: Host) : ViewModel() {
     /** Closes the study views in the tab in front, leaving its Bible panel. */
     fun closeStudies() {
         for (k in tab.studies.toList()) closeStudy(k)
-    }
-
-    /** Opens (or switches) the study view; the same kind again closes it. */
-    fun togglePane(kind: PaneKind) {
-        if (kind in tab.studies) closeStudy(kind) else showStudy(kind)
     }
 
     /** Turns the panel at [slot] into [view]: a study view, or (null) a Bible panel. */
