@@ -41,3 +41,33 @@ jobs:
             -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
             ARCHS=arm64 CODE_SIGNING_ALLOWED=NO build | tail -n 80
           exit ${PIPESTATUS[0]}
+
+      - name: Run it on an iPad simulator
+        run: |
+          app=$(find ~/Library/Developer/Xcode/DerivedData -path "*Debug-iphonesimulator/*.app" -maxdepth 6 -type d | head -1)
+          echo "App: $app"
+          device=$(xcrun simctl list devices available -j | python3 -c "
+          import json,sys
+          d=json.load(sys.stdin)['devices']
+          ids=[x['udid'] for k,v in d.items() if 'iOS' in k for x in v if 'iPad' in x['name']]
+          print(ids[-1])")
+          xcrun simctl boot "$device"
+          xcrun simctl bootstatus "$device" -b
+          xcrun simctl install "$device" "$app"
+          mkdir -p sim
+          xcrun simctl spawn "$device" log stream --level error --predicate 'process == "Ink & Word"' > sim/log.txt 2>&1 &
+          xcrun simctl launch "$device" com.biblestudy.app
+          # The first start unpacks the Bibles and commentaries.
+          sleep 90
+          xcrun simctl io "$device" screenshot sim/ipad.png
+          # Still running? (a crash would have ended it)
+          xcrun simctl spawn "$device" launchctl list | grep -i "com.biblestudy.app" | tee sim/running.txt
+          test -s sim/running.txt
+
+      - name: Keep the screenshot and log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-simulator
+          path: sim/
+          if-no-files-found: ignore
