@@ -76,3 +76,72 @@ jobs:
           name: ios-simulator
           path: sim/
           if-no-files-found: ignore
+
+  # TestFlight (PLAT-7): when the version changes, builds the app for devices and sends it to
+  # TestFlight. It runs only once the owner has added the Apple secrets below (an Apple Developer
+  # account, the app made in App Store Connect with bundle id com.biblestudy.app, and an App Store
+  # Connect API key with the App Manager role); without them it's skipped.
+  #   APPLE_TEAM_ID             the 10-character team id
+  #   ASC_KEY_ID, ASC_ISSUER_ID the API key's id and issuer id
+  #   ASC_KEY_P8                the .p8 key file's contents
+  testflight:
+    needs: ios
+    runs-on: macos-latest
+    env:
+      TEAM: ${{ secrets.APPLE_TEAM_ID }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Is it set up, and did the version change?
+        id: check
+        run: |
+          if [ -z "$TEAM" ]; then echo "No Apple secrets yet: skipping TestFlight."; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if git diff --quiet HEAD~1 HEAD -- app/build.gradle.kts && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
+            echo "Version unchanged: nothing to send."; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          echo "version=$(sed -n 's/.*versionName = "\(.*\)".*/\1/p' app/build.gradle.kts | head -1)" >> "$GITHUB_OUTPUT"
+          echo "code=$(sed -n 's/.*versionCode = \([0-9]*\).*/\1/p' app/build.gradle.kts | head -1)" >> "$GITHUB_OUTPUT"
+          echo "go=true" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-java@v4
+        if: steps.check.outputs.go == 'true'
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+        if: steps.check.outputs.go == 'true'
+
+      - name: Build and send to TestFlight
+        if: steps.check.outputs.go == 'true'
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+          GOOGLE_IOS_ID: ${{ secrets.GOOGLE_IOS_ID }}
+        run: |
+          chmod +x gradlew
+          brew install xcodegen
+          key="$RUNNER_TEMP/AuthKey_$ASC_KEY_ID.p8"
+          printf '%s' "$ASC_KEY_P8" > "$key"
+          auth=(-allowProvisioningUpdates -authenticationKeyPath "$key" -authenticationKeyID "$ASC_KEY_ID" -authenticationKeyIssuerID "$ASC_ISSUER_ID")
+          cd iosApp && xcodegen
+          xcodebuild -project iosApp.xcodeproj -scheme iosApp -configuration Release \
+            -destination 'generic/platform=iOS' -archivePath "$RUNNER_TEMP/InkAndWord.xcarchive" \
+            DEVELOPMENT_TEAM="$TEAM" CODE_SIGN_STYLE=Automatic \
+            MARKETING_VERSION="${{ steps.check.outputs.version }}" CURRENT_PROJECT_VERSION="${{ steps.check.outputs.code }}" \
+            "${auth[@]}" archive | tail -n 40
+          cat > "$RUNNER_TEMP/export.plist" <<PLIST
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0"><dict>
+            <key>method</key><string>app-store-connect</string>
+            <key>destination</key><string>upload</string>
+            <key>teamID</key><string>$TEAM</string>
+            <key>signingStyle</key><string>automatic</string>
+          </dict></plist>
+          PLIST
+          xcodebuild -exportArchive -archivePath "$RUNNER_TEMP/InkAndWord.xcarchive" \
+            -exportOptionsPlist "$RUNNER_TEMP/export.plist" -exportPath "$RUNNER_TEMP/export" "${auth[@]}" | tail -n 40
