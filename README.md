@@ -1,4 +1,4 @@
-# Ink & Word — version 2.10.3
+# Ink & Word — version 2.10.4
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet, and since version 2.0 on Android phones too, drawing with a finger. Since version 2.10.3 it also runs on Windows, Mac and Linux computers.
 
@@ -75,6 +75,11 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 2.10.4
+
+- **See when it's syncing.** With sync on, a small sign beside the ⋮ menu shows while the app syncs with Google Drive (two turning arrows), then a cloud with a tick for a few seconds when it's done. If sync has a problem, a red warning stays there until it's fixed; tapping it opens Settings, which says what went wrong. Nothing shows the rest of the time, so the toolbar is no busier.
+- Known gaps: the sign doesn't say how many changes were sent or received; *Settings → Sync* shows when it last synced and what's waiting.
 
 ## New in version 2.10.3
 

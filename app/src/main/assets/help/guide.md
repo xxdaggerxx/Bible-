@@ -390,6 +390,7 @@ Your notes can be the same on your phone and your tablet, through your own Googl
 - **What syncs:** ink, highlights, text boxes, pictures, typed notes, bookmarks, tags, colour meanings, layers, sketch pages and reading stats (the time read on each device is added up).
 - **What stays on each device:** panels, tabs, saved layouts and settings (page colour, text size, font, finger drawing). So the phone can show one panel in large text while the tablet shows three.
 - **When:** when you open the app, when you leave it, and every few minutes while it's open. *Sync now* does it straight away. Without the internet everything still works; it catches up later.
+- **Seeing it sync.** While sync is on, a small sign shows beside the ⋮ menu at the right of the toolbar while the app is syncing: two turning arrows. When it's done, a cloud with a tick shows for a few seconds, then nothing. If sync has a problem (no internet, or Google wants you to sign in again), a red warning sign stays there; tap it for *Settings → Sync*, which says what's wrong. With sync off, nothing shows.
 - **Two devices, one change:** when the same item is changed on both, the later change wins. A typed note changed on both before they synced keeps both texts, one under the other, so nothing is lost.
 - Your notes go into a hidden folder in your Google Drive that only this app can see. It doesn't show among your files and uses a little of your Drive space.
 - If Google asks you to allow access again, *Settings → Sync* shows *Sign in again*.
