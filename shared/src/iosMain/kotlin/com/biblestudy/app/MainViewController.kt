@@ -21,6 +21,7 @@ fun MainViewController(): UIViewController {
     AppConfig.youVersionKey = IosBuildInfo.YOUVERSION_KEY
     AppConfig.esvKey = IosBuildInfo.ESV_KEY
     AppConfig.nltKey = IosBuildInfo.NLT_KEY
+    AppConfig.googleIosId = IosBuildInfo.GOOGLE_IOS_ID
 
     val vm = StudyViewModel(IosHost())
     val center = NSNotificationCenter.defaultCenter

@@ -89,11 +89,8 @@ class IosHost(override val ctx: IosAppContext = IosAppContext()) : Host {
         runCatching { fs.list(path(folder)).map { it.name }.filter { it.startsWith(prefix) } }.getOrDefault(emptyList())
     override fun deleteInFolder(folder: PickedFile, name: String) { runCatching { fs.delete(path(folder) / name) } }
 
-    /** Sync needs Google sign-in set up for iOS, which isn't done yet. */
-    override val drive: DriveSignIn = object : DriveSignIn {
-        override suspend fun authorize() = DriveSignIn.Result.Failed("sync with Google Drive isn't available on iPad and iPhone yet")
-        override fun tokenFrom(data: Any?): String? = null
-    }
+    /** Google sign-in for sync (SYNC-1). */
+    override val drive: DriveSignIn by lazy { IosDriveSignIn(ctx.prefs("driveAuth")) }
 
     private fun exportFile(path: String) {
         val picker = UIDocumentPickerViewController(forExportingURLs = listOf(NSURL.fileURLWithPath(path)), asCopy = true)

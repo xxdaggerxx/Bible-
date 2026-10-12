@@ -35,6 +35,7 @@ targets:
         UIFileSharingEnabled: true
         LSSupportsOpeningDocumentsInPlace: true
         CADisableMinimumFrameDurationOnPhone: true
+        NSCameraUsageDescription: To take a photo and put it in your notes.
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait
           - UIInterfaceOrientationLandscapeLeft

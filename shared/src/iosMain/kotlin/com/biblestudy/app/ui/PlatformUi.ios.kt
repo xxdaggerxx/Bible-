@@ -11,6 +11,8 @@ import com.biblestudy.app.platform.LocalCopies
 import com.biblestudy.app.platform.PickedFile
 import com.biblestudy.app.platform.onMain
 import com.biblestudy.app.platform.readBytes
+import com.biblestudy.app.platform.toByteArray
+import com.biblestudy.app.platform.writeBytes
 import com.biblestudy.app.platform.topViewController
 import okio.Path.Companion.toPath
 import platform.Foundation.NSBundle
@@ -23,6 +25,13 @@ import platform.PhotosUI.PHPickerViewControllerDelegateProtocol
 import platform.UIKit.UIActivityViewController
 import platform.UIKit.popoverPresentationController
 import platform.UIKit.UIDocumentPickerDelegateProtocol
+import platform.UIKit.UIImage
+import platform.UIKit.UIImageJPEGRepresentation
+import platform.UIKit.UIImagePickerController
+import platform.UIKit.UIImagePickerControllerDelegateProtocol
+import platform.UIKit.UIImagePickerControllerOriginalImage
+import platform.UIKit.UIImagePickerControllerSourceType
+import platform.UIKit.UINavigationControllerDelegateProtocol
 import platform.UIKit.UIDocumentPickerViewController
 import platform.UniformTypeIdentifiers.UTType
 import platform.UniformTypeIdentifiers.UTTypeData
@@ -96,17 +105,55 @@ actual fun rememberPickImage(onPicked: (PickedFile?) -> Unit): () -> Unit {
     return { picker.show() }
 }
 
+/** The camera; the photo is saved as a JPEG in the file it's given. */
+private class CameraPicker(private val onTaken: (Boolean) -> Unit) : NSObject(),
+    UIImagePickerControllerDelegateProtocol, UINavigationControllerDelegateProtocol {
+    private var into: String? = null
+
+    fun show(file: PickedFile) {
+        if (!UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.UIImagePickerControllerSourceTypeCamera)) {
+            throw UnsupportedOperationException("No camera on this device")
+        }
+        into = file.id
+        val picker = UIImagePickerController()
+        picker.sourceType = UIImagePickerControllerSourceType.UIImagePickerControllerSourceTypeCamera
+        picker.delegate = this
+        topViewController()?.presentViewController(picker, animated = true, completion = null)
+    }
+
+    override fun imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo: Map<Any?, *>) {
+        picker.dismissViewControllerAnimated(true, completion = null)
+        val image = didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] as? UIImage
+        val jpeg = image?.let { UIImageJPEGRepresentation(it, 0.9) }
+        val path = into
+        val ok = jpeg != null && path != null && runCatching {
+            path.toPath().parent?.let { com.biblestudy.app.platform.fs.createDirectories(it) }
+            path.toPath().writeBytes(jpeg.toByteArray())
+        }.isSuccess
+        onTaken(ok)
+    }
+
+    override fun imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        picker.dismissViewControllerAnimated(true, completion = null)
+        onTaken(false)
+    }
+}
+
 @Composable
-actual fun rememberTakePhoto(onTaken: (Boolean) -> Unit): (into: PickedFile) -> Unit = {
-    throw UnsupportedOperationException("The camera isn't available in Ink & Word on iPad and iPhone yet")
+actual fun rememberTakePhoto(onTaken: (Boolean) -> Unit): (into: PickedFile) -> Unit {
+    val camera = remember { CameraPicker { onTaken(it) } }
+    return { file -> camera.show(file) }
 }
 
 /** Automatic backups go to the app's own folder in Files; other folders aren't offered yet. */
 @Composable
 actual fun rememberPickFolder(onPicked: (PickedFile?) -> Unit): () -> Unit = { onPicked(null) }
 
+/** Google's sign-in sheet; the token comes back here when the user has allowed it. */
 @Composable
-actual fun rememberDriveSignIn(onResult: (Any?) -> Unit): (request: Any) -> Unit = { onResult(null) }
+actual fun rememberDriveSignIn(onResult: (Any?) -> Unit): (request: Any) -> Unit = { request ->
+    (request as? com.biblestudy.app.platform.IosDriveSignIn)?.signIn { onResult(it) } ?: onResult(null)
+}
 
 /** The share sheet (over the screen's middle on an iPad). */
 @Composable
@@ -137,5 +184,7 @@ actual val bibleFont: FontFamily = runCatching {
     FontFamily(font("gentium_book_plus_regular", FontWeight.Normal), font("gentium_book_plus_bold", FontWeight.Bold))
 }.getOrDefault(FontFamily.Serif)
 
-/** No camera yet: the photo library, Files, or a copied picture. */
-actual val imageSourcesHere: List<ImageSource> = listOf(ImageSource.GALLERY, ImageSource.FILES, ImageSource.CLIPBOARD)
+/** The photo library, the camera (where there is one), Files, or a copied picture. */
+actual val imageSourcesHere: List<ImageSource> =
+    if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.UIImagePickerControllerSourceTypeCamera)) ImageSource.entries
+    else ImageSource.entries - ImageSource.CAMERA

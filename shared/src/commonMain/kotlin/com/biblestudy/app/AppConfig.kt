@@ -13,4 +13,6 @@ object AppConfig {
     /** Google sign-in for sync on computers (an OAuth "Desktop app" client); blank turns it off. */
     var googleDesktopId: String = ""
     var googleDesktopSecret: String = ""
+    /** Google sign-in for sync on iPad and iPhone (an OAuth "iOS" client); blank turns it off. */
+    var googleIosId: String = ""
 }

@@ -26,6 +26,7 @@ val generateIosBuildInfo by tasks.registering {
         "YOUVERSION_KEY" to key("key", "YOUVERSION_KEY"),
         "ESV_KEY" to key("esv", "ESV_KEY"),
         "NLT_KEY" to key("nlt", "NLT_KEY"),
+        "GOOGLE_IOS_ID" to key("google.ios.id", "GOOGLE_IOS_ID"),
     )
     val code = Regex("versionCode = (\\d+)").find(appText)!!.groupValues[1]
     inputs.property("values", values)
