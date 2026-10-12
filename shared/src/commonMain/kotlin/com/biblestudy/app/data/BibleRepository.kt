@@ -152,6 +152,17 @@ class BibleRepository(context: AppContext, val version: BibleVersion) {
     fun savedVerseText(id: Int): String? =
         db.rawQuery("SELECT text FROM verses WHERE id = ?", arrayOf(id.toString())).use { c -> if (c.moveToFirst()) c.getString(0) else null }
 
+    /** The saved text of many verses at once (those not saved are left out). */
+    fun savedVerseTexts(ids: Collection<Int>): Map<Int, String> {
+        val out = HashMap<Int, String>(ids.size * 2)
+        for (chunk in ids.distinct().chunked(500)) {
+            db.rawQuery("SELECT id, text FROM verses WHERE id IN (${chunk.joinToString(",")})", null).use { c ->
+                while (c.moveToNext()) out[c.getInt(0)] = c.getString(1)!!
+            }
+        }
+        return out
+    }
+
     fun verseText(id: Int): String? = ensure(id / 1_000_000, (id / 1000) % 1000).let {
         db.rawQuery("SELECT text FROM verses WHERE id = ?", arrayOf(id.toString())).use { c ->
             if (c.moveToFirst()) c.getString(0) else null
@@ -189,6 +200,18 @@ class BibleRepository(context: AppContext, val version: BibleVersion) {
             if (containsAny(text, excluded)) null else SearchHit(id / 1_000_000, (id / 1000) % 1000, id % 1000, text)
         }
         return (found + extra).sortedBy { VerseId.of(it.book, it.chapter, it.verse) }
+    }
+
+    /** Ids of the saved verses containing any of [forms] (whole words), for smart search (SRCH-11). */
+    fun versesWithAny(forms: Collection<String>): Set<Int> {
+        val words = forms.map { clean(it) }.filter { it.isNotEmpty() }
+        if (words.isEmpty()) return emptySet()
+        return try {
+            db.rawQuery("SELECT rowid FROM verses_fts WHERE verses_fts MATCH ?", arrayOf(words.joinToString(" OR ")))
+                .use { c -> buildSet { while (c.moveToNext()) add(c.getInt(0)) } }
+        } catch (e: SqlException) {
+            emptySet()
+        }
     }
 
     private fun searchSaved(query: String, lo: Int, hi: Int, excluded: List<String>): List<SearchHit> {
@@ -381,6 +404,10 @@ class BibleRepository(context: AppContext, val version: BibleVersion) {
 
         private fun clean(s: String): String =
             s.replace(Regex("[^\\p{L}\\p{N}\u2019 ]"), " ").trim().replace(Regex("\\s+"), " ")
+
+        /** Whether [raw] uses the exact-search signs: "quotes", OR, -word or word*. Smart search leaves these alone. */
+        fun isExactSearch(raw: String): Boolean =
+            raw.contains('"') || raw.contains('*') || Regex("(^|\\s)-\\S").containsMatchIn(raw) || Regex("\\sOR\\s").containsMatchIn(raw)
 
         /** Lower-case words from a query, used to bold matches in results. */
         fun terms(raw: String): List<String> =

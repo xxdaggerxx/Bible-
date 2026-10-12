@@ -78,8 +78,8 @@ android {
         applicationId = "com.biblestudy.app"
         minSdk = 29
         targetSdk = 35
-        versionCode = 72
-        versionName = "2.10.5"
+        versionCode = 73
+        versionName = "2.11.0"
         buildConfigField("String", "YOUVERSION_KEY", "\"$youVersionKey\"")
         buildConfigField("String", "ESV_KEY", "\"$esvKey\"")
         buildConfigField("String", "NLT_KEY", "\"$nltKey\"")
@@ -94,7 +94,7 @@ android {
     // (The first part of the pattern is Android's default list of files to leave out.)
     androidResources {
         ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~:" +
-            "!kjv.db:!bsb.db:!web.db:!study.db:!original.db"
+            "!kjv.db:!bsb.db:!web.db:!study.db:!original.db:!search.db"
     }
 
     signingConfigs {
@@ -181,7 +181,7 @@ dependencies {
  * smaller than the APK's own zip compression (roughly 21 MB instead of 33 MB), and unpacks each
  * once on first use, as it already does for the commentaries (data/PackedAssets.kt).
  */
-val packedAssetPaths = listOf("bibles/kjv.db", "bibles/bsb.db", "bibles/web.db", "study/study.db", "study/original.db")
+val packedAssetPaths = listOf("bibles/kjv.db", "bibles/bsb.db", "bibles/web.db", "study/study.db", "study/original.db", "study/search.db")
 
 abstract class PackAssets : DefaultTask() {
     @get:InputFiles @get:PathSensitive(PathSensitivity.RELATIVE)

@@ -1959,6 +1959,9 @@ class StudyViewModel(val host: Host) : ViewModel() {
     // ---------- study library (0.8) ----------
 
     /** Word studies, dictionary, topics and commentary; opened on first use. */
+    /** Smart search over every built-in version and the study data (section 29). */
+    val smart by lazy { com.biblestudy.app.data.SmartSearch(ctx, study) }
+
     val study by lazy {
         StudyRepository(ctx).also { s ->
             // Imported versions keep their word tags, red letters and paragraphs in their own database.
@@ -2046,6 +2049,38 @@ class StudyViewModel(val host: Host) : ViewModel() {
             val n = withContext(Dispatchers.IO) { study.nameByUid(uid) }
             if (n != null) openName(n.id) else message = "No entry for ${com.biblestudy.app.data.NameEntry.label(uid)}."
         }
+    }
+
+    /**
+     * The words of every verse a smart search found (SRCH-10), in [version] where it has them saved,
+     * else the KJV's, for verses in books [lo] to [hi]. Verses no version has are left out.
+     */
+    fun smartTexts(r: com.biblestudy.app.data.SmartResult, version: String, lo: Int, hi: Int): Map<Int, String> {
+        val ids = LinkedHashSet<Int>()
+        r.key.mapTo(ids) { it.id }
+        r.groups.forEach { g -> ids += g.ids }
+        r.verses.mapTo(ids) { it.id }
+        ids.retainAll { VerseId.book(it) in lo..hi }
+        val out = HashMap(text(version).savedVerseTexts(ids))
+        val missing = ids.filter { it !in out }
+        if (missing.isNotEmpty()) out.putAll(text(BibleRepository.KJV.code).savedVerseTexts(missing))
+        return out
+    }
+
+    /** Opens the Reflections view beside the text at a reflection's passage (SRCH-42). */
+    fun openReflection(start: Int) {
+        val i = activePanel.coerceIn(0, panels.lastIndex)
+        goTo(i, VerseId.book(start), VerseId.chapter(start), VerseId.verse(start))
+        sidePane = PaneKind.REFLECTIONS
+        closePopUps()
+    }
+
+    /** Opens the ready-made sketch page made from template [templateId] beside the text (PPL-4). */
+    fun openReadyMade(templateId: String): Boolean {
+        val name = SketchTemplates.all.firstOrNull { it.id == templateId }?.name ?: return false
+        val s = sketches.firstOrNull { it.readyMade && it.name == name } ?: return false
+        openSketchBeside(s)
+        return true
     }
 
     fun openTopic(id: Long) {
