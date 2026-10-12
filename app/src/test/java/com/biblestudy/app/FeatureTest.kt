@@ -1406,14 +1406,14 @@ class FeatureTest {
         assertEquals(45, vm.panels[0].book)
         compose.onNodeWithTag("pane").assertExists()
 
-        // Notes in the chapter being read.
+        // My notes: every typed note (it loads in the background).
         compose.runOnUiThread {
             vm.goTo(0, 43, 3, remember = false)
             vm.setNote(VerseTarget(43, 3, 16), "The gospel in one verse")
             vm.sidePane = PaneKind.NOTES
         }
         waitForLoaded()
-        compose.onNodeWithText("The gospel in one verse").assertExists()
+        waitFor(10_000) { compose.onAllNodesWithText("The gospel in one verse", useUnmergedTree = true).fetchSemanticsNodes().isNotEmpty() }
         snap("50-pane-notes")
         compose.runOnUiThread { vm.setNote(VerseTarget(43, 3, 16), "") }
 
