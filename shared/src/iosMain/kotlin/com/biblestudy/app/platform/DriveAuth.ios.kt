@@ -25,6 +25,7 @@ class IosDriveSignIn(prefs: Prefs) : DriveSignIn {
     /** Google's iOS clients answer at the client id turned around: com.googleusercontent.apps.1234-abc. */
     private val scheme = "com.googleusercontent.apps." + id.removeSuffix(".apps.googleusercontent.com")
     private var session: ASWebAuthenticationSession? = null
+    private var anchor: Anchor? = null
 
     override suspend fun authorize(): DriveSignIn.Result = withContext(Dispatchers.IO) {
         if (!oauth.configured) DriveSignIn.Result.Failed("sync with Google Drive isn't set up for iPad and iPhone in this version")
@@ -45,12 +46,15 @@ class IosDriveSignIn(prefs: Prefs) : DriveSignIn {
                 onMain { onToken(token) }
             }
         }
-        s.presentationContextProvider = Anchor
+        val anchor = Anchor()
+        s.presentationContextProvider = anchor
         session = s
+        this.anchor = anchor // held while the sheet is up (the session holds it weakly)
         if (!s.start()) { session = null; onToken(null) }
     }
 
-    private object Anchor : NSObject(), ASWebAuthenticationPresentationContextProvidingProtocol {
+    /** Where the sign-in sheet shows. (A class, not an object: Kotlin can't make one Objective-C object.) */
+    private class Anchor : NSObject(), ASWebAuthenticationPresentationContextProvidingProtocol {
         @Suppress("DEPRECATION")
         override fun presentationAnchorForWebAuthenticationSession(session: ASWebAuthenticationSession): ASPresentationAnchor =
             UIApplication.sharedApplication.keyWindow ?: UIWindow()
