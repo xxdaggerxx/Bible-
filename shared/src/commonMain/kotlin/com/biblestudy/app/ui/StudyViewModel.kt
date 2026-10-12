@@ -228,15 +228,20 @@ class StudyViewModel(val host: Host) : ViewModel() {
     /** The text of one version, opened (and copied out of the APK) the first time it's needed. */
     private val textsLock = Lock()
 
-    fun text(code: String): BibleRepository = locked(textsLock) { texts.getOrPut(code) {
-        val v = BibleRepository.ALL.firstOrNull { it.code == code } ?: BibleRepository.KJV
-        if (v.code == bible.code) bible else BibleRepository(ctx, v).also { r ->
+    fun text(code: String): BibleRepository = locked(textsLock) {
+        texts[code] ?: run {
+            val v = BibleRepository.ALL.firstOrNull { it.code == code } ?: BibleRepository.KJV
+            if (v.code == bible.code) return@run bible.also { texts[code] = it }
+            // A Bible removed while a chapter of it was still loading has no file any more: that
+            // chapter reads the KJV instead (not kept), rather than the app stopping.
+            val r = try { BibleRepository(ctx, v) } catch (e: Exception) { return@run bible }
             // An online Bible's chapters get word tags, words of Jesus and paragraphs as they come (BIB-12).
             r.online?.study = { db, parsed ->
                 com.biblestudy.app.data.ImportStudy.addChapter(db, r.code, parsed, study, onlineTagger, guessRed = !r.online.marksRed(), web = text(BibleRepository.WEB.code))
             }
+            r.also { texts[code] = it }
         }
-    } }
+    }
 
     /** Tags the words of online Bibles' chapters for word studies; made the first time one comes. */
     private val onlineTagger by lazy { com.biblestudy.app.data.ImportStudy.tagger(study, BibleRepository.BUNDLED.map { text(it.code) }) }

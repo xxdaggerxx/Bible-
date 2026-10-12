@@ -3571,6 +3571,8 @@ class FeatureTest {
             compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.removeBible("NIV") }
             compose.waitForIdle()
         }
+        // A chapter still loading when its Bible was removed reads the KJV, rather than stopping the app.
+        assertEquals(vm.bible.code, vm.text("NIV").code)
     }
 
     @Test

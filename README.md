@@ -79,6 +79,7 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
 ## New in version 2.10.6
 
 - **Bible aids no longer push the verse off a phone's screen.** Tapping a marked word (a person, custom, symbol or number) showed every explanation in full at the top of the verse pop-up; on a phone, *seven stars* in Revelation 2:1 filled the screen. Now, on a phone or when more than one aid is shown, each is two lines with *More* beside its name; tap the card to read it all. On a tablet a single aid still shows in full.
+- **Fixed:** removing an online Bible while one of its chapters was still loading could stop the app; that chapter now reads the KJV instead.
 
 ## New in version 2.10.5
 
