@@ -17,6 +17,13 @@ sealed class Slot {
     data class Study(val kind: PaneKind, val pos: Int = 0) : Slot()
 }
 
+/** What a panel shows, for its Back and Forward (NAV-1): a passage (or sketch page), or a study view. */
+sealed class Shown {
+    /** [gen] tells apart two jumps to the same chapter; it isn't part of where Back goes. */
+    data class Passage(val book: Int, val chapter: Int, val verse: Int, val version: String, val gen: Int = 0) : Shown()
+    data class View(val kind: PaneKind) : Shown()
+}
+
 /**
  * One tab (TAB-1): one or two panels, side by side or one above the other (SPLIT-8).
  *
@@ -46,6 +53,14 @@ class TabState {
     fun setStudyAt(i: Int, kind: PaneKind) {
         studies[i] = kind
     }
+
+    /**
+     * What each panel (first and second on screen) showed before, newest last, and what it showed
+     * after going back (NAV-1): passages and views, so Back undoes a jump or a change of view in
+     * that panel only. Kept for the session, not saved.
+     */
+    val back = List(2) { mutableStateListOf<Shown>() }
+    val forward = List(2) { mutableStateListOf<Shown>() }
     /** With a Bible panel and a study view: the study view comes first (left, or top). */
     var studyFirst by mutableStateOf(false)
     /** True when every panel shows a study view and the Bible panel is out of sight. */

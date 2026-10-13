@@ -11,8 +11,8 @@ Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; 
 - **Next and previous chapter.** Tap the ‹ and › arrows beside the chapter name, or just keep scrolling: the next chapter follows on.
 - **Recently read.** Tap the chapter name, then *Recently read*. It lists the chapters you've read lately, newest first, with the verse you were at. Tap one to go straight back there. *Clear this list* empties it.
 - **Bookmarks.** Tap a verse, then *Bookmark*. A red ribbon shows beside it. To find your bookmarks, tap the chapter name, then *Bookmarks*. Tap one to go there, or × to take the bookmark off. Tapping *Bookmarked* in the verse's pop-up takes it off too.
-- **Back and forward.** Each panel has its own ← at the far left of its header, once it has jumped somewhere (from the book picker, search, a link, a cross-reference, a note or a sketch page). Tap it to go back to where that panel was before; the other panel stays put. After going back, → takes you forward again. The chapter arrows and scrolling aren't jumps, so they don't add to it. The tablet's Back gesture goes back in the panel you're using.
-- **Jump back several steps.** Hold a panel's ← (or →) for a list of the passages it goes to, such as *Psalms 23:1* or *John 3:16*. Tap one to go straight there.
+- **Back and forward.** Each panel has its own ← at the far left of its header, once there's somewhere to go back to. It goes back to what that panel showed before: a passage you jumped from (the book picker, search, a link, a cross-reference, a note), or another view. For example, change a Bible panel to the Dictionary and ← brings the Bible back; tap a page in the *Sketch pages* list and ← returns to the list. The other panel stays put. After going back, → takes you forward again. The chapter arrows and scrolling don't count. The tablet's Back gesture goes back in the panel you're using.
+- **Jump back several steps.** Hold a panel's ← (or →) for a list of what it goes back to, such as *Psalms 23:1*, *Dictionary* or *The tabernacle*. Tap one to go straight there.
 - **Start fresh.** In a muddle with panels and tabs? Tap the panel button at the top left of a panel, then *Start fresh*. You get one tab with one Bible panel, at the passage you're reading. It asks first, because the tabs and panels it closes can't be brought back.
 - **Tabs remember where you were.** Switch to another tab and back, and each one is still scrolled to the same place.
 - **Zoom.** Pinch with two fingers. Double-tap with a finger to make the page fill the panel's width, and again to go back to your last zoom.
@@ -221,7 +221,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in every version
 ![Two tabs](tabs.webp)
 - **Rename, move or close a tab:** hold a finger on it and let go for its menu. To move it, hold and then drag it along the strip.
 - **Open in a new tab:** from a panel's menu, with *New tab* in any passage pop-over (links, cross-references), or by holding a finger on a search result. Your tabs are kept when you close the app.
-- **A sketch page beside the text:** choose *Sketch pages* in a panel's menu, then tap any page, yours or ready-made. It opens in the other panel so you can read and draw side by side. Tap another page to swap it in.
+- **A sketch page beside the text:** choose *Add a panel beside*, then *Sketch pages* in the new panel's menu, and tap any page, yours or ready-made. It opens in that panel, in the list's place, so you can read and draw side by side; ← in that panel goes back to the list.
 - **Layouts** (in a panel's menu; tap it to open it): *Save this layout…* keeps all your tabs, with their panels, passages and versions. Tap a saved layout to open it; it replaces the tabs you have open. × deletes one.
 
 ## Writing on study views
@@ -316,7 +316,7 @@ A sketch page is a whole page for timelines, diagrams, maps and sketch notes. Al
   - *Solomon's and Herod's temples*: labelled plans of both.
   They're ordinary ink, text boxes and verse cards, so you can write on them, move things, change them or delete them. If you delete one, *Put back deleted ready-made pages* at the bottom of the list brings it back.
 - **Beside the text:** to see a sketch page next to the Bible, choose *Sketch pages* in a panel's menu and tap the page.
-- **Make your own:** tap **New sketch page** at the top of the *Sketch pages* list (the page opens beside the text), or use *Insert (+) → Sketch page…*. Give it a name, choose blank, lined, grid or dotted paper, and *Create*.
+- **Make your own:** tap **New sketch page** at the top of the *Sketch pages* list (the page opens in the list's place), or use *Insert (+) → Sketch page…*. Give it a name, choose blank, lined, grid or dotted paper, and *Create*.
 ![The Sketch pages list, with New sketch page](sketch-list.webp)
 - **Linked or on its own.** In the same window, *Link to …* ties the page to the verse you're reading: a small badge in that verse's margin opens it. Turn the switch off for a page that stands on its own, such as a topic study; open it from *My notes*.
 - **No edges.** A sketch page grows as you use it: there's always at least a page's width of room to the right and a page's height below whatever you've drawn. Drag with a finger to move around, and pinch out to see the whole page at once.

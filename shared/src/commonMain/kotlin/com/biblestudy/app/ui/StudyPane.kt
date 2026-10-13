@@ -63,6 +63,8 @@ fun StudyPane(vm: StudyViewModel, slot: Slot.Study, modifier: Modifier) {
             Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceContainer).padding(start = 8.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
+            // This panel's Back and Forward (NAV-1), e.g. back to the Bible it showed before.
+            PanelSteps(vm, slot)
             // One menu rather than a row of buttons: what the panel shows, its arrangement and tab (SPLIT-7).
             var menu by remember { mutableStateOf(false) }
             Box(Modifier.weight(1f)) {

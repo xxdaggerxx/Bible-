@@ -496,7 +496,7 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit
         // Narrow panels (e.g. three side by side) move the less-used buttons into a menu.
         val compact = maxWidth < 620.dp
         Row(Modifier.fillMaxWidth().padding(horizontal = 4.dp), verticalAlignment = Alignment.CenterVertically) {
-            PanelSteps(vm, index)
+            PanelSteps(vm, Slot.Bible(index))
             // What this panel shows, the tab's arrangement, new tab and close (SPLIT-7).
             PanelViewButton(vm, Slot.Bible(index)) { vm.activePanel = index }
             IconButton(onClick = { vm.activePanel = index; vm.prevChapter(index) }) {
@@ -539,27 +539,30 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit
 }
 
 /**
- * Back and Forward for this panel (NAV-1): the passages it jumped to (from the picker, search,
- * links, cross-references, notes, sketch pages). ← shows once there's somewhere to go back to and →
- * after going back, so a panel that hasn't jumped has neither. Hold one for the list.
+ * Back and Forward for one panel (NAV-1): what it showed before, passages and views (the Bible, a
+ * sketch page, the Sketch pages list, the dictionary...). ← shows once there's somewhere to go back
+ * to and → after going back, so a panel that hasn't changed has neither. Hold one for the list.
  */
 @Composable
-private fun PanelSteps(vm: StudyViewModel, index: Int) {
-    val p = vm.panels[index]
-    if (p.back.isNotEmpty()) StepArrow(vm, Icons.AutoMirrored.Filled.ArrowBack, "Back", p.back.asReversed().take(10),
-        onStep = { vm.panelBack(index) }, onPick = { n -> vm.panelBack(index, n + 1) })
-    if (p.forward.isNotEmpty()) StepArrow(vm, Icons.AutoMirrored.Filled.ArrowForward, "Forward", p.forward.asReversed().take(10),
-        onStep = { vm.panelForward(index) }, onPick = { n -> vm.panelForward(index, n + 1) })
+internal fun PanelSteps(vm: StudyViewModel, slot: Slot) {
+    val position = vm.tab.slots().indexOf(slot)
+    if (position !in 0..1) return
+    val back = vm.tab.back[position]
+    val forward = vm.tab.forward[position]
+    if (back.isNotEmpty()) StepArrow(vm, Icons.AutoMirrored.Filled.ArrowBack, "Back", back.asReversed().take(10),
+        onStep = { vm.panelBack(position) }, onPick = { n -> vm.panelBack(position, n + 1) })
+    if (forward.isNotEmpty()) StepArrow(vm, Icons.AutoMirrored.Filled.ArrowForward, "Forward", forward.asReversed().take(10),
+        onStep = { vm.panelForward(position) }, onPick = { n -> vm.panelForward(position, n + 1) })
 }
 
-/** One of a panel's Back and Forward arrows: a tap goes one step; holding it lists the places, nearest first. */
+/** One of a panel's Back and Forward arrows: a tap goes one step; holding it lists the steps, nearest first. */
 @OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
 @Composable
 private fun StepArrow(
     vm: StudyViewModel,
     icon: androidx.compose.ui.graphics.vector.ImageVector,
     label: String,
-    places: List<com.biblestudy.app.ui.Place>,
+    steps: List<Shown>,
     onStep: () -> Unit,
     onPick: (Int) -> Unit,
 ) {
@@ -578,8 +581,8 @@ private fun StepArrow(
                 style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.padding(start = 16.dp, top = 8.dp, bottom = 4.dp),
             )
-            places.forEachIndexed { n, pl ->
-                DropdownMenuItem(text = { Text(vm.placeLabel(pl)) }, onClick = { list = false; onPick(n) })
+            steps.forEachIndexed { n, s ->
+                DropdownMenuItem(text = { Text(vm.shownLabel(s)) }, onClick = { list = false; onPick(n) })
             }
         }
     }
@@ -600,7 +603,7 @@ private fun SketchHeader(vm: StudyViewModel, index: Int, sk: com.biblestudy.app.
         Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceContainer).padding(horizontal = 4.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        PanelSteps(vm, index)
+        PanelSteps(vm, Slot.Bible(index))
         PanelViewButton(vm, Slot.Bible(index)) { vm.activePanel = index }
         Text(sk.name, style = MaterialTheme.typography.titleMedium, maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(horizontal = 6.dp))
         if (sk.linked) TextButton(onClick = { vm.goTo(index, sk.linkBook, sk.linkChapter, sk.linkVerse) }) {

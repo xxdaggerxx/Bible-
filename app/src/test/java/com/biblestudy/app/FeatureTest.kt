@@ -278,6 +278,7 @@ class FeatureTest {
             vm.changeTextSize(com.biblestudy.app.model.TextSize.NORMAL)
             vm.panels[0].back.clear()
             vm.panels[0].forward.clear()
+            vm.tab.back.forEach { it.clear() }; vm.tab.forward.forEach { it.clear() }
             vm.panels[0].zoomRel.keys.forEach { vm.panels[0].zoomRel[it] = 1f }
         }
         waitForLoaded()
@@ -559,7 +560,7 @@ class FeatureTest {
         assertEquals(19 to 23, vm.panels[0].book to vm.panels[0].chapter)
         // The chapter arrows don't add to history.
         compose.onNodeWithContentDescription("Next chapter").performClick()
-        assertEquals(1, vm.panels[0].back.size)
+        assertEquals(1, vm.tab.back[0].size)
     }
 
     @Test
@@ -611,7 +612,7 @@ class FeatureTest {
         compose.onAllNodesWithText("John 3:", substring = true).onLast().performClick()
         waitForLoaded()
         assertEquals(43 to 3, vm.panels[0].book to vm.panels[0].chapter)
-        assertEquals(2, vm.panels[0].forward.size)
+        assertEquals(2, vm.tab.forward[0].size)
         // Hold Forward to come back to Romans 8.
         compose.onNodeWithContentDescription("Forward").performTouchInput { longClick() }
         compose.onAllNodesWithText("Romans 8:", substring = true).onLast().performClick()
@@ -2866,16 +2867,14 @@ class FeatureTest {
         // They aren't badges in any chapter's margin.
         assertTrue(vm.sketchesIn(43, 3).none { it.readyMade })
 
-        // Open one from the panel menu's Sketch pages: it opens beside the Bible.
+        // Open one from the panel menu's Sketch pages: it opens in the list's place.
         compose.onNodeWithContentDescription("Panel view").performClick()
         compose.onNodeWithText("Sketch pages").performClick()
         compose.onNodeWithText("Ready-made pages").assertExists()
         snap("116-sketch-list")
         compose.onNodeWithText("The feasts of Israel").performClick()
         waitForLoaded()
-        assertEquals(ready[0].book, vm.panels[1].book)
-        compose.runOnUiThread { vm.closePanel(1); vm.openSketch(ready[0], 0) }
-        waitForLoaded()
+        assertEquals(ready[0].book, vm.panels[0].book)
         snap("117-feasts")
         for ((t, shot) in ready.drop(1).zip(listOf("118-tabernacle", "119-kings", "120-adam-to-jesus", "130-paul", "131-exodus", "132-life-of-christ", "133-tribes", "134-temples"))) {
             compose.runOnUiThread { vm.openSketch(t, 0) }
@@ -3171,22 +3170,35 @@ class FeatureTest {
     }
 
     @Test
-    fun anySketchPageOpensBesideTheText() {
+    fun aSketchPageOpensInTheListsPlaceAndBackReturnsToTheList() {
         compose.runOnUiThread { vm.addReadyMadePages() }
         waitForLoaded()
-        // The panel menu's Sketch pages lists every page.
+        // The panel menu's Sketch pages lists every page, in place of the Bible.
         compose.onNodeWithContentDescription("Panel view").performClick()
         compose.onNodeWithText("Sketch pages").performClick()
         compose.onNodeWithTag("sketchesPane").assertExists()
         snap("121-sketches-pane")
+        // Back is there: the panel showed the Bible before (NAV-1).
+        compose.onNodeWithContentDescription("Back").assertExists()
+        // Tapping a page shows it in that panel; Back returns to the list, Forward to the page.
         compose.onNodeWithText("The tabernacle").performClick()
         waitForLoaded()
         val tab = vm.sketches.first { it.name == "The tabernacle" }
-        assertEquals(2, vm.panels.size)
-        assertEquals(43, vm.panels[0].book) // the Bible stays where it was
-        assertEquals(tab.book, vm.panels[1].book)
-        snap("122-sketch-beside")
-        // Another page replaces it in the same panel.
+        assertEquals(tab.book, vm.panels[0].book)
+        assertEquals(1, vm.tab.shown)
+        snap("122-sketch-from-list")
+        compose.onNodeWithContentDescription("Back").performClick()
+        waitForLoaded()
+        compose.onNodeWithTag("sketchesPane").assertExists()
+        compose.onNodeWithContentDescription("Forward").performClick()
+        waitForLoaded()
+        assertEquals(tab.book, vm.panels[0].book)
+        // Back twice: the list, then the Bible where it was.
+        repeat(2) { compose.onNodeWithContentDescription("Back").performClick(); waitForLoaded() }
+        assertNull(vm.sidePane)
+        assertEquals(43, vm.panels[0].book)
+
+        // With the list beside the Bible, a page takes the list's panel; the Bible stays.
         compose.runOnUiThread { vm.sidePane = com.biblestudy.app.ui.PaneKind.SKETCHES }
         compose.onNodeWithText("The feasts of Israel").performClick()
         waitForLoaded()
@@ -3197,10 +3209,34 @@ class FeatureTest {
     }
 
     @Test
+    fun backInAPanelReturnsToTheViewItShowedBefore() {
+        compose.runOnUiThread { vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        // Bible, then Dictionary from the panel menu: Back brings the Bible back at John 3.
+        compose.onNodeWithContentDescription("Panel view").performClick()
+        compose.onNodeWithTag("folder:Study").performClick()
+        compose.onNodeWithText("Dictionary").performClick()
+        compose.waitForIdle()
+        assertEquals(PaneKind.DICTIONARY, vm.sidePane)
+        snap("155-back-from-dictionary")
+        compose.onNodeWithContentDescription("Back").performClick()
+        waitForLoaded()
+        assertNull(vm.sidePane)
+        assertEquals(43 to 3, vm.panels[0].book to vm.panels[0].chapter)
+        // Forward shows the dictionary again; the Back gesture goes back in the panel in use.
+        compose.onNodeWithContentDescription("Forward").performClick()
+        compose.waitForIdle()
+        assertEquals(PaneKind.DICTIONARY, vm.sidePane)
+        compose.runOnUiThread { vm.back() }
+        waitForLoaded()
+        assertNull(vm.sidePane)
+    }
+
+    @Test
     fun bothListsOfSketchPagesMakeANewPage() {
         compose.runOnUiThread { vm.goTo(0, 43, 3, remember = false) }
         waitForLoaded()
-        // The Sketch pages panel: the new page opens beside the Bible.
+        // The Sketch pages panel: the new page opens in the list's place.
         compose.onNodeWithContentDescription("Panel view").performClick()
         compose.onNodeWithText("Sketch pages").performClick()
         compose.onNodeWithTag("sketchesPane").assertExists()
@@ -3212,11 +3248,10 @@ class FeatureTest {
         compose.onNodeWithText("Create").performClick()
         waitForLoaded()
         val second = vm.sketches.single { it.name == "Map of Paul's journeys" }
-        assertEquals(2, vm.panels.size)
-        assertEquals(43, vm.panels[0].book) // the Bible stays where it was
-        assertEquals(second.book, vm.panels[1].book)
-        snap("199-new-sketch-beside")
-        compose.runOnUiThread { vm.closePanel(1); vm.deleteSketch(second) }
+        // It opens in the list's place, like a page tapped in the list.
+        assertEquals(second.book, vm.panels[0].book)
+        snap("199-new-sketch-from-list")
+        compose.runOnUiThread { vm.deleteSketch(second); vm.goTo(0, 43, 3, remember = false) }
         waitForLoaded()
     }
 
