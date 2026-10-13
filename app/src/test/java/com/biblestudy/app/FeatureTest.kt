@@ -28,6 +28,8 @@ import androidx.compose.ui.test.swipeUp
 import androidx.compose.ui.test.click
 import androidx.compose.ui.test.hasSetTextAction
 import androidx.compose.ui.test.performTextInput
+import androidx.compose.ui.test.assertIsSelected
+import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.performTextReplacement
 import androidx.compose.ui.text.TextMeasurer
 import androidx.compose.ui.text.font.Font
@@ -2427,6 +2429,43 @@ class FeatureTest {
             compose.runOnUiThread { vm.removeBible("ESV") }
             waitForLoaded(30_000)
         }
+    }
+
+    @Test
+    fun smartSearchFindsATopicInEveryVersion() {
+        compose.onNodeWithContentDescription("Search").performScrollTo().performClick()
+        compose.onNodeWithText("All versions").assertIsSelected()
+        compose.onNodeWithText("Words, \"exact phrase\", or a reference like John 3:16").performTextInput("What does the Bible say about righteousness?")
+        compose.onAllNodesWithContentDescription("Search").onLast().performClick()
+        waitFor(30_000) { compose.onAllNodesWithText("Key passages").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("found in every version", substring = true).assertExists()
+        compose.onNodeWithText("Nave's: Righteousness").assertExists()
+        compose.onNodeWithText("tsᵉdâqâh", substring = true).assertExists()
+        snap("87-smart-search")
+        val list = compose.onNodeWithTag("smartResults")
+        list.performScrollToNode(hasText("Genesis 15:6"))
+        // Nave's subtopics fold open.
+        list.performScrollToNode(hasText("By faith \u2014", substring = true))
+        compose.onNodeWithText("By faith \u2014", substring = true).performClick()
+        compose.waitForIdle()
+        list.performScrollToNode(hasText("Romans 4:3"))
+        compose.onAllNodesWithText("Romans 4:3").onFirst().assertExists()
+        // A version chip searches just that version, as before.
+        // (The whole question is then searched word for word, so it finds nothing.)
+        compose.onAllNodesWithText("KJV").onLast().performClick()
+        waitFor(15_000) { compose.onAllNodesWithText("No verses found.").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Key passages").assertDoesNotExist()
+    }
+
+    @Test
+    fun smartSearchShowsAPersonsLife() {
+        compose.onNodeWithContentDescription("Search").performScrollTo().performClick()
+        compose.onNodeWithText("Words, \"exact phrase\", or a reference like John 3:16").performTextInput("Paul's travels")
+        compose.onAllNodesWithContentDescription("Search").onLast().performClick()
+        waitFor(30_000) { compose.onAllNodesWithText("The life of Paul, step by step").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Paul in Names & places").assertExists()
+        compose.onNodeWithText("Ready-made page: Paul's missionary journeys").assertExists()
+        snap("88-smart-search-person")
     }
 
     @Test

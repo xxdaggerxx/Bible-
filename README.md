@@ -1,4 +1,4 @@
-# Ink & Word — version 2.10.7
+# Ink & Word — version 2.11.1
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet, and since version 2.0 on Android phones too, drawing with a finger. Since version 2.10.3 it also runs on Windows, Mac and Linux computers.
 
@@ -76,11 +76,23 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
-## New in version 2.10.7
+## New in version 2.11.1
 
 - **Back and Forward in each panel.** The toolbar's ← and → are gone (two fewer buttons). Each panel has its own ← at the far left of its header, shown once it has jumped somewhere; tapping it takes only that panel back to where it was, and → appears after going back. Hold either for the list of passages. The tablet's Back gesture, and Alt+← and Alt+→ on a computer, go back in the panel you're using. Sketch pages have them too.
 - **Start fresh asks first.** Back no longer undoes opening, closing or changing panels and tabs (the whole-screen history from 1.9 is replaced), so *Start fresh*, which closes the other tabs and panels, asks before it does.
 - Known gaps: study views (commentary, dictionary and the rest) have no Back of their own; they follow the Bible panel beside them.
+
+## New in version 2.11.0
+
+- **Smart search.** Search for a subject, a question, a person or a place (*righteousness*, *what does the Bible say about prayer*, *seed*, *Abraham*, *Paul's travels*) and get all the relevant passages, not just the verses with the word in one version. It's the new first choice in Search, *All versions*; picking a version (or using "quotes", OR, -word or lov*) searches exactly as before.
+  - **Every version at once, and the Hebrew and Greek behind them.** Each English word is matched to the Hebrew and Greek words it translates, worked out from how the KJV, BSB and WEB translate them, and every verse using those words is found, whatever the English says. "Righteousness" finds *tsaddiq*, *tsedeq*, *tsedaqah*, *dikaios* and *dikaiosynē*, so Genesis 30:33 ("honesty" in the BSB) is found too. The words show at the top; tap one for its word study.
+  - **Forms of a word** go together (righteous, righteousness, righteously; pray, prayer, praying), without different words ("pray" doesn't bring in "praise", or "test" "testimony").
+  - **Key passages first**, ranked by Nave's Topical Bible, the cross-references pointing to each verse and how much it uses the subject's words; then **Nave's subtopics** (*By faith*, *Fruits of*…), folded until tapped; then **all verses found**, in Bible order.
+  - **The app's own notes are searched too:** the Ink & Word Commentary, Bible aids and Points to Christ, so verses about a subject are found even without its word (Titus 3:7 for righteousness). A line under each verse says why it was found.
+  - **People and places:** a person's life step by step from Nave's ("Abraham", "Paul's travels"), with *Names & places* and any ready-made page that covers it (*Paul's missionary journeys*).
+  - **Reflections** on the subject are listed under the verses.
+  - No AI and no internet: `tools/build_search_db.py` builds `assets/study/search.db` from the data already in the app (about 6 MB packed).
+- Known gaps: there's no topic list yet for subjects Nave's lacks or covers thinly (e.g. "the word of God", or the promised Seed as its own group); a search with several words needs verses that match each word, so long questions find less; a person and a theme ("Abraham's trials") keeps the steps whose verses match, and "trial" isn't yet matched to "tested" or "tempted"; synonyms (afraid, fear, anxious) aren't joined. These are planned next (section 29 of the requirements).
 
 ## New in version 2.10.6
 
@@ -814,8 +826,8 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 
 ## Next milestones
 
-- **Next: offline smart search:** all versions at once, every verse with the same Hebrew or Greek word, grouped by Nave's topics. No AI and no internet needed.
-- **On hold:** the AI search and study plan (section 29 of the requirements), replaced for now by the online AI chat (1.6) and offline smart search.
+- **Next (2.12):** a short topic list for gaps in Nave's (e.g. "the word of God", the promised Seed), synonyms and themes (afraid/fear, trial/tested), deeper word studies, and the AI chat answering from the app's own content first (section 29 of the requirements).
+- **Later:** meaning-based search only if the test searches need it; sermons with summaries and links.
 - **Waiting on permission:** NIV and NLT. Once you have the files, *Settings → Bibles → Import a Bible…* adds them.
 
 ## Credits

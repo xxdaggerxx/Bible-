@@ -190,7 +190,13 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in every version
 ## Searching
 
 ![Search: results grouped by book](search.webp)
-- Tap the magnifying glass. Pick the version, and the whole Bible, Old or New Testament, or the book you're in.
+- Tap the magnifying glass. Type a subject, a question, a person or a place: *righteousness*, *what does the Bible say about prayer*, *Abraham*, *Paul's travels*. With *All versions* chosen (the first time), this is **smart search**:
+  - It searches the KJV, BSB and WEB at once, and finds every verse that uses the same Hebrew or Greek word, even where the English says something else (Genesis 30:33 is "righteousness" in the KJV and "honesty" in the BSB). Tap one of the Hebrew or Greek words at the top for its word study.
+  - **Key passages** come first. Then the subject's parts from Nave's Topical Bible (*By faith*, *Fruits of*…): tap one to open it. *All verses found* lists everything in Bible order.
+  - It also looks in the Ink & Word Commentary, Bible aids and Points to Christ, so verses about the subject are found even without its word. Under each verse a short line says why it was found.
+  - A person shows their life step by step, with *Names & places* and any ready-made page (such as *Paul's missionary journeys*). *Reflections* lists the reflections on the subject.
+  - Nothing goes online: it all comes with the app.
+- For an exact search, pick a version (*KJV*, *BSB*…), or use the signs below. Choose the whole Bible, Old or New Testament, or the book you're in.
 - Several words find verses with all of them. Put words in "quotes" for an exact phrase. *OR* finds either word. *lov\** finds love, loved, loveth. *-word* leaves out verses with that word.
 - Type a reference like *jn 3:16* to jump straight there.
 - Pick *My notes* to search your typed notes and text boxes.

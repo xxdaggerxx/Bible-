@@ -427,6 +427,10 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
     var scope by remember { mutableStateOf(SearchScope.ALL) }
     var version by remember { mutableStateOf(vm.activeVersion) }
     var inNotes by remember { mutableStateOf(false) }
+    // Smart search across every version (section 29) is the default; a version chip searches just it.
+    var smart by remember { mutableStateOf(true) }
+    var smartResult by remember { mutableStateOf<com.biblestudy.app.data.SmartResult?>(null) }
+    var smartTexts by remember { mutableStateOf<Map<Int, String>>(emptyMap()) }
     var results by remember { mutableStateOf<List<SearchHit>?>(null) }
     var searchedTerms by remember { mutableStateOf(emptyList<String>()) }
     var searchedStrong by remember { mutableStateOf<String?>(null) }
@@ -443,6 +447,29 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
         co.launch {
             val v = version
             val notes = inNotes
+            // Smart search, unless the search uses the exact-search signs (quotes, OR, -word, word*)
+            // or is a Strong's number: those keep working as before, in the version being read.
+            if (smart && !notes && ref == null && !BibleRepository.isExactSearch(q) && StudyRepository.normalizeStrong(q) == null) {
+                val (lo, hi) = when (scope) {
+                    SearchScope.ALL -> 1 to 66
+                    SearchScope.OT -> 1 to 39
+                    SearchScope.NT -> 40 to 66
+                    SearchScope.BOOK -> currentBook to currentBook
+                }
+                val found = background {
+                    val r = runCatching { vm.smart.search(q, BibleRepository.ALL.map { vm.text(it.code) }) }.getOrNull()
+                    r?.let { it to vm.smartTexts(it, v, lo, hi) }
+                }
+                if (found != null) {
+                    smartResult = found.first
+                    smartTexts = found.second
+                    results = null
+                    searchedStrong = null
+                    searchedTerms = found.first.forms
+                    return@launch
+                }
+            }
+            smartResult = null
             results = background {
                 if (notes) {
                     val (lo, hi) = when (scope) {
@@ -473,7 +500,7 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
             searchedTerms = if (searchedStrong != null) emptyList() else BibleRepository.terms(q)
         }
     }
-    LaunchedEffect(scope, version, inNotes) { if (query.isNotBlank() && results != null) run() }
+    LaunchedEffect(scope, version, inNotes, smart) { if (query.isNotBlank() && (results != null || smartResult != null)) run() }
 
     // The search pane runs a search handed over from the search dialog.
     if (inPane) {
@@ -504,10 +531,11 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
+                FilterChip(selected = smart && !inNotes, onClick = { smart = true; inNotes = false }, label = { Text("All versions") })
                 for (v in BibleRepository.ALL) {
                     FilterChip(
-                        selected = !inNotes && version == v.code,
-                        onClick = { version = v.code; inNotes = false },
+                        selected = !smart && !inNotes && version == v.code,
+                        onClick = { version = v.code; smart = false; inNotes = false },
                         label = { Text(v.code) },
                     )
                 }
@@ -518,10 +546,17 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
                     FilterChip(selected = scope == s, onClick = { scope = s }, label = { Text(label) })
                 }
             }
-            Text(
-                "Tips: all words must match; \"quotes\" for an exact phrase; OR between words for either; " +
-                    "-word to leave out verses with that word; * for word beginnings (lov* finds love, loved, loveth); " +
-                    "a Strong's number like G26 or H2617 finds every verse using that Greek or Hebrew word.",
+            // The tips show until there are results, to leave the room for them (on phones especially).
+            if (results == null && smartResult == null) Text(
+                if (smart && !inNotes) {
+                    "Ask about a subject, a person or a place, e.g. righteousness, what does the Bible say about prayer, " +
+                        "Abraham. All versions are searched, with every verse using the same Hebrew or Greek word, " +
+                        "Nave's topics and the study notes. For an exact search, pick a version, or use \"quotes\", OR, -word or lov*."
+                } else {
+                    "Tips: all words must match; \"quotes\" for an exact phrase; OR between words for either; " +
+                        "-word to leave out verses with that word; * for word beginnings (lov* finds love, loved, loveth); " +
+                        "a Strong's number like G26 or H2617 finds every verse using that Greek or Hebrew word."
+                },
                 style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
             )
             if (ref != null) {
@@ -532,11 +567,19 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
                 ) { Text("Go to $label") }
             }
             val r = results
-            if (r != null && r.isNotEmpty() && !inPane) {
+            if ((r != null && r.isNotEmpty() || smartResult != null) && !inPane) {
                 TextButton(onClick = { vm.paneSearch = query; vm.sidePane = PaneKind.SEARCH; onOpened() }) {
                     Icon(Icons.Filled.VerticalSplit, contentDescription = null, modifier = Modifier.size(18.dp))
                     Spacer(Modifier.width(6.dp))
                     Text("Keep results beside the text")
+                }
+            }
+            smartResult?.let { sr ->
+                if (sr.verses.none { it.id in smartTexts } && sr.reflections.isEmpty()) {
+                    Text("Nothing found. Try another word, or pick a version for an exact search.",
+                        style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 12.dp))
+                } else {
+                    SmartResults(vm, sr, smartTexts, version, panelIndex, onOpened, Modifier.weight(1f))
                 }
             }
             searchedStrong?.let { if (r != null) StrongsHeader(vm, it, version) }
@@ -620,7 +663,7 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
     }
 }
 
-private fun markTerms(text: String, terms: List<String>, style: SpanStyle): AnnotatedString = buildAnnotatedString {
+internal fun markTerms(text: String, terms: List<String>, style: SpanStyle): AnnotatedString = buildAnnotatedString {
     append(text)
     val lower = text.lowercase()
     for (t in terms) {
