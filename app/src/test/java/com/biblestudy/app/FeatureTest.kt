@@ -276,7 +276,6 @@ class FeatureTest {
             vm.changeTextSize(com.biblestudy.app.model.TextSize.NORMAL)
             vm.panels[0].back.clear()
             vm.panels[0].forward.clear()
-            vm.clearSteps()
             vm.panels[0].zoomRel.keys.forEach { vm.panels[0].zoomRel[it] = 1f }
         }
         waitForLoaded()
@@ -542,107 +541,93 @@ class FeatureTest {
 
     @Test
     fun backAndForwardReturnToEarlierPassages() {
+        // A panel that hasn't jumped has no arrows (NAV-1: Back and Forward are in each panel's header).
+        compose.onNodeWithContentDescription("Back").assertDoesNotExist()
         compose.runOnUiThread { vm.goTo(0, 19, 23) } // e.g. from the book picker
         waitForLoaded()
         compose.onNodeWithText("Psalms 23").assertExists()
+        compose.onNodeWithContentDescription("Forward").assertDoesNotExist()
+        snap("152-panel-back")
         compose.onNodeWithContentDescription("Back").performClick()
         waitForLoaded()
         assertEquals(43 to 3, vm.panels[0].book to vm.panels[0].chapter)
+        compose.onNodeWithContentDescription("Back").assertDoesNotExist()
         compose.onNodeWithContentDescription("Forward").performClick()
         waitForLoaded()
         assertEquals(19 to 23, vm.panels[0].book to vm.panels[0].chapter)
         // The chapter arrows don't add to history.
         compose.onNodeWithContentDescription("Next chapter").performClick()
-        assertEquals(1, vm.backSteps.size)
+        assertEquals(1, vm.panels[0].back.size)
     }
 
     @Test
-    fun backAndForwardUndoPanelsAndTabsAndTabsRememberWhereYouWere() {
-        compose.runOnUiThread { while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex); vm.goTo(0, 43, 3, 20, remember = false); vm.clearSteps() }
+    fun eachPanelGoesBackOnItsOwn() {
+        compose.runOnUiThread { while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex); vm.goTo(0, 43, 3, 20, remember = false) }
         waitForLoaded()
-        // Open the commentary beside the text, then Romans 8:28 in a new tab (NAV-1).
-        compose.runOnUiThread { vm.sidePane = PaneKind.COMMENTARY }
+        compose.runOnUiThread { vm.addPanel() }
         waitForLoaded()
-        compose.runOnUiThread { vm.newTab(45, 8, 28) }
+        // Each panel jumps somewhere; each one's Back returns only that panel.
+        compose.runOnUiThread { vm.linkPanels = false; vm.goTo(0, 19, 23); vm.goTo(1, 45, 8, 28) }
         waitForLoaded()
-        assertEquals(2, vm.backSteps.size)
-        assertEquals(2, vm.tabs.size)
-
-        // Back: the new tab goes; Back again: the commentary goes. The screen is as it was.
-        compose.onNodeWithContentDescription("Back").performClick()
+        compose.onAllNodesWithContentDescription("Back").assertCountEquals(2)
+        compose.onAllNodesWithContentDescription("Back")[1].performClick()
         waitForLoaded()
-        assertEquals(1, vm.tabs.size)
-        assertEquals(PaneKind.COMMENTARY, vm.sidePane)
-        compose.onNodeWithContentDescription("Back").performClick()
+        assertEquals(19 to 23, vm.panels[0].book to vm.panels[0].chapter)
+        assertEquals(43 to 3, vm.panels[1].book to vm.panels[1].chapter)
+        snap("153-back-in-one-panel")
+        // The tablet's Back gesture (and Alt+Left) goes back in the panel in use.
+        compose.runOnUiThread { vm.activePanel = 0; vm.back() }
         waitForLoaded()
-        assertNull(vm.sidePane)
         assertEquals(43 to 3, vm.panels[0].book to vm.panels[0].chapter)
-        assertTrue("John 3 at ${vm.panels[0].topVerse}", vm.panels[0].topVerse in 19..21)
-        snap("153-back-to-start")
+        assertFalse(vm.canGoBack)
 
-        // Forward twice brings them back.
-        repeat(2) { compose.onNodeWithContentDescription("Forward").performClick(); waitForLoaded() }
-        assertEquals(2, vm.tabs.size)
-        assertEquals(1, vm.activeTab)
-        assertEquals(45 to 8, vm.panels[0].book to vm.panels[0].chapter)
-
-        // Switching tabs keeps each one where it was scrolled to.
+        // Tabs remember where each one was scrolled to.
+        compose.runOnUiThread { vm.closePanel(1); vm.goTo(0, 43, 3, 20, remember = false); vm.newTab(45, 8, 28) }
+        waitForLoaded()
         compose.runOnUiThread { vm.selectTab(0) }
         waitForLoaded()
         assertTrue("John 3 at ${vm.panels[0].topVerse}", vm.panels[0].topVerse in 19..21)
         compose.runOnUiThread { vm.selectTab(1) }
         waitForLoaded()
         assertTrue("Romans 8 at ${vm.panels[0].topVerse}", vm.panels[0].topVerse in 27..29)
-        // And Back goes back across the switch.
-        compose.onNodeWithContentDescription("Back").performClick()
-        waitForLoaded()
-        assertEquals(0, vm.activeTab)
-        compose.runOnUiThread { while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex); vm.sidePane = null; vm.clearSteps() }
+        compose.runOnUiThread { while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex); vm.sidePane = null }
         waitForLoaded()
     }
 
     @Test
     fun startFreshAndTheBackList() {
-        compose.runOnUiThread { while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex); vm.goTo(0, 43, 3, 16, remember = false); vm.clearSteps() }
+        compose.runOnUiThread { while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex); vm.goTo(0, 43, 3, 16, remember = false) }
         waitForLoaded()
-        // A busy screen: Psalm 23, the commentary beside it, and a second tab.
-        compose.runOnUiThread { vm.goTo(0, 19, 23) }
+        compose.runOnUiThread { vm.goTo(0, 19, 23, 1); vm.goTo(0, 45, 8, 28) }
         waitForLoaded()
-        compose.runOnUiThread { vm.sidePane = PaneKind.COMMENTARY }
-        waitForLoaded()
-        compose.runOnUiThread { vm.newTab(45, 8, 28) }
-        waitForLoaded()
-        assertEquals(3, vm.backSteps.size)
 
-        // Hold Back: the screens it goes to, nearest first; pick the oldest (NAV-1).
+        // Hold Back: the passages it goes to, nearest first; pick the oldest.
         compose.onNodeWithContentDescription("Back").performTouchInput { longClick() }
         compose.onNodeWithText("Go back to").assertExists()
-        compose.onNodeWithText("Psalms 23 and Commentary").assertExists()
+        compose.onNodeWithText("Psalms 23:", substring = true).assertExists()
         snap("154-back-list")
-        compose.onNodeWithText("John 3").performClick()
+        compose.onAllNodesWithText("John 3:", substring = true).onLast().performClick()
         waitForLoaded()
-        assertEquals(1, vm.tabs.size)
-        assertNull(vm.sidePane)
         assertEquals(43 to 3, vm.panels[0].book to vm.panels[0].chapter)
-        assertEquals(3, vm.forwardSteps.size)
-        // Hold Forward to come back to the second tab.
+        assertEquals(2, vm.panels[0].forward.size)
+        // Hold Forward to come back to Romans 8.
         compose.onNodeWithContentDescription("Forward").performTouchInput { longClick() }
-        compose.onNodeWithText("Romans 8 \u00b7 2 tabs").performClick()
+        compose.onAllNodesWithText("Romans 8:", substring = true).onLast().performClick()
         waitForLoaded()
-        assertEquals(2, vm.tabs.size)
         assertEquals(45 to 8, vm.panels[0].book to vm.panels[0].chapter)
 
-        // Start fresh (NAV-2), in the panel menu: one tab, one panel, where you're reading; Back undoes it.
+        // Start fresh (NAV-2), in the panel menu, asks first: one tab, one panel, where you're reading.
+        compose.runOnUiThread { vm.sidePane = PaneKind.COMMENTARY; vm.newTab(1, 1) }
+        waitForLoaded()
         compose.onAllNodesWithContentDescription("Panel view").onFirst().performClick()
         compose.onNodeWithText("Start fresh").performClick()
+        compose.onNodeWithText("Start fresh?").assertExists()
+        compose.onAllNodesWithText("Start fresh").onLast().performClick()
         waitForLoaded()
         assertEquals(1, vm.tabs.size)
         assertEquals(1, vm.tab.shown)
-        assertEquals(45 to 8, vm.panels[0].book to vm.panels[0].chapter)
-        compose.onNodeWithContentDescription("Back").performClick()
-        waitForLoaded()
-        assertEquals(2, vm.tabs.size)
-        compose.runOnUiThread { while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex); vm.sidePane = null; vm.clearSteps() }
+        assertEquals(1 to 1, vm.panels[0].book to vm.panels[0].chapter)
+        compose.runOnUiThread { vm.goTo(0, 43, 3, remember = false) }
         waitForLoaded()
     }
 

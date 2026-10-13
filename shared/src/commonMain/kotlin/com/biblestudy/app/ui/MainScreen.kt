@@ -199,7 +199,7 @@ fun StudyApp(vm: StudyViewModel) {
                             }
                         }
                         // The tablet's Back gesture is the toolbar's Back (NAV-1).
-                        SystemBackHandler(enabled = vm.backSteps.isNotEmpty()) { vm.back() }
+                        SystemBackHandler(enabled = vm.canGoBack) { vm.back() }
                         // The AI chat bubble (AI-1) and its little window (AI-10), over the text so you can keep reading.
                         if (vm.chat.enabled && PaneKind.CHAT !in tab.studies) {
                             if (vm.chatWindow) ChatWindow(

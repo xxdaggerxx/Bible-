@@ -23,7 +23,7 @@ PICTURES = {
     "hard-word": ("159-hard-word-meaning", (0.03, 0.06, 0.97, 0.42)),
     "points-to-christ": ("201-points-to-christ-isaiah-53", (0.0, 0.10, 0.66, 0.80)),
     "points-to-christ-card": ("202-points-to-christ-card", (0.03, 0.06, 0.97, 0.42)),
-    "toolbar": ("70-toolbar", (0.0, 0.0, 0.54, 0.07)),
+    "toolbar": ("70-toolbar", (0.0, 0.0, 0.46, 0.07)),
     "pen-colours": ("205-pen-colours-dark-picker", (0.0, 0.0, 0.60, 0.50)),
     "phone": ("180-phone-393", (0.0, 0.0, 1.0, 0.50)),
     "highlight-edit": ("40-highlight-edit", (0.0, 0.12, 0.76, 0.45)),

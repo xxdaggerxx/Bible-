@@ -65,6 +65,15 @@ import androidx.compose.ui.unit.dp
  */
 @Composable
 fun PanelViewMenu(vm: StudyViewModel, slot: Slot, expanded: Boolean, onDismiss: () -> Unit) {
+    // Start fresh closes tabs and panels, which Back doesn't bring back (NAV-1), so it asks first.
+    var freshAsk by remember { mutableStateOf(false) }
+    if (freshAsk) AlertDialog(
+        onDismissRequest = { freshAsk = false },
+        title = { Text("Start fresh?") },
+        text = { Text("This closes your other tabs and panels and leaves one Bible panel, at the passage you're reading. Saved layouts aren't touched.") },
+        confirmButton = { TextButton(onClick = { freshAsk = false; vm.startFresh() }) { Text("Start fresh") } },
+        dismissButton = { TextButton(onClick = { freshAsk = false }) { Text("Cancel") } },
+    )
     DropdownMenu(expanded = expanded, onDismissRequest = onDismiss) {
         val current = (slot as? Slot.Study)?.kind
         ViewChoices(
@@ -100,7 +109,7 @@ fun PanelViewMenu(vm: StudyViewModel, slot: Slot, expanded: Boolean, onDismiss: 
         if (vm.tabs.size > 1 || vm.tab.shown > 1) DropdownMenuItem(
             text = { Text("Start fresh") },
             leadingIcon = { Icon(Icons.Filled.RestartAlt, contentDescription = null) },
-            onClick = { onDismiss(); vm.startFresh(); vm.message = "One panel again. Back (\u2190) undoes it." },
+            onClick = { onDismiss(); freshAsk = true },
         )
         LayoutChoices(vm, onDismiss)
         HorizontalDivider()

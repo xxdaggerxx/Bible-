@@ -830,147 +830,45 @@ class StudyViewModel(val host: Host) : ViewModel() {
     fun currentWidth(highlighter: Boolean) =
         if (highlighter) HIGHLIGHT_SIZES[highlightSize.coerceIn(0, 2)] else PEN_SIZES[penSize.coerceIn(0, 2)]
 
-    // ---------- Back and Forward for the whole screen (NAV-1) ----------
-
-    /** The screen as it was: every tab, what its panels show and where, and the tab in front. */
-    class Screen(val tabs: String, val active: Int, val key: String)
-
-    /** Screens to go back to (newest last), and forward to after going back. */
-    val backSteps = mutableStateListOf<Screen>()
-    val forwardSteps = mutableStateListOf<Screen>()
-    private var stepDepth = 0
-    private var restoring = false
-
-    private fun screenNow(): Screen {
-        val json = TabState.listToJson(tabs)
-        // Jumps within a chapter change no saved field, so each panel's jump count is part of the key.
-        return Screen(json, activeTab, json + activeTab + tabs.joinToString { t -> t.panels.joinToString { "${it.navGen}" } })
-    }
+    // ---------- Back and Forward in each panel (NAV-1) ----------
 
     /**
-     * Runs a change to what's on screen (a jump, a panel opened, closed or changed, a tab opened,
-     * switched or closed) as one step Back can undo. Changes made inside it are part of the same step.
+     * Back in one panel (NAV-1, changed in 2.10.7): the passage it showed before its last jump,
+     * [steps] jumps back. The chapter arrows and scrolling aren't jumps.
      */
-    private inline fun step(block: () -> Unit) {
-        val outer = stepDepth == 0 && !restoring
-        val before = if (outer) screenNow() else null
-        stepDepth++
-        try {
-            block()
-        } finally {
-            stepDepth--
-            if (before != null && screenNow().key != before.key) {
-                backSteps.add(before)
-                while (backSteps.size > MAX_HISTORY) backSteps.removeAt(0)
-                forwardSteps.clear()
-            }
-        }
+    fun panelBack(index: Int, steps: Int = 1) {
+        val p = panels.getOrNull(index) ?: return
+        var to: Place? = null
+        repeat(steps) { p.back.removeLastOrNull()?.let { p.forward.add(to ?: p.here()); to = it } }
+        to?.let { activePanel = index; jump(p, it.book, it.chapter, it.verse) }
     }
 
-    /** Back: the screen as it was before the last change (NAV-1). */
-    fun back() {
-        val to = backSteps.removeLastOrNull() ?: return
-        forwardSteps.add(screenNow())
-        restore(to)
+    /** Forward in one panel: undoes [panelBack]. */
+    fun panelForward(index: Int, steps: Int = 1) {
+        val p = panels.getOrNull(index) ?: return
+        var to: Place? = null
+        repeat(steps) { p.forward.removeLastOrNull()?.let { p.back.add(to ?: p.here()); to = it } }
+        to?.let { activePanel = index; jump(p, it.book, it.chapter, it.verse) }
     }
 
-    /** Forward: undoes Back. */
-    fun forward() {
-        val to = forwardSteps.removeLastOrNull() ?: return
-        backSteps.add(screenNow())
-        restore(to)
-    }
+    /** The tablet's Back gesture and Alt+← / Alt+→: Back and Forward in the panel in use. */
+    fun back() = panelBack(activePanel.coerceIn(0, panels.lastIndex))
+    fun forward() = panelForward(activePanel.coerceIn(0, panels.lastIndex))
+    val canGoBack: Boolean get() = panels.getOrNull(activePanel.coerceIn(0, panels.lastIndex))?.back?.isNotEmpty() == true
 
-    fun clearSteps() { backSteps.clear(); forwardSteps.clear() }
+    /** A place in words, for a panel's Back and Forward lists: "Psalms 23:1", or a sketch page's name. */
+    fun placeLabel(p: Place): String = hitLabel(p.book, p.chapter, p.verse)
 
-    /** Back several steps at once, to [i] in [backSteps] (from the list under a held ←). */
-    fun backTo(i: Int) {
-        if (i !in backSteps.indices) return
-        forwardSteps.add(screenNow())
-        while (backSteps.size > i + 1) forwardSteps.add(backSteps.removeAt(backSteps.lastIndex))
-        restore(backSteps.removeAt(i))
-    }
-
-    /** Forward several steps at once, to [i] in [forwardSteps] (from the list under a held →). */
-    fun forwardTo(i: Int) {
-        if (i !in forwardSteps.indices) return
-        backSteps.add(screenNow())
-        while (forwardSteps.size > i + 1) backSteps.add(forwardSteps.removeAt(forwardSteps.lastIndex))
-        restore(forwardSteps.removeAt(i))
-    }
-
-    /** A screen in words, for the Back and Forward lists: "John 3 and Commentary · 2 tabs". */
-    fun screenLabel(s: Screen): String = runCatching {
-        val all = com.biblestudy.app.platform.JSONArray(s.tabs)
-        val t = all.getJSONObject(s.active.coerceIn(0, all.length() - 1))
-        val parts = ArrayList<String>()
-        val hidden = t.optBoolean("hidden")
-        val ps = t.getJSONArray("panels")
-        if (!hidden) for (i in 0 until ps.length()) {
-            val p = ps.getJSONObject(i)
-            val b = p.optInt("b", 43)
-            parts += sketchOf(b)?.name ?: "${bible.book(b.coerceIn(1, 66)).name} ${p.optInt("c", 1)}"
-        }
-        val st = t.optJSONArray("studies") ?: com.biblestudy.app.platform.JSONArray()
-        for (i in 0 until st.length()) PaneKind.entries.firstOrNull { it.name == st.optString(i) }?.let { parts += it.label }
-        parts.joinToString(" and ") + if (all.length() > 1) " \u00b7 ${all.length()} tabs" else ""
-    }.getOrDefault("Earlier screen")
-
-    /**
-     * Start fresh (NAV-2): one tab with one Bible panel, at the passage being read. Back undoes it.
-     */
+    /** Start fresh (NAV-2): one tab with one Bible panel, at the passage being read (asked first). */
     fun startFresh() {
         val p = panels.getOrNull(activePanel.coerceIn(0, panels.lastIndex)) ?: return
-        step {
-            selection = null; passagePop = null; linkPos = null; commentaryPos = null
-            chatWindow = false
-            val (b, c) = if (Sketch.isSketch(p.book)) biblePlaceBefore(p).let { it.first to it.second } else p.book to p.chapter
-            val t = TabState()
-            t.panels.add(PanelState(b, c).apply { version = p.version; pendingVerse = if (b == p.book) p.topVerse else null; navGen = p.navGen + 1 })
-            tabs.clear(); tabs.add(t)
-            activeTab = 0
-        }
-    }
-
-    /** A saved place made valid; sketch pages that still exist stay sketch pages. */
-    private fun screenPlace(book: Int, chapter: Int, version: String?): Triple<Int, Int, String> =
-        if (Sketch.isSketch(book) && sketchOf(book) != null) Triple(book, 1, validVersion(version)) else validPlace(book, chapter, version)
-
-    /** A tab's arrangement without where its panels are, to tell whether only the passages differ. */
-    private fun shapeOf(o: com.biblestudy.app.platform.JSONObject): String {
-        val c = com.biblestudy.app.platform.JSONObject(o.toString())
-        val ps = c.getJSONArray("panels")
-        for (i in 0 until ps.length()) ps.getJSONObject(i).let { p -> listOf("b", "c", "t", "v", "zl", "zland", "zport").forEach { p.remove(it) } }
-        return c.toString()
-    }
-
-    private fun restore(s: Screen) {
-        restoring = true
-        try {
-            selection = null; passagePop = null; linkPos = null; commentaryPos = null
-            val saved = com.biblestudy.app.platform.JSONArray(s.tabs)
-            val now = com.biblestudy.app.platform.JSONArray(TabState.listToJson(tabs))
-            val sameShape = saved.length() == now.length() && (0 until saved.length()).all { shapeOf(saved.getJSONObject(it)) == shapeOf(now.getJSONObject(it)) }
-            if (sameShape) {
-                // Only the passages differ: move the panels there, keeping everything else as it is.
-                for (t in 0 until saved.length()) {
-                    val ps = saved.getJSONObject(t).getJSONArray("panels")
-                    tabs[t].panels.forEachIndexed { i, p ->
-                        val j = ps.optJSONObject(i) ?: return@forEachIndexed
-                        val (b, c, v) = screenPlace(j.optInt("b", p.book), j.optInt("c", p.chapter), j.optString("v", p.version))
-                        val verse = j.optInt("t", 1)
-                        if (p.version != v) p.version = v
-                        if (p.book != b || p.chapter != c || p.topVerse != verse) jump(p, b, c, verse)
-                    }
-                }
-            } else {
-                val list = TabState.listFromJson(s.tabs, ::screenPlace)?.takeIf { it.isNotEmpty() } ?: return
-                tabs.clear(); tabs.addAll(list)
-            }
-            activeTab = s.active.coerceIn(0, tabs.lastIndex)
-        } finally {
-            restoring = false
-        }
+        selection = null; passagePop = null; linkPos = null; commentaryPos = null
+        chatWindow = false
+        val (b, c) = if (Sketch.isSketch(p.book)) biblePlaceBefore(p).let { it.first to it.second } else p.book to p.chapter
+        val t = TabState()
+        t.panels.add(PanelState(b, c).apply { version = p.version; pendingVerse = if (b == p.book) p.topVerse else null; navGen = p.navGen + 1 })
+        tabs.clear(); tabs.add(t)
+        activeTab = 0
     }
 
     // ---------- navigation ----------
@@ -986,7 +884,7 @@ class StudyViewModel(val host: Host) : ViewModel() {
             if (p.back.lastOrNull() != here) p.back.add(here)
             while (p.back.size > MAX_HISTORY) p.back.removeAt(0)
             p.forward.clear()
-            step { jump(p, book, chapter, verse) }
+            jump(p, book, chapter, verse)
         } else jump(p, book, chapter, verse)
     }
 
@@ -1137,22 +1035,20 @@ class StudyViewModel(val host: Host) : ViewModel() {
 
     /** Opens another Bible panel in this tab, showing the active one's passage. */
     fun addPanel() {
-        step {
-            if (tab.shown >= maxPanels) {
-                message = "A tab holds two panels. Open a new tab for more."
-                return
-            }
-            val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
-            if (tab.bibleHidden) {
-                // Both panels showed study views and one was closed: bring the Bible panel back.
-                tab.bibleHidden = false
-                tab.studyFirst = true // the study view stays where it was; the Bible comes in beside it
-                activePanel = 0
-                return
-            }
-            panels.add(PanelState(p.book, p.chapter).apply { version = validVersion(newPanelVersion ?: p.version) })
-            activePanel = panels.lastIndex
+        if (tab.shown >= maxPanels) {
+            message = "A tab holds two panels. Open a new tab for more."
+            return
         }
+        val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
+        if (tab.bibleHidden) {
+            // Both panels showed study views and one was closed: bring the Bible panel back.
+            tab.bibleHidden = false
+            tab.studyFirst = true // the study view stays where it was; the Bible comes in beside it
+            activePanel = 0
+            return
+        }
+        panels.add(PanelState(p.book, p.chapter).apply { version = validVersion(newPanelVersion ?: p.version) })
+        activePanel = panels.lastIndex
     }
 
     /**
@@ -1160,18 +1056,16 @@ class StudyViewModel(val host: Host) : ViewModel() {
      * is kept out of sight; a tab left with nothing is closed.
      */
     fun closePanel(index: Int) {
-        step {
-            val t = tab
-            when {
-                t.panels.size > 1 && index in t.panels.indices -> {
-                    t.panels.removeAt(index)
-                    t.linked = false
-                }
-                t.studies.isNotEmpty() -> t.bibleHidden = true
-                tabs.size > 1 -> { closeTab(activeTab); return }
+        val t = tab
+        when {
+            t.panels.size > 1 && index in t.panels.indices -> {
+                t.panels.removeAt(index)
+                t.linked = false
             }
-            t.activePanel = 0
+            t.studies.isNotEmpty() -> t.bibleHidden = true
+            tabs.size > 1 -> { closeTab(activeTab); return }
         }
+        t.activePanel = 0
     }
 
     /** The weights of the panels on screen. */
@@ -1195,37 +1089,33 @@ class StudyViewModel(val host: Host) : ViewModel() {
      * the second panel. With two Bible panels, the one not in use makes way for it.
      */
     fun showStudy(kind: PaneKind) {
-        step {
-            val t = tab
-            if (kind in t.studies) return
-            when {
-                t.studies.isNotEmpty() -> t.setStudyAt(0, kind)
-                t.panels.size >= 2 -> {
-                    // The second panel makes way, unless the first is a sketch page beside Bible text.
-                    val other = if (Sketch.isSketch(t.panels[0].book) && !Sketch.isSketch(t.panels[1].book)) 0 else 1
-                    t.panels.removeAt(other)
-                    t.linked = false
-                    t.activePanel = 0
-                    t.addStudy(kind)
-                    t.studyFirst = other == 0
-                }
-                else -> { t.addStudy(kind); t.studyFirst = false }
+        val t = tab
+        if (kind in t.studies) return
+        when {
+            t.studies.isNotEmpty() -> t.setStudyAt(0, kind)
+            t.panels.size >= 2 -> {
+                // The second panel makes way, unless the first is a sketch page beside Bible text.
+                val other = if (Sketch.isSketch(t.panels[0].book) && !Sketch.isSketch(t.panels[1].book)) 0 else 1
+                t.panels.removeAt(other)
+                t.linked = false
+                t.activePanel = 0
+                t.addStudy(kind)
+                t.studyFirst = other == 0
             }
-            t.normalize()
+            else -> { t.addStudy(kind); t.studyFirst = false }
         }
+        t.normalize()
     }
 
     /** Closes study view [kind] in the tab in front. */
     fun closeStudy(kind: PaneKind) {
-        step {
-            val t = tab
-            t.studies.indexOf(kind).takeIf { it >= 0 }?.let { t.removeStudyAt(it) }
-            if (t.studies.isEmpty()) {
-                t.bibleHidden = false
-                t.pinned = null
-            }
-            t.normalize()
+        val t = tab
+        t.studies.indexOf(kind).takeIf { it >= 0 }?.let { t.removeStudyAt(it) }
+        if (t.studies.isEmpty()) {
+            t.bibleHidden = false
+            t.pinned = null
         }
+        t.normalize()
     }
 
     /** Closes the study views in the tab in front, leaving its Bible panel. */
@@ -1235,63 +1125,59 @@ class StudyViewModel(val host: Host) : ViewModel() {
 
     /** Turns the panel at [slot] into [view]: a study view, or (null) a Bible panel. */
     fun setSlotView(slot: Slot, view: PaneKind?) {
-        step {
-            val t = tab
-            when (slot) {
-                is Slot.Bible -> {
-                    if (view == null) return
-                    if (view in t.studies && view != PaneKind.COMMENTARY) { message = "${view.label} is already open in this tab."; return }
-                    if (t.panels.size >= 2) {
-                        t.panels.removeAt(slot.index)
-                        t.linked = false
-                        t.activePanel = 0
-                        t.addStudy(view)
-                        t.studyFirst = slot.index == 0
-                    } else {
-                        // The tab's only Bible panel: it stays, out of sight, keeping the passage.
-                        if (t.studies.isEmpty()) t.addStudy(view)
-                        else if (t.studyFirst) t.addStudy(view) else t.addStudy(view, at = 0)
-                        t.bibleHidden = true
-                    }
+        val t = tab
+        when (slot) {
+            is Slot.Bible -> {
+                if (view == null) return
+                if (view in t.studies && view != PaneKind.COMMENTARY) { message = "${view.label} is already open in this tab."; return }
+                if (t.panels.size >= 2) {
+                    t.panels.removeAt(slot.index)
+                    t.linked = false
+                    t.activePanel = 0
+                    t.addStudy(view)
+                    t.studyFirst = slot.index == 0
+                } else {
+                    // The tab's only Bible panel: it stays, out of sight, keeping the passage.
+                    if (t.studies.isEmpty()) t.addStudy(view)
+                    else if (t.studyFirst) t.addStudy(view) else t.addStudy(view, at = 0)
+                    t.bibleHidden = true
                 }
-                is Slot.Study -> {
-                    val i = slot.pos.takeIf { it in t.studies.indices && t.studies[it] == slot.kind } ?: t.studies.indexOf(slot.kind)
-                    if (i < 0) return
-                    if (view != null) {
-                        if (view in t.studies && view != PaneKind.COMMENTARY) { message = "${view.label} is already open in this tab."; return }
-                        t.setStudyAt(i, view)
+            }
+            is Slot.Study -> {
+                val i = slot.pos.takeIf { it in t.studies.indices && t.studies[it] == slot.kind } ?: t.studies.indexOf(slot.kind)
+                if (i < 0) return
+                if (view != null) {
+                    if (view in t.studies && view != PaneKind.COMMENTARY) { message = "${view.label} is already open in this tab."; return }
+                    t.setStudyAt(i, view)
+                } else {
+                    // Back to a Bible panel at the passage the study view was working with.
+                    t.removeStudyAt(i)
+                    if (t.bibleHidden) {
+                        t.bibleHidden = false
+                        t.studyFirst = i == 1
                     } else {
-                        // Back to a Bible panel at the passage the study view was working with.
-                        t.removeStudyAt(i)
-                        if (t.bibleHidden) {
-                            t.bibleHidden = false
-                            t.studyFirst = i == 1
-                        } else {
-                            val p = t.panels[t.activePanel.coerceIn(0, t.panels.lastIndex)]
-                            t.panels.add(if (i == 0 && t.studyFirst) 0 else t.panels.size, PanelState(p.book, p.chapter).apply { version = p.version })
-                            t.activePanel = if (t.studyFirst) 0 else t.panels.lastIndex
-                        }
+                        val p = t.panels[t.activePanel.coerceIn(0, t.panels.lastIndex)]
+                        t.panels.add(if (i == 0 && t.studyFirst) 0 else t.panels.size, PanelState(p.book, p.chapter).apply { version = p.version })
+                        t.activePanel = if (t.studyFirst) 0 else t.panels.lastIndex
                     }
                 }
             }
-            t.normalize()
         }
+        t.normalize()
     }
 
     /** Closes the panel at [slot]; the tab's last panel closes the tab (if there's another). */
     fun closeSlot(slot: Slot) {
-        step {
-            when (slot) {
-                is Slot.Bible -> closePanel(slot.index)
-                is Slot.Study -> {
-                    if (tab.shown == 1 && tabs.size > 1) closeTab(activeTab)
-                    else if (tab.shown > 1) {
-                        val t = tab
-                        val i = slot.pos.takeIf { it in t.studies.indices && t.studies[it] == slot.kind } ?: t.studies.indexOf(slot.kind)
-                        if (i >= 0) t.removeStudyAt(i)
-                        if (t.studies.isEmpty()) { t.bibleHidden = false; t.pinned = null }
-                        t.normalize()
-                    }
+        when (slot) {
+            is Slot.Bible -> closePanel(slot.index)
+            is Slot.Study -> {
+                if (tab.shown == 1 && tabs.size > 1) closeTab(activeTab)
+                else if (tab.shown > 1) {
+                    val t = tab
+                    val i = slot.pos.takeIf { it in t.studies.indices && t.studies[it] == slot.kind } ?: t.studies.indexOf(slot.kind)
+                    if (i >= 0) t.removeStudyAt(i)
+                    if (t.studies.isEmpty()) { t.bibleHidden = false; t.pinned = null }
+                    t.normalize()
                 }
             }
         }
@@ -1328,33 +1214,29 @@ class StudyViewModel(val host: Host) : ViewModel() {
 
     /** Opens a new tab after the one in front, on [book]:[chapter] (default: where you are). */
     fun newTab(book: Int? = null, chapter: Int = 1, verse: Int? = null, version: String? = null) {
-        step {
-            val from = panels.getOrNull(activePanel)
-            val t = TabState()
-            val p = PanelState(from?.book ?: 43, from?.chapter ?: 3).apply { this.version = version ?: from?.version ?: bible.code }
-            t.panels.add(p)
-            tabs.add(activeTab + 1, t)
-            selectTab(activeTab + 1)
-            if (book != null) jump(p, book, chapter, verse) else p.pendingVerse = from?.topVerse
-        }
+        val from = panels.getOrNull(activePanel)
+        val t = TabState()
+        val p = PanelState(from?.book ?: 43, from?.chapter ?: 3).apply { this.version = version ?: from?.version ?: bible.code }
+        t.panels.add(p)
+        tabs.add(activeTab + 1, t)
+        selectTab(activeTab + 1)
+        if (book != null) jump(p, book, chapter, verse) else p.pendingVerse = from?.topVerse
     }
 
     /** Opens the panel at [slot] in a new tab of its own (TAB-3). */
     fun openSlotInNewTab(slot: Slot) {
-        step {
-            when (slot) {
-                is Slot.Bible -> {
-                    val p = panels.getOrNull(slot.index) ?: return
-                    newTab(p.book, p.chapter, p.topVerse, p.version)
-                }
-                is Slot.Study -> {
-                    val from = tab
-                    val p = studyPanel()
-                    newTab(p.book, p.chapter, p.topVerse, p.version)
-                    tab.addStudy(slot.kind, commentary = from.commentaries.getOrElse(slot.pos) { "" })
-                    tab.bibleHidden = true
-                    tab.normalize()
-                }
+        when (slot) {
+            is Slot.Bible -> {
+                val p = panels.getOrNull(slot.index) ?: return
+                newTab(p.book, p.chapter, p.topVerse, p.version)
+            }
+            is Slot.Study -> {
+                val from = tab
+                val p = studyPanel()
+                newTab(p.book, p.chapter, p.topVerse, p.version)
+                tab.addStudy(slot.kind, commentary = from.commentaries.getOrElse(slot.pos) { "" })
+                tab.bibleHidden = true
+                tab.normalize()
             }
         }
     }
@@ -1362,24 +1244,20 @@ class StudyViewModel(val host: Host) : ViewModel() {
     fun selectTab(i: Int) {
         commentaryPos = null // a commentary scrolled in the old tab doesn't move the new one
         if (i !in tabs.indices || i == activeTab) { activeTab = i.coerceIn(0, tabs.lastIndex); return }
-        step {
-            selection = null
-            passagePop = null
-            linkPos = null
-            activeTab = i
-        }
+        selection = null
+        passagePop = null
+        linkPos = null
+        activeTab = i
     }
 
     fun closeTab(i: Int) {
-        step {
-            if (tabs.size <= 1 || i !in tabs.indices) return
-            selection = null
-            tabs.removeAt(i)
-            activeTab = when {
-                activeTab > i -> activeTab - 1
-                activeTab == i -> i.coerceAtMost(tabs.lastIndex)
-                else -> activeTab
-            }
+        if (tabs.size <= 1 || i !in tabs.indices) return
+        selection = null
+        tabs.removeAt(i)
+        activeTab = when {
+            activeTab > i -> activeTab - 1
+            activeTab == i -> i.coerceAtMost(tabs.lastIndex)
+            else -> activeTab
         }
     }
 
@@ -1416,15 +1294,13 @@ class StudyViewModel(val host: Host) : ViewModel() {
 
     /** Opens a saved layout: its tabs replace the open ones. */
     fun openWorkspace(w: Workspace) {
-        step {
-            val list = w.tabs(::validPlace).ifEmpty { return }
-            selection = null
-            passagePop = null
-            linkPos = null
-            tabs.clear()
-            tabs.addAll(list)
-            activeTab = w.active.coerceIn(0, tabs.lastIndex)
-        }
+        val list = w.tabs(::validPlace).ifEmpty { return }
+        selection = null
+        passagePop = null
+        linkPos = null
+        tabs.clear()
+        tabs.addAll(list)
+        activeTab = w.active.coerceIn(0, tabs.lastIndex)
     }
 
     fun deleteWorkspace(w: Workspace) {
@@ -1997,7 +1873,7 @@ class StudyViewModel(val host: Host) : ViewModel() {
     fun openChat() { if (chat.enabled && PaneKind.CHAT !in tab.studies) chatWindow = true }
 
     /** Moves the chat from its window into a panel beside the text. */
-    fun chatBeside() { chatWindow = false; step { showStudy(PaneKind.CHAT) } }
+    fun chatBeside() { chatWindow = false; showStudy(PaneKind.CHAT) }
 
     /** Adds Bible text to the next question and opens the chat (AI-6). */
     fun sendToChat(label: String, text: String) {
@@ -3073,25 +2949,23 @@ class StudyViewModel(val host: Host) : ViewModel() {
     }
 
     fun openPassage(p: Passage, from: Int, beside: Boolean) {
-        step {
-            passagePop = null
-            showBible()
-            var target = from.coerceIn(0, panels.lastIndex)
-            if (beside) {
-                if (panels.size == 1) {
-                    // The passage takes the tab's other panel (a study view makes way for it).
-                    tab.studies.lastOrNull()?.let { setSlotView(Slot.Study(it), null) } ?: addPanel()
-                    target = target.coerceIn(0, panels.lastIndex)
-                }
-                if (linkPanels) {
-                    linkPanels = false
-                    message = "Panels unlinked to show the passage beside."
-                }
-                target = panels.indices.firstOrNull { it != target } ?: target
+        passagePop = null
+        showBible()
+        var target = from.coerceIn(0, panels.lastIndex)
+        if (beside) {
+            if (panels.size == 1) {
+                // The passage takes the tab's other panel (a study view makes way for it).
+                tab.studies.lastOrNull()?.let { setSlotView(Slot.Study(it), null) } ?: addPanel()
+                target = target.coerceIn(0, panels.lastIndex)
             }
-            activePanel = target
-            goTo(target, p.book, p.chapter, p.verse)
+            if (linkPanels) {
+                linkPanels = false
+                message = "Panels unlinked to show the passage beside."
+            }
+            target = panels.indices.firstOrNull { it != target } ?: target
         }
+        activePanel = target
+        goTo(target, p.book, p.chapter, p.verse)
     }
 
     // ---------- book picker markers ----------

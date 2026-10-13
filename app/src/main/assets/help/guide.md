@@ -11,9 +11,9 @@ Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; 
 - **Next and previous chapter.** Tap the ‹ and › arrows beside the chapter name, or just keep scrolling: the next chapter follows on.
 - **Recently read.** Tap the chapter name, then *Recently read*. It lists the chapters you've read lately, newest first, with the verse you were at. Tap one to go straight back there. *Clear this list* empties it.
 - **Bookmarks.** Tap a verse, then *Bookmark*. A red ribbon shows beside it. To find your bookmarks, tap the chapter name, then *Bookmarks*. Tap one to go there, or × to take the bookmark off. Tapping *Bookmarked* in the verse's pop-up takes it off too.
-- **Back and forward.** The ← and → arrows at the far left of the toolbar take the whole screen back to how it was, one step at a time. That covers jumping to a passage, opening, closing or changing a panel, and opening, switching or closing a tab. Lost track of where you are? Tap ← until it looks familiar. → goes forward again. The tablet's Back gesture does the same as ←.
-- **Jump back several steps.** Hold ← (or →) for a list of the screens it goes to, such as *Psalms 23 and Commentary* or *Romans 8 · 2 tabs*. Tap one to go straight there.
-- **Start fresh.** In a muddle with panels and tabs? Tap the panel button at the top left of a panel, then *Start fresh*. You get one tab with one Bible panel, at the passage you're reading. ← brings everything back if you change your mind.
+- **Back and forward.** Each panel has its own ← at the far left of its header, once it has jumped somewhere (from the book picker, search, a link, a cross-reference, a note or a sketch page). Tap it to go back to where that panel was before; the other panel stays put. After going back, → takes you forward again. The chapter arrows and scrolling aren't jumps, so they don't add to it. The tablet's Back gesture goes back in the panel you're using.
+- **Jump back several steps.** Hold a panel's ← (or →) for a list of the passages it goes to, such as *Psalms 23:1* or *John 3:16*. Tap one to go straight there.
+- **Start fresh.** In a muddle with panels and tabs? Tap the panel button at the top left of a panel, then *Start fresh*. You get one tab with one Bible panel, at the passage you're reading. It asks first, because the tabs and panels it closes can't be brought back.
 - **Tabs remember where you were.** Switch to another tab and back, and each one is still scrolled to the same place.
 - **Zoom.** Pinch with two fingers. Double-tap with a finger to make the page fill the panel's width, and again to go back to your last zoom.
 - **Change the version.** Tap the version name (e.g. *KJV ▾*) and pick another. You stay on the same verse. Below your versions, *Online Bibles · tap to add* lists the ones you can read online (ESV, NIV, NLT and more): tap one and it's added and opened in one go. This list needs the internet.
@@ -36,7 +36,7 @@ Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; 
 - **The S Pen writes; fingers scroll, pinch and tap.** To draw with a finger too, turn on *Settings → Pen & ink → Draw with finger*. Then one finger draws and two fingers scroll and zoom. A quick tap with one finger still makes a dot.
 - **Your palm is ignored** while you write.
 - **Tools** along the toolbar: pen, highlighter, eraser, lasso and select. Tap the round colour button for colours and sizes. Ink always shows on the page: on the dark page the black pen writes in light ink, like the print, and dark colours (navy, purple, brown) show as lighter shades. Your ink keeps its colour, so it looks right again on a light page and on your other devices.
-![The toolbar: back and forward, read mode, pen, highlighter, eraser, lasso, select, colour, undo and redo, insert, search](toolbar.webp)
+![The toolbar: read mode, pen, highlighter, eraser, lasso, select, colour, undo and redo, insert, search](toolbar.webp)
 ![Tap the round colour button for colours and sizes](pen-colours.webp)
 - **S Pen button.** Hold the side button while the pen touches the page to erase, whatever tool is picked. *Settings → Pen & ink → S Pen button* can make it the lasso instead.
 - **Read mode.** The lock at the far left stops the pen marking the page; the pen then scrolls like a finger. Tap it again to write.
@@ -64,7 +64,7 @@ Ink & Word also runs on Windows, Mac and Linux computers, the same app in a wind
 - **The mouse is your pen.** Pick the pen, highlighter or another tool in the toolbar, then draw with the mouse or a drawing tablet. To read without drawing, tap the lock (read mode): then the mouse scrolls and taps like a finger.
 - **Scroll with the wheel** (or two fingers on a touchpad). Hold Shift to scroll sideways, Ctrl to zoom.
 - **Right-click on the words** to select them, as holding a finger still does on a tablet.
-- **Keyboard shortcuts:** Ctrl+Z undo, Ctrl+Y (or Ctrl+Shift+Z) redo, Ctrl+F search, Alt+← and Alt+→ Back and Forward. On a Mac use Cmd instead of Ctrl.
+- **Keyboard shortcuts:** Ctrl+Z undo, Ctrl+Y (or Ctrl+Shift+Z) redo, Ctrl+F search, Alt+← and Alt+→ Back and Forward in the panel you're using. On a Mac use Cmd instead of Ctrl.
 - **Any window size.** Make the window narrow and it uses the phone layout; wide, the tablet layout.
 - **Your notes** are kept in your user folder (Windows *%APPDATA%\Ink & Word*, Mac *~/Library/Application Support/Ink & Word*, Linux *~/.local/share/ink-and-word*). To bring your notes from a tablet, back them up there and restore the backup here (see *Export, backup and restore*). Sync with Google Drive isn't available on computers yet.
 - **Pictures** come from a file or the clipboard (*Insert → Picture*); there's no camera.
