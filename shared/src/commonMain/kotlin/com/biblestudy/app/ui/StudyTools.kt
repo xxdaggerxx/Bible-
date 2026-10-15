@@ -641,6 +641,7 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier, fixed: Stri
                     Text(when (info.id) {
                         com.biblestudy.app.data.Commentaries.AI -> "Written for this app. Each note names its sources."
                         com.biblestudy.app.data.Commentaries.REFLECTIONS -> "Written for this app. Each reflection names the devotionals it is drawn from."
+                        com.biblestudy.app.data.Commentaries.TYNDALE -> "CC BY-SA 4.0, Tyndale House Publishers."
                         else -> "Public domain."
                     }, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(top = 10.dp))
                 }

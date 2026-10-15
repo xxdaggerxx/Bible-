@@ -48,7 +48,14 @@ BUNDLED = {
     "mhcc": "Matthew Henry (Concise)", "mhc": "Matthew Henry", "jfb": "Jamieson-Fausset-Brown",
     "wesley": "Wesley", "geneva": "Geneva Notes", "barnes": "Barnes", "clarke": "Adam Clarke",
     "kd": "Keil & Delitzsch", "rwp": "Robertson", "calvin": "Calvin", "tdavid": "Spurgeon (Treasury of David)",
+    # Added for the 2.12 rewrite (VERSION 2): modern study notes, and Baptist, Methodist, Anglican, dispensational
+    # and Jewish-background voices.
+    "tyndale": "Tyndale Study Notes", "gill": "John Gill", "benson": "Benson", "ellicott": "Ellicott",
+    "scofield": "Scofield", "lightfoot": "Lightfoot",
 }
+VERSION = 2  # 1: the first run (11 commentaries); 2: the rewrite with Tyndale and five more
+NOTE_CHARS = 600  # each bundled note is cut to about this many characters, to keep the request small...
+NOTE_CHARS_FOR = {"tyndale": 2500}  # ...except Tyndale's modern notes, which are short and the newest source
 
 # The only sites the research step may search or read, by group.
 SITES = {
@@ -112,9 +119,20 @@ Each verse gets:
   that tradition's own terms, fairly, without saying who is right. Usually empty.
 - other: only where the sources give a well-known other view (modern scholarship, Catholic or Orthodox,
   popular modern teaching); one or two short sentences each, fairly, without a verdict. Usually empty.
+- A difference must be one between churches that is well known (as taught by that tradition's own teachers),
+  not one commentator disagreeing with another: never label a commentator's private opinion as a church's view.
 - Label views by the church tradition readers know, never by technical terms (not "cessationist",
   "continuationist", "paedobaptist") or by a teacher's name. If needed, explain the view in plain words:
   "Many evangelicals believe the gift of tongues ended with the apostles".
+
+Using the sources:
+- Tyndale Study Notes (2022) is the most recent and gives today's evangelical scholarship. Use it for history,
+  culture, places, dates, customs and the meaning of Hebrew and Greek words; where an older commentary
+  disagrees with it on such facts, follow Tyndale.
+- Draw on several sources, not mostly one. The older commentaries (Matthew Henry, Gill, Benson, Ellicott,
+  Calvin, Wesley and others) are best for what a verse teaches and how it applies.
+- Benson and Wesley (Methodist), Gill (Baptist), Calvin and Matthew Henry (Reformed), Scofield (dispensational)
+  can show where traditions differ, alongside the research notes.
 
 Sources: name a bundled commentary exactly as given in its heading (e.g. "Matthew Henry"), or give the
 URL of a web page from the research notes. Only cite a source that says what you wrote. Never use your
@@ -221,6 +239,9 @@ def commentary_dbs(work):
         if cid == "mhcc":
             continue
         path = os.path.join(work, f"{cid}.db")
+        if not os.path.exists(os.path.join(ASSETS, "commentaries", f"{cid}.db.xz")):
+            print(f"note: {cid} isn't built yet; left out", file=sys.stderr)
+            continue
         if not os.path.exists(path):
             with lzma.open(os.path.join(ASSETS, "commentaries", f"{cid}.db.xz")) as src, open(path + ".part", "wb") as dst:
                 dst.write(src.read())
@@ -234,6 +255,15 @@ def plain(body):
     return re.sub(r"\[\[[^|\]]*\|([^\]]*)\]\]", r"\1", body)
 
 
+def cut(text, cid=None):
+    """A long note shortened at a sentence end after about NOTE_CHARS characters."""
+    limit = NOTE_CHARS_FOR.get(cid, NOTE_CHARS)
+    if len(text) <= limit:
+        return text
+    stop = text.rfind(". ", 0, limit)
+    return text[:stop + 1 if stop > limit // 2 else limit] + " …"
+
+
 def part_notes(dbs, p):
     """{commentary id: [(start verse, end verse, text)]} for the notes touching the part (verse 0: introduction)."""
     book, ch, a, b = p
@@ -242,7 +272,7 @@ def part_notes(dbs, p):
     out = {}
     for cid, (db, table) in dbs.items():
         rows = db.execute(f"SELECT start, end, body FROM {table} WHERE start <= ? AND end >= ? ORDER BY start", (hi, lo)).fetchall()
-        notes = [(s - base if s >= base else 0, e - base if e <= base + 999 else 999, plain(body)) for s, e, body in rows]
+        notes = [(s - base if s >= base else 0, e - base if e <= base + 999 else 999, cut(plain(body), cid)) for s, e, body in rows]
         if notes:
             out[cid] = notes
     return out
@@ -422,11 +452,12 @@ class State:
             os.remove(path)
 
     def done(self, pid):
-        return os.path.exists(os.path.join(self.out, pid + ".json"))
+        path = os.path.join(self.out, pid + ".json")
+        return os.path.exists(path) and json.load(open(path)).get("version", 1) >= VERSION
 
     def finish(self, p, names, notes, problems):
         data = {"book": p[0], "chapter": p[1], "first": p[2], "last": p[3], "ref": ref_of(p, names),
-                "notes": notes, "problems": problems}
+                "notes": notes, "problems": problems, "version": VERSION}
         with open(os.path.join(self.out, part_id(p) + ".json"), "w") as f:
             json.dump(data, f, indent=1, ensure_ascii=False)
 
@@ -612,6 +643,7 @@ def cmd_openrouter(work, out, refs, workers=8):
     logf = open(os.path.join(out, "log.txt"), "a")
     todo = [p for p in select(refs) if not st.done(part_id(p))]
     print(f"{len(todo)} parts to do", flush=True)
+    commentary_dbs(work)  # unpack once, before the threads open them
 
     def log(line):
         with lock:

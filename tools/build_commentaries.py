@@ -3,9 +3,10 @@
 Sources: CrossWire SWORD modules (zCom / zCom4, KJV versification), downloaded and unzipped into a
 working folder, one folder per module:
     https://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/<Module>.zip
-Modules: MHC, JFB, Wesley, Geneva, Barnes, Clarke, KD, RWP, CalvinCommentaries, TDavid.
+Modules: MHC, JFB, Wesley, Geneva, Barnes, Clarke, KD, RWP, CalvinCommentaries, TDavid; from 2.12 also
+Scofield and Lightfoot. (Gill, Benson, Ellicott and Tyndale's study notes: build_extra_commentaries.py.)
 
-Usage: python3 build_commentaries.py <working folder> <assets/bibles/kjv.db> <output folder>
+Usage: python3 build_commentaries.py <working folder> <assets/bibles/kjv.db> <output folder> [module ...]
 
 Each commentary becomes a small SQLite database, compressed with xz (the app unpacks it the first time
 the commentary is opened):
@@ -27,9 +28,11 @@ import glob
 
 work, kjv, out = sys.argv[1:4]
 
-MODULES = ["MHC", "JFB", "Wesley", "Geneva", "Barnes", "Clarke", "KD", "RWP", "CalvinCommentaries", "TDavid"]
+MODULES = sys.argv[4:] or ["MHC", "JFB", "Wesley", "Geneva", "Barnes", "Clarke", "KD", "RWP", "CalvinCommentaries",
+                           "TDavid", "Scofield", "Lightfoot"]
 IDS = {"MHC": "mhc", "JFB": "jfb", "Wesley": "wesley", "Geneva": "geneva", "Barnes": "barnes", "Clarke": "clarke",
-       "KD": "kd", "RWP": "rwp", "CalvinCommentaries": "calvin", "TDavid": "tdavid"}
+       "KD": "kd", "RWP": "rwp", "CalvinCommentaries": "calvin", "TDavid": "tdavid", "Scofield": "scofield",
+       "Lightfoot": "lightfoot"}
 
 db = sqlite3.connect(kjv)
 VC = {}

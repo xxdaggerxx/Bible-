@@ -11,7 +11,8 @@ import okio.Path.Companion.toPath
  * @param id the asset name (assets/commentaries/<id>.db.xz); "mhcc" is Matthew Henry's Concise,
  *   which lives in study.db.
  * @param covers "Whole Bible", "Old Testament" or "New Testament", or a book.
- * @param testament null for the whole Bible, else 1 (OT) or 2 (NT): the books it has notes on.
+ * @param testament null for the whole Bible, else 1 (OT) or 2 (NT), 3 (Psalms) or 4 (the Gospels): the books it
+ *   has notes on.
  */
 data class CommentaryInfo(
     val id: String,
@@ -28,6 +29,7 @@ data class CommentaryInfo(
         null -> true
         1 -> book in 1..39
         2 -> book in 40..66
+        4 -> book in 40..43 // the Gospels (Lightfoot)
         else -> book == 19 // Psalms only (Treasury of David)
     }
 }
@@ -41,6 +43,7 @@ data class CommentaryInfo(
 object Commentaries {
     const val CONCISE = "mhcc"
     const val AI = "ai"
+    const val TYNDALE = "tyndale"
     /** Reflections (REF-1): stored like a commentary, but shown in a view of its own, not in the commentary menu. */
     const val REFLECTIONS = "reflections"
 
@@ -165,6 +168,62 @@ object Commentaries {
                 "Best for" to "A quick, simple explanation of a verse, and seeing where Christians read it differently. Check anything important against the other commentaries and the sources it names.",
             ),
         ),
+        // Added in 2.12. New commentaries go at the end: writing on a commentary is filed by its place here.
+        CommentaryInfo(
+            TYNDALE, "Tyndale Open Study Notes", "Tyndale Study Notes", "Tyndale House Publishers", "2022", "Whole Bible", null,
+            listOf(
+                "Who" to "Tyndale House Publishers, from the study notes written for the NLT Study Bible by a team of evangelical Bible scholars, released free for everyone in 2022.",
+                "What" to "Modern study notes on the whole Bible: what a passage means, its history and culture, the Hebrew and Greek behind key words, and how it links to the rest of Scripture. With an introduction to each book.",
+                "Best for" to "Up-to-date background and explanation in clear modern English: the most recent commentary in the app.",
+                "Approach" to "Evangelical, with current scholarship.",
+                "Licence" to "Copyright © 2022 Tyndale House Publishers. Licensed under CC BY-SA 4.0; free at tyndaleopenresources.com. Shown here unchanged apart from layout.",
+            ),
+        ),
+        CommentaryInfo(
+            "gill", "John Gill's Exposition of the Entire Bible", "John Gill", "John Gill", "1746–1763", "Whole Bible", null,
+            listOf(
+                "Who" to "John Gill (1697–1771), Baptist pastor in London for over fifty years (the church Spurgeon later led), and a scholar of Hebrew and the Jewish writings.",
+                "What" to "A full verse-by-verse exposition of the whole Bible, the first by a Baptist, drawing much on the Talmud and the rabbis for Jewish background.",
+                "Best for" to "Thorough study, and the Jewish background of a verse.",
+                "Approach" to "Reformed Baptist (strongly Calvinist).",
+            ),
+        ),
+        CommentaryInfo(
+            "benson", "Joseph Benson's Commentary", "Joseph Benson", "Joseph Benson", "1811–1818", "Whole Bible", null,
+            listOf(
+                "Who" to "Joseph Benson (1749–1821), an English Methodist preacher, friend of John Wesley and twice president of the Methodist Conference.",
+                "What" to "A commentary on the whole Bible, verse by verse, explaining the text and applying it, much used by Methodist preachers in the 1800s.",
+                "Best for" to "The Methodist (Wesleyan) reading of a passage, warm and practical.",
+                "Approach" to "Methodist, Arminian (free grace, holiness of heart and life).",
+            ),
+        ),
+        CommentaryInfo(
+            "ellicott", "Ellicott's Commentary for English Readers", "Ellicott", "Charles John Ellicott, editor", "1878–1884", "Whole Bible", null,
+            listOf(
+                "Who" to "Edited by Charles John Ellicott (1819–1905), Anglican Bishop of Gloucester and Bristol, with leading scholars of his day.",
+                "What" to "Written, as its title says, for readers without Hebrew or Greek: clear notes on the meaning, history and setting of each passage.",
+                "Best for" to "A readable, careful explanation for lay readers.",
+                "Approach" to "Anglican, evangelical and scholarly.",
+            ),
+        ),
+        CommentaryInfo(
+            "scofield", "Scofield Reference Notes (1917)", "Scofield", "Cyrus Ingerson Scofield", "1909, revised 1917", "Whole Bible", null,
+            listOf(
+                "Who" to "C. I. Scofield (1843–1921), an American Congregationalist pastor and Bible teacher.",
+                "What" to "The notes of the Scofield Reference Bible: short notes on key words and doctrines, and how the Bible's story and prophecy fit together.",
+                "Best for" to "Seeing the dispensational reading of prophecy and the end times, which shaped many Baptist, Pentecostal and Bible-church teachers.",
+                "Approach" to "Dispensational, evangelical.",
+            ),
+        ),
+        CommentaryInfo(
+            "lightfoot", "John Lightfoot's Hebrew and Talmudical Exercitations", "John Lightfoot", "John Lightfoot", "1658–1674", "The Gospels", 4,
+            listOf(
+                "Who" to "John Lightfoot (1602–1675), English minister and Cambridge scholar of Hebrew and the rabbis, a member of the Westminster Assembly.",
+                "What" to "Notes on the Gospels from the Talmud and other Jewish writings: the customs, places, sayings and beliefs of Jesus' day.",
+                "Best for" to "The Jewish background of the Gospels.",
+                "Approach" to "Puritan, Reformed.",
+            ),
+        ),
     )
 
     /**
@@ -188,7 +247,10 @@ object Commentaries {
     }
 
     /** Where a packed commentary is unpacked; the version changes when the bundled data does. */
-    private fun file(context: AppContext, id: String) = (context.filesDir / "commentaries/$id-v1.db")
+    private fun file(context: AppContext, id: String) = (context.filesDir / "commentaries/$id-v${VERSIONS[id] ?: 1}.db")
+
+    /** Bundled data that changed since it was first shipped; the old copy is unpacked again (2.12: the AI Commentary rewritten). */
+    private val VERSIONS = mapOf(AI to 2)
 
     fun isUnpacked(context: AppContext, id: String) = id == CONCISE || file(context, id).exists()
 
