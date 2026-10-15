@@ -1,4 +1,4 @@
-# Ink & Word — version 2.11.2
+# Ink & Word — version 2.12.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet, and since version 2.0 on Android phones too, drawing with a finger. Since version 2.10.3 it also runs on Windows, Mac and Linux computers.
 
@@ -75,6 +75,16 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 2.12.0
+
+- **Six more commentaries,** eighteen in all:
+  - **Tyndale Study Notes** (Tyndale House, 2022): modern evangelical study notes on the whole Bible, the notes behind the NLT Study Bible, with an introduction to each book. Free under CC BY-SA 4.0, shown unchanged.
+  - **John Gill** (Baptist, 1746–1763), **Joseph Benson** (Methodist, 1811–1818) and **Ellicott's Commentary for English Readers** (Anglican, 1878–1884), whole Bible, public domain, from Bible Hub.
+  - **Scofield Reference Notes** (1917, dispensational) and **John Lightfoot** on the Gospels (Jewish background, 1658–1674), public domain, from CrossWire.
+- **The Ink & Word AI Commentary rewritten** from all seventeen commentaries, using Tyndale's modern notes first for history, culture and word meanings; the older commentaries for what a verse teaches. Its main notes no longer lean mostly on Matthew Henry: Tyndale is now a source in half of them, and Gill, Ellicott and Benson are widely used. *Where Christians differ* no longer passes off one commentator's opinion as a church's view, keeps the earlier version's researched differences, and on about 75 of the best-known disputed verses (baptism, the Lord's Supper, tongues, women in ministry, election, the end times) gives the churches' own teaching, from sites such as the Southern Baptist Convention, United Methodist Church and Assemblies of God. Phones and tablets replace their copy of the AI Commentary the first time it opens.
+- Made by `tools/build_extra_commentaries.py` (Bible Hub and Tyndale), `tools/build_commentaries.py` (Scofield and Lightfoot) and `tools/build_ai_commentary.py` (VERSION 2: `openrouter`, then `carry` and `disputed`). The rewrite cost about $70 on OpenRouter.
+- Known gaps: Benson's and Ellicott's references aren't links; Lightfoot covers only the Gospels and only some verses; 26 AI notes have no source that passed the check (shown without one); a few disputed verses (such as Acts 19:6) still have no *Where Christians differ*. The app is about 25 MB larger.
 
 ## New in version 2.11.2
 
