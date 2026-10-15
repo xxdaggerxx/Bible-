@@ -2180,6 +2180,22 @@ class FeatureTest {
     }
 
     @Test
+    fun theSixCommentariesAddedIn212HaveNotes() {
+        // Tyndale, Gill, Benson, Ellicott, Scofield (whole Bible) and Lightfoot (the Gospels) are in the menu with notes.
+        val c = com.biblestudy.app.data.Commentaries
+        for (id in listOf(c.TYNDALE, "gill", "benson", "ellicott", "scofield", "lightfoot")) {
+            assertTrue("$id not in the menu", c.menu.any { it.id == id })
+            val john3 = c.chapter(vm.ctx, id, 43, 3)
+            assertTrue("$id has no notes on John 3", john3.count { it.start % 1000 > 0 } >= 3)
+        }
+        assertTrue(c.info("lightfoot").covers(43) && !c.info("lightfoot").covers(45))
+        assertTrue("Tyndale's book introduction", c.chapter(vm.ctx, c.TYNDALE, 43, 1).any { it.start == 43000000 })
+        // The AI Commentary is the first in the menu, and the new ones come after the older ones (writing on them is filed by place).
+        assertEquals(c.AI, c.menu.first().id)
+        assertEquals("lightfoot", c.all.last().id)
+    }
+
+    @Test
     fun reflectionsFollowTheReadingAndNameTheirDevotionals() {
         // Reflections (REF-1): a Study view of its own, on Psalm 23, each drawn from named devotionals.
         compose.runOnUiThread { vm.goTo(0, 19, 23, 1, remember = false); vm.sidePane = PaneKind.REFLECTIONS }
