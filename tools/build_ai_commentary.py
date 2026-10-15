@@ -862,11 +862,17 @@ DISPUTED = {
     "Revelation 7:4": "the 144,000",
 }
 
+# The churches' own statements of belief, searched in this pass as well as the trusted sites.
+CHURCH_SITES = ["sbc.net", "umc.org", "ag.org", "foursquare.org", "nazarene.org", "lcms.org", "pcaac.org", "anglicanchurch.net",
+                "churchofengland.org", "wesleyan.org", "elca.org", "opc.org"]
+
 DISPUTED_TASK = """{ref} is read differently by Protestant churches on {topic}. The verse (BSB): {text}
 
 Search the trusted sites for how the main traditions read this verse (Baptist, Methodist, Pentecostal and
 charismatic, Reformed and Presbyterian, Lutheran, Anglican, Holiness), from each tradition's own teachers or
-official teaching. Read the best pages. Then give, for each tradition with a distinct reading you found, one
+official teaching: for example the Southern Baptist Convention (sbc.net), the United Methodist Church (umc.org), the
+Assemblies of God (ag.org), Foursquare, the Church of the Nazarene, the Lutheran Church–Missouri Synod (lcms.org), the
+Presbyterian Church in America, the Anglican Church, and the teachers on the other sites. Read the best pages. Then give, for each tradition with a distinct reading you found, one
 or two plain sentences in that tradition's own terms, fairly and without saying who is right, with the URL of
 the page it comes from. Only traditions whose view you actually found; at least two if they differ.
 Never describe one writer's opinion as a church's view."""
@@ -905,19 +911,27 @@ def cmd_disputed(out, workers=6):
             "model": OR_WRITE, "max_tokens": 8000, "usage": {"include": True},
             "messages": [{"role": "system", "content": STYLE},
                          {"role": "user", "content": DISPUTED_TASK.format(ref=ref, topic=topic, text=text)}],
-            "tools": [{"type": "openrouter:web_search", "parameters": {"engine": "exa", "allowed_domains": DOMAINS,
-                                                                       "max_uses": 3, "max_results": 6}},
-                      {"type": "openrouter:web_fetch", "parameters": {"allowed_domains": DOMAINS, "max_uses": 4,
+            "tools": [{"type": "openrouter:web_search", "parameters": {"engine": "exa", "allowed_domains": DOMAINS + CHURCH_SITES,
+                                                                       "max_uses": 4, "max_results": 6}},
+                      {"type": "openrouter:web_fetch", "parameters": {"allowed_domains": DOMAINS + CHURCH_SITES, "max_uses": 5,
                                                                       "max_content_tokens": 5000}}],
-            "response_format": {"type": "json_schema", "json_schema": {"name": "differ", "strict": True,
-                                                                       "schema": DISPUTED_SCHEMA}},
         })
         msg = r["choices"][0]["message"]
         urls = {a["url_citation"]["url"].rstrip("/") for a in msg.get("annotations") or [] if a.get("type") == "url_citation"}
+        # With the web tools on, the model answers in prose; a second call (no tools) puts it into the fixed form.
+        r2 = openrouter({
+            "model": OR_WRITE, "max_tokens": 4000, "usage": {"include": True},
+            "messages": [{"role": "user", "content": "Put each church tradition's view below into the form asked for, "
+                          "keeping its wording and its URL. Leave out anything that has no URL or isn't a church tradition's "
+                          "view.\n\n" + (msg.get("content") or "")}],
+            "response_format": {"type": "json_schema", "json_schema": {"name": "differ", "strict": True,
+                                                                       "schema": DISPUTED_SCHEMA}},
+        })
         try:
-            found = json.loads(msg["content"])["differ"]
+            found = json.loads(r2["choices"][0]["message"]["content"])["differ"]
         except (json.JSONDecodeError, KeyError, TypeError):
             found = []
+        r["usage"]["cost"] = r["usage"].get("cost", 0) + r2["usage"].get("cost", 0)
         good = []
         for q in found:
             q["sources"] = [u for u in q["sources"] if u.rstrip("/") in urls]

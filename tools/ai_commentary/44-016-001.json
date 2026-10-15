@@ -367,12 +367,20 @@
    ],
    "differ": [
     {
-     "tradition": "Reformed and Presbyterian",
-     "view": "The baptism of the entire home shows God welcoming a believer's family into the visible covenant community.",
+     "tradition": "Lutheran",
+     "view": "The Lutheran Church–Missouri Synod teaches that a household naturally included the whole family, which in all likelihood included infants. In Lutheran teaching, baptism is a \"means of grace\" (a way God works through water and His word to forgive sins and create faith), so babies are gladly brought to baptism to receive God's promise.",
      "sources": [
-      "Matthew Henry"
+      "https://www.lcms.org/about/beliefs/faqs/doctrine"
      ],
-     "carried": true
+     "disputed": "household baptism"
+    },
+    {
+     "tradition": "Baptist",
+     "view": "Baptist teachers explain that the missionaries first preached the gospel to everyone in the home, and the whole family believed together before getting baptized. Because they practice \"believer's baptism\" (baptizing only people who can make a personal choice to trust in Jesus), they conclude that all who were baptized that night were old enough to understand and believe the message for themselves.",
+     "sources": [
+      "https://www.studylight.org/commentary/acts/16-33.html"
+     ],
+     "disputed": "household baptism"
     }
    ],
    "other": []

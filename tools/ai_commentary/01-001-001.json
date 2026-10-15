@@ -74,13 +74,20 @@
    ],
    "differ": [
     {
-     "tradition": "Some evangelicals",
-     "view": "Some hold that each day was a normal twenty-four-hour day, while others understand the word day to mean a long period of time.",
+     "tradition": "Lutheran",
+     "view": "The Lutheran Church—Missouri Synod officially teaches that God made the world in six normal, natural days. The church defines a natural day directly by the phrase \"evening and morning\" in Genesis 1:5, reading it as a literal 24-hour period.",
      "sources": [
-      "Benson",
-      "Scofield",
-      "Tyndale Study Notes"
-     ]
+      "https://reporter.lcms.org/2019/convention-confesses-god-created-the-world-in-six-natural-days/"
+     ],
+     "disputed": "the days of creation"
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "This tradition holds to the historic Westminster Confession of Faith (a classic statement of Christian beliefs), which states that God created the world \"in the space of six days.\" Its teachers read the phrase \"evening and morning\" as a straightforward cycle of 24-hour days that God set as the pattern for our normal work week.",
+     "sources": [
+      "https://www.opc.org/OS/html/V9/1d.html"
+     ],
+     "disputed": "the days of creation"
     }
    ],
    "other": []

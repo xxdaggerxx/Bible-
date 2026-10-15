@@ -158,7 +158,24 @@
     "Tyndale Study Notes",
     "Scofield"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The Reformed tradition teaches that Adam served as the covenant head (a chosen representative) for all humanity, so the guilt of his first sin was imputed (credited to the account of) every person at conception. Because of this, they read Romans 5:12 to mean that all people sinned in Adam and are born spiritually dead, guilty, and entirely corrupt by nature.",
+     "sources": [
+      "https://opc.org/qa.html?question_id=272"
+     ],
+     "disputed": "original sin"
+    },
+    {
+     "tradition": "Lutheran",
+     "view": "The Lutheran Church–Missouri Synod confesses that original sin is an inherited, deep corruption of human nature, meaning every child is born without true fear of God, without trust in God, and with concupiscence (an inborn urge to sin). They read the passage to mean that this inborn condition is not just a weakness but is real, damning sin that brings spiritual death, from which God delivers people through the Gospel and Holy Baptism.",
+     "sources": [
+      "https://resources.lcms.org/reading-study/formula-of-concord-study-articles-i-and-ii/"
+     ],
+     "disputed": "original sin"
+    }
+   ],
    "other": []
   },
   {

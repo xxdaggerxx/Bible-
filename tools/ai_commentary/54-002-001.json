@@ -59,20 +59,20 @@
    ],
    "differ": [
     {
-     "tradition": "Methodist",
-     "view": "God genuinely wants every single human being without exception to be saved, offering grace to all and forcing no one.",
+     "tradition": "Lutheran",
+     "view": "Lutherans teach that God sincerely wants every single human being to be saved and has predestined (chosen beforehand) no one to be lost. They teach that God saves believers by His grace (free gift of love) alone, yet truly desires all people to be saved; because human minds cannot fully figure out how both can be true, Lutherans let the two teachings stand together as a divine mystery.",
      "sources": [
-      "Wesley",
-      "Adam Clarke"
-     ]
+      "https://www.lcms.org/about/beliefs/faqs/doctrine"
+     ],
+     "disputed": "God's will that all be saved"
     },
     {
      "tradition": "Reformed and Presbyterian",
-     "view": "God's desire to save all people means all kinds or classes of people without distinction, including both rulers and subjects, rather than every individual person.",
+     "view": "Reformed teachers explain that \"everyone\" means all kinds of people—people from every nation, race, and social background, including rulers—rather than every single individual who has ever lived. In this view, God sovereignly chooses to give eternal life to His elect (His chosen people) out of every group, rather than intending to rescue every person in the world.",
      "sources": [
-      "Calvin",
-      "https://www.monergism.com/understanding-1-timothy-24"
-     ]
+      "https://learn.ligonier.org/devotionals/securing-our-faith-ii"
+     ],
+     "disputed": "God's will that all be saved"
     }
    ],
    "other": [
@@ -195,7 +195,24 @@
     "Barnes",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "The Southern Baptist Convention teaches that while men and women share equal worth before God, Scripture assigns them different roles in church life. Based on this passage, they believe the pastoral office—the role of a pastor or elder who preaches and oversees the congregation—is limited only to qualified men.",
+     "sources": [
+      "https://bfm.sbc.net/bfm2000/"
+     ],
+     "disputed": "women teaching and leading"
+    },
+    {
+     "tradition": "Pentecostal",
+     "view": "The Assemblies of God teaches that Paul was speaking to a temporary problem in the ancient city of Ephesus, where false teachings and disruptions were causing trouble in the church. They believe the Holy Spirit gives spiritual gifts to everyone, calling and releasing both women and men to preach, teach, and serve as pastoral leaders today.",
+     "sources": [
+      "https://ag.org/Beliefs/Position-Papers/Women-in-Ministerial-Leadership"
+     ],
+     "disputed": "women teaching and leading"
+    }
+   ],
    "other": []
   },
   {

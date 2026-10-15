@@ -199,7 +199,24 @@
     "Wesley",
     "Barnes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Lutheran",
+     "view": "Lutherans teach that baptism is a \"means of grace\"—an actual way God gives the Holy Spirit and forgives sins. Even so, they note that the end of Mark 16:16 blames only unbelief for condemnation, so lacking water does not by itself keep someone out of heaven if they have true faith in Christ.",
+     "sources": [
+      "https://www.lcms.org/about/beliefs/faqs/doctrine"
+     ],
+     "disputed": "baptism and salvation"
+    },
+    {
+     "tradition": "Baptist",
+     "view": "This evangelical Bible ministry explains that Mark 16:16 describes what normally happens to believers who are baptized, but it does not make baptism a requirement for heaven. Because the text never says that an unbaptized person is condemned, only personal trust in Jesus decides whether someone is saved.",
+     "sources": [
+      "https://www.gotquestions.org/baptism-Mark-16-16.html"
+     ],
+     "disputed": "baptism and salvation"
+    }
+   ],
    "other": []
   },
   {
