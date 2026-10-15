@@ -8,17 +8,17 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Paul urges that all kinds of prayers be offered for everyone in the world. These include requests in times of need, prayers for good things, intercessions (praying on behalf of other people), and thanksgiving for God's blessings. Setting this habit of prayer is a primary duty for the church.",
+   "meaning": "Paul begins his instructions on worship by urging believers to pray for all people. He mentions four kinds of prayer: asking for help in need, praying with deep devotion, speaking to God on behalf of others, and thanking Him. No group of people should be excluded from Christian prayers.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes",
-    "Wesley"
+    "Wesley",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "Praying for others is seen as a form of secondary mediation, where Christians share in the unique work of Christ by interceding in Him and through Him.",
+     "view": "Catholics view these prayers as a form of secondary mediation, where Christians share in the unique mediation of Jesus Christ by interceding for others.",
      "sources": [
       "https://www.catholic.com/magazine/print-edition/intercessory-power"
      ]
@@ -28,11 +28,11 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Christians are directed to pray specifically for kings and all civil leaders. Good government keeps public order and protects people, allowing believers to live peaceful and quiet lives. In this climate, they can freely practice godliness (honoring God) and honesty (living right toward their neighbors).",
+   "meaning": "Believers must especially pray for rulers and all officials who hold power in society. God uses government to maintain public safety, peace, and order. When society is tranquil, Christians can worship God freely and live lives of quiet honesty and dignity.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Barnes"
+    "Barnes",
+    "Wesley",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -40,11 +40,10 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "Praying for leaders and for all people is right and pleasing in the eyes of God our Savior. He delights when His people care about the good of everyone around them.",
+   "meaning": "Praying for all people pleases God our Savior. It brings joy to Him because it reflects His own merciful heart toward the world. When Christians pray widely, they align their desires with God's will.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke",
-    "Barnes"
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -52,24 +51,24 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "God desires all people to be rescued from sin and to come to the full knowledge of the truth found in the gospel. Because God cares for all humanity, believers ought to pray for the salvation of all people.",
+   "meaning": "God desires all people to be saved from sin and to come to the full knowledge of the gospel truth. He offers this good news freely to everyone rather than shutting out any nation or social class.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Barnes"
+    "Barnes",
+    "Tyndale Study Notes"
    ],
    "differ": [
     {
      "tradition": "Methodist",
-     "view": "God sincerely desires the eternal salvation of every single individual and provides grace for all, forcing no one.",
+     "view": "God genuinely wants every single human being without exception to be saved, offering grace to all and forcing no one.",
      "sources": [
       "Wesley",
-      "https://www.studylight.org/commentaries/eng/wen/1-timothy-2.html"
+      "Adam Clarke"
      ]
     },
     {
      "tradition": "Reformed and Presbyterian",
-     "view": "The phrase means God wills the salvation of all classes or kinds of people, including rulers, rather than every individual person.",
+     "view": "God's desire to save all people means all kinds or classes of people without distinction, including both rulers and subjects, rather than every individual person.",
      "sources": [
       "Calvin",
       "https://www.monergism.com/understanding-1-timothy-24"
@@ -79,7 +78,7 @@
    "other": [
     {
      "label": "Catholic",
-     "view": "God gives sufficient grace for every person to respond to the call of salvation, genuinely desiring the rescue of each human soul.",
+     "view": "God desires every individual person to be saved and gives sufficient grace to all people so they can respond to His call.",
      "sources": [
       "https://www.catholic.com/audio/cot/one-christian-truth-calvinists-cant-say"
      ]
@@ -89,17 +88,17 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "There is only one true God over all creation, and only one mediator—a go-between who reconciles two separated parties—namely, Jesus Christ. By becoming truly human, Jesus is able to represent all people before the Father and bring peace between them and God.",
+   "meaning": "There is only one God who made all people, and only one mediator between God and humanity. A mediator is a peacemaker who brings two opposing sides together. Jesus Christ took on human nature so He could stand in the gap and reconcile us to God.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Adam Clarke",
     "Barnes",
-    "Adam Clarke"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "Christ is the only Mediator of redemption in an absolute sense, while asking the saints to intercede is a subordinate form of prayer that depends entirely on Christ.",
+     "view": "Christ is the only mediator in an absolute sense, while asking Mary and the saints in heaven to intercede is a subordinate form of prayer that shares in Christ's work.",
      "sources": [
       "https://www.newadvent.org/cathen/08070a.htm",
       "https://www.catholic.com/tract/praying-to-the-saints"
@@ -110,9 +109,9 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "Jesus gave His own life as a ransom, a price paid to buy back captives from the power and penalty of sin. This great rescue was planned by God and revealed to the world at the exact time He chose.",
+   "meaning": "Jesus gave His own life as a ransom, paying the full price to free sinners from slavery to sin. Because of His divine dignity, His sacrifice was more than enough to cover all mankind. God announced this message of rescue to the world at the exact time He chose.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Wesley",
     "Jamieson-Fausset-Brown",
     "Adam Clarke"
    ],
@@ -122,7 +121,8 @@
      "view": "Christ died as an effective substitute to secure the actual redemption of His chosen people, rather than just making salvation a possibility for all.",
      "sources": [
       "https://www.monergism.com/understanding-1-timothy-24"
-     ]
+     ],
+     "carried": true
     }
    ],
    "other": []
@@ -130,9 +130,9 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "Paul affirms with complete truthfulness that God appointed him to be a herald and an apostle. His special mission was to teach Gentile (non-Jewish) nations the true Christian faith, proving that God's grace reaches out to everyone.",
+   "meaning": "Paul was appointed as a herald and apostle to declare this message of redemption to non-Jewish nations. He solemnly insists that he is telling the absolute truth about his calling. His special mission to the Gentiles proves that God's grace reaches all nations.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
     "Barnes",
     "Adam Clarke"
    ],
@@ -142,23 +142,35 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "Paul instructs men to lead in prayer wherever believers gather. Lifting up hands was a normal posture of prayer, but those hands must be holy, meaning pure from evil deeds. They must pray with calm, loving hearts, without anger or argumentative attitudes.",
+   "meaning": "Paul directs men to lead in public prayer wherever the church gathers. Raising hands was an ancient posture of prayer, showing pure hearts and lives clean from sin. Men must pray in genuine love, without anger toward others or arguments that hinder faith.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Barnes"
+    "Wesley",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 9,
-   "end": 10,
-   "meaning": "Women are encouraged to dress with modesty, decency, and good judgment, especially in public worship. They should not rely on flashy hairstyles, expensive gold, pearls, or lavish clothing to gain attention. Instead, the real beauty of a woman who professes to worship God is seen in a life filled with good deeds and kindness.",
+   "end": 9,
+   "meaning": "Christian women are told to dress in respectable, modest, and sensible clothing when gathering for worship. They should avoid extravagant hairstyles, gold, pearls, and costly garments meant to show off wealth. True Christian beauty begins with inner self-control rather than flashy outward displays.",
    "meaning_sources": [
     "Matthew Henry",
+    "Benson",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "The real adornment of a Christian woman is a life filled with good deeds. Loving acts of service and kindness bring true honor to God and fit someone who professes faith. Outward dress cannot replace the beauty of practical holiness.",
+   "meaning_sources": [
     "Barnes",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -166,11 +178,10 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "Women are told to receive instruction with a quiet spirit and respectful submission. Rather than causing disorder in the congregation, they are called to be learners who grow in Christian truth.",
+   "meaning": "Women in the congregation should learn with a quiet and respectful spirit. Rather than interrupting or trying to take charge, they are encouraged to receive sound biblical teaching. This attitude of peaceful submission shows respect for God's order in public worship.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Barnes"
+    "Barnes",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -178,11 +189,11 @@
   {
    "verse": 12,
    "end": 12,
-   "meaning": "Paul states that he does not permit a woman to teach publicly or to exercise authority over men in the church assembly. In the gathered body, she is to maintain a quiet and respectful posture.",
+   "meaning": "Paul forbids women from publicly teaching or exercising governing authority over men in the church assembly. Instead, they are called to maintain a quiet posture in the congregation. This command establishes God's design for spiritual leadership and order in church life.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Barnes"
+    "Geneva Notes",
+    "Barnes",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -190,11 +201,12 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "Paul grounds his instruction in the order of creation found in Genesis. God created Adam first and then created Eve to be his helper. This original sequence shows the leadership role God intended for men in the family and church.",
+   "meaning": "Paul points back to the story of creation in Genesis to support his instruction. God made Adam first out of the dust, and only later created Eve to be his companion and helper. This original order of creation establishes the pattern for leadership in the household of faith.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Geneva Notes",
     "Barnes",
-    "Adam Clarke"
+    "Tyndale Study Notes",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -202,9 +214,9 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "Paul points out that Satan tricked Eve directly, leading her into disobedience, while Adam was persuaded by his wife rather than deceived by the serpent. Because Eve was led astray first, her history provides another reason for women to accept a subordinate place in church leadership.",
+   "meaning": "Paul gives a second reason based on what happened at the fall. The serpent deceived Eve, and she broke God's command first, while Adam sinned knowingly rather than through deception. This historical event shows the danger of setting aside God's order of responsibility.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Wesley",
     "Jamieson-Fausset-Brown",
     "Barnes"
    ],
@@ -214,16 +226,23 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "Paul offers words of comfort to women, assuring them of God's favor and ultimate salvation despite the pain and danger brought on by the fall. As they embrace their calling and remain steadfast in faith, love, holiness, and self-restraint, God preserves and blesses them.",
+   "meaning": "Paul concludes with an encouraging promise that women will be saved through childbearing as they persevere in faith, love, and holiness. This does not mean earning salvation through motherhood, but experiencing God's preserving care amidst the hardships of family life. It also points ahead to the blessing of the Messiah, born of a woman to undo the curse of the fall.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Wesley"
+    "Wesley",
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes",
+    "Benson"
    ],
    "differ": [],
    "other": []
   }
  ],
- "problems": [],
+ "problems": [
+  "v. 3: removed sources ['Benson']",
+  "v. 4: removed sources ['Geneva Notes']",
+  "v. 11: removed sources ['Geneva Notes']",
+  "v. 12: removed sources ['Benson']"
+ ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

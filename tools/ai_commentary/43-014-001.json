@@ -414,7 +414,26 @@
     "Calvin",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "The Father is greater than Jesus as a man; as God, neither is greater or less than the other.",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Jesus is not comparing natures at all, but his humbled role as the go-between who leads us to God with the heavenly glory he was about to enter.",
+     "sources": [
+      "Calvin",
+      "Geneva Notes",
+      "Barnes"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Catholic",

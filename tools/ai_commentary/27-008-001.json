@@ -252,7 +252,16 @@
      ]
     }
    ],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic and Orthodox",
+     "view": "Early church fathers like Jerome taught that the events under Antiochus serve as a pattern and forerunner for what the final Antichrist will do at the end of history.",
+     "sources": [
+      "https://biblehub.com/commentaries/daniel/8-17.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 18,
@@ -288,7 +297,17 @@
     "Calvin"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many critical scholars view the ram as Media alone rather than a combined Medo-Persian empire, arguing the book of Daniel was written after the events in the second century BC.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/dcc/daniel-8.html",
+      "https://enduringword.com/bible-commentary/daniel-8/"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 21,
@@ -322,7 +341,25 @@
     "Jamieson-Fausset-Brown",
     "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Lutheran",
+     "view": "This ruler refers not only to Antiochus of old, but also points directly forward to the Antichrist.",
+     "sources": [
+      "https://www.blueletterbible.org/Comm/archives/guzik_david/StudyGuide2017-Dan/Dan-8.cfm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The prophecy strictly describes Antiochus Epiphanes, and applying it directly to the Antichrist stretches the plain meaning of the text.",
+     "sources": [
+      "Calvin",
+      "https://www.blueletterbible.org/Comm/archives/guzik_david/StudyGuide2017-Dan/Dan-8.cfm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

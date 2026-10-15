@@ -105,7 +105,17 @@
     "Wesley",
     "https://enduringword.com/bible-commentary/john-11/"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Jesus was about to raise Lazarus, so He was not crying over Lazarus' death. His tears were sorrow over sin and all the harm it brings.",
+     "sources": [
+      "https://www.studylight.org/commentary/john/11-35.html",
+      "https://bible.org/seriespage/exegetical-commentary-john-11"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -177,7 +187,24 @@
     "Barnes",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Jesus had already prayed, likely during His groaning, and here He thanks the Father for the answer. In this He shows Himself as the Father's servant.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "Jesus was not asking His Father for help. He acted as Lord of life and death, and thanked the Father for this chance to show His power and God's praise.",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

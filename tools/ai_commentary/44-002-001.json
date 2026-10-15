@@ -53,7 +53,25 @@
     "Tyndale Study Notes",
     "Wesley"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The visible, miraculous gifts like these have ceased, though the Spirit himself never leaves the church. Missionaries must now learn languages by careful study.",
+     "sources": [
+      "Calvin",
+      "Barnes"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Believers today can still seek and receive the same filling of the Spirit, even more than once, for bold witness. They should not expect wind or flames.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/acts-2/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -194,7 +212,17 @@
     "Calvin",
     "Wesley"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Pentecost was only a near or partial fulfilment of Joel. The complete fulfilment of these signs is still ahead, in a time of great trouble at the end of the age.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/acts-2/",
+      "https://www.preceptaustin.org/acts-2-commentary"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -233,7 +261,26 @@
     "Matthew Henry (Concise)",
     "Wesley"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "God did not merely foresee what happened to Christ but decreed it. His providence (his rule over all things) governs everything, even evil acts, yet he is never the author of evil.",
+     "sources": [
+      "Calvin",
+      "Barnes"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "God decreed that his Son would be the sacrifice, out of love for the world. But he only allowed, and did not order, the wicked means of Judas's betrayal and the people's malice.",
+     "sources": [
+      "Adam Clarke",
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

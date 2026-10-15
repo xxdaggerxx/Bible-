@@ -78,7 +78,16 @@
     "Jamieson-Fausset-Brown",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "God promises believers who remain single blessings and honors in Christ that surpass the earthly joys of marriage and parenthood.",
+     "sources": [
+      "https://www.desiringgod.org/messages/single-in-christ"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Catholic",

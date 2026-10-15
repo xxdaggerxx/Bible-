@@ -104,7 +104,17 @@
     "Adam Clarke",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Views the passing down of fathers' sins to children not as an inescapable curse, but as children repeating the rebellious sins of their parents against God.",
+     "sources": [
+      "https://www.desiringgod.org/articles/how-god-visits-sins-on-the-third-and-fourth-generation",
+      "https://www.desiringgod.org/interviews/can-my-life-be-plagued-by-generational-sins-hexes-or-curses"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Popular modern teaching",
@@ -125,8 +135,28 @@
     "Ellicott",
     "John Gill"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Views the passing down of fathers' sins to children not as an inescapable curse, but as children repeating the rebellious sins of their parents against God.",
+     "sources": [
+      "https://www.desiringgod.org/articles/how-god-visits-sins-on-the-third-and-fourth-generation",
+      "https://www.desiringgod.org/interviews/can-my-life-be-plagued-by-generational-sins-hexes-or-curses"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Popular modern teaching",
+     "view": "Teaches that ongoing problems such as poverty, illness, or repeated failures can be caused by inherited generational curses or family spirits that need to be broken.",
+     "sources": [
+      "https://www.gotquestions.org/hereditary-spirits.html",
+      "https://africa.thegospelcoalition.org/article/the-gospel-is-greater-than-your-family-history-and-parents-sins/"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 7,
@@ -182,7 +212,16 @@
      ]
     }
    ],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Numbers this as the third commandment, interpreting it as an obligation to keep the Lord's Day holy by attending Mass and resting from unnecessary work.",
+     "sources": [
+      "https://www.catholic.com/magazine/print-edition/the-true-ten-commandments"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 9,

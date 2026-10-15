@@ -26,22 +26,7 @@
     "John Gill",
     "Matthew Henry"
    ],
-   "differ": [
-    {
-     "tradition": "Baptist",
-     "view": "John Gill teaches that this was partly fulfilled under the Maccabees and will be fully fulfilled in the latter days when the Jewish people are converted and return to their land.",
-     "sources": [
-      "John Gill"
-     ]
-    },
-    {
-     "tradition": "Reformed and Presbyterian",
-     "view": "Calvin argues that Israel never held all of Ammon's land in later history, so the promise finds its true accomplishment under the spiritual kingdom of Christ.",
-     "sources": [
-      "Calvin"
-     ]
-    }
-   ],
+   "differ": [],
    "other": []
   },
   {
@@ -502,16 +487,18 @@
      "sources": [
       "https://studylight.org/commentaries/eng/dcc/jeremiah-49.html"
      ]
-    },
-    {
-     "tradition": "Methodist",
-     "view": "Adam Clarke suggests this promise was fulfilled spiritually when Elamites heard the gospel at Pentecost and were brought into the freedom of Christ.",
-     "sources": [
-      "Adam Clarke"
-     ]
     }
    ],
-   "other": []
+   "other": [
+    {
+     "label": "Popular modern teaching",
+     "view": "Some popular teachers point to rapid church growth and reported visions of Christ in modern Iran, ancient Elam, as a living fulfillment of this promise.",
+     "sources": [
+      "https://biblehub.com/q/Meaning_of_I_will_set_My_throne_in_Elam.htm"
+     ],
+     "carried": true
+    }
+   ]
   }
  ],
  "problems": [

@@ -8,11 +8,10 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "The Old Testament law was like a rough outline or shadow of the blessings to come, not the real thing itself. Because animal sacrifices had to be repeated every year on the Day of Atonement, they could never completely wash away guilt or make worshippers spiritually complete.",
+   "meaning": "The Old Testament law was like a pale shadow cast by a real object, not the full reality itself. Animal sacrifices had to be offered year after year on the Day of Atonement, which showed they could not completely remove sin. Because these offerings could not clear away guilt, they could never make the worshippers spiritually complete before God.",
    "meaning_sources": [
-    "Barnes",
-    "Calvin",
-    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes",
+    "Ellicott",
     "Matthew Henry"
    ],
    "differ": [
@@ -22,7 +21,8 @@
      "sources": [
       "Wesley",
       "https://biblehub.com/commentaries/wes/hebrews/10.htm"
-     ]
+     ],
+     "carried": true
     }
    ],
    "other": []
@@ -30,10 +30,11 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "If the old sacrifices had truly removed sin, people would not have needed to keep bringing them year after year. Once worshippers were fully cleansed, their consciences would be free from the burden and fear of God's wrath.",
+   "meaning": "If those ancient sacrifices had truly worked to remove sin, the priests would have stopped offering them. A person who is completely cleansed from sin no longer carries the dread of God's judgment on their conscience. Having to repeat the offerings proved that the problem of human guilt was still not solved.",
    "meaning_sources": [
-    "Barnes",
-    "Matthew Henry"
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
+    "Barnes"
    ],
    "differ": [
     {
@@ -42,7 +43,8 @@
      "sources": [
       "Wesley",
       "https://biblehub.com/commentaries/wes/hebrews/10.htm"
-     ]
+     ],
+     "carried": true
     }
    ],
    "other": []
@@ -50,11 +52,11 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "Instead of removing sins forever, the yearly Day of Atonement served as an annual reminder of sin. Each year the high priest had to confess the people's failures again, showing that past offerings had not finished the work.",
+   "meaning": "Repeating the sacrifices every year served as an ongoing reminder of sin rather than a cure. When the high priest confessed the nation's wrongs each year, it showed that the previous year's offerings had not wiped away the debt. The rituals kept bringing people's guilt back to light instead of taking it away.",
    "meaning_sources": [
-    "Barnes",
+    "Tyndale Study Notes",
     "Jamieson-Fausset-Brown",
-    "Wesley"
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -62,12 +64,11 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "The blood of slain bulls and goats has no real power to wipe out human moral guilt before God. Animal sacrifices only served as a temporary picture pointing forward to the true, living Savior who would offer Himself.",
+   "meaning": "Animal blood simply does not have the power to wipe out human sin against God. Sacrifices of bulls and goats were only temporary pictures of the cost of disobedience. They could never satisfy divine justice or bring lasting peace to a troubled conscience.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Barnes",
-    "Calvin",
-    "Matthew Henry",
-    "Adam Clarke"
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -75,38 +76,23 @@
   {
    "verse": 5,
    "end": 7,
-   "meaning": "Quoting Psalm 40, the writer shows that God never found final satisfaction in animal offerings, but instead prepared a human body for His Son. Jesus willingly entered the world to obey the Father completely and to fulfill what Scripture had long promised about Him.",
+   "meaning": "When Jesus came into the world as a man, He fulfilled the ancient prophecy found in the Psalms. God was never truly satisfied with animal blood, so He gave Christ a human body to offer as a willing sacrifice. Jesus came ready and glad to obey the Father's plan of salvation recorded in the Scriptures.",
    "meaning_sources": [
-    "Barnes",
-    "Calvin",
-    "Jamieson-Fausset-Brown",
-    "Matthew Henry"
+    "Tyndale Study Notes",
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 8,
-   "end": 9,
-   "meaning": "Scripture first states that ritual offerings under the law did not truly satisfy God's deepest requirement, and then Christ announces that He has come to do God's will. By doing this, Jesus cancels the old system of animal sacrifices in order to set up His own lasting priesthood.",
-   "meaning_sources": [
-    "Calvin",
-    "Jamieson-Fausset-Brown",
-    "Matthew Henry",
-    "Robertson"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 10,
    "end": 10,
-   "meaning": "Because Jesus carried out the Father's plan by offering His own body on the cross, believers are sanctified, or set apart as holy to God. This sacred cleansing was accomplished once for all time and never needs to be done again.",
+   "meaning": "Christ set aside the old system of animal offerings to establish God's greater plan. By willingly offering His own human body on the cross once for all time, Jesus made believers holy—cleansed from guilt and set apart for God forever. Because His sacrifice was completely finished, no other offering will ever be required.",
    "meaning_sources": [
-    "Barnes",
+    "Tyndale Study Notes",
     "Calvin",
-    "Jamieson-Fausset-Brown",
-    "Matthew Henry"
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [
     {
@@ -114,7 +100,8 @@
      "view": "Baptists hold that Christ's offering on the cross was finished once for all time, meaning the Lord's Supper is strictly a memorial and not any kind of repeated sacrifice.",
      "sources": [
       "https://www.gty.org/library/sermons-library/80-123/The-Sufficiency-of-Christs-Sacrifice"
-     ]
+     ],
+     "carried": true
     }
    ],
    "other": [
@@ -124,19 +111,19 @@
      "sources": [
       "https://www.catholic.com/magazine/print-edition/once-for-all",
       "https://www.catholic.com/magazine/print-edition/is-the-mass-a-true-sacrifice"
-     ]
+     ],
+     "carried": true
     }
    ]
   },
   {
    "verse": 11,
    "end": 11,
-   "meaning": "Old Testament priests had to stand every day at the altar, performing the exact same ceremonies over and over. Their repeated service proved that animal blood could never truly wipe away the guilt of sin.",
+   "meaning": "Earthly priests stood daily at the altar, performing the same rituals again and again because their work was never finished. Their standing posture showed they were humble servants whose duties never ceased. Yet despite all their repeated efforts, those animal sacrifices could never take away human sin.",
    "meaning_sources": [
-    "Barnes",
     "Matthew Henry",
-    "Adam Clarke",
-    "Robertson"
+    "Wesley",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -144,12 +131,11 @@
   {
    "verse": 12,
    "end": 13,
-   "meaning": "In contrast to the priests who remained standing, Jesus sat down in the seat of highest honor at God's right hand after offering one single sacrifice for sins. Sitting down signifies that His atoning work is complete, and He now rests with the assurance that all His enemies will eventually be subdued under His feet.",
+   "meaning": "Unlike earthly priests, Jesus sat down at God's right hand after offering one single sacrifice for sins for all time. Sitting down shows that His priestly work of atonement is fully accomplished. He now waits in supreme honor until every opposing enemy is brought under His feet.",
    "meaning_sources": [
-    "Barnes",
-    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes",
     "Matthew Henry",
-    "Wesley"
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -157,11 +143,10 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "Through that single offering on the cross, Christ has forever completed everything needed to reconcile His people to God. Believers are fully accepted in their standing before God, even as they are continuously being made holy in daily life.",
+   "meaning": "By a single offering on the cross, Jesus fully reconciled believers to God for all time. This one sacrifice gives believers a complete and permanent standing of pardon before God. At the same time, His grace continues to work in them to make them more like Him in daily life.",
    "meaning_sources": [
-    "Barnes",
     "Jamieson-Fausset-Brown",
-    "Matthew Henry",
+    "Barnes",
     "Wesley"
    ],
    "differ": [],
@@ -171,19 +156,19 @@
      "view": "Catholics explain that the phrase 'those who are being sanctified' shows salvation is an ongoing process, so the benefits of Christ's sacrifice are continually applied to believers through the sacraments.",
      "sources": [
       "https://www.catholic.com/audio/drk/is-the-mass-the-same-sacrifice-as-calvary-a-response-to-james-white"
-     ]
+     ],
+     "carried": true
     }
    ]
   },
   {
    "verse": 15,
    "end": 17,
-   "meaning": "The Holy Spirit confirms this truth through the words of the prophet Jeremiah about the new covenant. In this new arrangement, God writes His laws on the hearts and minds of His people, and He promises never again to hold their sins against them.",
+   "meaning": "The Holy Spirit confirms this truth through the words of the prophet Jeremiah about the new covenant. In this covenant, God places His laws directly on human hearts and minds. He also gives a wonderful promise never again to hold the sins and rebellious acts of His people against them.",
    "meaning_sources": [
-    "Barnes",
-    "Calvin",
-    "Jamieson-Fausset-Brown",
-    "Matthew Henry"
+    "Tyndale Study Notes",
+    "Matthew Henry",
+    "Barnes"
    ],
    "differ": [],
    "other": []
@@ -191,11 +176,11 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "Where sins are completely forgiven and blotted out, no more offerings for sin are ever needed. Christ's death settled the debt entirely, so animal rituals and any further sin offerings are finished forever.",
+   "meaning": "When sins are fully forgiven and blotted out, no further offering for sin is ever needed. The old sacrificial system has come to an end because Jesus paid the entire debt in full. Believers can rest completely in the pardon Christ has already secured.",
    "meaning_sources": [
-    "Barnes",
+    "Tyndale Study Notes",
     "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Barnes"
    ],
    "differ": [],
    "other": [
@@ -204,43 +189,17 @@
      "view": "Catholics maintain that because Christ won complete forgiveness on the cross, the Church does not offer a new sacrifice for sin, but re-presents the one finished offering of Calvary in the Eucharist.",
      "sources": [
       "https://www.catholic.com/qa/why-the-mass-when-theres-no-need-for-sin-offering"
-     ]
+     ],
+     "carried": true
     }
    ]
   },
   {
    "verse": 19,
-   "end": 21,
-   "meaning": "Because Jesus shed His blood, believers now have bold, free access to God's presence, the heavenly holy place. Christ opened this fresh, life-giving way through the veil of His human body, and He rules forever as our great Priest over God's household.",
+   "end": 20,
+   "meaning": "Believers now have bold, free access to enter God's heavenly presence because of the blood Jesus shed. Jesus opened a fresh and living way through the curtain into the Most Holy Place. Just as the physical temple curtain was torn open, His human body was offered on the cross so we could draw near to God.",
    "meaning_sources": [
-    "Barnes",
-    "Calvin",
-    "Jamieson-Fausset-Brown",
-    "Matthew Henry"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 22,
-   "end": 22,
-   "meaning": "Believers are urged to come near to God with an honest, sincere heart and firm trust in Him. Our inner conscience is cleansed from guilt by Christ's blood, and our outward lives are washed and set apart for His service.",
-   "meaning_sources": [
-    "Barnes",
-    "Calvin",
-    "Jamieson-Fausset-Brown",
-    "Matthew Henry"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 23,
-   "end": 23,
-   "meaning": "Christians must hold tightly to the hope they openly declared when they turned to Christ, without wavering or giving in to doubt. We can be completely confident because God always keeps every promise He makes.",
-   "meaning_sources": [
-    "Barnes",
-    "Calvin",
+    "Tyndale Study Notes",
     "Matthew Henry",
     "Wesley"
    ],
@@ -248,14 +207,49 @@
    "other": []
   },
   {
+   "verse": 21,
+   "end": 21,
+   "meaning": "Christians have a great High Priest who watches over the house of God, which is His church and family. Because He is both our priest and our king, we can trust Him completely to guide and protect us. He represents us before the Father and always welcomes us when we come to Him.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Barnes",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 22,
+   "end": 22,
+   "meaning": "Believers are urged to come near to God in prayer and worship with honest hearts and full confidence in Christ. His blood cleanses our inner thoughts from a guilty conscience, freeing us from condemnation. Having our bodies washed with pure water points to an outward life made clean and dedicated to God.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 23,
+   "end": 23,
+   "meaning": "Christians must hold firmly to the public confession of their faith and hope without giving in to doubt or fear. Persecution and hardship should not shake our trust in what God has said. We can stay completely steady because God, who made the promises, is entirely faithful and never breaks His word.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Barnes",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
    "verse": 24,
    "end": 24,
-   "meaning": "Church members should pay close attention to each other and think about each other's needs. Instead of provoking one another to anger or jealousy, believers are called to stir one another up to love and helpful deeds.",
+   "meaning": "Believers are called to pay close attention to the needs, trials, and strengths of their fellow Christians. Instead of living selfishly, we should look for ways to help and support one another. Taking an active interest in our brothers and sisters inspires everyone to show more love and do good deeds.",
    "meaning_sources": [
-    "Barnes",
-    "Calvin",
     "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Barnes",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -263,10 +257,9 @@
   {
    "verse": 25,
    "end": 25,
-   "meaning": "Believers must not stop gathering together for worship and fellowship, as some had begun doing out of fear or spiritual carelessness. Meeting together gives regular opportunity to encourage one another, which becomes more urgent as the day of Christ's return and judgment draws near.",
+   "meaning": "Christians must not stop meeting together for worship and fellowship, even if some have formed a bad habit of staying away. Being together in community gives believers the chance to encourage each other to keep following the Lord. This encouragement is needed even more as the great day of Christ's return draws closer.",
    "meaning_sources": [
-    "Barnes",
-    "Calvin",
+    "Tyndale Study Notes",
     "Jamieson-Fausset-Brown",
     "Matthew Henry"
    ],
@@ -276,27 +269,27 @@
   {
    "verse": 26,
    "end": 27,
-   "meaning": "If someone knows the gospel truth and still chooses to deliberately turn away and reject Christ, there is no other sacrifice anywhere that can take away their sins. Renouncing the only Savior leaves a person with nothing to expect except terrifying judgment and God's consuming wrath against His enemies.",
+   "meaning": "Deliberately turning away from Christ and continuing in stubborn rebellion after knowing the gospel leaves a person without hope. Because Jesus is God's only sacrifice for sins, anyone who abandons Him has no other way to be saved. For such enemies of God, nothing remains but the terrifying expectation of final, consuming judgment.",
    "meaning_sources": [
-    "Barnes",
-    "Calvin",
-    "Jamieson-Fausset-Brown",
-    "Matthew Henry"
+    "Tyndale Study Notes",
+    "Matthew Henry",
+    "Ellicott"
    ],
    "differ": [
     {
      "tradition": "Reformed and Presbyterian",
-     "view": "Reformed Christians believe true believers can never lose their salvation; they understand this passage as a warning that those who commit total apostasy show they were never truly born again.",
+     "view": "True believers are kept by God and cannot lose their salvation; this warning shows that those who totally fall away had knowledge of the truth but never had genuine saving faith.",
      "sources": [
-      "https://www.preceptaustin.org/hebrews_1026-27"
+      "Calvin",
+      "Matthew Henry"
      ]
     },
     {
      "tradition": "Methodist",
-     "view": "Methodists teach that genuine Christians who have truly known God's grace can commit deliberate apostasy, making shipwreck of their faith and being eternally lost.",
+     "view": "True Christians who have experienced the saving knowledge of the gospel can choose to turn away completely and forfeit their salvation through wilful rebellion.",
      "sources": [
       "Wesley",
-      "https://biblehub.com/commentaries/wes/hebrews/10.htm"
+      "Benson"
      ]
     }
    ],
@@ -306,48 +299,34 @@
      "view": "Catholics teach that these verses prove future sins are not automatically forgiven ahead of time, and that a believer who commits mortal sin can forfeit salvation.",
      "sources": [
       "https://www.catholic.com/audio/are-your-future-sins-forgiven"
-     ]
+     ],
+     "carried": true
     }
    ]
   },
   {
    "verse": 28,
-   "end": 28,
-   "meaning": "Under the law of Moses, anyone who openly threw off God's covenant and turned to idols was put to death without mercy once two or three witnesses confirmed the crime. God's ancient law demanded strict justice to guard the holiness of His covenant.",
-   "meaning_sources": [
-    "Barnes",
-    "Calvin",
-    "Jamieson-Fausset-Brown",
-    "Matthew Henry"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 29,
    "end": 29,
-   "meaning": "Rejecting the gospel is far worse than breaking Moses' law because it treats God's own Son with contempt. An apostate treats Christ's covenant blood as cheap or unholy and deeply insults the Holy Spirit who offers God's free grace.",
+   "meaning": "Under the law of Moses, anyone who openly rejected God's commands and turned to idols was put to death without mercy on the word of two or three witnesses. A much heavier, eternal punishment awaits someone who treats God's Son with contempt. Such a person scorns the holy blood of the new covenant and insults the Spirit of grace.",
    "meaning_sources": [
-    "Barnes",
-    "Calvin",
-    "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Barnes"
    ],
    "differ": [
     {
      "tradition": "Reformed and Presbyterian",
-     "view": "Reformed teachers argue that the phrase 'wherewith he was sanctified' refers either to Christ being set apart, or to an outward, visible dedication in the church rather than inward regeneration.",
+     "view": "The one sanctified refers either to Christ being consecrated to His priestly work or to an outward setting apart in the visible church rather than inward new birth.",
      "sources": [
-      "https://www.preceptaustin.org/hebrews_1026-27",
-      "https://biblehub.com/commentaries/hebrews/10-29.htm"
+      "John Gill",
+      "Matthew Henry"
      ]
     },
     {
      "tradition": "Methodist",
-     "view": "Methodists teach that the person described was genuinely justified and sanctified by Christ's blood before willfully abandoning the faith.",
+     "view": "The text means that the apostate himself had been truly justified and sanctified by Christ's blood before turning back to destruction.",
      "sources": [
-      "Wesley",
-      "https://biblehub.com/commentaries/wes/hebrews/10.htm"
+      "Wesley"
      ]
     }
    ],
@@ -355,11 +334,10 @@
   },
   {
    "verse": 30,
-   "end": 30,
-   "meaning": "God made it clear in Scripture that vengeance belongs strictly to Him and that He will repay wrongdoing. He also warned that He will thoroughly judge His own people, examining the hearts of all who claim to belong to His assembly.",
+   "end": 31,
+   "meaning": "Scripture reminds us that God Himself promises to repay wrong and judge His people with strict fairness. While falling into God's caring hands brings comfort to a humble child, facing Him as an unrepentant rebel brings sheer terror. It is a dreadful thing to stand before the living God when His anger is stirred against sin.",
    "meaning_sources": [
-    "Barnes",
-    "Calvin",
+    "Tyndale Study Notes",
     "Jamieson-Fausset-Brown",
     "Matthew Henry"
    ],
@@ -367,26 +345,25 @@
    "other": []
   },
   {
-   "verse": 31,
-   "end": 31,
-   "meaning": "It is a terrifying thing to face the judgment of the living God as an enemy after spurning His mercy. While earthly rulers can only harm the body, the eternal God lives forever and exercises complete and unending justice.",
+   "verse": 32,
+   "end": 32,
+   "meaning": "The writer reminds the believers of their early days right after they first came to the light of Christ. Back then, they faced painful trials and fierce opposition because of their faith. Even though the suffering was intense, like a hard athletic contest, they stood firm and did not run away.",
    "meaning_sources": [
-    "Barnes",
-    "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
   },
   {
-   "verse": 32,
+   "verse": 33,
    "end": 33,
-   "meaning": "The readers are told to look back on the early days right after they first received the light of Christ. Even when they faced painful hardships, were publicly mocked like actors on a stage, and stood faithfully with other suffering Christians, they did not give up.",
+   "meaning": "Their suffering took several forms in the face of persecution. At times they were put on public display to be insulted, mocked, and mistreated like actors on a public stage. At other times, they chose to stand side-by-side with fellow Christians who were going through the very same misery.",
    "meaning_sources": [
-    "Barnes",
-    "Calvin",
-    "Matthew Henry",
-    "Adam Clarke"
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
+    "Barnes"
    ],
    "differ": [],
    "other": []
@@ -394,73 +371,51 @@
   {
    "verse": 34,
    "end": 34,
-   "meaning": "These believers showed deep compassion by visiting and helping prisoners, and they even accepted the looting of their own possessions with joy. They could endure earthly loss gladly because they knew they owned a far better, permanent treasure waiting for them in heaven.",
+   "meaning": "These believers showed deep compassion by visiting and helping those who were locked in prison for their faith. When their own possessions and property were seized by hostile authorities, they accepted the loss with real joy. They could endure earthly poverty because they knew they had a permanent, far greater treasure waiting in heaven.",
    "meaning_sources": [
-    "Barnes",
-    "Calvin",
-    "Jamieson-Fausset-Brown",
-    "Matthew Henry"
+    "Tyndale Study Notes",
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 35,
-   "end": 35,
-   "meaning": "Since they had stood firm before, they are urged not to throw away their bold confidence in Christ now like a cowardly soldier discarding his shield. Holding onto faith brings peace now and carries a great, eternal reward from God.",
-   "meaning_sources": [
-    "Barnes",
-    "Calvin",
-    "Matthew Henry",
-    "Adam Clarke"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 36,
    "end": 36,
-   "meaning": "Believers need patient endurance to keep obeying God through ongoing trials and hardships. Only by standing true and doing God's will to the end will we receive the fullness of eternal life that He has promised.",
+   "meaning": "Believers must never throw away their bold confidence, like cowardly soldiers tossing aside their shields in the heat of battle. Remaining patient under trial is necessary so we can continue doing God's will until the end. Those who endure faithfully will receive the great eternal reward He has promised.",
    "meaning_sources": [
-    "Barnes",
-    "Calvin",
-    "Matthew Henry",
-    "Wesley"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Barnes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 37,
-   "end": 37,
-   "meaning": "The writer reminds them from the Old Testament that their current trial will last only a little while longer. The Messiah is on His way to rescue His people and bring justice, and He will arrive right on time.",
-   "meaning_sources": [
-    "Barnes",
-    "Calvin",
-    "Jamieson-Fausset-Brown",
-    "Matthew Henry"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 38,
    "end": 38,
-   "meaning": "God's righteous people are called to live day by day through steadfast trust in Him. But if anyone cowardly shrinks back from following the Lord out of fear or unbelief, God takes no pleasure in that person.",
+   "meaning": "In just a very little while, Christ will come as promised to bring final deliverance to His people. True believers must live each day by steady trust in God, resting on His promises through every hardship. God warns that He takes no pleasure in anyone who turns back in fear and gives up on Him.",
    "meaning_sources": [
-    "Barnes",
-    "Calvin",
-    "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Barnes"
    ],
    "differ": [
     {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Those who are truly righteous by faith will never shrink back to destruction, because God keeps them secure to the very end.",
+     "sources": [
+      "Calvin",
+      "Matthew Henry"
+     ]
+    },
+    {
      "tradition": "Methodist",
-     "view": "Methodists understand this verse to show that a justified person lives only so long as they retain their faith, and that a believer who draws back can fall into God's displeasure and be lost.",
+     "view": "A person who is justified lives spiritually by faith, but can shrink back, lose that gift of faith, and forfeit God's favor.",
      "sources": [
       "Wesley",
-      "Adam Clarke",
-      "https://biblehub.com/commentaries/wes/hebrews/10.htm"
+      "Benson"
      ]
     }
    ],
@@ -469,22 +424,23 @@
   {
    "verse": 39,
    "end": 39,
-   "meaning": "The chapter finishes with strong confidence that true believers will not turn back into destruction. Instead, they belong to the company of those who remain faithful to Christ and preserve their souls for eternal salvation.",
+   "meaning": "The chapter closes with warm, hopeful words about the true family of faith. Believers are not cowards who turn back from following Christ into eternal ruin. Instead, they are people who cling to faith in Jesus, preserving and saving their souls for all eternity.",
    "meaning_sources": [
-    "Barnes",
-    "Calvin",
+    "Tyndale Study Notes",
     "Jamieson-Fausset-Brown",
-    "Matthew Henry",
-    "Wesley"
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 2: removed sources ['Calvin']",
-  "v. 18: removed sources ['Calvin']",
-  "v. 31: removed sources ['Calvin']"
+  "v. 8: dropped other point (Catholic): no checkable source",
+  "v. 8: removed sources ['Council of Trent in research notes']",
+  "v. 18: dropped other point (Catholic): no checkable source",
+  "v. 18: removed sources ['Catholic.com in research notes']",
+  "v. 28: removed sources ['Clarke']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

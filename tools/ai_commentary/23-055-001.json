@@ -17,13 +17,6 @@
    ],
    "differ": [
     {
-     "tradition": "Reformed and Presbyterian",
-     "view": "Reformed teachers like John Calvin understand the waters as God's general favor offered freely to all people, rather than specifically pointing to the Holy Spirit or gospel preaching.",
-     "sources": [
-      "https://biblehub.com/commentaries/calvin/isaiah/55.htm"
-     ]
-    },
-    {
      "tradition": "Methodist",
      "view": "Methodists view the wine and milk as the specific inward blessings of the gospel, especially peace, joy in the Holy Spirit, and the love of God.",
      "sources": [
@@ -267,7 +260,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars view the miraculous growth of trees as a permanent, literal physical renewal of the desert rather than merely a poetic picture of spiritual change.",
+     "sources": [
+      "https://biblehub.com/commentaries/isaiah/55-13.htm"
+     ],
+     "carried": true
+    }
+   ]
   }
  ],
  "problems": [

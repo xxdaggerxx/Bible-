@@ -350,7 +350,25 @@
     "Benson",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Gideon likely had good intentions to honor God rather than create an idol, but his unauthorized actions led Israel into sin because good intentions outside God's revealed will still cause harm.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ghb/judges-8.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Gideon's act was outright unlawful will-worship that made him a sponsor of idolatry like Aaron with the golden calf, directly invading the rights of the Aaronic priesthood.",
+     "sources": [
+      "Matthew Henry",
+      "https://www.studylight.org/commentary/judges/8-27.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",

@@ -179,7 +179,16 @@
      ]
     }
    ],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholic scholars state that celebrations of Christ's resurrection have no historic basis in the worship of Tammuz or ancient fertility myths.",
+     "sources": [
+      "https://www.catholic.com/magazine/online-edition/easter-is-not-a-secretly-pagan-holiday"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 15,
@@ -215,7 +224,16 @@
     "Jamieson-Fausset-Brown",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Some in the Reformed tradition understand putting the branch to the nose figuratively as adding fuel to the fire, causing their own ruin by stirring up God's wrath.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Catholic",

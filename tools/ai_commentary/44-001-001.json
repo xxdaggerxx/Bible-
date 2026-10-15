@@ -252,7 +252,16 @@
     "Barnes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Early traditions say Judas survived hanging but became bloated and died later, offering an alternative way to reconcile the biblical accounts.",
+     "sources": [
+      "https://www.catholic.com/audio/ddp/how-judas-iscariot-died"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 20,
@@ -284,8 +293,27 @@
     "Barnes",
     "Ellicott"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "The office of apostle was strictly limited to firsthand witnesses of the risen Christ and ceased when that generation died.",
+     "sources": [
+      "Barnes",
+      "https://www.catholic.com/magazine/print-edition/does-christs-church-have-apostolic-succession"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "While the original Twelve required personal companionship with Christ, later apostles like Paul and Barnabas show the office could continue.",
+     "sources": [
+      "https://www.catholic.com/magazine/print-edition/successors-of-the-apostles"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 23,

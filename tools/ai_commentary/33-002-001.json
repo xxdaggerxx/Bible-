@@ -88,8 +88,34 @@
     "Adam Clarke",
     "Ellicott"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Many Baptists apply this verse as a challenge not to doubt or limit what the Holy Spirit can do in preaching and church revival.",
+     "sources": [
+      "https://www.spurgeon.org/sermons/is-the-spirit-of-the-lord-straitened"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Reformed commentators emphasize that God is confronting the people's presumption, showing that sinful humans cannot control or silence the Spirit of God.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Traditional Catholic translations like the Douay-Rheims render the first words as the speech of the house of Jacob claiming the Spirit cannot be restrained.",
+     "sources": [
+      "https://biblehub.com/micah/2-7.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 8,
@@ -152,7 +178,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Popular modern teaching",
+     "view": "Some dispensational teachers believe this describes a future end-times event where a remnant of Israel will be protected in Bozrah during the great tribulation.",
+     "sources": [
+      "https://www.preceptaustin.org/micah_2_commentary"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 13,
@@ -165,7 +200,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some commentators take the breaker to refer simply to an earthly military conqueror or the Assyrian army breaking through city defenses.",
+     "sources": [
+      "https://biblehub.com/commentaries/poole/micah/2.htm"
+     ],
+     "carried": true
+    }
+   ]
   }
  ],
  "problems": [],

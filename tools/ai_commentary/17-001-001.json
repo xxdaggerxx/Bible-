@@ -146,7 +146,24 @@
     "Adam Clarke",
     "John Gill"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Charismatic",
+     "view": "Many Charismatics and evangelicals view Vashti's refusal as a praiseworthy act of modesty and moral courage, teaching that wifely submission never requires obeying a degrading or sinful order.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/esther-1/"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Baptist",
+     "view": "Some Baptists observe that although the king made a foolish and sinful demand, the queen's public defiance was still a wrongful rebellion that disrupted marital order.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ghb/esther-1.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -264,7 +281,16 @@
     "Keil & Delitzsch",
     "Matthew Henry (Concise)"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Some Baptists teach that while the decree came from a pagan ruler's wounded pride, the principle that the husband should lead the home still aligned with God's original design in Scripture.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ghb/esther-1.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   }
  ],

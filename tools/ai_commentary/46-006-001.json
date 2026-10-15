@@ -132,7 +132,25 @@
     "Barnes",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Sanctification follows as a fruit of justification, where a believer is pardoned first through Christ's merits and then inwardly made holy by the Spirit.",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Justification and sanctification are distinct gifts that always go together in conversion, cleansing both the legal guilt and the inward pollution of sin.",
+     "sources": [
+      "Calvin",
+      "Matthew Henry"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

@@ -50,7 +50,17 @@
     "John Gill"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Early commentators like Calmet and Haydock identify Tadmor with the later city of Emesa on the Orontes River.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/hcc/2-chronicles-8.html",
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 5,
@@ -61,7 +71,16 @@
     "Ellicott",
     "Matthew Henry"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Building chariot cities went against God's law in Deuteronomy forbidding kings to multiply horses, hinting that Solomon was starting to trust in military power rather than in God alone.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/2-chronicles-8/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -106,8 +125,26 @@
     "Wesley",
     "Matthew Henry"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Marrying Pharaoh's daughter was an unwise political move that began Solomon's spiritual decline, and moving her house could not keep the danger of her idols out of the kingdom.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/2-chronicles-8/"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Traditional Catholic commentators suggest Pharaoh's daughter may have appeared to accept the true faith at first but later showed signs of returning to pagan ways, making it unfitting for her to stay where the ark had been.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/hcc/2-chronicles-8.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 12,

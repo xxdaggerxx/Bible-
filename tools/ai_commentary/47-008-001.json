@@ -8,11 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Paul tells the Corinthians about the churches in Macedonia, such as Philippi and Thessalonica. God gave these believers special grace that showed itself in wonderful generosity toward poor Christians. Paul shares their story to encourage the Corinthians to give in the same way.",
+   "meaning": "Paul tells the Corinthian church about how God gave His grace to the congregations in Macedonia, such as Philippi and Thessalonica. Grace here means God's undeserved kindness working in their hearts, enabling them to give freely to others. Their giving was not just human effort, but the work of God in them.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Matthew Henry",
-    "Barnes",
-    "Calvin"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -20,34 +20,21 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "The Macedonian believers were going through painful hardships and were extremely poor. Even so, their joy in the Lord was so great that it spilled over into remarkable generosity. Their giving showed that a loving heart matters much more than having lots of money.",
+   "meaning": "Even though the Macedonian believers were going through harsh trials and were extremely poor, they were filled with joy in the Lord. This joy spilled over into extraordinary generosity for other Christians in need. True giving is measured by the love and sacrifice behind it, not by how much money a person has.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 3,
-   "end": 3,
-   "meaning": "Paul testifies that the Macedonians gave as much as they were able, and even more than seemed possible. Nobody forced them to help. They chose to give freely, out of their own desire to care for others in need.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
+    "Tyndale Study Notes",
     "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
   },
   {
-   "verse": 4,
+   "verse": 3,
    "end": 4,
-   "meaning": "Usually, leaders have to ask people to give money, but here the opposite happened. The Macedonians pleaded with Paul to let them take part in sending help to their fellow believers in Judea. They viewed helping others as a special privilege and joy.",
+   "meaning": "Paul testifies that the Macedonians gave as much as they were able, and even more than seemed possible. No one forced them to give; instead, they begged Paul for the privilege of sharing in this relief work for fellow Christians. They saw helping their suffering brothers and sisters as an honor rather than a burden.",
    "meaning_sources": [
     "Matthew Henry",
-    "Calvin",
+    "John Gill",
     "Adam Clarke"
    ],
    "differ": [],
@@ -56,11 +43,11 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "The Macedonians did far more than anyone expected. Before giving their money, they first gave their own hearts and lives to the Lord, and then they placed themselves under Paul's direction. True Christian giving always starts with surrendering oneself to God.",
+   "meaning": "The Macedonians went far beyond what Paul and his companions hoped for. Before giving any money, they first gave themselves fully to the Lord in faith and obedience, and then gave themselves to Paul to serve as God wanted. When our hearts belong completely to God, sharing our earthly goods follows naturally.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley",
-    "Barnes"
+    "Calvin",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -68,10 +55,10 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "Titus had already visited Corinth and started organizing this collection for the poor. Because the Macedonians gave with such joy, Paul urged Titus to return to Corinth and help them finish this work of mercy.",
+   "meaning": "Because the Macedonians showed such readiness, Paul urged Titus to return to Corinth. Titus had already begun helping the Corinthians organize this collection, and now he was to help them bring this good work of grace to completion. Good intentions need faithful effort to finish what was started.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
+    "Tyndale Study Notes",
+    "Ellicott",
     "Jamieson-Fausset-Brown"
    ],
    "differ": [],
@@ -80,11 +67,11 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "The Corinthians had many spiritual gifts, including faith, good speech, knowledge, eager devotion, and love for their teachers. Paul reminds them that their Christian growth should be balanced. Since they were doing well in so many ways, they should also shine in generous giving.",
+   "meaning": "The Corinthians were rich in many spiritual gifts, including their faith, speaking ability, knowledge, zeal, and love. Paul encourages them to make sure they do not leave out the grace of giving. A healthy Christian life shows growth in practical generosity alongside spiritual gifts.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -92,35 +79,59 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "Paul makes it clear that he is not ordering them to give a fixed amount. Instead, he mentions how eager others were to help so the Corinthians could prove that their own love was genuine. True love is never forced, but shows itself through willing actions.",
+   "meaning": "Paul explains that he is not issuing a strict order about how much they must give. Instead, by pointing out the eagerness of the Macedonians, he offers the Corinthians a chance to prove that their love is real and sincere. True Christian giving comes from a willing heart, not from force.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
+    "John Gill",
+    "Ellicott",
     "Calvin"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "New Testament giving is entirely freewill giving prompted by grace, distinct from Old Testament laws that required a fixed tithe.",
+     "sources": [
+      "https://www.preceptaustin.org/2-corinthians-8-commentary"
+     ]
+    },
+    {
+     "tradition": "Pentecostal",
+     "view": "Giving must be voluntary from the heart, but the ten-percent tithe remains a helpful starting guide for believers.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/2-corinthians-8/"
+     ]
+    }
+   ],
    "other": []
   },
   {
    "verse": 9,
    "end": 9,
-   "meaning": "Jesus Christ is the greatest example of generosity. Though He possessed all the riches of heaven, He chose a life of poverty and died on a cross for sinners. Through His sacrifice, believers are made spiritually rich with the blessings of salvation and eternal life.",
+   "meaning": "Paul points to the supreme model of giving, Jesus Christ Himself. Although the eternal Son possessed all the glory and wealth of heaven, He laid it aside and took on a humble human life and death. Because of His poverty on the cross, believers receive the boundless riches of salvation and eternal life.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke"
+    "Tyndale Study Notes",
+    "Calvin",
+    "Matthew Henry"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Popular modern teaching",
+     "view": "Some prosperity teachers claim this verse promises financial wealth in this life, whereas traditional interpreters understand the riches to be spiritual blessings and salvation.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/2-corinthians-8/",
+      "https://www.preceptaustin.org/2-corinthians-8-commentary"
+     ]
+    }
+   ]
   },
   {
    "verse": 10,
    "end": 10,
-   "meaning": "Paul offers his advice rather than giving a strict rule. The Corinthians were the very first to desire this collection and had already started collecting funds a year earlier. Carrying out their plan would match what they had so eagerly promised.",
+   "meaning": "Paul offers his advice on what is best for the Corinthians to do. A year earlier, they were the first church to start gathering this relief fund, and the first to desire to help. Since they had been pioneers in the project, it was fitting for them to carry it through.",
    "meaning_sources": [
-    "Jamieson-Fausset-Brown",
-    "Barnes",
-    "Calvin"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -128,11 +139,10 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "Good plans and good intentions do not accomplish anything if the work is left unfinished. Paul urges them to complete the collection with the same eagerness they felt when they started. They should give faithfully according to what they actually have.",
+   "meaning": "Paul urges them to finish the task they started so enthusiastically. They had the desire in their hearts, and now they needed to match that desire with action. They were only expected to give according to what they actually had, not what they lacked.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin"
+    "Ellicott",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -140,10 +150,10 @@
   {
    "verse": 12,
    "end": 12,
-   "meaning": "God cares most about a willing and eager heart. He gladly accepts an offering based on what a person has to give, not what they do not have. No one is expected to give beyond their means.",
+   "meaning": "God looks at the readiness and willingness of the heart, not just the amount in the offering. If a person gives gladly, God accepts the gift based on what that person owns, not on what they cannot afford. No one is expected to give resources they do not possess.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes",
+    "John Gill",
     "Adam Clarke"
    ],
    "differ": [],
@@ -152,11 +162,11 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "Paul explains that his goal is not to make life hard for the Corinthians so that others can live in comfort. Giving is not meant to ruin the giver. Instead, it is meant to share burdens fairly across the family of believers.",
+   "meaning": "Paul reassures them that he does not want to push them into hardship just to make life easy for others. Giving should not leave the givers burdened with poverty while the receivers live in luxury. His desire is fairness and balance among God's people.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin"
+    "Calvin",
+    "Adam Clarke",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -164,10 +174,10 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "Right now, the Corinthians had plenty of resources to help the suffering believers in Jerusalem. In the future, if circumstances changed, other churches could help supply Corinth's needs. In this way, God's people care for one another so that no one lacks life's necessities.",
+   "meaning": "At that moment, Corinth had plenty of resources and could help the starving believers in Jerusalem. In the future, if circumstances changed, other believers could share their surplus to help Corinth. In this way, Christian love creates a mutual sharing so that no one goes without.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes",
+    "John Gill",
     "Adam Clarke"
    ],
    "differ": [],
@@ -176,11 +186,11 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "Paul points back to the story of the manna God gave the Israelites in the desert. Everyone gathered what they could, and when it was shared, those who gathered much had no extra and those who gathered little had enough. God wants His people to share their blessings so everyone is provided for.",
+   "meaning": "Paul quotes the story of the manna from the Old Testament, where God provided food in the desert. Those who gathered a lot of manna shared, and those who gathered only a little were cared for, so everyone had enough. In the same way, Christians should share their goods so that no one in the family of faith is left in need.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -188,11 +198,11 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "Paul thanks God for placing a deep, earnest care for Corinth into the heart of Titus. This showed that Titus had the exact same loving concern that Paul had. Genuine care for other believers is a gift that comes straight from God.",
+   "meaning": "Paul thanks God for giving Titus the very same deep care and affection for the Corinthian church that Paul himself carried. A leader's love and burden for God's people is not just human kindness, but a gift placed in the heart by God.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Calvin",
     "Barnes",
-    "Calvin"
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -200,9 +210,8 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "Titus gladly welcomed Paul's request to return to Corinth. In fact, he was already eager to go on his own initiative. His quick readiness showed how much he truly cared for the Corinthians.",
+   "meaning": "Titus did not simply accept Paul's request to visit Corinth; he was already eager to go on his own initiative. His genuine care for them meant he did not need to be talked into it. He traveled gladly to serve them and to help them complete the collection.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
     "Calvin"
    ],
@@ -212,11 +221,11 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "Paul sent a respected Christian brother along with Titus. This man was widely praised by all the churches for his faithful work in preaching the good news. Many early church teachers believed this brother was Luke.",
+   "meaning": "Paul sent another trusted brother with Titus, someone widely praised across the churches for his work in spreading the gospel message. While early church tradition often identified this brother as Luke, Paul does not give his name. The important point was that this helper was well-known and respected by all the congregations.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -224,11 +233,11 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "The churches had officially chosen this brother to travel with Paul and assist with the collection. Choosing a trusted leader helped ensure that the money brought honor to the Lord and proved everyone's sincere desire to help.",
+   "meaning": "This brother had been officially chosen by vote in the churches to travel with Paul and deliver this gift. By letting the churches choose representatives, Paul ensured the collection would be carried safely and openly. This work brought honor to the Lord and demonstrated the churches' readiness to help.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "Adam Clarke"
+    "Tyndale Study Notes",
+    "John Gill",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -236,11 +245,11 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "Paul took careful steps to make sure no one could find fault with how the collection was managed. Because a large sum of money was involved, having trusted leaders travel together protected everyone from false accusations of stealing or being unfair.",
+   "meaning": "Paul took great care to prevent anyone from accusing him or his team of mishandling the money. A large sum of money was being gathered, and handling it openly protected the apostles from false rumors. Careful financial planning protects Christian workers from unfair criticism.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -248,10 +257,10 @@
   {
    "verse": 21,
    "end": 21,
-   "meaning": "Christian leaders must not only keep a clear conscience before God, but also make sure their actions look honorable to other people. Paul wanted everything done openly and honestly so no one could doubt their integrity.",
+   "meaning": "Paul's goal was to do what was completely honest and right, both before the Lord and in the eyes of other people. Having a clear conscience before God was essential, but being blameless before human observers was also necessary so that the ministry would not be discredited.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes",
+    "Ellicott",
     "Calvin"
    ],
    "differ": [],
@@ -260,11 +269,11 @@
   {
    "verse": 22,
    "end": 22,
-   "meaning": "Paul also sent a third brother whose faithfulness had been tested and proven many times. This brother was now even more eager to serve because he had great confidence that the Corinthians would do what was right.",
+   "meaning": "Paul also sent a third brother whose faithfulness and dedication had been proven many times in various tasks. This brother was now even more eager to help because of his strong confidence in the Corinthian church. Faithful service in the past earns trust for important responsibilities in the present.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "Adam Clarke"
+    "Calvin",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -272,11 +281,11 @@
   {
    "verse": 23,
    "end": 23,
-   "meaning": "Paul introduces these men so the Corinthians will welcome them with full confidence. Titus is Paul's partner and fellow-worker, while the other two brothers are official delegates of the churches who bring honor to Christ.",
+   "meaning": "Paul vouches for all three men. Titus is his close partner and fellow worker who labors directly for the Corinthians' good. The other two brothers are official delegates sent by the churches, men whose lives and work bring glory to Christ.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -284,19 +293,23 @@
   {
    "verse": 24,
    "end": 24,
-   "meaning": "Paul urges the Corinthians to welcome these men warmly and give generously. Since these messengers represent other churches, the Corinthians' actions will show everyone that their love is real and that Paul was right to boast about them.",
+   "meaning": "Paul urges the Corinthians to welcome these men with open hearts and give proof of their genuine Christian love. By completing their generous offering, they would show all the watching churches that Paul's boasting about their good character was well deserved.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin"
+    "Ellicott",
+    "John Gill",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
+  "v. 2: removed sources ['Benson']",
+  "v. 11: removed sources ['Benson']",
   "v. 14: dropped other point (Catholic): no checkable source",
-  "v. 14: removed sources ['https://biblehub.com/commentaries/ellicott/2_corinthians/8.htm']"
+  "v. 14: removed sources ['https://biblehub.com/commentaries/ellicott/2_corinthians/8.htm']",
+  "v. 17: removed sources ['Benson']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

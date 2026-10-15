@@ -227,8 +227,37 @@
     "Ellicott",
     "Calvin"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Some see the lack of regard for the desire of women as a reference to the Roman Catholic ban on marriage for priests.",
+     "sources": [
+      "https://www.studylight.org/bible/fre/dar/daniel/11-37.html",
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Many evangelicals",
+     "view": "Many read the desire of women as the promised Messiah, whom faithful Jewish mothers longed to bear.",
+     "sources": [
+      "Jamieson-Fausset-Brown",
+      "https://www.studylight.org/commentary/daniel/11-37.html"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Scholars often identify the desire of women as an ancient Near Eastern deity like Tammuz or Adonis, whose worship was popular among women.",
+     "sources": [
+      "https://biblehub.com/commentaries/daniel/11-37.htm",
+      "Keil & Delitzsch"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 38,
@@ -240,7 +269,16 @@
     "Geneva Notes",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Some view the god of fortresses as referring to the veneration and costly adornment of patron saints and angels in medieval church tradition.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -266,7 +304,17 @@
     "Tyndale Study Notes",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Some interpret these clashing northern and southern empires as the Saracen Arabs and the Ottoman Turks moving across historical lands.",
+     "sources": [
+      "Adam Clarke",
+      "Jamieson-Fausset-Brown"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",

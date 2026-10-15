@@ -16,7 +16,17 @@
     "Calvin"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Ancient Christian writers such as Jerome believed this was fulfilled when the child Jesus was taken to Egypt and the pagan statues fell to the ground.",
+     "sources": [
+      "https://www.studylight.org/bible/eng/nlv/isaiah/19-1.html",
+      "Calvin"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 2,
@@ -198,7 +208,26 @@
     "Matthew Henry",
     "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Reformed Christians believe the Savior sent to rescue them is Jesus Christ delivering people from sin and the devil.",
+     "sources": [
+      "Calvin",
+      "Matthew Henry",
+      "Geneva Notes"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Many evangelicals",
+     "view": "Many evangelicals understand the savior historically as an earthly conqueror such as Alexander the Great who freed Egypt from Persian rule.",
+     "sources": [
+      "Jamieson-Fausset-Brown"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

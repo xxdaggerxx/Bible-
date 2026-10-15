@@ -86,7 +86,16 @@
     "John Gill",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Some Baptists see here a picture of Christian growth, where a small start in faith gradually develops into a rich and fruitful spiritual life.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/job-8/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -135,7 +144,16 @@
     "John Gill"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Scholars point out that the words for reed and papyrus are borrowed from Egyptian, indicating that Bildad is drawing on famous wisdom sayings from the Nile region.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/pfc/job-8.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 12,
@@ -193,7 +211,16 @@
     "Wesley",
     "Keil & Delitzsch"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Anglican",
+     "view": "Some Anglicans understand verses 16 and 17 as a contrast describing a godly person who truly flourishes, rather than another picture of a doomed sinner.",
+     "sources": [
+      "https://biblehub.com/commentaries/ellicott/job/8.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

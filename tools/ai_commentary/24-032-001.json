@@ -204,7 +204,25 @@
     "John Gill",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "God punishes children when they share their parents' sinful nature, partly by leaving them without the grace of His Spirit.",
+     "sources": [
+      "Calvin",
+      "Geneva Notes"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Baptist",
+     "view": "God punishes children for family sins only when those children actively choose to copy and continue their parents' wickedness.",
+     "sources": [
+      "https://biblehub.com/commentaries/jeremiah/32-18.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

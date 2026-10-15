@@ -162,7 +162,26 @@
     "Wesley",
     "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "God sovereignly planned and ordained the event itself for good, while the human actors remained fully responsible for their evil motives.",
+     "sources": [
+      "Calvin",
+      "https://www.desiringgod.org/messages/does-god-intend-evil-for-our-good"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "God did not cause or plan the sin, but in His wisdom He permitted it and redirected its results toward a good end.",
+     "sources": [
+      "Adam Clarke",
+      "https://enduringword.com/bible-commentary/genesis-50/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

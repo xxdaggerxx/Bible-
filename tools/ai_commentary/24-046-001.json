@@ -27,7 +27,16 @@
     "Jamieson-Fausset-Brown"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars think verses 3-12 are a song written after the battle, not a prediction made before it. Keil and Delitzsch argue that it is a true prophecy.",
+     "sources": [
+      "Keil & Delitzsch"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 3,
@@ -155,7 +164,16 @@
     "Benson"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some historians once doubted that Nebuchadnezzar ever invaded Egypt. Later, an inscription and Babylonian records were found that describe a campaign in his 37th year (about 568-567 BC).",
+     "sources": [
+      "https://biblehub.com/commentaries/pulpit/jeremiah/46.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 14,
@@ -178,7 +196,18 @@
     "Ellicott"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "The old Greek translation reads, \"Why did Apis flee?\" Apis was Egypt's sacred bull-god. Many scholars follow this reading, so the verse shows Israel's God beating Egypt's god. Keil and Delitzsch do not accept it.",
+     "sources": [
+      "https://biblehub.com/commentaries/ellicott/jeremiah/46.htm",
+      "https://biblehub.com/commentaries/pulpit/jeremiah/46.htm",
+      "Keil & Delitzsch"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 16,
@@ -319,7 +348,32 @@
     "Matthew Henry",
     "John Gill"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The Jewish nation as a nation has ended, but this promise finds its full meaning in the gospel church. The church is God's spiritual Israel, and He will never bring it to an end.",
+     "sources": [
+      "Matthew Henry"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "The Jews have survived as a distinct people while their old enemies vanished. This is a sign that Israel will one day be restored to God's favor, when the time of the Gentiles is fulfilled.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "The promise of a peaceful return looks ahead to a future kingdom age for Israel that has not come yet.",
+     "sources": [
+      "https://www.studylight.org/commentary/jeremiah/46-26.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -331,7 +385,32 @@
     "John Gill",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The Jewish nation as a nation has ended, but this promise finds its full meaning in the gospel church. The church is God's spiritual Israel, and He will never bring it to an end.",
+     "sources": [
+      "Matthew Henry"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "The Jews have survived as a distinct people while their old enemies vanished. This is a sign that Israel will one day be restored to God's favor, when the time of the Gentiles is fulfilled.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "The promise of a peaceful return looks ahead to a future kingdom age for Israel that has not come yet.",
+     "sources": [
+      "https://www.studylight.org/commentary/jeremiah/46-26.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   }
  ],

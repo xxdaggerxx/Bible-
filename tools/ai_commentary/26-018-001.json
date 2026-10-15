@@ -215,7 +215,24 @@
     "John Gill",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "All people share in Adam's sin and are born with a sinful nature that is enough, on its own, to condemn them. Still, no one is condemned as an innocent, because each person carries that guilt himself. Ezekiel is speaking here of adults.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "Everyone is born with a fallen nature, but no one is condemned for that alone. Only those who refuse God's grace and go on in sin are lost.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -253,7 +270,25 @@
     "Ellicott",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Here God speaks of his open call to all to repent, not of his hidden plan of choosing whom he will save. Both are true, even though we cannot fully see how they fit together.",
+     "sources": [
+      "Calvin",
+      "Geneva Notes"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "Since God takes no pleasure in a sinner's death, he cannot have decided to leave anyone in sin and then condemn them for what they could not avoid.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -374,7 +409,17 @@
     "Tyndale Study Notes",
     "https://enduringword.com/bible-commentary/ezekiel-18/"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The command shows people their duty, not their ability. A new heart is wholly God's work, and the command drives people to seek his Spirit.",
+     "sources": [
+      "Calvin",
+      "Geneva Notes"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

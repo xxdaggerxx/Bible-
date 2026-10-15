@@ -117,7 +117,17 @@
     "Jamieson-Fausset-Brown",
     "Matthew Henry"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "The \"coming wrath\" here mainly means the disaster that fell on the Jewish nation when the Romans destroyed Jerusalem.",
+     "sources": [
+      "Adam Clarke",
+      "https://www.studylight.org/commentaries/eng/geb/matthew-3.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -247,7 +257,25 @@
     "Jamieson-Fausset-Brown",
     "Adam Clarke"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "\"Went up out of the water\" shows that Jesus had been fully immersed.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/bcc/matthew-3.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The wording means he went up \"from the water\". It does not prove he went under the water.",
+     "sources": [
+      "Barnes",
+      "Matthew Henry"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

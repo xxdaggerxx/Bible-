@@ -121,8 +121,27 @@
     "John Gill",
     "Ellicott"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals explain that the man was merely repeating common Jewish thought, not stating divine doctrine, because God graciously hears any sinner who calls out for salvation.",
+     "sources": [
+      "Barnes",
+      "https://www.studylight.org/commentary/john/9-31.html"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholic commentary notes that God does not answer unrepentant sinners by granting them the power to work miracles in support of their teaching.",
+     "sources": [
+      "https://www.studylight.org/commentary/john/9-31.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 32,
@@ -170,7 +189,18 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Modern scholars note that the earliest Greek manuscripts read 'Son of Man' instead of 'Son of God', though both titles identify Jesus as the Messiah.",
+     "sources": [
+      "Robertson",
+      "https://www.studylight.org/commentary/john/9-35.html",
+      "https://bible.org/seriespage/lesson-53-blind-see-seeing-are-blind-john-935-41"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 36,

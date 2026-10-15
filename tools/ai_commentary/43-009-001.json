@@ -72,7 +72,24 @@
      ]
     }
    ],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Scholars note the Greek wording can mean either that God purposed the blindness for this end or that He used the outcome for His glory, since nothing falls outside God's sovereign care.",
+     "sources": [
+      "https://bible.org/seriespage/12-exegetical-commentary-john-9"
+     ],
+     "carried": true
+    },
+    {
+     "label": "Catholic",
+     "view": "Catholic writers explain that while every person shares in original sin, this disability was not sent as a personal punishment.",
+     "sources": [
+      "https://biblehub.com/commentaries/haydock/john/9.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 4,
@@ -84,7 +101,16 @@
     "Wesley"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Scholars explain that the word 'must' shows divine necessity, and the coming 'night' points directly to Jesus departing from the world.",
+     "sources": [
+      "https://bible.org/seriespage/12-exegetical-commentary-john-9"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 5,
@@ -127,7 +153,16 @@
     "Calvin",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Charismatic",
+     "view": "Christians in this tradition emphasize that the healing occurred only when the man took an active step of obedient faith.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/john-9/"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Catholic",

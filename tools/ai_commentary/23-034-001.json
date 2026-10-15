@@ -154,7 +154,16 @@
     "Matthew Henry",
     "Calvin"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Dispensationalists interpret this enduring destruction as a picture of the Great Tribulation and the battle of Armageddon before Christ's earthly kingdom begins.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/isaiah-34/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -236,7 +245,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars suggest that the phrase 'the book of the LORD' implies that collections of prophetic writings were already being gathered, which they take as a sign of a late date for this chapter.",
+     "sources": [
+      "https://biblehub.com/commentaries/isaiah/34-16.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 17,

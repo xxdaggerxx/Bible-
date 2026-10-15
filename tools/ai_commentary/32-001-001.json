@@ -146,7 +146,24 @@
     "Matthew Henry",
     "Adam Clarke"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Jonah showed sincere sorrow and deep repentance for his sin, willingly accepting death to save the crew.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Jonah remained stubbornly defiant, choosing to be thrown into the sea and die rather than repent and go preach to Nineveh.",
+     "sources": [
+      "https://www.gty.org/blogs/B150313/jonah-the-rogue-prophet"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Orthodox",

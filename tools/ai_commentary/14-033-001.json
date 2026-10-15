@@ -127,7 +127,16 @@
     "Keil & Delitzsch"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some nineteenth-century critics argued that the story of Manasseh's captivity and conversion was made up. Other scholars defended it as history, pointing to Assyrian records.",
+     "sources": [
+      "Keil & Delitzsch"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 12,
@@ -235,7 +244,33 @@
     "Ellicott"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "The official Latin Bible of the Catholic Church printed the Prayer of Manasseh in an appendix rather than as part of Scripture.",
+     "sources": [
+      "https://www.newadvent.org/cathen/01601a.htm"
+     ],
+     "carried": true
+    },
+    {
+     "label": "Orthodox",
+     "view": "For the Orthodox, the Prayer of Manasseh is part of the Bible. It is used in the evening service called Great Compline.",
+     "sources": [
+      "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/old-testament/wisdom",
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "label": "Modern scholarship",
+     "view": "Scholars usually see the Prayer of Manasseh as a Greek-speaking Jewish writer's attempt to recreate the prayer mentioned here.",
+     "sources": [
+      "https://ccel.org/ccel/swete/greekot/greekot.iv.ii.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 20,

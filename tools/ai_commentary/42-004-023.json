@@ -106,8 +106,44 @@
     "John Gill",
     "Adam Clarke"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Jesus was rescued by a miracle of divine power, as God restrained the mob by blinding their eyes, holding their hands, or stunning their minds.",
+     "sources": [
+      "Calvin",
+      "Barnes"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "Jesus may have been made invisible or so overawed the crowd by His divine presence that they lost all power to lay hands on Him.",
+     "sources": [
+      "Wesley",
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Anglican",
+     "view": "No supernatural miracle was needed, because the calm moral majesty of a holy person can naturally disarm an angry mob.",
+     "sources": [
+      "https://biblehub.com/commentaries/luke/4-30.htm"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Jesus performed a clear miracle that showed His divinity by making His attackers powerless to touch Him.",
+     "sources": [
+      "https://www.studylight.org/commentary/luke/4-30.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 31,

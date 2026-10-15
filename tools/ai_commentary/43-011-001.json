@@ -279,7 +279,24 @@
     "Barnes",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Some hold that Martha's words show she already believed Jesus had the power to raise Lazarus from the dead right then.",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Others understand her words not as expecting Lazarus to be raised now, but as expressing lasting trust in Jesus despite not getting what she had hoped for.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/john-11/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

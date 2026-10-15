@@ -194,7 +194,17 @@
     "Benson",
     "https://enduringword.com/bible-commentary/proverbs-18/"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some commentators apply this verse to a person's God-given talents and abilities making room for them to serve others.",
+     "sources": [
+      "https://biblehub.com/proverbs/18-16.htm",
+      "https://www.studylight.org/commentary/proverbs/18-16.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -283,7 +293,17 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic and Orthodox",
+     "view": "Ancient Greek and Latin translations add a line stating that divorcing a good wife casts away happiness, while keeping an unfaithful wife is foolish.",
+     "sources": [
+      "Adam Clarke",
+      "https://biblehub.com/commentaries/proverbs/18-22.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 23,

@@ -13,7 +13,24 @@
     "Tyndale Study Notes",
     "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "God revealed this message to Jeremiah during Jehoiakim's reign to strengthen him privately, years before it was delivered publicly under Zedekiah.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "The original text was delivered in Zedekiah's reign, and the name Jehoiakim found in many Hebrew copies was an early copyist error.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",
@@ -71,7 +88,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "The phrase mentioning the king, his son, and his grandson was a Hebrew figure of speech for extended rule rather than a strict genealogical record.",
+     "sources": [
+      "https://bible.org/seriespage/jeremiah-27"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 8,

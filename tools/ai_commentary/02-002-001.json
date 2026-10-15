@@ -145,8 +145,27 @@
     "Ellicott",
     "Tyndale Study Notes"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Moses acted in hasty self-reliance and the energy of the flesh, attempting to accomplish God's deliverance through unlawful violence before God's appointed time.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/exodus-2/",
+      "https://www.studylight.org/commentaries/eng/dcc/exodus-2.html"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Moses' killing of the Egyptian shows human presumption and an unauthorized use of force rather than divine guidance.",
+     "sources": [
+      "https://www.preceptaustin.org/exodus-2-commentary"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 13,

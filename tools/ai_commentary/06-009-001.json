@@ -97,7 +97,25 @@
     "Matthew Henry",
     "Keil & Delitzsch"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Some see their words as a clever pretence of faith, designed only to save their skins through deceit.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "Others see a sincere fear of God and a genuine desire to cast themselves on His mercy beneath their trickery.",
+     "sources": [
+      "Matthew Henry",
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -107,7 +125,25 @@
    "meaning_sources": [
     "Keil & Delitzsch"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Some see their words as a clever pretence of faith, designed only to save their skins through deceit.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "Others see a sincere fear of God and a genuine desire to cast themselves on His mercy beneath their trickery.",
+     "sources": [
+      "Matthew Henry",
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -166,7 +202,18 @@
     "Adam Clarke",
     "Wesley"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Others teach that God's command to destroy the Canaanites was directed at those who stubbornly resisted, so the oath to spare those who surrendered was lawful and binding.",
+     "sources": [
+      "Matthew Henry",
+      "Wesley",
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

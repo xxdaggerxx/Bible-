@@ -248,7 +248,24 @@
      ]
     }
    ],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars doubt that Jesus spoke these words about Father, Son, and Spirit, thinking them too developed for his time. Others defend them as genuine.",
+     "sources": [
+      "Robertson"
+     ],
+     "carried": true
+    },
+    {
+     "label": "Orthodox",
+     "view": "The Orthodox Church baptizes by dipping a person three times, once for each name.",
+     "sources": [
+      "Robertson"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 20,

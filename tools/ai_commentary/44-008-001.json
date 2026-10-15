@@ -164,7 +164,33 @@
     "Adam Clarke",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Simon had a real but short-lived faith, somewhere between true faith and pretending, like seed that is choked before it ripens; it lacked denial of self.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Anglican",
+     "view": "His baptism brought no new birth, but if he later truly repented, its grace could become real without being baptized again.",
+     "sources": [
+      "https://biblehub.com/commentaries/ellicott/acts/8.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Many evangelicals",
+     "view": "Simon was never truly saved; real faith shows itself by repenting and keeping on, and outward Christian behavior does not prove conversion.",
+     "sources": [
+      "https://www.preceptaustin.org/acts-8-commentary",
+      "https://enduringword.com/bible-commentary/acts-8/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -201,7 +227,34 @@
     "John Gill",
     "Robertson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Pentecostal",
+     "view": "Many see a pattern here: believers are converted first and may receive the Holy Spirit in a later experience.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/acts-8/"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The Samaritans already had the Spirit who makes us God's children; what came now were special gifts given only for a time in the church's early days.",
+     "sources": [
+      "Calvin",
+      "Barnes"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Many evangelicals",
+     "view": "God held back the Spirit this one time so the Samaritan and Jerusalem believers would know they were one church; it is not a pattern for today.",
+     "sources": [
+      "https://www.preceptaustin.org/acts-8-commentary",
+      "Calvin"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -231,7 +284,18 @@
      ]
     }
    ],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "The Catholic rite of confirmation looks to this passage, where the Spirit is given through prayer and the laying on of hands.",
+     "sources": [
+      "Robertson",
+      "Barnes",
+      "Calvin"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 18,
@@ -379,7 +443,16 @@
     "Adam Clarke"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some read him as a literal eunuch and see the story showing that people with all kinds of bodies were welcome in the early church. The servant's humiliation and lack of descendants in Isaiah may have matched his own situation.",
+     "sources": [
+      "https://www.bibleodyssey.org/articles/the-ethiopian-eunuch-from-a-disability-perspective/"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 29,
@@ -492,7 +565,16 @@
     "John Gill",
     "Geneva Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some argue the verse should be kept, because it records a genuine early confession of faith.",
+     "sources": [
+      "https://www.studylight.org/commentary/acts/8-37.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Catholic",
@@ -549,7 +631,17 @@
     "Wesley",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some think this was not a miracle of movement, but the Spirit strongly urging Philip to leave quickly for other work.",
+     "sources": [
+      "Barnes",
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

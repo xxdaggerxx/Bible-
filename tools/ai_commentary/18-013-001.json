@@ -186,7 +186,25 @@
     "John Gill",
     "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Understands the traditional Hebrew phrasing to mean Job resolves to trust and hope in God even if his suffering ends in physical death.",
+     "sources": [
+      "https://www.desiringgod.org/interviews/though-he-slay-me-why-the-silence-on-this-verse",
+      "https://www.studylight.org/bible/eng/kjv/job/13-15.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Anglican",
+     "view": "Follows the written Hebrew text as meaning Job has no hope of physical survival, yet still courageously insists on pleading his case.",
+     "sources": [
+      "https://biblehub.com/job/13-15.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",

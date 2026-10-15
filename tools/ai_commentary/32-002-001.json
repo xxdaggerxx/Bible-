@@ -16,7 +16,17 @@
     "Calvin"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some critical scholars argue that this prayer was a later poem added during or after the Jewish exile, rather than a song written by Jonah himself.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/dcc/jonah.html",
+      "https://www.studylight.org/commentaries/eng/bcc/jonah-2.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 2,
@@ -137,7 +147,17 @@
     "Keil & Delitzsch"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Jonah coming out of the fish alive on the third day is seen as a prophetic picture of Jesus rising from the dead on the third day.",
+     "sources": [
+      "Matthew Henry",
+      "https://www.catholic.com/audio/sp/what-you-missed-about-jonah-and-christs-passion-and-resurrection"
+     ],
+     "carried": true
+    }
+   ]
   }
  ],
  "problems": [],

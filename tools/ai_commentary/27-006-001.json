@@ -87,7 +87,16 @@
     "John Gill",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Some highlight that Daniel engaged in open civil disobedience based on personal conviction and conscience, noting that while Scripture requires prayer, the specific practice of praying at an open window three times daily was not an explicit biblical mandate.",
+     "sources": [
+      "https://www.desiringgod.org/messages/subjection-to-god-and-subjection-to-the-state-part-3"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -176,7 +185,17 @@
     "John Gill"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholic expositors have cited Daniel's declared innocence as an example of God rewarding human uprightness and good works, while Protestant commentators respond that Daniel claimed blamelessness only concerning the specific charge of wrongdoing against the king.",
+     "sources": [
+      "Calvin",
+      "Jamieson-Fausset-Brown"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 23,

@@ -26,7 +26,17 @@
     "Jamieson-Fausset-Brown",
     "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "David acted rightly because believers should repay kindness whenever received, without questioning the other person's hidden motives.",
+     "sources": [
+      "Matthew Henry",
+      "https://www.blueletterbible.org/Comm/mhc/2Sa/2Sa_010.cfm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -146,7 +156,17 @@
     "Geneva Notes",
     "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "War is justified and right when fought in defense of true religion and God's covenant people.",
+     "sources": [
+      "Geneva Notes",
+      "https://biblehub.com/commentaries/2_samuel/10-12.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -217,7 +237,16 @@
     "Keil & Delitzsch"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "The differing casualty counts between the books of Samuel and Chronicles reflect later biblical writers intentionally expanding numbers to magnify David's triumph.",
+     "sources": [
+      "https://www.preceptaustin.org/2-samuel-10-commentary"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 19,

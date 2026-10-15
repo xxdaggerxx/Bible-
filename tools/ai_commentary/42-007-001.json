@@ -229,7 +229,25 @@
     "Matthew Henry",
     "Adam Clarke"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "John did not doubt for himself, but sent his disciples so their doubts would be settled by seeing Jesus firsthand.",
+     "sources": [
+      "https://biblehub.com/commentaries/pulpit/luke/7.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "John himself was wrestling with doubt in prison because Jesus was not bringing the swift political deliverance he had expected.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/luke-7/",
+      "https://biblehub.com/commentaries/pulpit/luke/7.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",

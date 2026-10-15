@@ -8,11 +8,10 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Paul, Silas, and Timothy write together to the local gathering of Christians in Thessalonica. These believers belong securely to God the Father and the Lord Jesus Christ as one spiritual family. Reusing the same greeting from his earlier letter reminds them that timeless truth matters much more than fancy words.",
+   "meaning": "Paul, Silas, and Timothy send this letter to the church in the city of Thessalonica. This local family of believers belongs to God the Father and the Lord Jesus Christ, united in a shared spiritual life. Preaching and letters from leaders were meant to build them up in truth.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes",
+    "Ellicott",
     "https://enduringword.com/bible-commentary/2-thessalonians-1/"
    ],
    "differ": [],
@@ -21,11 +20,11 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Paul greets the church with a prayer for grace, which is God's free and undeserved favor, and peace, which is the inner calm He provides. Both gifts flow directly from God our Father and Jesus Christ together. Remembering God's great goodness gives believers strength to face whatever trials come their way.",
+   "meaning": "Paul greets the believers with grace and peace. Grace is God's free, unearned kindness, and peace is the calm wholeness He puts into troubled hearts. Both the Father and the Lord Jesus Christ are named together as the one divine source of these blessings.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Robertson",
-    "https://enduringword.com/bible-commentary/2-thessalonians-1/",
-    "https://biblehub.com/commentaries/chrysostom/2_thessalonians/1.htm"
+    "https://enduringword.com/bible-commentary/2-thessalonians-1/"
    ],
    "differ": [],
    "other": []
@@ -33,12 +32,12 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "Paul felt a joyful duty to thank God constantly for how these believers were living. Their trust in God was not standing still, but was growing vigorously like a healthy fruit tree. At the same time, their practical love for one another was overflowing like a swelling river.",
+   "meaning": "Paul feels a joyful duty to thank God constantly for the Thessalonian Christians. Their faith is growing strong like a healthy tree, and their love for each other is overflowing like a rising stream. Even in hard times, real spiritual growth comes entirely from God's work in us.",
    "meaning_sources": [
     "Matthew Henry",
     "Wesley",
     "Adam Clarke",
-    "Robertson"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -46,12 +45,12 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "Paul was so encouraged by the Thessalonians that he spoke proudly of them in other Christian assemblies. Even though they faced painful attacks and troubles for following Jesus, they stood firm and kept trusting God. Their patient courage provided a shining pattern for other believers to follow.",
+   "meaning": "Paul and his companions boast about the Thessalonians to other Christian gatherings. They praise their patient endurance and steady trust while facing cruel attacks and hardships. Their steadfast example encourages other believers who are also suffering for their faith.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "Adam Clarke",
-    "Calvin"
+    "Calvin",
+    "Tyndale Study Notes",
+    "https://www.preceptaustin.org/2-thessalonians-1-commentary"
    ],
    "differ": [],
    "other": []
@@ -59,18 +58,27 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "Patient endurance under persecution points forward to the fair judgment God will bring in the end. God uses hardships to train and polish His people, preparing them to enter His heavenly kingdom. Believers do not earn heaven by their pain, but God graciously considers them fit through their union with Christ.",
+   "meaning": "The believers' patient endurance under harsh trials points forward to God's fair judgment. God uses these painful experiences to prepare them for His coming kingdom, for which they are now suffering. Their steady trust shows that God will certainly set everything right in the end.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
+    "Matthew Henry (Concise)",
     "Calvin",
-    "https://learn.ligonier.org/devotionals/the-righteous-judgment-of-god"
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Believers are counted worthy not by earning it through their own suffering, but because Christ's perfect worthiness is credited to them by grace.",
+     "sources": [
+      "https://learn.ligonier.org/devotionals/the-righteous-judgment-of-god",
+      "https://www.preceptaustin.org/2-thessalonians-1-commentary"
+     ]
+    }
+   ],
    "other": [
     {
      "label": "Catholic and Orthodox",
-     "view": "They teach that God's justice is shown when He crowns sufferers with the kingdom as a reward for their own righteous labors and endurance.",
+     "view": "God's justice is displayed when He crowns the righteous with heavenly reward in proportion to their own hard labors and patient suffering.",
      "sources": [
       "https://www.newadvent.org/fathers/23052.htm"
      ]
@@ -80,11 +88,10 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "God's perfect justice ensures that wrong will not triumph forever. It is entirely right and fair for Him to bring distress upon the persecutors who torment His followers. Knowing that God will settle all accounts allows Christians to leave revenge in His hands.",
+   "meaning": "God's justice guarantees that He will personally repay those who persecute His followers. It is right and fair for God to bring trouble on people who cause trouble for others. Christians can let go of revenge, knowing that final justice rests safely in God's hands.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "Calvin",
+    "Jamieson-Fausset-Brown",
     "https://enduringword.com/bible-commentary/2-thessalonians-1/"
    ],
    "differ": [],
@@ -93,12 +100,12 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "God promises lasting relief and rest from all sorrow to His suffering people, shared together with the apostles. This deep rest will not arrive fully in this life, but when the Lord Jesus returns visibly from heaven. He will appear in royal glory, accompanied by His mighty angels who carry out His will.",
+   "meaning": "God will give full relief and rest to His oppressed people, as well as to the apostles who share the same trials. This rest means the loosening of painful tension after long hardship. It will happen when the Lord Jesus is openly revealed from heaven alongside His mighty angels.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
     "Jamieson-Fausset-Brown",
-    "Calvin"
+    "Ellicott",
+    "Matthew Henry (Concise)",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -106,12 +113,12 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "Christ will appear in blazing fire to execute holy justice without any unfair cruelty. He will bring judgment on those who deliberately ignore God and refuse to obey the good news of Jesus. This includes both those who stay in willful pagan ignorance and those who hear the gospel but reject its message.",
+   "meaning": "Jesus will appear in blazing fire to carry out holy justice on those who oppose God. This judgment falls on people who refuse to know God and who reject the good news of Jesus. His holy fire displays His brilliant glory and His pure opposition to sin.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Adam Clarke",
     "Barnes",
-    "Wesley",
-    "Adam Clarke"
+    "Calvin",
+    "https://enduringword.com/bible-commentary/2-thessalonians-1/"
    ],
    "differ": [],
    "other": []
@@ -119,20 +126,28 @@
   {
    "verse": 9,
    "end": 9,
-   "meaning": "Those who persist in rebellion will receive the penalty of everlasting destruction. This ruin does not mean they stop existing, but that they will be cut off forever from the joyful presence of the Lord and His glorious power. Being shut away from all of God's goodness and light is the greatest horror of their punishment.",
+   "meaning": "Those who turn away from Christ will face eternal ruin, permanently shut out from the loving presence of the Lord and His mighty glory. This destruction does not wipe them out of existence, but cuts them off forever from all goodness and hope. Missing God's presence is the deepest sorrow of final judgment.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
     "Wesley",
-    "https://www.thegospelcoalition.org/article/j-i-packer-on-why-annihilationism-is-wrong/"
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [
     {
-     "tradition": "Some evangelicals",
-     "view": "Some hold that eternal destruction means the ungodly are eventually wiped out and cease to exist, rather than undergoing unending conscious torment.",
+     "tradition": "Many evangelicals",
+     "view": "The lost will suffer unending, conscious punishment and separation from God, remaining in existence under His righteous wrath forever.",
      "sources": [
-      "https://biblehub.com/q/what_is_annihilationism.htm",
-      "https://www.preceptaustin.org/2-thessalonians-1-commentary"
+      "https://ag.org/Beliefs/Position-Papers/Final-Judgment",
+      "https://www.thegospelcoalition.org/article/j-i-packer-on-why-annihilationism-is-wrong/"
+     ]
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Eternal destruction means the wicked will finally pass out of existence rather than suffer endless conscious torment.",
+     "sources": [
+      "https://www.preceptaustin.org/2-thessalonians-1-commentary",
+      "https://biblehub.com/q/what_is_annihilationism.htm"
      ]
     }
    ],
@@ -141,12 +156,12 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "On the day Christ returns, His main honor will be displayed in the transformed lives of His holy people. All who have trusted in Him will look upon Him with joyful wonder and awe at the great salvation He provided. The Thessalonian Christians will share in this glory because they believed the truth preached to them.",
+   "meaning": "When Christ returns, His greatness will shine brightly in the lives of all His holy people. Everyone who trusted in Him will look upon Him with wonder and awe. The Thessalonian Christians will take part in that day because they believed the message Paul preached to them.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
+    "Jamieson-Fausset-Brown",
+    "Calvin",
     "Adam Clarke",
-    "Calvin"
+    "https://enduringword.com/bible-commentary/2-thessalonians-1/"
    ],
    "differ": [],
    "other": []
@@ -154,20 +169,20 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "Paul continually prayed that God would make the believers fit for the glorious future to which He invited them. He asked God to carry out every good desire He gives them and bring their faith-filled work to completion by His power. God's mighty strength is what sustains faith from beginning to end.",
+   "meaning": "Paul continually prays that God will help these believers live in a way that matches the noble life He called them to. He asks God to use divine power to bring their good intentions to life and complete every work born of faith. We depend on God's strength to finish the race He began in us.",
    "meaning_sources": [
     "Matthew Henry",
     "Barnes",
-    "Calvin",
-    "Robertson"
+    "Tyndale Study Notes",
+    "https://enduringword.com/bible-commentary/2-thessalonians-1/"
    ],
    "differ": [
     {
      "tradition": "Methodist",
-     "view": "They understand God fulfilling every good desire of His goodness as bringing the believer to a state of complete holiness and love in this life.",
+     "view": "God fulfilling the good pleasure of His goodness refers to entire sanctification, where God's grace creates perfect holiness in the believer's heart.",
      "sources": [
       "Wesley",
-      "https://wesley.nnu.edu/john-wesley/john-wesleys-notes-on-the-bible/notes-on-st-pauls-second-epistle-to-the-thessalonians/"
+      "Benson"
      ]
     }
    ],
@@ -176,11 +191,11 @@
   {
    "verse": 12,
    "end": 12,
-   "meaning": "The ultimate aim of Paul's prayer is that the character and name of the Lord Jesus will be praised through how believers live. When Christians shine with His love, Jesus is honored in them, and they receive lasting dignity in Him. All of this happens solely through the gracious favor of our God and the Lord Jesus Christ.",
+   "meaning": "Paul's prayer aims for the name and character of Jesus to be honored through the believers' faithful lives. At the same time, believers will share in Christ's own honor when He returns. This wonderful exchange happens only because of the generous grace of our God and the Lord Jesus Christ.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin",
+    "Adam Clarke",
+    "Robertson",
+    "Tyndale Study Notes",
     "https://enduringword.com/bible-commentary/2-thessalonians-1/"
    ],
    "differ": [],
@@ -188,5 +203,6 @@
   }
  ],
  "problems": [],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

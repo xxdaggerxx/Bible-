@@ -208,7 +208,24 @@
     "Matthew Henry",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Warnings of losing the land show that people can turn away and forfeit the blessings God sincerely offered them.",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The warning of losing the good land emphasizes the tragedy of covenant unfaithfulness, which motivates God's people to persevere.",
+     "sources": [
+      "Matthew Henry"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   }
  ],

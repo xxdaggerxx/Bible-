@@ -15,7 +15,16 @@
     "Matthew Henry"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Scholars disagree about who is speaking in verses 1-6. Some say it is the prophet himself, some say it is Zion (Jerusalem), and some say it is the faithful people of Israel.",
+     "sources": [
+      "https://studylight.org/commentaries/eng/whe/micah-7.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 2,
@@ -51,7 +60,16 @@
     "Adam Clarke"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "The NET Bible reads the line differently, as \"the day you try to avoid by posting watchmen.\"",
+     "sources": [
+      "https://www.studylight.org/bible/eng/net/micah/7-4.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 5,
@@ -98,7 +116,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some critics think verses 8 and following were added by a later editor after the exile, though others reject this.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/bcc/micah-7.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 9,
@@ -133,7 +160,24 @@
     "Adam Clarke",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The promise reaches from the return from exile on to the church that Christ gathers from all nations.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "These promises point to a future time when God will restore Israel as a nation.",
+     "sources": [
+      "https://www.studylight.org/commentary/micah/7-19.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -145,7 +189,24 @@
     "Geneva Notes",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The promise reaches from the return from exile on to the church that Christ gathers from all nations.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "These promises point to a future time when God will restore Israel as a nation.",
+     "sources": [
+      "https://www.studylight.org/commentary/micah/7-19.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -217,7 +278,25 @@
     "Jamieson-Fausset-Brown",
     "Calvin"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The \"remnant\" who receive this pardon are the people God has chosen by His grace.",
+     "sources": [
+      "Calvin",
+      "https://biblehub.com/commentaries/micah/7-18.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "God's mercy is offered widely, and He is ready to save any sinner who turns back to Him.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

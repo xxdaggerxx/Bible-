@@ -325,8 +325,35 @@
     "Calvin",
     "Wesley"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Some hold that only Achan was put to death, while his children were brought out only to watch the punishment and take warning, because the law forbade killing children for their parents' sins.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Many hold that Achan's children were executed with him because they likely helped conceal the stolen goods in the tent and shared in the guilt of the devoted things.",
+     "sources": [
+      "Matthew Henry",
+      "Calvin"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholic commentary notes that Achan was executed along with his children and herds under the total ban placed upon Jericho.",
+     "sources": [
+      "https://www.newadvent.org/cathen/01455e.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 26,

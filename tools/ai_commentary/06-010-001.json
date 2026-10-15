@@ -146,8 +146,26 @@
     "Matthew Henry",
     "Tyndale Study Notes"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals hold that God supernaturally prolonged the daylight through unusual atmospheric light or local reflection rather than stopping the earth or heavenly bodies.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/dcc/joshua-10.html"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars view the command to the sun as poetic imagery taken from an ancient war song, meaning God gave a swift and complete victory, rather than an astronomical event.",
+     "sources": [
+      "https://www.studylight.org/commentary/joshua/10-13.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 13,

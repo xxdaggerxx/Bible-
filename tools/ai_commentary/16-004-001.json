@@ -50,7 +50,17 @@
     "Keil & Delitzsch",
     "Geneva Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Christians should not copy this prayer for harm, because Jesus commands His followers to love and pray for their persecutors.",
+     "sources": [
+      "Matthew Henry",
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -62,7 +72,17 @@
     "Geneva Notes",
     "Keil & Delitzsch"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Christians should not copy this prayer for harm, because Jesus commands His followers to love and pray for their persecutors.",
+     "sources": [
+      "Matthew Henry",
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -146,7 +166,16 @@
     "Keil & Delitzsch"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars suggest a slight change in the Hebrew text so the verse reads that the neighbors reported what the enemies were plotting against them.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 13,

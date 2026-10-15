@@ -79,7 +79,24 @@
     "Jamieson-Fausset-Brown",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Some hold that the prophet is setting aside physical fasting altogether to replace it with works of mercy.",
+     "sources": [
+      "https://www.studylight.org/commentary/isaiah/58-6.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Anglican",
+     "view": "Physical fasting remains a valuable duty, but going without food is incomplete unless it leads directly to active justice and charity.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ebc/isaiah-58.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

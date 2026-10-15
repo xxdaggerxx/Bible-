@@ -276,7 +276,26 @@
     "Keil & Delitzsch",
     "John Gill"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Some early Methodists believed musical instruments were introduced by King David on his own and were never intended to be used in spiritual Christian worship.",
+     "sources": [
+      "Adam Clarke",
+      "https://www.studylight.org/commentary/2-chronicles/29-25.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Many evangelicals",
+     "view": "God explicitly commanded David and the prophets to use instruments, providing a clear biblical pattern that honors instrumental music in worship today.",
+     "sources": [
+      "Geneva Notes",
+      "https://enduringword.com/bible-commentary/2-chronicles-29/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -382,7 +401,16 @@
     "Jamieson-Fausset-Brown"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some modern critical scholars argue that the remark about Levites being more upright than priests reflects the writer's personal bias rather than historical fact.",
+     "sources": [
+      "https://studylight.org/commentaries/eng/bcc/2-chronicles-29.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 35,

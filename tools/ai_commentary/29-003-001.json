@@ -268,7 +268,25 @@
     "Matthew Henry",
     "Calvin"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Judah and Jerusalem represent the spiritual church of Christ, which is promised continual life and safety in this world and eternal rest in heaven.",
+     "sources": [
+      "Matthew Henry",
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "These promises guarantee a future earthly restoration of the literal nation of Israel to its promised homeland.",
+     "sources": [
+      "https://www.preceptaustin.org/joel-3-commentary"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

@@ -48,7 +48,17 @@
     "John Gill",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "The one who is perfect in knowledge refers to God Himself, who watches and weighs every human word and action.",
+     "sources": [
+      "Wesley",
+      "https://biblehub.com/commentaries/wes/job/36.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -166,7 +176,16 @@
     "Wesley"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars translate this as describing Job's past life, arguing that God had previously brought Job into great freedom and wealth, which ended up making him careless.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/tpc/job-36.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 17,

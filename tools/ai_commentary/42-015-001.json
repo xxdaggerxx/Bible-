@@ -86,7 +86,25 @@
     "Matthew Henry",
     "Wesley"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Some Baptists see the ninety-nine as self-righteous religious leaders left in their spiritual lostness, rather than truly holy people.",
+     "sources": [
+      "https://www.biblehub.com/commentaries/gill/luke/15.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "Methodists understand the ninety-nine as believers who have lived upright lives and do not need the radical turning from gross sin that open outcasts do.",
+     "sources": [
+      "Adam Clarke",
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

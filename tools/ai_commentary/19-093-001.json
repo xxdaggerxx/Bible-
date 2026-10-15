@@ -14,7 +14,16 @@
     "Matthew Henry",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals believe this psalm also looks ahead to a future thousand-year reign of the Messiah on earth, called the Millennium.",
+     "sources": [
+      "https://www.studylight.org/commentary/psalms/93-1.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Orthodox",
@@ -35,7 +44,16 @@
     "Matthew Henry"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine applied 'You are from everlasting' to Christ. Though He was born in time, He is eternal.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801093.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 3,
@@ -66,7 +84,16 @@
     "Matthew Henry"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine saw the boat as the Church and the sea as the world. Christ walks over the waves, and rulers and kings came to believe in Him.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801093.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 5,

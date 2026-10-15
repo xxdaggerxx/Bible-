@@ -14,22 +14,7 @@
     "Jamieson-Fausset-Brown",
     "Ellicott"
    ],
-   "differ": [
-    {
-     "tradition": "Baptist",
-     "view": "John Gill suggests these harmful rules might refer to ceremonial laws that had no lasting life in themselves, or to harsh pagan customs God permitted.",
-     "sources": [
-      "John Gill"
-     ]
-    },
-    {
-     "tradition": "Reformed and Presbyterian",
-     "view": "John Calvin explains these bad rules as human-made religious traditions that people foolishly invent, which only exhaust them and fail to please God.",
-     "sources": [
-      "Calvin"
-     ]
-    }
-   ],
+   "differ": [],
    "other": [
     {
      "label": "Catholic",
@@ -131,7 +116,16 @@
     "Benson"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars note that God ruling with fury is an announcement of inescapable confrontation and judgment rather than a reassuring promise of salvation.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/ezekiel-20/"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 34,
@@ -178,22 +172,7 @@
     "Adam Clarke",
     "Ellicott"
    ],
-   "differ": [
-    {
-     "tradition": "Reformed and Presbyterian",
-     "view": "John Calvin explains the rod as God holding rebels strictly accountable to the terms of the covenant so He can judge their unfaithfulness.",
-     "sources": [
-      "Calvin"
-     ]
-    },
-    {
-     "tradition": "Baptist",
-     "view": "John Gill interprets the rod as God's loving correction and the message of the gospel, leading a chosen group to true repentance.",
-     "sources": [
-      "John Gill"
-     ]
-    }
-   ],
+   "differ": [],
    "other": []
   },
   {

@@ -40,7 +40,16 @@
     "Ellicott"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "The Catholic Church teaches that Mary stayed a virgin all her life. So it understands these 'brothers' as other close relatives, since Hebrew speakers often called any relative a 'brother.'",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 4,
@@ -100,7 +109,18 @@
     "https://enduringword.com/bible-commentary/john-7/"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Old handwritten copies differ here. Some say 'I am not going up' and others say 'I am not yet going up.' Scholars weigh the evidence differently, but most agree there is no real contradiction with verse 10.",
+     "sources": [
+      "Robertson",
+      "https://bible.org/seriespage/10-exegetical-commentary-john-7",
+      "https://biblehub.com/commentaries/ellicott/john/7.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 9,

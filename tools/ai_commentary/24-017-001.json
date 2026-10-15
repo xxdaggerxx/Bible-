@@ -353,8 +353,36 @@
     "Matthew Henry",
     "Ellicott"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Presbyterian and Puritan traditions have preached these verses as an enduring principle, teaching that societies and churches flourish or decline depending on whether they treat the Lord's Day as a holy Sabbath set apart from worldly trade and labour.",
+     "sources": [
+      "Matthew Henry",
+      "Matthew Henry (Concise)"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Other evangelicals treat this strict Sabbath command as a specific covenant test meant only for Old Testament Israel, which does not bind the Christian church under the new covenant.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/jeremiah-17/",
+      "https://www.studylight.org/commentary/jeremiah/17-21.html"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some critical scholars suggest this passage about the Sabbath was not part of Jeremiah's original ministry, but was added later by editors after the exile to encourage the Sabbath reforms described in Ezra and Nehemiah.",
+     "sources": [
+      "https://biblehub.com/commentaries/pulpit/jeremiah/17.htm"
+     ],
+     "carried": true
+    }
+   ]
   }
  ],
  "problems": [

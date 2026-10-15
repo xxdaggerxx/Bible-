@@ -52,7 +52,24 @@
     "Calvin",
     "John Gill"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Cornelius was already born again by the Holy Spirit and had saving faith like Old Testament believers, which is why God accepted his prayers.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "Cornelius did not yet have saving faith in Christ, but God graciously accepted his sincere seeking through prayer and charity.",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

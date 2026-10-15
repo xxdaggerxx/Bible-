@@ -14,8 +14,27 @@
     "Calvin",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Paul planned his journey under the direct impulse and leading of the Holy Spirit, showing his life was framed by God's will.",
+     "sources": [
+      "Calvin",
+      "Geneva Notes"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "It is uncertain whether the phrase refers to the Holy Spirit or Paul's own human spirit, though Luke emphasizes that God led Paul's steps rather than mob violence driving him away.",
+     "sources": [
+      "https://bible.org/book/export/html/21343"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 22,

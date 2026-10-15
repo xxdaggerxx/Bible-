@@ -172,7 +172,25 @@
     "Wesley",
     "https://www.blueletterbible.org/Comm/guzik_david/StudyGuide_Mat/Mat_1.cfm"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Luke records Mary's actual physical descent, while Matthew provides Joseph's legal royal line.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/matthew-1/",
+      "https://www.blueletterbible.org/Comm/guzik_david/StudyGuide_Mat/Mat_1.cfm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Many evangelicals",
+     "view": "Both Matthew and Luke trace Joseph's ancestry, using distinct legal and family tables.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/matthew-1/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -198,7 +216,16 @@
     "https://www.preceptaustin.org/matthew-1-commentary-spurgeon"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars view Matthew's birth story as creative Jewish storytelling rather than historical fact.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/matthew-1/"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 19,

@@ -160,7 +160,24 @@
     "Wesley",
     "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "The permanent rule against eating blood was tied to the Old Testament sacrificial system and ended when Christ shed his blood on the cross.",
+     "sources": [
+      "https://biblehub.com/commentaries/leviticus/3-17.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Christians should still avoid consuming blood because the apostles in Acts 15 repeated this command for the church.",
+     "sources": [
+      "https://www.studylight.org/commentary/leviticus/3-17.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   }
  ],

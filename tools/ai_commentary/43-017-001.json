@@ -56,7 +56,16 @@
     "Matthew Henry (Concise)"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars note that Jesus naming himself \"Jesus Christ\" is unusual in a prayer. They suggest it means \"Jesus as the Christ,\" or that the words may be John's own explanation.",
+     "sources": [
+      "Robertson"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 4,
@@ -91,7 +100,25 @@
     "Barnes",
     "Matthew Henry"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "\"They were Yours\" points to God's choosing before time began. God counted them his own by free grace before they ever believed.",
+     "sources": [
+      "Calvin",
+      "Geneva Notes"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "They were God's because he made them and because they came from Abraham's family. God gave them to Jesus by giving them faith in what he said.",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

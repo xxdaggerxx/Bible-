@@ -27,8 +27,29 @@
     "Adam Clarke",
     "Tyndale Study Notes"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Many commentators identify the man in linen as the preincarnate Christ serving as an intercessory High Priest, while others see him as a high-ranking angel.",
+     "sources": [
+      "Matthew Henry",
+      "Jamieson-Fausset-Brown",
+      "Calvin"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars suggest the seven figures reflect ancient Near Eastern motifs, such as the Babylonian grouping of seven planetary deities or the heavenly scribe god.",
+     "sources": [
+      "https://classic.net.bible.org/bible.php?book=Eze&chapter=9",
+      "https://www.studylight.org/commentaries/eng/ebc/ezekiel-9.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 3,

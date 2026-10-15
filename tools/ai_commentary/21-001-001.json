@@ -14,8 +14,28 @@
     "Wesley",
     "Tyndale Study Notes"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Anglican",
+     "view": "Some read the book as Solomon's genuine repentance in old age, while others see no evidence for his recovery and conclude the author used Solomon's name as a literary figure.",
+     "sources": [
+      "https://biblehub.com/commentaries/ellicott/ecclesiastes/1.htm",
+      "https://www.preceptaustin.org/pdf/62049/"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Most modern scholars view the book as a late, post-exilic work by an unnamed author who wrote in the royal persona of Solomon to explore life's deepest questions.",
+     "sources": [
+      "Keil & Delitzsch",
+      "https://biblehub.com/commentaries/ellicott/ecclesiastes/1.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 2,
@@ -26,7 +46,32 @@
     "Matthew Henry (Concise)",
     "Wesley"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The word for futility points to something fleeting and hard to grasp like vapor, rather than declaring that existence itself has no meaning.",
+     "sources": [
+      "https://learn.ligonier.org/devotionals/vanity-vanities"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Baptist",
+     "view": "The Teacher is emphasizing the brevity and transience of earthly life rather than teaching total meaninglessness.",
+     "sources": [
+      "https://www.desiringgod.org/articles/is-all-really-vanity"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Many evangelicals",
+     "view": "Any life lived apart from God is truly empty and meaningless, leaving people without real purpose until they turn to Him.",
+     "sources": [
+      "https://www.gotquestions.org/all-is-vanity.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",
@@ -173,7 +218,24 @@
     "Geneva Notes",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "The painful, wearisome search for knowledge is God's just punishment for humanity eating from the forbidden tree of knowledge.",
+     "sources": [
+      "https://biblehub.com/commentaries/ecclesiastes/1-13.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Baptist",
+     "view": "The difficult burden of searching is a loving discipline from the Father to lead His children toward holiness.",
+     "sources": [
+      "https://biblehub.com/commentaries/ecclesiastes/1-13.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

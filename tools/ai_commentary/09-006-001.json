@@ -168,7 +168,24 @@
     "Jamieson-Fausset-Brown",
     "Adam Clarke"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "The sacrifice strictly broke the rules of the law by offering female animals away from the tabernacle altar, but God accepted it because of the extraordinary circumstances.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/1-samuel-6/"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Lutheran",
+     "view": "The sacrifice at Beth-shemesh was no violation of the law, because the ark itself was the throne of God's presence and made the ground a valid altar.",
+     "sources": [
+      "Keil & Delitzsch"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

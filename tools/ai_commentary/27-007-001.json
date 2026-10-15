@@ -124,14 +124,6 @@
    ],
    "differ": [
     {
-     "tradition": "Reformed and Presbyterian",
-     "view": "Some older teachers, such as John Calvin, saw the little horn as the line of Roman emperors, while many later Protestants saw it as the Roman papacy.",
-     "sources": [
-      "Calvin",
-      "https://www.ccel.org/ccel/hodge/theology3.iv.iii.vi.html"
-     ]
-    },
-    {
      "tradition": "Methodist",
      "view": "Early Methodist writers generally viewed the little horn as the Roman Catholic papacy or the Turkish empire.",
      "sources": [
@@ -229,13 +221,6 @@
     "Matthew Henry (Concise)"
    ],
    "differ": [
-    {
-     "tradition": "Methodist",
-     "view": "John Wesley understood this coming to the Ancient of Days as Jesus' ascension into heaven, where He was invested with royal authority.",
-     "sources": [
-      "Wesley"
-     ]
-    },
     {
      "tradition": "Reformed and Presbyterian",
      "view": "Many Reformed writers take this scene as Christ's ascension to the Father's right hand rather than His return to earth.",
@@ -386,7 +371,16 @@
     "Jamieson-Fausset-Brown",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals believe these saints cannot be the church, since the enemy defeats them. They see them as believing Israel during a future time of great trouble.",
+     "sources": [
+      "https://www.studylight.org/commentary/daniel/7-14.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -399,7 +393,16 @@
     "Jamieson-Fausset-Brown",
     "Keil & Delitzsch"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals believe these saints cannot be the church, since the enemy defeats them. They see them as believing Israel during a future time of great trouble.",
+     "sources": [
+      "https://www.studylight.org/commentary/daniel/7-14.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -431,13 +434,6 @@
      "sources": [
       "https://www.gotquestions.org/little-horn.html"
      ]
-    },
-    {
-     "tradition": "Methodist",
-     "view": "Historic Methodist commentators like Adam Clarke saw the three uprooted kingdoms as Italian territories given over to the Roman papacy.",
-     "sources": [
-      "Wesley"
-     ]
     }
    ],
    "other": []
@@ -453,15 +449,6 @@
     "Matthew Henry"
    ],
    "differ": [
-    {
-     "tradition": "Reformed and Presbyterian",
-     "view": "Older Reformed commentators applied this verse to papal claims to alter divine laws and feasts, though John Calvin took the phrase as a general symbol for an uncertain period.",
-     "sources": [
-      "Calvin",
-      "https://www.monergism.com/antichrist",
-      "https://www.studylight.org/commentary/daniel/7-25.html"
-     ]
-    },
     {
      "tradition": "Some evangelicals",
      "view": "Dispensationalists interpret this as three and a half literal years of great distress under the future Antichrist.",
@@ -504,7 +491,26 @@
     "Matthew Henry",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The promise began to come true when the gospel spread through the world. It will be complete at the end, and it is a spiritual kingdom, not earthly power for believers.",
+     "sources": [
+      "Calvin",
+      "Geneva Notes"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals believe it will be fulfilled when Christ returns and reigns on earth for a thousand years, followed by the new heavens and earth.",
+     "sources": [
+      "Jamieson-Fausset-Brown",
+      "https://www.studylight.org/commentaries/eng/geb/daniel-7.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

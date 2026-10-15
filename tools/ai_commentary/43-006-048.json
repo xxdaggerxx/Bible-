@@ -344,7 +344,26 @@
     "Adam Clarke",
     "John Gill"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Methodists believe Jesus truly chose all twelve to be his followers, but Judas showed that a chosen person can fall away through unfaithfulness.",
+     "sources": [
+      "Wesley",
+      "https://biblehub.com/commentaries/wes/john/6.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Reformed Christians believe Jesus chose the Twelve only to the office of apostleship, not to eternal salvation, because God's elect can never fall away.",
+     "sources": [
+      "Calvin",
+      "Matthew Henry"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

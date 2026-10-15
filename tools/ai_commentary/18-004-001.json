@@ -76,7 +76,17 @@
     "Benson"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Popular modern teaching",
+     "view": "Some modern prosperity teachers teach a similar view, claiming that real faith always guarantees physical health and wealth, and that severe suffering must come from personal sin or lack of faith.",
+     "sources": [
+      "https://www.blueletterbible.org/Comm/brown_john/Job/Job_04-05.cfm",
+      "https://enduringword.com/bible-commentary/job-4/"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 8,
@@ -222,7 +232,26 @@
     "Jamieson-Fausset-Brown",
     "https://www.studylight.org/commentaries/eng/tpc/job-4.html"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Methodists have often understood this as a direct reference to the fallen angels, who rebelled against God in their folly and lost their original place.",
+     "sources": [
+      "Wesley",
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Reformed writers generally teach that this refers to holy angels, showing that even the highest created spirits have limits and are imperfect when measured against God's absolute holiness.",
+     "sources": [
+      "Geneva Notes",
+      "https://www.studylight.org/commentary/job/4-18.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Catholic",

@@ -93,7 +93,33 @@
     "Jamieson-Fausset-Brown",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "David was carrying out God's ancient judgment against pagan nations long condemned to destruction, finishing the work Saul had left undone.",
+     "sources": [
+      "Matthew Henry",
+      "Geneva Notes"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Anglican",
+     "view": "David acted without any divine command, waging unauthorized and harsh raids to secure plunder and keep his position.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ebc/1-samuel-27.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Pentecostal",
+     "view": "David was acting as a raider fighting for survival and goods rather than God's honor, stepping into a pattern of using violence to protect himself.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/1-samuel-27/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

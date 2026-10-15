@@ -265,7 +265,25 @@
     "John Gill",
     "Matthew Henry"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The promise is fulfilled in Christ's church. His kingdom began small after the return from exile and keeps growing until he comes again on the last day.",
+     "sources": [
+      "Geneva Notes",
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "The kingdom began when the exiles returned and fully began with Christ's first coming. It will be seen at its highest when Christ returns to reign from Zion over the whole earth.",
+     "sources": [
+      "Jamieson-Fausset-Brown"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",

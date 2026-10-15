@@ -26,7 +26,16 @@
     "Ellicott",
     "Keil & Delitzsch"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Methodists emphasize that God's grace changes the heart first so a person can become good, and continuing in obedience increases that goodness and God's favor.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -111,7 +120,17 @@
     "Ellicott"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "The Latin Vulgate translates this verse as praising a poor man who provides for himself over a proud man who lacks bread.",
+     "sources": [
+      "Adam Clarke",
+      "https://biblehub.com/commentaries/pulpit/proverbs/12.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 10,
@@ -170,7 +189,16 @@
     "Jamieson-Fausset-Brown",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Baptists emphasize that God rewarding human works does not mean people earn salvation by their own merit, but shows God's gracious kindness in accepting good works through Christ.",
+     "sources": [
+      "https://biblehub.com/commentaries/proverbs/12-14.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -254,7 +282,16 @@
     "Adam Clarke",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Baptists emphasize that no punishment for sin will ever fall on the righteous, because Christ bore all their punishment in their place.",
+     "sources": [
+      "https://biblehub.com/commentaries/proverbs/12-21.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Catholic",
@@ -322,7 +359,16 @@
     "Jamieson-Fausset-Brown",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Baptists emphasize that the righteous person is more excellent than his neighbor because he has been clothed in the perfect righteousness of Christ.",
+     "sources": [
+      "https://www.studylight.org/commentary/proverbs/12-26.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Catholic",

@@ -36,7 +36,17 @@
     "Jamieson-Fausset-Brown",
     "Matthew Henry"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals take this line to mean that Scripture stands above every other way God shows himself. They see it as a reason to trust all of the Bible.",
+     "sources": [
+      "https://www.blueletterbible.org/Comm/spurgeon_charles/tod/ps138.cfm",
+      "https://enduringword.com/bible-commentary/psalm-138/"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",
@@ -122,7 +132,16 @@
     "Matthew Henry"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some modern translations read the first line differently. The NET has 'The LORD avenges me,' and the NIV has 'will vindicate me' (will clear my name and defend me).",
+     "sources": [
+      "https://biblehub.com/psalms/138-8.htm"
+     ],
+     "carried": true
+    }
+   ]
   }
  ],
  "problems": [

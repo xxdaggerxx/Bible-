@@ -55,7 +55,24 @@
     "Robertson",
     "https://enduringword.com/bible-commentary/matthew-25/"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Reformed Christians understand that the foolish virgins never had true saving grace or spiritual life at all.",
+     "sources": [
+      "https://bible.org/seriespage/ten-virgins-what-it-means-be-ready-matthew-251-13"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "Methodists see the lamp as faith, which quickly dies out unless it is fueled by love.",
+     "sources": [
+      "https://biblehub.com/commentaries/wes/matthew/25.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -110,7 +127,16 @@
     "https://www.desiringgod.org/interviews/the-end-is-near-are-you-ready"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Some early church writers and Catholic commentaries view this sleep as physical death before the final judgment.",
+     "sources": [
+      "https://biblehub.com/commentaries/haydock/matthew/25.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 6,
@@ -273,7 +299,16 @@
      ]
     }
    ],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholic teaching stresses that God expects people to actively cooperate with his gifts and grace through their free will.",
+     "sources": [
+      "https://biblehub.com/commentaries/haydock/matthew/25.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 16,
@@ -352,7 +387,16 @@
     "https://www.thegospelcoalition.org/article/less-talent/"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholic writers note that this equal reward shows God judges each person by what was given, allowing humble believers to reach heaven just as easily as the most gifted.",
+     "sources": [
+      "https://biblehub.com/commentaries/haydock/matthew/25.htm"
+     ],
+     "carried": true
+    }
+   ]
   }
  ],
  "problems": [

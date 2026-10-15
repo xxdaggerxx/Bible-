@@ -197,7 +197,26 @@
     "Calvin",
     "Wesley"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "God ordained this stumbling so that He would protect His chosen elect while leaving hardened unbelievers to their appointed fall.",
+     "sources": [
+      "Geneva Notes",
+      "Calvin",
+      "https://www.desiringgod.org/messages/why-god-laid-a-stone-of-stumbling"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "The statement that many would fall means the rejection was not total, and people stumbled because of their own choice to reject the Messiah.",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

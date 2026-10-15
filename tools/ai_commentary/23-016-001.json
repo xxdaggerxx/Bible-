@@ -15,7 +15,17 @@
     "Matthew Henry",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Some Reformed teachers read the lamb as a sacrifice for God's temple on Mount Zion. They take the command as mockery: Moab would gladly make peace now, but its repentance comes too late.",
+     "sources": [
+      "Calvin",
+      "Geneva Notes"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -72,7 +82,16 @@
     "Matthew Henry",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some read verses 4-5 as end-times prophecy. Jewish people flee the Antichrist and find shelter, and then the Messiah sets up his throne and reigns.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/isaiah-16/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -111,7 +130,18 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many later scholars read it the other way round: Sibmah's wine was so strong it \"struck down,\" or made drunk, the rulers of the nations. This would praise the wine's fame before its loss.",
+     "sources": [
+      "Keil & Delitzsch",
+      "Adam Clarke",
+      "https://biblehub.com/commentaries/ellicott/isaiah/16.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 9,
@@ -175,7 +205,17 @@
     "Matthew Henry"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many scholars think Isaiah is repeating an oracle first given by an earlier prophet, and adding a new time limit.",
+     "sources": [
+      "Keil & Delitzsch",
+      "https://biblehub.com/commentaries/ellicott/isaiah/16.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 14,

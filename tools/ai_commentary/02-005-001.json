@@ -16,7 +16,16 @@
     "Matthew Henry"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Ancient records show that Egyptian workmen often received time off for religious feasts, making the form of this request familiar to Pharaoh even though he rejected the God who asked it.",
+     "sources": [
+      "https://www.preceptaustin.org/exodus-5-commentary"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 2,
@@ -28,7 +37,16 @@
     "Matthew Henry",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Pharaoh's open refusal to know the Lord was his own deliberate choice, marking the first step in his downward path toward a hardened heart.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ghb/exodus-5.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -277,7 +295,16 @@
     "Calvin",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Moses' passionate and almost blunt questioning shows the honest, raw reality of his humanity, which he recorded with absolute truthfulness about himself under divine inspiration.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/whe/exodus-5.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -289,7 +316,16 @@
     "Matthew Henry",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Moses' passionate and almost blunt questioning shows the honest, raw reality of his humanity, which he recorded with absolute truthfulness about himself under divine inspiration.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/whe/exodus-5.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   }
  ],

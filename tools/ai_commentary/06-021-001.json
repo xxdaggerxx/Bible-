@@ -14,7 +14,24 @@
     "John Gill",
     "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The other tribes had grown careless and neglected the Levites until the Levites stepped forward to plead their own case.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Anglican",
+     "view": "The Levites were not forgotten; their request simply came in proper order after the other tribes knew what territory they had to share.",
+     "sources": [
+      "https://biblehub.com/commentaries/pulpit/joshua/21.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -109,7 +126,24 @@
     "Adam Clarke",
     "Matthew Henry"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The Levites were the true owners and proprietors of the cities given to them, not merely guest tenants.",
+     "sources": [
+      "Matthew Henry"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "The Levites held rights only to certain houses and pasture, while other Israelites continued to live in and share the cities.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -121,7 +155,24 @@
     "Wesley",
     "Adam Clarke"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The Levites were the true owners and proprietors of the cities given to them, not merely guest tenants.",
+     "sources": [
+      "Matthew Henry"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "The Levites held rights only to certain houses and pasture, while other Israelites continued to live in and share the cities.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -167,7 +218,17 @@
     "John Gill"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars argue that this list reflects a much later period in Israel's history, because several of these towns were not fully occupied by Israel in Joshua's day.",
+     "sources": [
+      "Keil & Delitzsch",
+      "https://www.preceptaustin.org/joshua-21-commentary"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 20,

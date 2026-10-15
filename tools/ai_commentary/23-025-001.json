@@ -62,7 +62,24 @@
     "Jamieson-Fausset-Brown",
     "Geneva Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Reformed teachers see this feast as the spiritual blessings and comforts of the gospel enjoyed in the church.",
+     "sources": [
+      "https://www.ccel.org/study/Isaiah_25:6-8"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals understand this banquet as a literal earthly feast celebrating Christ's final victory.",
+     "sources": [
+      "https://www.blueletterbible.org/comm/guzik_david/study-guide/isaiah/isaiah-25.cfm"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Catholic",

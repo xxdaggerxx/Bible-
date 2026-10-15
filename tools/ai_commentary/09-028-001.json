@@ -275,7 +275,26 @@
     "Ellicott",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Early Methodist writers suggested the phrase 'be with me' hinted that Saul, though judged with physical death, might have found God's mercy and rest alongside Jonathan in the next life.",
+     "sources": [
+      "Wesley",
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Reformed teachers understand 'with me' simply as entering the state of the dead in the grave, carrying no promise that Saul went to heaven.",
+     "sources": [
+      "Matthew Henry",
+      "https://www.thegospelcoalition.org/article/you-asked-how-do-you-explain-the-witch-from-endor/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

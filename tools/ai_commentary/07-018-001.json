@@ -69,7 +69,16 @@
     "John Gill",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "A leading early Methodist commentator thought the answer truly came from the LORD. Because it came true, he believed Micah's worship was not idol worship. He called it unfair to say the answer was a trick.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -81,7 +90,16 @@
     "Jamieson-Fausset-Brown",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "A leading early Methodist commentator thought the answer truly came from the LORD. Because it came true, he believed Micah's worship was not idol worship. He called it unfair to say the answer was a trick.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -293,8 +311,26 @@
     "Matthew Henry",
     "Tyndale Study Notes"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "A leading early Methodist commentator held that Micah worshipped the true God. To him, 'my gods' means holy objects that stood for God's presence, not idols.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars say the word could be read 'my God,' and that Micah thought he was worshipping the LORD.",
+     "sources": [
+      "https://biblehub.com/commentaries/cambridge/judges/18.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 25,
@@ -386,7 +422,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars think verse 31 was written by a different hand than verse 30. They see the two endings as the endings of two stories joined together.",
+     "sources": [
+      "https://biblehub.com/commentaries/cambridge/judges/18.htm"
+     ],
+     "carried": true
+    }
+   ]
   }
  ],
  "problems": [

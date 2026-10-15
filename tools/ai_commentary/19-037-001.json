@@ -288,7 +288,25 @@
     "Adam Clarke",
     "https://www.blueletterbible.org/Comm/spurgeon_charles/tod/ps037.cfm"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "A true believer may fall into sin for a time. But God's grace brings him back to repentance, and he can never be finally lost.",
+     "sources": [
+      "Matthew Henry"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "The \"fall\" here means falling into trouble, not into sin. Believers stay safe as they keep trusting and obeying God.",
+     "sources": [
+      "Adam Clarke",
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -442,7 +460,24 @@
     "Adam Clarke",
     "Wesley"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "God can make a believer \"perfect\" in heart in this life, saving him from all sin and filling him with His love.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "No one is perfect in themselves. Believers are counted perfect because they are joined to Christ.",
+     "sources": [
+      "Matthew Henry (Concise)"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

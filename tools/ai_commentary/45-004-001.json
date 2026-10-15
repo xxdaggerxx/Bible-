@@ -38,8 +38,37 @@
     "Matthew Henry",
     "https://enduringword.com/bible-commentary/romans-4/"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Christ's own perfect righteousness is credited to the believer's account, and faith is simply the instrument that receives it.",
+     "sources": [
+      "Calvin",
+      "https://learn.ligonier.org/sermons/abraham-justified-faith"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "God graciously accepts the believer's faith itself in place of legal obedience, making faith the sole condition of acceptance.",
+     "sources": [
+      "Wesley",
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Justification is not just a legal declaration of righteousness, but an internal change where God pours real righteousness into the believer's heart.",
+     "sources": [
+      "https://learn.ligonier.org/sermons/abraham-justified-faith",
+      "https://enduringword.com/bible-commentary/romans-4/"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 4,
@@ -144,7 +173,26 @@
     "Ellicott",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Circumcision was a covenant seal given to Abraham and his infant children, which shows that infants of believers belong in the church covenant and should be baptized.",
+     "sources": [
+      "Calvin",
+      "Matthew Henry"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Baptist",
+     "view": "Circumcision sealed only the faith that Abraham personally had before the sign, showing that baptism belongs only to those who have already believed.",
+     "sources": [
+      "Matthew Henry",
+      "Robertson"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

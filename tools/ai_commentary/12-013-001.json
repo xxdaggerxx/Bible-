@@ -238,7 +238,17 @@
     "Keil & Delitzsch",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "The king's lack of zeal and faith was his own failure, and his half-hearted effort directly limited the victories God gave him.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/2-kings-13/",
+      "https://www.studylight.org/commentaries/eng/rbc/2-kings-13.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -265,7 +275,17 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some interpreters suggest the man was not truly dead but only unconscious, and the shock of the fall or the cold cave woke him up.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/dcc/2-kings-13.html",
+      "Keil & Delitzsch"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 22,

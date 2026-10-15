@@ -190,7 +190,24 @@
     "Barnes",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Here the saying mainly praises God's kindness. He keeps adding to what He has begun in His own people. In Matthew 25 the same words are used about the right use of gifts.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "\"Whoever has\" means whoever puts God's grace to use. This is God's fixed rule in dealing with everyone.",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -323,7 +340,24 @@
     "Ellicott",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "True faith, planted by God's Spirit, can never be lost. So those who fall away only seemed to believe.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "This hearer did have root and was in large part changed inside. Yet the thorns slowly choked the word until it bore no fruit.",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -339,7 +373,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some modern critics think the explanation in verses 18-23 reads the story with too much detail. They doubt it is exactly what Jesus first said.",
+     "sources": [
+      "Robertson"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 24,

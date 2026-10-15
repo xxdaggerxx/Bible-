@@ -8,11 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Paul tells the believers that he does not need to write about the exact calendar dates of future events. They had already been taught that God has not revealed the precise hour of Christ's return. Christians should focus on doing their duty in the present rather than guessing dates.",
+   "meaning": "Paul tells the believers that he does not need to write to them about calendar dates or future timetables. They already know that God has not revealed the exact day or hour when Christ will return. Instead of trying to calculate the schedule, believers should stay focused on being prepared every day.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -20,82 +20,9 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "The day of the Lord refers to the time when Christ will openly intervene to judge the world and deliver His people. Jesus Himself taught that this day will arrive without warning, just as a burglar strikes when no one expects him. True believers should therefore stay alert at all times.",
+   "meaning": "The Day of the Lord refers to the final time when Jesus will return to judge evil and rescue His people. That day will arrive suddenly and without warning, just like a burglar breaking in during the middle of the night. Because no warning alarm will sound beforehand, Christians must live in constant readiness.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "https://enduringword.com/bible-commentary/1-thessalonians-5/"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 3,
-   "end": 3,
-   "meaning": "Worldly people will feel safe and assume all is well right before disaster strikes. Sudden ruin will fall upon them like labor pains that grip an expectant mother with no possibility of escape. Their false sense of security will end in swift judgment from God.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "https://enduringword.com/bible-commentary/1-thessalonians-5/"
-   ],
-   "differ": [
-    {
-     "tradition": "Some evangelicals",
-     "view": "The sudden destruction refers specifically to the judgments poured out during the great tribulation before Christ sets up His earthly kingdom.",
-     "sources": [
-      "https://www.studylight.org/commentaries/eng/dcc/1-thessalonians-5.html"
-     ]
-    },
-    {
-     "tradition": "Reformed and Presbyterian",
-     "view": "The sudden ruin pointed first to the destruction of Jerusalem in the first century as a preview of the final day of judgment.",
-     "sources": [
-      "https://learn.ligonier.org/devotionals/answers-for-the-thessalonians"
-     ]
-    }
-   ],
-   "other": []
-  },
-  {
-   "verse": 4,
-   "end": 4,
-   "meaning": "Believers do not live in spiritual darkness or moral ignorance. Because they have been taught the truth of the gospel, Christ's coming will not catch them off guard like a thief in the night. Their clear understanding of God's promises keeps them ready for that great day.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "https://www.preceptaustin.org/1thessalonians_54-5"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 5,
-   "end": 5,
-   "meaning": "Paul reminds the readers that through faith in Christ they belong to the light and the daytime. They are no longer trapped in the darkness of sin and pagan ignorance. Because this is who they are, their daily lives should be open and pleasing to God.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "https://enduringword.com/bible-commentary/1-thessalonians-5/"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 6,
-   "end": 6,
-   "meaning": "Since Christians belong to the daytime, they must not fall into spiritual slumber like the rest of the world. Sleeping here means becoming lazy or indifferent toward God and eternity. Instead, believers are called to stay awake and keep clear, self-controlled minds.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 7,
-   "end": 7,
-   "meaning": "Sleeping and getting drunk are things people normally do under cover of night. Sin thrives in secrecy and carelessness, where people assume nobody sees what they do. Christians, however, have stepped out of the dark and must not act like people who belong to the night.",
-   "meaning_sources": [
+    "Tyndale Study Notes",
     "Matthew Henry",
     "Jamieson-Fausset-Brown"
    ],
@@ -103,13 +30,89 @@
    "other": []
   },
   {
+   "verse": 3,
+   "end": 3,
+   "meaning": "People who do not know God will feel secure and assume nothing bad can happen to them. Yet God's judgment will strike them suddenly and unavoidably, like labor pains coming without warning on a mother. Those who ignore God will find no way to run or escape when that moment arrives.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Matthew Henry"
+   ],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "The sudden destruction refers specifically to the judgments poured out during the great tribulation before Christ sets up His earthly kingdom.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/dcc/1-thessalonians-5.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The sudden ruin pointed first to the destruction of Jerusalem in the first century as a preview of the final day of judgment.",
+     "sources": [
+      "https://learn.ligonier.org/devotionals/answers-for-the-thessalonians"
+     ],
+     "carried": true
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Believers do not live in spiritual darkness or moral blindness, so the Lord's return should never catch them off guard. Those who trust Christ already know this world is passing away and that their Savior could return at any time. Because they know the truth, they can live with watchful hearts instead of being taken by surprise.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "John Gill",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Paul reminds the Christians of who they really are in God's eyes. They belong to the light and the day, meaning they have been saved from ignorance and brought into God's truth. Because darkness and sin are completely foreign to who they are now, their daily conduct should shine brightly.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Adam Clarke",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Since Christians belong to the light, they must not drift into spiritual sleep like the rest of the world. Sleeping here means being careless, lazy, and completely indifferent about eternity. Instead, believers are called to stay awake and keep their minds clear and self-controlled.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Matthew Henry",
+    "Robertson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "In everyday life, people naturally sleep and hold drunken parties under the cover of night. Paul uses this simple fact to show how shameful it is for people belonging to God's daytime to copy habits of the dark. Living recklessly belongs to those who do not know God, not to those who walk in His daylight.",
+   "meaning_sources": [
+    "Ellicott",
+    "John Gill",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
    "verse": 8,
    "end": 8,
-   "meaning": "As people who belong to the day, believers must arm themselves like soldiers on guard. Trusting God and loving others serves as a chest plate to guard the heart against sin. The joyful expectation of final rescue by God shields the mind like a sturdy helmet.",
+   "meaning": "Like soldiers on guard duty, believers must put on spiritual armor to protect themselves from temptation. Trust in God and love for others guard the heart like a sturdy breastplate, while the confident hope of final salvation guards the mind like a strong helmet. This spiritual defense keeps Christians steady as they wait for their Lord.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "https://enduringword.com/bible-commentary/1-thessalonians-5/"
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -117,11 +120,11 @@
   {
    "verse": 9,
    "end": 9,
-   "meaning": "God did not appoint His people to suffer His final anger and punishment. Instead, His eternal plan is for them to receive full salvation through our Lord Jesus Christ. Knowing that God purposed our rescue gives believers courage to fight the good fight.",
+   "meaning": "God never planned for His people to end up under His eternal anger and punishment. Instead, His purpose is for believers to receive complete deliverance and life through our Lord Jesus Christ. This certain promise gives Christians strong courage and hope in every trial.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Calvin"
+    "John Gill"
    ],
    "differ": [
     {
@@ -129,7 +132,8 @@
      "view": "Deliverance from wrath means the church will be taken up to heaven before the tribulation judgments begin on earth.",
      "sources": [
       "https://www.preceptaustin.org/1thessalonians_59-11"
-     ]
+     ],
+     "carried": true
     },
     {
      "tradition": "Reformed and Presbyterian",
@@ -137,7 +141,8 @@
      "sources": [
       "Matthew Henry",
       "Calvin"
-     ]
+     ],
+     "carried": true
     }
    ],
    "other": []
@@ -145,11 +150,11 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "Jesus died as a sacrifice in our place so that we could share His life forever. Whether believers are still alive or have died before His return, both groups will live together with Him in glory. Physical death cannot break a Christian's vital connection with the Lord.",
+   "meaning": "Jesus died on the cross as a sacrifice in our place to pay for our sins and remove our guilt. Because of His death, believers will live with Him forever, whether they are still alive on earth or have already died before He returns. Physical death cannot break the eternal bond that unites a Christian to Christ.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Calvin"
+    "Tyndale Study Notes",
+    "John Gill",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -157,11 +162,11 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "Believers are told to keep comforting and strengthening one another with these truths about Christ's return. The church grows when every member actively helps others mature in faith, hope, and love. Paul commends them because they were already doing this work faithfully.",
+   "meaning": "Paul urges the believers to keep comforting and strengthening one another with these truths about the Lord's return. The church is called to be an active family where everyone helps build up their neighbors in faith. Paul commends them warmly because they are already putting this into practice.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Calvin"
+    "Robertson"
    ],
    "differ": [],
    "other": []
@@ -169,11 +174,11 @@
   {
    "verse": 12,
    "end": 13,
-   "meaning": "Paul urges the church to appreciate their spiritual leaders who work hard, guide them in the Lord, and instruct them in godliness. Church members should hold their pastors in highest regard and love them deeply because of their service for the good of souls. Alongside this respect, Christians must guard against disputes and live in peace with one another.",
+   "meaning": "Paul asks the church to respect and love their spiritual leaders who work hard, guide them in the Lord, and offer gentle correction. Believers should hold these leaders in deep affection, not for personal status, but because of the demanding work they do for God. At the same time, the whole congregation must make every effort to live in harmony with one another.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Calvin"
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -181,11 +186,11 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "Church members must care for one another according to each person's need. Those who break ranks and live disorderly lives need firm warning, while discouraged and weak souls need comfort and gentle support. Toward every person, believers must show steady patience rather than losing their temper.",
+   "meaning": "Caring for one another is a duty for every church member, not just the leaders. Paul directs them to warn the lazy who refuse to work, encourage those who are timid and disheartened, and gently support those who are weak in faith or body. Above all, believers must show patient love toward every person they meet.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Calvin"
+    "Tyndale Study Notes",
+    "John Gill",
+    "Robertson"
    ],
    "differ": [],
    "other": []
@@ -193,11 +198,11 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "Followers of Jesus must never pay back harm with harm, even when they are mistreated. Instead, they should actively seek to do good both to their fellow Christians and to outsiders. Forgiving injuries and pursuing kindness reflects the character of God Himself.",
+   "meaning": "Christians must never take revenge or repay a wrong with another wrong. Instead of getting even, believers are commanded to chase after whatever is kind and beneficial for fellow church members and all people outside the church. Doing good to everyone, even when mistreated, reflects the loving character of Jesus.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin"
+    "Tyndale Study Notes",
+    "Adam Clarke",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -205,11 +210,11 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "Believers are commanded to maintain continuous joy at all times. This joy does not depend on easy circumstances, but rests on God's unchanging goodness and the gifts given in Christ. Even when sorrow arrives, a Christian can rejoice in the Lord.",
+   "meaning": "Believers are called to maintain steady joy in every season of life. This joy does not depend on pleasant circumstances, but rests on God's unchanging goodness, mercy, and presence. Because God never fails, a Christian can always find a reason to rejoice in Him.",
    "meaning_sources": [
     "Matthew Henry",
-    "Calvin",
-    "https://enduringword.com/bible-commentary/1-thessalonians-5/"
+    "Adam Clarke",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -217,10 +222,10 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "Praying without stopping means keeping a steady attitude of dependence on God throughout the day. It includes having regular times of prayer while also living in continual, quiet conversation with the Lord. Prayer acts like breathing for the Christian soul.",
+   "meaning": "Praying without ceasing does not mean kneeling down every single second of the day. Rather, it means keeping an open, ongoing conversation with God throughout our daily tasks. Living in this constant spirit of prayer keeps our hearts close and dependent on the Lord.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes"
+    "Tyndale Study Notes",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -228,11 +233,11 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "Christians should express gratitude to God in every situation, even during hard trials. God works all things together for the good of His children, so there is always reason to thank Him. Giving thanks in every circumstance is God's clear desire for all who belong to Christ Jesus.",
+   "meaning": "Christians should give thanks to God in the middle of whatever happens, whether times are easy or hard. Even in sorrow, God is still at work for our good, giving us reasons to thank Him. Living with a grateful heart is exactly what God desires for everyone who belongs to Christ Jesus.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "https://enduringword.com/bible-commentary/1-thessalonians-5/"
+    "Tyndale Study Notes",
+    "Calvin",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -240,11 +245,11 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "The Holy Spirit works in believers like a burning fire, bringing light, zeal, and spiritual power. Believers put out this fire when they neglect prayer, indulge sinful habits, or ignore the Spirit's promptings. Christians must guard their hearts so they do not dampen the Spirit's warm influence.",
+   "meaning": "The Holy Spirit is often pictured in the Bible as a fire that warms our hearts and fuels our worship. Believers smother this holy flame whenever they ignore the Spirit's guidance, indulge in sin, or coldly suppress worship. Paul warns the church never to dampen the Spirit's active work in their lives.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "https://enduringword.com/bible-commentary/1-thessalonians-5/"
+    "Tyndale Study Notes",
+    "Wesley",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -252,26 +257,26 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "Church members are warned not to look down on messages spoken in God's name. In the early church, this included both inspired speaking and the regular teaching and applying of God's Word. Disregarding biblical instruction starves the soul and dishonors the Lord who gave it.",
+   "meaning": "Prophecy in the early church involved sharing messages and instructions given by the Holy Spirit to build up God's people. Paul warns the believers not to look down on these messages or brush them aside with contempt. God's spoken truth must be welcomed with an open and respectful heart.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "https://enduringword.com/bible-commentary/1-thessalonians-5/"
+    "Tyndale Study Notes",
+    "Robertson",
+    "Ellicott"
    ],
    "differ": [
     {
      "tradition": "Pentecostal",
-     "view": "Prophecy continues today as a supernatural gift of the Holy Spirit to give timely guidance and encouragement, and churches must not look down on it.",
+     "view": "Believers are instructed to value the ongoing spoken gift of prophecy in the church today alongside Scripture.",
      "sources": [
       "https://enduringword.com/bible-commentary/1-thessalonians-5/"
      ]
     },
     {
      "tradition": "Reformed and Presbyterian",
-     "view": "The gift of direct prophecy ended with the apostles, so this verse applies today to the preaching and faithful exposition of Scripture.",
+     "view": "The special gift of prophecy ceased after the apostles, so this verse now applies to honoring the faithful preaching of God's written Word.",
      "sources": [
-      "Calvin",
-      "https://learn.ligonier.org/devotionals/prophecies-and-discernment"
+      "https://learn.ligonier.org/devotionals/prophecies-and-discernment",
+      "Calvin"
      ]
     }
    ],
@@ -280,11 +285,11 @@
   {
    "verse": 21,
    "end": 21,
-   "meaning": "Believers must carefully evaluate every teaching by comparing it to God's written Word, just as an assayer tests metals by fire. True faith does not swallow every claim without checking whether it is true. Once a teaching is proven good and sound, Christians should grasp it firmly and never let it go.",
+   "meaning": "Although believers should not despise prophecy, they must not accept every claim blindly. Just as an assayer tests metal with fire to check for pure gold, Christians must carefully test every message against God's written Word. Once something is proven true and good, they should hold onto it firmly.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin"
+    "Tyndale Study Notes",
+    "John Gill",
+    "Robertson"
    ],
    "differ": [],
    "other": []
@@ -292,11 +297,11 @@
   {
    "verse": 22,
    "end": 22,
-   "meaning": "Whenever a teaching or action is recognized as evil, believers must completely step away from it. Christians should avoid not only obvious wickedness, but anything that carries the taint or look of wrongdoing. Staying far from the edge of sin protects the believer from falling into open rebellion.",
+   "meaning": "Whenever a teaching or action fails the test and is found to be morally wrong, believers must stay far away from it. This command requires Christians to shun every kind and variety of sin, whether false teaching or corrupt behavior. Protecting holiness means leaving no room for evil in our daily lives.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Robertson"
    ],
    "differ": [],
    "other": []
@@ -304,27 +309,28 @@
   {
    "verse": 23,
    "end": 23,
-   "meaning": "Sanctification means being set apart by God and made holy in heart and conduct. Paul prays that the God of peace would renew every part of the believer—spirit, soul, and body—and keep them blameless until Jesus returns. God alone has the power to complete this cleansing work in human lives.",
+   "meaning": "Paul prays that God, the true giver of peace, will sanctify the believers completely, making them holy in every area of life. He asks that their entire person—spirit, soul, and body—be kept blameless until Jesus returns. True holiness is ultimately God's own work in our hearts, not something we can accomplish on our own.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "https://enduringword.com/bible-commentary/1-thessalonians-5/"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Matthew Henry"
    ],
    "differ": [
     {
-     "tradition": "Pentecostal",
-     "view": "Humans are made of three distinct parts: the body, the soul or personality, and the spirit which connects directly with God.",
+     "tradition": "Holiness",
+     "view": "Humans consist of three distinct parts—spirit, soul, and body—and God can make believers completely holy and free from sin in this life.",
      "sources": [
-      "Adam Clarke",
-      "https://enduringword.com/bible-commentary/1-thessalonians-5/"
+      "Scofield",
+      "Adam Clarke"
      ]
     },
     {
      "tradition": "Reformed and Presbyterian",
-     "view": "Spirit and soul are two words for the same inner person, so Paul is simply emphasizing that God sanctifies the whole human being.",
+     "view": "The terms spirit and soul refer to the single immaterial inner life of a person, and complete blamelessness will be realized only when Christ returns.",
      "sources": [
-      "Calvin",
-      "https://enduringword.com/bible-commentary/1-thessalonians-5/"
+      "https://enduringword.com/bible-commentary/1-thessalonians-5/",
+      "Matthew Henry",
+      "Barnes"
      ]
     }
    ],
@@ -333,10 +339,10 @@
   {
    "verse": 24,
    "end": 24,
-   "meaning": "The God who called believers into His family is entirely dependable and will finish what He started. Our confidence of being kept safe and blameless rests on God's unchanging faithfulness, not our own strength. He will surely fulfill every promise He has made to His people.",
+   "meaning": "The God who called the Thessalonians into His family can be fully trusted to keep His promises. Because His character is faithful, He will certainly carry out the work of preserving His children and keeping them holy. Our final security rests on God's unwavering faithfulness rather than our own strength.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
     "Calvin"
    ],
    "differ": [],
@@ -345,10 +351,11 @@
   {
    "verse": 25,
    "end": 25,
-   "meaning": "Paul humbly asks his readers to pray for him and his fellow workers. Even inspired apostles face heavy battles, weariness, and spiritual danger, and they deeply need the prayers of the church. Faithful congregations help their ministers most by lifting them up before God.",
+   "meaning": "Even an apostle like Paul deeply felt his need for the prayers of ordinary church members. He humbly asks his Christian brothers and sisters to lift him and his fellow workers up before the Lord. Ministry requires God's power, so pastors and missionaries constantly need the prayer support of the church.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes"
+    "Adam Clarke",
+    "Robertson"
    ],
    "differ": [],
    "other": []
@@ -356,11 +363,11 @@
   {
    "verse": 26,
    "end": 26,
-   "meaning": "Believers are told to greet each other with a holy kiss, which was the customary, respectful way to welcome friends in ancient cultures. It signified pure family love, peace, and fellowship across all social divisions. Today, Christians show that same warm, sincere love through friendly handshakes and greetings.",
+   "meaning": "Paul asks that a warm, affectionate greeting be given to every believer in the congregation. In the ancient world, a holy kiss was a customary sign of pure family love, honor, and unity among Christians. Believers belong to one spiritual family and should welcome each other with sincere affection.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
     "Jamieson-Fausset-Brown",
-    "Calvin"
+    "Robertson"
    ],
    "differ": [],
    "other": []
@@ -368,11 +375,11 @@
   {
    "verse": 27,
    "end": 27,
-   "meaning": "Paul places the leaders under a solemn oath before the Lord to read this letter aloud to every member of the church. God's message was not meant to be hidden by leaders or kept only for an educated few. Every Christian has both the right and the duty to hear and know the Word of God.",
+   "meaning": "Paul issues a solemn command in the name of the Lord that this letter be read aloud to the entire congregation. He wanted no one, whether young, poor, or uneducated, to miss out on these apostolic teachings. God's Word is meant for all the people, not just a small group of leaders.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
     "Barnes",
-    "Calvin"
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -380,9 +387,9 @@
   {
    "verse": 28,
    "end": 28,
-   "meaning": "Paul concludes his letter by wishing the Thessalonians the grace of the Lord Jesus Christ. Grace refers to God's undeserved kindness, favor, and spiritual help given freely to sinners. Everything in the Christian life begins, continues, and finishes through this overflowing gift of Christ.",
+   "meaning": "Paul closes his letter by asking that the undeserved favor, love, and power of Jesus Christ remain with all the believers. Everything in the Christian life begins with God's grace and is carried through by that same grace to the very end. This warm blessing assures the Thessalonians of Christ's ongoing help in every circumstance.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
     "Adam Clarke",
     "Robertson"
    ],
@@ -391,10 +398,9 @@
   }
  ],
  "problems": [
-  "v. 5: removed sources ['Calvin']",
-  "v. 7: removed sources ['Calvin']",
-  "v. 17: removed sources ['Wesley']",
-  "v. 25: removed sources ['Calvin']"
+  "v. 3: removed sources ['Benson']",
+  "v. 17: removed sources ['Benson']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

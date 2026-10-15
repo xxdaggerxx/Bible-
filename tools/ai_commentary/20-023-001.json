@@ -161,7 +161,25 @@
     "Matthew Henry",
     "John Gill"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Charismatic",
+     "view": "Some charismatic teachers understand the rod as a symbol of loving parental correction and guidance rather than an absolute rule requiring physical punishment.",
+     "sources": [
+      "https://www.samstorms.org/all-articles/post/loving-and-leading-our-children-through-discipline---proverbs-1324"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals teach that while physical discipline is permitted, parents should tailor correction to the child's temperament and avoid any harsh treatment.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/csc/proverbs-23.html",
+      "https://bible.org/seriespage/16-wisdom-and-child-rearing-part-iii"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -172,7 +190,25 @@
     "Matthew Henry",
     "Geneva Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Charismatic",
+     "view": "Some charismatic teachers understand the rod as a symbol of loving parental correction and guidance rather than an absolute rule requiring physical punishment.",
+     "sources": [
+      "https://www.samstorms.org/all-articles/post/loving-and-leading-our-children-through-discipline---proverbs-1324"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals teach that while physical discipline is permitted, parents should tailor correction to the child's temperament and avoid any harsh treatment.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/csc/proverbs-23.html",
+      "https://bible.org/seriespage/16-wisdom-and-child-rearing-part-iii"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -395,7 +431,17 @@
     "Ellicott"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many modern scholars translate the phrase as strange things rather than immoral women, viewing it as a reference to hallucinations and mental confusion caused by heavy drinking.",
+     "sources": [
+      "https://classic.net.bible.org/passage.php?passage=Pro+23%3A29-35",
+      "Keil & Delitzsch"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 34,

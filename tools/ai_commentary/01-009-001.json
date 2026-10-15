@@ -125,7 +125,24 @@
     "Calvin",
     "Matthew Henry"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "This covenant is seen as a stage under the covenant of grace, preserving the natural order so God can carry out His plan to save His people.",
+     "sources": [
+      "https://learn.ligonier.org/devotionals/noahic-covenant"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Baptist",
+     "view": "This covenant is viewed as a general promise of earthly preservation for all creatures, distinct from the covenant of grace in Jesus Christ.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/geb/genesis-9.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

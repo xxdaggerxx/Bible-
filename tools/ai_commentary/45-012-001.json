@@ -15,7 +15,16 @@
     "Ellicott",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Anglican",
+     "view": "Salvation is entirely a gift of grace, but believers must actively use their own free will to accept and work with that grace to present themselves to God.",
+     "sources": [
+      "https://biblehub.com/commentaries/pulpit/romans/12.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Catholic",
@@ -270,7 +279,17 @@
     "Barnes",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "The burning coals symbolize divine judgment, meaning that an enemy who persistently rejects loving kindness is storing up severe punishment from God.",
+     "sources": [
+      "https://www.desiringgod.org/messages/christ-overcame-evil-with-good-do-the-same",
+      "https://www.studylight.org/commentary/romans/12-20.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Popular modern teaching",

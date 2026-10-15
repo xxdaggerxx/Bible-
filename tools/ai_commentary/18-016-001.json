@@ -239,7 +239,17 @@
     "Wesley",
     "https://classic.net.bible.org/verse.php?book=Job&chapter=16&verse=19"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals see this heavenly witness and advocate as a direct pointer to Jesus Christ, who speaks to the Father on our behalf.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/job-16/",
+      "https://biblehub.com/job/16-19.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Catholic",
@@ -270,7 +280,24 @@
     "Adam Clarke",
     "https://ca.thegospelcoalition.org/columns/ad-fontes/5-reasons-to-read-the-book-of-job/"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Some Baptists see an early promise of the Messiah here, taking the phrase 'Son of man' to mean Christ pleading for His people before God.",
+     "sources": [
+      "https://www.studylight.org/bible/eng/nlt/job/16-21.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Some Presbyterians take this as Job simply wishing he could present his own defense directly to God as one man does with another.",
+     "sources": [
+      "https://www.studylight.org/bible/eng/nlt/job/16-21.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

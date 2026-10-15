@@ -15,13 +15,6 @@
    ],
    "differ": [
     {
-     "tradition": "Methodist",
-     "view": "John Wesley taught that Ananias was not a true believer at all, because genuine believers in the early church were completely united in heart and mind.",
-     "sources": [
-      "Wesley"
-     ]
-    },
-    {
      "tradition": "Reformed and Presbyterian",
      "view": "Some Reformed teachers hold that Ananias and Sapphira were genuine believers whose earthly lives were cut short as a severe chastisement, while their souls remained saved.",
      "sources": [
@@ -65,13 +58,6 @@
     "Ellicott"
    ],
    "differ": [
-    {
-     "tradition": "Methodist",
-     "view": "Wesley saw the early church community as having fully given up private goods, viewing Ananias's action as the first sinful attempt to reintroduce private ownership.",
-     "sources": [
-      "Wesley"
-     ]
-    },
     {
      "tradition": "Many evangelicals",
      "view": "Most evangelicals teach that giving up property was entirely voluntary, meaning believers were free to keep their possessions without guilt.",
@@ -151,7 +137,16 @@
     "John Gill",
     "Matthew Henry"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "If they were true Christians, they did not lose their salvation. Their punishment was for this life only.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/acts-5/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

@@ -115,7 +115,25 @@
     "Tyndale Study Notes",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "The placement of this command immediately after the deaths suggests that Nadab and Abihu had been drinking when they offered unauthorized fire.",
+     "sources": [
+      "https://www.biblehub.com/commentaries/ellicott/leviticus/10.htm",
+      "https://enduringword.com/bible-commentary/leviticus-10/"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Anglican",
+     "view": "Some scholars note there is no certain proof the two sons were drunk, viewing this statute simply as a general rule for sanctuary order.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/dcb/leviticus-10.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -232,7 +250,16 @@
     "Benson"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Scholars suggest that eating the purification offering removed magical ideas common in ancient religions, showing that cleansing came only from God's word rather than the ritual meat itself.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/dcc/leviticus-10.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 19,

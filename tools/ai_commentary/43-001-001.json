@@ -110,7 +110,25 @@
     "Barnes",
     "Adam Clarke"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "This light reaches every person as conscience, a sense of right and wrong. It is graciously given by Christ to show people their sin, and if people did not resist it, it would grow brighter and brighter.",
+     "sources": [
+      "Wesley",
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "This verse speaks only of the common light of reason and conscience that all people have. It is not saving grace offered equally to everyone. Only God's Spirit opens heaven to those he has chosen.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -146,7 +164,24 @@
     "Barnes",
     "Wesley"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "No one can believe unless God has first given them new birth. Faith itself flows from this new birth, and it is God's gift from heaven.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "The moment people believe, they become God's children. Then God sends the Spirit of his Son into their hearts, so they cry out, \"Father.\"",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -158,7 +193,24 @@
     "Barnes",
     "John Gill"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "No one can believe unless God has first given them new birth. Faith itself flows from this new birth, and it is God's gift from heaven.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "The moment people believe, they become God's children. Then God sends the Spirit of his Son into their hearts, so they cry out, \"Father.\"",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -219,7 +271,16 @@
     "Barnes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Older translations say \"the only begotten Son\" here. Robertson says the best old manuscripts read \"God only begotten\" instead, which is the basis for the BSB's \"who is Himself God.\"",
+     "sources": [
+      "Robertson"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 19,

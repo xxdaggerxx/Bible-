@@ -95,7 +95,17 @@
     "John Gill",
     "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The phrase 'breath of His mouth' refers to spoken words rather than a distinct proof text for the person of the Holy Spirit.",
+     "sources": [
+      "Calvin",
+      "https://www.studylight.org/commentary/psalms/33-6.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",
@@ -179,7 +189,16 @@
     "Geneva Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "The one truly blessed nation is the heavenly city of God, chosen entirely by His gift of grace rather than human merit.",
+     "sources": [
+      "https://www.ccel.org/ccel/schaff/npnf108.ii.XXXIII.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 13,

@@ -197,7 +197,17 @@
     "Adam Clarke",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "Many evangelicals believe Paul was describing his personal bond with converts he led to Christ, not establishing an official church title or religious office of 'father.'",
+     "sources": [
+      "https://www.catholic.com/magazine/blog/protestants-fight-back-on-call-no-man-father",
+      "https://www.gotquestions.org/spiritual-father.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Catholic",
@@ -266,7 +276,16 @@
     "Adam Clarke",
     "Matthew Henry"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Charismatic",
+     "view": "Charismatics emphasize that this power includes supernatural healings, signs, wonders, and deliverance from demonic spirits during gospel preaching.",
+     "sources": [
+      "https://www.studylight.org/commentary/1-corinthians/4-20.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

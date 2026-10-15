@@ -91,7 +91,33 @@
     "John Gill",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Atonement comes solely through God's covenant mercy and truth revealed in Christ, never through human good deeds or charity.",
+     "sources": [
+      "https://biblehub.com/commentaries/proverbs/16-6.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "A person's merciful and truthful life serves as a fruit of repentance that prepares the heart to receive God's pardon.",
+     "sources": [
+      "Wesley",
+      "https://biblehub.com/commentaries/proverbs/16-6.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Lutheran",
+     "view": "Scripture gives good works an atoning or covering role in a broad sense, seeing them as the necessary evidence of thankful, compassionate love.",
+     "sources": [
+      "Keil & Delitzsch"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Catholic",
@@ -422,7 +448,26 @@
     "Keil & Delitzsch",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Anglican",
+     "view": "Casting lots was an Old Testament method of determining God's will that ceased after Pentecost, so the church should no longer practice it.",
+     "sources": [
+      "https://biblehub.com/proverbs/16-33.htm",
+      "https://biblehub.com/commentaries/proverbs/16-33.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "This verse teaches God's total control over every seemingly random event, and lots may still be used prayerfully to resolve weighty matters that cannot otherwise be decided.",
+     "sources": [
+      "Matthew Henry",
+      "https://learn.ligonier.org/devotionals/lord-over-chance"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   }
  ],

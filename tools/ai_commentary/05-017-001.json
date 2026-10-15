@@ -117,7 +117,16 @@
     "Calvin",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Rulers are placed under God's law rather than above it, providing the foundation for constitutional government where the law governs the king.",
+     "sources": [
+      "https://learn.ligonier.org/devotionals/king-and-law"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -130,7 +139,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Some Catholic commentators interpret this verse as specifically forbidding military alliances with Egypt to secure cavalry, rather than an invasion or physical relocation.",
+     "sources": [
+      "https://www.newadvent.org/bible/deu017.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 17,
@@ -154,7 +172,17 @@
     "Keil & Delitzsch"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "The ancient Greek translation of the phrase for 'a copy of this law' gave rise to the title Deuteronomy, which literally means 'second law' or repetition of the law.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ebc/deuteronomy-17.html",
+      "https://www.preceptaustin.org/deuteronomy-17-commentary"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 20,

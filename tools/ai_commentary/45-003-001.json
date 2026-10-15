@@ -15,7 +15,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars understand the oracles of God to mean specifically God's covenant promises or predictions of the Messiah, rather than the entire Old Testament.",
+     "sources": [
+      "https://classic.net.bible.org/bible.php?book=rom&chapter=3"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 2,
@@ -282,7 +291,16 @@
     "Adam Clarke",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "All people sinned in Adam as their covenant head, sharing both his guilt and an inherited sinful nature.",
+     "sources": [
+      "https://biblehub.com/commentaries/romans/3-23.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -310,7 +328,24 @@
     "Scofield",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Christ died as a propitiation to appease an offended God, upholding divine justice while making real forgiveness possible.",
+     "sources": [
+      "https://biblehub.com/commentaries/wes/romans/3.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Christ's death was a propitiatory sacrifice that bore the wrath of God on behalf of believers to satisfy divine justice.",
+     "sources": [
+      "https://www.thegospelcoalition.org/essay/propitiation/"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",
@@ -408,7 +443,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "The question whether God is the God of Jews only indicates that works of the law refers to the Jewish ceremonial code of Moses.",
+     "sources": [
+      "https://www.catholic.com/audio/tjap/faith-alone-what-everybody-gets-wrong"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 31,

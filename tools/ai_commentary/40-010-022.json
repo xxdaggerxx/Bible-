@@ -15,7 +15,24 @@
     "Calvin",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Holding on to the end is the mark of a true believer. No true child of God can lose salvation, and those who fall away show they were never truly rescued.",
+     "sources": [
+      "https://www.monergism.com/perseverance-enduring-end-matthew-1022"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "The verse is a real warning: those who do not hold on to faith and a good conscience until death have no hope of entering God's kingdom.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -102,7 +119,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "A few scholars have thought the One to fear here is the devil, the tempter, rather than God.",
+     "sources": [
+      "Robertson"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 29,

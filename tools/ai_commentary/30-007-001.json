@@ -36,7 +36,25 @@
     "John Gill",
     "Adam Clarke"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Believers in this tradition teach that God's eternal decree never changes, so the Bible uses words about God relenting to describe how His outward actions look to human beings.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/cal/amos-7.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Many evangelicals",
+     "view": "Many Christians take these words more simply, believing that God truly responds to earnest prayer by altering what He decides to do in history.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/amos-7/",
+      "https://www.studylight.org/commentaries/eng/dcc/amos-7.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -81,7 +99,16 @@
     "Ellicott"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars note that the rare Hebrew word here may mean tin rather than a plumb line, presenting a vision of a flimsy tin wall instead of a measuring tool.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ubc/amos-7.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 8,

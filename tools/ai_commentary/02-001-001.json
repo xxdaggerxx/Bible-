@@ -222,7 +222,25 @@
     "Adam Clarke",
     "https://biblehub.com/commentaries/pulpit/exodus/1.htm"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Many in this tradition teach that the midwives told an untrue excuse, meaning that while their refusal to murder was holy, their deception was sinful and forgiven only by God's grace.",
+     "sources": [
+      "Geneva Notes"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals hold that the midwives spoke the literal truth without lying, because the laboring Hebrew mothers truly experienced unusually quick births under God's special blessing.",
+     "sources": [
+      "Adam Clarke",
+      "https://www.blueletterbible.org/Comm/archives/guzik_david/StudyGuide_Exd/Exd_1.cfm"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Catholic",

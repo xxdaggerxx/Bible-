@@ -254,7 +254,24 @@
     "Calvin",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Methodists believe people have genuine freedom to resist and reject the Holy Spirit's convicting work.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Reformed Christians believe that while all people naturally resist the Spirit, God's grace overcomes this resistance in the elect.",
+     "sources": [
+      "Matthew Henry"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

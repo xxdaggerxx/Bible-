@@ -15,7 +15,18 @@
     "Calvin"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many modern scholars think chapters 10–12 were written after the events they describe, in the second century BC. Daniel 11 is so detailed that they treat it as history, not prediction.",
+     "sources": [
+      "Keil & Delitzsch",
+      "https://www.studylight.org/commentaries/eng/tpc/daniel-10.html",
+      "https://www.preceptaustin.org/daniel_10_commentary"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 2,
@@ -61,7 +72,19 @@
     "Ellicott",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "This is a great angel in human form, sent from heaven. The details are meant to show he is no ordinary man, not to picture Christ's priesthood.",
+     "sources": [
+      "Calvin",
+      "Geneva Notes",
+      "Jamieson-Fausset-Brown",
+      "https://classic.net.bible.org/passage.php/o/w/passage.php?passage=Dan+10%3A5%2C6%2C18"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -74,7 +97,19 @@
     "Ellicott",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "This is a great angel in human form, sent from heaven. The details are meant to show he is no ordinary man, not to picture Christ's priesthood.",
+     "sources": [
+      "Calvin",
+      "Geneva Notes",
+      "Jamieson-Fausset-Brown",
+      "https://classic.net.bible.org/passage.php/o/w/passage.php?passage=Dan+10%3A5%2C6%2C18"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -162,8 +197,39 @@
     "Ellicott",
     "Keil & Delitzsch"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The \"prince of Persia\" was the Persian king Cambyses, who blocked the building of the temple. God's angel worked against him to stop him harming the Jews even more.",
+     "sources": [
+      "Calvin",
+      "Geneva Notes",
+      "Matthew Henry"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Michael is not a created angel but Christ himself, the head of the angels.",
+     "sources": [
+      "Geneva Notes",
+      "Wesley",
+      "https://www.studylight.org/commentary/daniel/10-13.html"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Popular modern teaching",
+     "view": "Some teach that certain evil spirits rule over places, and that believers should pray against them by name to break their hold. Others answer that Daniel did not even know about this battle.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/dcc/daniel-10.html",
+      "https://biblehub.com/q/Significance_of_Prince_in_Daniel_10_20.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 14,
@@ -175,7 +241,17 @@
     "Jamieson-Fausset-Brown",
     "Keil & Delitzsch"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "\"The latter days\" point mainly to the future of the nation of Israel at the end of this age, before Christ returns. The church does not replace Israel in this promise.",
+     "sources": [
+      "Jamieson-Fausset-Brown",
+      "https://www.preceptaustin.org/daniel_10_commentary"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -250,7 +326,18 @@
     "Ellicott",
     "Keil & Delitzsch"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The fight is against the human kings of Persia. God would hold back their cruelty, and later Alexander's, to protect his people.",
+     "sources": [
+      "Calvin",
+      "Geneva Notes",
+      "Matthew Henry"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -262,7 +349,18 @@
     "Jamieson-Fausset-Brown",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "\"Michael your prince\" is Christ, the true protector and head of his people.",
+     "sources": [
+      "Wesley",
+      "Geneva Notes",
+      "https://www.studylight.org/commentary/daniel/10-21.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   }
  ],

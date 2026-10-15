@@ -319,7 +319,16 @@
     "Tyndale Study Notes",
     "Wesley"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "The cup is a lasting sign and memorial of Christ's blood, shed to set up the new covenant. All who believe in Him may receive its gracious promises.",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   }
  ],

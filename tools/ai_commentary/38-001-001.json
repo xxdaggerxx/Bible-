@@ -123,7 +123,28 @@
     "Tyndale Study Notes",
     "Adam Clarke"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "The rider among the myrtles is the eternal Son of God appearing in human form as the Angel of the Lord before His birth in Bethlehem.",
+     "sources": [
+      "Matthew Henry",
+      "Jamieson-Fausset-Brown",
+      "Adam Clarke",
+      "https://enduringword.com/bible-commentary/zechariah-1/"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "The rider is a high-ranking created angel leading the patrol, distinct from the Angel of the Lord who appears alongside him.",
+     "sources": [
+      "Keil & Delitzsch",
+      "https://biblehub.com/commentaries/zechariah/1-11.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

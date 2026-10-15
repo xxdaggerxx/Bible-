@@ -217,7 +217,24 @@
     "Wesley",
     "Geneva Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Abraham gave very meager supplies, obeying God's command half-heartedly because he was so grieved.",
+     "sources": [
+      "https://learn.ligonier.org/devotionals/god-rescues-ishmael"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Many evangelicals",
+     "view": "Abraham gave what was customary for a journey to the next well, trusting God entirely to take care of them.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/genesis-21/"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",

@@ -14,8 +14,27 @@
     "Benson",
     "Calvin"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some hold that the sons of God were fallen angels who took human bodies and married human women to corrupt the human race.",
+     "sources": [
+      "https://bible.org/seriespage/7-sons-god-and-daughters-men-genesis-61-8",
+      "https://www.blueletterbible.org/Comm/archives/guzik_david/StudyGuide2017-Gen/Gen-6.cfm"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Some Catholic commentators reject the Sethite view because daughters of men naturally means humanity in general, and note that these unions occurred both before and after the flood.",
+     "sources": [
+      "https://www.catholic.com/magazine/online-edition/7-mysteries-about-the-nephilim"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 2,
@@ -196,7 +215,16 @@
     "Keil & Delitzsch",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some hold that blameless in his generations means Noah's physical bloodline remained pure from demonic intermarriage.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/genesis-6/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

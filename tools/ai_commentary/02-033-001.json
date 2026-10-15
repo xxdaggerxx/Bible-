@@ -231,7 +231,25 @@
     "Tyndale Study Notes",
     "Adam Clarke"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "God's words express His absolute right to choose whom He will save and show mercy to, based entirely on His own sovereign will.",
+     "sources": [
+      "Matthew Henry",
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "This statement refers to God's sovereign choice to spare the nation of Israel after their idolatry, rather than a decree about individual salvation.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

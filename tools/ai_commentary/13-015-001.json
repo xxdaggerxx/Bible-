@@ -349,7 +349,24 @@
     "Matthew Henry",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Charismatic",
+     "view": "David's unrestrained dancing before the Lord provides a biblical model for outward, bodily, and deeply emotional expression in personal and corporate worship.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/1-chronicles-15/"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Michal's reaction highlights the divide between worldly pride and godly devotion, without setting a precedent for undisciplined or physical displays in regular church worship.",
+     "sources": [
+      "Matthew Henry"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   }
  ],

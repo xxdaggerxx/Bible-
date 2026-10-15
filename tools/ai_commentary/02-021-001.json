@@ -259,7 +259,17 @@
     "Matthew Henry"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars note the ancient Greek translation read this as a fine if the baby was not yet fully formed, while many modern readers take the verse as describing a miscarriage where only the mother's survival prevents a murder charge.",
+     "sources": [
+      "Keil & Delitzsch",
+      "https://www.biblehub.com/commentaries/ellicott/exodus/21.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 23,
@@ -269,7 +279,25 @@
     "Keil & Delitzsch",
     "Matthew Henry"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "The Baptist tradition emphasizes that Jesus replaced this civil principle of retaliation with a higher standard of personal mercy and forgiveness in Matthew 5:38.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ghb/exodus-21.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The Reformed tradition distinguishes between private revenge, which Christ forbade, and the civil magistrate's duty to punish crimes with fair, proportional penalties.",
+     "sources": [
+      "Matthew Henry",
+      "https://www.studylight.org/commentaries/eng/teb/exodus-21.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -281,7 +309,25 @@
     "Wesley",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "The Baptist tradition emphasizes that Jesus replaced this civil principle of retaliation with a higher standard of personal mercy and forgiveness in Matthew 5:38.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ghb/exodus-21.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The Reformed tradition distinguishes between private revenge, which Christ forbade, and the civil magistrate's duty to punish crimes with fair, proportional penalties.",
+     "sources": [
+      "Matthew Henry",
+      "https://www.studylight.org/commentaries/eng/teb/exodus-21.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -291,7 +337,25 @@
    "meaning_sources": [
     "John Gill"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "The Baptist tradition emphasizes that Jesus replaced this civil principle of retaliation with a higher standard of personal mercy and forgiveness in Matthew 5:38.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ghb/exodus-21.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The Reformed tradition distinguishes between private revenge, which Christ forbade, and the civil magistrate's duty to punish crimes with fair, proportional penalties.",
+     "sources": [
+      "Matthew Henry",
+      "https://www.studylight.org/commentaries/eng/teb/exodus-21.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

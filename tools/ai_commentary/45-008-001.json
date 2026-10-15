@@ -14,16 +14,7 @@
     "Jamieson-Fausset-Brown",
     "Tyndale Study Notes"
    ],
-   "differ": [
-    {
-     "tradition": "Methodist",
-     "view": "Wesley taught that this freedom from condemnation continues as long as believers do not give way to sin and keep fighting against all known evil.",
-     "sources": [
-      "Wesley",
-      "https://ccel.org/ccel/wesley/sermons.all.html"
-     ]
-    }
-   ],
+   "differ": [],
    "other": []
   },
   {
@@ -336,7 +327,16 @@
     "Barnes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Popular modern teaching",
+     "view": "The Spirit's groans that cannot be uttered refer to praying in the spiritual gift of tongues.",
+     "sources": [
+      "https://www.preceptaustin.org/romans_826-27"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 27,

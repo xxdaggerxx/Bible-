@@ -105,7 +105,26 @@
     "Ellicott",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "Elihu is claiming to speak by the Holy Spirit as a messenger sent with special revelation from God.",
+     "sources": [
+      "Jamieson-Fausset-Brown",
+      "https://biblehub.com/commentaries/job/32-8.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Elihu is speaking of the human mind and reasoning ability that God breathes into every person at creation.",
+     "sources": [
+      "Matthew Henry",
+      "Keil & Delitzsch"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

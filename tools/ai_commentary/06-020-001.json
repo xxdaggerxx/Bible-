@@ -90,7 +90,25 @@
     "Keil & Delitzsch",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "The death of the high priest pictures the death of Jesus Christ, which frees believers from the penalty of sin.",
+     "sources": [
+      "Jamieson-Fausset-Brown",
+      "Keil & Delitzsch"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "The high priest's death was not a picture of Christ, but a national event of mourning where personal grudges were set aside.",
+     "sources": [
+      "https://biblehub.com/commentaries/joshua/20-6.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

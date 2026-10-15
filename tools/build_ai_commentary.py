@@ -25,6 +25,10 @@ Usage:
       writes), eight parts at a time. Carries on where any earlier run left off.
   ANTHROPIC_API_KEY=... python3 build_ai_commentary.py chapter <work> <out> "Acts 2" ...
       Runs parts one at a time, straight away (full price), e.g. to redo ones the batch run couldn't finish.
+  python3 build_ai_commentary.py carry <out> <git revision>
+      After a rewrite: keeps the earlier version's "Where Christians differ" and "Other views" where the new note has none.
+  OPENROUTER_API_KEY=... python3 build_ai_commentary.py disputed <out>
+      Drops difference lines that name a commentator, and researches the well-known disputed verses afresh.
   python3 build_ai_commentary.py pack <out> app/src/main/assets/commentaries/ai.db.xz
       Turns the finished notes into the commentary database the app reads: entries(start, end, body).
 
@@ -784,6 +788,158 @@ def cmd_pack(out, target):
         os.remove(path)
 
 
+# ---------- carry over (2.12) ----------
+
+def cmd_carry(out, rev):
+    """Where a rewritten note (VERSION 2) has no "Where Christians differ" or "Other views", keeps those of the first
+    version's notes on the same verses (from git revision [rev]). They were researched from each tradition's own
+    teachers and their sources checked; the rewrite's stricter rule (no commentator's opinion as a church's view)
+    left out many real differences, such as Acts 2:4 or 1 Timothy 2:12."""
+    import subprocess
+    carried = 0
+    for f in sorted(os.listdir(out)):
+        if not re.match(r"\d\d-\d{3}-\d{3}\.json$", f):
+            continue
+        path = os.path.join(out, f)
+        new = json.load(open(path))
+        try:
+            old = json.loads(subprocess.run(["git", "show", f"{rev}:tools/ai_commentary/{f}"], capture_output=True,
+                                            check=True, cwd=ROOT).stdout)
+        except subprocess.CalledProcessError:
+            continue
+        for n in new["notes"]:
+            olds = [o for o in old["notes"] if o["verse"] <= n["end"] and o["end"] >= n["verse"]]
+            for key, label in (("differ", "tradition"), ("other", "label")):
+                if n[key]:
+                    continue
+                seen = set()
+                for o in olds:
+                    for q in o.get(key, []):
+                        if q[label] not in seen:
+                            seen.add(q[label])
+                            n[key].append(dict(q, carried=True))
+                            carried += 1
+        json.dump(new, open(path, "w"), indent=1, ensure_ascii=False)
+    print(f"{carried} points carried over from {rev}")
+
+
+# ---------- disputed verses (2.12) ----------
+
+COMMENTATORS = re.compile(r"\b(Ellicott|Gill|Benson|Calvin|Wesley|Matthew Henry|Barnes|Clarke|Scofield|Lightfoot|Keil|"
+                          r"Delitzsch|Robertson|Jamieson|Spurgeon|Tyndale|Geneva)\b")
+
+# Verses whose reading is well known to divide Protestant churches, with the question at stake.
+DISPUTED = {
+    "Genesis 1:5": "the days of creation", "Exodus 20:8": "the Sabbath today", "Malachi 3:10": "tithing today",
+    "Isaiah 53:5": "healing in the atonement", "Daniel 9:27": "the seventieth week and the end times",
+    "Matthew 3:11": "baptism with the Holy Spirit and fire", "Matthew 16:18": "the rock and the church",
+    "Matthew 19:9": "divorce and remarriage", "Matthew 24:40": "the rapture", "Matthew 26:26": "the Lord's Supper",
+    "Matthew 28:19": "baptism", "Mark 16:16": "baptism and salvation", "Mark 16:17": "signs and spiritual gifts today",
+    "Luke 22:19": "the Lord's Supper", "John 3:5": "born of water and the Spirit", "John 6:37": "election",
+    "John 6:44": "God's drawing and free will", "John 6:54": "eating his flesh: the Lord's Supper",
+    "John 10:28": "eternal security", "John 15:6": "falling away", "John 20:22": "receiving the Spirit",
+    "John 20:23": "forgiving sins", "Acts 1:5": "baptism with the Holy Spirit", "Acts 2:4": "speaking in tongues",
+    "Acts 2:17": "the last days and prophecy", "Acts 2:38": "baptism and forgiveness", "Acts 2:39": "infant baptism and the promise",
+    "Acts 8:16": "receiving the Spirit after baptism", "Acts 10:46": "tongues as evidence", "Acts 16:33": "household baptism",
+    "Acts 19:6": "laying on of hands and tongues", "Acts 22:16": "baptism washing away sins",
+    "Romans 5:12": "original sin", "Romans 6:4": "baptism", "Romans 7:14": "the Christian and sin",
+    "Romans 8:29": "foreknowledge and predestination", "Romans 9:13": "election", "Romans 9:18": "God's choice and hardening",
+    "Romans 11:26": "the future of Israel", "Romans 14:5": "special days", "1 Corinthians 11:5": "head coverings",
+    "1 Corinthians 11:24": "the Lord's Supper", "1 Corinthians 12:10": "spiritual gifts today",
+    "1 Corinthians 12:13": "baptism in the Spirit", "1 Corinthians 13:10": "when gifts cease",
+    "1 Corinthians 14:2": "tongues", "1 Corinthians 14:34": "women speaking in church",
+    "1 Corinthians 15:29": "baptism for the dead", "2 Corinthians 5:21": "imputed righteousness",
+    "Galatians 3:27": "baptism", "Ephesians 1:4": "election", "Ephesians 1:5": "predestination",
+    "Ephesians 2:8": "faith as a gift", "Ephesians 4:11": "apostles and prophets today", "Ephesians 5:23": "husband and wife",
+    "Philippians 2:12": "working out salvation", "Colossians 2:12": "baptism", "1 Thessalonians 4:17": "the rapture",
+    "1 Thessalonians 5:23": "entire sanctification", "1 Timothy 2:4": "God's will that all be saved",
+    "1 Timothy 2:12": "women teaching and leading", "1 Timothy 3:2": "the overseer's qualifications",
+    "1 Timothy 4:10": "Savior of all people", "Titus 3:5": "washing of regeneration", "Hebrews 6:6": "falling away",
+    "Hebrews 10:26": "deliberate sin", "James 2:24": "faith and works", "James 5:14": "anointing and healing",
+    "1 Peter 3:21": "baptism now saves", "2 Peter 3:9": "God's will that none perish", "1 John 1:8": "sinless perfection",
+    "1 John 3:9": "the believer and sin", "1 John 2:2": "for the whole world: the extent of the atonement",
+    "Revelation 3:5": "blotting out of the book of life", "Revelation 20:4": "the thousand years",
+    "Revelation 7:4": "the 144,000",
+}
+
+DISPUTED_TASK = """{ref} is read differently by Protestant churches on {topic}. The verse (BSB): {text}
+
+Search the trusted sites for how the main traditions read this verse (Baptist, Methodist, Pentecostal and
+charismatic, Reformed and Presbyterian, Lutheran, Anglican, Holiness), from each tradition's own teachers or
+official teaching. Read the best pages. Then give, for each tradition with a distinct reading you found, one
+or two plain sentences in that tradition's own terms, fairly and without saying who is right, with the URL of
+the page it comes from. Only traditions whose view you actually found; at least two if they differ.
+Never describe one writer's opinion as a church's view."""
+
+DISPUTED_SCHEMA = {"type": "object", "additionalProperties": False, "required": ["differ"],
+                   "properties": {"differ": {"type": "array", "items": {
+                       "type": "object", "additionalProperties": False, "required": ["tradition", "view", "sources"],
+                       "properties": {"tradition": {"type": "string", "enum": TRADITIONS}, "view": {"type": "string"},
+                                      "sources": {"type": "array", "items": {"type": "string"}}}}}}}
+
+
+def cmd_disputed(out, workers=6):
+    """Drops "Where Christians differ" lines that give a commentator's opinion as a church's view, then researches
+    the DISPUTED verses afresh (web search on the trusted sites) and sets their lines from what was found."""
+    import concurrent.futures
+    ids, names = book_names()
+    dropped = 0
+    for f in sorted(os.listdir(out)):
+        if re.match(r"\d\d-\d{3}-\d{3}\.json$", f):
+            path = os.path.join(out, f)
+            d = json.load(open(path))
+            for n in d["notes"]:
+                keep = [q for q in n["differ"] if not COMMENTATORS.search(q["view"])]
+                dropped += len(n["differ"]) - len(keep)
+                n["differ"] = keep
+            json.dump(d, open(path, "w"), indent=1, ensure_ascii=False)
+    print(f"dropped {dropped} lines naming a commentator")
+    parts = all_parts()
+
+    def one(ref, topic):
+        m = re.fullmatch(r"(.+) (\d+):(\d+)", ref)
+        book, ch, v = ids[m.group(1).lower()], int(m.group(2)), int(m.group(3))
+        p = next(p for p in parts if p[:2] == (book, ch) and p[2] <= v <= p[3])
+        text = text_of((book, ch, v, v))
+        r = openrouter({
+            "model": OR_WRITE, "max_tokens": 8000, "usage": {"include": True},
+            "messages": [{"role": "system", "content": STYLE},
+                         {"role": "user", "content": DISPUTED_TASK.format(ref=ref, topic=topic, text=text)}],
+            "tools": [{"type": "openrouter:web_search", "parameters": {"engine": "exa", "allowed_domains": DOMAINS,
+                                                                       "max_uses": 3, "max_results": 6}},
+                      {"type": "openrouter:web_fetch", "parameters": {"allowed_domains": DOMAINS, "max_uses": 4,
+                                                                      "max_content_tokens": 5000}}],
+            "response_format": {"type": "json_schema", "json_schema": {"name": "differ", "strict": True,
+                                                                       "schema": DISPUTED_SCHEMA}},
+        })
+        msg = r["choices"][0]["message"]
+        urls = {a["url_citation"]["url"].rstrip("/") for a in msg.get("annotations") or [] if a.get("type") == "url_citation"}
+        try:
+            found = json.loads(msg["content"])["differ"]
+        except (json.JSONDecodeError, KeyError, TypeError):
+            found = []
+        good = []
+        for q in found:
+            q["sources"] = [u for u in q["sources"] if u.rstrip("/") in urls]
+            if q["sources"] and not COMMENTATORS.search(q["view"]):
+                good.append(q)
+        return p, v, topic, good, r["usage"].get("cost", 0)
+
+    cost = 0
+    with concurrent.futures.ThreadPoolExecutor(workers) as ex:
+        for fut in concurrent.futures.as_completed([ex.submit(one, r, t) for r, t in DISPUTED.items()]):
+            p, v, topic, good, c = fut.result()
+            cost += c
+            path = os.path.join(out, part_id(p) + ".json")
+            d = json.load(open(path))
+            n = next(n for n in d["notes"] if n["verse"] <= v <= n["end"])
+            if len({q["tradition"] for q in good}) >= 2:
+                n["differ"] = [dict(q, disputed=topic) for q in good]
+            json.dump(d, open(path, "w"), indent=1, ensure_ascii=False)
+            print(f"{names[p[0]]} {p[1]}:{v} ({topic}): {len(good)} views {sorted({q['tradition'] for q in good})}; ${cost:.2f}",
+                  flush=True)
+
+
 if __name__ == "__main__":
     args = sys.argv[1:]
     if len(args) >= 4 and args[0] == "batch":
@@ -792,6 +948,10 @@ if __name__ == "__main__":
         cmd_openrouter(args[1], args[2], args[3:])
     elif len(args) >= 4 and args[0] == "chapter":
         cmd_chapter(args[1], args[2], args[3:])
+    elif len(args) == 2 and args[0] == "disputed":
+        cmd_disputed(args[1])
+    elif len(args) == 3 and args[0] == "carry":
+        cmd_carry(args[1], args[2])
     elif len(args) == 3 and args[0] == "pack":
         cmd_pack(args[1], args[2])
     else:

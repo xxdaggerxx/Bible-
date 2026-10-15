@@ -87,7 +87,24 @@
     "Ellicott",
     "Matthew Henry (Concise)"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "God is the author of all events, good and bad. He does not put malice in wicked people, but He uses their malice to discipline His people, as He did with Pharaoh.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Evil came into the world through sin, which God did not want. God gave people real freedom to choose.",
+     "sources": [
+      "https://www.blueletterbible.org/faq/don_stewart/don_stewart_1379.cfm"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Catholic",

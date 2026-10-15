@@ -90,7 +90,16 @@
     "https://enduringword.com/bible-commentary/luke-9/"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Early church writers noted that Luke presents Herod as doubtful and confused by the rumors, while the public were the ones claiming John had risen.",
+     "sources": [
+      "https://www.ccel.org/ccel/aquinas/catena2.iii.vi.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 8,
@@ -102,7 +111,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Early church writers noted that Luke presents Herod as doubtful and confused by the rumors, while the public were the ones claiming John had risen.",
+     "sources": [
+      "https://www.ccel.org/ccel/aquinas/catena2.iii.vi.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 9,
@@ -264,8 +282,26 @@
     "Tyndale Study Notes",
     "https://bible.org/seriespage/lesson-42-crucial-question-luke-918-22"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Anglican",
+     "view": "Luke omits any special blessing given to Peter here, which shows that Peter was not given supreme rank or governing authority over the other apostles.",
+     "sources": [
+      "https://biblehub.com/commentaries/luke/9-20.htm"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some critical scholars argue that the phrase 'the Christ of God' reflects the developed language of the early church rather than the exact words originally spoken.",
+     "sources": [
+      "https://biblehub.com/commentaries/luke/9-20.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 21,

@@ -14,7 +14,24 @@
     "John Gill",
     "Matthew Henry"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Some commentators believe Obadiah wrote during the Babylonian exile, viewing Edom's punishment as connected to the destruction of Jerusalem.",
+     "sources": [
+      "https://learn.ligonier.org/devotionals/word-lord-edom"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Pentecostal",
+     "view": "Some commentators place Obadiah much earlier, during an attack on Jerusalem under King Jehoram, making him the earliest writing prophet.",
+     "sources": [
+      "https://www.blueletterbible.org/comm/guzik_david/study-guide/obadiah/obadiah-1.cfm"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",

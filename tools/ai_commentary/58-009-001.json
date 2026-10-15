@@ -8,11 +8,12 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Under the first covenant, God gave his people specific rules for worship and an earthly sacred tent called the tabernacle. A covenant is a solemn binding agreement made between God and his people. Because this sanctuary was built by human hands out of worldly materials, it was temporary and served as an earthly copy of heavenly realities.",
+   "meaning": "Under the first covenant, which was God's agreement with Israel through Moses, there were clear rules for worship. God also gave them an earthly sanctuary, a physical tent built in the wilderness. Though it was constructed on earth, it was planned by God to show His desire to dwell near His people.",
    "meaning_sources": [
+    "Calvin",
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Barnes"
+    "Tyndale Study Notes",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -20,10 +21,12 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "The front room of this sacred tent was called the Holy Place. Inside stood a golden lampstand that supplied light where there were no windows, along with a table holding twelve loaves of holy bread. These loaves showed God's daily care and fellowship with the twelve tribes of Israel.",
+   "meaning": "The tabernacle was a sacred tent divided into two rooms. The first and larger room was called the Holy Place. It contained a golden lampstand to give light, a table, and twelve loaves of holy bread that symbolized God's ongoing fellowship with the twelve tribes of Israel.",
    "meaning_sources": [
-    "Barnes",
+    "Tyndale Study Notes",
     "Jamieson-Fausset-Brown",
+    "Wesley",
+    "Barnes",
     "https://enduringword.com/bible-commentary/hebrews-9/"
    ],
    "differ": [],
@@ -31,12 +34,59 @@
   },
   {
    "verse": 3,
-   "end": 5,
-   "meaning": "Behind a heavy inner curtain was the Most Holy Place, which held the golden altar of incense and the gold-covered chest called the ark of the covenant. Inside the chest were a jar of manna, Aaron's blossoming rod, and the stone tablets of the Ten Commandments. Above it were winged figures called cherubim whose wings covered the mercy seat, the golden lid where God showed mercy when sacrificial blood was sprinkled.",
+   "end": 3,
+   "meaning": "A heavy curtain separated the first room from the second, inner room called the Most Holy Place. This inner chamber represented God's immediate presence among His people. The curtain hung as a sacred barrier, showing that ordinary people could not walk directly into God's presence.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
     "Barnes",
     "Jamieson-Fausset-Brown",
+    "Benson"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many modern scholars translate the golden censer as the incense altar, explaining that while the altar stood physically outside the curtain, it belonged functionally to the Most Holy Place because its incense was used there.",
+     "sources": [
+      "https://biblehub.com/commentaries/hebrews/9-4.htm",
+      "https://www.studylight.org/commentary/hebrews/9-4.html"
+     ],
+     "carried": true
+    }
+   ]
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The inner room was closely linked to the golden incense altar or censer and held the sacred chest known as the ark of the covenant. Inside the ark were three reminders of Israel's journey: a jar of manna recalling God's daily care, Aaron's budding staff showing God's choice of leaders, and the stone tablets with the Ten Commandments.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Benson",
+    "Barnes",
+    "Jamieson-Fausset-Brown",
+    "https://enduringword.com/bible-commentary/hebrews-9/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many modern scholars translate the Greek term as the golden altar of incense, explaining that even though it physically sat outside the curtain, its incense and sacred role belonged directly to the Most Holy Place.",
+     "sources": [
+      "Ellicott",
+      "https://biblehub.com/commentaries/hebrews/9-4.htm",
+      "https://www.studylight.org/commentary/hebrews/9-4.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "On top of the ark were golden figures of winged heavenly beings called cherubim, whose wings spread over the mercy seat. The mercy seat was the lid of the ark where sacrificial blood was sprinkled to make atonement, which means restoring peace with God by covering sin. The author mentions these treasures briefly so he can turn to their deeper spiritual meaning.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
+    "Barnes",
     "https://enduringword.com/bible-commentary/hebrews-9/"
    ],
    "differ": [],
@@ -47,17 +97,33 @@
      "sources": [
       "https://biblehub.com/commentaries/hebrews/9-4.htm",
       "https://www.studylight.org/commentary/hebrews/9-4.html"
-     ]
+     ],
+     "carried": true
     }
    ]
   },
   {
    "verse": 6,
-   "end": 7,
-   "meaning": "Ordinary priests entered the outer room every day to care for the lamps and offer incense. The inner room was far more restricted, since only the high priest could enter it once a year on the Day of Atonement. He never went in without animal blood to offer for his own sins and for the sins the people committed in ignorance.",
+   "end": 6,
+   "meaning": "Once the tabernacle was fully set up, the regular priests entered the Holy Place every day to do their work. They trimmed the lamps, burned sweet incense, and replaced the sacred bread each week. These daily duties showed steady devotion, but they were kept strictly within the outer room.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
     "Barnes",
+    "Benson",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "Only the high priest could enter the inner room, and he was permitted to go in only once a year on the Day of Atonement. He never went in without animal blood, which he offered to cover his own sins and the sins the people committed in ignorance. Even the leader of Israel's worship could approach God only with life-blood in his hands.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Barnes",
+    "Benson",
+    "Jamieson-Fausset-Brown",
     "https://enduringword.com/bible-commentary/hebrews-9/"
    ],
    "differ": [],
@@ -66,9 +132,9 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "The Holy Spirit used this arrangement to teach an important lesson. As long as the earthly tabernacle and its ritual system remained in place, the true path into God's heavenly presence was not yet revealed. The closed room showed that ordinary sinners were still kept at a distance from God.",
+   "meaning": "The Holy Spirit used this strict setup to teach an important lesson. As long as the first tabernacle stood and its system continued, the way into the true presence of God had not yet been revealed. The closed curtain kept people at a distance from God rather than bringing them near.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
     "Barnes",
     "Jamieson-Fausset-Brown"
    ],
@@ -77,24 +143,39 @@
   },
   {
    "verse": 9,
-   "end": 10,
-   "meaning": "The tabernacle served as a living picture for that era, showing that animal gifts and sacrifices could never fully clear guilt from the worshipper's inner conscience. Its rules dealt mainly with outward things like foods, drinks, and ceremonial washings. God imposed these external duties only until the time of reformation, when Christ would arrive to set everything right.",
+   "end": 9,
+   "meaning": "The earthly tabernacle was a living illustration for that early period. The gifts and animal sacrifices brought by worshipers fulfilled external religious duties, but they could not cleanse the human conscience. They left the inner heart still burdened with the guilt of sin.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
     "Barnes",
+    "Jamieson-Fausset-Brown",
     "https://enduringword.com/bible-commentary/hebrews-9/"
    ],
    "differ": [],
    "other": []
   },
   {
-   "verse": 11,
-   "end": 12,
-   "meaning": "Christ came as the High Priest of the real spiritual blessings that have now arrived. He did not minister in an earthly tent, but entered the greater and perfect sanctuary in heaven. He did not bring the blood of goats and calves, but entered God's presence once for all by his own blood, securing eternal redemption, which is full rescue from the penalty of sin.",
+   "verse": 10,
+   "end": 10,
+   "meaning": "These old ceremonies dealt only with dietary rules about food and drink, along with various water washings for the body. They were outward regulations given to guide Israel until God brought about a time of complete reform. That new era arrived when Christ came to change hearts from within.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
+    "Tyndale Study Notes",
     "Jamieson-Fausset-Brown",
+    "Barnes",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "Christ arrived as the true High Priest of the real spiritual blessings that have now come. He did not serve in a man-made tent set up on earth. Instead, He passed into the greater and perfect sanctuary in heaven, which is not part of this created world.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
+    "Barnes",
+    "Calvin",
     "https://enduringword.com/bible-commentary/hebrews-9/"
    ],
    "differ": [],
@@ -104,19 +185,57 @@
      "view": "Catholic teaching holds that Christ continually presents his once-for-all offering to the Father in heaven, and that this same sacrifice is made present upon the altar during the Mass.",
      "sources": [
       "https://www.catholic.com/audio/scw/the-re-presentation-of-the-mass"
+     ],
+     "carried": true
+    }
+   ]
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "Earthly high priests carried the blood of goats and calves into the inner room year after year, but Jesus entered heaven through His own blood. He entered once for all time, never needing to repeat His offering. By this single sacrifice, He secured eternal redemption, paying the ransom price to set us free from sin forever.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
+    "Barnes",
+    "Calvin",
+    "https://enduringword.com/bible-commentary/hebrews-9/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholic teaching holds that Christ's one offering is continually presented by Him to the Father in heaven and is made sacramentally present on earth in the sacrifice of the Mass.",
+     "sources": [
+      "https://www.catholic.com/audio/scw/the-re-presentation-of-the-mass"
      ]
     }
    ]
   },
   {
    "verse": 13,
-   "end": 14,
-   "meaning": "Under the law of Moses, sprinkling animal blood or the ashes of a young cow could restore ceremonial purity to an unclean body. Christ's sacrifice accomplishes something infinitely greater. Because he offered himself without any moral blemish through the eternal Spirit, his blood cleanses our inner consciences from dead works, freeing us to serve the living God with pure hearts.",
+   "end": 13,
+   "meaning": "Under the law of Moses, mixing the ashes of a burned red heifer with water cleansed people who had become ritually unclean from touching a dead body. Animal blood and ashes could remove outward contamination so a person could rejoin the worshipping community. These rituals made the body clean, but they could not heal the soul.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
+    "Tyndale Study Notes",
     "Jamieson-Fausset-Brown",
-    "https://enduringword.com/bible-commentary/hebrews-9/"
+    "Barnes",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 14,
+   "end": 14,
+   "meaning": "If animal blood had power to make bodies outwardly clean, the blood of Christ can do far more. Jesus offered Himself to God as a flawless, willing sacrifice through the eternal Spirit. His blood washes away our inner guilt from dead, sinful deeds so we are free to worship and serve the living God.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
+    "Barnes",
+    "Wesley",
+    "Calvin",
+    "https://biblehub.com/commentaries/hebrews/9-14.htm"
    ],
    "differ": [],
    "other": []
@@ -124,11 +243,12 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "Christ is the mediator, or go-between, of a new covenant so that God's chosen people can receive the promised eternal inheritance. His death on the cross paid the full penalty for sins committed under the first covenant, which animal blood could never wipe away. This one sacrifice gives believers true and lasting peace with God.",
+   "meaning": "Jesus serves as the mediator, the go-between who brings God and humanity together in a new covenant. His death paid the penalty for the sins committed under the old covenant, fulfilling what those earlier sacrifices only pointed toward. Because the debt is paid, everyone whom God calls can freely receive the promised eternal inheritance.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
     "Barnes",
-    "Calvin",
+    "Wesley",
     "https://enduringword.com/bible-commentary/hebrews-9/"
    ],
    "differ": [],
@@ -137,11 +257,13 @@
   {
    "verse": 16,
    "end": 17,
-   "meaning": "In ordinary life, a last will and testament only takes effect after the person who wrote it has died. No one can claim an inheritance while the person who promised it is still alive. In the same way, the blessings of God's covenant were formally released to believers through the death of Christ.",
+   "meaning": "The writer illustrates this truth using the everyday example of a person's last will and testament. A will has no legal power to hand over property while the one who made it is still alive. It takes effect only when that person's death has been proven.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "https://www.gty.org/sermons/1621/the-new-covenant-part-3"
+    "Matthew Henry",
+    "Barnes",
+    "Tyndale Study Notes",
+    "https://learn.ligonier.org/devotionals/mediator-of-a-new-covenant"
    ],
    "differ": [],
    "other": [
@@ -152,41 +274,74 @@
       "Barnes",
       "Adam Clarke",
       "https://www.desiringgod.org/articles/where-theres-not-a-will"
-     ]
+     ],
+     "carried": true
     }
    ]
   },
   {
    "verse": 18,
    "end": 18,
-   "meaning": "This explains why even the first covenant under Moses was put into effect with blood. God showed from the very start that sinful people cannot enter into a covenant relationship with him without a life being given. Blood proved that the agreement was sacred, serious, and binding.",
+   "meaning": "Because solemn agreements and wills require death to take effect, the first covenant at Mount Sinai was also inaugurated with blood. God never established this holy bond through mere words. Sacrificial life had to be poured out to put the covenant into force.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
     "Barnes",
-    "Calvin"
+    "Wesley",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 19,
-   "end": 20,
-   "meaning": "After Moses read all the commandments of the law to the assembly, he took animal blood mixed with water and sprinkled both the scroll and the people using scarlet wool and hyssop branches. As he did this, he announced that the blood confirmed the covenant God had commanded them to keep. This solemn ceremony bound God and his people together in fellowship.",
+   "end": 19,
+   "meaning": "After Moses read all of God's commands to the people, he took the blood of sacrificed animals mixed with water. Using a bundle of scarlet wool and fragrant hyssop branches, he sprinkled both the scroll of the law and all the people. This act showed that the covenant embraced the people and bound them to God's word through atoning blood.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
     "Barnes",
-    "Calvin"
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 20,
+   "end": 20,
+   "meaning": "As Moses sprinkled the blood, he announced that it was the blood of the covenant commanded by God. The people committed themselves to obey God's law under the protection of this sacrifice. Jesus used these very words at the Last Supper when He explained that His own blood would establish the new covenant.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
+    "Barnes",
+    "John Gill",
+    "Wesley"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 21,
-   "end": 22,
-   "meaning": "Moses also sprinkled blood over the tabernacle and every bowl and tool used in priestly worship. Under the Old Testament law, nearly everything had to be purified with blood, and without the shedding of blood there was no forgiveness of sins. This pointed forward to the cross, showing that God never overlooks sin without an atoning sacrifice.",
+   "end": 21,
+   "meaning": "In the same way, Moses sprinkled with blood the tabernacle and all the sacred vessels used in worship. Even the holy furniture needed purification because human hands touched it. The sprinkling showed that nothing contaminated by sinful humanity could serve God without atoning blood.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
     "Barnes",
+    "John Gill",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 22,
+   "end": 22,
+   "meaning": "Under the law of Moses, nearly every sacred item was purified with blood, with only rare exceptions cleaned by water or fire. More importantly, without the shedding of blood, there is no forgiveness of sins. True pardon requires that a life be laid down to pay for sin.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
+    "Barnes",
+    "Wesley",
     "https://enduringword.com/bible-commentary/hebrews-9/"
    ],
    "differ": [],
@@ -195,10 +350,12 @@
   {
    "verse": 23,
    "end": 23,
-   "meaning": "The earthly tent and its utensils were copies of realities in heaven, so animal blood was sufficient to consecrate them for worship. But the true heavenly sanctuary required a far superior sacrifice. Christ's own blood was needed to open the way so that redeemed sinners could enter God's holy presence.",
+   "meaning": "The earthly tabernacle was only a copy of the true sanctuary in heaven, so animal blood was suitable to consecrate its tents and tools. The heavenly realities, however, demanded a far greater and purer sacrifice. Christ's perfect offering opens heaven so that cleansed sinners can enter God's presence.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
     "Barnes",
+    "Wesley",
     "Calvin"
    ],
    "differ": [],
@@ -207,11 +364,13 @@
   {
    "verse": 24,
    "end": 24,
-   "meaning": "Christ did not enter a physical sanctuary built by human hands, which was only an earthly sketch of the real one. Instead, he ascended directly into heaven to appear before God the Father on our behalf. There he continuously stands as our heavenly High Priest, pleading the merits of his sacrifice for our rescue.",
+   "meaning": "Christ did not enter a sanctuary made by human hands, which was only an earthly sketch of the real thing. He entered heaven itself, right into the presence of God the Father. He is there right now, speaking and acting as our High Priest to represent us before God.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
     "Barnes",
-    "Jamieson-Fausset-Brown"
+    "Wesley",
+    "Calvin"
    ],
    "differ": [],
    "other": []
@@ -219,10 +378,12 @@
   {
    "verse": 25,
    "end": 26,
-   "meaning": "The Levitical high priest had to enter the Most Holy Place year after year with animal blood, but Christ does not need to offer himself repeatedly. If his sacrifice were like the old ones, he would have had to suffer and die over and over throughout human history. Instead, he appeared once for all at the climax of the ages to wipe away sin by offering himself.",
+   "meaning": "The earthly high priest entered the Most Holy Place year after year carrying the blood of animals, but Jesus does not offer Himself repeatedly. If repeated offerings were needed, He would have had to suffer and die again and again since the creation of the world. Instead, He appeared once for all at the climax of the ages to wipe away sin completely through His own sacrifice.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
     "Barnes",
+    "Wesley",
     "Calvin",
     "https://enduringword.com/bible-commentary/hebrews-9/"
    ],
@@ -230,7 +391,7 @@
    "other": [
     {
      "label": "Catholic",
-     "view": "Catholic teaching explains that the Mass does not repeat the suffering or death of Christ, but re-presents his one finished sacrifice in an unbloody manner, applying its graces to the faithful.",
+     "view": "Catholic teaching explains that the sacrifice of the Mass does not repeat the cross or add a new death, but makes the one, finished sacrifice of Calvary present again in an unbloody manner to apply its graces.",
      "sources": [
       "https://www.catholic.com/magazine/print-edition/once-for-all",
       "https://www.catholic.com/magazine/print-edition/is-the-mass-a-true-sacrifice"
@@ -241,12 +402,14 @@
   {
    "verse": 27,
    "end": 27,
-   "meaning": "Every person is appointed by God to die once, and after death comes judgment. There are no second chances or repeated lifetimes to make things right with God. Because earthly life happens only once, each person's eternal future is decided before death arrives.",
+   "meaning": "God has appointed that every person lives on earth, dies a single physical death, and then faces divine judgment. Earthly life gives each person one opportunity to turn to God, with no second chance or repeating cycle of lives after death. Our eternal standing is decided by how we stand with God before we die.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "Adam Clarke",
-    "https://bible.org/seriespage/lesson-27-judgment-or-salvation-hebrews-923-28"
+    "Wesley",
+    "Calvin",
+    "Scofield",
+    "https://bible.org/seriespage/lesson-27-judgment-or-salvation-hebrews-923-28",
+    "https://www.gotquestions.org/appointed-unto-men-once-to-die.html"
    ],
    "differ": [],
    "other": []
@@ -254,17 +417,38 @@
   {
    "verse": 28,
    "end": 28,
-   "meaning": "Just as human beings die only once, Christ was offered once on the cross to carry the punishment for the sins of many. When he returns a second time, he will not come to bear sin or die as an offering again. He will come in glory to deliver full and final salvation to everyone who eagerly waits for him.",
+   "meaning": "Just as human beings die only once, Christ was offered on the cross a single time to carry away the burden of sin. When He returns the second time, He will not come to deal with sin again, because that work is already complete. Instead, He will bring full, eternal salvation to all who are eagerly waiting for Him.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
+    "Tyndale Study Notes",
     "Jamieson-Fausset-Brown",
+    "Barnes",
+    "Wesley",
+    "Calvin",
     "https://www.preceptaustin.org/hebrews_927-28"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Christ died to bear the penalty of sin for every person born into the world, offering salvation freely to all who believe.",
+     "sources": [
+      "Wesley"
+     ]
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Christ was offered on the cross specifically to bear the sins of the elect, whose complete salvation was purchased and secured.",
+     "sources": [
+      "Geneva Notes",
+      "John Gill"
+     ]
+    }
+   ],
    "other": []
   }
  ],
- "problems": [],
+ "problems": [
+  "v. 8: removed sources ['Calvin']"
+ ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

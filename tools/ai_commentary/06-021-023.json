@@ -167,7 +167,17 @@
     "John Gill"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "The list of forty-eight Levitical cities is viewed as an idealized account written in later centuries when the priesthood was fully established, rather than an exact record of the conquest era.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/dcb/joshua-21.html",
+      "https://www.studylight.org/commentaries/eng/pfc/joshua-21.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 42,
@@ -178,7 +188,17 @@
     "Keil & Delitzsch"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "The list of forty-eight Levitical cities is viewed as an idealized account written in later centuries when the priesthood was fully established, rather than an exact record of the conquest era.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/dcb/joshua-21.html",
+      "https://www.studylight.org/commentaries/eng/pfc/joshua-21.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 43,
@@ -241,7 +261,24 @@
     "Matthew Henry",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "God fulfilled His promises completely on His part, and any land left unconquered was caused entirely by Israel's own laziness and lack of courage.",
+     "sources": [
+      "Matthew Henry"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "God proved entirely faithful to His word, but the people's ongoing possession of the land remained conditional on their continued obedience.",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Popular modern teaching",

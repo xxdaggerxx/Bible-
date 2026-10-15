@@ -14,7 +14,24 @@
     "Jamieson-Fausset-Brown",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "The bronze altar points directly to Christ Himself, whose divine nature supported the sacrifice of His human nature, rather than picturing the cross or the Lord's Table.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/geb/exodus-27.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Charismatic",
+     "view": "The altar represents the cross as the place of death where Jesus made atonement and where believers must put self to death.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/exodus-27/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -71,7 +88,16 @@
     "Adam Clarke",
     "Keil & Delitzsch"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "The altar was kept completely hollow as a picture of Christ emptying Himself when He became human, rejecting the idea that it was ever filled with earth.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/geb/exodus-27.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -176,7 +202,25 @@
     "Ellicott",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "The command to keep the lamps burning continually meant they were tended so they burned faithfully day and night without ever going out.",
+     "sources": [
+      "Matthew Henry"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Anglican",
+     "view": "The phrase continually meant the lamps were lit every evening and put out each morning, since the tabernacle had natural daylight through the front curtain.",
+     "sources": [
+      "Adam Clarke",
+      "https://www.studylight.org/commentaries/eng/ebc/exodus-27.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   }
  ],

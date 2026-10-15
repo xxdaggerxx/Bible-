@@ -15,7 +15,17 @@
     "Benson"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some commentators doubt that David wrote this psalm. They point out that it speaks of the Temple and its courts, which were built after his time.",
+     "sources": [
+      "https://biblehub.com/commentaries/ellicott/psalms/65.htm",
+      "https://studylight.org/commentaries/eng/tpc/psalms-65.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 2,
@@ -27,7 +37,16 @@
     "Geneva Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Ellicott accepts that the verse points to the gospel spreading to all nations. But he thinks the psalmist himself meant something narrower: every nation may pray to God, while praise in Zion was Israel's special privilege.",
+     "sources": [
+      "https://biblehub.com/commentaries/ellicott/psalms/65.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 3,
@@ -50,7 +69,40 @@
     "Matthew Henry",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "God freely chooses certain people. By His special grace He draws them near and makes them able to come.",
+     "sources": [
+      "Matthew Henry"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Baptist",
+     "view": "Believers are chosen for Christ's sake and accepted in Him, not because of anything in themselves.",
+     "sources": [
+      "https://www.blueletterbible.org/Comm/spurgeon_charles/tod/ps065.cfm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "The chosen ones here are the priests picked to serve at God's house. Ordinary worshippers still share in its blessings.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Anglican",
+     "view": "The one chosen is Israel as a people, brought back into the blessings of God's covenant (His binding promise).",
+     "sources": [
+      "https://biblehub.com/commentaries/ellicott/psalms/65.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -159,7 +211,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Keil and Delitzsch argue that fields cannot sing. They think the ones shouting and singing are the people, who rejoice over the harvest.",
+     "sources": [
+      "Keil & Delitzsch"
+     ],
+     "carried": true
+    }
+   ]
   }
  ],
  "problems": [],

@@ -215,8 +215,38 @@
     "Jamieson-Fausset-Brown",
     "Tyndale Study Notes"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Lutheran",
+     "view": "This rule forbids killing or cooking a young goat before it has been weaned from its mother's milk.",
+     "sources": [
+      "Keil & Delitzsch",
+      "https://biblehub.com/commentaries/exodus/23-19.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "This rule forbids cooking an animal in its own mother's milk because doing so is an unnatural cruelty that defiles sacred sacrifices and common meals.",
+     "sources": [
+      "Calvin",
+      "https://www.studylight.org/commentary/exodus/23-19.html"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many scholars view this rule as a ban on a specific pagan fertility ritual in which a kid was boiled in milk and sprinkled on crops to make the land productive.",
+     "sources": [
+      "Adam Clarke",
+      "https://enduringword.com/bible-commentary/exodus-23/",
+      "https://www.studylight.org/commentary/exodus/23-19.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 20,

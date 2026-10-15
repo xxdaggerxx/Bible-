@@ -333,8 +333,27 @@
     "Benson",
     "Keil & Delitzsch"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Lutheran",
+     "view": "Zipporah held up the blood to remind God of His promise. This points to Jesus, the true \"Bridegroom of Blood,\" who stands between us and God's anger. Baptism has now taken the place of circumcision.",
+     "sources": [
+      "https://www.1517.org/articles/bridegroom-of-blood"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some suggest \"bridegroom of blood\" was once an old saying tied to circumcision before marriage.",
+     "sources": [
+      "https://biblehub.com/commentaries/exodus/4-25.htm",
+      "https://www.studylight.org/commentary/exodus/4-25.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 26,

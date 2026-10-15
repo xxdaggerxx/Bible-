@@ -173,7 +173,33 @@
     "Benson",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The phrase refers directly to Christ the Messiah, through whom God accomplished all historical deliverances and ultimately conquered Satan.",
+     "sources": [
+      "Calvin",
+      "https://biblehub.com/commentaries/habakkuk/3-13.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Anglican",
+     "view": "The anointed refers to the entire consecrated people of Israel whom God set apart and saved as a whole nation.",
+     "sources": [
+      "https://biblehub.com/commentaries/habakkuk/3-13.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "The anointed refers to the historical leaders God chose to guide Israel, such as Moses, Joshua, and King David.",
+     "sources": [
+      "https://biblehub.com/commentaries/habakkuk/3-13.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

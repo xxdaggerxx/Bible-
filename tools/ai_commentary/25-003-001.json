@@ -14,7 +14,26 @@
     "Ellicott",
     "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some see this suffering man as a picture pointing ahead to Christ, the \"Man of sorrows,\" who was struck by God's justice in our place.",
+     "sources": [
+      "Jamieson-Fausset-Brown",
+      "https://www.studylight.org/commentaries/eng/geb/lamentations-3.html",
+      "https://studylight.org/commentaries/tpc/lamentations-3.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "Methodist commentary has held that there is no real basis for reading these lines as being about Christ's sufferings. They describe the prophet or his people.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",

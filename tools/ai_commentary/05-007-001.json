@@ -153,7 +153,16 @@
     "Matthew Henry",
     "Geneva Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Methodists note that remaining in God's favor depends on continuing faithfulness, warning that even those chosen by God can become unfaithful and fall away.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -165,7 +174,16 @@
     "John Gill",
     "Matthew Henry"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Lutheran",
+     "view": "Lutherans reject using such promises to claim that God guarantees earthly wealth to believers today, emphasizing that faith is a gift of the Holy Spirit rather than an instrument to demand riches.",
+     "sources": [
+      "https://files.lcms.org/api/file/preview/A810B65D-D26A-4762-8633-D85070F5E77A"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Popular modern teaching",

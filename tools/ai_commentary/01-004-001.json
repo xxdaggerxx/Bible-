@@ -51,7 +51,24 @@
     "Matthew Henry"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "The Hebrew word for 'offering' can mean any gift, including crops. On this view, the giver's attitude mattered, not whether the gift was grain or an animal.",
+     "sources": [
+      "https://classic.net.bible.org/passage.php?passage=gen+4:3-5"
+     ],
+     "carried": true
+    },
+    {
+     "label": "Catholic",
+     "view": "The text does not say why Cain's offering was turned down. Following Augustine, Catholic teaching has said that Cain gave God some of his goods but kept back his heart.",
+     "sources": [
+      "https://www.newadvent.org/cathen/03142b.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 5,
@@ -64,7 +81,24 @@
     "Matthew Henry"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "The Hebrew word for 'offering' can mean any gift, including crops. On this view, the giver's attitude mattered, not whether the gift was grain or an animal.",
+     "sources": [
+      "https://classic.net.bible.org/passage.php?passage=gen+4:3-5"
+     ],
+     "carried": true
+    },
+    {
+     "label": "Catholic",
+     "view": "The text does not say why Cain's offering was turned down. Following Augustine, Catholic teaching has said that Cain gave God some of his goods but kept back his heart.",
+     "sources": [
+      "https://www.newadvent.org/cathen/03142b.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 6,
@@ -74,7 +108,25 @@
     "Matthew Henry",
     "Calvin"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "God's command to master sin does not show that people can do it in their own strength. Only the grace of the Holy Spirit makes it possible.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "God really put the remedy within Cain's reach. Sinners are lost not because no Savior is offered but because they will not use what God has placed in their power.",
+     "sources": [
+      "Adam Clarke",
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -86,7 +138,25 @@
     "Matthew Henry",
     "Adam Clarke"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "God's command to master sin does not show that people can do it in their own strength. Only the grace of the Holy Spirit makes it possible.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "God really put the remedy within Cain's reach. Sinners are lost not because no Savior is offered but because they will not use what God has placed in their power.",
+     "sources": [
+      "Adam Clarke",
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",

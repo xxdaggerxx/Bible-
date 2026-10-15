@@ -133,8 +133,37 @@
     "Tyndale Study Notes",
     "Calvin"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "Onan was judged because of his selfish greed and his refusal to fulfill his family duty to raise up an heir for his brother, not because birth control itself is forbidden.",
+     "sources": [
+      "https://www.gotquestions.org/onanism.html",
+      "https://enduringword.com/bible-commentary/genesis-38/",
+      "https://bible.org/seriespage/38-skeleton-judah-s-closet-genesis-381-30"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Onan's act of spilling his seed was a severe sin against the natural purpose of marriage and the gift of human life.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "God struck Onan dead because he performed a deliberate contraceptive act that severed marital union from the procreation of life.",
+     "sources": [
+      "https://www.catholic.com/qa/onan-up-to-contraceptive-sin",
+      "https://www.catholic.com/tract/birth-control"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 11,

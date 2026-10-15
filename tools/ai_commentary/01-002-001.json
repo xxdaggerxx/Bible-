@@ -86,8 +86,34 @@
     "Benson",
     "Adam Clarke"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "The living soul refers to an immaterial and immortal soul that is distinct from the physical body.",
+     "sources": [
+      "https://biblehub.com/commentaries/genesis/2-7.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Anglican",
+     "view": "The phrase living soul refers only to physical life, while man's dignity comes from God directly breathing into him.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ebc/genesis-2.html"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars compare the account of man being shaped from dust to ancient stories like the Greek myth of Prometheus or Babylonian tales of humans made from clay.",
+     "sources": [
+      "https://biblehub.com/commentaries/genesis/2-7.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 8,

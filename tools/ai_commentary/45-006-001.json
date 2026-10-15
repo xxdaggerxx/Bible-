@@ -106,7 +106,17 @@
      ]
     }
    ],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Baptism is a sacrament that actually washes away original sin, joining the soul to Christ and infusing the new life of grace.",
+     "sources": [
+      "https://www.newadvent.org/summa/4069.htm",
+      "https://www.catholic.com/magazine/online-edition/what-good-is-water-baptism"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 5,

@@ -187,7 +187,17 @@
     "Matthew Henry"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholics use this verse, along with verse 28, in teaching that Mary was without sin. Its words are also part of the Hail Mary prayer.",
+     "sources": [
+      "https://www.gotquestions.org/was-Mary-sinless.html",
+      "https://www.gotquestions.org/Hail-Mary.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 43,
@@ -234,7 +244,17 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "A few scholars have argued the song was really Elizabeth's, because a few old Latin copies give it to her. Most readers keep it as Mary's.",
+     "sources": [
+      "Robertson",
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 47,
@@ -258,7 +278,18 @@
     "Calvin"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholic tradition gives Mary further honor, with titles such as Queen of Heaven, and asks for her prayers.",
+     "sources": [
+      "Barnes",
+      "Calvin",
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 49,

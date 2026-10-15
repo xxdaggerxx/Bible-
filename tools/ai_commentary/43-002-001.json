@@ -88,7 +88,16 @@
     "John Gill"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholics often view the water of ceremonial purification as a symbol of the Old Covenant that Jesus transforms into the wine of the New Covenant.",
+     "sources": [
+      "https://www.catholic.com/magazine/online-edition/the-new-adam-rebukes-the-new-eve"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 7,
@@ -167,7 +176,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholics emphasize that Jesus worked this first miracle in response to Mary's request, showing her powerful role as an intercessor for believers.",
+     "sources": [
+      "https://www.catholic.com/magazine/online-edition/the-new-adam-rebukes-the-new-eve"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 12,
@@ -179,7 +197,25 @@
     "John Gill",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "Many evangelicals hold that these brothers were younger biological children born to Mary and Joseph after Jesus.",
+     "sources": [
+      "https://www.studylight.org/commentary/john/2-12.html",
+      "https://biblehub.com/topical/b/brethren.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Some in the Reformed tradition follow early reformers in holding that 'brothers' in Scripture can refer to cousins or close relatives.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Catholic",

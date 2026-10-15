@@ -15,7 +15,16 @@
     "Benson"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars view the psalm as a later poem whose title was added by an editor using wordplays rather than being an eyewitness record of David's life.",
+     "sources": [
+      "https://www.biblehub.com/commentaries/ellicott/psalms/34.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 2,
@@ -85,7 +94,25 @@
     "Benson",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Some in this tradition view the angel as referring collectively to the entire host of God's ministering angels sent to guard His people.",
+     "sources": [
+      "Calvin",
+      "https://www.studylight.org/commentary/psalms/34-7.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Baptist",
+     "view": "Many Baptists understand the angel of the Lord to be the pre-incarnate Christ standing as Captain over heaven's armies to defend His saints.",
+     "sources": [
+      "https://www.biblehub.com/commentaries/gill/psalms/34.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

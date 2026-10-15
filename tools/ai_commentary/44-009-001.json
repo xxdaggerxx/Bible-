@@ -75,8 +75,36 @@
     "Calvin",
     "https://www.preceptaustin.org/acts-9-commentary"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "Saul was born again right here on the road when he surrendered to Jesus as Lord.",
+     "sources": [
+      "https://www.blueletterbible.org/Comm/stewart_don/faq/baptism-with-the-holy-spirit/20-did-saul-receive-the-holy-spirit-after-his-conversion.cfm",
+      "https://www.studylight.org/commentaries/eng/isn/acts-9.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Saul was brought under deep conviction on the road, but his conversion was not completed until faith came in Damascus.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/acts-9/",
+      "https://bible.org/seriespage/14-conversion-saul-acts-91-31"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many scholars note that the proverb about kicking against the goads was not in the earliest Greek manuscripts of this verse, but was added by later copyists from Acts 26:14.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/acts-9/"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 6,
@@ -102,7 +130,16 @@
     "https://pro.studylight.org/commentary/acts/9-7.html"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholic teaching explains that the companions heard an audible sound like thunder, but only Saul was given to understand the distinct words spoken.",
+     "sources": [
+      "https://www.catholic.com/audio/ddp/pauls-conversion"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 8,

@@ -15,7 +15,32 @@
     "Benson",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "The king is Jesus Christ alone rather than Hezekiah, since no earthly king can fully match what is promised here.",
+     "sources": [
+      "https://biblehub.com/commentaries/isaiah/32-1.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The prophecy pointed first to King Hezekiah as an earthly model, but points ultimately to Christ as the one who truly restores the church.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "The prophecy refers directly to Hezekiah, who served as an earthly picture of Christ.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/rbc/isaiah-32.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -54,7 +79,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Popular modern teaching",
+     "view": "Some modern teachers take the word translated 'fool' or 'liberal' to refer to modern theological liberals.",
+     "sources": [
+      "https://www.studylight.org/commentary/isaiah/32-19.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 6,
@@ -210,7 +244,24 @@
     "Tyndale Study Notes",
     "https://www.studylight.org/commentary/isaiah/32-19.html"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The low-lying city represents God's people living safely in humble valleys while storms crush the proud forests of their enemies.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Baptist",
+     "view": "The forest and the fallen city represent the overthrow of Antichrist and the spiritual city of Rome in the last days.",
+     "sources": [
+      "https://www.studylight.org/commentary/isaiah/32-19.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -223,8 +274,26 @@
     "Matthew Henry",
     "John Gill"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "The verse is a direct promise to gospel ministers in the latter days who faithfully preach the word to all kinds of people.",
+     "sources": [
+      "https://www.studylight.org/commentary/isaiah/32-20.html"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some suggest the peaceful farming scene reflects the prophet's love of simple country life, contrasting with the empty glamour of military power.",
+     "sources": [
+      "https://biblehub.com/commentaries/isaiah/32-20.htm"
+     ],
+     "carried": true
+    }
+   ]
   }
  ],
  "problems": [

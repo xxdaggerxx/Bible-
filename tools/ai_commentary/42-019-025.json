@@ -44,14 +44,6 @@
      "sources": [
       "https://www.studylight.org/commentary/luke/19-27.html"
      ]
-    },
-    {
-     "tradition": "Reformed and Presbyterian",
-     "view": "Calvin taught that this warning aimed directly at the rebellious Jews, but it also teaches believers to stay faithful when surrounded by rebellion.",
-     "sources": [
-      "Calvin",
-      "https://www.studylight.org/commentary/luke/19-27.html"
-     ]
     }
    ],
    "other": []
@@ -203,14 +195,6 @@
    ],
    "differ": [
     {
-     "tradition": "Methodist",
-     "view": "Wesley explained that if human voices fell silent, God's power would raise up even the most unlikely instruments to declare His praise.",
-     "sources": [
-      "Wesley",
-      "https://www.studylight.org/commentary/luke/19-40.html"
-     ]
-    },
-    {
      "tradition": "Holiness",
      "view": "Godbey argued that Jesus' words show His approval of loud and joyful shouts of praise in worship.",
      "sources": [
@@ -238,16 +222,7 @@
     "Ellicott",
     "Benson"
    ],
-   "differ": [
-    {
-     "tradition": "Reformed and Presbyterian",
-     "view": "Calvin taught that Jesus wept as Mediator out of genuine human grief and compassion, desiring that all might be saved, while Matthew Henry urged believers never to hold truth in a hardened way toward sinners.",
-     "sources": [
-      "Calvin",
-      "Matthew Henry (Concise)"
-     ]
-    }
-   ],
+   "differ": [],
    "other": []
   },
   {
@@ -299,7 +274,16 @@
     "Jamieson-Fausset-Brown"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Ambrose taught that the merchants represent people who misuse Scripture for personal gain, and that the temple also pictures the soul of a believer, which must be cleansed from sin.",
+     "sources": [
+      "https://www.studylight.org/commentary/luke/19-45.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 46,

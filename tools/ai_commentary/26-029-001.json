@@ -118,7 +118,25 @@
     "Jamieson-Fausset-Brown",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The forty years is a symbolic number representing a fixed time of divine discipline and political weakness, rather than an exact historical count.",
+     "sources": [
+      "Jamieson-Fausset-Brown",
+      "Keil & Delitzsch"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "The forty years should be taken literally as an actual period of historical desolation, even if secular Egyptian records do not record it.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/ezekiel-29/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -214,7 +232,24 @@
     "Jamieson-Fausset-Brown",
     "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The budding horn points ahead to the coming Messiah, Jesus Christ, who brings full strength and redemption to God's people.",
+     "sources": [
+      "Jamieson-Fausset-Brown"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "The horn refers directly to the renewal of strength and encouragement for the Jewish people when God judged Egypt, rather than the Messiah.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/ezekiel-29/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   }
  ],

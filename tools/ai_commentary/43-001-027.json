@@ -43,13 +43,6 @@
    ],
    "differ": [
     {
-     "tradition": "Methodist",
-     "view": "Wesley taught that Christ atoned for all the sins of all mankind, meaning that the reach of sin and the world are of equal extent.",
-     "sources": [
-      "Wesley"
-     ]
-    },
-    {
      "tradition": "Reformed and Presbyterian",
      "view": "Calvinists teach that 'the world' means Christ's saving work is not limited to ethnic Israel, but effectively cleanses believers from every nation.",
      "sources": [
@@ -233,7 +226,17 @@
     "Jamieson-Fausset-Brown"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholics understand Jesus giving Simon the name Cephas, or Rock, as the first step in establishing Peter as the head and foundation of the church on earth.",
+     "sources": [
+      "Calvin",
+      "Matthew Henry"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 43,

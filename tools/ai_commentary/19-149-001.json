@@ -36,8 +36,28 @@
     "Matthew Henry",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Some hold that Old Testament dancing and musical instruments were temporary ceremonial shadows, so Christian worship today should focus simply on singing with the heart and understanding.",
+     "sources": [
+      "Matthew Henry",
+      "Calvin"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "The Hebrew word usually translated as dancing may instead refer to a wind instrument, such as a pipe or flute, played alongside the tambourine and harp.",
+     "sources": [
+      "Adam Clarke",
+      "https://www.studylight.org/commentaries/eng/ebc/psalms-149.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 4,
@@ -71,7 +91,16 @@
     "Matthew Henry (Concise)",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Pentecostal",
+     "view": "High praise is seen as an active weapon of spiritual warfare that works alongside the word of God to break demonic strongholds.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/psalm-149/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -84,7 +113,17 @@
     "Geneva Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "These verses may reflect the historical battles of the Maccabean period, when Jewish fighters went out against their Syrian oppressors while praying and chanting praises to God.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ebc/psalms-149.html",
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 8,

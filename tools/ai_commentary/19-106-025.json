@@ -29,7 +29,16 @@
     "Keil & Delitzsch"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars suggest that a word in verse 27 was an early copyist's error, reading 'to scatter' instead of 'to cast down' in light of the parallel wording in Ezekiel 20:23.",
+     "sources": [
+      "Keil & Delitzsch"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 28,
@@ -79,7 +88,25 @@
     "John Gill",
     "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "This action was accepted as righteous only through God's free grace because of Phinehas's faith, since no human work can earn standing before God.",
+     "sources": [
+      "Calvin",
+      "Geneva Notes"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Baptist",
+     "view": "This verse does not describe justification for eternal life, but means God rewarded a single righteous act with an enduring family priesthood.",
+     "sources": [
+      "Jamieson-Fausset-Brown"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -105,7 +132,16 @@
     "Adam Clarke"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Traditional Latin and older Catholic translations read this as Moses distinguishing or hesitating with his lips rather than speaking rashly.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 34,

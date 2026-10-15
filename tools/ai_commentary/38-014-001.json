@@ -14,23 +14,7 @@
     "Tyndale Study Notes",
     "John Gill"
    ],
-   "differ": [
-    {
-     "tradition": "Methodist",
-     "view": "Wesley and Benson view this opening prophecy as referring to the Roman destruction of Jerusalem in ancient times.",
-     "sources": [
-      "Wesley",
-      "Benson"
-     ]
-    },
-    {
-     "tradition": "Baptist",
-     "view": "Gill interprets this not as the ancient Roman conquest, but as a future day when the Lord gathers the nations before converting the Jewish people.",
-     "sources": [
-      "John Gill"
-     ]
-    }
-   ],
+   "differ": [],
    "other": []
   },
   {
@@ -174,7 +158,26 @@
     "Calvin",
     "Wesley"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Christ will visibly and politically rule all nations from an earthly throne in Jerusalem during a literal millennium.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/zechariah-14/",
+      "https://www.preceptaustin.org/zechariah-14-commentary"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "This describes Christ's spiritual reign through the worldwide spread of the gospel, culminating in the eternal state.",
+     "sources": [
+      "https://learn.ligonier.org/devotionals/lord-will-be-king",
+      "Matthew Henry"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

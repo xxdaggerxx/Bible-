@@ -93,7 +93,25 @@
     "Barnes",
     "Calvin"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Pentecostal",
+     "view": "Believers who have already been baptized in the Spirit can receive fresh fillings of power for witness in moments of trial.",
+     "sources": [
+      "https://news.ag.org/en/article-repository/spiritual-life/2019/05/faq-baptism-in-the-holy-spirit"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Many evangelicals",
+     "view": "Spirit baptism occurs once when a person is saved, but fillings of the Spirit are repeated experiences given for bold Christian service.",
+     "sources": [
+      "https://bible.org/seriespage/lesson-12-confident-witnesses-acts-41-22",
+      "https://www.desiringgod.org/messages/you-will-be-baptized-with-the-holy-spirit"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -173,7 +191,16 @@
     "John Gill"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Popular modern teaching",
+     "view": "Some contrast this enduring, publicly verified miracle with modern faith-healing services where people may walk briefly on adrenaline only to lose their healing later.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/acts-4/"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 15,

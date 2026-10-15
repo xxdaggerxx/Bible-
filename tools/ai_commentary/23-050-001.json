@@ -130,7 +130,24 @@
     "Ellicott",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "This verse speaks of an awakened sinner mourning over guilt and seeking the light of salvation, rather than a faithful believer living without assurance.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "A sincere and obedient child of God can genuinely experience seasons where felt spiritual comfort and assurance are absent.",
+     "sources": [
+      "Matthew Henry"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

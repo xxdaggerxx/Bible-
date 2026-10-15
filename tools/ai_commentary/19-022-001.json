@@ -16,7 +16,24 @@
     "Benson"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "A Catholic reading stresses that the Father never stopped loving the Son and their union was never broken. Here 'forsaken' means God let Christ's human nature suffer fully without rescuing him.",
+     "sources": [
+      "Spurgeon (Treasury of David)"
+     ],
+     "carried": true
+    },
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars have doubted that David wrote this psalm. They have dated it much later, to Jeremiah's time, the exile in Babylon, or after that.",
+     "sources": [
+      "Keil & Delitzsch"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 2,
@@ -77,7 +94,24 @@
     "Tyndale Study Notes",
     "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "These words fit Christ's shame on the cross even better than they fit David.",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "These words best express David's own sense of being small and unworthy. It is hard to see how Jesus would use them of himself.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -175,7 +209,24 @@
     "Tyndale Study Notes",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "Here is a picture of Christ dying on the cross under the weight of our sin.",
+     "sources": [
+      "Matthew Henry"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "These lines describe the deepest human distress and fit David. They should not be pressed as an exact picture of Christ's own sufferings.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -187,7 +238,24 @@
     "Tyndale Study Notes",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "Here is a picture of Christ dying on the cross under the weight of our sin.",
+     "sources": [
+      "Matthew Henry"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "These lines describe the deepest human distress and fit David. They should not be pressed as an exact picture of Christ's own sufferings.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -336,7 +404,24 @@
     "Tyndale Study Notes",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Lutheran",
+     "view": "The meal points naturally to the Lord's Supper, where Christ shares with us the fruits of his suffering.",
+     "sources": [
+      "Keil & Delitzsch"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The eating means feeding on Christ, the bread of life, by faith in the message of the gospel.",
+     "sources": [
+      "Matthew Henry"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

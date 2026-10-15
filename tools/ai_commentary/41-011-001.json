@@ -244,7 +244,16 @@
      ]
     }
    ],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "The traditional Catholic Douay-Rheims version translates the phrase literally as 'Have the faith of God.'",
+     "sources": [
+      "https://biblehub.com/catholic/mark/11-22.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 23,

@@ -27,7 +27,16 @@
     "John Gill",
     "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some believe the earth may have lain broken and dark for long ages between verse 1 and verse 2, before God began the six days.",
+     "sources": [
+      "Jamieson-Fausset-Brown"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -321,7 +330,16 @@
     "Calvin"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars read \"Us\" as God speaking in a royal \"we,\" or as God speaking to the angels of His court.",
+     "sources": [
+      "Keil & Delitzsch"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 27,

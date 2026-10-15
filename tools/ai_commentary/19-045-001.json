@@ -84,7 +84,16 @@
     "Adam Clarke",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Anglican",
+     "view": "Some Anglicans prefer to translate the phrase as 'Your throne is of God,' seeing the verse as originally describing an earthly king who pointed forward to Christ.",
+     "sources": [
+      "https://www.studylight.org/bible/eng/nkj/psalms/45-6.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",
@@ -128,7 +137,16 @@
     "John Gill",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Anglican",
+     "view": "Some Anglicans see the queen at the right hand as the Jewish people restored to God in the future, while the attending royal daughters represent Gentile churches.",
+     "sources": [
+      "https://biblehub.com/sermons/psalms/45-9.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -162,7 +180,17 @@
     "Benson"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Orthodox",
+     "view": "The call for the daughter to listen and incline her ear is used in church services as a liturgical verse honoring Mary, the mother of Jesus.",
+     "sources": [
+      "https://www.ccel.org/ccel/anonymous/menaion.v.html",
+      "https://www.oca.org/files/PDF/Music/Akathists/Sitka/Sitka-prokeimenonandleteverybreath.pdf"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 12,

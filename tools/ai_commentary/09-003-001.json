@@ -140,7 +140,16 @@
     "Benson",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "The Lord standing there may have been a visible appearance of Jesus before His birth in Bethlehem.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/1-samuel-3/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -276,7 +285,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Scholars observe that this is the first time the text gives Samuel the formal title of prophet, even though he had been performing priestly work without ever receiving the title of priest.",
+     "sources": [
+      "https://www.bibleodyssey.org/articles/samuel/"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 21,

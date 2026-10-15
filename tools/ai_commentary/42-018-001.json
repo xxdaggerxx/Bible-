@@ -170,7 +170,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars note that 'justified' here might not carry Paul's full theological sense of being counted righteous, but simply means the tax collector was pardoned and accepted by God.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/egt/luke-18.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 15,
@@ -208,7 +217,26 @@
     "Jamieson-Fausset-Brown",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Churches in this tradition see this verse as biblical support for baptizing infants, since children of believers share in God's covenant promises.",
+     "sources": [
+      "https://www.ccel.org/c/calvin/comment2/v1.0/harry/comm_vol32/htm/ii.lxix.htm",
+      "https://ccel.org/g/geneva/notes/Luke/18.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Baptist",
+     "view": "Baptists teach that Jesus blessed the children without baptizing them, so baptism is reserved for those old enough to profess faith personally.",
+     "sources": [
+      "https://biblehub.com/commentaries/luke/18-15.htm",
+      "https://bible.org/seriespage/lesson-83-bringing-children-jesus-luke-1815-17"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -256,7 +284,16 @@
     "John Gill"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholic tradition teaches that keeping God's commandments is strictly necessary and sufficient for entering into eternal life.",
+     "sources": [
+      "https://www.newadvent.org/cathen/04435a.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 21,

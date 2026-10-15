@@ -14,7 +14,16 @@
     "Benson",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Many Reformed Christians believe biblical family lists often leave out generations and were never meant to calculate the exact age of the earth.",
+     "sources": [
+      "https://www.desiringgod.org/articles/our-old-earth"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -26,7 +35,16 @@
     "Geneva Notes",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Many Reformed Christians believe biblical family lists often leave out generations and were never meant to calculate the exact age of the earth.",
+     "sources": [
+      "https://www.desiringgod.org/articles/our-old-earth"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -295,7 +313,16 @@
     "Matthew Henry"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Orthodox",
+     "view": "Many ancient church teachers believed Enoch and Elijah are the two witnesses who will return to preach before the end of the world.",
+     "sources": [
+      "https://www.oca.org/questions/scripture/two-witnesses-rev-111-14"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 24,

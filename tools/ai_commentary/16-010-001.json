@@ -167,7 +167,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars note that this verse combines rules from different parts of the Pentateuch, showing that the post-exilic community possessed and honored the complete books of Moses.",
+     "sources": [
+      "https://biblehub.com/commentaries/nehemiah/10-31.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 32,
@@ -179,7 +188,16 @@
     "Ellicott"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars suggest that a third of a Persian shekel equaled the silver weight of the older Hebrew half-shekel, or that the Exodus rule was a census tax rather than an annual fee.",
+     "sources": [
+      "https://biblehub.com/commentaries/nehemiah/10-32.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 33,
@@ -237,7 +255,24 @@
     "Tyndale Study Notes",
     "Keil & Delitzsch"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Giving a tenth of one's income remains a binding command for Christians today to support the work of the church.",
+     "sources": [
+      "https://www.thegospelcoalition.org/article/bible-commands-christians-to-tithe/"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Many evangelicals",
+     "view": "Tithing was part of the Old Testament law for Israel, so Christians are called to give generously and cheerfully without a required percentage.",
+     "sources": [
+      "https://www.thegospelcoalition.org/article/7-reasons-christians-not-required-to-tithe/"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

@@ -123,7 +123,16 @@
      ]
     }
    ],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars interpret the torn veil as a sign of judgment marking the departure of God's presence from the temple, or as a symbol that Christ Himself has replaced the temple building.",
+     "sources": [
+      "https://www.thegospelcoalition.org/themelios/article/the-rending-of-the-veil-matt-2751a-par-a-look-back-and-a-way-forward/"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 52,
@@ -135,7 +144,24 @@
     "Calvin",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "These believers were likely given new life when the tombs opened at Jesus' death, but stayed back until after His resurrection before entering the city.",
+     "sources": [
+      "https://www.desiringgod.org/articles/split-rocks-open-tombs-raised-bodies"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Lutheran",
+     "view": "The phrase 'after his resurrection' applies only to their walk and appearance in the city, keeping Christ as the firstfruits of the dead.",
+     "sources": [
+      "https://www.studylight.org/commentary/matthew/27-52.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",

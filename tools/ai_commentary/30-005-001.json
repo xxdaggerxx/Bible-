@@ -53,7 +53,16 @@
     "Adam Clarke",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The call to turn back goes out to everyone. But God inwardly draws his chosen ones, and those who refuse are left without excuse.",
+     "sources": [
+      "Calvin"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -121,7 +130,17 @@
     "Ellicott"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars think these hymn-like lines, or their order, may have been arranged later. One scholar moved verse 7 to follow verse 9.",
+     "sources": [
+      "https://biblehub.com/commentaries/expositors/amos/5.htm",
+      "https://biblehub.com/commentaries/ellicott/amos/5.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 9,
@@ -131,7 +150,17 @@
     "Jamieson-Fausset-Brown"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars think these hymn-like lines, or their order, may have been arranged later. One scholar moved verse 7 to follow verse 9.",
+     "sources": [
+      "https://biblehub.com/commentaries/expositors/amos/5.htm",
+      "https://biblehub.com/commentaries/ellicott/amos/5.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 10,
@@ -193,7 +222,16 @@
     "Benson"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars think verses 14 and 15 were probably not in their original place in the chapter.",
+     "sources": [
+      "https://biblehub.com/commentaries/expositors/amos/5.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 15,

@@ -50,7 +50,16 @@
     "Matthew Henry",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The condition of total obedience highlights human failure and points forward to Christ, the only Son of David who obeyed God perfectly.",
+     "sources": [
+      "https://www.desiringgod.org/messages/gods-covenant-with-david"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -98,7 +107,16 @@
     "Keil & Delitzsch",
     "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Anglican",
+     "view": "David's instruction to punish Shimei reflects lingering personal bitterness rather than righteous royal justice.",
+     "sources": [
+      "https://biblehub.com/commentaries/ellicott/1_kings/2.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

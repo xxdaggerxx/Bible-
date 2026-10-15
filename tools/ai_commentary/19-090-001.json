@@ -15,7 +15,25 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars question Moses' authorship, suggesting the title represents a later tradition and dating the psalm to the Babylonian exile or a later period.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ebc/psalms-90.html",
+      "https://www.studylight.org/commentary/psalms/90-1.html"
+     ],
+     "carried": true
+    },
+    {
+     "label": "Catholic",
+     "view": "Augustine suggested that 'generations' may refer to two groups: the Old Covenant under Moses and the New Covenant he foretold.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801090.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 2,
@@ -39,7 +57,16 @@
     "Jamieson-Fausset-Brown"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Following the Latin text, Augustine read this verse as a prayer asking God not to let humans turn downward toward earthly cravings.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801090.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 4,
@@ -122,7 +149,16 @@
     "Ellicott"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine viewed earthly troubles as God's mercy to turn sinners away from eternal punishment, warning that leaving a sinner undisciplined in this life can be a heavier form of anger.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801090.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 12,

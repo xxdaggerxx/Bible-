@@ -242,8 +242,35 @@
     "Tyndale Study Notes",
     "https://bible.org/seriespage/psalm-96-worshiping-witnessing-waiting"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "Many evangelicals believe this describes Christ ruling by the gospel now and finishing that work at the final day of judgment.",
+     "sources": [
+      "Matthew Henry",
+      "https://biblehub.com/commentaries/psalms/96-13.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals believe this points to Christ's bodily return to earth to judge nations and establish His earthly kingdom.",
+     "sources": [
+      "https://www.studylight.org/commentary/psalms/96-13.html"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Ancient Christian teachers saw the repeated phrase that He is coming as pointing first to Christ's birth as a man and second to His coming to judge the world.",
+     "sources": [
+      "https://www.studylight.org/commentary/psalms/96-13.html"
+     ],
+     "carried": true
+    }
+   ]
   }
  ],
  "problems": [

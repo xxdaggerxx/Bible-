@@ -169,7 +169,25 @@
     "Jamieson-Fausset-Brown",
     "Matthew Henry"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The return from Babylon was only a first taste. The promise is fully kept in Christ's kingdom, where believers are planted in His church.",
+     "sources": [
+      "Calvin",
+      "Matthew Henry"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Because it says \"all the lands,\" and lasting safety never came after Babylon, this points to a future gathering of Israel to its land.",
+     "sources": [
+      "https://www.preceptaustin.org/jeremiah_32_commentary"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

@@ -15,7 +15,27 @@
     "Benson",
     "https://enduringword.com/bible-commentary/acts-2/"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "David was describing his own trust in God, and his experience was a picture of the Messiah's.",
+     "sources": [
+      "Robertson",
+      "Calvin",
+      "https://www.preceptaustin.org/acts-2-commentary"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "The psalm speaks of the Messiah alone. Making it mainly about David weakens Peter's whole argument.",
+     "sources": [
+      "Jamieson-Fausset-Brown",
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -268,7 +288,26 @@
     "Geneva Notes",
     "Calvin"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "It is hard to picture three thousand people being fully dipped under water in the city in one day, so some may have been baptized another way, perhaps by sprinkling.",
+     "sources": [
+      "Barnes",
+      "Jamieson-Fausset-Brown"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Jerusalem's many pools and ritual baths gave plenty of water to baptize that many people by dipping them under.",
+     "sources": [
+      "Robertson",
+      "https://www.preceptaustin.org/acts-2-commentary"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -281,7 +320,18 @@
     "Tyndale Study Notes",
     "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "'Breaking of bread' may mean their ordinary shared meals, or meals followed by the Lord's Supper; we cannot be sure.",
+     "sources": [
+      "Barnes",
+      "Adam Clarke",
+      "Robertson"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -307,7 +357,26 @@
     "Ellicott",
     "John Gill"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "This sharing was the natural fruit of love, and there is no proof Christ meant it to stop. If the church had kept that love, the practice would have continued.",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "This was an unusual case for that time and place, never commanded and not done elsewhere, so it is not a rule for all Christians. It still teaches that those with plenty should help the poor.",
+     "sources": [
+      "Calvin",
+      "Barnes",
+      "Matthew Henry"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -319,7 +388,26 @@
     "Barnes",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "This sharing was the natural fruit of love, and there is no proof Christ meant it to stop. If the church had kept that love, the practice would have continued.",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "This was an unusual case for that time and place, never commanded and not done elsewhere, so it is not a rule for all Christians. It still teaches that those with plenty should help the poor.",
+     "sources": [
+      "Calvin",
+      "Barnes",
+      "Matthew Henry"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -332,7 +420,26 @@
     "John Gill",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Breaking bread at home included the Lord's Supper, which they shared daily.",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Breaking bread here means ordinary shared meals at home, eaten with joy, not the Lord's Supper.",
+     "sources": [
+      "Barnes",
+      "Calvin",
+      "Robertson"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -345,7 +452,26 @@
     "Robertson",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Those added were the people God had chosen for salvation, and God surely brings every one of them to Christ.",
+     "sources": [
+      "Calvin",
+      "Matthew Henry (Concise)"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "'Being saved' means people who were then being saved from the guilt and power of their sins. It does not mean everyone added was sure to be saved forever no matter what.",
+     "sources": [
+      "Adam Clarke",
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   }
  ],

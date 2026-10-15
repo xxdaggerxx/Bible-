@@ -233,7 +233,24 @@
     "Jamieson-Fausset-Brown",
     "Wesley"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Anglican",
+     "view": "Some view the ambushes as a natural event guided by God, such as local raiders or confusion among the allied troops that sparked mutual conflict.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ebc/2-chronicles-20.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Baptist",
+     "view": "Some view the ambushes as supernatural, believing God sent holy angels in disguise to strike sudden panic into the enemy army.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/geb/2-chronicles-20.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

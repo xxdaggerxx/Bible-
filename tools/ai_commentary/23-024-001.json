@@ -303,7 +303,25 @@
     "Ellicott",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "The reign of the Lord on Mount Zion will be a literal earthly government centered in the physical city of Jerusalem during the millennium.",
+     "sources": [
+      "https://biblehub.com/commentaries/isaiah/24-23.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The reign in Zion and Jerusalem describes the spiritual gathering and restoration of Christ's church, rather than a political throne in earthly Jerusalem.",
+     "sources": [
+      "Calvin",
+      "https://www.studylight.org/commentary/isaiah/24-23.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   }
  ],

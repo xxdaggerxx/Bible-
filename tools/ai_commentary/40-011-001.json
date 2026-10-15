@@ -159,7 +159,16 @@
      ]
     }
    ],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars suggest this sentence was a later reflection added to describe the intense persecution the early church experienced.",
+     "sources": [
+      "https://www.studylight.org/commentary/matthew/11-12.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 13,
@@ -182,7 +191,16 @@
     "Calvin",
     "Robertson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some dispensationalists teach that John would have fulfilled the prophecy if Israel had accepted Jesus, but because the nation rejected Him, the literal Elijah will return before Christ's second coming.",
+     "sources": [
+      "https://www.studylight.org/commentary/matthew/11-14.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Catholic",
@@ -340,7 +358,26 @@
     "Calvin",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Believers in this tradition emphasize that God hides or reveals saving truth purely according to His sovereign choice and unconditional election.",
+     "sources": [
+      "Calvin",
+      "https://www.studylight.org/bible/eng/wes/matthew/11-26.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "Methodists teach that God permits truth to remain hidden from those who are proud in their own wisdom, while giving grace to anyone who responds with humble faith.",
+     "sources": [
+      "Wesley",
+      "https://biblehub.com/commentaries/wes/matthew/11.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

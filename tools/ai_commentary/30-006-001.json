@@ -15,7 +15,17 @@
     "Jamieson-Fausset-Brown",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Some Baptists apply this warning to churchgoers who feel a false spiritual security, resting on outward church membership instead of true repentance.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/amos-6/",
+      "https://www.studylight.org/commentaries/eng/geb/amos-6.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -67,7 +77,16 @@
     "Calvin",
     "Matthew Henry"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals believe this passage condemns using musical instruments in church worship, arguing that believers should only sing without instruments.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

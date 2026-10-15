@@ -192,7 +192,25 @@
     "Tyndale Study Notes",
     "Calvin"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "God choosing one from a city and two from a clan illustrates His eternal choice to save His elect remnant out of an undeserving world.",
+     "sources": [
+      "Matthew Henry",
+      "Jamieson-Fausset-Brown"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "God welcoming one or two from a place highlights His personal care for whoever decides to return, rather than an eternal decree that leaves others out.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

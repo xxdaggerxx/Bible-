@@ -110,7 +110,33 @@
     "Barnes",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The name Jeremiah likely entered the text through a scribe's copy error, while Matthew was paraphrasing the meaning of Zechariah's prophecy.",
+     "sources": [
+      "Geneva Notes",
+      "https://biblehub.com/commentaries/matthew/27-9.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "Jeremiah may have spoken the prophecy first before Zechariah recorded it, or Jeremiah's name stood for the entire prophetic scroll because his book was placed first.",
+     "sources": [
+      "https://biblehub.com/commentaries/matthew/27-9.htm"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Anglican",
+     "view": "Matthew quoted freely from memory, blending themes from both Jeremiah and Zechariah together.",
+     "sources": [
+      "https://biblehub.com/commentaries/matthew/27-9.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

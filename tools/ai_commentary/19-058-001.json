@@ -138,7 +138,24 @@
     "Jamieson-Fausset-Brown",
     "Wesley"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Expressions that celebrate bloodshed belong to the older covenant and are completely foreign to the forgiving spirit Jesus calls Christians to live by.",
+     "sources": [
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Believers rightly rejoice in God's holy vengeance because it vindicates His justice, fulfills His promises, and delivers His church.",
+     "sources": [
+      "Matthew Henry"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

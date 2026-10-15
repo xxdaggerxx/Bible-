@@ -8,11 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "James warns believers not to rush into becoming teachers in the church without serious thought. Teaching is an honorable calling, but those who instruct others carry heavy spiritual responsibility and will face a stricter judgment before God. James humbly includes himself in this warning by using the word 'we.' Anyone taking up this role should do so with deep humility and careful self-examination.",
+   "meaning": "James warns believers not to rush into becoming teachers in the church. Teaching carries great honor, but it also brings heavy spiritual responsibility. God will judge teachers with greater strictness because their words guide the lives and beliefs of others.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -20,23 +20,39 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Everyone makes mistakes and falls short in daily life, and even apostles are not exempt. Because speaking constantly tests a person's character, anyone who never slips in speech has reached mature spiritual self-control. Learning to master the tongue gives a believer the discipline needed to guide the rest of life.",
+   "meaning": "Everyone makes mistakes and falls into sin, including teachers and church leaders. A person who never sins in what he says has reached complete self-control and can guide his entire life. Taming speech is one of the hardest parts of following God.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
     "Barnes",
-    "Jamieson-Fausset-Brown"
+    "John Gill"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Believers can, through God's grace, reach a state of mature love and self-control where they are kept from willfully offending in word or deed.",
+     "sources": [
+      "Wesley"
+     ]
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "No Christian attains sinless perfection in this life, so a person who never stumbles in speech is either hypothetical or refers to general spiritual maturity.",
+     "sources": [
+      "John Gill",
+      "Calvin"
+     ]
+    }
+   ],
    "other": []
   },
   {
    "verse": 3,
    "end": 3,
-   "meaning": "A small metal bit placed into the mouth of a strong horse is enough to make the large animal obey its rider. Even though the bit is tiny compared to the horse, controlling the mouth steers the whole body. In a similar way, gaining control over our speech allows us to direct our whole conduct in God's ways.",
+   "meaning": "A rider puts a small metal bit into the mouth of a strong horse to make it obey. By controlling that small piece, the rider can steer the entire animal wherever he wants. In the same way, the tongue is small, but governing it directs the whole person.",
    "meaning_sources": [
     "Matthew Henry",
     "Barnes",
-    "Robertson"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -44,11 +60,11 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "Large sailing ships are pushed through the water by fierce and driving winds, yet they are steered by a very small rudder. The pilot easily turns the entire vessel wherever he chooses just by moving that small piece of wood. This picture shows how a small part of a person can govern their direction, even when strong passions blow against them.",
+   "meaning": "Large sailing ships are pushed through the water by violent winds and storms. Even so, the pilot steers the entire vessel using a very small rudder. Human words work like that rudder, steering a person's life in good or bad directions.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
     "Barnes",
-    "Robertson"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -56,11 +72,11 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "Like a horse's bit or a ship's rudder, the tongue is small in size but wields tremendous influence and power. It can legitimately boast of having great impact, but it can also trigger enormous ruin. Just as a tiny, careless spark can burn down an entire forest, a few reckless words can cause widespread disaster.",
+   "meaning": "The tongue is only a small organ in the human body, but it boasts of having great power. It can accomplish great good or cause terrible damage. Just as a tiny spark can set a whole forest on fire, a few careless words can start huge destruction.",
    "meaning_sources": [
+    "Jamieson-Fausset-Brown",
     "Matthew Henry",
-    "Barnes",
-    "Jamieson-Fausset-Brown"
+    "Barnes"
    ],
    "differ": [],
    "other": []
@@ -68,11 +84,11 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "James compares ungodly speech to a destructive blaze packed with every kind of wickedness. Sinful talk stains an individual's entire life and character, throwing homes and societies into painful turmoil. Behind such hateful, deceptive, and wounding speech lies the destructive influence of hell itself.",
+   "meaning": "An unbridled tongue spreads ruin just like a raging fire, containing an entire world of wickedness within it. It stains a person's whole character and ruins the entire course of a human life. The destruction it causes is inspired and fueled by hell itself.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Jamieson-Fausset-Brown"
+    "Matthew Henry (Concise)",
+    "Tyndale Study Notes",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -80,11 +96,11 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "Throughout history, human beings have shown remarkable skill in subduing wild beasts of every sort. People have successfully managed creatures of the land, sky, and sea, training even fierce predators and venomous snakes. God gave mankind authority over the animals, and people have continually proved their power to master them.",
+   "meaning": "Human beings have used their skill and patience to tame all kinds of wild creatures. People have mastered four-footed beasts, birds of the air, crawling reptiles, and sea monsters. This shows the remarkable ability God gave people to rule over the animal world.",
    "meaning_sources": [
-    "Barnes",
     "Adam Clarke",
-    "Robertson"
+    "Barnes",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -92,11 +108,11 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "While humans can master wild animals, no person has the natural power to conquer and tame the human tongue alone. It is restless and unruly, constantly ready to break past restraints and strike like a venomous reptile. Only God's supernatural grace and the work of His Spirit can truly restrain our speech.",
+   "meaning": "While humans can tame wild beasts, no person can master the tongue purely by human power. Left to itself, speech is restless and breaks through all boundaries to do harm. It acts like deadly snake venom, bringing hurt and ruin unless God intervenes.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke"
+    "Matthew Henry (Concise)",
+    "Adam Clarke",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -104,11 +120,11 @@
   {
    "verse": 9,
    "end": 9,
-   "meaning": "Speech is given to honor God by offering praise, worship, and thanksgiving to Him as our Father. Yet people shamefully turn that same mouth around to insult and tear down others who were created in God's own image. An attack on a fellow human being dishonors the Creator whose likeness they bear.",
+   "meaning": "The tongue is used for the highest act of speech when believers praise and worship God the Father. Yet that very same tongue is often turned around to insult and curse fellow human beings. Because people are created in God's image, cursing another person is an insult to God Himself.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Jamieson-Fausset-Brown"
+    "Geneva Notes",
+    "Calvin",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -116,11 +132,11 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "It is completely wrong for words of holy worship and words of hateful malice to come pouring out of the exact same mouth. James calls on his readers as Christian brothers to recognize how contradictory and shameful this double-dealing speech really is. True devotion to God leaves no room for bitter talk toward people.",
+   "meaning": "Both holy praise and cruel curses flow from the very same mouth. James makes a warm appeal to his fellow believers to show how wrong and contradictory this is. A mouth consecrated to praising God should never be used to tear other people down.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "John Gill",
+    "Robertson"
    ],
    "differ": [],
    "other": []
@@ -128,11 +144,11 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "In the natural world, a single spring or rock opening never pours out both sweet drinking water and bitter, salty water at the same time. Nature follows the orderly design given by God, where one source produces only one kind of stream. Contradictory speech violates this basic order and exposes a divided heart.",
+   "meaning": "In the natural world, a single opening in the ground never pours out both sweet water and bitter, salty water at the same time. Creation follows the orderly laws that God established. A spring can only pour out the kind of water that is inside it.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Adam Clarke",
     "Barnes",
-    "Jamieson-Fausset-Brown"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -140,11 +156,10 @@
   {
    "verse": 12,
    "end": 12,
-   "meaning": "Fruit trees and plants only produce fruit matching their actual inner nature, so a fig tree cannot yield olives nor a grapevine produce figs. In the same way, a bitter, unchanged heart cannot genuinely produce words of true blessing and righteousness. What steadily flows from our lips reveals the real spiritual condition of our hearts.",
+   "meaning": "A plant always produces fruit that matches its own nature, so a fig tree cannot grow olives and a grapevine cannot grow figs. In the same way, a salty spring cannot yield fresh drinking water. Our speech reveals what is truly living inside the heart.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -152,11 +167,11 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "True wisdom is not measured by clever arguments or boastful talk, but by a holy and upright daily life. Anyone who claims to have spiritual understanding must prove it through good deeds carried out with genuine meekness. Real wisdom always walks hand-in-hand with a calm, gentle, and teachable spirit.",
+   "meaning": "True wisdom is far more than having clever arguments or head knowledge. Anyone who claims to be wise must prove it by living an upright life filled with good deeds. Real wisdom from God is always marked by gentle humility rather than pride.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Matthew Henry (Concise)",
     "Barnes",
-    "Jamieson-Fausset-Brown"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -164,11 +179,11 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "When a person's inner motives are driven by harsh envy, rivalry, and a desire to promote themselves, they have no right to brag about being wise. Claiming to be spiritual while fostering such malice is a lie that contradicts the gospel message. Selfish ambition in the heart completely disproves any outward claim to God's truth.",
+   "meaning": "Harboring bitter envy and selfish rivalry in the heart destroys any claim to spiritual wisdom. People driven by jealousy and party spirit must not boast about being wise teachers. Doing so contradicts the gospel message and lies against the truth.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
     "Barnes",
-    "Robertson"
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -176,11 +191,11 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "The cleverness that thrives on jealousy and contention does not originate from God in heaven. Instead, it belongs purely to this present world, caters to natural human appetites without the Holy Spirit, and reflects the pride and malice of demons. Worldly schemes and selfish striving bear the marks of the enemy rather than God.",
+   "meaning": "A cleverness that feeds on jealousy and selfish ambition does not come from God in heaven. It belongs entirely to this fallen world, follows selfish human passions, and is inspired by the devil. Such an attitude destroys peace instead of bringing life.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Jamieson-Fausset-Brown"
+    "Wesley",
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -188,11 +203,11 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "Wherever envy, personal rivalry, and party spirit take root, they quickly destroy harmony and peace. They open the door to constant turmoil, fractured relationships, and all kinds of harmful and wicked behavior. A community or church ruled by rivalry cannot experience the peaceful presence of God.",
+   "meaning": "Whenever envy and selfish ambition take root in a home, church, or community, confusion and unrest always follow. Selfish competition destroys trust and creates disorder. That kind of bitter environment opens the door for every sort of evil deed.",
    "meaning_sources": [
     "Matthew Henry",
     "Barnes",
-    "Robertson"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -200,10 +215,10 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "God's wisdom begins with moral purity and holiness, which is completely free from evil motives. From that purity flows a peaceable attitude, mildness, a willingness to listen and yield in reasonable matters, and an abundance of loving, helpful actions. It shows no favoritism and wears no hypocritical masks, treating everyone with honest goodwill.",
+   "meaning": "Wisdom that comes from God is clean and free from selfish motives before anything else. It promotes peace, treats others with kindness, listens to reason, and shows rich mercy in practical actions. It does not play favorites and is completely honest and sincere.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
+    "Wesley",
+    "Benson",
     "Adam Clarke"
    ],
    "differ": [],
@@ -212,16 +227,19 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "Righteous living and spiritual blessings do not grow out of angry debates or bitter fighting. Those who love peace quietly plant seeds of love, truth, and gentleness in peaceful soil, and they gather a rich harvest of righteousness. Working for peace honors God and brings lasting spiritual reward.",
+   "meaning": "Believers who work to create peace are like farmers sowing good seed in quiet fields. When they plant peaceful words and actions, they harvest a crop of upright living and righteousness. God promises a rich and joyful reward to those who choose harmony over strife.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke"
+    "Matthew Henry (Concise)",
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
- "problems": [],
+ "problems": [
+  "v. 12: removed sources ['Calvin']"
+ ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

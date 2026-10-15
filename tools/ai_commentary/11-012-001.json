@@ -342,7 +342,16 @@
     "Adam Clarke",
     "Matthew Henry"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "The plural word \"gods\" shows these were plainly false gods, not the LORD at all.",
+     "sources": [
+      "https://www.studylight.org/commentary/1-kings/12-28.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",
@@ -407,7 +416,16 @@
     "Benson"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars think verses 32-33 were added later to strengthen the case against Jeroboam.",
+     "sources": [
+      "https://www.bibleodyssey.org/articles/the-sanctuaries-at-dan-and-bethel/"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 33,

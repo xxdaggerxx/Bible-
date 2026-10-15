@@ -42,7 +42,18 @@
     "Robertson"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars note that Malta has no poisonous snakes today. They suggest it may have been a harmless look-alike snake that clings and bites. Others answer that vipers simply died out as the island became crowded and farmed.",
+     "sources": [
+      "Robertson",
+      "https://www.studylight.org/commentary/acts/28-3.html",
+      "Jamieson-Fausset-Brown"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 4,
@@ -332,7 +343,25 @@
     "Barnes",
     "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "This blindness comes by God's just judgment and His free choice. Those chosen for life believe, while others stay hard, yet the blame is still their own.",
+     "sources": [
+      "Calvin",
+      "Geneva Notes"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Methodist",
+     "view": "This hardening is God's judgment that follows people's own stubborn refusal of the truth. First they would not believe, and afterward they could not.",
+     "sources": [
+      "Wesley"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {

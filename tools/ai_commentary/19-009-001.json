@@ -70,7 +70,16 @@
     "Tyndale Study Notes",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Some older Baptist commentators took 'the wicked' in this verse as a specific prophetic title for the Antichrist, who will be destroyed at Christ's return.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/geb/psalms-9.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -230,7 +239,17 @@
      ]
     }
    ],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many modern commentators understand Sheol here as the physical grave or realm of the dead, viewing the line as a warning of earthly death and destruction rather than an explanation of the afterlife.",
+     "sources": [
+      "https://biblehub.com/commentaries/ellicott/psalms/9.htm",
+      "https://www.biblehub.com/commentaries/pulpit/psalms/9.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 18,

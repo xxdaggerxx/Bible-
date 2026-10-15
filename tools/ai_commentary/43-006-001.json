@@ -111,7 +111,16 @@
     "John Gill"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Early church father Augustine interpreted the five barley loaves as the five books of Moses (the Old Testament law), the boy as the people of Israel, and the two fish as the priest and the ruler.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1701024.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 10,
@@ -258,8 +267,27 @@
     "Jamieson-Fausset-Brown",
     "Barnes"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Jesus' words ('It is I') are a direct echo of God's holy name ('I AM'), openly displaying His divine power and deity to the disciples.",
+     "sources": [
+      "https://learn.ligonier.org/devotionals/walking-on-the-sea-of-galilee",
+      "https://www.studylight.org/commentaries/eng/ghb/john-6.html"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "The words spoken by Jesus on the water connect Him directly with the divine name revealed to Moses at the burning bush in Exodus.",
+     "sources": [
+      "https://www.catholic.com/magazine/online-edition/the-divinity-of-jesus-according-to-mark"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 21,

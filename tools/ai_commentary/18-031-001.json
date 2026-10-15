@@ -222,7 +222,26 @@
     "Benson",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Methodist commentators understand the phrase as a direct reference to the first man, Adam, hiding his transgression in Paradise.",
+     "sources": [
+      "Wesley",
+      "Adam Clarke"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Lutheran",
+     "view": "While early translations rendered the words simply as 'after the manner of men,' later Lutheran scholars maintain that the verse specifically points to the historical fall of Adam in Eden.",
+     "sources": [
+      "Keil & Delitzsch",
+      "https://biblehub.com/commentaries/job/31-33.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",

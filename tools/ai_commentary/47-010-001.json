@@ -8,23 +8,31 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Paul appeals directly to the Corinthian believers by pointing to the meek and gentle character of Jesus. His critics were accusing him of being timid in person and only brave when writing letters from a distance. Paul explains that his humble demeanor came from imitating Christ, not from cowardice or lack of authority.",
+   "meaning": "Paul appeals to the believers by pointing to the humble and gentle character of Jesus. His critics claimed he was timid when speaking in person and only acted bold when writing letters from far away. He explains that his gentle approach is not cowardice, but an intentional reflection of Christ.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes",
+    "Tyndale Study Notes",
     "https://enduringword.com/bible-commentary/2-corinthians-10/"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic and Orthodox",
+     "view": "Early church teaching often viewed Paul's words as quoting his opponents' insults back to them, showing that his gentleness came from Christlike self-control rather than a lack of authority.",
+     "sources": [
+      "https://www.newadvent.org/fathers/220221.htm"
+     ]
+    }
+   ]
   },
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Paul pleads with the church to correct their ways before he arrives so that he will not have to act with sharp discipline. Some critics accused him of living and ministering out of worldly motives, craftiness, and fleshly ambition. He hopes that gentle persuasion will resolve the matter so he is not forced to confront the troublemakers boldly.",
+   "meaning": "Paul asks the Corinthians to correct their ways before his next visit so he will not have to use strict discipline. Some people in the church accused him of living by worldly standards and selfish motives. He warns that he is fully prepared to confront anyone who continues to make these false charges.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "Calvin"
+    "Jamieson-Fausset-Brown",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -32,11 +40,11 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "Paul admits that he lives in a frail, mortal human body like anyone else. However, he insists that his spiritual ministry is not carried out with worldly schemes, human force, or deceit. The Christian fight is a spiritual warfare against sin and Satan, fought entirely on God's terms.",
+   "meaning": "Paul acknowledges that he lives in an ordinary, weak human body like everyone else. Even so, the spiritual battle he fights is never carried out using worldly tricks or human schemes. True Christian work relies on God's strength rather than human might.",
    "meaning_sources": [
+    "Calvin",
     "Matthew Henry",
-    "Barnes",
-    "Calvin"
+    "Barnes"
    ],
    "differ": [],
    "other": []
@@ -44,11 +52,11 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "The tools Paul uses to lead and defend the church are not physical weapons, social power, or dishonest manipulation. God provides spiritual power through his truth and his Spirit to tear down stubborn resistance. Just as soldiers demolish mighty stone forts, the gospel breaks through the deep defenses people build against God.",
+   "meaning": "The tools Paul relies on do not come from human power, wealth, or clever manipulation. Instead, they are spiritual tools powered by God to break down spiritual strongholds. These weapons are able to overcome the hardest barriers that keep people from God.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin"
+    "Geneva Notes",
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [
     {
@@ -57,26 +65,36 @@
      "sources": [
       "https://biblehub.com/commentaries/2_corinthians/10-4.htm",
       "https://www.studylight.org/bible/eng/kjv/2-corinthians/10-4.html"
-     ]
+     ],
+     "carried": true
     },
     {
      "tradition": "Baptist",
      "view": "Some Baptists identify the weapons specifically as the Holy Scriptures, which conquer internal strongholds of sin, unbelief, and pride in human hearts.",
      "sources": [
       "https://biblehub.com/commentaries/2_corinthians/10-4.htm"
-     ]
+     ],
+     "carried": true
     }
    ],
-   "other": []
+   "other": [
+    {
+     "label": "Popular modern teaching",
+     "view": "A widespread modern idea sees these strongholds as territorial evil spirits ruling over geographic regions, whereas traditional teachers explain them as false arguments, pride, and sinful systems that oppose the gospel.",
+     "sources": [
+      "https://www.samstorms.org/all-articles/post/taking-every-thought-captive-for-christ--2-cor--10:4-6-"
+     ]
+    }
+   ]
   },
   {
    "verse": 5,
    "end": 5,
-   "meaning": "Paul explains how the message of Christ shatters proud human arguments and false philosophies that set themselves against the knowledge of God. When people surrender to the gospel, their rebellious thoughts are captured like prisoners of war. Every thought is then brought into willing and joyful obedience to Christ.",
+   "meaning": "God's truth knocks down proud human philosophies and arrogant arguments that stand against the true knowledge of God. Like prisoners captured in battle, rebellious human thoughts are brought into surrender and made to obey Christ. Believers are called to actively guard their thinking and align their minds with Jesus.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes",
-    "Jamieson-Fausset-Brown"
+    "Wesley",
+    "https://enduringword.com/bible-commentary/2-corinthians-10/"
    ],
    "differ": [],
    "other": []
@@ -84,10 +102,10 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "Paul has apostolic power ready to discipline those who stubbornly persist in rebellion against Christ. Even so, he patiently waits until the church members prove their own obedience and separate from the troublemakers. This delay gives everyone time to repent so the faithful are not hurt alongside the rebellious.",
+   "meaning": "Paul holds himself ready to correct and discipline the rebellious troublemakers in Corinth. However, he patiently waits so that the majority of the church has time to demonstrate their full obedience first. He wants to protect the faithful and give the church every chance to make things right.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
+    "Calvin",
+    "Adam Clarke",
     "Jamieson-Fausset-Brown"
    ],
    "differ": [],
@@ -96,11 +114,11 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "The Corinthians were making the mistake of judging ministers by outward appearance, charm, and social status. Paul challenges anyone who claims to belong to Christ to realize that he belongs to Christ just as truly. Outward flashiness is a false test for determining who is sent by God.",
+   "meaning": "Paul warns the believers against judging ministers only by external charm, rank, or speaking style. Some rival teachers claimed a special standing with Christ while dismissing Paul because of his plain appearance and hardships. Paul insists that his own relationship with Christ and his calling as an apostle are just as genuine as anyone else's.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "Calvin"
+    "Tyndale Study Notes",
+    "https://enduringword.com/bible-commentary/2-corinthians-10/"
    ],
    "differ": [],
    "other": []
@@ -108,19 +126,7 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "Paul reminds them that the Lord gave him genuine apostolic authority over the church. Christ gave this authority to build up believers and help them grow, not to tear them down or destroy them. Even if Paul speaks boldly about his God-given role, he will not be proven wrong or put to shame.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 9,
-   "end": 9,
-   "meaning": "Paul makes clear that his strong written warnings were not empty threats designed merely to frighten them. He is not trying to intimidate the believers like scared children. His goal is honest correction, and he has the real spiritual power to back up what he writes.",
+   "meaning": "Paul defends the spiritual authority given to him directly by the Lord, even though boasting about it makes him uncomfortable. Christ gave him this power to build up the church and encourage faith, not to tear people down. Because his authority comes from God, Paul knows he will never be put to shame.",
    "meaning_sources": [
     "Matthew Henry",
     "Barnes",
@@ -130,13 +136,25 @@
    "other": []
   },
   {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Paul reassures the believers that his strong letters are not empty threats meant to frighten them like children. He writes firmly because he possesses genuine, God-given authority that he is fully prepared to use if needed.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Barnes",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
    "verse": 10,
    "end": 10,
-   "meaning": "Critics at Corinth were spreading insults about Paul, claiming his letters were powerful but his physical appearance was unimpressive and his speaking was clumsy. These opponents preferred flashy Greek oratory and personal charm over God's simple truth. They judged Paul by superficial standards rather than the substance of his message.",
+   "meaning": "Paul directly quotes the insults his opponents used against him. They claimed his letters sounded strong and severe, but mocked his physical appearance as unimpressive and despised his simple speaking style. Unlike popular Greek orators, Paul refused to rely on showy speech to win followers.",
    "meaning_sources": [
-    "Barnes",
-    "Jamieson-Fausset-Brown",
-    "https://enduringword.com/bible-commentary/2-corinthians-10/"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -144,11 +162,10 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "Paul warns his critics that there is no difference between what he writes from afar and what he does in person. If they refuse to repent, they will find him just as bold and firm in action when he visits as he sounded in his letters. His apostolic authority will be seen in actual deeds.",
+   "meaning": "Paul warns his critics that his character does not change between his letters and his visits. The same decisive authority he shows in his writing from a distance will be seen in his direct actions when he arrives. Anyone expecting him to back down in person will be proven wrong.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "https://enduringword.com/bible-commentary/2-corinthians-10/"
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -156,11 +173,11 @@
   {
    "verse": 12,
    "end": 12,
-   "meaning": "Paul uses sharp irony to say he would never dare to join the boastful group of teachers who praise themselves. These rival leaders made up their own standards and only compared themselves with each other. By ignoring God's standard and admiring their own circle, they proved their own foolishness.",
+   "meaning": "Paul uses irony to say he would never dare to join the proud company of teachers who commend themselves. These rivals created their own private standards of success and measured themselves only against one another. Judging spiritual worth by human opinions and self-praise shows a complete lack of true wisdom.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Matthew Henry (Concise)",
     "Calvin",
-    "Barnes"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -168,11 +185,11 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "Paul refuses to boast about territories or accomplishments outside the boundaries God assigned to him. God gave Paul a specific field of mission work among the Gentiles, and that field reached all the way to Corinth. He boasts only in the real ministry that God directed him to do.",
+   "meaning": "Unlike the false teachers, Paul refuses to boast about work he did not do or claim territory that is not his. He only claims the mission field that God personally assigned to him, which clearly included Corinth. True spiritual leaders keep their focus within the boundaries God gives them.",
    "meaning_sources": [
-    "Matthew Henry",
     "Calvin",
-    "Barnes"
+    "Wesley",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -180,11 +197,11 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "Paul was not overstepping his rightful limits when he came to Corinth, because he was the very first person to bring them the gospel. He did not jump over other places or intrude into another worker's territory. Since he founded the church there, caring for them was entirely part of his God-given task.",
+   "meaning": "Paul was not overstepping his rightful limits by ministering to the Corinthians. He was the very first missionary to reach their city with the good news of Christ and plant their church. Because he laid the original foundation, his spiritual care for them is entirely proper.",
    "meaning_sources": [
     "Barnes",
-    "Jamieson-Fausset-Brown",
-    "Calvin"
+    "Robertson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -192,11 +209,11 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "Unlike the false teachers who moved in on established churches, Paul did not take credit for other people's hard work. Instead, he hoped that as the faith of the Corinthians grew stronger, they would help send him forward into wider mission fields. A healthy church frees up a missionary to carry the message farther.",
+   "meaning": "Paul does not take credit for the hard labor of other ministers, which was what his opponents had done to him in Corinth. Instead, he hopes the Corinthians will grow in faith and maturity so they will no longer need his constant correction. Their growth would free him to expand his mission into new places.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "Calvin"
+    "Jamieson-Fausset-Brown",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -204,11 +221,11 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "Paul's great desire was to preach the good news in places far beyond Corinth where Christ was not yet known. He refused to settle down and boast over work that someone else had already prepared. He wanted to break fresh ground rather than build on another person's foundation.",
+   "meaning": "Paul's goal was to travel onward to lands where Christ had never been preached. He had no desire to take over another missionary's field or boast about work that someone else had already completed. His heart remained set on pioneering fresh territory for God's kingdom.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke"
+    "Ellicott",
+    "Adam Clarke",
+    "Geneva Notes"
    ],
    "differ": [],
    "other": []
@@ -216,11 +233,11 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "Paul reminds the church that any true success in ministry belongs entirely to the Lord, echoing a teaching from Jeremiah. Human talent, clever speech, or personal pride give no reason for boasting. Any boasting a believer does must be in the goodness, power, and grace of God alone.",
+   "meaning": "Quoting the Old Testament prophet Jeremiah, Paul reminds his readers that human success provides no basis for personal pride. Any fruit, conversion, or victory in ministry comes entirely from God's grace. Therefore, anyone who boasts must give all the credit to the Lord alone.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes",
-    "Calvin"
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -228,16 +245,19 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "Praising oneself means nothing, because human self-praise is easily faked and full of pride. The only approval that matters in the end is the approval that comes from the Lord himself. Believers should seek to please God above all else, because his judgment is the only true test.",
+   "meaning": "Praising oneself and parading personal gifts counts for nothing before God. The only approval that matters is the commendation given by the Lord Himself. God honors the servant whose life and work are approved and blessed by Him.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Calvin",
     "Barnes",
-    "Calvin"
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
   }
  ],
- "problems": [],
+ "problems": [
+  "v. 11: removed sources ['Wesley']"
+ ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

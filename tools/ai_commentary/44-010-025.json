@@ -122,8 +122,26 @@
     "Adam Clarke",
     "https://enduringword.com/bible-commentary/acts-10/"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "John Piper emphasizes that Cornelius was not yet saved before hearing Peter preach, but that God was pleased with his genuine search and brought him the gospel so he could be saved through faith.",
+     "sources": [
+      "https://www.desiringgod.org/messages/what-god-has-cleansed-do-not-call-common"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Some Catholic writers cite the case of Cornelius to show that God can give grace and salvation to non-Christians who seek him sincerely, outside the normal sacrament of baptism.",
+     "sources": [
+      "https://www.catholic.com/magazine/print-edition/salvation-for-non-christians-explained-sola-scriptura"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 36,

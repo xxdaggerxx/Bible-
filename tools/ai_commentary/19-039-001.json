@@ -15,7 +15,16 @@
     "Ellicott"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine took the name Jeduthun to mean \"leaping over them.\" To him it pictures any believer who rises above people whose hearts are set on passing earthly things.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801039.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 2,
@@ -47,7 +56,16 @@
     "Adam Clarke",
     "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals believe David did not break his good promise here. He only stopped holding back good words, and the first thing he said was a prayer.",
+     "sources": [
+      "Matthew Henry"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -59,8 +77,27 @@
     "Wesley",
     "https://enduringword.com/bible-commentary/psalm-39/"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals read this as a tired, impatient wish. David was weary of suffering and wanted to know how long he had left to bear it.",
+     "sources": [
+      "Adam Clarke",
+      "https://biblehub.com/commentaries/gill/psalms/39.htm"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine took \"my end\" to mean the goal not yet reached. It is the prize Paul pressed toward, beyond this life of trials.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801039.htm"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 5,
@@ -96,7 +133,17 @@
     "Wesley",
     "John Gill"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals believe David did not yet have a clear hope of life after death. Even facing death, he simply threw himself on the living God.",
+     "sources": [
+      "Keil & Delitzsch",
+      "https://www.studylight.org/commentaries/eng/ebc/psalms-39.html"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
@@ -171,7 +218,17 @@
     "Adam Clarke",
     "Ellicott"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals see these words as partly coming from deep sorrow that went too far. It shows how hard it is for believers to keep their words measured when death seems close.",
+     "sources": [
+      "Geneva Notes",
+      "https://biblehub.com/commentaries/calvin/psalms/39.htm"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   }
  ],

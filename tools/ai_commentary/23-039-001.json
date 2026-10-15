@@ -111,8 +111,36 @@
     "Jamieson-Fausset-Brown",
     "Calvin"
    ],
-   "differ": [],
-   "other": []
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Hezekiah's reply is seen as selfish and disappointing, showing that he cared mainly about his own peace and felt little sorrow for the coming suffering of his children.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/isaiah-39/",
+      "https://www.studylight.org/commentaries/eng/ebc/isaiah-39.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Hezekiah's response is understood as humble submission to God's just sentence, mixed with sincere gratitude for God's merciful patience during his lifetime.",
+     "sources": [
+      "Calvin",
+      "Matthew Henry"
+     ],
+     "carried": true
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholic commentators often see Hezekiah not as heartless toward his descendants, but as humbly yielding to God's decree and accepting the limits of divine mercy without presuming to ask for more.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/hcc/isaiah-39.html"
+     ],
+     "carried": true
+    }
+   ]
   }
  ],
  "problems": [

@@ -51,7 +51,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Popular modern teaching",
+     "view": "Some popular teaching links this verse to the walled-up Eastern Gate in Jerusalem today, or to Jesus' entry into the city. Others point out that this is not the gate Jesus used.",
+     "sources": [
+      "https://www.gotquestions.org/eastern-gate-Jerusalem.html"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 5,
@@ -162,7 +171,16 @@
     "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars read Ezekiel 38–48 as an early kind of vision writing about an ideal world, given to the exiles. On this view it cares more about ordering holy space than about real buildings.",
+     "sources": [
+      "https://www.thegospelcoalition.org/themelios/review/ezekiel-38-48-a-new-translation-with-introduction-and-commentary/"
+     ],
+     "carried": true
+    }
+   ]
   },
   {
    "verse": 13,
@@ -231,7 +249,26 @@
     "Ellicott",
     "John Gill"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "This temple will be built during Christ's thousand-year reign. Its sacrifices will not forgive sin, since Christ did that once for all. They will be memorials or object lessons about sin.",
+     "sources": [
+      "https://www.gotquestions.org/millennial-sacrifices.html",
+      "https://www.gotquestions.org/Ezekiel-temple.html"
+     ],
+     "carried": true
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The temple was never meant to be built. Its measurements are symbolic, and its worship points to Christ and the new creation.",
+     "sources": [
+      "https://learn.ligonier.org/devotionals/ezekiel-sees-new-temple",
+      "https://www.monergism.com/amillennial-interpretation-ezekiel-40-48"
+     ],
+     "carried": true
+    }
+   ],
    "other": []
   },
   {
