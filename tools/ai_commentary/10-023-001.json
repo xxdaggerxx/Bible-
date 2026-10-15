@@ -8,11 +8,12 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "David begins his final prophetic song by describing who he is. He remembers his humble start as the son of Jesse, his rise to the throne by God's choice, and his calling as the sweet maker of Israel's worship songs. His life shows that true honor comes when God lifts a person up to serve his people.",
+   "meaning": "David looks back on his life and introduces his final prophetic poem. He remembers his humble start as Jesse's son, how God lifted him to the throne, and his gift for writing Israel's worship songs. His words are not just personal thoughts, but a sacred message given to him by God.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch",
-    "Wesley"
+    "Ellicott",
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -20,11 +21,12 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "David declares that his songs and prophecies came directly from God. The Holy Spirit placed divine words on his tongue rather than human ideas. Believers can trust scripture because God guided his servants to speak his exact truth.",
+   "meaning": "David explains where his songs and prophecies came from. The Holy Spirit placed divine thoughts in his heart and guided the words he spoke. This shows that the scriptures David wrote were inspired by God rather than invented by human wisdom.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke",
-    "Wesley"
+    "John Gill",
+    "Wesley",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -32,11 +34,12 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "The Lord speaks to David about the duty of leaders. A true ruler must govern people fairly and act with deep reverence toward God. Those who lead must remember they answer to the Lord for how they treat others.",
+   "meaning": "God speaks to David as the secure Rock and protector of Israel. He reveals what a true leader must look like: someone who rules fairly and lives in reverent obedience to God. While this sets the standard for earthly kings, it ultimately points ahead to the Messiah, God's chosen king who reigns in total righteousness.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch",
-    "Wesley"
+    "John Gill",
+    "Ellicott",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -44,11 +47,12 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "A good ruler brings blessing to everyone, like bright morning sunlight after a dark night. His fair reign is also compared to fresh green grass growing quickly when warm sun follows rain. This picture points forward to the peaceful and perfect rule of Jesus Christ.",
+   "meaning": "A good and righteous ruler brings life and joy to his people. His rule is like a bright sunrise after the dark night, or like warm sunshine after rain that makes fresh green grass sprout across the land. Under such leadership, people flourish and find peace.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "Wesley"
+    "Wesley",
+    "Benson",
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -56,23 +60,34 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "David acknowledges that his own family had many troubles and sins, yet he finds comfort in God's everlasting covenant, which is an unbreakable promise. God carefully ordered and secured this agreement to preserve David's royal line and bring eternal salvation. Our ultimate hope rests on God keeping his promises even when our lives fall short.",
+   "meaning": "David rests his hope not on his own imperfect family, but on God's unbreakable promise. God made an everlasting covenant—a binding sacred agreement—promising that David's royal line would never fail. Even though David's household experienced deep trouble and sorrow, he trusted that God would bring full salvation through this promise.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch",
-    "Wesley"
+    "John Gill",
+    "Wesley",
+    "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many modern translations read the opening clause as a positive question ('Is not my house right with God?'), whereas older translations like the King James Version translate it as David's humble confession ('Although my house be not so with God').",
+     "sources": [
+      "Ellicott",
+      "Adam Clarke"
+     ]
+    }
+   ]
   },
   {
    "verse": 6,
    "end": 7,
-   "meaning": "Rebellious and wicked people are compared to sharp thorns that hurt anyone who touches them bare-handed. A person must put on iron tools or wield a spear shaft to cut them down, and they are finally burned to ashes where they lie. God warns that those who persist in fighting his good kingdom will face ruin.",
+   "meaning": "Wicked and rebellious people are compared to sharp thorns that cannot be picked up with bare hands. Anyone trying to clear them away must use iron tools or the shaft of a spear to avoid being hurt. In the end, these stubborn rebels will be gathered up and completely consumed by fire.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "Wesley"
+    "John Gill",
+    "Wesley",
+    "Benson",
+    "Keil & Delitzsch"
    ],
    "differ": [],
    "other": []
@@ -80,11 +95,12 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "The record turns to David's bravest warriors, beginning with Josheb-basshebeth, who was the leader of the top three champions. In a single battle, he raised his spear and defeated eight hundred enemy soldiers. God gave these men remarkable strength to protect his chosen king and kingdom.",
+   "meaning": "The record now lists David's elite warriors, beginning with the leader of the top three champions. His name was Josheb-basshebeth, also known as Jashobeam. Empowered by the Lord, he fought valiantly and defeated hundreds of enemies in a single battle.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch",
-    "Adam Clarke"
+    "Jamieson-Fausset-Brown",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -92,11 +108,12 @@
   {
    "verse": 9,
    "end": 10,
-   "meaning": "Eleazar stood firm against the Philistines even after the rest of Israel's troops ran away. He fought so hard that his hand cramped and stuck to the handle of his sword, and the Lord gave Israel a great victory through him. We are called to keep doing our duty faithfully even when we feel weary.",
+   "meaning": "Eleazar stood by David when the rest of the Israelite army panicked and ran away from the Philistines. He fought the enemy so long and hard that his exhausted hand cramped and froze to the handle of his sword. The Lord gave Israel a great victory that day, and the soldiers only returned to gather the spoils after the fighting was done.",
    "meaning_sources": [
     "Matthew Henry",
-    "Geneva Notes",
-    "https://www.biblehub.com/commentaries/ellicott/2_samuel/23.htm"
+    "John Gill",
+    "Benson",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -104,11 +121,12 @@
   {
    "verse": 11,
    "end": 12,
-   "meaning": "Shammah took his stand in a lentil field when the Philistines attacked and the other soldiers fled. He guarded the crops and struck down the enemy, but scripture makes sure to give the Lord the glory for the victory. God often uses the courage of one willing person to protect and provide for many.",
+   "meaning": "Shammah was the third member of the top three champions. When the Philistines raided a farm field full of lentils and the other Israelites fled, Shammah refused to back down. He stood alone in the middle of the field, defended the food supply, and struck down the enemy because the Lord worked through him.",
    "meaning_sources": [
     "Matthew Henry",
-    "Geneva Notes",
-    "https://www.biblehub.com/commentaries/ellicott/2_samuel/23.htm"
+    "John Gill",
+    "Wesley",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -116,35 +134,24 @@
   {
    "verse": 13,
    "end": 14,
-   "meaning": "During harvest time, Philistine forces camped in the valley of Rephaim and held David's hometown of Bethlehem. David stayed in a fortified mountain cave at Adullam, where three top officers came down to join him. True companions stick close to their leader even in difficult and dangerous seasons.",
+   "meaning": "During harvest time, three brave officers joined David while he was hiding in the cave of Adullam. A Philistine army occupied the nearby valley of Rephaim, and an enemy military outpost held David's hometown of Bethlehem. David found himself cut off and trapped in a stronghold.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke",
-    "https://www.biblehub.com/commentaries/ellicott/2_samuel/23.htm"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 15,
-   "end": 15,
-   "meaning": "Hot and thirsty from the heat, David openly sighed for a drink from the well near the gate of Bethlehem. He was fondly remembering the cool water of his youth and did not intend to give a command. We need to be careful what we wish for out loud, because loyal friends may go to extremes to please us.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Wesley"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 16,
    "end": 17,
-   "meaning": "Three mighty warriors fought through the enemy lines, drew the water, and brought it back to David. David refused to drink it and poured it onto the ground as a drink-offering to the Lord, saying the water was too precious because his men had risked their lives to fetch it. He showed genuine humility and deep respect for the lives of his soldiers.",
+   "meaning": "Suffering from thirst, David openly wished for a cool drink from the well near the gate of Bethlehem. Hearing his wish, three warriors slipped through the enemy camp, drew the water, and brought it back to him. Deeply moved, David refused to drink water that cost the risk of men's lives, pouring it out on the ground as an offering to God instead.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke",
-    "Wesley"
+    "John Gill",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -152,11 +159,12 @@
   {
    "verse": 18,
    "end": 19,
-   "meaning": "Abishai, the brother of Joab, served as leader over a second elite group and defeated three hundred enemies with his spear. He gained a famous name and great honor, even though he did not match the rank of the first three champions. God values faithful service at every post, even when others receive higher renown.",
+   "meaning": "Abishai, the brother of David's general Joab, led another elite group of three warriors. He famously killed three hundred enemies with his spear and earned great renown. While he held higher rank and honor than many officers, he was not counted among the first three supreme champions.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley",
-    "https://www.biblehub.com/commentaries/ellicott/2_samuel/23.htm"
+    "Benson",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -164,11 +172,12 @@
   {
    "verse": 20,
    "end": 21,
-   "meaning": "Benaiah performed remarkable deeds, including defeating two fierce Moabite fighters and climbing down into a pit on a snowy day to slay a lion. He also faced a huge Egyptian warrior armed with a spear while holding only a wooden walking staff, took the spear from him, and killed him with it. God gave him great courage to confront dangerous threats head-on.",
+   "meaning": "Benaiah was another celebrated hero known for daring feats of courage. He defeated two of Moab's fiercest warriors, climbed down into a snowy pit to kill a trapped lion, and took down a giant Egyptian warrior using only an ordinary wooden stick. Benaiah snatched the giant's own spear and killed him with it.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Wesley"
+    "John Gill",
+    "Benson",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -176,11 +185,12 @@
   {
    "verse": 22,
    "end": 23,
-   "meaning": "Benaiah earned high honor next to the first three heroes and stood out above the broader group of thirty men. Because of his proven bravery and loyalty, David placed him in charge of his personal bodyguard. Dependable character and courage open the door to greater trust and leadership.",
+   "meaning": "These bold actions made Benaiah famous alongside the other elite fighters. He was honored above the larger company of thirty officers, though he still ranked below the first three. Because of his great loyalty and courage, David placed Benaiah in charge of his personal royal bodyguard.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch",
-    "Geneva Notes"
+    "John Gill",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -188,11 +198,12 @@
   {
    "verse": 24,
    "end": 25,
-   "meaning": "The text lists members of the elite corps known as the Thirty, starting with Asahel, the brother of Joab, and Elhanan from Bethlehem. It also names Shammah and Elika from Harod. Asahel had died early in David's reign, showing that this list honors loyal warriors across David's entire life.",
+   "meaning": "The list continues with the broader group known as the Thirty, starting with Joab's brother Asahel, who died early in David's reign. Elhanan from Bethlehem and two men named Shammah and Elika from Harod are also counted among these distinguished officers.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Benson",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -200,11 +211,11 @@
   {
    "verse": 26,
    "end": 28,
-   "meaning": "Six more warriors are recorded: Helez, Ira, Abiezer, Mebunnai, Zalmon, and Maharai. They came from various towns throughout the land of Israel to serve their king. God brings people from diverse backgrounds together to work toward a common goal.",
+   "meaning": "This part of the roll lists Helez, Ira from Tekoa, and Abiezer from the priestly town of Anathoth. It also includes Mebunnai, Zalmon, and Maharai, all of whom served David loyally and commanded military divisions during his reign.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Geneva Notes",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Ellicott",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -212,11 +223,10 @@
   {
    "verse": 29,
    "end": 31,
-   "meaning": "This part of the roll includes Heled, Ittai from the tribe of Benjamin, Benaiah from Pirathon, Hiddai, Abi-albon, and Azmaveth. Ittai came from King Saul's home tribe, showing that former rivals became some of David's most dependable defenders. God can heal old political wounds and build deep unity among his people.",
+   "meaning": "More loyal soldiers are honored, including Heled, Ittai from Benjamin, a second Benaiah from Pirathon, and Hiddai. Abi-albon and Azmaveth also served in this distinguished company, representing diverse towns across the tribes of Israel.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -224,11 +234,11 @@
   {
    "verse": 32,
    "end": 34,
-   "meaning": "More champions are named, including Eliahba, the sons of Jashen, Jonathan, Shammah, Ahiam, Eliphelet, and Eliam. Eliam was the son of David's counselor Ahithophel and the father of Bathsheba. His name stands as a quiet reminder of how David's later sins damaged families within his closest circle.",
+   "meaning": "These verses name Eliahba, Jonathan, Shammah, Ahiam, and Eliphelet. Eliam is also listed; he was the son of David's counselor Ahithophel and the father of Bathsheba, showing how closely tied these families were to David's court.",
    "meaning_sources": [
-    "Matthew Henry",
-    "https://enduringword.com/bible-commentary/2-samuel-23/",
-    "https://www.biblehub.com/commentaries/ellicott/2_samuel/23.htm"
+    "John Gill",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -236,11 +246,10 @@
   {
    "verse": 35,
    "end": 37,
-   "meaning": "The list continues with Hezro, Paarai, Igal, Bani, Zelek the Ammonite, and Naharai, who served as Joab's armor-bearer. Zelek came from the foreign nation of Ammon, showing that outsiders found a welcoming home and honored place among God's people. God receives anyone who faithfully commits their heart to his service.",
+   "meaning": "Hezro, Paarai, Igal from Zobah, Bani, Zelek, and Naharai are named here. Some of these men, such as Igal and Zelek the Ammonite, came from outside Israel, showing that David welcomed faithful foreign believers into his inner circle.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/2-samuel-23/"
+    "John Gill",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -248,16 +257,21 @@
   {
    "verse": 38,
    "end": 39,
-   "meaning": "The roster concludes with Ira, Gareb, and Uriah the Hittite, bringing the total count of honored officers to thirty-seven. Naming Uriah at the end brings back the painful memory of David's betrayal and murder of a completely faithful soldier. Even so, God in his mercy forgave David and kept his covenant secure.",
+   "meaning": "The list concludes with Ira, Gareb, and Uriah the Hittite, bringing the total number of honored leaders to thirty-seven. Ending with Uriah reminds readers of David's great sin against one of his most faithful champions. Despite David's past failure, God preserved a record of each man's devoted service.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley",
-    "https://enduringword.com/bible-commentary/2-samuel-23/"
+    "Benson",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
- "problems": [],
+ "problems": [
+  "v. 29: removed sources ['Benson']",
+  "v. 35: removed sources ['Benson']"
+ ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

@@ -8,11 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "God tells Moses to give Israel these civil laws, which are case-by-case rules to help judges decide disputes. Since God was their king, these rulings set up a fair and orderly society based on natural justice. They also put the Ten Commandments into daily practice, especially how people ought to treat their neighbors.",
+   "meaning": "God gives Moses specific court rulings, called judgments, to govern daily life in Israel. These case laws applied the Ten Commandments to real-world disputes between neighbors. They ensured that judges would decide cases with fairness, equity, and the fear of God.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Ellicott",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -20,11 +20,11 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "A fellow Hebrew who fell into debt, poverty, or crime could sell his services, but he could only be held for six years. In the seventh year, his master had to release him freely without charging him any money. This law kept slavery among God's people within strict limits, treating it as temporary indentured work rather than permanent ownership.",
+   "meaning": "A Hebrew person might become a servant because of extreme poverty or to pay off a debt. Unlike other ancient nations where slavery was permanent, God placed a strict six-year limit on this service. In the seventh year, the servant walked away completely free without paying any fee.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/exodus-21/"
+    "Tyndale Study Notes",
+    "John Gill",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -32,11 +32,11 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "If a man entered servitude single, he left single when his time was done. If he arrived already married to a Hebrew woman, she went out free with him because she was not the master's possession.",
+   "meaning": "A servant left his master under the same family conditions in which he had entered. If he began his service as a single man, he departed alone. If he was already married when his service began, his wife left with him as a free woman.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/exodus-21/"
+    "Ellicott",
+    "Adam Clarke",
+    "Keil & Delitzsch"
    ],
    "differ": [],
    "other": []
@@ -44,23 +44,34 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "If the master gave the servant a female slave as a wife and they had children, the wife and children stayed with the master when the man's six years ended. Because the woman was already the master's property, her children remained under his care and ownership. The man alone received his release at the end of his term.",
+   "meaning": "If a master gave one of his own female servants to a male Hebrew worker as a wife, that woman remained the master's legal property. Any children born from that union stayed in the master's household when the man's six years ended. The husband was free to leave by himself when his time was completed.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/exodus-21/"
+    "Ellicott",
+    "Keil & Delitzsch"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 5,
-   "end": 6,
-   "meaning": "A servant who loved his master and did not want to leave his wife and children could choose to stay. The master brought him before the judges to make an open declaration, and then pierced his ear against a door or doorpost with an awl. This ceremony marked him as a willing bond-servant who chose to stay in that home for the rest of his life.",
+   "end": 5,
+   "meaning": "A servant could choose to give up his freedom if he loved his master and wished to stay with his family. His decision had to be spoken clearly and with firm conviction. Rather than facing separation, he could voluntarily choose to remain a bondservant for life.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/exodus-21/"
+    "John Gill",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The master had to bring the servant before the local judges so the choice was made public and official. Then the master took him to a door or doorpost and pierced his earlobe with an awl. This marked the servant as a willing, permanent member of the master's household until death or the year of Jubilee.",
+   "meaning_sources": [
+    "Wesley",
+    "Ellicott",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -68,11 +79,11 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "A father in extreme poverty could place his daughter into a household, usually with the expectation that she would become a wife to the master or his son. For this reason, she did not simply leave after six years like an ordinary hired servant. Her place was protected as a family member rather than treated as field labor.",
+   "meaning": "When a poor father placed his daughter in another household, it was done with the expectation of marriage rather than ordinary labor. Because her position was tied to family life, she was not simply turned out after six years like a male field hand. The law provided special protections so she would not be cast out into homelessness.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/exodus-21/"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -80,11 +91,11 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "If the master changed his mind and decided not to take her as his wife, he was considered to have broken faith with her. He was not permitted to sell her to foreigners or strangers. Instead, he had to allow her family to buy her back and set her free.",
+   "meaning": "If the master decided not to marry the young woman as planned, he broke trust with her. He was not permitted to sell her to foreigners, who would treat her as an ordinary slave. Instead, he had to allow her own family to buy back her freedom.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "Benson",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -92,10 +103,11 @@
   {
    "verse": 9,
    "end": 9,
-   "meaning": "If the master gave the young woman to his son to be a wife, he was required to treat her with the dignity of his own daughter. She was no longer to be viewed as a maid, but was to receive a daughter's family standing and dowry.",
+   "meaning": "If the master gave the young woman to his son instead of marrying her himself, her standing changed completely. She was no longer considered a servant in any sense. The master had to treat her with all the honor and rights of his own daughter.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke"
+    "Adam Clarke",
+    "John Gill",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -103,10 +115,9 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "If the man took a second wife, he was forbidden from cutting back the first wife's food, her clothing, or her marital rights. Even when plural marriage was permitted under ancient customs, a husband was not allowed to neglect or mistreat his first wife.",
+   "meaning": "If a man married another wife, he could not neglect his first wife. He was legally required to keep providing her with adequate food, clothing, and full marital rights. Her marriage was sacred, and taking another spouse did not lessen his duty to care for her.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -114,12 +125,11 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "If the family failed to provide the woman with food, clothing, and her full marriage rights, she was given complete freedom right away. Her owner could not demand any money for her release, protecting her from being kept in a home that dishonored her.",
+   "meaning": "If the husband failed to honor these basic obligations, the woman was granted immediate release. She walked away as an entirely free woman without paying any money. God protected vulnerable wives from being trapped in neglectful marriages.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
     "Adam Clarke",
-    "Keil & Delitzsch",
-    "Jamieson-Fausset-Brown"
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -127,11 +137,10 @@
   {
    "verse": 12,
    "end": 12,
-   "meaning": "A person who strikes someone and causes their death must be put to death. This law rests on God's ancient command that human life is made in His image and must be protected by the civil courts. Society has a duty to punish murder so that innocent blood is not treated lightly.",
+   "meaning": "Anyone who struck another human being with intent to kill was to be put to death. Because every person is made in God's image, the deliberate taking of human life carries the ultimate penalty. Israel's judges were not allowed to pardon intentional murderers.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/exodus-21/"
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -139,11 +148,10 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "God makes a clear distinction between deliberate murder and accidental death where there was no plan to harm. In an accidental death, which happens under God's mysterious providence, the killer was not guilty of murder. God promised to provide special places of safety, later called cities of refuge, where that person could flee from angry relatives.",
+   "meaning": "God made a clear distinction between deliberate murder and accidental manslaughter. If someone caused a death without planning or malice, God provided a safe haven where the person could run. This protected the accidental killer from being struck down in vengeance by the dead person's family.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/exodus-21/"
+    "John Gill",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -151,11 +159,11 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "If someone planned ahead to murder a neighbor with trickery and malice, no place was safe for him. The magistrates were ordered to drag the killer away even from God's sacred altar to face execution. God's house was meant to be a place of holy worship, not a hideout for wicked criminals.",
+   "meaning": "A person who planned out a murder in cold blood was granted no mercy. Even if he ran into the sacred tabernacle and grabbed hold of God's altar, the officers were to pull him away and execute him. Holy places were never meant to shield violent criminals from justice.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/exodus-21/"
+    "Calvin",
+    "Ellicott",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -163,11 +171,11 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "Anyone who physically attacks their mother or father must be put to death. Striking a parent was seen as a dreadful rebellion against the family and against God Himself, who gave parents their authority. This severe penalty guarded the respect and safety that children owe to their elders.",
+   "meaning": "Striking a father or mother carried the death penalty in ancient Israel. Parents held a sacred position of authority representing God in the home, so physical violence against them showed deep rebellion. God guarded family order by treating an attack on parents as a capital crime.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/exodus-21/"
+    "Benson",
+    "Ellicott",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -175,11 +183,10 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "Kidnapping a human being carried the death penalty, whether the person had already been sold into slavery or was still in the kidnapper's hands. Stealing a person destroys the freedom that makes human life valuable. God viewed slave-trading through kidnapping as a crime equal to murder.",
+   "meaning": "Kidnapping was strictly punishable by death, whether the victim had already been sold or was still held captive. Stealing a human being destroyed that person's freedom and treated a life like stolen goods. God viewed the slave trade based on kidnapping as an evil worthy of execution.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/exodus-21/"
+    "Adam Clarke",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -187,22 +194,32 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "A person who curses their father or mother was also condemned to death. This was not just a rude word dropped in a hurry, but an open, hateful wish for a parent's ruin or death. God takes deep offense at children who reject their parents with contempt and malice.",
+   "meaning": "Speaking a verbal curse against one's parents was also punishable by death. In biblical times, a curse was a solemn wish for someone's ruin or death, showing complete contempt for God-given authority. This rule taught children that honoring parents requires respectful speech as well as obedient actions.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/exodus-21/"
+    "John Gill"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 18,
-   "end": 19,
-   "meaning": "If two men fight and one injures the other so that he is stuck in bed, the attacker is spared the death penalty once the victim recovers enough to walk outside with a cane. However, the attacker was not off the hook. He had to pay for the victim's lost working wages and cover the entire cost of medical care until he was fully healed.",
+   "end": 18,
+   "meaning": "When two men fought and one injured the other with a fist or a stone, the attacker was not charged with murder if the victim survived. The injured person might be confined to bed for a season of recovery. The law stepped in to ensure that violent tempers did not escape legal accountability.",
    "meaning_sources": [
-    "Matthew Henry",
+    "John Gill",
+    "Calvin",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 19,
+   "end": 19,
+   "meaning": "Once the injured man recovered enough to walk outside with a cane, the one who struck him was cleared of any capital charge. However, the attacker had to pay full restitution. He was required to pay for the victim's lost wages and cover all medical expenses until he was completely healed.",
+   "meaning_sources": [
     "Adam Clarke",
+    "Ellicott",
     "Keil & Delitzsch"
    ],
    "differ": [],
@@ -210,12 +227,24 @@
   },
   {
    "verse": 20,
-   "end": 21,
-   "meaning": "While ancient law allowed masters to discipline servants with a rod, beating a servant to death was punishable by law. This showed that servants were human beings with rights under God, not mere property. If the servant lived for a day or two before dying, the master was not executed for murder, because the delay showed there was no intent to kill, and the owner suffered the financial loss of his servant.",
+   "end": 20,
+   "meaning": "If a master beat a servant with a rod and the servant died on the spot, the master faced legal punishment. In many ancient nations, masters could kill servants with total freedom, but God's law declared the servant a protected human life. Cruelty leading to death was treated as a crime before the judges.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/exodus-21/"
+    "Calvin",
+    "Ellicott",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 21,
+   "end": 21,
+   "meaning": "If the beaten servant survived for a day or two before dying, the master was not executed. The law presumed the master did not intend to murder the worker, since losing a servant meant losing valuable labor. The financial loss itself served as a heavy penalty when murder could not be proven.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Benson",
+    "Keil & Delitzsch"
    ],
    "differ": [],
    "other": []
@@ -223,60 +252,67 @@
   {
    "verse": 22,
    "end": 22,
-   "meaning": "If men are fighting and accidentally strike a pregnant woman, causing the baby to come early without lasting harm, the striker was fined. The woman's husband asked for damages for the danger and pain, and the judges set a fair amount. Even when an injury was accidental, God held people responsible for the trouble they caused.",
+   "meaning": "If brawling men struck a pregnant woman and caused an early delivery without lasting harm, the offender was fined. The woman's husband stated the amount of damages, but the court had to approve it to keep it fair. This law protected mothers and their unborn children from reckless violence.",
    "meaning_sources": [
-    "Matthew Henry",
     "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/exodus-21/"
+    "Adam Clarke",
+    "Matthew Henry"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "Some scholars note the ancient Greek translation read this as a fine if the baby was not yet fully formed, while many modern readers take the verse as describing a miscarriage where only the mother's survival prevents a murder charge.",
-     "sources": [
-      "Keil & Delitzsch",
-      "https://www.biblehub.com/commentaries/ellicott/exodus/21.htm"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 23,
-   "end": 25,
-   "meaning": "If serious lasting injury or death followed the blow, the court had to demand an exact punishment: a life for a life, an eye for an eye, and a wound for a wound. This rule gave judges a standard of strict justice so the penalty matched the crime. It was designed to keep people from taking wild, out-of-control personal revenge.",
+   "end": 23,
+   "meaning": "If serious injury or death resulted from the blow, strict justice was required. The judges were commanded to take a life for a life. This ensured that no one could cause fatal harm to an innocent bystander without facing an equal consequence.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "https://enduringword.com/bible-commentary/exodus-21/"
+    "Keil & Delitzsch",
+    "Matthew Henry"
    ],
-   "differ": [
-    {
-     "tradition": "Baptist",
-     "view": "The Baptist tradition emphasizes that Jesus replaced this civil principle of retaliation with a higher standard of personal mercy and forgiveness in Matthew 5:38.",
-     "sources": [
-      "https://www.studylight.org/commentaries/eng/ghb/exodus-21.html"
-     ]
-    },
-    {
-     "tradition": "Reformed and Presbyterian",
-     "view": "The Reformed tradition distinguishes between private revenge, which Christ forbade, and the civil magistrate's duty to punish crimes with fair, proportional penalties.",
-     "sources": [
-      "Matthew Henry",
-      "https://www.studylight.org/commentaries/eng/teb/exodus-21.html"
-     ]
-    }
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 24,
+   "end": 24,
+   "meaning": "The principle of an eye for an eye gave judges a standard of exact fairness. It prevented an injured person or family from taking wild, excessive revenge. The punishment had to fit the crime, never exceeding the damage done.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Wesley",
+    "Jamieson-Fausset-Brown"
    ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 25,
+   "end": 25,
+   "meaning": "Every specific injury—burns, cuts, or bruises—had to be answered with a penalty that matched the harm. Courts used this guideline to set fair restitution or equal punishment. It taught God's people that justice must be measured and never cruel.",
+   "meaning_sources": [
+    "John Gill"
+   ],
+   "differ": [],
    "other": []
   },
   {
    "verse": 26,
-   "end": 27,
-   "meaning": "A master was not allowed to mistreat his servants with violence. If an owner struck a servant and destroyed an eye or knocked out a tooth, that servant had to be given immediate freedom. This law taught masters to show restraint, because a single cruel blow meant losing the servant completely.",
+   "end": 26,
+   "meaning": "If an angry master struck a servant and permanently blinded an eye, the master did not receive an eye-for-an-eye injury. Instead, the law commanded that the servant be granted instant, full freedom. Liberty was given as lifelong compensation for the permanent harm.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
+    "Ellicott",
+    "Calvin",
     "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 27,
+   "end": 27,
+   "meaning": "Knocking out even a single tooth of a servant brought the exact same penalty of freedom. This rule forced masters to control their temper and treat their servants with caution and respect. Harming a worker cost the owner the entire value of that servant's labor.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Geneva Notes"
    ],
    "differ": [],
    "other": []
@@ -284,33 +320,56 @@
   {
    "verse": 28,
    "end": 28,
-   "meaning": "If an ox gored a person to death, the animal had to be stoned, and its meat could not be eaten or sold. This total loss reminded everyone of how precious human life is in the eyes of God. As long as the animal had never shown dangerous behavior before, the owner was not blamed for the tragedy.",
+   "meaning": "An ox that gored a person to death had to be stoned, and its meat could not be eaten or sold. The beast was destroyed to show the sacred value of human blood and life. If the animal had never shown dangerous behavior before, the owner was cleared of guilt.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Keil & Delitzsch"
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 29,
-   "end": 30,
-   "meaning": "If the ox was already known to gore people and the owner had been warned but failed to lock it up, the owner was held guilty of death if someone was killed. Neglecting an obvious danger made the owner responsible for the loss of life. However, the court could allow the owner to buy back his life by paying a heavy fine set by the family and the judges.",
+   "end": 29,
+   "meaning": "If the ox had a known habit of goring and the owner ignored official warnings to pen it up, the situation was very different. When that neglected animal killed someone, both the ox and its negligent owner faced death. Neglecting known dangers made a person guilty of blood before God and the community.",
    "meaning_sources": [
+    "John Gill",
     "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/exodus-21/"
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 30,
+   "end": 30,
+   "meaning": "The court or the victim's family could choose to spare the owner's life by setting a monetary ransom. If this settlement was offered, the owner had to pay whatever amount was demanded to redeem his life. This showed mercy while still holding the careless owner financially responsible.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 31,
-   "end": 32,
-   "meaning": "The same legal rule applied whether the goring ox killed a grown adult or a neighbor's son or daughter. If the animal killed a servant, the owner had to pay thirty pieces of silver to the servant's master to replace his loss, and the ox was still stoned. Human life was treated with deep honor in every case.",
+   "end": 31,
+   "meaning": "The same penalty applied whether the gored victim was a grown adult or a young son or daughter. God's law placed the same high value on the lives of children as on adults. Negligent owners could not claim a lesser penalty because the victim was young.",
    "meaning_sources": [
-    "Matthew Henry",
+    "John Gill",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 32,
+   "end": 32,
+   "meaning": "If the dangerous ox killed a male or female servant, the ox was still stoned for taking human life. The owner of the ox was also required to pay thirty silver shekels to the servant's master to replace the loss. This standard payment settled the property loss while the animal's death honored human life.",
+   "meaning_sources": [
     "Adam Clarke",
     "Keil & Delitzsch"
    ],
@@ -319,12 +378,24 @@
   },
   {
    "verse": 33,
-   "end": 34,
-   "meaning": "A person who dug a pit or uncovered an old cistern and left it open was held responsible if an animal fell in and died. The person who caused the danger had to pay full money value to the owner, and in return he kept the dead animal's meat and hide. God's law teaches us that careless neglect that harms a neighbor must be put right.",
+   "end": 33,
+   "meaning": "A person who dug a pit or uncovered an existing cistern was legally required to keep it covered. If he neglected this duty and an ox or donkey fell into the opening, he was held liable for the accident. God expected people to look ahead and prevent hazards that could hurt their neighbors' property.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke",
-    "Keil & Delitzsch"
+    "Ellicott",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 34,
+   "end": 34,
+   "meaning": "The owner of the open pit had to make full restitution by paying the neighbor the market value of the lost animal. In return, the pit owner received the carcass of the dead beast to recover whatever value remained. Fair payment restored peace between the two parties.",
+   "meaning_sources": [
+    "Ellicott",
+    "Keil & Delitzsch",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -332,11 +403,11 @@
   {
    "verse": 35,
    "end": 35,
-   "meaning": "If one man's ox fought with and killed another's, and neither animal had a history of violence, the loss was shared equally. Both owners sold the live animal, split the money, and divided the dead meat. This fair compromise made sure that an unexpected accident did not crush either neighbor alone.",
+   "meaning": "If an ox with no history of violence unexpectedly attacked and killed a neighbor's ox, the loss was shared equally. Both owners sold the live animal and split the money, and they divided the meat of the dead one. Because neither person was at fault, they bore the unexpected hardship together.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/exodus-21/"
+    "Ellicott",
+    "John Gill",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -344,42 +415,28 @@
   {
    "verse": 36,
    "end": 36,
-   "meaning": "If the ox was known to be violent in the past and the owner failed to pen it up, that owner had to pay for the full value of a living animal. The owner received the dead carcass, but he had to give an ox for an ox to the victim. Knowing about a danger and failing to stop it leaves a person fully accountable for the damage.",
+   "meaning": "If the ox was known to be dangerous and its owner failed to fence it in, that owner had to pay full compensation. He gave a living ox in place of the dead one and took the carcass for himself. Those who knowingly ignore danger must carry the full cost of the damage they cause.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/exodus-21/"
+    "John Gill",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 1: removed sources ['John Wesley']",
-  "v. 2: removed sources ['John Wesley']",
-  "v. 4: removed sources ['John Calvin']",
-  "v. 5: removed sources ['John Wesley', 'John Calvin']",
-  "v. 7: removed sources ['John Calvin']",
-  "v. 8: removed sources ['John Calvin']",
-  "v. 9: removed sources ['John Wesley', 'John Calvin']",
-  "v. 10: removed sources ['John Calvin', 'Adam Clarke']",
-  "v. 12: removed sources ['John Calvin']",
-  "v. 13: removed sources ['John Calvin']",
-  "v. 14: removed sources ['John Calvin']",
-  "v. 15: removed sources ['John Calvin']",
-  "v. 16: removed sources ['John Calvin']",
-  "v. 17: removed sources ['John Calvin']",
-  "v. 18: removed sources ['John Calvin']",
-  "v. 20: removed sources ['John Calvin']",
-  "v. 22: removed sources ['John Calvin', 'John Calvin']",
-  "v. 23: removed sources ['John Wesley', 'John Calvin', 'John Calvin']",
-  "v. 26: removed sources ['John Calvin']",
-  "v. 28: removed sources ['John Calvin']",
-  "v. 29: removed sources ['John Calvin']",
-  "v. 31: removed sources ['John Calvin']",
-  "v. 33: removed sources ['John Calvin']",
-  "v. 35: removed sources ['John Calvin']",
-  "v. 36: removed sources ['John Calvin']"
+  "v. 5: removed sources ['Benson']",
+  "v. 10: removed sources ['Adam Clarke', 'Calvin']",
+  "v. 12: removed sources ['Adam Clarke']",
+  "v. 13: removed sources ['Benson']",
+  "v. 16: removed sources ['Ellicott']",
+  "v. 17: removed sources ['Benson', 'Ellicott']",
+  "v. 23: removed sources ['Benson']",
+  "v. 25: removed sources ['Ellicott', 'Adam Clarke']",
+  "v. 27: removed sources ['Ellicott']",
+  "v. 32: removed sources ['Ellicott']",
+  "v. 36: removed sources ['Ellicott']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

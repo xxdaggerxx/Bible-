@@ -8,10 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Job's three friends finally stopped arguing with him because he refused to admit he had done evil. They felt it was useless to keep talking since Job stayed convinced of his own innocence. Even though they became quiet, they were merely silenced rather than persuaded that Job was right.",
+   "meaning": "Job's three companions stop answering him because he refuses to give up his claim of being blameless. They realize that nothing they say will change his mind, so they drop the debate entirely. Even though they are quiet, they still think Job is guilty and stubbornly self-righteous.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke"
+    "Jamieson-Fausset-Brown",
+    "https://enduringword.com/bible-commentary/job-32/"
    ],
    "differ": [],
    "other": []
@@ -19,22 +20,31 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "A young man named Elihu had been listening and became very angry. His family line is given in detail, showing that this story is real history. Elihu was upset with Job for caring more about clearing his own name than defending the justice and honor of God.",
+   "meaning": "A younger man named Elihu enters the scene, burning with anger. His family comes from Buz, which traces back to Abraham's brother Nahor. He is deeply troubled because Job seemed more interested in proving himself innocent than in defending the goodness and justice of God.",
    "meaning_sources": [
     "Matthew Henry",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "Keil & Delitzsch",
+    "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many historical-critical scholars view Elihu's speeches as an addition inserted into the book by a later editor rather than part of the original dialogue.",
+     "sources": [
+      "https://www.desiringgod.org/articles/let-the-youth-speak"
+     ]
+    }
+   ]
   },
   {
    "verse": 3,
    "end": 3,
-   "meaning": "Elihu was also angry with the three older friends. They had judged Job to be a wicked man, yet they could not answer his arguments or prove their charges. Elihu felt it was wrong to condemn Job when their own answers had completely failed.",
+   "meaning": "Elihu is equally angry with the three older friends. They had condemned Job as a wicked hypocrite without ever proving a single charge against him. Judging a suffering person harshly without real proof is unfair and wrong.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -42,9 +52,10 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "Elihu had kept silent through the whole debate out of respect for his elders. In the ancient world, younger people were expected to wait until older men finished speaking. Elihu showed good manners and patience by waiting his turn.",
+   "meaning": "Elihu held his tongue during the earlier speeches because Job and the three friends were older than he was. In ancient culture, younger men showed deep respect by staying silent until the elders finished speaking. Elihu waited patiently for the entire debate to come to an end.",
    "meaning_sources": [
-    "Matthew Henry"
+    "Matthew Henry",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -52,10 +63,11 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "When Elihu saw that the three friends had completely run out of answers, he could not keep quiet any longer. Their failure to defend God properly stirred up his anger. He felt the time had finally arrived for someone to step in.",
+   "meaning": "When Elihu saw that the three older men had completely run out of arguments, his anger flared up again. He could not stay quiet while they sat helpless and defeated. He stepped forward because he believed someone needed to defend the truth.",
    "meaning_sources": [
-    "Matthew Henry",
-    "https://www.studylight.org/commentaries/eng/rbc/job-32.html"
+    "Benson",
+    "John Gill",
+    "Keil & Delitzsch"
    ],
    "differ": [],
    "other": []
@@ -63,11 +75,11 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "Elihu began his speech by admitting that he was much younger than the others. Because of their great age, he had held back out of fear of seeming rude or overly bold. He wanted them to know that his long silence came from humility, not from a lack of thoughts.",
+   "meaning": "Elihu begins his speech by acknowledging how young he is compared to the grey-haired men before him. Out of modesty and fear of being disrespectful, he held back his thoughts for a long time. It is wise and proper for younger people to listen carefully before offering their own opinions.",
    "meaning_sources": [
     "Matthew Henry",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -75,7 +87,7 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "Elihu had expected the older men to speak with deep wisdom. Long life usually gives people time to learn, gather experience, and teach others. It was only natural to think that the oldest voices in the room would give the best answers.",
+   "meaning": "Elihu explains what he had expected from the debate. He thought that living many years gave people deep wisdom and understanding that they could pass on. Older people have more life experience, so it is natural to look to them for guidance first.",
    "meaning_sources": [
     "Matthew Henry",
     "Adam Clarke"
@@ -86,38 +98,24 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "Elihu explained that true understanding does not come merely from living many years. It comes from God, who gives human beings the ability to think and grasp the truth. Wisdom is ultimately a gift from the Almighty rather than just the result of old age.",
+   "meaning": "True wisdom does not come merely from living a long time, but from God. The Almighty breathes understanding into the human spirit that He created. Because God gives wisdom freely, even a younger person can understand what is right when taught by Him.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Jamieson-Fausset-Brown",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
-   "differ": [
-    {
-     "tradition": "Many evangelicals",
-     "view": "Elihu is claiming to speak by the Holy Spirit as a messenger sent with special revelation from God.",
-     "sources": [
-      "Jamieson-Fausset-Brown",
-      "https://biblehub.com/commentaries/job/32-8.htm"
-     ]
-    },
-    {
-     "tradition": "Some evangelicals",
-     "view": "Elihu is speaking of the human mind and reasoning ability that God breathes into every person at creation.",
-     "sources": [
-      "Matthew Henry",
-      "Keil & Delitzsch"
-     ]
-    }
-   ],
+   "differ": [],
    "other": []
   },
   {
    "verse": 9,
    "end": 9,
-   "meaning": "People of high standing or great age do not always have real wisdom. Even the elderly can make mistakes and fail to judge what is right. Because of this, younger people should be heard when they have the truth on their side.",
+   "meaning": "Elihu reminds his listeners that age and high status do not guarantee good sense. Even elderly leaders and respected teachers can fail to grasp justice and truth. Genuine insight depends on God rather than grey hair or an important title.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Benson",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -125,10 +123,10 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "Having shown that wisdom comes from God, Elihu asked the company to give him a hearing. He was ready to state what he knew and offer his own judgment on the debate. He wanted them to weigh his words fairly, even though he was young.",
+   "meaning": "Since the older men have failed to solve the problem, Elihu asks them to pay attention to him. He is ready to share his own understanding of the matter. He speaks up not out of empty pride, but from a desire to speak the truth when others could not.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "Keil & Delitzsch",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -136,9 +134,10 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "Elihu reminded the friends that he had listened closely while they searched for words. He had not interrupted them, but had given them every chance to build their case. He took the time to understand their reasoning before attempting to answer.",
+   "meaning": "Elihu reminds them that he gave them his full and patient attention while they spoke. He listened closely to their lines of reasoning while they searched for words to refute Job. He earned his right to speak by first being a careful, thorough listener.",
    "meaning_sources": [
     "Matthew Henry",
+    "Benson",
     "Adam Clarke"
    ],
    "differ": [],
@@ -147,10 +146,11 @@
   {
    "verse": 12,
    "end": 12,
-   "meaning": "Elihu paid close attention to their arguments, but found that none of them had actually proved Job wrong. They had spoken many words, but none had answered Job's points about his integrity. Since the older men had failed to convince Job, the debate remained unsettled.",
+   "meaning": "Elihu paid close attention, yet none of the three men actually refuted Job's arguments. They spoke plenty of words, but they never proved that Job was secretly guilty of the evil deeds they suspected. Accusing someone without proof does not convince anyone of the truth.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke"
+    "John Gill",
+    "Benson",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -158,11 +158,10 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "Elihu warned the friends not to excuse their failure by saying only God could humble Job. They could not give up and say Job's case was beyond human wisdom just because they were defeated. God had allowed them to fail so they would not boast in their own cleverness.",
+   "meaning": "Elihu warns the three friends not to boast that they had found wisdom by leaving Job's defeat to God. They could not excuse their failed arguments by claiming that only God could bring Job down. True wisdom tackles difficult questions honestly rather than hiding behind easy excuses.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Wesley"
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -170,11 +169,11 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "Elihu pointed out that Job had not directed his complaints against him, so he had no hurt feelings or personal anger. He promised not to repeat the harsh, insulting speeches the three friends had used. He intended to approach the debate in a fresh and fair way.",
+   "meaning": "Job had not directed his complaints at Elihu, so Elihu could approach the debate without personal bitterness. Furthermore, Elihu promises not to repeat the harsh, insulting arguments the three friends had used. A fair discussion requires a calm mind and fresh reasoning.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "Geneva Notes"
+    "Benson",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -182,11 +181,11 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "Elihu looked at the three friends and noted that they sat amazed, having nothing left to say. Their arguments were exhausted, and they had run out of words. Their silence showed that they had lost their ability to carry on the discussion.",
+   "meaning": "Elihu looks at the three friends and points out that they are stunned into silence. Their flow of words has dried up, and they have nothing left to say in response to Job. Their defeat is obvious to everyone standing around.",
    "meaning_sources": [
     "Matthew Henry",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -194,11 +193,11 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "Elihu waited to see if any of the three men would speak up. They simply stood there in silence with no further replies. Since they had given up their turn, Elihu felt entirely free to take the floor.",
+   "meaning": "Elihu asks whether he should keep waiting when the others are standing completely silent. Since the debate has ground to a halt, there is no reason for him to remain quiet. When those who ought to speak say nothing, others must step forward.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -206,11 +205,11 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "Elihu resolved that he would now share his part in the conversation. Each of the three friends had given their opinion, and now it was his time to declare what he knew. He was eager to present the truth as he saw it.",
+   "meaning": "Elihu decides it is now his turn to take part in the discussion. He will openly declare what he knows and offer his own judgment on Job's situation. He wants to help resolve the dispute that the older men could not settle.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Jamieson-Fausset-Brown"
+    "Keil & Delitzsch",
+    "John Gill",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -218,11 +217,10 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "Elihu felt overflowing with thoughts and arguments after listening for so long. An inner pressure drove him to speak and would not let him remain quiet. He was deeply convinced that he had important truths to deliver.",
+   "meaning": "Elihu feels an overwhelming need to speak because his mind is crowded with thoughts and arguments. His inner spirit presses him so strongly that he can no longer hold his peace. When God's truth stirs within someone, keeping silent becomes nearly impossible.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke",
-    "Keil & Delitzsch"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -230,11 +228,11 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "Elihu compared his inner feelings to fermenting wine trapped in a sealed skin bottle. Without an opening for the gas to escape, a new wineskin will swell until it bursts. His thoughts were stirring inside him so strongly that he felt he would burst if he stayed silent.",
+   "meaning": "Elihu compares his feelings to fermenting wine trapped inside sealed skins with no vent. In Bible times, fermenting juice created strong pressure that could tear a leather wineskin open if it had nowhere to escape. His thoughts are building up so much pressure that he feels ready to burst.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "Benson",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -242,10 +240,10 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "Speaking out would give Elihu the relief and room to breathe that he needed. He could no longer hold his thoughts inside without distress. Opening his lips to respond would ease the burden on his mind.",
+   "meaning": "Elihu declares that he must speak out in order to get relief from his inner pressure. Opening his mouth to answer Job will feel like letting trapped air escape so he can breathe freely. Sharing what we know to be true brings peace to a troubled mind.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "Keil & Delitzsch",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -253,11 +251,11 @@
   {
    "verse": 21,
    "end": 21,
-   "meaning": "Elihu promised to speak with total fairness, showing favoritism to no one. He would not flatter the wealthy and respected friends, nor soften the truth for suffering Job. He was determined to tell the plain truth without trying to win anyone's approval.",
+   "meaning": "Elihu promises to be completely fair and show no favoritism toward anyone present. He will not flatter Job out of pity, nor will he flatter the older men because of their wealth or reputation. Godly counsel must always be honest rather than seeking to please people.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Geneva Notes"
+    "John Gill",
+    "Benson",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -265,17 +263,17 @@
   {
    "verse": 22,
    "end": 22,
-   "meaning": "Elihu knew that using empty flattery or dishonest praise was a serious sin against God. He believed that if he lied to please men, his Maker could strike him down in judgment. A healthy reverence for God kept him from being dishonest with people.",
+   "meaning": "Elihu warns that using false flattery would invite God's immediate judgment upon him. He knows that his Creator hates dishonest praise and could take his life away in an instant. A healthy fear of God keeps a person truthful and bold when talking to others.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Wesley"
+    "Adam Clarke",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "The Latin Vulgate tradition translated this verse to mean Elihu did not know how long he would live, rather than fearing sudden judgment for flattery.",
+     "view": "Older Catholic translations understand Elihu to mean that he does not know how long he has to live, so he must speak the truth without delay before death takes him.",
      "sources": [
       "https://www.studylight.org/bible/eng/kjv/job/32-22.html"
      ]
@@ -284,7 +282,14 @@
   }
  ],
  "problems": [
-  "v. 4: removed sources ['Adam Clarke']"
+  "v. 3: removed sources ['Benson']",
+  "v. 4: removed sources ['Benson']",
+  "v. 7: removed sources ['Benson']",
+  "v. 10: removed sources ['Benson']",
+  "v. 13: removed sources ['Benson']",
+  "v. 18: removed sources ['Benson']",
+  "v. 20: removed sources ['Benson']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

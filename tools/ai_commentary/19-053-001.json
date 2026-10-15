@@ -8,17 +8,19 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "David describes someone who says in their heart that there is no God. The Bible calls this person a fool not because they lack brains, but because their moral choices are corrupt. Denying God leads people into vile habits and ruined lives, leaving no true goodness in them.",
+   "meaning": "David describes people who live as if God does not exist and cares nothing about human behavior. Scripture calls them fools not because they lack brains, but because their hearts reject what is morally right. Their unbelief quickly leads to corrupt living and vile deeds, leaving no genuine goodness behind.",
    "meaning_sources": [
     "Matthew Henry",
     "Spurgeon (Treasury of David)",
-    "https://enduringword.com/bible-commentary/psalm-53/"
+    "Geneva Notes",
+    "https://enduringword.com/bible-commentary/psalm-53/",
+    "https://biblehub.com/commentaries/psalms/53-1.htm"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "Augustine taught that while few people openly deny God exists, anyone who believes God approves of their sinful habits is practically saying there is no God.",
+     "view": "Early church father Augustine noted that few people openly deny God's existence, but anyone who assumes God approves of their sins is practically saying there is no God.",
      "sources": [
       "https://www.newadvent.org/fathers/1801053.htm"
      ]
@@ -28,9 +30,10 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "God looks down from heaven over the whole human race to see if anyone seeks Him. He is not searching for worldly brilliance, but for people who desire to know and honor Him. Even when humans ignore their Creator, God never stops watching over everyone.",
+   "meaning": "God looks down from heaven like an investigator examining every human heart. He searches to see if anyone possesses true spiritual wisdom by seeking to know and follow Him. Even the greatest earthly cleverness counts for nothing if a person does not seek the Lord.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Geneva Notes",
+    "John Gill",
     "https://enduringword.com/bible-commentary/psalm-53/"
    ],
    "differ": [],
@@ -39,9 +42,12 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "God gives His verdict and finds that everyone has turned away and gone backward. Human nature has become spoiled and rotten, much like soured milk that has gone bad. Left to themselves, no one does what is truly good in God's sight.",
+   "meaning": "The Lord delivers His verdict on the entire human race. Every single person has turned away from God and become spiritually spoiled and unclean. Left to themselves, no one does genuine good or meets God's holy standard.",
    "meaning_sources": [
-    "Matthew Henry"
+    "Tyndale Study Notes",
+    "John Gill",
+    "https://enduringword.com/bible-commentary/psalm-53/",
+    "https://biblehub.com/study/psalms/53-1.htm"
    ],
    "differ": [],
    "other": []
@@ -49,9 +55,10 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "God asks if wicked people have any understanding at all, since they are heading for ruin. They mistreat and crush God's people with as little care as someone eating bread. At the same time, they proudly refuse to pray or ask God for help.",
+   "meaning": "God asks whether evildoers have any true understanding at all. They mistreat and crush God's people with as little thought as eating a daily meal. Because they have pushed God out of their minds, they never pray or call on Him for guidance.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Geneva Notes",
+    "John Gill",
     "https://enduringword.com/bible-commentary/psalm-53/"
    ],
    "differ": [],
@@ -60,57 +67,41 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "Those who attack God's people are suddenly struck with terror, even when there seems to be no visible reason for alarm. God completely breaks the power of the besieging army and leaves their bones scattered without honor. Because God despises their cruelty, His people see their attackers brought to complete shame.",
+   "meaning": "Sudden, overwhelming terror strikes the wicked even when they seem entirely safe. God shatters the armies that besiege His people, leaving their unburied bones scattered in complete defeat. Because God has rejected these proud enemies, His people are able to see them put to open shame.",
    "meaning_sources": [
-    "Matthew Henry",
     "Wesley",
-    "Keil & Delitzsch"
+    "Benson",
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
+    "Geneva Notes"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Catholic",
-     "view": "Augustine applied this verse to moral anxieties, arguing that people often panic over losing money where there is nothing truly to fear, while failing to fear the loss of godly wisdom.",
-     "sources": [
-      "https://www.newadvent.org/fathers/1801053.htm"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 6,
    "end": 6,
-   "meaning": "David cries out for God's full rescue to come out of Zion to help His troubled people. When the Lord brings His people out of their captivity and distress, their sorrow will turn into deep celebration. The whole nation will rejoice when they experience God's saving power.",
+   "meaning": "David longs for the day when God will bring full rescue and relief to His people from Zion, His holy dwelling place. When the Lord delivers His people from their distress and restores them, the whole nation will overflow with gladness. Believers continue to look forward with hope to God's final deliverance.",
    "meaning_sources": [
     "Matthew Henry",
+    "Adam Clarke",
     "https://biblehub.com/commentaries/psalms/53-6.htm"
    ],
    "differ": [
     {
      "tradition": "Some evangelicals",
-     "view": "Some evangelicals believe this prayer looks ahead to Christ's second coming, when He will deliver Israel and establish a literal thousand-year reign from Jerusalem.",
+     "view": "Some evangelicals believe this prayer looks ahead to Christ's future return to establish an earthly kingdom and restore national Israel.",
      "sources": [
       "https://www.studylight.org/commentary/psalms/53-6.html"
      ]
     }
    ],
-   "other": [
-    {
-     "label": "Catholic",
-     "view": "Augustine taught that Christ Himself is the salvation out of Zion, who entered human weakness and was handed over to enemies so that He could set His people free from spiritual bondage.",
-     "sources": [
-      "https://www.newadvent.org/fathers/1801053.htm"
-     ]
-    }
-   ]
+   "other": []
   }
  ],
  "problems": [
-  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 3: removed sources ['Spurgeon (Treasury of David)', 'Adam Clarke']",
-  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 6: removed sources ['Spurgeon (Treasury of David)']"
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

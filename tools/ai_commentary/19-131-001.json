@@ -8,37 +8,32 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "David turns directly to the Lord to state that he is free from pride. He checks himself in three places: his inner heart, his outward look toward others, and his daily ambitions. He did not seek honor beyond his place, nor did he demand to understand things God has kept hidden. True humility means accepting our station and walking faithfully within the calling God has set for us.",
+   "meaning": "David speaks honestly to the Lord, insisting that he is not puffed up with pride inside, nor does he look down on others. He refuses to chase after human glory, power, or hidden mysteries that belong only to God. Instead of forcing his own ambitions, he chooses to stay humble within the boundaries God gives him.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Matthew Henry",
-    "Calvin",
-    "Adam Clarke"
+    "Jamieson-Fausset-Brown",
+    "Benson"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "Some commentators believe this psalm was written during the Babylonian captivity to show how humble Jewish captives learned to conduct themselves under foreign rulers, rather than being written directly by David.",
-     "sources": [
-      "Adam Clarke"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 2,
    "end": 2,
-   "meaning": "The writer describes calming his restless desires until his soul is peaceful. He pictures a weaned child who rests quietly against its mother, no longer fretting or crying for milk, but satisfied just to be with her. This quiet trust does not come naturally; it is won through discipline when God gently separates our hearts from worldly comforts so we find full satisfaction in Him.",
+   "meaning": "Instead of remaining restless and demanding, David has quieted his inner cravings. A nursing baby cries for milk, but an older weaned child rests peacefully against its mother just to be near her. In the same way, David has learned to be satisfied with God Himself rather than fretting over what he wants to receive.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
     "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch"
+    "Ellicott",
+    "Wesley",
+    "Benson"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "Early Latin tradition read this verse as a warning against being separated from the simple milk of church faith too early, while medieval teachers compared weaning to moving from baptism into the mature discipline of confirmation.",
+     "view": "Early and medieval teachers saw the weaned child as a picture of spiritual growth, where a believer moves past the basic milk of the faith into the stronger discipline of mature life in the church.",
      "sources": [
       "https://www.newadvent.org/fathers/1801131.htm",
       "https://www.newadvent.org/summa/3189.htm"
@@ -49,28 +44,19 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "Having shared his personal peace, the writer calls the entire nation to follow his example. Israel must set aside proud self-reliance and place all their confidence in the Lord. This patient hope must start in the present moment and continue without end.",
+   "meaning": "David turns from his own life to urge the whole nation of Israel to share that same peaceful posture. Rather than scheming or rushing ahead of God, the people are told to place all their confidence in the Lord. This quiet, patient trust is meant to guide them both right now and into the future.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Matthew Henry",
+    "John Gill",
     "Adam Clarke",
     "Keil & Delitzsch"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Catholic",
-     "view": "Augustine taught that Israel must hold to hope during this earthly life, because once believers reach eternity, hope will no longer be needed when God gives the reality itself.",
-     "sources": [
-      "https://www.newadvent.org/fathers/1801131.htm"
-     ]
-    }
-   ]
+   "other": []
   }
  ],
- "problems": [
-  "v. 1: removed sources ['Keil & Delitzsch']",
-  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 3: removed sources ['Spurgeon (Treasury of David)']"
- ],
+ "problems": [],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

@@ -8,22 +8,32 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "When God brought His people back home to Jerusalem from exile in Babylon, the news seemed too good to be true. It felt like a dream because mighty empires of that day never let captive nations return. The people were filled with wonder as they saw the Lord keep His ancient promise to deliver them.",
+   "meaning": "When God brought his people home from captivity in Babylon, it felt so wonderful that they thought they were dreaming. Conquering empires back then almost never let exiled nations go home, so this sudden freedom was an astonishing surprise. It showed the people that the Lord is always faithful to keep his ancient promises.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Matthew Henry",
-    "Spurgeon (Treasury of David)",
-    "https://enduringword.com/bible-commentary/psalm-126/"
+    "Wesley",
+    "Benson"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Early church writer Augustine taught that Babylon represents this fallen world, and that the return pictures Christ rescuing sinners from bondage to sin.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801126.htm"
+     ]
+    }
+   ]
   },
   {
    "verse": 2,
    "end": 2,
-   "meaning": "The returned people burst into loud laughter and songs of praise because their joy was too big to keep inside. Even the surrounding nations had to admit that the Lord had done wonderful things for Israel. God showed His great power to the whole world by rescuing a people who had been defeated and despised.",
+   "meaning": "The unexpected rescue filled the returned captives with bursting laughter and songs of praise. Even foreign nations who worshipped other gods saw what happened and admitted that the Lord had done great wonders for his people. When God rescues his people, his goodness becomes a clear witness to the whole world.",
    "meaning_sources": [
     "Matthew Henry",
-    "https://enduringword.com/bible-commentary/psalm-126/"
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -31,10 +41,11 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "God's people eagerly repeated the words of the nations and claimed the blessing for themselves. While the neighbouring peoples watched from the outside, the Israelites rejoiced because they were the ones who received God's personal kindness. Their gladness was not just a passing mood, but deep gratitude for what the Lord had done.",
+   "meaning": "The worshippers joyfully repeat what the surrounding nations had said. They gladly acknowledge that God truly did great things for them, and it filled them with deep, settled happiness. Looking back on how God helped in the past gives his people real strength and joy for the present.",
    "meaning_sources": [
     "Matthew Henry",
-    "https://biblehub.com/commentaries/expositors/psalms/126.htm"
+    "Adam Clarke",
+    "https://enduringword.com/bible-commentary/psalm-126/"
    ],
    "differ": [],
    "other": []
@@ -42,20 +53,20 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "Although a group of exiles had come home, many of their brothers and sisters were still scattered in Babylon. The singer prays for the rest of the people to return, just as sudden rain fills dry riverbeds in the southern desert. God could quickly pour out new life and bring His whole family back together in the land.",
+   "meaning": "The return was not finished yet, because many Israelites were still scattered in exile and the homeland remained dry and broken. The people pray for God to bring the rest of the nation home, just like seasonal rains suddenly fill dry desert riverbeds in the south. They ask the Lord to complete the good restoration he had already started.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
+    "Ellicott",
     "Jamieson-Fausset-Brown",
-    "https://biblehub.com/commentaries/ellicott/psalms/126.htm"
+    "Benson"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "Early Christian writers like Augustine connected these desert streams to the warm south wind, explaining that the Holy Spirit melts human hearts that were once frozen by sin.",
+     "view": "Augustine followed older Latin translations that spoke of a south wind, picturing the Holy Spirit melting the icy freeze of sin so believers could rush home to God.",
      "sources": [
-      "https://www.newadvent.org/fathers/1801126.htm",
-      "https://biblehub.com/commentaries/ellicott/psalms/126.htm"
+      "https://www.newadvent.org/fathers/1801126.htm"
      ]
     }
    ]
@@ -63,31 +74,40 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "Planting crops or rebuilding a broken nation under hard conditions brings real sorrow and grief. Even so, the Lord promises that faithful labour done in times of suffering will end in a happy harvest. God uses times of trouble to prepare His people for a great day of rejoicing.",
+   "meaning": "Rebuilding the nation was painful, exhausting work, much like planting seed in hard, dry soil during hard times. Yet God promises that tearful labor done in faith will eventually turn into a joyful harvest. Believers can trust that their sorrow and hard work for God will never be in vain.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "Tyndale Study Notes",
+    "Matthew Henry (Concise)",
+    "Ellicott",
+    "Benson"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine interpreted sowing in tears as doing good works and helping the poor during hardship, which God will richly reward with eternal peace.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801126.htm"
+     ]
+    }
+   ]
   },
   {
    "verse": 6,
    "end": 6,
-   "meaning": "A poor farmer might cry as he scatters his precious, limited grain into the dry dirt, fearing it will be lost. God gives a firm promise that this hard-working sower will return celebrating, carrying heavy bundles of ripe grain. Everyone who keeps serving God through pain and heartache will certainly see a joyful reward from Him.",
+   "meaning": "A poor farmer might walk to the field weeping because seed is scarce and the season looks bleak. Yet by keeping at it and scattering the grain, he is guaranteed to come back singing and carrying heavy bundles of wheat. God blesses faithful, patient endurance through tough times with an abundant reward.",
    "meaning_sources": [
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "Ellicott",
+    "Geneva Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
   "v. 6: removed sources ['Spurgeon (Treasury of David)']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

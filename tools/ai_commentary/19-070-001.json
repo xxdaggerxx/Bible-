@@ -8,30 +8,24 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "David cries out to God in deep danger, begging Him to come quickly to his rescue. He uses both the name God and the covenant name LORD, pleading for immediate help before it is too late. Even when God seems slow to answer, believers are invited to bring their urgent needs directly to Him in faith.",
+   "meaning": "David cries out to God in desperate trouble, begging Him to come quickly to his rescue. He uses both the title God and the covenant name, the LORD, showing his earnest faith. When people face sudden danger, God welcomes their urgent and honest pleas for help.",
    "meaning_sources": [
     "Matthew Henry",
-    "Spurgeon (Treasury of David)",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Geneva Notes",
+    "Spurgeon (Treasury of David)"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "Some scholars debate whether this psalm was originally an independent prayer later joined to Psalm 40, though most view it as a detached fragment taken from Psalm 40 for liturgical use.",
-     "sources": [
-      "https://www.studylight.org/commentaries/eng/teb/psalms-70.html"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 2,
    "end": 2,
-   "meaning": "David asks God to stop the enemies who are plotting to take his life and ruin him. He prays that their evil schemes will collapse, leaving them disgraced and confused instead. When the Lord steps in to defend His servants, those who fight against them are turned back in defeat.",
+   "meaning": "David asks God to stop his enemies and turn them back in confusion. These attackers were hunting for his life and cheering for his ruin. David trusts that God will defend him by causing the plots of wicked people to fail.",
    "meaning_sources": [
     "Matthew Henry",
-    "Geneva Notes"
+    "Geneva Notes",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -39,10 +33,11 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "David's foes were openly mocking him and gloating over his pain with cruel shouts of contempt. He prays that their spiteful laughter will be turned into shame that drives them away. God hears the taunts aimed at His people and will ensure that scornful mockers face the embarrassment they tried to cause.",
+   "meaning": "Cruel enemies mocked David during his trouble, shouting taunts to show their deep contempt. David prays that their wicked jeering will backfire and cover them with disgrace instead. God sees when the afflicted are ridiculed, and He does not allow such arrogance to stand.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke"
+    "Geneva Notes",
+    "Adam Clarke",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -50,9 +45,11 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "In the middle of his desperate struggle, David turns his thoughts outward to pray for all of God's people. He asks that everyone who seeks the Lord and loves His rescue would be filled with lasting gladness and joy. Praising God's greatness lifts the hearts of believers even when hard times surround them.",
+   "meaning": "Even in the middle of his own danger, David prays for the joy of the whole community of faith. He asks that everyone who seeks God and loves His salvation will be filled with gladness. True worshippers look beyond their own trials to praise God and declare His greatness.",
    "meaning_sources": [
-    "Matthew Henry"
+    "Matthew Henry",
+    "Adam Clarke",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -60,9 +57,10 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "David ends his prayer by admitting his complete weakness, describing himself as a poor and needy beggar before God. He knows he has no power of his own, so he rests entirely on the Lord as his only rescuer and begs Him not to delay. Confessing our deep need is not a sign of despair, but an honest plea that draws near to God's mercy.",
+   "meaning": "David ends with an honest confession, admitting that he is poor, needy, and completely unable to save himself. He looks to God as his only true helper and rescuer. Because his danger is urgent, he boldly pleads with the Lord not to delay.",
    "meaning_sources": [
     "Matthew Henry",
+    "Geneva Notes",
     "Adam Clarke"
    ],
    "differ": [],
@@ -75,5 +73,6 @@
   "v. 4: removed sources ['Spurgeon (Treasury of David)']",
   "v. 5: removed sources ['Spurgeon (Treasury of David)']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

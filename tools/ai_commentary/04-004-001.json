@@ -8,47 +8,79 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "The Lord spoke to both Moses and Aaron to begin a new counting of the Levites. An earlier count included all male Levites from one month old, but this new count focused on those ready for active labor. Aaron was included with Moses because the priests had to oversee every part of this sacred work.",
+   "meaning": "The Lord spoke to both Moses and Aaron to begin a new count of the Levites. The earlier census counted every male from one month old, but this one focuses only on those ready for active labor. Aaron was included because the priests had to supervise the Levites in handling the holy things.",
    "meaning_sources": [
+    "John Gill",
     "Keil & Delitzsch",
-    "https://mail.biblehub.com/commentaries/gill/numbers/4.htm"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 2,
-   "end": 3,
-   "meaning": "God told Moses and Aaron to count the men of the Kohathite clan who were between thirty and fifty years old. Kohath was counted first because his family carried the most sacred objects, even though Gershon was the older brother. Men in this age range had the physical strength and maturity needed for heavy, holy work. Joining this service was described like entering an army, showing that serving God is an orderly and serious task.",
+   "end": 2,
+   "meaning": "God commanded a census of the Kohathite clan by their families. Even though Gershon was Levi's firstborn son, Kohath was listed first because his descendants carried the most sacred furnishings of the sanctuary. God ordered the work according to the holiness of the items, not by human birth order.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Ellicott",
     "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch",
-    "Wesley"
+    "Keil & Delitzsch"
    ],
    "differ": [],
    "other": []
   },
   {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Only men between thirty and fifty years old were chosen for this work. These years were viewed as the prime of life, providing the physical strength and mature judgment needed to carry heavy, sacred loads. The Hebrew word for this service compares it to military duty, showing that tabernacle work was treated as a sacred warfare.",
+   "meaning_sources": [
+    "Matthew Henry (Concise)",
+    "Wesley",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholic tradition notes the ancient Greek translation gives the starting age as twenty-five, explaining that Levites began five years of training before taking on full service at thirty.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/hcc/numbers-4.html"
+     ]
+    }
+   ]
+  },
+  {
    "verse": 4,
    "end": 4,
-   "meaning": "The Kohathites were given the special duty of caring for the most holy things inside the sanctuary. This included the ark of the covenant, the golden lampstand, and the altars. God assigned specific duties to each group so that everyone knew his place and there would be no jealousy or confusion.",
+   "meaning": "The special assignment of the Kohathites was to transport the most holy objects from the Tent of Meeting. This included the ark of the covenant, the golden altars, the lampstand, and the table of the Presence. Because these furnishings were so sacred, carrying them was both a high honor and a grave responsibility.",
    "meaning_sources": [
-    "Calvin",
     "Keil & Delitzsch",
-    "https://www.biblehub.com/commentaries/pulpit/numbers/4.htm"
+    "Matthew Henry",
+    "John Gill"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 5,
-   "end": 6,
-   "meaning": "When the camp was ready to move, Aaron and his sons went in first to cover the ark of the Testimony with the inner curtain. Over this veil they placed a tough leather covering to keep out rain, and over that a cloth of solid blue before putting in the carrying poles. The priests were allowed inside because the pillar of cloud had lifted to lead the camp. The bright blue covering on the outside signaled to everyone that the ark was the throne of God.",
+   "end": 5,
+   "meaning": "Before the camp set out, Aaron and his sons had to go inside and take down the inner curtain separating the Holy Place from the Most Holy Place. They used this curtain to cover the ark of the Testimony so that no one else would see it. Normal rules kept ordinary priests out of that room, but an exception was made when the camp prepared to move.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Ellicott",
+    "Wesley",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Over the inner curtain, the priests placed a protective layer of fine leather and then a cloth of solid blue. This blue cloth made the ark stand out from every other piece of furniture while Israel marched. Finally, they adjusted the carrying poles so the ark could be carried on men's shoulders without being touched.",
+   "meaning_sources": [
     "Keil & Delitzsch",
-    "https://biblehub.com/commentaries/ellicott/numbers/4.htm"
+    "John Gill",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -56,12 +88,11 @@
   {
    "verse": 7,
    "end": 8,
-   "meaning": "The priests spread a blue cloth over the table of the Presence and set its plates, cups, and bowls on top. The sacred bread remained on the table even during the march, showing that God's provision for his people never stopped. They covered everything with a scarlet cloth, added a layer of protective leather, and inserted the carrying poles.",
+   "meaning": "The table for the bread of the Presence was covered with a blue cloth, and its dishes, cups, and bowls were placed on top. The sacred bread remained on the table even during travel, showing God's constant presence with His people. The priests then placed a scarlet cloth over everything, added a protective leather cover, and inserted the carrying poles.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Ellicott",
     "Wesley",
-    "Keil & Delitzsch",
-    "https://biblehub.com/commentaries/ellicott/numbers/4.htm"
+    "Keil & Delitzsch"
    ],
    "differ": [],
    "other": []
@@ -69,10 +100,11 @@
   {
    "verse": 9,
    "end": 10,
-   "meaning": "Aaron and his sons covered the golden lampstand and all its lamps, wick trimmers, trays, and oil jars with a blue cloth. Then they wrapped the lampstand and its tools in fine leather and placed the bundle on a carrying frame. Unlike the ark and table, the lampstand received only two layers of cloth and leather.",
+   "meaning": "The golden lampstand and all its tools, including wicks, trays, and oil jars, were wrapped in a blue cloth. These items were then enclosed in fine leather and placed on a wooden carrying frame. This allowed the workers to lift and transport the lampstand safely without touching the sacred metal.",
    "meaning_sources": [
+    "John Gill",
     "Keil & Delitzsch",
-    "https://mail.biblehub.com/commentaries/gill/numbers/4.htm"
+    "Geneva Notes"
    ],
    "differ": [],
    "other": []
@@ -80,9 +112,9 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "The golden incense altar was covered with a blue cloth, wrapped in fine leather, and fitted with its carrying poles. This altar was plated with pure gold and used for burning sweet incense in the Holy Place. God required even this smaller altar to be shielded from weather and sight before it was moved.",
+   "meaning": "The gold altar of incense, which stood inside the Holy Place, was also covered with a blue cloth and wrapped in fine leather. After wrapping it securely, the priests put its carrying poles in place. This kept the precious golden altar safe from desert weather and hidden from common view.",
    "meaning_sources": [
-    "Geneva Notes",
+    "John Gill",
     "Keil & Delitzsch",
     "Wesley"
    ],
@@ -92,11 +124,10 @@
   {
    "verse": 12,
    "end": 12,
-   "meaning": "The priests gathered all the other utensils and garments used for serving in the sanctuary and wrapped them in a blue cloth. They covered the bundle with fine leather and set it upon a carrying frame. Every single item used in worship was treated with the highest care and respect.",
+   "meaning": "All the smaller tools used for ministry in the sanctuary were gathered and wrapped together. They were placed in a blue cloth, covered in protective leather, and set on a carrying frame. Wrapping these articles showed deep reverence and kept them from being damaged during travel.",
    "meaning_sources": [
-    "Wesley",
-    "Keil & Delitzsch",
-    "https://mail.biblehub.com/commentaries/gill/numbers/4.htm"
+    "John Gill",
+    "Keil & Delitzsch"
    ],
    "differ": [],
    "other": []
@@ -104,23 +135,32 @@
   {
    "verse": 13,
    "end": 14,
-   "meaning": "The priests cleared the ashes from the bronze altar in the outer courtyard and spread a purple cloth over it. They placed all its firepans, forks, shovels, and bowls onto the altar, wrapped everything in leather, and inserted its poles. The purple cloth set this outer altar apart from the furniture inside the tent, which used blue cloths.",
+   "meaning": "The bronze altar of burnt offering in the outer courtyard had to be cleared of ashes before being covered with a purple cloth. All its tools, such as firepans, meat forks, shovels, and basins, were placed on top of it. A layer of protective leather was spread over the whole altar, and its carrying poles were inserted.",
    "meaning_sources": [
-    "Matthew Henry",
     "Wesley",
-    "https://www.preceptaustin.org/numbers-4-commentary"
+    "Keil & Delitzsch",
+    "Ellicott"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars note that ancient Greek and Samaritan versions include instructions here for wrapping the bronze washbasin, which is not mentioned in the traditional Hebrew text.",
+     "sources": [
+      "Keil & Delitzsch",
+      "Ellicott"
+     ]
+    }
+   ]
   },
   {
    "verse": 15,
    "end": 15,
-   "meaning": "Only after Aaron and his sons finished packing the sacred objects were the Kohathites permitted to come and carry them. The Kohathites carried the items by the poles and were strictly forbidden to touch the holy objects directly, or they would die. This boundary taught the people deep reverence and protected them from God's judgment.",
+   "meaning": "Only after the priests finished wrapping every sacred object could the Kohathites come to carry them. They had to carry the items by the poles and were strictly forbidden to touch the holy things directly. Touching an uncovered holy object would result in death, showing how seriously God's holiness was to be honored.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "Wesley"
+    "Matthew Henry (Concise)",
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -128,12 +168,11 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "Eleazar, Aaron's oldest surviving son, was given personal charge of the lamp oil, fragrant incense, daily grain offering, and anointing oil. He also oversaw the entire tabernacle and supervised the Kohathite workers. While the Levites bore heavy physical loads on their shoulders, Eleazar carried the heavy spiritual duty of making sure nothing was lost or neglected.",
+   "meaning": "Eleazar, the eldest surviving son of Aaron, was given personal charge over the tabernacle and its consumable supplies. He watched over the lamp oil, the fragrant incense, the regular grain offerings, and the holy anointing oil. He also supervised the Kohathite workers to ensure everything was handled properly.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Wesley",
-    "https://biblehub.com/commentaries/ellicott/numbers/4.htm"
+    "Ellicott",
+    "Keil & Delitzsch"
    ],
    "differ": [],
    "other": []
@@ -141,11 +180,11 @@
   {
    "verse": 17,
    "end": 18,
-   "meaning": "The Lord gave a solemn warning to Moses and Aaron to make sure the Kohathite clan was not wiped out. If the priests became careless and left holy things uncovered, the Kohathites would die when they arrived to pick them up. Leaders bear a serious responsibility to protect those under their care from stumbling into fatal mistakes.",
+   "meaning": "The Lord gave Moses and Aaron a solemn warning to protect the Kohathite clan from destruction. If the priests were careless and left holy things exposed, the Kohathites might touch them and die. In God's eyes, the priests would be held responsible if their neglect caused a whole family to be wiped out.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://biblehub.com/commentaries/ellicott/numbers/4.htm"
+    "John Gill",
+    "Jamieson-Fausset-Brown",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -153,11 +192,9 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "To keep the Kohathites safe, Aaron and his sons had to enter first and assign each man his exact burden. No worker was left to pick his own task or wander around the sanctuary furnishings on his own. Clear order and watchful direction prevented fatal errors in God's presence.",
+   "meaning": "To protect the Kohathites from death, the priests had to enter the sanctuary first and assign each man his exact task. Every worker was told precisely what burden to lift once the items were covered. This orderly plan prevented confusion and kept workers from wandering into dangerous contact with holy things.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Geneva Notes",
-    "https://enduringword.com/bible-commentary/numbers-4/"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -165,12 +202,11 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "The Kohathites were forbidden even to look at the holy objects for a single second while the priests packed them, or they would die. The phrase for this moment means as brief as a single gulp. God kept these items hidden under the old covenant to guard his holiness and keep his people from treating sacred things casually.",
+   "meaning": "The Kohathites were forbidden to look at the holy objects even for an instant while they were being wrapped. A casual or curious glance at the uncovered items would bring sudden death. This strict boundary taught Israel that God's holiness must always be approached with deep reverence.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
     "Keil & Delitzsch",
-    "https://biblehub.com/commentaries/ellicott/numbers/4.htm"
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -178,11 +214,11 @@
   {
    "verse": 21,
    "end": 23,
-   "meaning": "God next commanded a census of the Gershonite clan, counting men from thirty to fifty years old. Like the Kohathites, these men entered active service to do the physical work needed for the Tent of Meeting. Even though Gershon was Levi's firstborn son, his family was counted second because their duties involved the tabernacle's fabrics rather than the most sacred furniture.",
+   "meaning": "God commanded Moses to take a census of the Gershonite clan as well. Just like the Kohathites, the men counted were between thirty and fifty years old, the prime age for heavy physical labor. They were registered to do the work of taking down and transporting the tabernacle parts assigned to them.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/numbers-4/"
+    "John Gill",
+    "Geneva Notes"
    ],
    "differ": [],
    "other": []
@@ -190,21 +226,20 @@
   {
    "verse": 24,
    "end": 24,
-   "meaning": "The Gershonite clans were given the responsibility of packing and transporting the various curtains, coverings, and hangings. Though their job involved heavy drapery rather than the golden furniture, their labor was necessary to God's sanctuary. In God's house, every assigned task is important and should be done with a willing heart.",
+   "meaning": "This statement introduces the specific duties assigned to the Gershonite families. While the Kohathites carried the sacred furniture, the Gershonites were responsible for the tabernacle curtains and fabric coverings. Their job required heavy physical labor, but it was just as vital to the worship of God as the work of the other clans.",
    "meaning_sources": [
-    "Matthew Henry",
     "Calvin",
     "Jamieson-Fausset-Brown",
-    "https://enduringword.com/bible-commentary/numbers-4/"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 15: removed sources ['Calvin']",
-  "v. 17: removed sources ['Calvin']",
-  "v. 19: removed sources ['Calvin']"
+  "v. 12: removed sources ['Benson']",
+  "v. 19: removed sources ['Calvin', 'Benson']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

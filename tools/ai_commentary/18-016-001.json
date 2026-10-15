@@ -8,10 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Job begins his reply to Eliphaz. He speaks up because the speeches of his friends have given him no real help.",
+   "meaning": "Job begins his answer after Eliphaz finishes speaking. He refuses to accept his friends' accusations in silence and prepares to speak his mind once again. He wants to address their harsh charges directly.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke"
+    "John Gill",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -19,65 +20,7 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Job tells his friends that their speeches are old news and completely unhelpful. Instead of easing his pain, their harsh words only pile on more grief. They came to comfort him, but they act like bad physicians who make the illness worse.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Adam Clarke"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 3,
-   "end": 3,
-   "meaning": "Job asks when their empty, windy speeches will finally come to an end. He throws their own insults back at them, asking what provokes them to keep arguing. Their repeated claims do nothing to bring the truth to light.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "https://www.studylight.org/commentaries/eng/whe/job-16.html"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 4,
-   "end": 4,
-   "meaning": "Job points out that if their roles were reversed, he could easily do what they are doing. It is easy to pile up critical speeches and shake one's head in mockery at someone who is already suffering.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 5,
-   "end": 5,
-   "meaning": "Instead of kicking them when they were down, Job says he would have used his words to strengthen them. True comfort tries to lighten a person's load and lift a sinking spirit rather than make pain worse.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Geneva Notes"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 6,
-   "end": 6,
-   "meaning": "Job feels trapped because neither speaking nor staying silent brings him any relief. If he defends himself, his friends accuse him of anger, but if he stays quiet, his pain still does not leave him.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/job-16/"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 7,
-   "end": 7,
-   "meaning": "Job turns toward God, stating that God has worn out all his strength. His family and household have been destroyed, leaving him lonely and isolated in his sorrow.",
+   "meaning": "Job tells his friends that he has heard these same arguments many times before. He calls them miserable comforters because their words only add grief instead of soothing his pain. Earthly advice often fails when a soul is in deep distress.",
    "meaning_sources": [
     "Matthew Henry",
     "Wesley",
@@ -87,12 +30,72 @@
    "other": []
   },
   {
-   "verse": 8,
-   "end": 8,
-   "meaning": "God has bound Job with severe illness, leaving his body withered and shrunken to skin and bones. His friends treat his ruined physical condition as visible proof that he must be guilty of great secret sins.",
+   "verse": 3,
+   "end": 3,
+   "meaning": "Job asks Eliphaz when his windy, empty speeches will finally stop. He questions what provokes his friends to keep arguing so harshly without listening to him. Words without sympathy do nothing to heal a hurting person.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Benson",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Job notes that he could easily act the same way if their roles were reversed. He could mock them, shake his head in scorn, and pile on accusations while they sat in pain. It is easy to criticize others when we are comfortable and they are suffering.",
+   "meaning_sources": [
+    "Benson",
+    "Keil & Delitzsch",
+    "https://enduringword.com/bible-commentary/job-16/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Job says that if his friends were the ones suffering, he would choose to encourage them. He would speak gentle words to bring them relief instead of adding to their misery. True comfort aims to lift up those who are broken down.",
+   "meaning_sources": [
+    "Benson",
+    "John Gill",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Job explains that speaking out does not ease his inner torment, yet remaining silent does not help either. No matter what he does, his heavy sorrow stays with him. Deep grief can leave a person feeling completely trapped.",
+   "meaning_sources": [
+    "Geneva Notes",
+    "John Gill",
+    "https://enduringword.com/bible-commentary/job-16/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "Job turns his lament to God, confessing that his strength is entirely exhausted. God has wiped out his household, taking away his children and leaving his home desolate. He feels crushed by the sudden loss of everyone he loved.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch",
+    "Adam Clarke",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "Job feels bound like a prisoner by his severe illness, which has left his body thin and wrinkled. His friends treat his wasting sickness as visible proof that he has sinned. Sickness and weakness can be wrongly judged by others as signs of guilt.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Ellicott",
     "https://www.studylight.org/commentaries/eng/whe/job-16.html"
    ],
    "differ": [],
@@ -101,16 +104,16 @@
   {
    "verse": 9,
    "end": 9,
-   "meaning": "Job describes an attacker who tears into him like a wild beast and glares at him with furious eyes. In his deep sorrow, Job feels as though God Himself has turned against him as an enemy.",
+   "meaning": "Job pictures his attacker as a fierce wild animal tearing him to pieces and glaring at him with burning anger. In his agony, he feels as though God Himself has become his enemy. Terrible pain can make a sufferer feel completely abandoned or attacked by God.",
    "meaning_sources": [
     "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch"
+    "https://enduringword.com/bible-commentary/job-16/"
    ],
    "differ": [
     {
      "tradition": "Methodist",
-     "view": "Some Methodists believe the fierce enemy tearing at Job is Satan, whom God allowed to visibly terrify him.",
+     "view": "Some Methodist commentators understand the fierce attacker described here as Satan rather than God.",
      "sources": [
       "Adam Clarke",
       "https://www.studylight.org/commentaries/eng/whe/job-16.html"
@@ -122,11 +125,11 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "People around Job open their mouths to mock him and treat him with utter contempt. They band together against him in his misery, picturing the way Jesus Christ would later be mocked and struck by hostile crowds.",
+   "meaning": "Job laments that people open their mouths wide to mock him and treat him with open contempt. Slapping the cheek was a severe insult in the ancient world, showing total disdain. This cruel mocking also foreshadows the rejection Jesus faced before His death.",
    "meaning_sources": [
-    "Matthew Henry",
     "Wesley",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -134,10 +137,11 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "Job recognizes that God has handed him over to cruel, wicked people who mistreat him. God allowed these enemies to have power over him, just as Jesus was later delivered into the hands of sinners by God's purpose.",
+   "meaning": "Job recognizes that God has allowed unjust and wicked people to mistreat him. Whether he means desert raiders or his harsh friends, he knows his life is in their grasp by divine permission. It is painful to endure mistreatment when God seems to allow it.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley"
+    "Benson",
+    "Keil & Delitzsch",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -145,11 +149,11 @@
   {
    "verse": 12,
    "end": 12,
-   "meaning": "Job had lived in peace and security, but God shattered his comfortable life without warning. He pictures God as a powerful wrestler who grabs him by the neck, shakes him to pieces, and sets him up as an archer's target.",
+   "meaning": "Job remembers how peaceful and secure his life was before disasters struck without warning. He feels like a fighter seized by the neck and shattered into pieces. God has placed him in the open as a target for destruction.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -157,11 +161,11 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "Arrows strike Job from every side, piercing his most vital inner parts without mercy. The spilling of his gall on the ground pictures a fatal wound that drains away his very life.",
+   "meaning": "Job pictures archers surrounding him and shooting arrows deep into his vital organs. His kidneys are pierced without mercy, and his gall bladder is spilled onto the earth like a fatal hunting blow. He feels mortally wounded by the trials piercing his body and soul.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Keil & Delitzsch"
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -169,11 +173,11 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "Job feels like a walled city being battered again and again until the walls collapse. God attacks him like a mighty warrior charging through the broken gaps.",
+   "meaning": "Job describes himself as a stone city wall being smashed through breach after breach. God rushes upon him like an unstoppable warrior storming a broken fortress. Job has no strength left to hold back these overwhelming attacks.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch"
+    "Keil & Delitzsch",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -181,11 +185,11 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "Job shows the depth of his mourning by sewing rough sackcloth directly onto his wounded skin. He has laid his horn, a common picture of power and dignity, down in the dust to show complete humiliation.",
+   "meaning": "Job says he has sewn scratchy sackcloth directly onto his skin as an ongoing mark of sorrow. He has pushed his horn, a common symbol of power and dignity, down into the dust. He is completely humbled and makes no attempt to hide his loss.",
    "meaning_sources": [
-    "Matthew Henry",
     "Wesley",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -193,10 +197,10 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "Constant weeping has left Job's face flushed and swollen, and dark shadows cover his eyes. His sight is fading from grief, and he feels the darkness of death drawing near.",
+   "meaning": "Job's face has turned red and swollen from constant weeping over his losses. Dark shadows ring his eyes as death seems to creep steadily closer. Unceasing grief has worn down both his spirit and his physical sight.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
+    "John Gill",
     "Adam Clarke"
    ],
    "differ": [],
@@ -205,11 +209,11 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "Even with death approaching, Job insists he is innocent of violence, fraud, and oppression. His prayers to God were sincere and pure, not the empty words of a hypocrite.",
+   "meaning": "Job insists that he has not used violence or stolen from anyone to deserve such destruction. His prayers to God remain genuine, not the prayers of a hypocrite. He maintains his integrity before God even when circumstances look completely against him.",
    "meaning_sources": [
     "Matthew Henry",
     "Wesley",
-    "Adam Clarke"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -217,11 +221,11 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "Job asks the earth not to cover his shed blood, echoing how Abel's blood cried out from the ground. He wants his suffering and unfair death to remain in plain sight until justice is done.",
+   "meaning": "Job pleads with the earth not to hide his blood if he dies, comparing his suffering to an innocent person being murdered. In Scripture, unburied blood cries out to God until justice is done. Job wants his plea for justice to be heard until the truth about his innocence is revealed.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Keil & Delitzsch"
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -229,26 +233,17 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "Job looks past his human accusers and declares that he has a witness in heaven who knows the truth. Even while feeling struck down on earth, he trusts that God in heaven knows his integrity.",
+   "meaning": "Job expresses a striking burst of faith, declaring that his true witness is in heaven. Even though his earthly friends condemn him, God above knows his innocence. Believers can rest in the truth that God sees their hearts when all human support fails.",
    "meaning_sources": [
     "Matthew Henry",
     "Wesley",
-    "Keil & Delitzsch"
+    "https://classic.net.bible.org/verse.php?book=Job&chapter=16&verse=19"
    ],
-   "differ": [
-    {
-     "tradition": "Some evangelicals",
-     "view": "Some evangelicals see this heavenly witness and advocate as a direct pointer to Jesus Christ, who speaks to the Father on our behalf.",
-     "sources": [
-      "https://enduringword.com/bible-commentary/job-16/",
-      "https://biblehub.com/job/16-19.htm"
-     ]
-    }
-   ],
+   "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "Pope Gregory the Great taught that anyone who possesses this witness of a clean life in heaven has no reason to fear the judgments of earthly men.",
+     "view": "Catholic teaching, citing Pope Gregory the Great, sees this verse as assurance that a believer with God as witness in heaven need not fear human judgment.",
      "sources": [
       "https://www.newadvent.org/fathers/360211045.htm"
      ]
@@ -258,10 +253,11 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "Job's earthly friends offer only mockery, so he turns his tearful eyes directly to God. Earthly sympathy has failed him, but he knows God sees his tears and values a broken heart.",
+   "meaning": "Job watches his friends mock him instead of comforting him, so he turns his tear-filled eyes directly to God. Since humans will not listen, he pours out his broken heart to the Almighty. Taking our pain straight to God brings peace when earthly friends disappoint us.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "Jamieson-Fausset-Brown",
+    "John Gill",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -269,43 +265,30 @@
   {
    "verse": 21,
    "end": 21,
-   "meaning": "Job longs for someone to plead a person's case before God, just as a neighbor speaks up for a friend. He appeals from God's present anger to God's ultimate justice and mercy.",
+   "meaning": "Job wishes for someone to plead his case before God, just as a person argues for a neighbor in court. He longs for a fair hearing where his integrity can be vindicated. This cry reflects the human need for an advocate, which Christians see answered in Jesus Christ.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch"
+    "Adam Clarke",
+    "https://ca.thegospelcoalition.org/columns/ad-fontes/5-reasons-to-read-the-book-of-job/"
    ],
-   "differ": [
-    {
-     "tradition": "Baptist",
-     "view": "Some Baptists see an early promise of the Messiah here, taking the phrase 'Son of man' to mean Christ pleading for His people before God.",
-     "sources": [
-      "https://www.studylight.org/bible/eng/nlt/job/16-21.html"
-     ]
-    },
-    {
-     "tradition": "Reformed and Presbyterian",
-     "view": "Some Presbyterians take this as Job simply wishing he could present his own defense directly to God as one man does with another.",
-     "sources": [
-      "https://www.studylight.org/bible/eng/nlt/job/16-21.html"
-     ]
-    }
-   ],
+   "differ": [],
    "other": []
   },
   {
    "verse": 22,
    "end": 22,
-   "meaning": "Job knows that only a few numbered years, or short days, remain for him on earth. Soon he will travel the path of death, a journey from which no one returns to this earthly life.",
+   "meaning": "Job knows he has only a few numbered years left before he enters the realm of death. When he departs this world, he will not return to earthly life again. Facing the reality of death makes him long for his name to be cleared before his time is up.",
    "meaning_sources": [
-    "Matthew Henry",
     "Wesley",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
   }
  ],
- "problems": [],
+ "problems": [
+  "v. 21: removed sources ['Ellicott']"
+ ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

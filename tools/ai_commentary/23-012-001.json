@@ -8,38 +8,47 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "When God brings about His great rescue, each believer personally gives thanks to the Lord. God was rightly angry because of human sin, but His anger has turned away and He now gives gentle comfort. Through Jesus Christ, God's displeasure is removed, giving His people lasting cause for joy.",
+   "meaning": "God's people respond to His rescue with personal thanksgiving. Although the Lord showed righteous anger toward their sin, He has now set that anger aside and brought gentle comfort. Believers can rest peacefully knowing that God's mercy has taken the place of judgment.",
    "meaning_sources": [
     "Matthew Henry",
     "Calvin",
-    "https://enduringword.com/bible-commentary/isaiah-12/"
+    "Benson"
    ],
    "differ": [
     {
      "tradition": "Some evangelicals",
-     "view": "Some evangelicals believe this song will be sung specifically by the surviving remnant of Israel when the Messiah reigns on earth in the millennium.",
+     "view": "Some dispensational teachers hold that this song will be sung literally by the surviving remnant of Israel when Christ reigns on earth during the millennium.",
      "sources": [
       "https://www.preceptaustin.org/isaiah_12_commentary"
      ]
     },
     {
      "tradition": "Reformed and Presbyterian",
-     "view": "Reformed and Presbyterian Christians view this promised day as stretching across the entire reign of Christ over His church.",
+     "view": "Reformed Christians understand this song as belonging to the church throughout the entire reign of Christ.",
      "sources": [
       "Calvin"
      ]
     }
    ],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Earlier critical scholars often viewed this chapter as a separate, later hymn attached to the book rather than written by Isaiah himself.",
+     "sources": [
+      "https://www.studylight.org/commentary/isaiah/12-6.html"
+     ]
+    }
+   ]
   },
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Believers openly confess that salvation comes entirely from God and not from their own good works. The eternal Lord gives complete strength, giving His people courage so they do not have to live in fear. When believers trust Him to save them, their hearts find deep rest and a reason to sing.",
+   "meaning": "Salvation comes from the power of the Lord alone, never from human effort. God Himself becomes the shield, strength, and joy of His people, repeating the victory song Israel sang after crossing the Red Sea. Trusting completely in God removes fear from the heart.",
    "meaning_sources": [
     "Matthew Henry",
-    "Calvin",
-    "https://enduringword.com/bible-commentary/isaiah-12/"
+    "Wesley",
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -47,16 +56,24 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "God invites His thirsty people to drink freely from His never-ending supply of life and grace. Just as cool water revives someone in a dry land, the blessings found in Christ restore and satisfy the weary soul. By faith, believers gladly take from these living springs each day.",
+   "meaning": "God's rescue is described as an endless, bubbling spring of water in a dry land. The Jewish people later remembered this promise during the Feast of Tabernacles by carrying water from the Pool of Siloam with great joy. In the same way, believers gladly receive the life-giving grace of God that never runs dry.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
     "Calvin",
-    "https://biblehub.com/commentaries/isaiah/12-3.htm"
+    "Tyndale Study Notes",
+    "John Gill"
    ],
    "differ": [
     {
+     "tradition": "Baptist",
+     "view": "Many Baptists highlight Christ as the spring, with faith as the God-given bucket used to receive His grace through prayer and Scripture.",
+     "sources": [
+      "John Gill"
+     ]
+    },
+    {
      "tradition": "Lutheran",
-     "view": "Some Lutherans connect this saving water drawn with joy to the gift of Holy Baptism.",
+     "view": "Some Lutherans connect drawing this saving, life-giving water to the gift of baptism.",
      "sources": [
       "https://www.1517.org/articles/old-testament-isaiah-121-6-lent-4-series-c"
      ]
@@ -67,11 +84,11 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "Those who have received God's mercy encourage one another to praise Him together. They do not keep this joy secret, but openly tell other nations about the wonderful things God has done. Experiencing His salvation naturally leads God's people to spread His fame everywhere.",
+   "meaning": "The joy of being saved cannot remain hidden inside one person. Believers call on each other to praise the Lord and tell all nations about what He has done. Sharing God's great works helps spread the knowledge of His glory to people everywhere.",
    "meaning_sources": [
     "Matthew Henry",
     "Calvin",
-    "Keil & Delitzsch"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -79,7 +96,7 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "The people of God are urged to sing praises because the Lord has performed glorious acts of deliverance. His greatest work is sending His Son to rescue sinners from the power of death and evil. This good news is far too wonderful to stay hidden, so it must be shared across the entire earth.",
+   "meaning": "Worshippers are invited to sing out loud because the Lord has performed wonderful deeds of deliverance. His victory over sin and death is far too great to keep secret. God's people are called to set an active example of praise so that the whole earth learns of His goodness.",
    "meaning_sources": [
     "Matthew Henry",
     "Calvin",
@@ -91,24 +108,18 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "The church is called to shout and celebrate because the holy God lives right among His people. His presence is the greatest treasure believers have, bringing deep safety and unending joy. Because their mighty Redeemer is near, His followers can live without terror.",
+   "meaning": "The citizens of Zion, representing God's gathered people, are told to shout for joy. Their greatest blessing is not earthly wealth or safety, but the living presence of the Holy One of Israel dwelling in their midst. Having the holy and great God near gives His church lasting hope and happiness.",
    "meaning_sources": [
-    "Matthew Henry",
     "Calvin",
-    "Geneva Notes"
+    "Ellicott",
+    "Matthew Henry",
+    "John Gill"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "Some modern scholars once viewed this chapter as a later hymn added to the book rather than a song written by the prophet Isaiah.",
-     "sources": [
-      "https://www.studylight.org/commentary/isaiah/12-6.html"
-     ]
-    }
-   ]
+   "other": []
   }
  ],
  "problems": [],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

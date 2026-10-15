@@ -8,11 +8,13 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "King Xerxes placed a tax or forced service across his entire empire, reaching all the way to distant coasts and islands. This showed that orderly government and daily life had returned after the upheaval of Haman's plot. God's quiet care guides regular rulers and ordinary laws just as much as dramatic rescues.",
+   "meaning": "King Xerxes placed a tax or forced labor across his vast empire, extending all the way to the distant coasts and islands. After the crisis caused by Haman was settled, ordinary government work resumed, and the king needed to refill the imperial treasury. This shows that God's quiet care for His people carries on through the ordinary affairs of civil life.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "https://www.thegospelcoalition.org/commentary/esther/"
+    "John Gill",
+    "Benson",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -20,11 +22,13 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "The royal history books of Media and Persia recorded all the king's powerful deeds and Mordecai's rise to greatness. Even a pagan empire had to write down how much good Mordecai accomplished as the king's chief helper. While those ancient government records have long been lost, God's Word endures to tell the story.",
+   "meaning": "The writer directs the reader to the official royal records of Media and Persia for a fuller account of the king's power and Mordecai's high rank. Mordecai's wise work helped the whole kingdom prosper, earning him a lasting name in the court records of a pagan nation. Those Persian archives were eventually lost, but God preserved the biblical record to encourage His people in every generation.",
    "meaning_sources": [
     "Matthew Henry",
     "Wesley",
-    "https://studylight.org/commentaries/eng/phc/esther-10.html"
+    "Adam Clarke",
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -32,26 +36,28 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "Mordecai served as prime minister of the empire, second in command only to the king. Instead of seeking his own wealth, he used his high office to protect his people, listen kindly to them, and work for their lasting peace. His fellow Jews respected and loved him because he governed with fairness and care.",
+   "meaning": "Mordecai was appointed second in command over the entire empire, serving as the king's prime minister. He never used his high office for selfish gain or forgot his heritage, but worked faithfully for the protection and well-being of his fellow Jews. His rise from sitting in rags at the palace gate to ruling near the throne demonstrates how God honors humble, upright servants to bless others.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Geneva Notes"
+    "Geneva Notes",
+    "John Gill",
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic and Orthodox",
-     "view": "Catholic and Orthodox Bibles include ten extra verses after this verse and six more chapters from the ancient Greek text, in which Mordecai recalls a prophetic dream that explains these events.",
+     "view": "In Catholic and Orthodox Bibles, the chapter does not end at verse 3. It continues with ten more verses and several additional chapters from the ancient Greek translation, in which Mordecai explains a prophetic dream and openly gives thanks to God.",
      "sources": [
-      "Adam Clarke",
-      "https://www.newadvent.org/cathen/03267a.htm",
-      "https://wesley.nnu.edu/sermons-essays-books/noncanonical-literature/noncanonical-literature-ot-apocrypha/additions-to-esther/"
+      "Matthew Henry",
+      "Adam Clarke"
      ]
     }
    ]
   }
  ],
  "problems": [],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

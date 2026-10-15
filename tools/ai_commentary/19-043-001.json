@@ -8,21 +8,34 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "The writer asks God to act as his righteous judge and defender. Unkind and dishonest people are attacking him, so he appeals his case to the court of heaven. He trusts that God knows the truth and will rescue him from their wicked schemes.",
+   "meaning": "The writer feels unfairly accused and attacked by ungodly enemies, so he brings his case directly to God as his judge. He asks the Lord to defend him and deliver him from deceitful people. When others treat us unfairly, we can take our troubles to God and trust Him to set things right.",
    "meaning_sources": [
     "Matthew Henry",
-    "Calvin",
-    "Spurgeon (Treasury of David)"
+    "Jamieson-Fausset-Brown",
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many scholars view Psalms 42 and 43 as a single continuous song because they share the same theme and recurring refrain.",
+     "sources": [
+      "Tyndale Study Notes",
+      "Calvin"
+     ]
+    }
+   ]
   },
   {
    "verse": 2,
    "end": 2,
-   "meaning": "The writer declares that God is his only true fortress and source of strength. Even so, he wrestles with why God feels so distant while his enemies make his life miserable. He does not turn away in bitterness, but brings his painful questions straight to the Lord.",
+   "meaning": "The writer affirms that God is his fortress and strength, yet he honestly asks why God feels so distant. He struggles to understand why he must continue suffering under the cruelty of his enemies. Believers can freely pour out their confusion to God while still resting in His protection.",
    "meaning_sources": [
-    "Matthew Henry"
+    "Jamieson-Fausset-Brown",
+    "John Gill",
+    "Matthew Henry",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -30,10 +43,13 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "The writer prays for God's loving favor and faithful promises to guide him like two bright lights. He knows he cannot find the right path on his own wisdom. His deepest wish is to be led back to God's holy mountain so he can worship in the Lord's presence again.",
+   "meaning": "The writer prays for God's light and truth to act like guides leading him out of darkness. His deepest wish is to return to Jerusalem and worship at God's holy dwelling place. God guides His people through difficult times by His revealed truth and faithful care.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley"
+    "Jamieson-Fausset-Brown",
+    "Wesley",
+    "Geneva Notes",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -41,10 +57,12 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "When God brings him back, the writer promises to go directly to the altar with thankful offerings. He treasures God Himself as his highest and greatest joy, not just the safety or gifts God provides. He plans to play his harp and pour out music in grateful praise.",
+   "meaning": "The writer promises that when he is restored, he will come to God's altar with sacrifices of praise and joyful music. He looks beyond the gifts of God to God Himself as his greatest delight. Real joy is found in God's presence, leading naturally to thankful worship.",
    "meaning_sources": [
     "Matthew Henry",
-    "Calvin"
+    "Geneva Notes",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
    ],
    "differ": [],
    "other": []
@@ -52,20 +70,18 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "The writer challenges his own downcast heart and refuses to give in to sadness. His outward troubles have not vanished yet, but he commands his soul to keep hoping in God. He looks forward in faith to the day when he will praise his Savior once again.",
+   "meaning": "The writer questions his own sadness and tells his inner soul to stop being troubled. Even though his outward circumstances have not changed yet, he chooses to wait patiently and put his hope in the Lord. Reminding ourselves of God's promise to save can lift our spirits in dark moments.",
    "meaning_sources": [
     "Matthew Henry",
-    "Geneva Notes"
+    "Geneva Notes",
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
- "problems": [
-  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 5: removed sources ['Spurgeon (Treasury of David)']"
- ],
+ "problems": [],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

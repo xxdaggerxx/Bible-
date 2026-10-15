@@ -8,11 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Here begins a new section of Jeremiah: God's messages about the other nations. It runs through chapter 51. The nations around Israel did not know God, but He is still their King and Judge. He will hold them to account too.",
+   "meaning": "God gives Jeremiah a series of messages directed to the foreign nations surrounding Judah. Up to this point, the prophet focused mainly on warning God's own people, but now the Lord speaks to the wider world. The Lord shows that He rules over every empire, not just Israel. No nation on earth is outside of His authority.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "Wesley"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -20,32 +20,33 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "The first message is about Egypt. Pharaoh Neco had killed good King Josiah of Judah at Megiddo. About four years later, Nebuchadnezzar of Babylon crushed Neco's army at Carchemish, by the Euphrates River, around 605 BC. Egypt lost all its land between the Nile and the Euphrates, and Josiah's death did not go unpunished.",
+   "meaning": "This message concerns Pharaoh Neco and the Egyptian army stationed at Carchemish on the Euphrates River. Nebuchadnezzar of Babylon crushed this army in the fourth year of King Jehoiakim of Judah. The defeat proved that Egypt could never be a dependable protector for the people of Jerusalem.",
    "meaning_sources": [
-    "Jamieson-Fausset-Brown",
-    "Matthew Henry",
-    "https://enduringword.com/bible-commentary/jeremiah-46/"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "Some scholars think verses 3-12 are a song written after the battle, not a prediction made before it. Keil and Delitzsch argue that it is a true prophecy.",
-     "sources": [
-      "Keil & Delitzsch"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 3,
+   "end": 3,
+   "meaning": "A call goes out to ready the large body shields and the smaller bucklers for battle. The words picture an army getting organized and marching proudly toward the front line. In reality, God is setting the stage to show how quickly their military pride will fall apart.",
+   "meaning_sources": [
+    "John Gill",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
    "end": 4,
-   "meaning": "The prophet mockingly calls Egypt's army to get ready. They are to grab the small and large shields, hitch the horses to the chariots, and put on helmets. They are to sharpen their spears and put on armor. Every piece of gear is listed, so by human standards they look sure to win. Yet all this preparation will count for nothing against God.",
+   "meaning": "Soldiers are told to harness the horses, mount their chariots, put on helmets, polish their spears, and strap on their body armor. Egypt was renowned across the ancient world for its powerful chariots and swift steeds. Yet even the finest weapons cannot save an army when God plans its defeat.",
    "meaning_sources": [
     "Jamieson-Fausset-Brown",
-    "Calvin",
-    "Keil & Delitzsch",
-    "Matthew Henry"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -53,12 +54,11 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "Suddenly, in a vision, Jeremiah sees this mighty army panic and run. They flee so fast they dare not even look back. \"Terror on every side\" is one of Jeremiah's favorite phrases. It also gives the answer to his question: God Himself is bringing this judgment.",
+   "meaning": "The prophet watches in astonishment as Egypt's confident troops suddenly panic and run. The battle collapses so fast that the soldiers flee in a rush without daring to glance behind them. God surrounds them with terror on every side.",
    "meaning_sources": [
+    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Calvin",
-    "Geneva Notes",
-    "https://biblehub.com/commentaries/ellicott/jeremiah/46.htm"
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -66,24 +66,34 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "Neither speed nor strength will save them. Even the fastest runners and the bravest soldiers will stumble and fall far to the north, by the Euphrates. The race is not always won by the swift, nor the battle by the strong.",
+   "meaning": "Neither the fastest runners nor the strongest warriors can escape this disaster. Far to the north, along the banks of the Euphrates River, the Egyptian forces trip and fall. Human strength and speed are completely useless when God decides the outcome.",
    "meaning_sources": [
     "Wesley",
-    "Calvin",
-    "Matthew Henry",
-    "Geneva Notes"
+    "Keil & Delitzsch"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 7,
-   "end": 8,
-   "meaning": "Each year the Nile floods its banks and covers Egypt's land. In the same way, Egypt's army swells with pride and boasts it will cover the earth and destroy cities. The prophet makes fun of this boasting. Like the Nile, the army will go back as fast as it came.",
+   "end": 7,
+   "meaning": "The Lord asks who is advancing like the Nile River when it floods its banks. Egypt marched northward with a huge army that looked like surging waters ready to swallow everything in its path. This image compares their swelling pride to the famous yearly flood of their homeland river.",
    "meaning_sources": [
     "Jamieson-Fausset-Brown",
-    "Geneva Notes",
-    "Matthew Henry"
+    "Ellicott",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "Egypt answers the question by boasting that it will rise like a flood to cover the earth. Pharaoh bragged that his army would wipe out cities and destroy everyone living in them. But human arrogance is hollow when it challenges the purpose of God.",
+   "meaning_sources": [
+    "Calvin",
+    "Jamieson-Fausset-Brown",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -91,12 +101,11 @@
   {
    "verse": 9,
    "end": 9,
-   "meaning": "Again the prophet mockingly cheers them on: charge, horses and chariots! Egypt had hired soldiers from Cush (Ethiopia), Put (Libya) and Lud, who were skilled with shields and bows. Such a large army with foreign help seemed impossible to beat. Still, it would fall.",
+   "meaning": "The commanders urge their war horses to charge, their chariots to race wildly, and their allied troops to advance. Soldiers from Cush and Put carried large shields, while archers from Lydia drew their bows. Even with these seasoned foreign helpers, Egypt cannot alter the defeat ahead.",
    "meaning_sources": [
-    "Jamieson-Fausset-Brown",
-    "Wesley",
-    "Geneva Notes",
-    "Calvin"
+    "Tyndale Study Notes",
+    "Calvin",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -104,13 +113,10 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "Egypt thought this would be its big day, but the day belongs to God. It is a day of payback, partly for the killing of Josiah. The sword \"drinking blood\" is a picture of a huge slaughter. Calling it a \"sacrifice\" shows that God's judgment here is right and just.",
+   "meaning": "This day does not belong to Pharaoh, but to the Lord God of Hosts as a day of justice against His enemies. The Lord views the slaughter of the Egyptian army as a sacrifice offered beside the Euphrates River. God brings down those who have long oppressed others and refused to honor Him.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Wesley",
-    "Calvin",
-    "Geneva Notes"
+    "Ellicott",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -118,12 +124,11 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "Gilead was famous for a healing ointment called balm. Jeremiah tells Egypt, with irony, to go get some, because no medicine will heal this wound. \"Virgin\" means Egypt had never yet been conquered. Egypt would not disappear as a nation, but it would never regain its old strength.",
+   "meaning": "Egypt is mockingly told to travel to the region of Gilead to search for its famous healing ointment. She can try every medicine known, but her political wound is far too deep to be healed. When God brings down an empire, no earthly cure can restore its power.",
    "meaning_sources": [
-    "Adam Clarke",
-    "Geneva Notes",
-    "Jamieson-Fausset-Brown",
-    "Calvin"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -131,11 +136,10 @@
   {
    "verse": 12,
    "end": 12,
-   "meaning": "News of Egypt's shameful defeat spreads to every nation, and its cries fill the earth. In the panic, soldiers crash into each other and fall together. Their huge numbers become a trap for them.",
+   "meaning": "Neighboring nations hear of Egypt's humiliating overthrow, and her wailing fills the land. In the wild rush to escape, Egyptian soldiers crash into each other and fall together in heaps. Their former glory is shattered for all the world to see.",
    "meaning_sources": [
+    "John Gill",
     "Jamieson-Fausset-Brown",
-    "Calvin",
-    "Wesley",
     "Matthew Henry"
    ],
    "differ": [],
@@ -144,32 +148,23 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "A second message begins. It is about something that happened years later: Nebuchadnezzar attacking Egypt itself. Egypt had been beaten abroad, but it still felt safe at home. Now the war would come to its own land.",
+   "meaning": "A second prophecy begins here, warning that King Nebuchadnezzar will actually invade Egypt itself. The first battle at Carchemish stopped Egypt at its border, but this message announces judgment within their own cities. God makes sure that those who trust in earthly strongholds will find no safety there.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Calvin"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Benson"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "Some historians once doubted that Nebuchadnezzar ever invaded Egypt. Later, an inscription and Babylonian records were found that describe a campaign in his 37th year (about 568-567 BC).",
-     "sources": [
-      "https://biblehub.com/commentaries/pulpit/jeremiah/46.htm"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 14,
    "end": 14,
-   "meaning": "The warning is to be shouted in Egypt's border towns and in the great city of Memphis. Egypt's neighbors have already fallen, so Egypt should get ready, though getting ready will not help. These were the very towns where Jewish refugees had settled against God's command. They would learn what a poor hiding place Egypt was.",
+   "meaning": "The alarm is sounded across key Egyptian cities, including Migdol, Memphis, and Tahpanhes. These were the frontier towns where Jewish refugees had fled to hide, against God's direct command. The surrounding countries have already fallen to Babylon, and now Egypt's turn has arrived.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke",
-    "Keil & Delitzsch",
-    "Calvin"
+    "Tyndale Study Notes",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -177,34 +172,22 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "Why were Egypt's strong warriors swept away? They could not stand because the Lord pushed them down. Egypt was not fighting only Babylon. It was fighting God.",
+   "meaning": "The prophet asks why Egypt's mighty warriors have been swept away like mud in a flash flood. They could not stand firm because the Lord Himself shoved them down. No army can hold its ground when God fights against it.",
    "meaning_sources": [
     "Matthew Henry",
-    "Calvin",
-    "Adam Clarke"
+    "Ellicott"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "The old Greek translation reads, \"Why did Apis flee?\" Apis was Egypt's sacred bull-god. Many scholars follow this reading, so the verse shows Israel's God beating Egypt's god. Keil and Delitzsch do not accept it.",
-     "sources": [
-      "https://biblehub.com/commentaries/ellicott/jeremiah/46.htm",
-      "https://biblehub.com/commentaries/pulpit/jeremiah/46.htm",
-      "Keil & Delitzsch"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 16,
    "end": 16,
-   "meaning": "Soldiers keep stumbling over one another. The foreign fighters Egypt had hired say, \"Let's go home to our own people, away from this sword.\" Soldiers who fight only for pay are not much use when real trouble comes.",
+   "meaning": "The Lord causes the defenders to trip and fall over one another in total confusion. Foreign workers and hired soldiers realize the battle is lost and urge each other to head back home. Escaping the sword of judgment requires turning to God rather than looking for a new hiding place.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
+    "Tyndale Study Notes",
     "Calvin",
-    "Geneva Notes"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -212,11 +195,11 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "People call Pharaoh \"all noise\": big talk and no action. Some think he missed the time he had set to come and fight. Others think he wasted the time of grace God had given him to turn back. Great talkers are often little doers.",
+   "meaning": "The fleeing soldiers mock Pharaoh as nothing more than a loud noise who lets the right moment pass him by. He talked boldly about his strength, but he failed to deliver when the test came. Earthly leaders make huge promises, but they cannot save anyone from God's hand.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Keil & Delitzsch"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -224,12 +207,11 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "God, the true King, makes a solemn promise by His own life. Mount Tabor towers over the hills around it, and Mount Carmel stands high above the sea. In the same way, Nebuchadnezzar will tower over Egypt. What God has decided is as fixed as those mountains.",
+   "meaning": "The true King, whose name is the Lord of Hosts, swears by His own life that the Babylonian conqueror will arrive. Nebuchadnezzar will stand out over Egypt just as Mount Tabor towers over the valley and Mount Carmel overlooks the sea. What God promises under oath is certain to take place.",
    "meaning_sources": [
-    "Keil & Delitzsch",
-    "Matthew Henry",
-    "Calvin",
-    "https://enduringword.com/bible-commentary/jeremiah-46/"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -237,11 +219,11 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "Egypt had lived in comfort and safety. Now it is told to pack for exile, which means being taken away from home as captives. Even the great city of Memphis will be left in ruins with no one living there. We should prepare our hearts for hard times too.",
+   "meaning": "The people of Egypt are warned to pack their bags for a long march into exile. The great city of Memphis will be completely destroyed and left without anyone living in it. Ancient wealth and famous cities offer no protection when judgment falls.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "Keil & Delitzsch"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -249,12 +231,11 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "Egypt is like a beautiful, well-fed young cow, proud and never trained to the yoke. But a stinging fly is coming from the north, meaning Babylon. Some think the cow picture pokes fun at the bull and cow gods Egypt worshiped.",
+   "meaning": "Egypt is compared to a beautiful, well-fed young cow living in luxury and ease. But a stinging fly, representing the Babylonian army, comes swooping in from the north to torment her. A nation's comfort and ease cannot keep away the trouble God sends.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Geneva Notes",
-    "Keil & Delitzsch",
-    "Adam Clarke"
+    "Ellicott",
+    "Adam Clarke",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -262,11 +243,10 @@
   {
    "verse": 21,
    "end": 21,
-   "meaning": "Even Egypt's hired soldiers are like fattened calves. They are well fed and soft from easy living, and they look fattened for slaughter. They will turn and run, because their day of trouble and punishment has come.",
+   "meaning": "The hired mercenaries in Egypt lived like fattened calves, but they prove useless in the day of battle. Instead of holding their ground, they turn their backs and run away together. Hired help will never risk its life when God brings the time of punishment.",
    "meaning_sources": [
-    "Calvin",
-    "Matthew Henry",
-    "https://enduringword.com/bible-commentary/jeremiah-46/"
+    "Tyndale Study Notes",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -274,11 +254,10 @@
   {
    "verse": 22,
    "end": 22,
-   "meaning": "Once Egypt bellowed like a proud cow. Now it will only make a low hiss, like a snake slipping away, too afraid to cry out. The Babylonians will come with axes, like woodcutters chopping trees that cannot fight back.",
+   "meaning": "Egypt can only hiss softly like a scared snake slithering away into the weeds to hide. Her enemies march in with battle-axes like woodcutters ready to chop down trees. A once-proud empire is reduced to quiet groans before an unstoppable foe.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "Geneva Notes"
+    "Tyndale Study Notes",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -286,12 +265,11 @@
   {
    "verse": 23,
    "end": 23,
-   "meaning": "Egypt's \"forest\" stands for its many people, cities and leaders. However thick it seems, it will be cut down. The enemy army will be more than a swarm of locusts, too many to count.",
+   "meaning": "The Babylonian invaders chop down Egypt's towns and leaders just as woodmen clear a thick forest. The invading soldiers are too many to count, covering the land like an endless swarm of locusts. Even the largest population cannot resist God's appointed judgment.",
    "meaning_sources": [
-    "Adam Clarke",
-    "Geneva Notes",
-    "Matthew Henry",
-    "Calvin"
+    "John Gill",
+    "Calvin",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -299,10 +277,11 @@
   {
    "verse": 24,
    "end": 24,
-   "meaning": "Now the picture is said plainly. Egypt will be put to shame and handed over to the people of the north, the Babylonians.",
+   "meaning": "The proud kingdom of Egypt is covered in disgrace and handed over to the people of the north. The Chaldeans capture her land and take her people captive. God humbles those who exalt themselves above His authority.",
    "meaning_sources": [
-    "Adam Clarke",
-    "Calvin"
+    "Calvin",
+    "John Gill",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -310,11 +289,11 @@
   {
    "verse": 25,
    "end": 25,
-   "meaning": "God names who He will punish. Amon was the chief god of Thebes, Egypt's famous city. God will also punish Pharaoh, Egypt's other gods and rulers, and everyone who trusts in Pharaoh. That includes the Jews who ran to Egypt and trusted Pharaoh instead of God.",
+   "meaning": "The God of Israel declares that He will punish Amon, the famous ram-god of Thebes, along with Pharaoh and all Egypt's idols and rulers. He will also judge anyone who puts their trust in Pharaoh instead of the Lord. Depending on false gods or human rulers always leads to disappointment and loss.",
    "meaning_sources": [
-    "Adam Clarke",
-    "Matthew Henry",
-    "https://biblehub.com/commentaries/jeremiah/46-24.htm"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Calvin"
    ],
    "differ": [],
    "other": []
@@ -322,54 +301,49 @@
   {
    "verse": 26,
    "end": 26,
-   "meaning": "Egypt will be handed over to Nebuchadnezzar and his officers. But God also says that later Egypt will be lived in again as before. Ezekiel spoke of this coming after forty years. God judges Egypt but does not wipe it out, and in this His mercy shows even toward other nations.",
+   "meaning": "God hands Egypt over to Nebuchadnezzar and his royal officers to be conquered. Yet the Lord also promises that Egypt will be inhabited again in later years, just as it was long ago. Even when God brings harsh discipline, He remembers mercy and sets limits to destruction.",
    "meaning_sources": [
-    "Geneva Notes",
-    "Adam Clarke",
-    "Matthew Henry",
-    "Calvin"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "John Gill"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 27,
-   "end": 28,
-   "meaning": "While the nations shake, God comforts His people: \"Don't be afraid.\" He calls Israel \"my servant\" because He chose them, not because they earned it. He promises to bring them home from far away to rest and safety, and to be with them. He will wipe out nations, but never His own people. He will still correct them \"justly,\" meaning in fair measure, for their good and only for a time.",
+   "end": 27,
+   "meaning": "The Lord tells His servant Jacob not to be terrified, even while great empires fall all around. He promises to rescue His people and their children from the lands of their captivity and bring them home to live in quiet and safety. God never forgets His people, no matter how far away they have been scattered.",
    "meaning_sources": [
-    "Calvin",
+    "Tyndale Study Notes",
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Adam Clarke",
-    "Matthew Henry (Concise)"
+    "John Gill"
    ],
-   "differ": [
-    {
-     "tradition": "Reformed and Presbyterian",
-     "view": "The Jewish nation as a nation has ended, but this promise finds its full meaning in the gospel church. The church is God's spiritual Israel, and He will never bring it to an end.",
-     "sources": [
-      "Matthew Henry"
-     ]
-    },
-    {
-     "tradition": "Methodist",
-     "view": "The Jews have survived as a distinct people while their old enemies vanished. This is a sign that Israel will one day be restored to God's favor, when the time of the Gentiles is fulfilled.",
-     "sources": [
-      "Adam Clarke"
-     ]
-    },
-    {
-     "tradition": "Some evangelicals",
-     "view": "The promise of a peaceful return looks ahead to a future kingdom age for Israel that has not come yet.",
-     "sources": [
-      "https://www.studylight.org/commentary/jeremiah/46-26.html"
-     ]
-    }
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 28,
+   "end": 28,
+   "meaning": "The Lord repeats His comfort to Jacob, reminding them that He is with them. He will bring a total end to the heathen nations where they were exiled, but He will not wipe out Israel. Instead, He will discipline His people justly so that they may be corrected and restored.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "John Gill",
+    "Tyndale Study Notes"
    ],
+   "differ": [],
    "other": []
   }
  ],
  "problems": [
+  "v. 3: removed sources ['Pulpit Commentary']",
+  "v. 4: removed sources ['Pulpit Commentary']",
+  "v. 6: removed sources ['Pulpit Commentary']",
+  "v. 10: removed sources ['Pulpit Commentary']",
+  "v. 15: removed sources ['Pulpit Commentary']",
+  "v. 21: removed sources ['Pulpit Commentary']",
   "v. 22: removed sources ['Wesley']"
- ]
+ ],
+ "version": 2,
+ "model": "google/gemini-3.8-flash"
 }

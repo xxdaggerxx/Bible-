@@ -8,9 +8,10 @@
   {
    "verse": 1,
    "end": 2,
-   "meaning": "Bezalel built the large outdoor altar where animal sacrifices would be offered to God. It was a square chest made of acacia wood and covered in bronze so it could bear the heat of the fire. At each of its four corners, he carved a horn-shaped point that formed one piece with the altar. This altar was the place where people approached God to seek forgiveness through sacrifice.",
+   "meaning": "Bezalel built the outer altar for animal sacrifices using durable acacia wood. It was square, measuring five cubits wide and three cubits high, with a horn carved at each corner so the whole frame was one solid piece. The entire altar was covered in bronze so it could withstand intense heat.",
    "meaning_sources": [
     "Matthew Henry",
+    "Jamieson-Fausset-Brown",
     "Calvin"
    ],
    "differ": [],
@@ -19,16 +20,17 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "All the tools used at the altar were also cast from bronze. These included buckets to carry away ashes, shovels to stir the fire, basins to hold blood, meat forks, and pans for carrying hot coals. Every utensil had a practical role in caring for the sacred fire and keeping the altar clean.",
-   "meaning_sources": [],
+   "meaning": "Workers crafted every tool for the altar out of bronze. These items included pots to carry away ashes, shovels, sprinkling bowls for blood, meat hooks, and pans for holding hot coals.",
+   "meaning_sources": [
+    "Ellicott"
+   ],
    "differ": [],
-   "other": [],
-   "unchecked": true
+   "other": []
   },
   {
    "verse": 4,
    "end": 5,
-   "meaning": "Bezalel made a bronze grating that rested inside the altar halfway up from the bottom. This mesh allowed ashes to drop through while holding the burning wood in place. At the four corners of the grate, he cast bronze rings to hold the carrying poles.",
+   "meaning": "A bronze mesh grating was placed inside the altar beneath its upper rim, resting halfway down from the top. Four bronze rings were cast and attached to the four corners of this grating to hold the carrying poles.",
    "meaning_sources": [
     "Geneva Notes"
    ],
@@ -38,64 +40,61 @@
   {
    "verse": 6,
    "end": 7,
-   "meaning": "The carrying poles were carved from acacia wood and coated with bronze. The workers slipped the poles through the side rings so the altar could be lifted without anyone touching it. The altar was constructed from wooden boards so it remained hollow and light enough to move during travel.",
-   "meaning_sources": [
-    "Matthew Henry"
-   ],
+   "meaning": "The carrying poles were made of acacia wood and covered in bronze. They were slid into the side rings so the priests could transport the altar during their travels. The altar itself was made of wooden boards and remained hollow inside so it was light enough to carry.",
+   "meaning_sources": [],
    "differ": [],
-   "other": []
+   "other": [],
+   "unchecked": true
   },
   {
    "verse": 8,
    "end": 8,
-   "meaning": "The large washing basin and its base were made from polished bronze mirrors given by devout women who gathered at the entrance of the tent. In those days, mirrors were crafted from shiny, smoothed metal instead of glass. These women gave up their personal beauty items for God's house, providing the basin where priests washed their hands and feet to be cleansed before serving.",
+   "meaning": "The large washbasin and its bronze base were made from polished bronze mirrors given by the women who served at the tent entrance. In Bible times, mirrors were made of shiny metal rather than glass. These devoted women gladly parted with their personal treasures to help furnish the place where priests washed before serving God.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley",
-    "Adam Clarke",
-    "Jamieson-Fausset-Brown"
+    "Ellicott",
+    "Wesley"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 9,
-   "end": 10,
-   "meaning": "Bezalel set up the enclosed courtyard around the tabernacle tent. The south wall was about one hundred and fifty feet long, formed by hanging curtains of fine white linen on twenty pillars. These pillars stood in heavy bronze bases and were linked at the top with silver hooks and connecting rods.",
+   "end": 11,
+   "meaning": "The builders set up the outer courtyard that enclosed the sacred tent. Both the south and north sides were one hundred cubits long and walled with curtains of finely twisted linen. Each of these long sides was supported by twenty wooden posts set into bronze bases, with silver hooks and bands holding the curtains in place.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 11,
-   "end": 13,
-   "meaning": "The north wall of the courtyard was built just like the south wall, with twenty pillars and white linen curtains. The west end and the east end were each about seventy-five feet wide, supported by ten pillars each. These linen walls kept the courtyard distinct and separate from the rest of the camp.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 14,
-   "end": 16,
-   "meaning": "On the east side, where the entrance was placed, curtains hung on both sides of the gate, each supported by three pillars. The entire perimeter was surrounded by curtains of finely spun linen. This bright white border reminded everyone who approached that God is pure and holy.",
-   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "John Gill",
     "Matthew Henry"
    ],
    "differ": [],
    "other": []
   },
   {
-   "verse": 17,
+   "verse": 12,
+   "end": 13,
+   "meaning": "The west and east sides of the courtyard were each fifty cubits wide. The west end was enclosed with linen curtains hanging from ten posts set in ten bronze bases, all fitted with silver hooks and bands. The east end faced the sunrise and formed the front of the courtyard.",
+   "meaning_sources": [],
+   "differ": [],
+   "other": [],
+   "unchecked": true
+  },
+  {
+   "verse": 14,
+   "end": 15,
+   "meaning": "Curtains hung along both sides of the eastern entrance, with each side measuring fifteen cubits across. Three posts resting in three bronze bases supported the hangings on the left, and three matching posts and bases supported the hangings on the right.",
+   "meaning_sources": [],
+   "differ": [],
+   "other": [],
+   "unchecked": true
+  },
+  {
+   "verse": 16,
    "end": 17,
-   "meaning": "The posts stood securely in bronze sockets set in the dirt, while their tops and bands were covered with silver. This silver trim tied the fence together and gave it a bright, finished appearance. Using valuable metals on the outer fence showed that even the courtyard was dedicated to God.",
+   "meaning": "Fine white linen made up all the courtyard curtains all the way around. The posts rested on solid bronze bases, while the hooks, connecting rods, and the tops of the posts were covered in bright silver.",
    "meaning_sources": [
-    "Adam Clarke"
+    "Ellicott",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -103,9 +102,8 @@
   {
    "verse": 18,
    "end": 19,
-   "meaning": "The gate curtain for the courtyard was thirty feet wide and brightly embroidered with blue, purple, and red yarn on fine linen. It hung from four posts set into bronze bases with silver hooks and trim. Its bright colors marked the single doorway through which people could come toward God's presence.",
+   "meaning": "The gate curtain at the courtyard entrance was twenty cubits wide and five cubits high, beautifully woven with blue, purple, and scarlet yarn on fine linen. It hung from four posts set into four bronze bases, decorated with silver hooks, bands, and tops.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown"
    ],
    "differ": [],
@@ -114,20 +112,20 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "All the tent pegs used to stake down both the tabernacle tent and the courtyard fence were made of bronze. Bronze was tough enough to be driven into the desert ground and resist rust. This ensured that the entire structure remained sturdy during strong wilderness winds.",
-   "meaning_sources": [
-    "Matthew Henry"
-   ],
+   "meaning": "Every tent peg used to pin down the holy tent and its courtyard cords was made of bronze. These sturdy metal stakes kept the curtains firm against wilderness winds.",
+   "meaning_sources": [],
    "differ": [],
-   "other": []
+   "other": [],
+   "unchecked": true
   },
   {
    "verse": 21,
    "end": 21,
-   "meaning": "Moses ordered a complete inventory of the metals used to build the tabernacle of the Testimony, where God's law was kept. Aaron's son Ithamar led the Levites in counting and recording the weights. Keeping an open record proved that all the gifts brought by the people were handled honestly.",
+   "meaning": "Moses ordered a full accounting of all the metals used to construct the tabernacle of testimony, which held God's covenant law. Ithamar, a son of Aaron the priest, led the Levites in recording this official inventory.",
    "meaning_sources": [
     "Calvin",
-    "Matthew Henry"
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -135,10 +133,11 @@
   {
    "verse": 22,
    "end": 23,
-   "meaning": "Bezalel led the master craftsmen, carefully obeying every instruction the Lord had given to Moses. He was assisted by Oholiab, who was specially skilled in engraving, designing, and weaving fine colored textiles. God gave these men both the creative skill and the faithfulness to finish the work well.",
+   "meaning": "Bezalel, from the tribe of Judah, led the construction and carried out everything the Lord had commanded. Working alongside him was Oholiab, from the tribe of Dan, an expert craftsman skilled in designing, weaving, and embroidering colorful linens.",
    "meaning_sources": [
     "Calvin",
-    "Matthew Henry"
+    "John Gill",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -146,12 +145,11 @@
   {
    "verse": 24,
    "end": 24,
-   "meaning": "The total gold freely given by the people weighed over a ton according to the official sanctuary weights. This gold was used to make the sacred furniture, the golden lampstand, and the holy vessels inside the tent. The Israelites had carried this gold from Egypt, and they gladly offered it back to God.",
+   "meaning": "The total gold freely presented as a special offering for the sanctuary weighed over twenty-nine talents and seven hundred thirty shekels. This vast treasure, amounting to more than a ton of gold, came from the gifts the Israelites received when leaving Egypt.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Keil & Delitzsch",
-    "Jamieson-Fausset-Brown"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -159,11 +157,11 @@
   {
    "verse": 25,
    "end": 26,
-   "meaning": "The silver came from the half-shekel ransom money required from every adult man during the census. A total of 603,550 men were counted, which yielded more than five tons of silver. Because rich and poor paid the exact same half-shekel, it showed that all people have equal standing and need the same redemption before God.",
+   "meaning": "The silver collected from the community totaled one hundred talents and one thousand seven hundred seventy-five shekels. Every man twenty years and older paid a half-shekel ransom tax, giving an exact count of 603,550 men in the camp.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Keil & Delitzsch"
+    "Ellicott",
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -171,20 +169,34 @@
   {
    "verse": 27,
    "end": 28,
-   "meaning": "The workers melted one talent of silver for each of the one hundred heavy base sockets of the sanctuary walls and inner curtain. The remaining silver was shaped into hooks, top plates, and bands for the courtyard posts. In this way, the tabernacle literally rested upon the silver given for the people's redemption.",
+   "meaning": "The builders melted the one hundred talents of silver to make one hundred heavy foundation bases for the sanctuary walls and the inner curtain, using one talent for each base. The leftover silver was used to craft hooks for the posts, bands to join them, and shiny caps for their tops.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "Matthew Henry (Concise)",
+    "Ellicott",
+    "Scofield"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 29,
-   "end": 31,
-   "meaning": "The bronze brought as a wave offering weighed about two and a half tons. The craftsmen used it to cast the altar of burnt offering, its utensils, the courtyard post sockets, and all the tent pegs. This sturdy metal was chosen for the items exposed to daily heat and outdoor weather.",
+   "end": 29,
+   "meaning": "The bronze given as a wave offering weighed seventy talents and two thousand four hundred shekels, which was about two and a half tons of metal. This strong metal was reserved for the outdoor courtyard and heavy-duty fixtures.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
+    "Ellicott",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 30,
+   "end": 31,
+   "meaning": "Craftsmen used the bronze to make the entrance bases of the holy tent, the altar of burnt offering, its grate, and all the altar utensils. They also cast the bases for the courtyard posts and gate, along with all the metal tent pegs.",
+   "meaning_sources": [
+    "Ellicott",
+    "John Gill",
     "Keil & Delitzsch"
    ],
    "differ": [],
@@ -192,22 +204,18 @@
   }
  ],
  "problems": [
-  "v. 1: removed sources ['https://biblehub.com/commentaries/ellicott/exodus/38.htm']",
-  "v. 3: main note has no checkable source (['Adam Clarke', 'https://biblehub.com/commentaries/pulpit/exodus/38.htm']); kept but flagged",
-  "v. 3: removed sources ['Adam Clarke', 'https://biblehub.com/commentaries/pulpit/exodus/38.htm']",
-  "v. 4: removed sources ['https://biblehub.com/commentaries/ellicott/exodus/38.htm']",
-  "v. 6: removed sources ['https://biblehub.com/commentaries/ellicott/exodus/38.htm']",
-  "v. 9: removed sources ['https://biblehub.com/commentaries/pulpit/exodus/38.htm']",
-  "v. 11: removed sources ['Wesley']",
-  "v. 14: removed sources ['Jamieson-Fausset-Brown', 'https://biblehub.com/commentaries/pulpit/exodus/38.htm']",
-  "v. 17: removed sources ['https://biblehub.com/commentaries/ellicott/exodus/38.htm', 'https://biblehub.com/commentaries/pulpit/exodus/38.htm']",
-  "v. 18: removed sources ['https://biblehub.com/commentaries/pulpit/exodus/38.htm']",
-  "v. 20: removed sources ['Jamieson-Fausset-Brown', 'https://biblehub.com/commentaries/ellicott/exodus/38.htm']",
-  "v. 21: removed sources ['Keil & Delitzsch']",
-  "v. 22: removed sources ['https://biblehub.com/commentaries/ellicott/exodus/38.htm', 'https://biblehub.com/commentaries/pulpit/exodus/38.htm']",
-  "v. 25: removed sources ['https://biblehub.com/commentaries/pulpit/exodus/38.htm']",
-  "v. 27: removed sources ['https://biblehub.com/commentaries/ellicott/exodus/38.htm']",
-  "v. 29: removed sources ['https://biblehub.com/commentaries/ellicott/exodus/38.htm']"
+  "v. 3: removed sources ['John Gill']",
+  "v. 4: removed sources ['Ellicott']",
+  "v. 6: main note has no checkable source (['Jamieson-Fausset-Brown', 'John Gill']); kept but flagged",
+  "v. 6: removed sources ['Jamieson-Fausset-Brown', 'John Gill']",
+  "v. 12: main note has no checkable source (['John Gill', 'Ellicott']); kept but flagged",
+  "v. 12: removed sources ['John Gill', 'Ellicott']",
+  "v. 14: main note has no checkable source (['John Gill', 'Ellicott']); kept but flagged",
+  "v. 14: removed sources ['John Gill', 'Ellicott']",
+  "v. 18: removed sources ['John Gill']",
+  "v. 20: main note has no checkable source (['Ellicott', 'John Gill']); kept but flagged",
+  "v. 20: removed sources ['Ellicott', 'John Gill']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

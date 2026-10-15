@@ -8,11 +8,12 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "God's people are called to offer fresh, heartfelt praise because the Lord has won a mighty victory. His own power and holy arm accomplished salvation without any human help. In Christ, this victory overthrew sin, death, and evil on our behalf.",
+   "meaning": "God's people are called to sing a fresh song of praise because He has done astonishing things to rescue them. The phrase 'right hand and holy arm' pictures God acting in pure holiness and power without any human help. He alone won the victory over the powers of sin, death, and evil.",
    "meaning_sources": [
     "Matthew Henry",
-    "Spurgeon (Treasury of David)",
-    "Calvin"
+    "Jamieson-Fausset-Brown",
+    "John Gill",
+    "Spurgeon (Treasury of David)"
    ],
    "differ": [],
    "other": []
@@ -20,10 +21,11 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "The Lord did not keep His saving work a secret. Through the good news of the gospel, He openly showed His righteousness—His perfect justice and way of making people right with Himself—to all nations. People could never have discovered this rescue on their own, so God revealed it plainly.",
+   "meaning": "The Lord has not kept His saving work a secret hidden away in one small corner. Instead, He has openly displayed His salvation and shown His righteous character to all the surrounding nations. God's good news is meant to be seen and known by the whole world.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke"
+    "Wesley",
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -31,11 +33,12 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "God stayed true to the promises He made long ago to Abraham and the people of Israel. His free mercy moved Him to make the promise, and His faithfulness caused Him to keep it. Through this fulfilled promise, salvation has spread beyond Israel to reach the farthest corners of the earth.",
+   "meaning": "God remembered the ancient covenant promises of mercy and truth that He made to the people of Israel. Because He stayed completely faithful to Israel, the blessing of His salvation has now spread to the ends of the earth. His faithfulness to one nation opened the door of rescue for all humanity.",
    "meaning_sources": [
-    "Matthew Henry",
     "Calvin",
-    "Adam Clarke"
+    "Geneva Notes",
+    "Adam Clarke",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -43,10 +46,10 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "Everyone on earth is invited to shout and sing out loud with unrestrained gladness. When God reveals His saving rule, worship should not be dull or half-hearted. Believers are encouraged to lift their voices boldly to welcome the Lord.",
+   "meaning": "The call now goes out to the entire earth to burst into loud, joyful song before the Lord. Words pile up here to urge believers to sing with hearty enthusiasm and real energy, not in a half-hearted or sleepy way. Celebrating God's great redemption deserves our loudest and most joyful shouts.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "John Gill",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -54,15 +57,14 @@
   {
    "verse": 5,
    "end": 6,
-   "meaning": "Worshippers are urged to bring their best musical skill to celebrate the Lord as King. Sweet melodies from harps join with the powerful blasts of horns and trumpets to show both beauty and royal honor. Earthly monarchs receive loud fanfares at their coronations, and the King of all kings deserves even greater celebration.",
+   "meaning": "Worshipers are invited to bring every kind of sound before the Lord, combining the gentle melody of harps with the bold blast of horns and trumpets. In the temple, these instruments welcomed the presence of God as the true Sovereign. Blending musical sweetness and power shows the deep joy of hailing the Lord as King.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Tyndale Study Notes"
    ],
    "differ": [
     {
      "tradition": "Reformed and Presbyterian",
-     "view": "Some in this tradition taught that musical instruments belonged only to Old Testament temple ceremonies and should not be used in Christian church services.",
+     "view": "Some historically believed that musical instruments belonged to Old Testament temple shadows and should not be used in church worship.",
      "sources": [
       "Calvin"
      ]
@@ -73,10 +75,11 @@
   {
    "verse": 7,
    "end": 8,
-   "meaning": "The call to praise reaches out to include the physical creation itself. The roaring sea sounds like deep thunderous praise, while rivers and mountains are pictured as clapping and singing for joy. Nature rejoices because Christ's saving rule brings healing and blessing to the entire world.",
+   "meaning": "The psalm turns from human voices and invites the physical world to join in the chorus of praise. The roaring seas sound like rolling thunder, the rushing rivers seem to clap like hands against their banks, and the hills sing out together. All of nature is pictured as rejoicing under the care of its Creator.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -84,21 +87,22 @@
   {
    "verse": 9,
    "end": 9,
-   "meaning": "All creation celebrates because the Lord is coming to govern and set things right. Human rulers are often unfair or corrupt, but God will judge every person and nation with pure justice and fairness. For those who trust Him, His coming as Judge is not a terrifying threat, but a day of comfort and glad hope.",
+   "meaning": "Creation rejoices because the Lord is coming to rule and bring justice to the earth. Unlike human rulers who can be unfair or easily bribed, God will judge with pure righteousness and fairness. His coming rule brings hope and comfort to everyone who longs for wrongs to be made right.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke"
+    "Adam Clarke",
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
   "v. 4: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 9: removed sources ['Spurgeon (Treasury of David)']"
+  "v. 5: removed sources ['Spurgeon (Treasury of David)', 'Benson']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

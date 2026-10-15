@@ -8,18 +8,20 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "The psalm opens with a call to the priests and Levites who kept watch in the temple during the night. Instead of falling asleep or passing the time in idle chatter, they are urged to praise and thank the Lord. Just guarding the building was not enough; God wanted their sincere, heartfelt worship.",
+   "meaning": "Pilgrims heading home from Jerusalem call out to the priests and Levites who work through the night in the temple. These temple servants guarded the holy building, tended the altar fire, and kept the lamps burning. Instead of falling asleep or passing the night in idle talk, they are urged to fill their watch with songs of praise to God.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Matthew Henry",
-    "Calvin",
+    "Ellicott",
     "Spurgeon (Treasury of David)"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "Traditional Catholic translations include an extra phrase from the ancient Greek and Latin Bibles, 'in the courts of the house of our God,' which Augustine interpreted as having a wide heart that can love even enemies.",
+     "view": "In traditional Latin and Catholic Bibles, this psalm is numbered 133 and adds that the servants stand in the temple courts. Early church writers like Augustine saw the night watch as a picture of praising God faithfully during dark seasons of trial and loss.",
      "sources": [
+      "https://biblehub.com/drbc/psalms/134.htm",
       "https://www.newadvent.org/fathers/1801134.htm"
      ]
     }
@@ -28,46 +30,31 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Those on duty are told to raise their hands toward the holy place as they bless the Lord. Raising hands was a standard posture of prayer, showing that the worshipper was reaching out to God and lifting up their heart to Him. Their main duty during the silent night was not just watching the doors, but giving active praise and honor to God.",
+   "meaning": "Lifting up hands was the standard way God's people stood to pray in Bible times. The workers are told to lift clean, holy hands toward the sanctuary, the inner room where God's presence dwelt. The physical action was meant to show that their hearts and thoughts were truly lifted up to the Lord.",
    "meaning_sources": [
     "Calvin",
-    "Matthew Henry"
+    "Matthew Henry",
+    "Adam Clarke",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Catholic",
-     "view": "Augustine explained that blessing God by night represents remaining faithful during seasons of sorrow and trial, when praise is much harder than in prosperous times.",
-     "sources": [
-      "https://www.newadvent.org/fathers/1801134.htm"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 3,
    "end": 3,
-   "meaning": "A prayer of blessing is spoken in return, echoing the blessing God commanded the priests to give His people. It points to the Lord as both the Maker of the whole world who has all power, and the caring God who dwells among His people in Zion. The word 'you' is singular, showing that God's grace is promised to each believer personally.",
+   "meaning": "The psalm ends with a blessing spoken in return, echoing the words priests spoke over God's people in the wilderness. The Lord is named as the Maker of heaven and earth to remind believers that His power has no limits. Because He chose to dwell among them on Mount Zion, He shares that boundless power with each of His children in tender, fatherly love.",
    "meaning_sources": [
     "Calvin",
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "Geneva Notes",
+    "Benson"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Catholic",
-     "view": "Augustine taught that God addresses 'you' in the singular because He unites all the many individual worshippers into one single body.",
-     "sources": [
-      "https://www.newadvent.org/fathers/1801134.htm"
-     ]
-    }
-   ]
+   "other": []
   }
  ],
- "problems": [
-  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 3: removed sources ['Spurgeon (Treasury of David)']"
- ],
+ "problems": [],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

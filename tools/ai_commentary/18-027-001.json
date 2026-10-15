@@ -8,11 +8,12 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Job paused to see if Zophar would take his turn to speak, but the three friends remained completely silent. Their silence showed they had run out of arguments against him. Job then resumed speaking with a grave, weighty message, teaching with authority like a proverb.",
+   "meaning": "Job pauses to give Zophar a turn to speak, but the friends remain silent. Realizing they have given up their arguments, Job resumes his speech with great solemnity. He begins a weighty discourse to give his settled judgment.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "John Gill",
+    "Matthew Henry",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -20,24 +21,35 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Job takes a solemn oath by the living God, which was the highest possible vow. He feels deeply wounded because God has not yet stepped in to clear his name or grant him a fair hearing. Even while complaining of his bitter pain, he still entrusts his life to God as the true Judge.",
+   "meaning": "Job makes a solemn oath by the living God, which was the strongest pledge an Israelite could offer. Even though he feels God has withheld justice from him and made his life bitter, he still acknowledges God's supreme authority. He brings his honest pain before the very Lord he swears by.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 3,
-   "end": 4,
-   "meaning": "Job remembers that God breathed the breath of life into man, and that same breath still keeps him thinking clearly. As long as he lives, he refuses to say anything false or pretend to be someone he is not. Confessing to secret sins he did not commit would be a lie against God and his own conscience.",
+   "end": 3,
+   "meaning": "Job reminds his listeners that God gave him the breath of life in the beginning. As long as that divine gift keeps him alive and conscious, his mind remains clear to testify to the truth. His physical suffering has not clouded his ability to know right from wrong.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "Keil & Delitzsch",
-    "https://classic.net.bible.org/bible.php?book=Job&chapter=27"
+    "Jamieson-Fausset-Brown",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Job declares the terms of his solemn vow. He promises that he will not speak falsehood or utter anything deceitful. Falsely confessing to terrible sins just to satisfy his friends would be a wicked lie, and he refuses to do it.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Geneva Notes",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -45,10 +57,12 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "Job completely rejects the idea of agreeing with his friends' harsh accusations. He insists he will never claim they are right just to end the dispute. Until his dying breath, he will hold firmly to his genuine devotion and integrity before God.",
+   "meaning": "Job flatly refuses to agree that his friends are correct in their harsh charges against him. Conceding that he is a secret villain would betray the truth. He resolves to hold on to his sincere devotion to God until his dying day.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Benson",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -56,23 +70,32 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "Job refuses to let go of his upright character or admit that his troubles were caused by hidden crimes. Conscience is the inner awareness that tells us if we have done right or wrong, and Job's heart does not condemn his past life. He knows he is not sinless, but he has lived with a clear conscience before God.",
+   "meaning": "Job clings firmly to his upright life and will not let anyone take it away. When he looks back over his past, his conscience does not convict him of leading a double life. A clear conscience gives him courage even in deep suffering.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "Jamieson-Fausset-Brown",
+    "Matthew Henry"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Gill clarifies that Job is defending his sincere conduct and innocence against the friends' false charges, rather than claiming sinless perfection to earn acceptance before God.",
+     "sources": [
+      "John Gill"
+     ]
+    }
+   ],
    "other": []
   },
   {
    "verse": 7,
    "end": 7,
-   "meaning": "Job states that anyone who falsely accuses him acts like a wicked opponent. In biblical law, a malicious accuser was meant to receive the very punishment he tried to bring on the innocent. Job makes it clear that true wickedness belongs to those who slander him, not to his own life.",
+   "meaning": "Job expresses how deeply he despises genuine evil. He would rather his worst enemies face the dreadful end of the wicked than ever choose wicked ways himself. He wants no part in the dishonest life his accusers imagine he has lived.",
    "meaning_sources": [
-    "Adam Clarke",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/job-27/"
+    "Benson",
+    "Ellicott",
+    "John Gill",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -80,11 +103,12 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "Job asks what real hope an ungodly hypocrite has when his earthly life is taken away. A person might cheat others and gather great riches in this world, but those gains cannot save his soul. When God summons him to judgment, all of his worldly hope completely vanishes.",
+   "meaning": "Job asks what good earthly profits do for a godless person when life comes to an end. A hypocrite might gain wealth and status in this world, but those things are useless when God requires the soul. Earthly success cannot buy eternal peace.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Benson",
+    "Geneva Notes",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -92,10 +116,11 @@
   {
    "verse": 9,
    "end": 9,
-   "meaning": "When sudden disaster strikes an ungodly person, God will not listen to his panicked cries. Someone who ignored God during times of ease and kept on sinning cannot expect divine favor at the last minute. Because his heart never truly turned to God, his prayers in distress are useless.",
+   "meaning": "When sudden disaster falls, God will not answer the desperate cries of someone who lived a lie. A person who ignored God all along has no claim on his favor in the day of trouble. Job points out that insincere faith leaves a person helpless in crisis.",
    "meaning_sources": [
-    "Matthew Henry",
-    "https://biblehub.com/commentaries/pulpit/job/27.htm"
+    "Benson",
+    "John Gill",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -103,11 +128,12 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "A hypocrite takes delight in worldly pleasures and money rather than in the Almighty. He may go through religious routines when things are comfortable, but he abandons prayer when hard times come. Job points to his own continuous prayers as clear proof that he is not a fake believer.",
+   "meaning": "A godless person finds no true joy in God and only prays when he wants something selfish. He quickly stops seeking God when hard times come or answers are delayed. In contrast, Job continues to reach out to God even amid unbearable loss.",
    "meaning_sources": [
+    "Benson",
+    "Jamieson-Fausset-Brown",
     "Matthew Henry",
-    "Wesley",
-    "Jamieson-Fausset-Brown"
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -115,11 +141,12 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "Job offers to instruct his friends about the great power and true dealings of God. He will not speak from mere human guesswork, but by the directing hand of the Almighty. He promises to explain the real principles behind how God rules the world.",
+   "meaning": "Job offers to teach his friends how God's sovereign power and providence truly work. Relying on divine help, he will not hide the real principles behind God's dealings with humanity. He wants to clear away their mistaken notions about suffering.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "Benson",
+    "Ellicott",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -127,11 +154,12 @@
   {
    "verse": 12,
    "end": 12,
-   "meaning": "Job reminds his companions that they have seen God's ways with their own eyes. Since they have witnessed life as it truly is, their accusations against him are totally baseless. They make a foolish mistake when they claim that every suffering person must be under God's wrath.",
+   "meaning": "Job appeals to what the friends have witnessed in real life. They have seen that the wicked often prosper for a time while good people suffer. He asks why they continue with such empty, useless arguments that contradict basic human experience.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Keil & Delitzsch"
+    "Adam Clarke",
+    "Benson",
+    "Geneva Notes",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -139,19 +167,21 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "Job begins to describe the ultimate fate of cruel and wicked oppressors. Even though such ruthless people may flourish for a time, ruin is their true heritage from the Almighty. Job agrees that God finally punishes the wicked, but he denies that this pattern applies to his own pain.",
+   "meaning": "Job outlines what ultimately awaits the cruel oppressor and the wicked person from the Almighty. While evil people may flourish for a season, judgment will eventually catch up with them. God will ensure that justice is done in the end.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "Adam Clarke",
+    "Benson",
+    "Geneva Notes",
+    "John Gill"
    ],
    "differ": [],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "Many modern scholars consider verses 13–23 to be Zophar's missing third speech that was accidentally placed under Job's name, because its description of the wicked matches the friends' arguments.",
+     "view": "Many modern commentators suggest that verses 13 to 23 originally formed the missing third speech of Zophar, because its description of the wicked man's doom closely mirrors Zophar's earlier words.",
      "sources": [
-      "https://www.studylight.org/commentaries/eng/bcc/job-27.html",
-      "https://studylight.org/commentaries/eng/dcc/job-27.html"
+      "Ellicott",
+      "Tyndale Study Notes"
      ]
     }
    ]
@@ -159,9 +189,11 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "A wicked man may have a very large family, which was often viewed as a special blessing. Yet his many children are destined to fall in battle or suffer from starvation. Earthly power cannot protect a sinner's descendants from the reach of divine justice.",
+   "meaning": "Even if a tyrant has a large family, which was regarded as a sign of blessing, his children will face ruin. Many will die by war or violence, and those who survive will suffer from severe hunger. Their father's ill-gotten wealth cannot secure their future.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Adam Clarke",
+    "Benson",
+    "John Gill",
     "Keil & Delitzsch"
    ],
    "differ": [],
@@ -170,22 +202,35 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "Any family members who survive war and famine will be swept away by deadly plagues. Their deaths will be so sudden and shameful that they will not receive an honorable burial. Even their widows will not weep, either overwhelmed by grief or relieved that a tyrant is gone.",
+   "meaning": "Those in the tyrant's household who survive war and famine will be swept away by deadly disease. Their burials will be hurried and obscure, without honor. Even their widows will not mourn, having lived under bitter oppression themselves.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Keil & Delitzsch"
+    "Adam Clarke",
+    "Ellicott",
+    "Wesley"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 16,
-   "end": 17,
-   "meaning": "A greedy oppressor may pile up silver like dirt and gather great mounds of fine clothing. Yet he will not enjoy what he took from others. God's quiet providence will eventually place those fine garments on the righteous and divide the hoarded wealth among the innocent.",
+   "end": 16,
+   "meaning": "The wicked man may pile up massive quantities of silver as easily as dust. He may also fill his storerooms with costly garments as plentiful as clay. Yet accumulating vast riches cannot protect his heart or his life.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
+    "Benson",
+    "John Gill",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 17,
+   "end": 17,
+   "meaning": "Though the ungodly man stockpiles fine clothing, upright people will end up wearing it. Innocent individuals will divide up his hoard of silver. God's providence ultimately redirects wealth so that it serves those who love what is right.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "John Gill",
     "Keil & Delitzsch"
    ],
    "differ": [],
@@ -194,12 +239,11 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "The house a wicked person builds looks grand, but it is as fragile as a moth's cocoon. It is like the temporary shelter a watchman sets up in a vineyard for the harvest season. As soon as the season passes or rough weather hits, it easily collapses and disappears.",
+   "meaning": "The estate built by the wicked man is as fragile as a moth's cocoon. It is like the temporary shelter a watchman sets up in a vineyard for the harvest season. It looks protective for a moment, but it is soon blown away and dismantled.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "Geneva Notes",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -207,11 +251,12 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "The wealthy man goes to sleep thinking his fortune is completely safe, but he will never do so again. In an instant, sudden death strikes him in the night. When morning comes, he opens his eyes into eternity and all his earthly possessions are gone.",
+   "meaning": "The rich man lies down in wealth, but his fortune and life end abruptly. In the blink of an eye, or when he wakes, his possessions are gone and he is swept away. Death strips away all outward power in an instant.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "Benson",
+    "Ellicott",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -219,11 +264,12 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "Dreadful terrors rush over the wicked person like an unstoppable flood. Judgment seizes him unexpectedly, like a violent nighttime storm carrying away a tent. He finds himself powerless against the sudden wave of God's displeasure.",
+   "meaning": "Overwhelming terrors rush upon the ungodly man like an unstoppable flood. In the middle of the night, God's sudden judgment carries him away like a fierce storm. He finds no shelter from the dread that overtakes his conscience.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Keil & Delitzsch"
+    "Adam Clarke",
+    "Benson",
+    "John Gill",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -231,11 +277,12 @@
   {
    "verse": 21,
    "end": 21,
-   "meaning": "A fierce east wind picks up the wicked man and sweeps him away from his home. In the ancient desert, this burning wind brought ruin and destroyed whatever stood in its path. In the same way, God's judgment blasts the ungodly and clears them out of their place.",
+   "meaning": "A scorching, violent east wind picks up the wicked man and whisks him out of his place. The majestic estate where he thought he would live forever cannot hold him. He is driven away from everything he labored to build.",
    "meaning_sources": [
-    "Wesley",
-    "Keil & Delitzsch",
-    "https://biblehub.com/commentaries/pulpit/job/27.htm"
+    "Adam Clarke",
+    "Benson",
+    "John Gill",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -243,11 +290,11 @@
   {
    "verse": 22,
    "end": 22,
-   "meaning": "God hurls His judgments against the guilty man without showing any pity. The sinner tries desperately to run and hide, but no one can escape the Almighty's hand. Those who refuse to seek God's mercy will find nowhere to run when judgment falls.",
+   "meaning": "The fierce storm of judgment pummels the wicked man without showing any pity. He runs as fast as he can to get away from its fury, but there is nowhere left to hide. Those who refuse to seek God's grace cannot escape his justice.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Keil & Delitzsch"
+    "Adam Clarke",
+    "John Gill",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -255,21 +302,25 @@
   {
    "verse": 23,
    "end": 23,
-   "meaning": "People clap their hands and hiss in scorn as the wicked tyrant is driven out of society. In ancient times, clapping and hissing were gestures used to chase a disgraced leader away in shame. Instead of being remembered with honor, his name is left with lasting disgrace.",
+   "meaning": "The storm drives the ruined oppressor from the scene while onlookers clap their hands and hiss in disgust. They celebrate that a cruel tyrant has finally been removed from power. His downfall leaves behind only disgrace and contempt.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "Benson",
+    "John Gill",
+    "Wesley"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 5: removed sources ['Wesley']",
-  "v. 13: removed sources ['Wesley']",
-  "v. 14: removed sources ['Wesley']"
+  "v. 2: removed sources ['Benson']",
+  "v. 6: removed sources ['Benson']",
+  "v. 15: removed sources ['Benson']",
+  "v. 17: removed sources ['Benson']",
+  "v. 18: removed sources ['Benson']",
+  "v. 22: removed sources ['Benson']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

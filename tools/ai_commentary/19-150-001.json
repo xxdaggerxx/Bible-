@@ -8,10 +8,12 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "A joyful call goes out to praise the Lord everywhere. People are invited to praise Him in His earthly sanctuary, the holy place where He meets with His worshippers. At the same time, praise belongs to Him across the mighty heavens, where His immense power and glory shine brightly.",
+   "meaning": "The psalm opens with a call to praise God both on earth and in heaven. His sanctuary refers to His earthly temple, while His mighty heavens points to the wide skies where His power and glory are clearly seen. All worship belongs to the Lord everywhere, from His earthly house of prayer to the highest heights of creation.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Spurgeon (Treasury of David)"
+    "Jamieson-Fausset-Brown",
+    "Ellicott",
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -19,9 +21,12 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "God is to be praised for two great reasons: what He does and who He is. His worshippers celebrate His mighty acts, such as creating the universe, caring for it, and saving His people. They also honor His excellent greatness, recognizing that His majesty is far beyond anything human words can fully express.",
+   "meaning": "God's people are told to worship Him for two great reasons: what He does and who He is. His mighty acts include His power shown in creating the world, ruling over all things, and rescuing His people. His excellent greatness means His majesty has no limit, so our praise should match how wonderful He truly is.",
    "meaning_sources": [
-    "Matthew Henry"
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke",
+    "John Gill",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -29,43 +34,31 @@
   {
    "verse": 3,
    "end": 5,
-   "meaning": "Worshippers are told to bring every kind of musical instrument into the celebration of God. The list includes horns, harps, lyres, tambourines, pipes, strings, and loud clashing cymbals. These diverse sounds worked together in the temple to show deep joy, wholehearted energy, and unity in honoring the Lord.",
+   "meaning": "A whole orchestra of wind, string, and percussion instruments is called to join together in joyful worship. Horns, harps, lyres, tambourines, flutes, and clashing cymbals were all used in Israel's festivals and temple worship. God welcomes the full sound of music, movement, and human skill to honor His name.",
    "meaning_sources": [
-    "Matthew Henry"
+    "Jamieson-Fausset-Brown",
+    "Ellicott",
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
-   "differ": [
-    {
-     "tradition": "Some evangelicals",
-     "view": "These temple instruments belonged to Old Testament worship and were shadows that pointed to the spiritual praise of the heart in the church.",
-     "sources": [
-      "https://www.biblehub.com/commentaries/gill/psalms/150.htm"
-     ]
-    },
-    {
-     "tradition": "Charismatic",
-     "view": "Believers are encouraged to use every modern instrument and expressive bodily praise to celebrate God with joy today.",
-     "sources": [
-      "https://enduringword.com/bible-commentary/psalm-150/"
-     ]
-    }
-   ],
+   "differ": [],
    "other": []
   },
   {
    "verse": 6,
    "end": 6,
-   "meaning": "The psalm widens its call to its highest point, inviting every living creature that breathes to join in worship. Breath is a gift from God, and it finds its truest purpose when it is used to thank and praise the One who gave it. With this final shout of joy, the entire Book of Psalms comes to a triumphant close.",
+   "meaning": "The call to praise reaches its peak by inviting every creature that has the breath of life to honor the Lord. Because God gave life to all breathing things, every breath should be used to give Him thanks. This joyful shout forms the final, ringing conclusion to the entire Book of Psalms.",
    "meaning_sources": [
-    "Matthew Henry"
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch",
+    "Matthew Henry",
+    "Geneva Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
- "problems": [
-  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 6: removed sources ['Spurgeon (Treasury of David)']"
- ],
+ "problems": [],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

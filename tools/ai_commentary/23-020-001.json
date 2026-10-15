@@ -8,11 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Sargon, the king of Assyria, sent his supreme military commander to attack and capture the Philistine city of Ashdod. Ashdod stood along the coast on the main road toward Egypt, so taking it cleared the way for the Assyrian army to march south. This victory warned the neighboring lands, including Judah, that Assyria's terrifying power was right at their doorstep.",
+   "meaning": "King Sargon of Assyria sent his supreme commander to attack and conquer the Philistine city of Ashdod. Ashdod had rebelled against Assyrian rule, hoping that Egypt would come to its rescue. The city's swift defeat showed everyone in the region that Assyria was an unstoppable world power.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Calvin"
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -20,11 +20,12 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "God commanded Isaiah to take off his rough sackcloth and sandals and walk around stripped and barefoot, and Isaiah promptly obeyed. The sackcloth was likely his normal, simple prophet's clothing or a garment of mourning. In the ancient world, being called naked often meant wearing only a light undergarment, dressing like a mistreated slave or a prisoner of war.",
+   "meaning": "God told Isaiah to remove his sandals and take off the rough sackcloth he wore as a prophet. Isaiah obeyed, walking around barefoot and stripped down to his light undergarment like a humble captive or slave. God gave His prophet this dramatic task so the message would catch the people's attention and warn them of coming judgment.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
     "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch"
+    "Benson",
+    "Calvin"
    ],
    "differ": [],
    "other": []
@@ -32,11 +33,12 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "God honored Isaiah as His faithful servant and explained that the prophet's unusual condition was a living sign against Egypt and Cush. Isaiah's humbled appearance acted as an ongoing visual sermon for the people of Judah. It warned them over a span of three years that these two mighty southern allies would soon suffer a terrible downfall.",
+   "meaning": "God explained the true meaning of Isaiah's strange appearance to the watching people. Walking stripped and barefoot served as a three-year sign of the disaster heading toward Egypt and Cush. God gave this living warning over an extended period so His people would have ample time to turn away from false alliances.",
    "meaning_sources": [
     "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Calvin"
+    "Keil & Delitzsch",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -44,11 +46,11 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "The king of Assyria would defeat Egypt and Cush and march their people away into exile. Captives of all generations, both young and old, would be stripped of their fine garments and forced to walk barefoot in humiliating exposure. This harsh treatment was meant to break their pride and bring deep shame upon Egypt.",
+   "meaning": "Assyria's armies would soon round up the people of Egypt and Cush and drive them into captivity. Young and old alike would be stripped of their clothes and marched away barefoot in total humiliation. The scene revealed how thoroughly the proud nations along the Nile would be disgraced.",
    "meaning_sources": [
-    "Matthew Henry",
+    "John Gill",
     "Jamieson-Fausset-Brown",
-    "Calvin"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -56,11 +58,12 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "All who relied on the armies of Cush and bragged about the greatness of Egypt would be struck with fear and utter disappointment. Many in Judah had pinned their hopes on an alliance with these empires instead of relying on the Lord. When those worldly protectors collapsed, everyone who trusted in them was left disgraced.",
+   "meaning": "All who pinned their hopes on Cush and bragged about Egypt's military might would be left terrified and ashamed. Many in Judah had looked to these southern superpowers for protection instead of seeking God. Putting our ultimate trust in human strength always leads to disappointment.",
    "meaning_sources": [
     "Matthew Henry",
+    "Calvin",
     "Jamieson-Fausset-Brown",
-    "Calvin"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -68,16 +71,20 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "The people living along the coastland, including the people of Judah, would cry out in utter dismay when they saw their allies fall. They had counted on Egypt to deliver them from the Assyrian threat, but now their trusted rescuer was broken. This showed them that leaning on human help is useless and that only God could truly save them.",
+   "meaning": "The people living along the coastal region would cry out in utter despair when they saw Egypt fall. They had counted on Egypt to protect them from the Assyrian war machine, only to see their protector collapse. If the mightiest world powers could not save themselves, smaller nations had no hope unless they trusted the Lord.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Calvin"
+    "Calvin",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
- "problems": [],
+ "problems": [
+  "v. 4: removed sources ['Benson']"
+ ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

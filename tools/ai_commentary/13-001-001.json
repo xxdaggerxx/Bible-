@@ -8,11 +8,12 @@
   {
    "verse": 1,
    "end": 3,
-   "meaning": "The opening list traces ten generations from Adam down to Noah's father, Lamech. Cain and Abel are passed over so the record can follow the family line that led to Noah. God chose to preserve and guide this specific family line through primeval history.",
+   "meaning": "The book opens by tracing the line of human history from the very beginning. The writer leaves out Cain and Abel and names Seth, moving in a direct line through godly ancestors to Lamech. By starting with Adam, the Bible reminds us that God is the Creator and Lord of all people, not just one nation.",
    "meaning_sources": [
-    "Adam Clarke",
+    "Wesley",
+    "Benson",
     "Jamieson-Fausset-Brown",
-    "https://enduringword.com/bible-commentary/1-chronicles-1/"
+    "https://www.preceptaustin.org/1-chronicles-1-commentary"
    ],
    "differ": [],
    "other": []
@@ -20,9 +21,9 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "Noah had three sons after whom the entire post-Flood world was repopulated. All three brothers are listed because all modern nations branch out from them. This reminds us that every person on earth shares a common ancestry.",
+   "meaning": "Noah and his three sons survived the great flood to make a fresh start for humanity. All three sons are named because all the nations of the world grew out of their families. Shem is listed first because the family of Abraham and Jesus would later come through his line.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Geneva Notes",
     "Jamieson-Fausset-Brown",
     "https://enduringword.com/bible-commentary/1-chronicles-1/"
    ],
@@ -32,9 +33,8 @@
   {
    "verse": 5,
    "end": 7,
-   "meaning": "These names trace the family of Japheth, whose descendants moved toward the coastlands and northern areas. Israel had little contact with these distant peoples during their early history, so their family tree is brief. God keeps record of every nation, showing that his care extends to the whole earth.",
+   "meaning": "These verses list the descendants of Japheth, who spread out to become the nations of Europe and northern Asia. Javan is connected with the Greeks, while others settled islands like Cyprus and Rhodes. The writer begins with these distant peoples before turning to the nations closer to Israel's story.",
    "meaning_sources": [
-    "Matthew Henry",
     "Wesley",
     "https://enduringword.com/bible-commentary/1-chronicles-1/"
    ],
@@ -44,9 +44,9 @@
   {
    "verse": 8,
    "end": 9,
-   "meaning": "Ham's descendants settled across parts of Africa and the ancient Near East, becoming nations like Egypt, Libya, and Canaan. The family of Cush expanded into Arabia, establishing known trading peoples like Sheba and Dedan. These regions would later interact frequently with the people of God.",
+   "meaning": "Ham's family included peoples who settled in North Africa, Arabia, and the land of Canaan. Mizraim is the Bible's regular name for Egypt, and Put is linked with Libya. Raamah's sons, Sheba and Dedan, became well-known trading peoples in Arabia.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Ellicott",
     "https://enduringword.com/bible-commentary/1-chronicles-1/",
     "https://www.preceptaustin.org/1-chronicles-1-commentary"
    ],
@@ -56,17 +56,18 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "Nimrod stands out as a powerful ruler and hunter who established early cities. Traditional readers see him as a proud leader who lifted himself above others and ruled harshly. His life is a reminder that human ambition often leads to rebellion against God.",
+   "meaning": "Nimrod stands out as a grandson of Ham who gained great power and influence. Early traditions and commentators describe him as an arrogant ruler who set up kingdoms like Babylon in defiance of God. His life shows how quickly human power can turn into rebellion against the Lord.",
    "meaning_sources": [
-    "Matthew Henry",
     "Geneva Notes",
-    "Adam Clarke"
+    "Matthew Henry",
+    "Adam Clarke",
+    "https://www.preceptaustin.org/1-chronicles-1-commentary"
    ],
    "differ": [],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "Some scholars suggest that Nimrod's father was not Ham's son Cush, but came from a distinct Babylonian background.",
+     "view": "Some scholars suggest that Nimrod's father Cush was originally a different figure from Ham's son Cush, because Nimrod's territory is connected with Mesopotamia rather than Africa.",
      "sources": [
       "https://biblehub.com/commentaries/1_chronicles/1-10.htm"
      ]
@@ -76,9 +77,9 @@
   {
    "verse": 11,
    "end": 12,
-   "meaning": "Mizraim is the forefather of Egypt and several neighboring tribal groups. The Casluhites and Caphtorites are listed here as the source of the Philistines, who would become Israel's long-standing rivals. God recorded the roots of the very nations Israel would encounter in later history.",
+   "meaning": "Mizraim's descendants formed various tribes and peoples in and around Egypt and North Africa. Among them were the Casluhites and Caphtorites, who were connected to the island of Crete and gave rise to the Philistines. The Philistines would later become one of Israel's closest and most persistent rivals.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
     "https://enduringword.com/bible-commentary/1-chronicles-1/"
    ],
    "differ": [],
@@ -87,9 +88,11 @@
   {
    "verse": 13,
    "end": 14,
-   "meaning": "Canaan's family tree includes Sidon, his firstborn, along with groups like the Hittites, Jebusites, and Amorites. These names describe peoples and tribes rather than only individual men. They settled the land that God later promised to Abraham and his descendants.",
+   "meaning": "Canaan was the father of the peoples who lived in the Promised Land before Israel arrived. Sidon was an ancient and famous seaport city in the north, and Heth was the forefather of the Hittites. Groups like the Jebusites and Amorites were well-known tribes that lived in Canaan.",
    "meaning_sources": [
-    "Wesley",
+    "Benson",
+    "Ellicott",
+    "Tyndale Study Notes",
     "https://enduringword.com/bible-commentary/1-chronicles-1/"
    ],
    "differ": [],
@@ -98,41 +101,31 @@
   {
    "verse": 15,
    "end": 16,
-   "meaning": "This list names additional Canaanite peoples, such as the Hivites and Arkites. Over time, several of these smaller groups blended with neighboring tribes and lost their distinct identities. Remembering their names shows that God knew every group that lived in the land before Israel arrived.",
+   "meaning": "These verses finish the list of Canaanite clans that settled throughout the land. Many of these names describe whole tribes or city settlements rather than single individuals. Over time, several of these smaller groups blended into neighbouring nations and lost their separate identities.",
+   "meaning_sources": [],
+   "differ": [],
+   "other": [],
+   "unchecked": true
+  },
+  {
+   "verse": 17,
+   "end": 17,
+   "meaning": "Shem's family includes nations like Elam, Assyria, and the Arameans or Syrians. The last four names were grandsons through Aram, listed here under Shem's broader family line. Even though many of these powerful nations later conquered or exiled Israel, God was still in charge of their beginnings and their history.",
    "meaning_sources": [
-    "Matthew Henry"
+    "Benson",
+    "Geneva Notes",
+    "https://enduringword.com/bible-commentary/1-chronicles-1/"
    ],
    "differ": [],
    "other": []
   },
   {
-   "verse": 17,
-   "end": 17,
-   "meaning": "Shem's family includes the ancestors of the Persians, Assyrians, and Syrians. The final four names are Aram's sons, listed here with Shem's direct sons because the term sons can include grandsons. This line is central to Scripture because it leads directly to the covenant people.",
-   "meaning_sources": [
-    "Wesley",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/1-chronicles-1/"
-   ],
-   "differ": [],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "Some scholars believe the phrase 'and the sons of Aram' accidentally dropped out of the Hebrew text during copying.",
-     "sources": [
-      "https://biblehub.com/commentaries/1_chronicles/1-17.htm"
-     ]
-    }
-   ]
-  },
-  {
    "verse": 18,
    "end": 18,
-   "meaning": "The lineage continues through Arphaxad to Shelah, and from Shelah to Eber. Eber is recognized as the ancestor from whose name the word Hebrew comes. God was quietly preserving the specific family line that would carry his promises to the world.",
+   "meaning": "The family line of Shem continues down to Eber through Shelah. The name Eber is widely understood as the root for the word Hebrew. This narrow line carried the special promises of God down toward Abraham and his descendants.",
    "meaning_sources": [
     "Geneva Notes",
-    "https://enduringword.com/bible-commentary/1-chronicles-1/",
-    "https://biblehub.com/commentaries/1_chronicles/1-17.htm"
+    "https://enduringword.com/bible-commentary/1-chronicles-1/"
    ],
    "differ": [],
    "other": []
@@ -140,18 +133,20 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "Eber had two sons, Peleg and Joktan. Peleg was named for a division, which traditional readers understand as the scattering of nations and languages at the tower of Babel. It marks an important turning point when humanity spread across different lands.",
+   "meaning": "Peleg received his name, which means division, because the people of the earth were separated during his lifetime. Most commentators understand this as the scattering of people into different languages and lands at the tower of Babel. It can also refer to the split between Eber's family lines as Joktan's clan moved away into southern Arabia.",
    "meaning_sources": [
     "Wesley",
-    "https://enduringword.com/bible-commentary/1-chronicles-1/"
+    "https://enduringword.com/bible-commentary/1-chronicles-1/",
+    "https://www.studylight.org/encyclopedias/eng/mse/p/peleg.html"
    ],
    "differ": [],
    "other": [
     {
      "label": "Popular modern teaching",
-     "view": "Some popular modern teachers argue that the division in Peleg's day refers to the physical splitting of the earth's continents rather than language groups.",
+     "view": "Some teach that the earth being divided in Peleg's day refers to the physical splitting of the continents rather than the division of languages at Babel.",
      "sources": [
-      "https://biblehub.com/q/Why_does_Peleg_s_name_mean_division.htm"
+      "https://biblehub.com/q/Why_does_Peleg_s_name_mean_division.htm",
+      "https://www.studylight.org/commentary/1-chronicles/1-19.html"
      ]
     }
    ]
@@ -159,10 +154,9 @@
   {
    "verse": 20,
    "end": 21,
-   "meaning": "Joktan fathered many sons who settled regions across the Arabian peninsula. These verses list the first seven of his sons, including Hazarmaveth and Jerah. Their families grew into distinct tribes and settlements in the ancient East.",
+   "meaning": "Joktan had many sons who went on to settle the southern parts of the Arabian peninsula. Places like Hazarmaveth became known as important trade areas in that region. God tracked each of these families even as they spread far across the ancient world.",
    "meaning_sources": [
     "Adam Clarke",
-    "Keil & Delitzsch",
     "https://biblehub.com/commentaries/1_chronicles/1-17.htm"
    ],
    "differ": [],
@@ -171,11 +165,9 @@
   {
    "verse": 22,
    "end": 23,
-   "meaning": "The remaining sons of Joktan complete the branch of Eber's family that settled in southern Arabia. Places like Ophir and Havilah later became famous in biblical history for their gold and wealth. This record shows how broadly Shem's family expanded after the division.",
+   "meaning": "The list of Joktan's thirteen sons finishes with Ophir, Havilah, and Jobab. Lands like Ophir and Havilah later became famous in the Bible for their rich resources, especially gold. These names remind us how ancient peoples and lands were tied together from the earliest days.",
    "meaning_sources": [
-    "Adam Clarke",
-    "Keil & Delitzsch",
-    "https://biblehub.com/commentaries/1_chronicles/1-17.htm"
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -183,11 +175,12 @@
   {
    "verse": 24,
    "end": 25,
-   "meaning": "The record returns to Shem's main line, moving from Arphaxad through Peleg down to Reu. By repeating this chain, the writer narrows the focus away from side branches back to the chosen line. God steadily advanced his covenant plan through each generation.",
+   "meaning": "The writer repeats the direct line of Shem to highlight the family through which God's promises would flow. He passes over the other nations to trace the family down from Arphaxad to Reu. God keeps His focus on the narrow lineage that leads to the covenant family.",
    "meaning_sources": [
-    "Matthew Henry",
     "Wesley",
-    "Geneva Notes"
+    "Benson",
+    "Geneva Notes",
+    "Keil & Delitzsch"
    ],
    "differ": [],
    "other": []
@@ -195,18 +188,24 @@
   {
    "verse": 26,
    "end": 27,
-   "meaning": "The genealogy reaches from Serug to Terah, ending with Abram, whom God renamed Abraham. God called Abraham and gave him special promises to bless all nations through his family. This list connects every family on earth from the first man, Adam, to the father of the faithful.",
+   "meaning": "The genealogy reaches its goal with Abram, whose name God later changed to Abraham. Out of all the families on earth, God called this one man to be the father of the chosen people and the father of all who have faith. Through his family line, God would eventually bring Jesus the Messiah into the world.",
    "meaning_sources": [
-    "Matthew Henry",
     "Keil & Delitzsch",
-    "https://www.studylight.org/commentaries/eng/kpc/1-chronicles-1.html"
+    "Tyndale Study Notes",
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/1-chronicles-1/"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 15: removed sources ['Wesley']"
+  "v. 15: main note has no checkable source (['Wesley', 'Benson']); kept but flagged",
+  "v. 15: removed sources ['Wesley', 'Benson']",
+  "v. 18: removed sources ['Benson']",
+  "v. 19: removed sources ['Benson']",
+  "v. 22: removed sources ['Ellicott']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

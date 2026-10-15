@@ -8,33 +8,23 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Moses gathers all Israel together to hear God's rules and laws. Hearing God's word is not enough on its own; God's people must learn it and put it into practice in daily life. God's truth is meant to direct our actions, not just fill our heads with ideas.",
+   "meaning": "Moses calls all the people of Israel together to hear God's rules and laws. He urges them not just to listen with their ears, but to study these commands and put them into daily practice. Hearing God's word is meant to shape how his people live and act.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke",
-    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm"
+    "Ellicott",
+    "https://www.preceptaustin.org/deuteronomy-5-commentary"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 2,
-   "end": 2,
-   "meaning": "Moses reminds the people that the Lord entered into a covenant with them at Mount Horeb, which is another name for Mount Sinai. A covenant is a sacred binding agreement between God and His people, initiated entirely by God Himself. This agreement gave Israel their foundation as a holy nation.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "https://enduringword.com/bible-commentary/deuteronomy-5/"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 3,
    "end": 3,
-   "meaning": "Moses explains that this specific Sinai covenant was not made with their earlier ancestors like Abraham, Isaac, and Jacob. Instead, it was made directly with the living nation of Israel standing there that day. Even though many of their parents had died during the wilderness years, the covenant still belonged to the living nation as a whole.",
+   "meaning": "Moses reminds Israel that the Lord established a covenant—a sacred, binding agreement—with them at Mount Horeb. This agreement was not made with their distant ancestors, like Abraham, but directly with the living generation standing before him. The people had a personal responsibility to keep the promises made between God and their nation.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
+    "Calvin",
+    "Jamieson-Fausset-Brown",
+    "Ellicott",
     "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm"
    ],
    "differ": [],
@@ -42,23 +32,12 @@
   },
   {
    "verse": 4,
-   "end": 4,
-   "meaning": "The Lord spoke directly to the assembly out of the blazing fire on the mountain. Speaking \"face to face\" is a word picture meaning He spoke openly, clearly, and without any dark riddles. The people did not see a physical body, but they clearly heard God's own voice.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/deuteronomy-5/"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 5,
    "end": 5,
-   "meaning": "Moses stood between God and the people to serve as an interpreter and mediator. The people were terrified by the blazing fire and could not bear to go up the mountain to hear more. In this role, Moses pointed forward to Jesus Christ, who stands between God and humanity as our true mediator.",
+   "meaning": "The Lord spoke directly to the assembly from the blazing fire on the mountain, showing that his message was clear and personal. Even so, the people were terrified of the flames and shrank back, so Moses stood between God and the nation as a mediator to deliver the divine words. A mediator is a go-between who brings two parties together.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
+    "Wesley",
+    "Ellicott",
     "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm"
    ],
    "differ": [],
@@ -67,10 +46,10 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "God begins the Ten Commandments by announcing His holy name and His mighty rescue of His people. He reminds Israel that He brought them out of cruel slavery in Egypt. Because God graciously saved them first, He has the loving authority to guide how they live.",
+   "meaning": "Before giving any commandments, God reminds the Israelites who he is and what he has done for them. He is Yahweh, the Lord, who graciously rescued them from cruel slavery in Egypt. Because God had already saved them, his commands were given as a guide for a free people, not a price to earn their freedom.",
    "meaning_sources": [
-    "Matthew Henry",
-    "https://biblehub.com/commentaries/ellicott/deuteronomy/5.htm",
+    "Ellicott",
+    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm",
     "https://enduringword.com/bible-commentary/deuteronomy-5/"
    ],
    "differ": [],
@@ -79,15 +58,22 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "The first commandment requires Israel to worship the Lord alone and allow no rivals in His presence. The phrase \"before Me\" means in His sight, showing that God sees everything and will not tolerate false gods alongside Him. True faith means putting God first in our worship and love.",
+   "meaning": "The first commandment demands total loyalty to the one true God, forbidding the worship of any other deities. The phrase 'before Me' means in his presence or to his face, showing that God will not tolerate any rivals. Worship and supreme devotion belong to the Lord alone.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Ellicott",
     "https://enduringword.com/bible-commentary/deuteronomy-5/"
    ],
    "differ": [
     {
+     "tradition": "Reformed and Presbyterian",
+     "view": "This command is counted as the first commandment, distinct from the prohibition against making idols.",
+     "sources": [
+      "https://www.thegospelcoalition.org/commentary/deuteronomy/"
+     ]
+    },
+    {
      "tradition": "Lutheran",
-     "view": "Lutherans combine this command with the prohibition against idols into a single first commandment.",
+     "view": "This verse is joined with the prohibition against idols to form the first commandment.",
      "sources": [
       "https://www.thegospelcoalition.org/commentary/deuteronomy/"
      ]
@@ -96,7 +82,7 @@
    "other": [
     {
      "label": "Catholic",
-     "view": "Catholics combine this verse with the prohibition against idols as part of the first commandment.",
+     "view": "This verse and the prohibition of images are combined as the first commandment.",
      "sources": [
       "https://www.thegospelcoalition.org/commentary/deuteronomy/"
      ]
@@ -106,154 +92,25 @@
   {
    "verse": 8,
    "end": 10,
-   "meaning": "God forbids making statues or images of anything in creation to use for worship. He is a jealous God who fiercely protects the exclusive love and devotion that belong to Him alone. He warns that the rebellion of idol worship brings harmful consequences down through generations, but He promises steadfast mercy to thousands of generations of those who love and obey Him.",
+   "meaning": "God forbids making any physical statue or image to represent him or to bow down to in worship. The Lord is a jealous God who fiercely protects his relationship with his people and will not share his honor with handmade objects. Idolatry brings damaging spiritual consequences on families who turn from him, but God promises overwhelming mercy to thousands of generations of those who love and obey him.",
    "meaning_sources": [
     "Calvin",
-    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm",
-    "https://enduringword.com/bible-commentary/deuteronomy-5/"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 11,
-   "end": 11,
-   "meaning": "This command forbids using the Lord's holy name in a careless, dishonest, or disrespectful way. It condemns false oaths, profanity, and claiming God's name while living contrary to His ways. God takes His own name seriously and holds everyone accountable for how they treat it.",
-   "meaning_sources": [
-    "Wesley",
-    "https://biblehub.com/commentaries/ellicott/deuteronomy/5.htm",
-    "https://enduringword.com/bible-commentary/deuteronomy-5/"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 12,
-   "end": 12,
-   "meaning": "God commands His people to guard the Sabbath day and keep it holy as He previously ordered. In Deuteronomy, Moses says \"observe\" or \"keep\" rather than \"remember,\" stressing active obedience to this day of rest. It is a day set apart to honor the Lord and refresh the soul.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm",
+    "Geneva Notes",
+    "Ellicott",
+    "Tyndale Study Notes",
     "https://enduringword.com/bible-commentary/deuteronomy-5/"
    ],
    "differ": [
     {
      "tradition": "Reformed and Presbyterian",
-     "view": "Many in this tradition hold that dedicating one day in seven to worship and rest is a moral duty that continues under the new covenant on the Lord's Day.",
+     "view": "These verses form the second commandment, which explicitly forbids using images or idols in worship.",
      "sources": [
-      "https://learn.ligonier.org/articles/defining-debate",
-      "https://www.thegospelcoalition.org/article/continuity-moral-law/"
+      "https://www.thegospelcoalition.org/commentary/deuteronomy/"
      ]
     },
     {
      "tradition": "Lutheran",
-     "view": "Lutherans view the specific seventh-day Sabbath requirement as part of the ceremonial law fulfilled in Christ, leaving believers free regarding special days.",
-     "sources": [
-      "https://www.thegospelcoalition.org/article/continuity-moral-law/"
-     ]
-    },
-    {
-     "tradition": "Baptist",
-     "view": "Some Baptists teach that the Sabbath was a covenant sign specifically for ancient Israel and is not binding on Christians today.",
-     "sources": [
-      "https://www.gty.org/sermons/print/90-379/understanding-the-sabbath"
-     ]
-    }
-   ],
-   "other": []
-  },
-  {
-   "verse": 13,
-   "end": 14,
-   "meaning": "God gives six days for normal work, but reserves the seventh day as a sacred day of rest to the Lord. No work is to be done on it by parents, children, servants, working animals, or visiting foreigners. This ensured that even the humblest servants enjoyed the very same rest and refreshment as their masters.",
-   "meaning_sources": [
-    "https://biblehub.com/commentaries/ellicott/deuteronomy/5.htm",
-    "https://enduringword.com/bible-commentary/deuteronomy-5/"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 15,
-   "end": 15,
-   "meaning": "Israel is told to remember their past as helpless slaves in Egypt whom God delivered by His mighty power. This deliverance gave them a special reason to grant rest to their servants and celebrate their freedom. In the same way, Christians find true spiritual freedom through the redemption won by Jesus Christ.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "https://biblehub.com/commentaries/ellicott/deuteronomy/5.htm"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 16,
-   "end": 16,
-   "meaning": "God commands children to show deep respect, obedience, and care for their father and mother. This is the first commandment that comes with a direct promise of well-being and a long life in the land God was giving them. Honoring parents builds strong families and forms the backbone of a peaceful society.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm",
-    "https://enduringword.com/bible-commentary/deuteronomy-5/"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 17,
-   "end": 17,
-   "meaning": "This commandment forbids taking human life through murder or unlawful violence. It protects the sacred value of human life created in God's image. At the same time, it does not forbid the lawful punishment of criminals or defending the nation in battle.",
-   "meaning_sources": [
-    "Wesley",
-    "https://www.studylight.org/commentaries/eng/lmg/deuteronomy-5.html"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 18,
-   "end": 18,
-   "meaning": "God forbids adultery to protect the purity and sacred bond of marriage. Faithfulness in marriage honors the covenant that a husband and wife make before God. This command also guards the heart against lust and improper desires.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Wesley"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 19,
-   "end": 19,
-   "meaning": "This command forbids stealing or taking someone else's property by dishonest means. God is the rightful owner of all things, and He entrusts people with possessions to manage wisely. Respecting what belongs to others reflects trust in God's daily provision.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Wesley"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 20,
-   "end": 20,
-   "meaning": "God forbids giving false testimony or telling lies that harm another person's reputation or legal standing. It requires truthfulness and integrity in courts of law and everyday speech. Slandering or gossiping about a neighbor breaks this rule and damages human trust.",
-   "meaning_sources": [
-    "Wesley",
-    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 21,
-   "end": 21,
-   "meaning": "This commandment forbids longing for another person's spouse, home, land, servants, or animals. Unlike the other laws that address outward actions, this command goes directly to the secret desires of the human heart. In Deuteronomy, a neighbor's wife is listed first, showing her special honor apart from mere property.",
-   "meaning_sources": [
-    "Wesley",
-    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm",
-    "https://enduringword.com/bible-commentary/deuteronomy-5/"
-   ],
-   "differ": [
-    {
-     "tradition": "Lutheran",
-     "view": "Lutherans divide this verse into two separate commandments: the ninth against coveting a neighbor's house, and the tenth against coveting a neighbor's wife or possessions.",
+     "view": "These verses are treated as part of the first commandment rather than a separate command.",
      "sources": [
       "https://www.thegospelcoalition.org/commentary/deuteronomy/"
      ]
@@ -262,7 +119,143 @@
    "other": [
     {
      "label": "Catholic",
-     "view": "Catholics divide this verse into the ninth commandment against desiring another's spouse and the tenth commandment against desiring another's goods.",
+     "view": "These verses are included within the first commandment rather than counted as a distinct second commandment.",
+     "sources": [
+      "https://www.thegospelcoalition.org/commentary/deuteronomy/"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "This command forbids misusing the Lord's holy name, whether by making false oaths, using his name lightly, or living hypocritically while claiming to be his people. Treating God's name disrespectfully reflects a careless attitude toward God himself. The Lord warns that he will hold anyone accountable who treats his name with contempt.",
+   "meaning_sources": [
+    "Benson",
+    "Ellicott",
+    "Tyndale Study Notes",
+    "https://enduringword.com/bible-commentary/deuteronomy-5/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 14,
+   "meaning": "God commands Israel to observe the seventh day by stopping regular labor and keeping it holy. The day of rest was not only for the head of the house, but extended to sons, daughters, servants, working animals, and visiting foreigners. God designed the Sabbath so that everyone, especially laborers, could be refreshed and join together in worship.",
+   "meaning_sources": [
+    "John Gill",
+    "Tyndale Study Notes",
+    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm",
+    "https://enduringword.com/bible-commentary/deuteronomy-5/"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The weekly Sabbath is a perpetual moral duty for all people, transferred from Saturday to Sunday in honor of Christ's resurrection.",
+     "sources": [
+      "https://learn.ligonier.org/articles/defining-debate"
+     ]
+    },
+    {
+     "tradition": "Lutheran",
+     "view": "The specific Sabbath day was a ceremonial requirement fulfilled in Christ, leaving Christians free regarding days while continuing regular public worship.",
+     "sources": [
+      "https://www.thegospelcoalition.org/article/continuity-moral-law/"
+     ]
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Believers under the new covenant are free from any obligation to keep a specific Sabbath day, finding their true spiritual rest in Christ.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/deuteronomy-5/",
+      "https://www.gty.org/sermons/print/90-379/understanding-the-sabbath"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 15,
+   "end": 15,
+   "meaning": "Moses gives an additional reason for resting on the Sabbath: Israel had once lived as helpless slaves in Egypt until God set them free with his mighty power. Remembering their past slavery would move them to show mercy and grant restful relief to their own workers. The Sabbath thus serves as a celebration of God's redeeming love.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Tyndale Study Notes",
+    "https://enduringword.com/bible-commentary/deuteronomy-5/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 16,
+   "end": 16,
+   "meaning": "Children are commanded to respect, obey, and care for their fathers and mothers as representatives of God's authority. Honoring parents builds strong families, which are the foundation of a healthy and stable community. God attaches a special promise to this command, granting long life and flourishing in the land he provides.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Benson",
+    "Ellicott",
+    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 17,
+   "end": 18,
+   "meaning": "These two short commands protect human life and marriage. Murder is the wrongful, deliberate taking of an innocent person's life, which dishonors God who created human beings. Adultery breaks the sacred marriage covenant, destroying trust and family purity.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Benson",
+    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm",
+    "https://enduringword.com/bible-commentary/deuteronomy-5/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 19,
+   "end": 20,
+   "meaning": "These commands safeguard a neighbor's property and reputation. Stealing takes what belongs to another person and forgets that God is the true provider and owner of all goods. Bearing false witness means lying about someone, especially in legal matters, which perverts justice and harms the innocent.",
+   "meaning_sources": [
+    "Wesley",
+    "Benson",
+    "https://enduringword.com/bible-commentary/deuteronomy-5/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 21,
+   "end": 21,
+   "meaning": "This commandment forbids coveting, which means greedily longing for another person's spouse, house, land, workers, or possessions. Unlike commands that address outward actions, this law targets the secret desires of the heart where sin begins. A neighbor's wife is mentioned first, highlighting her dignity as a partner rather than mere property.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes",
+    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm",
+    "https://enduringword.com/bible-commentary/deuteronomy-5/"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "This entire verse constitutes a single tenth commandment against unlawful desire.",
+     "sources": [
+      "https://www.thegospelcoalition.org/commentary/deuteronomy/"
+     ]
+    },
+    {
+     "tradition": "Lutheran",
+     "view": "This verse is divided into two separate commands: the ninth against coveting a neighbor's house or property, and the tenth against coveting his wife or workers.",
+     "sources": [
+      "https://www.thegospelcoalition.org/commentary/deuteronomy/"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "This verse is separated into the ninth commandment forbidding coveting another's spouse and the tenth forbidding coveting another's property.",
      "sources": [
       "https://www.thegospelcoalition.org/commentary/deuteronomy/"
      ]
@@ -272,10 +265,12 @@
   {
    "verse": 22,
    "end": 22,
-   "meaning": "God spoke the Ten Commandments with a mighty voice from the darkness, fire, and clouds before the entire assembly, and He added nothing else directly. He then wrote these words on two stone tablets and gave them to Moses for safekeeping. This showed that the Ten Commandments formed the complete, unchanging foundation of His covenant with Israel.",
+   "meaning": "God spoke the Ten Commandments aloud from the supernatural cloud, fire, and darkness so that the entire nation heard his voice directly. He spoke no more laws in that immediate, thunderous way, showing that these foundational moral commands hold a unique place. God then engraved them onto two stone tablets and gave them to Moses, showing that his law is lasting and unchangeable.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
+    "Calvin",
+    "Jamieson-Fausset-Brown",
+    "Wesley",
+    "Ellicott",
     "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm"
    ],
    "differ": [],
@@ -283,24 +278,13 @@
   },
   {
    "verse": 23,
-   "end": 23,
-   "meaning": "When the mountain was blazing with fire and shrouded in darkness, the tribal leaders and elders came to Moses in deep fear. The overwhelming display of God's presence filled them with trembling respect. Their fear caused them to realize they could not bear to approach a holy God on their own.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "https://biblehub.com/commentaries/ellicott/deuteronomy/5.htm"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 24,
    "end": 24,
-   "meaning": "The leaders confessed that God had shown them His amazing greatness and glory through the fire. They marveled that human beings could actually hear the voice of the living God and survive the experience. This showed both God's terrifying holiness and His astonishing mercy toward mortal people.",
+   "meaning": "After hearing God's voice from the fiery darkness, the tribal leaders and elders came to Moses in deep awe. They confessed that they had witnessed an astonishing wonder: the Almighty God had displayed his majesty and spoken with mortals who still survived. Experiencing God's holy glory filled them with profound reverence.",
    "meaning_sources": [
-    "Matthew Henry",
     "Calvin",
-    "https://biblehub.com/commentaries/ellicott/deuteronomy/5.htm"
+    "John Gill",
+    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm",
+    "https://enduringword.com/bible-commentary/deuteronomy-5/"
    ],
    "differ": [],
    "other": []
@@ -308,11 +292,11 @@
   {
    "verse": 25,
    "end": 26,
-   "meaning": "The people feared that if God kept speaking to them directly, the blazing fire would consume them and they would die. They asked who of frail humanity had ever survived hearing the living God speak from the fire as they had. Their awareness of human weakness and guilt made God's holy majesty feel too terrifying to endure.",
+   "meaning": "Despite having survived the initial revelation, the people were terrified that the blazing fire would eventually consume them if God continued speaking directly. They recognized human weakness and frailty in the presence of the eternal, living God. Their fear showed an honest awareness of the great gulf between a holy God and sinful humanity.",
    "meaning_sources": [
-    "Matthew Henry",
     "Calvin",
-    "Wesley"
+    "Wesley",
+    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm"
    ],
    "differ": [],
    "other": []
@@ -320,69 +304,36 @@
   {
    "verse": 27,
    "end": 27,
-   "meaning": "The elders begged Moses to go near to God alone, listen to all His words, and then report them to the people. They promised that they would willingly listen to Moses and obey everything God commanded. In asking for Moses, they were asking for a mediator to stand between them and the holy God.",
+   "meaning": "The people pleaded with Moses to go near to God on their behalf and listen to all that the Lord would command. They promised that if Moses reported God's words to them, they would willingly listen and obey. This humble request showed their desire for an intermediary to bridge the distance between them and their Creator.",
    "meaning_sources": [
-    "Matthew Henry",
-    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm"
+    "John Gill",
+    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm",
+    "https://enduringword.com/bible-commentary/deuteronomy-5/"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 28,
-   "end": 28,
-   "meaning": "The Lord heard the people's plea to Moses and praised their request as right and wise. God approved of their humility and their sense that sinners need a mediator before a holy God. He commended their desire to hear His words through Moses and their willingness to obey.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 29,
    "end": 29,
-   "meaning": "God expressed a heartfelt longing that His people would always keep this reverent attitude, fear Him, and obey His commands. Obedience was not for God's benefit, but so that things would go well with them and their children forever. God truly desires the salvation and ongoing welfare of His people.",
+   "meaning": "The Lord heard the people's plea and commended their sincere reverence and their request for Moses to act as mediator. Then God expressed a deep, longing desire that their hearts would always fear him and keep his commandments, so that they and their children might flourish forever. Outward promises of obedience are pleasing to God, but he desires a steadfast heart that continually loves and trusts him.",
    "meaning_sources": [
     "Matthew Henry",
-    "Calvin",
+    "Benson",
+    "Ellicott",
     "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm",
     "https://enduringword.com/bible-commentary/deuteronomy-5/"
    ],
-   "differ": [
-    {
-     "tradition": "Reformed and Presbyterian",
-     "view": "Reformed interpreters understand this verse as expressing God's revealed will and moral desire for human obedience, while noting that only God's sovereign grace can give the new heart needed to obey.",
-     "sources": [
-      "Calvin"
-     ]
-    },
-    {
-     "tradition": "Methodist",
-     "view": "Methodists see God's plea as showing that humans are genuinely free agents who must freely choose to receive God's grace and obey.",
-     "sources": [
-      "Adam Clarke"
-     ]
-    }
-   ],
+   "differ": [],
    "other": []
   },
   {
    "verse": 30,
-   "end": 30,
-   "meaning": "God told Moses to send the Israelites back to their family tents in the camp. The direct display of divine majesty at the mountain had ended, and the people could return to their daily routines. They had heard the foundational covenant words and could now wait for Moses to bring the rest.",
+   "end": 31,
+   "meaning": "God instructed the people to return safely to their family tents, while Moses was told to remain on the mountain in the Lord's presence. God planned to give Moses the rest of the laws, statutes, and judgments that Israel needed to guide their civil and religious life in the Promised Land. This formally confirmed Moses as the nation's authorized teacher and prophet.",
    "meaning_sources": [
     "Calvin",
-    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 31,
-   "end": 31,
-   "meaning": "God commanded Moses to remain standing with Him on the mountain so He could teach him the full body of laws, statutes, and decrees. Moses was to instruct Israel in these laws so they could practice them in the Promised Land. This established Moses as God's official teacher and covenant messenger for Israel.",
-   "meaning_sources": [
+    "John Gill",
     "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm"
    ],
    "differ": [],
@@ -390,26 +341,13 @@
   },
   {
    "verse": 32,
-   "end": 32,
-   "meaning": "Moses urges the people to be careful to carry out everything the Lord commanded without straying to the right or to the left. Walking straight ahead means neither adding human rules to God's word nor ignoring any part of it. Genuine faithfulness stays firmly on the path God has marked out.",
+   "end": 33,
+   "meaning": "Moses urges the Israelites to walk faithfully in all the ways God commanded, without wandering to the right or to the left. The path of obedience was the way to life, prosperity, and a long, peaceful stay in the land they were about to inherit. Following God's guidance with undivided loyalty is always the true road to lasting blessing.",
    "meaning_sources": [
-    "Matthew Henry",
     "Calvin",
     "Adam Clarke",
-    "Geneva Notes"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 33,
-   "end": 33,
-   "meaning": "Moses concludes with a promise that walking faithfully in all of God's ways leads to life, prosperity, and long days in the land. Disobedience brings ruin, but walking with God brings true happiness and enduring blessing. True peace in life comes from staying close to God and following His directions.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Geneva Notes",
-    "https://www.studylight.org/commentaries/eng/dcc/deuteronomy-5.html"
+    "Tyndale Study Notes",
+    "https://biblehub.com/commentaries/pulpit/deuteronomy/5.htm"
    ],
    "differ": [],
    "other": []
@@ -417,11 +355,10 @@
  ],
  "problems": [
   "v. 7: removed sources ['Calvin']",
-  "v. 13: removed sources ['Adam Clarke']",
-  "v. 27: removed sources ['Calvin']",
-  "v. 28: removed sources ['Keil & Delitzsch']",
-  "v. 30: removed sources ['Keil & Delitzsch']",
-  "v. 31: removed sources ['Keil & Delitzsch', 'Calvin']"
+  "v. 19: removed sources ['Ellicott']",
+  "v. 25: removed sources ['Ellicott']",
+  "v. 27: removed sources ['Ellicott']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

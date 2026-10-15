@@ -8,21 +8,20 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Ancient records usually begin a king's story by stating his age and the length of his rule. In the traditional reading, Saul had ruled for one quiet year, and the major events of this chapter began in his second year. It marks the start of Saul's independent rule without Samuel at his side.",
+   "meaning": "This opening statement follows the standard pattern used in Scripture to introduce a king's age and the length of his reign. Although damage to the ancient Hebrew manuscripts left the exact numbers unclear, records show Saul ruled Israel for about forty years. The passage marks the start of the formal history of Saul's monarchy.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "John Gill"
    ],
    "differ": [],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "Many scholars note that the ancient Hebrew text is damaged here, missing the exact numbers, which leads modern English versions to suggest Saul was thirty or forty years old and reigned forty or forty-two years.",
+     "view": "Scholars widely agree that the original numbers for Saul's age and the length of his reign were accidentally omitted during manuscript copying, leading ancient translations to supply different numbers or leave the verse out.",
      "sources": [
-      "Keil & Delitzsch",
-      "Adam Clarke",
-      "https://www.preceptaustin.org/1-samuel-13-commentary"
+      "Tyndale Study Notes",
+      "Ellicott"
      ]
     }
    ]
@@ -30,11 +29,11 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Saul selects three thousand soldiers to form Israel's first permanent standing army. He keeps two thousand men with himself at Michmash and Bethel, places one thousand under his son Jonathan at Gibeah, and sends everyone else home. This small force shows Saul was preparing to guard the land against Philistine raids.",
+   "meaning": "Saul selected three thousand soldiers to form Israel's first permanent army instead of sending everyone home after their earlier victory. He stationed two thousand men with himself at Michmash and Bethel, and placed one thousand under his son Jonathan at Gibeah. The rest of the men were sent back to their homes until called upon again.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Jamieson-Fausset-Brown",
-    "Matthew Henry",
-    "Adam Clarke"
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -42,10 +41,10 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "Jonathan leads a surprise attack on the Philistine military post at Geba. When news reaches Saul, he blows the ram's horn across the land to summon the Israelites to battle. Jonathan showed bold faith, but the attack forced the nation into an all-out war with a powerful enemy.",
+   "meaning": "Jonathan made a daring strike against the Philistine military outpost at Geba, initiating a fight for Israel's independence. When news reached Saul, he blew the ram's horn across the land to summon the nation to war. This bold attack openly challenged an enemy that had dominated Israel for many years.",
    "meaning_sources": [
-    "Jamieson-Fausset-Brown",
     "Matthew Henry",
+    "Jamieson-Fausset-Brown",
     "Adam Clarke"
    ],
    "differ": [],
@@ -54,11 +53,11 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "The message spreads that Saul struck the Philistine post, and that Israel has become utterly hated by their oppressors. The Israelite fighters are called to assemble around Saul at the ancient campsite of Gilgal. Saul takes credit for Jonathan's daring raid, rallying the people to face the dangerous response.",
+   "meaning": "Word spread quickly that an outpost had been struck, and Israel became deeply hated by the Philistines. Saul called all the fighting men together at Gilgal to prepare for the clash. As commander in chief, Saul received the credit for the strike and took charge of the gathering forces.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "https://enduringword.com/bible-commentary/1-samuel-13/"
+    "Ellicott",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -66,19 +65,29 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "The Philistines assemble a massive army with thousands of chariots, horsemen, and foot soldiers as numerous as grains of sand. They march up into the hills and set up their camp at Michmash, east of Beth-aven. The Israelites now face an overwhelming force far larger than anything they expected.",
+   "meaning": "The Philistines assembled an overwhelming force with thousands of chariots, horsemen, and foot soldiers as numerous as grains of sand. They marched into the hill country and set up camp at Michmash to crush Israel's uprising. This massive show of strength created an immediate crisis for the Hebrews.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many scholars believe the original Hebrew number for chariots was three thousand rather than thirty thousand, since ancient armies never deployed chariots in numbers that far exceeded their cavalry.",
+     "sources": [
+      "Adam Clarke",
+      "Ellicott",
+      "Benson"
+     ]
+    }
+   ]
   },
   {
    "verse": 6,
    "end": 6,
-   "meaning": "Seeing how heavily outnumbered they are, the Israelite soldiers lose heart and scatter in terror. They hide in caves, bushes, rocky crevices, cellars, and dry underground pits. When people place their confidence in human power rather than God, fear quickly takes over.",
+   "meaning": "When the Israelite soldiers saw the massive enemy force bearing down on them, panic swept through the ranks. Instead of preparing for battle, the people hid in caves, thickets, rocky crevices, cellars, and dry cisterns. Having an earthly king could not protect them once their trust in God failed.",
    "meaning_sources": [
     "Matthew Henry",
     "Jamieson-Fausset-Brown",
@@ -90,10 +99,11 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "Some of the Israelites flee across the Jordan River into the distant lands of Gad and Gilead to find safety. Saul stays at Gilgal with the few troops who remain, and all of them are trembling with fright. Having a human king could not save the nation from terror when their faith in God faltered.",
+   "meaning": "Some Israelites even fled across the Jordan River into the eastern territories of Gad and Gilead to put maximum distance between themselves and the threat. Saul remained down in the Jordan valley at Gilgal, surrounded by the few soldiers who stayed, all shaking with dread. Fear had completely replaced the nation's earlier confidence.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley"
+    "John Gill",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -101,10 +111,10 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "Saul waits seven days at Gilgal, following the time frame the prophet Samuel had previously set. As the seventh day wears on without Samuel appearing, more and more soldiers begin to desert Saul's camp. This delay tested whether Saul would patiently trust God's promises in a moment of crisis.",
+   "meaning": "Saul waited seven days at Gilgal in accordance with Samuel's earlier instructions to wait for his arrival. As the week came to an end and Samuel had not yet appeared, the king's nervous troops began slipping away and deserting the camp. Waiting on God's timetable became an intense test of Saul's faith.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
+    "Matthew Henry (Concise)",
+    "John Gill",
     "Keil & Delitzsch"
    ],
    "differ": [],
@@ -113,11 +123,11 @@
   {
    "verse": 9,
    "end": 9,
-   "meaning": "Terrified of losing the rest of his army, Saul orders the burnt offering—an animal sacrifice completely burned to seek God's favor—and the peace offerings to be brought forward. He then offers up the burnt offering himself without waiting any longer. Saul puts his trust in an outward religious ritual while openly disobeying God's command.",
+   "meaning": "Terrified of being left without an army, Saul took matters into his own hands and called for the sacrificial animals. A burnt offering was a sacrifice completely consumed on the altar to ask God for favor and help. Saul then went ahead and offered the burnt offering without waiting for the prophet.",
    "meaning_sources": [
-    "Matthew Henry",
     "Matthew Henry (Concise)",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -125,10 +135,11 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "Just as Saul finishes making the burnt offering, Samuel arrives at Gilgal. Saul walks out to meet him, greeting him as though he had done nothing wrong. If Saul had waited only a little while longer, he would have passed the test of faith and obeyed God.",
+   "meaning": "Samuel arrived just as the sacrificial ceremony was concluding on the seventh day. Saul went out to greet and bless the prophet, acting as though nothing improper had taken place. If Saul had maintained his patience for just a little longer, his obedience would have stood the test.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke"
+    "Adam Clarke",
+    "John Gill",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -136,10 +147,11 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "Samuel confronts the king by asking what he has done, and Saul responds with a list of excuses. He explains that his troops were deserting him, Samuel had not arrived at the expected hour, and the Philistines were massing for battle. Saul blames everyone around him instead of owning up to his impatience and lack of faith.",
+   "meaning": "Samuel immediately challenged the king by asking what he had done. Saul answered by defending himself, blaming the deserting soldiers, Samuel's apparent lateness, and the gathering Philistines. He focused entirely on his difficult outward circumstances instead of acknowledging his failure to obey.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke"
+    "Adam Clarke",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -147,10 +159,10 @@
   {
    "verse": 12,
    "end": 12,
-   "meaning": "Saul claims he feared the Philistines would attack before he asked for the Lord's help, so he felt forced to offer the sacrifice himself. He tries to make his disobedience look like genuine devotion and practical good sense. Doing religious deeds against God's direct word is never true worship.",
+   "meaning": "Saul claimed he feared an enemy ambush before he had sought the Lord's favor, so he felt forced to perform the ceremony himself. He tried to present his disobedience as practical wisdom and genuine piety. Good religious intentions can never excuse setting aside God's clear instructions.",
    "meaning_sources": [
-    "Matthew Henry",
     "Matthew Henry (Concise)",
+    "Wesley",
     "Adam Clarke"
    ],
    "differ": [],
@@ -159,11 +171,11 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "Samuel tells Saul that he has acted foolishly by breaking the commandment the Lord gave him. If Saul had remained faithful and obeyed, God would have established his family line as kings over Israel forever. Real wisdom means trusting God's directions even when circumstances seem desperate.",
+   "meaning": "Samuel declared that Saul had acted foolishly by breaking the command given to him by God through the prophet. In the Bible, foolishness refers to moral and spiritual rebellion rather than a lack of intelligence. If Saul had obeyed, God would have established his family on the throne of Israel forever.",
    "meaning_sources": [
     "Matthew Henry",
     "Keil & Delitzsch",
-    "Wesley"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -171,12 +183,11 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "Samuel declares that Saul's royal dynasty will not last. The Lord has already sought out a man after His own heart—referring to David—and appointed him to rule over Israel because Saul refused to obey. God desires leaders whose hearts are fully devoted to doing His will.",
+   "meaning": "Samuel announced that Saul's royal line would not endure because he failed to follow God's command. The Lord was already seeking a leader who would follow His will from the heart, pointing toward David. Saul remained king for the time being, but the royal dynasty was stripped from his descendants.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke",
-    "Geneva Notes",
-    "Wesley"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -184,7 +195,7 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "Samuel leaves Gilgal and travels up to Gibeah in Benjamin, leaving the king to face his circumstances. Saul counts the soldiers who have stayed with him and finds only about six hundred men remaining. Saul's unlawful sacrifice did not save his army, leaving him with only a tiny remnant.",
+   "meaning": "Samuel departed from Gilgal and went up to Gibeah in the territory of Benjamin. Saul then counted the men still with him and found only about six hundred remaining out of his original force. Saul's hurried sacrifice had completely failed to prevent his army from scattering.",
    "meaning_sources": [
     "Matthew Henry",
     "Keil & Delitzsch",
@@ -196,11 +207,11 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "Saul, his son Jonathan, and their remaining six hundred soldiers take up position in Geba of Benjamin. Meanwhile, the large Philistine army remains camped right across the valley at Michmash. From a purely military viewpoint, Israel was in a completely hopeless position.",
+   "meaning": "Saul and Jonathan moved their remaining six hundred soldiers to Geba in Benjamin, while the Philistines held camp at Michmash. The two armies were separated by a steep mountain ravine, keeping Israel pinned down in defense. The Israelites were far too weak in numbers to risk open warfare.",
    "meaning_sources": [
     "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch",
-    "Matthew Henry"
+    "Ellicott",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -208,11 +219,11 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "The Philistines send out raiding parties from their main camp in three separate groups to plunder the surrounding country. One company heads north toward Ophrah in the district of Shual to rob the villages. Because Israel was too frightened to fight, their enemies easily destroyed their land.",
+   "meaning": "The Philistines sent three separate raiding parties out from Michmash to ravage the surrounding countryside. One company turned north toward Ophrah in the district of Shual. With Israel's army trapped and helpless, the common people were left entirely open to plunder.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Ellicott",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -220,10 +231,10 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "A second Philistine raiding party marches west toward Beth-horon, and the third marches east overlooking the Valley of Zeboim toward the wilderness. These raids spread terror across the region and stripped the Israelites of food and goods. Sin and fear left God's people helpless against their invaders.",
+   "meaning": "A second raiding company marched west along the road toward Beth-horon, while the third headed east toward the wilderness overlooking the Valley of Zeboim. These three paths allowed the raiders to devastate Israelite territory from all directions without encountering resistance. The nation discovered how helpless human leadership could be without God's favor.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -231,11 +242,11 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "There was not a single blacksmith to be found in the entire land of Israel. The Philistines had removed or forbidden metalworkers so the Hebrews could not manufacture iron swords or spears. The Philistines used superior technology and strict rules to keep Israel disarmed and helpless.",
+   "meaning": "Not a single blacksmith could be found in the entire land of Israel because the Philistines had outlawed metalworking. The occupying forces feared the Hebrews would forge swords and spears to rebel against them. By controlling iron technology, the Philistines kept Israel defenseless and subordinate.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "Jamieson-Fausset-Brown"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -243,11 +254,11 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "Whenever an Israelite needed to sharpen a plow blade, hoe, axe, or sickle, he had to travel down to a Philistine smith. The Philistines kept tight control over all iron tool making to prevent any weapon production. This policy forced the Israelites to depend entirely on their enemies even to farm their fields.",
+   "meaning": "Without local smiths, every Israelite had to travel down to Philistine garrisons just to sharpen basic agricultural tools. Heavy iron items such as plowshares, mattocks, axes, and sickles required enemy craftsmen for maintenance. This policy forced the Hebrews to depend on their oppressors even to grow their daily food.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "Wesley",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -255,11 +266,11 @@
   {
    "verse": 21,
    "end": 21,
-   "meaning": "The Philistines charged exorbitant rates in silver for sharpening farm tools like plow blades, pitchforks, and oxgoads (pointed cattle prods). The Israelites were only allowed simple files to smooth dull edges, which could never turn a tool into a deadly weapon. This heavy economic burden deepened Israel's poverty and reminded them of their weakness.",
+   "meaning": "The Philistines charged exorbitant prices for sharpening these farming tools, demanding a pim—about two-thirds of a silver shekel—for large blades and a third of a shekel for smaller implements. This financial burden drained Israel's resources and kept the population poor. It was an oppressive economic system designed to ensure Israel remained subdued.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Tyndale Study Notes",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -267,12 +278,11 @@
   {
    "verse": 22,
    "end": 22,
-   "meaning": "When the day of battle arrived, not one soldier in the army with Saul and Jonathan carried a sword or spear. Only the king and his son possessed metal weapons, while the rest of the men had only farming tools or slings. God allowed His people to be stripped of weapons so their eventual rescue would clearly be His work alone.",
+   "meaning": "When the day of conflict arrived, not one Israelite soldier with Saul and Jonathan had an iron sword or spear. Only the king and his royal heir possessed standard military weapons. Any victory won by this disarmed army would have to come entirely from the Lord's intervention.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Matthew Henry (Concise)",
     "Geneva Notes",
-    "Wesley",
-    "Adam Clarke"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -280,18 +290,19 @@
   {
    "verse": 23,
    "end": 23,
-   "meaning": "A Philistine garrison moves out to take control of the narrow mountain pass at Michmash. This pass was the critical crossing point between the two armies across a steep rocky gorge. The Philistines thought they had secured total victory, but this very pass would soon become the place of their defeat.",
+   "meaning": "A Philistine military detachment marched out to occupy the strategic mountain pass at Michmash. By controlling this narrow gorge, the Philistines dominated the high ground between the two camps. This move set the stage for Jonathan's bold step of faith in the chapter to come.",
    "meaning_sources": [
-    "Matthew Henry",
-    "https://enduringword.com/bible-commentary/1-samuel-13/"
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 7: removed sources ['Jamieson-Fausset-Brown']",
+  "v. 18: removed sources ['Wesley']",
   "v. 23: removed sources ['Jamieson-Fausset-Brown']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

@@ -8,26 +8,27 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Agur speaks here as an inspired teacher delivering a solemn message to his companions, Ithiel and Ucal. He begins his message by expressing his own deep weariness and human limitation before God. Recognising our personal weakness is the first step toward depending entirely on the Lord.",
+   "meaning": "Agur son of Jakeh introduces his wise words, sharing an inspired message with his friends Ithiel and Ucal. Although the Bible tells us nothing else about Agur's life, his sayings were preserved by God as holy Scripture. His opening words show an honest teacher speaking God's truth to others.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "https://biblehub.com/proverbs/30-1.htm"
+    "Benson",
+    "Wesley"
    ],
    "differ": [],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "Some scholars read the Hebrew text as a cry of human exhaustion ('I am weary, O God, and worn out') rather than seeing Ithiel and Ucal as names of people.",
+     "view": "Many modern translators divide the Hebrew letters differently to read the names Ithiel and Ucal as a statement of weariness: 'I am weary, O God, and worn out.'",
      "sources": [
+      "Tyndale Study Notes",
       "https://classic.net.bible.org/passage.php?passage=Pro+30%3A1%3B31%3A1"
      ]
     },
     {
      "label": "Catholic",
-     "view": "The traditional Latin Vulgate translated the Hebrew names as descriptive titles, rendering the phrase as 'The words of the gatherer, the son of the vomiter.'",
+     "view": "The Latin Vulgate translation treats the names as ordinary descriptive words, translating them as 'The words of the gatherer, the son of the vomiter.'",
      "sources": [
-      "Adam Clarke",
+      "John Gill",
       "https://biblehub.com/proverbs/30-1.htm"
      ]
     }
@@ -36,11 +37,11 @@
   {
    "verse": 2,
    "end": 3,
-   "meaning": "Agur confesses that on his own, he lacks the basic wisdom and understanding that a person should have. He never went to human schools of philosophy, and he cannot grasp the holy things of God by his own strength. A person must admit their own ignorance before they can receive God's wisdom.",
+   "meaning": "Agur humbly admits that he has no natural wisdom and feels far less knowledgeable than other people. He knows that human cleverness cannot figure out the Holy One on its own. Recognizing our own limits and lack of understanding is the first step toward genuine wisdom.",
    "meaning_sources": [
+    "Benson",
     "Matthew Henry",
-    "Wesley",
-    "Geneva Notes"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -48,32 +49,35 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "A series of questions challenges anyone to name a mortal man who has traveled to heaven, held the wind in his hands, or set the boundaries of the earth. Only God rules the universe like this, so no mere human can claim equal knowledge with Him. The mysterious question about God's Son hints at the divine Person through whom God creates and governs all things.",
+   "meaning": "Agur asks who has ever climbed up to heaven, gathered the wind in their fists, or wrapped the ocean waters in a garment. No human being has ever done these things; only the Creator governs the entire universe. The questions show that God's ways and his family are far beyond human discovery.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "https://enduringword.com/bible-commentary/proverbs-30/"
+    "Benson",
+    "Jamieson-Fausset-Brown",
+    "Matthew Henry"
    ],
    "differ": [
     {
-     "tradition": "Reformed and Presbyterian",
-     "view": "Matthew Henry teaches that this verse clearly points forward to the Messiah as a divine Person distinct from the Father, whose name was kept hidden until the gospel revealed Him.",
+     "tradition": "Baptist",
+     "view": "The question about the Son points to a distinct divine person who shares God's nature and has existed with the Father from eternity.",
      "sources": [
-      "Matthew Henry"
+      "John Gill",
+      "https://www.studylight.org/commentary/proverbs/30-4.html"
      ]
     },
     {
      "tradition": "Methodist",
-     "view": "Adam Clarke cautions that readers should not use this obscure verse to prove the doctrine of the Trinity, arguing that essential doctrines should only be defended with clear, unmistakable passages.",
+     "view": "The verse exalts God's incomprehensible greatness, but Christians should be cautious about resting the doctrine of the Trinity on such an obscure poetic passage.",
      "sources": [
-      "Adam Clarke"
+      "Adam Clarke",
+      "https://www.studylight.org/commentaries/eng/acc/proverbs-30.html"
      ]
     },
     {
-     "tradition": "Baptist",
-     "view": "John Gill sees this as a direct Old Testament revelation of God's eternal Son, who shares the exact nature and power of the Father as a distinct person.",
+     "tradition": "Reformed and Presbyterian",
+     "view": "The verse prophetically points to Christ, who came down from heaven to save us and ascended to heaven to be our advocate.",
      "sources": [
-      "https://www.studylight.org/commentary/proverbs/30-4.html"
+      "Matthew Henry (Concise)",
+      "https://biblehub.com/par/proverbs/30-4.htm"
      ]
     }
    ],
@@ -81,12 +85,24 @@
   },
   {
    "verse": 5,
-   "end": 6,
-   "meaning": "Every word God gives is completely pure and reliable, like gold that has been refined in a hot furnace. The Lord acts as a protective shield for all who put their trust in what He has said. Therefore, no one should dare to add human traditions or false teachings to Scripture, because God will expose such people as liars.",
+   "end": 5,
+   "meaning": "Every single word from God is pure and reliable, like precious metal refined in a furnace without any dirt or flaw. God also acts as a protective shield for all who seek safety in him. We can trust his promises completely because they never fail.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "Benson",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Agur warns against adding human rules, ideas, or traditions to God's inspired words. Trying to improve on God's message brings his rebuke and exposes the person as a liar. God's truth is already complete and must not be altered by human opinions.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Benson",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -94,11 +110,12 @@
   {
    "verse": 7,
    "end": 9,
-   "meaning": "Agur asks God for two specific favors to guide his daily life until he dies. First, he asks to be kept far away from dishonesty, false teachings, and vain pursuits. Second, he asks for neither poverty nor great wealth, but just enough food for each day. He fears that having too much might make him proud and forget God, while being desperately poor might tempt him to steal and bring shame to God's holy name.",
+   "meaning": "Agur asks God for two specific blessings before he dies: to keep him far from falsehood, and to grant him a modest life between poverty and riches. He asks for only his daily portion of food, rather than luxury. He worries that having too much might make him proud and forgetful of God, while being desperately poor might tempt him to steal and bring shame on God's name.",
    "meaning_sources": [
+    "Benson",
     "Matthew Henry",
-    "Adam Clarke",
-    "Wesley"
+    "Wesley",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -106,35 +123,59 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "An earnest warning tells readers never to slander or falsely accuse a servant to their master. Adding to the troubles of someone already in a lowly position is unjust and cruel. When the mistreated servant appeals to God for justice, God will hold the accuser guilty.",
+   "meaning": "A person should never slander or bring petty complaints against a servant to their master. Servants already occupy a difficult and vulnerable position in life. If you mistreat them without cause, God hears their grievance and will hold you guilty.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Wesley"
+    "Benson",
+    "John Gill",
+    "Matthew Henry (Concise)"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 11,
-   "end": 12,
-   "meaning": "Agur describes two awful kinds of people that can ruin a society. The first kind are children who show vile ingratitude by cursing their fathers and refusing to speak kindly to their mothers. The second kind are self-righteous people who think they are morally clean, yet they remain stained with hidden, unconfessed sin.",
+   "end": 11,
+   "meaning": "Agur describes an ungodly group of people who show utter disrespect toward their parents. Instead of honoring their father and mother, they curse them and refuse to speak well of them. Breaking the command to honor parents reveals a deeply rebellious heart.",
    "meaning_sources": [
+    "Adam Clarke",
+    "Benson",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "Another group considers themselves clean and upright in their own estimation. In reality, their hearts are still stained and unwashed from the filth of their sins. Thinking you are morally perfect blinds you to your real need for God's mercy.",
+   "meaning_sources": [
+    "John Gill",
     "Matthew Henry",
-    "Wesley",
-    "Adam Clarke"
+    "Wesley"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 13,
-   "end": 14,
-   "meaning": "Two more wicked groups of people are brought into view. One group is filled with intolerable pride, showing their arrogance by looking down on everyone else with contempt. The next group consists of greedy oppressors whose words and actions act like sharp swords, devouring the poor and needy from the land.",
+   "end": 13,
+   "meaning": "A third group is ruined by haughtiness and overwhelming pride. They carry themselves with lifted eyelids and look down on others with disdain. Arrogance in the eyes shows a heart full of self-importance.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 14,
+   "end": 14,
+   "meaning": "A fourth group acts with savage cruelty toward those who are defenseless. Their sharp words and greedy actions are like swords and knives that devour the needy. They use their power to crush people who cannot fight back.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "John Gill",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -142,11 +183,12 @@
   {
    "verse": 15,
    "end": 16,
-   "meaning": "The blood-sucking leech is pictured with two daughters who never stop crying out for more. This image introduces four things in the world that never say they have had enough: the grave that swallows the dead, the childless womb that longs for children, parched land that drinks in rain, and blazing fire that consumes all fuel. Selfish greed and sinful appetite are just as hard to satisfy.",
+   "meaning": "The blood-sucking leech is pictured as constantly crying out for more, driven by endless appetite. Agur compares this greed to four things that never say they have enough: the grave that swallows the dead, a barren womb yearning for children, dry earth drinking up water, and a fire that burns up everything in its path. These images warn us that unchecked greed is never satisfied.",
    "meaning_sources": [
+    "Benson",
     "Matthew Henry",
     "Wesley",
-    "Keil & Delitzsch"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -154,11 +196,11 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "A grim warning describes the fate of a child who rolls their eyes in mockery at their parents. Those who treat their father and mother with open disdain often face a violent, shameful end, left unburied like carrion for ravens and young vultures to eat. God will not let rebellious disrespect toward parents go unpunished.",
+   "meaning": "A child who mocks their father or sneers at their mother's instruction faces a tragic end. In the ancient world, an unburied body left in a valley became food for ravens and vultures. Scorn toward parents leads to self-destruction and ruin.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Keil & Delitzsch"
+    "Benson",
+    "Ellicott",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -166,11 +208,12 @@
   {
    "verse": 18,
    "end": 19,
-   "meaning": "Four things are singled out as too deep and marvelous for the human mind to fully track. An eagle flies through the open air without leaving a visible trail, a snake slides smoothly over a solid rock, a ship crosses the open sea without marking the water permanently, and a man wins the heart of a young woman. Each of these shows a mysterious path that cannot be easily measured.",
+   "meaning": "Agur marvels at four things whose hidden paths cannot be traced by the eye. An eagle soars through the sky without leaving a trail, a snake glides over a smooth rock without footsteps, a ship sails the deep ocean and leaves no lasting track, and a young man wins the love of a maiden. God has filled creation with mysteries that stir human wonder.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Keil & Delitzsch"
+    "Adam Clarke",
+    "Benson",
+    "John Gill",
+    "Matthew Henry (Concise)"
    ],
    "differ": [],
    "other": []
@@ -178,10 +221,12 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "The mysterious ways just described also illustrate the crafty behavior of an unfaithful woman. She commits her secret sin, wipes her mouth just like someone finishing an ordinary meal, and casually insists she has done nothing wrong. Her hardened conscience allows her to hide her guilt from other people.",
+   "meaning": "An unfaithful woman acts as if her sin leaves no mark at all. She commits adultery as casually as eating a meal, cleans her face, and claims she has done nothing wrong. A hardened conscience can make a person completely blind to their own wickedness.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "Ellicott",
+    "John Gill",
+    "Matthew Henry (Concise)",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -189,34 +234,70 @@
   {
    "verse": 21,
    "end": 23,
-   "meaning": "Society shakes and groans when people obtain power or positions that their character cannot handle. Four examples are given: a slave who becomes a king and turns into a tyrant, a crude fool who grows wealthy and overbearing, a bitter and unloved woman whose marriage only makes her haughty, and a servant girl who replaces her mistress and acts proudly. Sudden honor without humility always causes distress.",
+   "meaning": "Society is turned upside down when unsuited people gain authority and mistreat others. Agur lists four intolerable situations: a servant who becomes an arrogant king, a reckless fool who prospers with plenty of food, a bitter and unloved woman who gets married and vents her anger, and a servant girl who replaces her mistress. When pride and sudden power meet, everyone around them suffers.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Benson",
+    "Matthew Henry (Concise)",
+    "Wesley"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 24,
-   "end": 26,
-   "meaning": "True wisdom does not depend on physical size or bodily strength, as seen in four of God's smallest creatures. Ants are tiny and weak, yet they show great wisdom by gathering their food in summer to prepare for the future. Rock badgers are frail animals with little defenses, yet they display good sense by making safe homes high up in the rocky cliffs.",
+   "end": 24,
+   "meaning": "Agur points out four creatures on the earth that are tiny in size yet exceptionally wise. God gave these small animals remarkable instincts to help them survive and thrive. Real strength comes from God-given wisdom rather than physical bulk.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "Benson",
+    "John Gill",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 25,
+   "end": 25,
+   "meaning": "Ants are physically weak insects, yet they show immense wisdom by gathering and storing food throughout the summer. They work hard while the weather is favorable so they will survive the cold months. Their discipline teaches us to prepare wisely for the future.",
+   "meaning_sources": [
+    "John Gill",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 26,
+   "end": 26,
+   "meaning": "Rock badgers, or coneys, are small, defenseless animals, yet they make their shelters high up in rocky cliffs. They know their physical weakness and find safety in the strong rock. We can learn to hide ourselves in the Lord when we feel helpless.",
+   "meaning_sources": [
+    "Ellicott",
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 27,
-   "end": 28,
-   "meaning": "Locusts have no leader or king over them, yet they move forward together in orderly ranks and accomplish great things through unity. Lizards are small enough to be picked up in a person's hand, yet through quiet skill and persistence they make their homes in royal palaces. God wants His people to learn unity, patience, and diligence from these lowly creatures.",
+   "end": 27,
+   "meaning": "Locusts have no commander or king to lead them, yet they fly and march together in perfectly organized swarms. Their teamwork and unity allow them to accomplish what one alone could never do. God's people can achieve great things when they work together peacefully.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 28,
+   "end": 28,
+   "meaning": "A small lizard can easily be caught in a human hand, yet its quiet skill and persistence allow it to live even inside royal palaces. Its humble size does not stop it from entering grand places. Diligence and patience can open doors that raw force cannot open.",
+   "meaning_sources": [
+    "Ellicott",
+    "John Gill",
+    "Matthew Henry (Concise)"
    ],
    "differ": [],
    "other": []
@@ -224,31 +305,48 @@
   {
    "verse": 29,
    "end": 31,
-   "meaning": "Agur names four examples of beings that move with dignity, strength, and confidence. The lion is the mightiest of beasts and refuses to turn back before any danger, the strutting rooster or fleet greyhound carries itself with grace, the he-goat marches boldly at the head of the flock, and a king walks with undisputed authority among his troops. Believers should show similar boldness and steadfastness when doing what is right.",
+   "meaning": "Agur lists four examples of beings that walk with great dignity and fearless strength. A lion strides forward boldly and never retreats before any beast, a rooster or hunting dog steps out with confidence, a male goat leads the flock with poise, and a king marches with his army without fear of rebellion. These creatures show the majesty and courage God has built into his world.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Keil & Delitzsch"
+    "Adam Clarke",
+    "Benson",
+    "Ellicott",
+    "John Gill"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 32,
-   "end": 33,
-   "meaning": "Anyone who has acted foolishly by boasting of their own importance, or who has planned evil against another person, should immediately cover their mouth in silence. Churning whole milk produces butter, and punching or twisting a nose makes it bleed, showing that forcing anger will always stir up quarrels. Choosing to be silent and humble stops a fight before it ever starts.",
+   "end": 32,
+   "meaning": "If you have acted foolishly by boasting of yourself, or if you have begun scheming to do wrong, stop right away and put your hand over your mouth. Catching your pride early keeps words from turning into open rebellion and hurt. Keeping silent and admitting an error prevents further sin.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "Benson",
+    "Ellicott",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 33,
+   "end": 33,
+   "meaning": "Just as churning milk produces butter and hitting a nose makes it bleed, stirring up anger inevitably creates fights. Actions produce natural and predictable results, so provoking someone will always ignite conflict. Wise people calm heated tempers before words turn into bitter quarrels.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Benson",
+    "Ellicott",
+    "Wesley"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 20: removed sources ['Adam Clarke']",
-  "v. 24: removed sources ['Wesley']"
+  "v. 25: removed sources ['Adam Clarke']",
+  "v. 26: removed sources ['Benson']",
+  "v. 27: removed sources ['Benson']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

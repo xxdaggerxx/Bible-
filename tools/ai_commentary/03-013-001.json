@@ -8,9 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "God gave these instructions to Aaron along with Moses because the priests were responsible for carrying them out. The priests had to inspect skin conditions and decide who could enter the sanctuary. Their duty was to protect the holiness of God's dwelling place among the people.",
+   "meaning": "The Lord spoke to both Moses and Aaron together. Aaron and his sons were priests, and it was their job to inspect skin troubles and declare people clean or unclean. God called spiritual leaders to look after the everyday health and holiness of the camp.",
    "meaning_sources": [
-    "Matthew Henry"
+    "Ellicott",
+    "John Gill",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -18,19 +20,20 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "A swelling, a scab, or a bright patch on the skin could be an early sign of an infectious skin disease. Anyone with these marks had to be brought directly to Aaron or another priest for examination. God placed the care of the community's ceremonial cleanliness in the hands of the priests rather than ordinary doctors.",
+   "meaning": "When a person noticed a swelling, a rash, or a bright spot on their skin, they had to go to the priest. The ancient Hebrew word for skin disease covered many kinds of serious rashes and infections, not just modern leprosy. The priest had to check the spot to make sure a contagious illness did not spread through the camp.",
    "meaning_sources": [
-    "Matthew Henry",
-    "https://enduringword.com/bible-commentary/leviticus-13/"
+    "Tyndale Study Notes",
+    "John Gill",
+    "Benson"
    ],
    "differ": [],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "The Hebrew word translated as skin disease covers many different conditions, including severe rashes and mold, rather than only modern Hansen's disease.",
+     "view": "Scholars explain that the biblical term tsaraath refers broadly to various severe skin diseases and mold, rather than only to modern Hansen's disease.",
      "sources": [
-      "https://enduringword.com/bible-commentary/leviticus-13/",
-      "https://www.preceptaustin.org/leviticus_13_commentary"
+      "Tyndale Study Notes",
+      "https://enduringword.com/bible-commentary/leviticus-13/"
      ]
     }
    ]
@@ -38,10 +41,12 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "The priest looked for two specific signs in the sore. If the hair had turned white and the mark reached deeper than the surface of the skin, a serious disease was present. The priest then declared the person unclean, which meant they were barred from worship and camp life until restored.",
+   "meaning": "The priest looked closely at the spot to see if the hair had turned white and if the sore sank deeper than the skin. These two signs meant the infection had eaten into the flesh below the surface. If so, the priest declared the person unclean, which meant they were set apart from the camp and worship until healed.",
    "meaning_sources": [
-    "Matthew Henry",
-    "https://biblehub.com/commentaries/gill/leviticus/13.htm"
+    "Tyndale Study Notes",
+    "John Gill",
+    "Ellicott",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -49,118 +54,298 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "When a spot was white but not sunken and the hair had not changed color, the priest could not be sure of the diagnosis. Rather than making a hasty decision, the priest isolated the person for seven days. This waiting period kept others safe while allowing time to see how the spot would develop.",
+   "meaning": "If a spot was white but did not sink into the skin, and the hair had not changed color, the priest did not rush to judge. Instead, he isolated the person for seven days to see what would happen. God taught His people to take time and gather facts before making a serious decision about someone.",
    "meaning_sources": [
-    "Matthew Henry",
-    "https://enduringword.com/bible-commentary/leviticus-13/"
+    "Tyndale Study Notes",
+    "Wesley",
+    "Benson",
+    "John Gill"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 5,
-   "end": 6,
-   "meaning": "If the sore had not changed or spread after one week, the priest ordered a second seven-day isolation. When the second week passed and the sore had faded without spreading, the priest declared the person clean. It was only an ordinary rash, so the person washed their clothes and returned to normal community life.",
+   "end": 5,
+   "meaning": "On the seventh day, the priest examined the spot again to check its progress. If the mark looked the same and had not spread across the skin, the person was isolated for another seven days. A second week of waiting gave enough time to be sure the disease was not silently growing.",
    "meaning_sources": [
-    "Matthew Henry"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "At the end of the second week, the priest checked the mark one more time. If the sore had faded and had not spread, the priest declared the person clean because it was only a harmless rash. The person washed their clothes and could return to normal life in the camp.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Wesley",
+    "John Gill"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 7,
-   "end": 8,
-   "meaning": "A person who was declared clean still had to return to the priest if the rash began to spread across the skin. A growing sore proved that a harmful disease was active after all. The priest then declared the person unclean to prevent further defilement in the camp.",
+   "end": 7,
+   "meaning": "A person who had been declared clean had to return to the priest if the rash started spreading again. A harmless rash should heal and fade, not expand across healthy skin. God wanted any returning trouble to be caught quickly before it could harm others.",
    "meaning_sources": [
-    "Matthew Henry",
-    "https://biblehub.com/commentaries/gill/leviticus/13.htm"
+    "Ellicott",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The priest looked at the skin again, and if the rash was actively spreading, he declared the person unclean. Spreading proved that a harmful disease was living under the skin after all. In the same way, hidden sins that spread through a person's life require honest attention and cleansing.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "John Gill"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 9,
-   "end": 11,
-   "meaning": "A white swelling that turned the hair white and contained open, raw flesh was a clear case of chronic skin disease. Because the signs were unmistakable, the priest did not need to isolate the person for observation. The priest declared the person unclean on the spot.",
+   "end": 9,
+   "meaning": "Whenever someone showed signs of a serious skin disease, they had to be brought straight to the priest. Family and neighbors helped bring those who were too sick or afraid to come on their own. God made sure that everyone who might be suffering had access to priestly care.",
    "meaning_sources": [
-    "Matthew Henry",
-    "https://enduringword.com/bible-commentary/leviticus-13/"
+    "John Gill",
+    "Benson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "The priest examined the sore to see if a white swelling had turned the hair white and exposed open, raw flesh. Raw flesh inside the swelling showed that the infection had eaten through the outer layer of skin. This was clear proof of a deeper illness rather than a surface irritation.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "John Gill",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "These severe signs meant the person had an established, long-lasting skin disease. Because the condition was obvious, the priest did not need to isolate the person for seven days of testing. He declared the person unclean right away so that the camp remained protected.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "John Gill",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 12,
-   "end": 13,
-   "meaning": "If a white scaly outbreak spread over the entire body from head to foot, the priest declared the person clean. When the whole surface turned white, the disease had run its course and was no longer an active, running ulcer. Because the outbreak was dry and complete, it posed no danger to the community.",
+   "end": 12,
+   "meaning": "A situation could arise where an outbreak broke out suddenly and covered a person completely from head to foot. The priest had to inspect the person from head to toe to make sure no spot was missed. Every part of the skin had to be carefully viewed before the priest gave an answer.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "John Gill",
+    "Ellicott",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
+   "end": 13,
+   "meaning": "If dry white scales covered the person's entire body with no open sores, the priest declared them clean. When the whole body turned white, the infection had broken out to the surface and was no longer an active, spreading sore. Many believers see this as a picture of a sinner who, admitting they are completely sinful, receives God's cleansing.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Adam Clarke",
+    "Wesley",
+    "John Gill"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 14,
-   "end": 15,
-   "meaning": "The presence of raw, open flesh showed that the skin was still breaking down and the disease was active. As soon as the priest saw raw flesh, he had to pronounce the person unclean. This protected the people from contact with an ongoing infection.",
+   "end": 14,
+   "meaning": "If open, raw flesh appeared on someone whose skin had turned white, they were declared unclean. Raw flesh showed that the disease was still active and breaking out from within. True wholeness meant the sore was completely settled, not still inflamed.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley"
+    "Tyndale Study Notes",
+    "John Gill",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 15,
+   "end": 15,
+   "meaning": "Seeing raw flesh required the priest to pronounce the person unclean. Even though healing flesh can look red at times, here it signaled a dangerous, active skin condition. The priest had to guard the worshiping community by making sure diseased conditions were kept outside the camp.",
+   "meaning_sources": [
+    "Wesley",
+    "John Gill",
+    "Geneva Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 16,
-   "end": 17,
-   "meaning": "When the raw flesh healed over and turned completely white, the person returned to the priest. The priest examined the healed skin and declared the person clean. Once the open sore was gone, the person was free to return to the community.",
+   "end": 16,
+   "meaning": "If the raw flesh changed color and turned dry and white again, the person had to go back to the priest. A change in symptoms meant the condition might have finally healed. God always provided a way for an isolated person to be re-examined and welcomed back.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Ellicott",
+    "John Gill",
     "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 17,
+   "end": 17,
+   "meaning": "The priest re-examined the person and confirmed that the raw spots had turned entirely white. With no open, infected flesh remaining, the priest pronounced the person clean. This verdict allowed them to rejoin the worship and daily life of God's people.",
+   "meaning_sources": [
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 18,
-   "end": 20,
-   "meaning": "An ordinary boil might heal, but a dangerous infection could start in the damaged skin. If a white swelling or reddish spot formed where the boil had been, the person had to see the priest. If the spot was sunken and the hair turned white, the priest declared the person unclean.",
+   "end": 18,
+   "meaning": "These instructions deal with a skin disease that starts inside an old boil after it has healed. A boil is a painful, inflamed sore that can leave the skin weak even after it closes up. A past wound can sometimes become the doorway for a more serious infection.",
    "meaning_sources": [
+    "Tyndale Study Notes",
+    "Ellicott",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 19,
+   "end": 19,
+   "meaning": "If a white swelling or a reddish-white spot appeared right where the old boil had been, the person had to see the priest. The pale red color was a common sign of trouble returning in scar tissue. Paying attention to small changes helped keep the whole camp safe.",
+   "meaning_sources": [
+    "Ellicott",
+    "John Gill",
     "Matthew Henry"
    ],
    "differ": [],
    "other": []
   },
   {
-   "verse": 21,
-   "end": 23,
-   "meaning": "If the spot in the healed boil showed no white hair and was not deeper than the skin, the priest quarantined the person for seven days. If it spread during that time, it was judged to be a contagious disease and declared unclean. If it stayed unchanged, the priest declared the person clean because it was only a normal scar.",
+   "verse": 20,
+   "end": 20,
+   "meaning": "The priest checked to see if the sore sat lower than the skin and if the hair had turned white. If both signs were present, a true skin disease had broken out inside the old boil. The priest declared the person unclean, requiring them to live outside the camp until healed.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 21,
+   "end": 21,
+   "meaning": "If the spot was not sunken beneath the skin, had no white hair, and was already fading, the case was not clear. The priest placed the person in isolation for seven days to watch how the skin behaved. This careful step prevented a person from being wrongly sent away from their family and community.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Wesley",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 22,
+   "end": 22,
+   "meaning": "If the spot grew larger during those seven days, the priest declared the person unclean. Spreading showed that an active infection was traveling through the skin, even without white hair. Any growing infection had to be separated from the rest of the community.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Ellicott",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 23,
+   "end": 23,
+   "meaning": "If the spot stayed the same size and did not spread, the priest declared the person clean. It was simply the normal scar tissue left behind by the old boil. This gave relief to the person, knowing they were healthy and free to worship God.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Ellicott",
+    "John Gill"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 24,
-   "end": 25,
-   "meaning": "A burn from fire could also become infected with a serious skin disease. If the damaged area grew into a reddish-white or white spot that sank deeper than the skin with white hair, it was an outbreak. The priest examined the sore and pronounced the person unclean.",
+   "end": 24,
+   "meaning": "This rule applied when someone had suffered an accidental burn on their skin. As the burned area tried to heal, a reddish-white or pure white spot might appear in the damaged flesh. Fire injuries damage the skin deeply and can easily become infected.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
+    "John Gill",
+    "Ellicott",
     "Wesley"
    ],
    "differ": [],
    "other": []
   },
   {
-   "verse": 26,
-   "end": 28,
-   "meaning": "When a burn showed no white hair, was not sunken, and began to fade, the priest isolated the person for seven days. If the mark spread, the priest declared it an infectious disease and the person unclean. If it did not spread and continued to fade, the priest pronounced the person clean because it was only a burn scar.",
+   "verse": 25,
+   "end": 25,
+   "meaning": "The priest examined the burned spot to see if the hair had turned white and if the mark sank deeper than the skin. If so, a serious disease had invaded the burn. The priest declared the person unclean so that the infection would not spread to others.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
+    "Ellicott",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 26,
+   "end": 26,
+   "meaning": "If the mark in the burn lacked white hair, did not go beneath the skin, and appeared dull, the priest ordered a seven-day quarantine. Waiting allowed the priest to tell the difference between normal healing and an infectious outbreak. God cared enough about His people to protect both their health and their good name through patient observation.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Ellicott",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 27,
+   "end": 27,
+   "meaning": "On the seventh day, the priest looked at the burn again to see if the spot had spread. If it had expanded across the surrounding skin, it was an active disease, and the priest declared the person unclean. Growth in the wound proved that harmful corruption was at work.",
+   "meaning_sources": [
+    "John Gill",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 28,
+   "end": 28,
+   "meaning": "If the spot had not spread and was fading away, it was only a harmless scar from the burn. The priest pronounced the person clean because the body was healing normally. God's law made sure people were not kept in isolation any longer than necessary.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "John Gill",
     "Wesley"
    ],
    "differ": [],
@@ -168,21 +353,36 @@
   },
   {
    "verse": 29,
-   "end": 30,
-   "meaning": "These instructions applied to infections on parts of the body with thicker hair, such as the scalp or chin of a man or woman. If the sore appeared deeper than the skin and caused the hair to become thin and yellow, it was an infectious scaly outbreak. The priest declared the person unclean because the roots of the hair were affected.",
+   "end": 29,
+   "meaning": "This law addressed infections that broke out on hairy areas of the body, such as the head or chin. Both men and women were subject to this rule, showing that God's health laws applied equally to everyone. Hairy areas hid sores more easily, so they needed careful attention.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Keil & Delitzsch"
+    "Ellicott",
+    "John Gill",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 30,
+   "end": 30,
+   "meaning": "The priest checked whether the sore was deeper than the skin and whether the hair had become thin and yellow. On the scalp or beard, yellow, thin hair was the telltale sign of a scaly, infectious outbreak. If these marks appeared, the priest declared the person unclean.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Ellicott",
+    "John Gill",
+    "Wesley"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 1: removed sources ['https://biblehub.com/commentaries/ellicott/leviticus/13.htm']",
-  "v. 5: removed sources ['https://biblehub.com/commentaries/ellicott/leviticus/13.htm']",
-  "v. 18: removed sources ['https://biblehub.com/commentaries/ellicott/leviticus/13.htm']"
+  "v. 8: removed sources ['Ellicott']",
+  "v. 11: removed sources ['Benson']",
+  "v. 13: removed sources ['Ellicott']",
+  "v. 17: removed sources ['Ellicott']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

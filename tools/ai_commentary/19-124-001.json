@@ -7,44 +7,35 @@
  "notes": [
   {
    "verse": 1,
-   "end": 1,
-   "meaning": "The psalm opens with a sudden call for the entire nation of Israel to speak up. God's people are told to confess openly that their survival happened only because the Lord stood with them. Remembering that God took their side gives believers every reason to praise Him together.",
+   "end": 2,
+   "meaning": "David calls on all Israel to admit an essential truth about their survival. If the Lord had not stood with them when hostile men rose up to attack, their nation would have been wiped out. The repetition emphasizes that their deliverance was not due to luck or human strength, but solely to God's presence.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Matthew Henry",
-    "Spurgeon (Treasury of David)",
-    "https://enduringword.com/bible-commentary/psalm-124/"
+    "Jamieson-Fausset-Brown",
+    "John Gill"
    ],
    "differ": [],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "Many modern scholars hold that this psalm was composed after the exile in Babylon rather than by David, noting late language features and ancient translations that omit David's name.",
+     "view": "Many scholars view this song as written after the exile in Babylon rather than by David, pointing to late language forms and themes of national restoration.",
      "sources": [
-      "Adam Clarke",
-      "Keil & Delitzsch",
-      "https://biblehub.com/commentaries/ellicott/psalms/124.htm"
+      "Ellicott",
+      "Adam Clarke"
      ]
     }
    ]
   },
   {
-   "verse": 2,
-   "end": 2,
-   "meaning": "The opening words are repeated to make God's people stop and honestly reflect on their past danger. Human enemies had risen up against them with cruel force. Israel could never have survived the assault unless the Lord Himself had taken their side and fought for them.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "https://enduringword.com/bible-commentary/psalm-124/"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
    "verse": 3,
    "end": 3,
-   "meaning": "The enemies burned with fiery anger and wanted to wipe out God's people completely. Like a ravenous beast or an earthquake opening up, they would have swallowed Israel alive in an instant. Believers are kept safe only because the living God steps in and blocks the enemy's fury.",
+   "meaning": "The psalmist compares the attackers to ferocious beasts or an opening pit ready to swallow the people alive. The enemies' fury burned hot against them, leaving God's people completely powerless on their own. God stepped in at the brink of disaster to keep them from being devoured.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Benson",
+    "Geneva Notes"
    ],
    "differ": [],
    "other": []
@@ -52,10 +43,12 @@
   {
    "verse": 4,
    "end": 5,
-   "meaning": "The danger is compared to a violent flash flood that bursts over its banks and sweeps away everything in its path. Without God's intervention, these proud and raging waters would have drowned their lives and their hope. The picture reminds God's people that no human power can stand against such overwhelming hostility without the Lord.",
+   "meaning": "The danger is pictured as a raging flash flood or a swollen river bursting over its banks. If God had not intervened, these proud and surging waters would have swept over their heads and drowned them. The image shows that the threat was deep enough to destroy their very lives and hope.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Matthew Henry",
-    "Wesley"
+    "Wesley",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -63,10 +56,11 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "The song turns to joyful praise, thanking the Lord for not abandoning His people. The enemies are pictured as wild beasts whose teeth were ready to rip their catch to pieces. Just when destruction seemed certain, God snatched His people right out of the predator's jaws.",
+   "meaning": "The song shifts from the imagined disaster to heartfelt praise to the Lord. The enemies are pictured as wild beasts with tearing teeth, eager to rip their prey apart. God did not allow His people to be handed over to their jaws, but broke their power instead.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Tyndale Study Notes",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -74,11 +68,12 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "The psalm compares the soul to a weak little bird trapped inside a hunter's net. A trapped bird cannot break the cords on its own, but the Lord suddenly shattered the trap and let His people fly free. Believers can rejoice that God breaks every trap of sin, Satan, and hostile enemies.",
+   "meaning": "The people are compared to a tiny, helpless bird caught in a hunter's trap. Just when all seemed lost, God broke the net completely, allowing them to fly away into safety and freedom. No trap laid by human malice or spiritual enemies can hold God's people once He decides to release them.",
    "meaning_sources": [
     "Matthew Henry",
     "Geneva Notes",
-    "https://learn.ligonier.org/devotionals/our-help-is-in-the-name-of-the-lord"
+    "John Gill",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -86,22 +81,27 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "The song concludes with a bold declaration of faith for whatever trials lie ahead. True help does not come from human power or false gods, but from the personal character and strength of the Lord. Since He created both heaven and earth from nothing, He has all the power needed to guard His people.",
+   "meaning": "The psalm concludes with a clear statement of where true protection is found. God's people do not rely on created things or human strength, but on the character and power of the Lord who made heaven and earth. Knowing the Creator defends them gives believers confidence in every new trial.",
    "meaning_sources": [
     "Matthew Henry",
-    "https://enduringword.com/bible-commentary/psalm-124/"
+    "John Gill",
+    "Jamieson-Fausset-Brown"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Churches in this tradition often use this verse as the opening declaration of dependence on God at the start of their worship services.",
+     "sources": [
+      "https://learn.ligonier.org/devotionals/preserved-through-pilgrimage"
+     ]
+    }
+   ],
    "other": []
   }
  ],
  "problems": [
-  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 8: removed sources ['Spurgeon (Treasury of David)']"
+  "v. 6: removed sources ['Benson']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

@@ -8,11 +8,12 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "David speaks of the Lord as his personal shepherd who gently watches over him like a sheep. Because the Almighty God cares for him, he knows he will not lack anything that is truly good for his body or soul. Trusting in the Lord frees believers from the anxious fear of being left without help.",
+   "meaning": "David compares the Lord to a devoted shepherd and himself to a sheep in his care. Because God provides for him, he will never lack anything he truly needs for his life or his soul. Believers can rest in this same personal, caring relationship with God.",
    "meaning_sources": [
     "Matthew Henry",
-    "Calvin",
-    "Spurgeon (Treasury of David)"
+    "Jamieson-Fausset-Brown",
+    "Benson",
+    "https://enduringword.com/bible-commentary/psalm-23/"
    ],
    "differ": [],
    "other": []
@@ -20,10 +21,12 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "A faithful shepherd guides his sheep to soft, lush grass so they can rest safely and fully satisfied. He leads them to quiet, gentle waters where they can drink without being frightened by noisy, rushing streams. In the same way, God provides His people with peaceful rest and refreshing spiritual care.",
+   "meaning": "The shepherd leads his flock to rich patches of grass and calm, gentle streams where they can drink and rest safely. Sheep will only lie down when they are well-fed, free from pests, and feel completely secure. In the same way, God provides His people with peace, rest, and spiritual refreshment.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "Wesley",
+    "Tyndale Study Notes",
+    "https://enduringword.com/bible-commentary/psalm-23/"
    ],
    "differ": [],
    "other": []
@@ -31,11 +34,12 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "When the sheep wanders or grows weary, the Shepherd brings it back and gives it new life and strength. God leads His people into right and holy ways of living, keeping them on the proper path. He does all this to honor His own name and show His faithful character.",
+   "meaning": "The shepherd brings back sheep that wander away and restores their strength when they are exhausted. God guides His people on upright paths of truth and obedience that reflect His holy character. He stays faithful to protect and lead them because His own name and honor are tied to His promises.",
    "meaning_sources": [
-    "Matthew Henry",
     "Wesley",
-    "https://biblehub.com/commentaries/gill/psalms/23.htm"
+    "Benson",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -43,17 +47,28 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "Even when walking through dark, dangerous valleys or facing death itself, the believer does not need to be afraid. The Shepherd is right beside him, giving comfort through His close presence. His rod protects against attacking enemies, while His staff gently guides and supports the sheep.",
+   "meaning": "Even when life leads through dark and dangerous ravines, the traveler has no reason to fear because God walks right beside him. The shepherd's heavy rod is used to fight off wild animals, while his staff gently guides and pulls back wandering sheep. Knowing that God protects and directs us brings deep comfort in scary times.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "Benson",
+    "Tyndale Study Notes",
+    "https://enduringword.com/bible-commentary/psalm-23/"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The shepherd's rod and staff include the comfort of God's loving discipline, which may feel firm or painful but keeps believers safe from straying.",
+     "sources": [
+      "https://learn.ligonier.org/devotionals/lord-our-shepherd"
+     ]
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "Many scholars translate the phrase as a \"valley of deep darkness,\" seeing it as a poetic picture of any dangerous ravine or severe trial rather than strictly physical death.",
+     "view": "The phrase translated 'shadow of death' can simply mean deep darkness, referring to any pitch-black ravine, severe affliction, or extreme peril, rather than only physical death.",
      "sources": [
+      "Ellicott",
       "https://biblehub.com/commentaries/ellicott/psalms/23.htm"
      ]
     }
@@ -62,10 +77,12 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "The picture changes from a pasture to a rich banquet where God welcomes His servant as an honored guest. Even though enemies look on, they are completely powerless to stop God from spreading a table of abundant food and pouring fragrant oil of joy on his head. The overflowing cup shows that the Lord supplies far more than enough blessings for His people.",
+   "meaning": "The image changes from a shepherd in the wild to a generous host welcoming an honored guest to a feast. Even though enemies look on, God spreads a rich table and keeps His guest perfectly safe. Anointing the guest's head with perfumed oil and filling his cup to overflowing show royal hospitality, great honor, and endless joy.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Wesley",
+    "Benson",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -73,20 +90,18 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "Because of God's past care, David is certain that divine kindness and unfailing love will pursue him every day of his life. He knows he will not be abandoned, but will live in loving fellowship with the Lord continually. This brings lasting hope of dwelling in God's presence here on earth and forever in His heavenly home.",
+   "meaning": "God's goodness and faithful covenant love will actively pursue the believer through every day of life on earth. The journey ends not in danger, but in the Lord's own house, sharing close communion with Him forever. Believers can live with steady hope knowing God's care will never run out.",
    "meaning_sources": [
     "Matthew Henry",
-    "Calvin"
+    "Benson",
+    "Keil & Delitzsch",
+    "https://enduringword.com/bible-commentary/psalm-23/"
    ],
    "differ": [],
    "other": []
   }
  ],
- "problems": [
-  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 6: removed sources ['Spurgeon (Treasury of David)']"
- ],
+ "problems": [],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

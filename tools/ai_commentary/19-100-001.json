@@ -8,17 +8,18 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "All the nations of the earth are called to shout aloud with joy to the Lord, just as loyal subjects cheer for their king. This summons reaches far beyond ancient Israel to every land, looking forward to the time when all peoples hear about God. A cheerful spirit honors Him, because a happy God should be praised by a happy people.",
+   "meaning": "All people across the earth are called to shout out with joy to the Lord as their King. This summons looks beyond Israel and invites every nation to honor the true God. When people everywhere hear the good news of God, they can join together in this glad shout.",
    "meaning_sources": [
+    "Jamieson-Fausset-Brown",
     "Matthew Henry",
-    "Spurgeon (Treasury of David)",
-    "Adam Clarke"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "Augustine explained this joyful shout as wordless praise pouring straight from the heart, like harvest workers singing in the fields, and applied the call to the Church spreading throughout the whole world.",
+     "view": "Augustine explained this joyful shout as an overflowing gladness of heart that words cannot fully express, comparing it to the cheerful shouts of workers during the harvest.",
      "sources": [
       "https://www.newadvent.org/fathers/1801100.htm"
      ]
@@ -28,16 +29,18 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Worship and obedience are meant to be filled with deep happiness, not gloom or dread. Coming before God is like being invited to a great feast rather than a funeral. Singing is one of the clearest and sweetest ways for God's family to show their delight in His presence.",
+   "meaning": "God's people are told to serve Him with gladness and to come into His presence with joyful singing. Serving God is not meant to feel like heavy or bitter slavery, because He is a loving and gracious Master. True worship fills our hearts with cheerfulness as we praise Him together.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch",
+    "John Gill"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "Augustine taught that serving God carries no bitter burden because believers are redeemed; the Christian serves as a servant by nature, yet with the freedom and gladness of love.",
+     "view": "Augustine taught that this service holds no bitterness because believers are both God's servants and set free by His love, allowing the conscience to rejoice along with the voice.",
      "sources": [
       "https://www.newadvent.org/fathers/1801100.htm",
       "https://ccel.org/ccel/schaff/npnf108.ii.C.html"
@@ -48,17 +51,18 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "True worship begins with understanding who God is and who we are. He is the only true God and the Creator of all life, which means we belong entirely to Him and cannot claim to have made ourselves. He treats His people like a gentle shepherd, guiding, protecting, and providing for His flock.",
+   "meaning": "Worshippers are reminded to recognize that the Lord alone is God, the Creator who made us and owns us. He claims us as His own flock, guarding and feeding us just as a shepherd tends sheep in a pasture. Because our lives come from Him, we can safely trust His tender care.",
    "meaning_sources": [
     "Matthew Henry",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "Augustine applied the words to Jesus Christ, explaining that believers must recognize the One who was scourged and crucified as the true God and Creator through whom all things were made.",
+     "view": "Augustine interpreted the statement that the Lord is God as pointing to Jesus Christ, showing that the One who was scourged and crucified is Himself the divine Creator.",
      "sources": [
       "https://ccel.org/ccel/schaff/npnf108.ii.C.html"
      ]
@@ -68,10 +72,12 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "Worshipers are invited to pass through the gates and enter the courtyards where God meets with His people. Being allowed into His presence is a high honor, and believers should bring songs of thanks as their offering. Gratitude should run through all of our worship, leading us to speak nothing but good of His holy name.",
+   "meaning": "The psalm invites worshippers to enter the temple gates and courtyards with thanksgiving and praise. While this originally referred to the courts of the temple in Jerusalem, it calls all people into shared public worship. Entering God's presence is a high privilege that deserves our deepest gratitude.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke"
+    "Tyndale Study Notes",
+    "Adam Clarke",
+    "Jamieson-Fausset-Brown",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -79,17 +85,18 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "Praise is built on the rock-solid character of God Himself. He is fundamentally good, and His mercy is like a fountain that never runs dry. Because He is faithful, not a single promise He makes will ever fail, from our ancestors down to our children.",
+   "meaning": "The psalm closes with the reasons to praise God: He is good, His loving devotion lasts forever, and His faithfulness never fails. His kindness is not temporary, but continues without end through every generation. We can be confident in Him because He always keeps His word.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "Geneva Notes",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "Augustine taught that God's enduring mercy does not merely rescue believers from past sins, but stays with them to guard and preserve them all the way to eternal life.",
+     "view": "Augustine taught that God's mercy does not stop once He frees us from sin, but continues to protect and guide believers all the way into eternal life.",
      "sources": [
       "https://ccel.org/ccel/schaff/npnf108.ii.C.html"
      ]
@@ -97,11 +104,7 @@
    ]
   }
  ],
- "problems": [
-  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 5: removed sources ['Spurgeon (Treasury of David)']"
- ],
+ "problems": [],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

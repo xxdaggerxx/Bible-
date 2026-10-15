@@ -8,10 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "A person who welcomes correction shows a genuine desire to learn and grow wise. Someone who hates being corrected behaves like an unthinking animal that kicks against guidance. Accepting discipline helps us avoid repeating foolish mistakes.",
+   "meaning": "A person who truly wants to gain wisdom welcomes guidance and correction. Resenting correction shows stubborn foolishness, like an animal that refuses to learn from being guided.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -19,29 +20,23 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "The Lord looks with favor on people who act with kindness and honest goodwill toward others. But He condemns anyone who quietly plots evil schemes. God evaluates our hearts and holds deceitful planners accountable.",
+   "meaning": "God looks with favor on people who are kind and seek the good of others. At the same time, the Lord brings judgment on those who secretly plan harm against their neighbors.",
    "meaning_sources": [
     "Matthew Henry",
+    "Ellicott",
     "Keil & Delitzsch"
    ],
-   "differ": [
-    {
-     "tradition": "Methodist",
-     "view": "Methodists emphasize that God's grace changes the heart first so a person can become good, and continuing in obedience increases that goodness and God's favor.",
-     "sources": [
-      "Adam Clarke"
-     ]
-    }
-   ],
+   "differ": [],
    "other": []
   },
   {
    "verse": 3,
    "end": 3,
-   "meaning": "No one can build a secure life by doing what is wrong, because wicked gains have no firm foundation. Righteous people, however, are deeply rooted in God like a strong tree that cannot be knocked down. True stability comes only from living in God's ways.",
+   "meaning": "Sinful behavior might seem to bring quick success, but it cannot build a lasting life. Godly people stay secure because their lives are deeply rooted in God, like strong trees that a storm cannot pull up.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Keil & Delitzsch"
    ],
    "differ": [],
    "other": []
@@ -49,10 +44,11 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "A capable, godly wife brings honor, joy, and strength to her husband, serving as a crown of dignity in his life. But a wife whose shameful conduct ruins her household slowly drains his spirit, like a rotting disease in his bones. A healthy home depends greatly on character and mutual respect.",
+   "meaning": "A wife of strong, noble character brings great honor and joy to her husband, like a royal crown. But a wife who acts dishonorably drains his strength and eats away his peace from the inside.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -60,10 +56,11 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "Godly people aim for what is fair and right even in their secret thoughts. In contrast, the inner plans and advice of the wicked are aimed at cheating others. God sees our thoughts and holds our hidden intentions to His standard.",
+   "meaning": "The inner goals of the righteous are fair and guided by God's standard of justice. In contrast, the schemes of wicked people are full of trickery and aim to take advantage of others.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Keil & Delitzsch",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -71,10 +68,11 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "The schemes and words of wicked people are meant to harm or destroy others, often using lies and false accusations. But upright people use their voices to speak up and rescue those in danger. A timely, honest word can save an innocent person's life.",
+   "meaning": "Evil people use their words like a deadly trap to hurt or destroy innocent people. Good people speak up honestly and bravely, using their words to defend and rescue those under attack.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Wesley",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -82,10 +80,11 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "Wicked people may seem powerful for a moment, but when sudden trouble strikes, they fall and vanish. The families and homes of the righteous, however, endure because God protects them. God gives lasting security to those who walk uprightly.",
+   "meaning": "Sinners may seem powerful for a time, but when trouble strikes, their whole world collapses. God protects the families of the righteous, giving them a firm home that stands for generations.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -93,10 +92,11 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "People are truly respected when they show wise judgment and moral goodness in daily life. But anyone with a twisted, crooked mind earns only contempt from others. Real honor comes from walking in truth rather than pursuing clever schemes.",
+   "meaning": "People earn lasting respect when they show true, practical wisdom in how they live. But anyone with a crooked, scheming mind will end up being despised by both God and wise people.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -104,29 +104,22 @@
   {
    "verse": 9,
    "end": 9,
-   "meaning": "It is far better to live modestly and have enough food and help than to put on grand airs while starving at home. Pretending to be rich and important brings only empty pride and hidden misery. Quiet contentment in an ordinary life brings true peace.",
+   "meaning": "An ordinary, humble worker who can quietly support his household is far better off than an arrogant person. Some people boast of family status or wear fancy clothes to look grand, while having nothing to eat at home.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Adam Clarke",
+    "Ellicott"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Catholic",
-     "view": "The Latin Vulgate translates this verse as praising a poor man who provides for himself over a proud man who lacks bread.",
-     "sources": [
-      "Adam Clarke",
-      "https://biblehub.com/commentaries/pulpit/proverbs/12.htm"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 10,
    "end": 10,
-   "meaning": "A godly person shows kindness even to animals, making sure work beasts have proper food, rest, and care. By contrast, the supposed mercy of wicked people is harsh and self-serving. Compassion toward helpless creatures reflects the heart of God.",
+   "meaning": "A godly person shows kindness even to working animals, making sure they have enough rest and food. By contrast, the so-called kindness of cruel people is still harsh and self-serving.",
    "meaning_sources": [
     "Matthew Henry",
+    "Wesley",
     "Adam Clarke"
    ],
    "differ": [],
@@ -135,10 +128,11 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "Working hard at an honest job provides food and steady provision for a household. But chasing wild, worthless schemes shows a lack of good sense and leads to poverty. Faithful daily labor is God's normal way to meet our needs.",
+   "meaning": "A person who works hard at an honest job will have plenty of food for the table. But wasting time on empty schemes and idle companions leads straight to poverty and shows poor judgment.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Wesley",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -146,10 +140,11 @@
   {
    "verse": 12,
    "end": 12,
-   "meaning": "Sinful people covet the traps and plundered gains used by other evil men. But the inner root of the righteous person produces healthy, lasting fruit that blesses others. True blessing grows out of a quiet, faithful heart rather than stolen goods.",
+   "meaning": "Wicked people always envy the loot and dishonest tricks of other evil men. Meanwhile, the righteous draw strength from God within, bearing good fruit naturally without needing to rob anyone.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Wesley",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -157,10 +152,11 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "Sinners often get trapped by their own careless or lying words and face painful consequences. But righteous people, who guard what they say, are delivered out of danger. Careful speech protects us from bringing trouble onto our own heads.",
+   "meaning": "Sinners often get caught in their own web of lies, insults, and careless speech. Upright people avoid that danger because their honest words keep them out of legal and personal trouble.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -168,29 +164,23 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "A person reaps great personal good and inner satisfaction by speaking words that encourage and instruct others. In the same way, the work a person does with their hands brings an appropriate reward. God ensures that faithful words and deeds bear good fruit.",
+   "meaning": "Good and helpful words bring real blessings back to the one who speaks them. In the same way, honest work done with our hands receives a good reward from God.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Jamieson-Fausset-Brown",
+    "Ellicott"
    ],
-   "differ": [
-    {
-     "tradition": "Baptist",
-     "view": "Baptists emphasize that God rewarding human works does not mean people earn salvation by their own merit, but shows God's gracious kindness in accepting good works through Christ.",
-     "sources": [
-      "https://biblehub.com/commentaries/proverbs/12-14.htm"
-     ]
-    }
-   ],
+   "differ": [],
    "other": []
   },
   {
    "verse": 15,
    "end": 15,
-   "meaning": "A fool is completely convinced that his own choices are always right and refuses to be corrected. A truly wise person knows his understanding is limited and gladly listens to sound guidance. Being open to advice keeps us from ruin.",
+   "meaning": "A fool is always convinced that his own opinion and way of doing things cannot be wrong. A truly wise person remains humble enough to seek out advice and listen to others.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -198,10 +188,11 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "A foolish person lets his temper flare immediately when provoked, making his anger obvious to everyone. A sensible person stays calm and chooses to overlook an insult rather than escalate the fight. Self-control saves us from needless shame.",
+   "meaning": "A foolish person flares up quickly and lets everyone see his temper the moment he feels slighted. A sensible person stays calm, holds his temper, and overlooks an insult rather than starting a brawl.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -209,10 +200,11 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "An honest witness speaks what is true and helps justice prevail in the community. But a dishonest person spreads lies and deceives others to serve wicked ends. Speaking the plain truth honors God and protects our neighbors.",
+   "meaning": "When an honest person speaks the truth, he helps establish justice and fair treatment for all. A dishonest witness lies freely, spreading deception and causing harm in the community.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Benson",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -220,10 +212,11 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "Careless, sharp words can cut like a sword, wounding feelings and breaking friendships. On the other hand, the gentle and thoughtful words of the wise bring emotional healing and restore peace. We should use our tongues to mend rather than to hurt.",
+   "meaning": "Thoughtless and cruel words can cut deeply into a person's spirit, just like wounds from a sword. But words spoken with wisdom and gentleness bring peace and heal broken relationships.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Benson",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -231,10 +224,11 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "Words that are true stand the test of time because truth has a lasting foundation. A lie may seem clever for a moment, but it is quickly exposed and disgraced. Choosing honesty gives us a reputation that never has to fear being found out.",
+   "meaning": "Truth stands the test of time because it never changes and cannot be destroyed. Lies may work for a brief moment, but they are quickly found out and exposed.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -242,10 +236,11 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "People who plot harm against others have deceit brewing inside their hearts and end up hurting themselves. But those who actively work to make peace and seek the good of others experience genuine joy. Promoting harmony brings deep inner happiness.",
+   "meaning": "Those who secretly plan harm to others end up trapped in their own deceit and misery. On the other hand, people who work to make peace bring joy both to their neighbors and to their own hearts.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Wesley",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -253,24 +248,17 @@
   {
    "verse": 21,
    "end": 21,
-   "meaning": "God promises that no lasting evil will ruin the righteous, because He turns even difficult trials for their ultimate good. In contrast, wicked people are overwhelmed by the misery their own sins produce. Trusting God assures us that our troubles will not have the final say.",
+   "meaning": "God watches over the upright so that real and final harm will not ruin their souls. Trouble may come, but God turns it for their ultimate good, whereas the wicked face ruin from their sins.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Jamieson-Fausset-Brown"
    ],
-   "differ": [
-    {
-     "tradition": "Baptist",
-     "view": "Baptists emphasize that no punishment for sin will ever fall on the righteous, because Christ bore all their punishment in their place.",
-     "sources": [
-      "https://biblehub.com/commentaries/proverbs/12-21.htm"
-     ]
-    }
-   ],
+   "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "The Latin Vulgate translation reads that nothing that happens will make the righteous person sad.",
+     "view": "The Latin Vulgate translates this proverb to mean that nothing that happens will cause lasting sadness to a just person.",
      "sources": [
       "https://biblehub.com/proverbs/12-21.htm"
      ]
@@ -280,10 +268,11 @@
   {
    "verse": 22,
    "end": 22,
-   "meaning": "The Lord detests deceitful words and lying lips because they break trust and tear society apart. He takes great delight in people who keep their promises and act with integrity. Living truthfully reflects God's own faithful character.",
+   "meaning": "The Lord deeply hates lying words because falsehood opposes his holy nature. But he takes great delight in people who speak the truth and keep their promises faithfully.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Benson",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -291,10 +280,11 @@
   {
    "verse": 23,
    "end": 23,
-   "meaning": "A prudent person does not show off what he knows, choosing instead to speak only when it truly helps others. But a fool cannot help blabbering, putting his ignorance and empty thoughts on display for all to see. Quiet modesty is a true mark of understanding.",
+   "meaning": "Sensible people do not show off everything they know just to impress a crowd. But fools cannot help blurting out whatever nonsense comes into their heads, showing off their ignorance.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Adam Clarke",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -302,10 +292,11 @@
   {
    "verse": 24,
    "end": 24,
-   "meaning": "Hard-working people earn respect, independence, and leadership over time because of their steady effort. But people who are lazy or dishonest end up in servitude and dependent on others. Consistent diligence opens the door to greater usefulness.",
+   "meaning": "Hardworking and reliable people naturally rise to positions of leadership and respect. Lazy people, however, waste their opportunities and eventually find themselves forced to work for others.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke"
+    "Benson",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -313,9 +304,10 @@
   {
    "verse": 25,
    "end": 25,
-   "meaning": "Worry and heavy sadness weigh down a person's heart and drain their strength. But a timely, kind word of encouragement or God's comforting promises can lift that burden and bring joy. A gentle word can renew someone's hope when they are struggling.",
+   "meaning": "Worry and sadness can crush a person's spirit and make life feel too heavy to carry. An encouraging, kind word can lift that burden and fill the heart with fresh hope.",
    "meaning_sources": [
     "Matthew Henry",
+    "Wesley",
     "Adam Clarke"
    ],
    "differ": [],
@@ -324,26 +316,20 @@
   {
    "verse": 26,
    "end": 26,
-   "meaning": "A godly person is careful about who he chooses as close friends, knowing that companions shape life's direction. But the path of evil people deceives them, leading them and others astray into ruin. Choosing wise companions guards our walk with God.",
+   "meaning": "Upright people are careful about their companions and guide their neighbors toward what is good. Evil people, however, wander down bad roads and drag others into ruin with them.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Wesley",
+    "Jamieson-Fausset-Brown",
+    "Ellicott"
    ],
-   "differ": [
-    {
-     "tradition": "Baptist",
-     "view": "Baptists emphasize that the righteous person is more excellent than his neighbor because he has been clothed in the perfect righteousness of Christ.",
-     "sources": [
-      "https://www.studylight.org/commentary/proverbs/12-26.html"
-     ]
-    }
-   ],
+   "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "The Latin Vulgate translates this verse to say that a person is just if he willingly accepts a loss for the sake of a friend.",
+     "view": "The Latin Vulgate translates the first line to mean that a righteous person is someone who willingly accepts a loss for the sake of a friend.",
      "sources": [
-      "Adam Clarke"
+      "Adam Clarke",
+      "https://www.studylight.org/commentaries/eng/acc/proverbs-12.html"
      ]
     }
    ]
@@ -351,10 +337,11 @@
   {
    "verse": 27,
    "end": 27,
-   "meaning": "A lazy person does not finish what he begins, failing even to prepare and enjoy what he hunted. In contrast, a diligent person values and uses whatever he gains through honest work. Diligence allows us to enjoy the full blessing of our labor.",
+   "meaning": "A lazy hunter does not even bother to prepare and cook what he catches, letting his hard-earned food go to waste. But a diligent person values what he owns and makes good use of every blessing.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke"
+    "Benson",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -362,7 +349,7 @@
   {
    "verse": 28,
    "end": 28,
-   "meaning": "Walking in the way of righteousness leads to true life and peace both now and forever. In that holy path, death has no lasting power, while turning to sinful shortcuts leads to destruction. Following God's path leads to eternal safety.",
+   "meaning": "Walking in obedience to God brings true, lasting life and spiritual safety. This righteous way leads away from destruction and toward God's eternal peace.",
    "meaning_sources": [
     "Matthew Henry",
     "Adam Clarke"
@@ -371,15 +358,18 @@
    "other": [
     {
      "label": "Catholic",
-     "view": "The Latin Vulgate translates the second line to say that a devious path or byway leads to death.",
+     "view": "The Latin Vulgate translates the second line as a contrast, saying that the by-way leads directly to death.",
      "sources": [
-      "https://biblehub.com/commentaries/proverbs/12-28.htm",
-      "Adam Clarke"
+      "Keil & Delitzsch",
+      "https://biblehub.com/commentaries/proverbs/12-28.htm"
      ]
     }
    ]
   }
  ],
- "problems": [],
+ "problems": [
+  "v. 28: removed sources ['Wesley']"
+ ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

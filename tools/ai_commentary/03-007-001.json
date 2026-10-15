@@ -8,10 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "God gives special instructions for the guilt offering, calling it most holy. This means the animal was set apart entirely for sacred use, dedicated either to God on the altar or given to the priests. Unlike common meals, ordinary worshipers could not eat any part of it.",
+   "meaning": "God gives instructions for the guilt offering, which was brought when someone broke God's holy rules or wronged a neighbor. Like the sin offering, it is called most holy because it was set apart completely for the Lord and His priests. It reminded the worshiper that repairing damage and seeking forgiveness are serious duties before God.",
    "meaning_sources": [
     "Matthew Henry",
-    "https://enduringword.com/bible-commentary/leviticus-7/"
+    "Jamieson-Fausset-Brown",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -19,21 +20,34 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "The animal was killed at the north side of the altar, just like the regular burnt offering. The priest then splashed its blood against all four sides of the altar. This showed that the penalty of death was paid to restore the broken boundary caused by sin.",
+   "meaning": "The animal had to be killed at the north side of the courtyard, in the same spot where the burnt offering was slaughtered. The priest then splashed the blood against all sides of the altar. This showed that life had been given to cover the person's wrongdoing.",
    "meaning_sources": [
     "Adam Clarke",
-    "https://enduringword.com/bible-commentary/leviticus-7/"
+    "Keil & Delitzsch",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 3,
+   "end": 4,
+   "meaning": "The worshiper had to remove all the richest fat portions to give to God. This included the fat tail of the sheep, the fat covering the internal organs, both kidneys with their fat, and the lobe of the liver. In Bible times, fat represented the very best part of the animal.",
+   "meaning_sources": [
+    "John Gill",
+    "Keil & Delitzsch",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
    "end": 5,
-   "meaning": "The priest removed the best parts of the animal, including the fat tail, the fat around the internal organs, the kidneys, and part of the liver. All of this rich fat was burned on the altar as a gift by fire to the Lord. God claimed the richest portions for Himself before anyone else received a share.",
+   "meaning": "The priest burned these fatty portions on the altar as a gift by fire to the Lord. Offering the fat first showed that God deserves the very best of everything we have. It completed the altar portion of the guilt offering.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -41,10 +55,10 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "The meat that remained was given to the male members of the priest's family to eat. Because the sacrifice was most holy, they had to eat it within the sacred courtyard of the tabernacle. God made sure the priests who served Him were fed from the gifts brought to His altar.",
+   "meaning": "The remaining meat belonged to the priests, and any male in Aaron's family was allowed to eat it. Because this food was most holy, it had to be eaten within the sacred courtyard of the tabernacle and could not be taken home. God provided food for His priests while keeping the sacrifice holy.",
    "meaning_sources": [
-    "Matthew Henry",
-    "https://www.biblehub.com/commentaries/gill/leviticus/7.htm"
+    "Calvin",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -52,10 +66,11 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "The rules for dividing the guilt offering were the same as those for the sin offering. After the blood and fat were given to God, the meat belonged to the specific priest who performed the sacrifice. Atonement means repairing the damage of sin to make peace with God, and God rewarded the priest who did this holy work.",
+   "meaning": "The guilt offering followed the same basic rule as the sin offering regarding who received the meat. The specific priest who sprinkled the blood and made atonement—meaning he helped make things right between the sinner and God—received the meat for his family. This rewarded the priest who did the holy work at the altar.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley"
+    "Wesley",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -63,21 +78,35 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "When an animal was offered as a burnt offering, all its meat was completely burned up on the altar. The officiating priest, however, was permitted to keep the animal's hide for himself. This provided clothing or leather goods as part of God's daily care for His workers.",
+   "meaning": "When a priest offered a burnt offering for someone, all the meat was burned up on the altar, so none was left to eat. To provide for the priest's service, God gave him the animal's hide. The priest could sell the leather or use it for clothing and tents.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 9,
-   "end": 10,
-   "meaning": "Grain offerings cooked in ovens, pans, or griddles were given directly to the priest who offered them, since cooked food spoiled quickly. Uncooked grain offerings, whether dry or mixed with oil, were divided equally among all the priests on duty. God established fair rules so that both the priest doing the physical labor and those assisting him received their daily bread.",
+   "end": 9,
+   "meaning": "Any grain offering that was baked in an oven or cooked in a pan or on a griddle belonged entirely to the priest who offered it. Since these bread cakes were already cooked hot and ready to eat, they went directly to the priest serving that day. This gave him fresh food for his work at the altar.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley"
+    "Wesley",
+    "Benson",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "Any uncooked grain offering, whether dry flour or mixed with oil, was to be shared equally among all the priests on duty. Because raw flour keeps longer, it could be divided evenly among all the sons of Aaron for their households. This prevented jealousy and ensured that every priestly family was fed.",
+   "meaning_sources": [
+    "Wesley",
+    "John Gill",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -85,10 +114,11 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "God introduces the rules for the peace offering, which was brought to celebrate fellowship with Him. Unlike offerings for sin, this was a voluntary meal where God, the priest, and the worshiper shared parts of the sacrifice. It was an expression of joy and thankfulness for God's blessings.",
+   "meaning": "This verse introduces the instructions for the peace offering, also called a fellowship offering. Unlike the other sacrifices, the peace offering was a joyful shared meal between God, the priests, and the worshiper. It celebrated friendship and peace with God.",
    "meaning_sources": [
     "Matthew Henry",
-    "https://www.preceptaustin.org/leviticus_7_commentary"
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -96,21 +126,42 @@
   {
    "verse": 12,
    "end": 12,
-   "meaning": "If someone brought a peace offering to thank God for a special deliverance, they brought breads made with fine flour and olive oil. These included thick cakes mixed with oil, thin wafers coated with oil, and fried cakes. These breads accompanied the meat to make a full, rich thanksgiving feast.",
+   "meaning": "If someone brought a peace offering to thank God for a special blessing or rescue, they had to bring three kinds of bread made with fine flour and olive oil. These included thick cakes mixed with oil, thin wafers brushed with oil, and fried cakes kneaded with oil. None of these three breads had yeast in them.",
    "meaning_sources": [
-    "Keil & Delitzsch",
-    "Matthew Henry"
+    "Adam Clarke",
+    "John Gill",
+    "Keil & Delitzsch"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 13,
-   "end": 14,
-   "meaning": "Along with the unleavened cakes, the worshiper brought regular leavened bread to the thanksgiving meal. One loaf of each kind of bread was lifted up as a special gift to the Lord and then handed to the officiating priest. While leaven could never be burned on the altar, it was welcomed at the fellowship table where God's people feasted.",
+   "end": 13,
+   "meaning": "Alongside the unleavened cakes, the worshiper was also to bring loaves made with yeast for the thanksgiving meal. Bread made with yeast was the ordinary food of daily life and celebratory feasts. It was not placed on the altar fire, but was eaten as part of the fellowship dinner.",
    "meaning_sources": [
-    "Matthew Henry",
     "Wesley",
+    "Jamieson-Fausset-Brown",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Popular modern teaching",
+     "view": "Some Bible teachers see the two breads as a picture of fellowship: the unleavened bread represents God's sinless perfection, while the leavened bread represents imperfect humans coming to enjoy peace with Him.",
+     "sources": [
+      "Scofield"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 14,
+   "end": 14,
+   "meaning": "The worshiper took one loaf from each kind of bread and lifted it up as a special gift to the Lord. After being presented to God, this bread was given to the priest who sprinkled the sacrifice's blood. This ensured the officiating priest had bread to go with his portion of meat.",
+   "meaning_sources": [
+    "Wesley",
+    "John Gill",
     "Keil & Delitzsch"
    ],
    "differ": [],
@@ -119,21 +170,35 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "All the meat from a thanksgiving offering had to be eaten on the very day it was sacrificed. Nothing was allowed to remain until the next morning. God wanted His people to express their gratitude promptly and to share their food freely with others rather than hoarding it.",
+   "meaning": "The meat from a thanksgiving offering had to be eaten on the very day it was sacrificed, with nothing left over until the next morning. This urged the worshiper to invite family, friends, and the needy to feast together while the memory of God's kindness was fresh. It also kept holy food from spoiling in the warm climate.",
    "meaning_sources": [
     "Matthew Henry",
-    "https://enduringword.com/bible-commentary/leviticus-7/"
+    "Adam Clarke",
+    "Benson"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 16,
+   "end": 16,
+   "meaning": "If the peace offering was brought to fulfill a solemn promise or given simply as a voluntary gift of love, the rules allowed more time to eat it. The worshiper and his guests could eat it on the first day and still finish the leftovers on the second day. Because it came from an open-hearted vow, God allowed a longer time for celebration.",
+   "meaning_sources": [
+    "Wesley",
+    "Benson",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 17,
    "end": 17,
-   "meaning": "If a peace offering was brought to fulfill a personal vow or as a freewill gift, the family could eat the meat over two days. Any meat left over on the third day had to be burned in the fire. This rule kept the sacred meat from spoiling in the warm climate and protected the holy feast from neglect.",
+   "meaning": "Any sacrificial meat still left uneaten by the third day had to be burned completely in the fire. This rule stopped people from letting sacred food spoil and rot. It also kept them from hoarding holy things out of stinginess instead of sharing them freely.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -141,9 +206,10 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "Eating any leftover meat on the third day made the entire sacrifice worthless in God's eyes. Instead of receiving God's favor, the person who ate it committed a serious offense and bore the guilt of profaning holy food. A worshiper could not turn a sacred feast into an ordinary meal by disobeying God's timetable.",
+   "meaning": "Eating the meat on the third day ruined the sacrifice completely, so God would not accept it or count it in the person's favor. Instead, the old meat became offensive and foul in God's sight, and anyone who ate it was held guilty of sin. God wants His people to obey His instructions with care and reverence.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Ellicott",
     "Keil & Delitzsch"
    ],
    "differ": [],
@@ -152,21 +218,34 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "If sacrificial meat touched anything ceremonially unclean, it could not be eaten and had to be burned. Meat that remained pure could be shared by anyone who was clean according to God's law. God required His people to treat holy things with deep reverence and care.",
+   "meaning": "Sacrificial meat that touched anything unclean had to be burned up, not eaten. Only people who were ceremonially clean—meaning they were free from ritual defilement under God's law—were allowed to eat the remaining good meat. Holiness and impurity could never be mixed together.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "Calvin",
+    "John Gill",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 20,
-   "end": 21,
-   "meaning": "Anyone who was ceremonially defiled—whether from sickness, a dead body, or an unclean animal—was strictly forbidden from eating sacred peace offering meat. If someone knowingly broke this command, they were cut off, meaning expelled from the community of Israel. Coming into God's presence while clinging to defilement showed open contempt for His holiness.",
+   "end": 20,
+   "meaning": "If someone ate holy meat from the Lord's peace offering while still in an unclean condition, that person was cut off from the community. Being cut off meant being expelled from the covenant people and facing God's direct judgment. Coming into God's presence required genuine cleansing and respect for His holiness.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 21,
+   "end": 21,
+   "meaning": "This warning applies whether a person became unclean by touching a diseased person, an unclean animal, or any other forbidden thing. If they knowingly ignored their condition and ate from the peace offering, they suffered the same severe penalty of being cut off. God wanted His people to take ritual purity seriously when approaching holy meals.",
+   "meaning_sources": [
+    "Wesley",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -174,9 +253,10 @@
   {
    "verse": 22,
    "end": 23,
-   "meaning": "God tells Moses to instruct the people that they must never eat the fat of cattle, sheep, or goats. These were the domestic animals used for sacrifices on God's altar. Because the richest fat was reserved for the Lord alone, the people had to treat it as holy.",
+   "meaning": "The Lord told Moses to command the Israelites never to eat the hard fat of cattle, sheep, or goats. These three kinds of animals were the only farm animals that could be offered as sacrifices on the altar. Because the fat was reserved as God's portion, His people were never to eat it at home or anywhere else.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke",
     "Keil & Delitzsch"
    ],
    "differ": [],
@@ -184,11 +264,24 @@
   },
   {
    "verse": 24,
-   "end": 25,
-   "meaning": "If an animal died naturally or was torn apart by wild predators, its fat could still be used for practical purposes like greasing tools, but no one could eat it. Eating the fat of an animal that could be offered to God was strictly forbidden. Anyone who ate this fat was cut off, meaning expelled from the community for taking what belonged to God.",
+   "end": 24,
+   "meaning": "If a sheep, goat, or ox died on its own or was torn by wild animals, its meat could not be eaten because the blood had not been drained. However, its fat could be put to practical household uses, such as making candles, oiling tools, or treating leather. God's law allowed useful practical work while still protecting the sanctity of holy food.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley"
+    "John Gill",
+    "Ellicott",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 25,
+   "end": 25,
+   "meaning": "Anyone who deliberately ate the fat of an animal that could be offered on the altar was to be cut off from God's people. Taking the fat for oneself was treated as stealing what belonged to God alone. It showed contempt for God's sacred rights at the altar.",
+   "meaning_sources": [
+    "John Gill",
+    "Ellicott",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -196,32 +289,54 @@
   {
    "verse": 26,
    "end": 27,
-   "meaning": "God strictly forbade eating blood from any bird or land animal, anywhere the Israelites lived. Anyone who consumed blood was cut off from the nation. God reserved blood for Himself because it represented the life of the animal and was chosen to make atonement for human sin.",
+   "meaning": "God strictly forbade eating the blood of any bird or animal anywhere the people lived. Anyone who broke this rule was cut off from the covenant community. Blood represented the life given by God and was reserved exclusively for making atonement on the altar.",
    "meaning_sources": [
-    "Matthew Henry (Concise)",
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 28,
-   "end": 30,
-   "meaning": "The worshiper who brought a peace offering had to present God's portion with his own hands rather than sending someone else. He brought the fat to be burned, along with the animal's breast to be moved back and forth before the Lord as a wave offering. This action showed that the giver was personally and gladly dedicating the gift to the Master of all the earth.",
+   "end": 29,
+   "meaning": "The Lord gave further instructions for anyone bringing a peace offering. The worshiper had to bring God's portion directly to the tabernacle rather than sending it through someone else. This ensured that the person gave their gift to the Lord with their own hands and a willing heart.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "Wesley",
+    "Benson",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
   },
   {
-   "verse": 31,
-   "end": 31,
-   "meaning": "The priest burned the fat upon the altar fire as the Lord's share. The breast, after being waved before God, was given to Aaron and his sons for their food. God received His tribute first and then fed His ministers from the very gifts brought to Him.",
+   "verse": 30,
+   "end": 30,
+   "meaning": "The worshiper personally carried the fat and the animal's breast to the priest. The priest then guided the person's hands to wave the breast back and forth before the Lord. Waving the meat back and forth showed that it was presented to God and then returned by Him as food for His priests.",
    "meaning_sources": [
     "Matthew Henry",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Some older Catholic commentators saw the back-and-forth and upward motions of waving and heaving as forming the shape of a cross, pointing forward to the sacrifice of Jesus.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/hcc/leviticus-7.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 31,
+   "end": 31,
+   "meaning": "The priest placed the fat pieces onto the altar fire to be burned for the Lord. After God received His part in the smoke of the altar, the waved breast was handed over to Aaron and the priests for their families to eat. This showed that God sits at the head of the table and shares the feast with His servants.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "John Gill",
     "Keil & Delitzsch"
    ],
    "differ": [],
@@ -229,11 +344,22 @@
   },
   {
    "verse": 32,
-   "end": 34,
-   "meaning": "The right thigh of the peace offering was lifted up as a contribution and given specifically to the priest who conducted the service. God took the wave breast for all the priests and the right thigh for the officiating priest as their permanent right from Israel. When God's people gave to the Lord, He made sure those who led worship were faithfully supported.",
+   "end": 33,
+   "meaning": "The right hind leg of the peace offering was lifted up as a special gift and set aside for the individual priest who sprinkled the blood and burned the fat. While the breast was shared by all priests, this savory cut was the personal reward for the priest performing the altar service that day. God made sure that those who served Him faithfully received fair support for their labor.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
     "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 34,
+   "end": 34,
+   "meaning": "God explained that He took the wave breast and the heave thigh directly from Israel's offerings and gave them to Aaron and his descendants as an unending law. The priests did not receive farmland of their own in the promised land, so God provided for them straight from His altar. Supporting God's ministers was a lasting duty for all generations of Israelites.",
+   "meaning_sources": [
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -241,9 +367,10 @@
   {
    "verse": 35,
    "end": 36,
-   "meaning": "These food portions were assigned to Aaron and his sons on the day Moses anointed them to serve as priests. God established this as an everlasting law throughout all generations in Israel. Those who give their lives to spiritual service can trust God's enduring promise to supply their needs.",
+   "meaning": "These portions of the altar fire were assigned to Aaron and his sons from the very day they were anointed and ordained to serve the Lord. God commanded the Israelites to supply these cuts of meat permanently for all future generations. Those who dedicate their lives entirely to God's service are meant to be cared for by God's people.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Benson",
+    "Jamieson-Fausset-Brown",
     "Keil & Delitzsch"
    ],
    "differ": [],
@@ -252,10 +379,10 @@
   {
    "verse": 37,
    "end": 38,
-   "meaning": "These verses wrap up the instructions for all the major sacrifices: the burnt, grain, sin, guilt, ordination, and peace offerings. The Lord delivered these complete commands to Moses at Mount Sinai while Israel was encamped in the wilderness. God left nothing to human guesswork, showing that true worship follows His exact word.",
+   "meaning": "These verses conclude the first seven chapters of Leviticus, summarizing the rules for all the major offerings: the burnt, grain, sin, guilt, ordination, and peace offerings. God delivered these commands to Moses at Mount Sinai while Israel was encamped in the desert. They laid the permanent foundation for worship, cleansing, and fellowship with God.",
    "meaning_sources": [
     "Calvin",
-    "Matthew Henry",
+    "Adam Clarke",
     "Keil & Delitzsch"
    ],
    "differ": [],
@@ -263,8 +390,12 @@
   }
  ],
  "problems": [
-  "v. 20: removed sources ['Calvin']",
-  "v. 24: removed sources ['Calvin']"
+  "v. 5: removed sources ['Benson']",
+  "v. 6: removed sources ['Jamieson-Fausset-Brown']",
+  "v. 21: removed sources ['Ellicott']",
+  "v. 32: removed sources ['Benson']",
+  "v. 34: removed sources ['Calvin']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

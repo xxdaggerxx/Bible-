@@ -8,23 +8,31 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "David begins with an earnest prayer asking God to guard and watch over his life. He does not ask for rescue from a single danger, but places his whole life into God's safe keeping because he has already trusted Him. Believers can run to God like chicks under a mother bird's wings and find safe shelter in His mighty power.",
+   "meaning": "David calls out to God to keep and guard him, because he has placed his full trust in God as his safe shelter. He knows that real safety does not come from his own strength or army, but from the Lord alone. Relying on God gives lasting peace even in dangerous times.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "Spurgeon (Treasury of David)"
+    "Tyndale Study Notes",
+    "Benson",
+    "Matthew Henry"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Early church teachers such as Augustine interpreted this opening prayer as the voice of Jesus Christ in His human nature, praying to the Father before His suffering.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801016.htm"
+     ]
+    }
+   ]
   },
   {
    "verse": 2,
    "end": 2,
-   "meaning": "David speaks to the Lord and gladly yields to His authority, confessing that God is his Master. He also recognizes that he can give nothing to God that God needs, because God is already completely happy and perfect in Himself. Any true good or blessing David enjoys comes entirely from the Lord, not from his own merit.",
+   "meaning": "David confesses that the Lord is his true Master and ruler. He knows that every good thing in his life comes from God, and that he has no real happiness apart from Him. Human good deeds can never add anything to God, because God already owns and rules everything.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
     "Wesley",
-    "Adam Clarke"
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -32,52 +40,7 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "Since God needs nothing from human hands, David turns his love and care toward God's people on earth. He views believers as the true nobility of the land, finding deep delight in their company and seeking to share his blessings with them. Those who truly love God will also cherish the people who belong to God.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Wesley"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 4,
-   "end": 4,
-   "meaning": "Those who rush after false gods only pile up pain and misery for themselves. David refuses to take part in their cruel and bloody offerings, or even let the names of idols cross his lips. Turning away from idols protects the heart from the bitter grief that worshiping false things always brings.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Geneva Notes"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 5,
-   "end": 5,
-   "meaning": "David declares that the Lord Himself is his greatest prize, his daily nourishment, and his lasting inheritance. Just as the priests of Israel received no plot of land because God was their portion, David finds complete contentment in having God as his wealth. God also promises to guard this spiritual treasure so that no enemy can ever snatch it away.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Wesley"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 6,
-   "end": 6,
-   "meaning": "In ancient times, measuring cords were used to mark out portions of land for each family. David rejoices that the boundaries God drew for his life have fallen in a wonderful and pleasant place. When a person is completely satisfied with God, every part of their lot in life becomes a reason for deep gratitude.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Wesley"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 7,
-   "end": 7,
-   "meaning": "David praises the Lord for guiding his steps and giving him wise direction through life. Even during the quiet hours of the night when the world is asleep, his inner thoughts and conscience remind him of God's truth. God's instruction shapes a believer's heart from the inside out, providing calm assurance in stillness.",
+   "meaning": "David shows his deep love and respect for God's faithful people living in the land. Because David's good deeds cannot enrich God directly, he delights to use his blessings to help and honor God's servants. Believers find their greatest joy in the company of those who love the Lord.",
    "meaning_sources": [
     "Matthew Henry",
     "Jamieson-Fausset-Brown"
@@ -86,12 +49,61 @@
    "other": []
   },
   {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Those who chase after false gods will only bring more sorrow and trouble upon themselves. David refuses to join in their ungodly ceremonies, rejecting their bloody sacrifices and refusing even to speak the names of idols. Staying away from false worship protects the heart from bitter grief.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Matthew Henry",
+    "Benson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "David declares that the Lord Himself is his greatest treasure and the provider of all his daily needs. Just as the ancient priests received the Lord Himself as their share instead of a tract of farmland, David is completely satisfied with God as his portion. God also guards this spiritual inheritance so that no one can take it away.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Wesley",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "David uses the picture of measuring cords that marked out family land in ancient Israel. He celebrates that the share God gave him is beautiful, pleasant, and full of blessings. When believers know God is caring for them, they can be deeply content with what He provides.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Benson",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "David praises God for giving him wise direction and advice for life. In the quiet hours of the night, God's truth works deep within his heart and conscience, guiding his thoughts and desires. Taking time to listen to God brings inner peace and clear moral direction.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Wesley",
+    "Benson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
    "verse": 8,
    "end": 8,
-   "meaning": "David makes a steady habit of keeping God in front of his eyes in everything he does. Having the Lord right beside him as his defender and helper gives him strength, so that he cannot be shaken by fear or trouble. When we walk in constant awareness of God's presence, our faith remains firm through every trial.",
+   "meaning": "David makes a conscious choice to keep the Lord always before his mind and eyes. With God standing right beside him like a trusted protector in battle, David knows he cannot be shaken by fear or trouble. Keeping your attention fixed on God brings courage in any hardship.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -99,9 +111,10 @@
   {
    "verse": 9,
    "end": 9,
-   "meaning": "Experiencing God's unfailing protection fills David's heart with gladness and moves his tongue to sing joyful praise. Even when facing physical weakness and the reality of the grave, his body can rest in calm hope. A living faith in God brings deep peace of mind today and quiet confidence for tomorrow.",
+   "meaning": "Because God is so near, David's whole being overflows with gladness and comfort. His inner heart rejoices, his tongue speaks words of praise, and his physical body rests in safety. Believers can live and rest in peace when they know God guards both soul and body.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
+    "Benson",
     "Jamieson-Fausset-Brown"
    ],
    "differ": [],
@@ -110,19 +123,34 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "David expresses the sure hope that God will not leave him in the realm of the dead or let His faithful one undergo decay. The New Testament apostles Peter and Paul explain that these words pointed ultimately to Jesus Christ, who rose bodily from the grave before His flesh could decompose. Because Christ conquered the grave, all who belong to Him have the guarantee that death will not have the final say over their bodies.",
+   "meaning": "David expresses full confidence that God will not leave him in the grave, the place of the dead, nor let His holy one suffer decay. The New Testament apostles Peter and Paul explain that this promise pointed ahead to Jesus Christ, who rose from the dead before His body could rot in the tomb. Through Jesus' resurrection, believers are given the hope of eternal life beyond the grave.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Benson"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Many Baptists, following Charles Spurgeon, read these words as spoken directly by Jesus Christ concerning His own literal resurrection, rather than David speaking of his own hopes.",
+     "sources": [
+      "https://archive.spurgeon.org/treasury/ps016.php"
+     ]
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some dispensational teachers hold that David was originally expressing assurance that God would spare him from dying in an immediate crisis, which the Holy Spirit later applied to Christ's bodily resurrection.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/dcc/psalms-16.html"
+     ]
+    }
+   ],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "Many modern scholars translate the phrase as not seeing 'the pit' rather than 'decay,' understanding the line originally as a prayer to be delivered from dying at that time.",
+     "view": "Many modern critical scholars translate the word for decay as the pit or the grave, reading the line as a prayer to be delivered from an early death rather than a reference to physical bodily resurrection.",
      "sources": [
-      "Jamieson-Fausset-Brown",
+      "Ellicott",
       "https://biblehub.com/commentaries/ellicott/psalms/16.htm"
      ]
     }
@@ -131,25 +159,20 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "God shows His servant the path that leads through death straight into endless life. In the presence of God there is complete and overflowing happiness, without any sorrow or lack. To be at God's right hand means enjoying eternal honor and pure delight that will never end.",
+   "meaning": "God reveals the path that leads to true, unending life instead of the silence of the grave. Being in God's presence brings the deepest and most complete joy a person can experience. At God's right hand, there are pure and lasting pleasures that will never fade away.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Matthew Henry",
-    "Wesley",
-    "Adam Clarke"
+    "Wesley"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 8: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 9: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 10: dropped differ point (Baptist): no checkable source",
+  "v. 3: removed sources ['Geneva Notes']",
   "v. 10: removed sources ['Spurgeon (Treasury of David)']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

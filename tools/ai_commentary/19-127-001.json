@@ -8,19 +8,21 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Human effort cannot succeed without God's help. Builders may work hard to construct a home or build up a family, and guards may stay awake to protect a city, but their labor fails if the Lord is not with them. God does not tell people to stop working, but rather teaches them to stop trusting only in their own strength.",
+   "meaning": "Human effort accomplishes nothing without the blessing of God. Builders can assemble a physical house and guards can patrol the city walls, but true safety and lasting success come only from the Lord. Believers must still do their daily work, but they must trust in God's providence rather than their own strength.",
    "meaning_sources": [
     "Matthew Henry",
-    "Calvin",
-    "Spurgeon (Treasury of David)"
+    "Ellicott",
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "Early church writers such as Augustine saw the house as the church, where ministers preach and watch, but only Christ builds and preserves hearts.",
+     "view": "Early teachers like Augustine saw this as Christ building his spiritual house, the church, while ministers serve as builders and watchmen.",
      "sources": [
-      "https://www.newadvent.org/fathers/1801127.htm"
+      "https://www.newadvent.org/fathers/1801127.htm",
+      "Calvin"
      ]
     }
    ]
@@ -28,10 +30,12 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Working long hours with frantic worry does not bring real security. People who do not trust God wear themselves out from dawn to dark, eating their daily bread with sorrow and fear. In contrast, the Lord grants His people peaceful rest, caring for them as they trust Him instead of fretting.",
+   "meaning": "Working endless hours from early morning until late at night cannot guarantee security when driven by worry. Anxious toil wears people down, but God wants his people to be free from fretful striving. He grants peaceful rest and quiet provision to those he loves.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin"
+    "Tyndale Study Notes",
+    "Benson",
+    "Wesley",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -39,10 +43,12 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "Children are not an accident or a burden, but a precious gift from the Lord. God gives them freely out of His kindness and grace, rather than as wages that parents have earned. Families can receive children with joy, trusting that the God who gives them will also provide for them.",
+   "meaning": "Children are not a burden or an accident of nature, but a precious gift from the Lord. Just as an inheritance is handed down freely rather than earned as wages, God gives children out of his own grace and kindness. Building a family is one of the clearest ways God blesses a household.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke"
+    "Benson",
+    "Wesley",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -50,40 +56,37 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "Children born while parents are still young grow up to become their defenders and helpers. Just as raw wood must be carefully shaped into straight arrows, young children need patient guidance so they can be aimed toward what is good. When guided well, they become a strong support to their parents in later years.",
+   "meaning": "Children born to young parents grow up to become their strength and protection, like arrows in the hand of a skilled warrior. When parents grow older, these grown children can stand up to defend and support them. Parents must also carefully guide and shape their children early so they aim toward God's purposes.",
    "meaning_sources": [
-    "Matthew Henry"
+    "Matthew Henry",
+    "Benson",
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Catholic",
-     "view": "Augustine interpreted these arrows as the apostles, who were sent out into the world by Christ to conquer hearts for God.",
-     "sources": [
-      "https://www.newadvent.org/fathers/1801127.htm"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 5,
    "end": 5,
-   "meaning": "A parent with a home full of faithful children is richly blessed. In ancient times, city gates served as public courts of law and defense against enemies. A father surrounded by loyal, upright sons would not be easily silenced, cheated, or intimidated by his accusers.",
+   "meaning": "A person with a home full of supportive children is truly blessed. In the ancient world, the city gate was the public court where legal disputes were settled. Grown children would stand beside their aging parents there, protecting them from being cheated or bullied by their opponents.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin"
+    "Jamieson-Fausset-Brown",
+    "Wesley",
+    "Geneva Notes",
+    "Tyndale Study Notes"
    ],
    "differ": [
     {
      "tradition": "Some evangelicals",
-     "view": "Some evangelicals believe this passage teaches married couples to avoid all birth control and welcome as many children as God gives.",
+     "view": "Couples should avoid birth control and trust God to give them as many children as possible.",
      "sources": [
       "https://www.gotquestions.org/quiver-full-of-children.html"
      ]
     },
     {
      "tradition": "Many evangelicals",
-     "view": "Many evangelicals believe children are always a blessing, but God gives couples the freedom to prayerfully and wisely plan the size of their family.",
+     "view": "Children are always a gift from God, but families may wisely use birth control to plan their family size.",
      "sources": [
       "https://www.desiringgod.org/articles/does-the-bible-permit-birth-control",
       "https://bible.org/question/what-does-bible-say-about-birth-control"
@@ -93,11 +96,7 @@
    "other": []
   }
  ],
- "problems": [
-  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 5: removed sources ['Spurgeon (Treasury of David)']"
- ],
+ "problems": [],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

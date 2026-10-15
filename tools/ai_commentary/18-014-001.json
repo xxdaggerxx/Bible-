@@ -8,11 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Job speaks about the shared weakness of every human being. Anyone born into this world lives only a short time and faces plenty of sorrow. Job brings up this common misery to ask God for pity on his own painful life.",
+   "meaning": "Job reflects on how fragile human life is for every person born into the world. Because human beings come from weak parents, their days on earth are few and filled with sorrow. Remembering that our days are short helps us turn to God for comfort.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "https://www.studylight.org/commentary/job/14-1.html"
+    "John Gill",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -20,11 +20,12 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Human life blossoms like a flower, but it soon fades and withers away. It is also like a quick shadow that races across the ground and disappears into the dark. Because life is so fragile and brief, people cannot put their lasting trust in earthly things.",
+   "meaning": "Human life blooms quickly like a delicate flower, but it soon withers and is cut down by disease or age. A person is also like a fast-moving shadow that races across the ground and soon disappears. We should not put our final hope in earthly things that fade so quickly.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley",
-    "Adam Clarke"
+    "Benson",
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -32,11 +33,11 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "Job wonders why the almighty God would fix His gaze on such a frail creature. It seems surprising that the Lord would call a weak, dying mortal into court to judge him. Job uses this thought to ask God to treat him with mercy instead of strict justice.",
+   "meaning": "Job asks God why He watches such a weak and frail creature with such intense scrutiny. He wonders why the almighty Creator would bring a feeble mortal into a strict legal courtroom. Job pleads for God to look on him with mercy instead of harsh judgment.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "https://www.studylight.org/commentaries/eng/tpc/job-14.html"
+    "Benson",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -44,16 +45,25 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "No human being can produce something completely pure out of a nature that is sinful from birth. People inherit moral weakness and fault from their ancestors, making every person imperfect. Because of this, only God's mercy and cleansing power can make a person truly right before Him.",
+   "meaning": "Job acknowledges that every person is born with original sin, which means a sinful nature inherited from our parents. Since all human parents are flawed, no child can produce a pure life on their own. Only God's forgiving grace can make an unclean sinner clean.",
    "meaning_sources": [
     "Matthew Henry",
     "Adam Clarke",
-    "https://biblehub.com/commentaries/job/14-4.htm"
+    "John Gill",
+    "Benson"
    ],
    "differ": [
     {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Job is teaching the doctrine of original sin, showing that every human inherits a corrupted nature from Adam.",
+     "sources": [
+      "Matthew Henry",
+      "John Gill"
+     ]
+    },
+    {
      "tradition": "Anglican",
-     "view": "Some Anglicans read this verse as describing bodily weakness and ceremonial uncleanness rather than the doctrine of inherited guilt.",
+     "view": "The verse points to inherited human weakness and ceremonial defilement rather than the formal doctrine of original sin.",
      "sources": [
       "https://www.studylight.org/commentaries/eng/tpc/job-14.html"
      ]
@@ -62,7 +72,7 @@
    "other": [
     {
      "label": "Catholic",
-     "view": "The Douay-Rheims translation reads the second question as pointing to God alone as the only One who can make the unclean clean.",
+     "view": "Ancient Latin and Aramaic readings translate this verse as an affirmation that only God can make an unclean person clean.",
      "sources": [
       "https://www.studylight.org/bible/eng/nrs/job/14-4.html"
      ]
@@ -72,10 +82,11 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "God has already set the exact span of each person's life on earth. He knows the count of our months and has placed a limit that no one can cross. Human life cannot be stretched out beyond the boundary that the Lord has decided.",
+   "meaning": "God has already decided the exact length of every human life before it begins. No person can live a single month or day beyond the boundary God has set. We can rest in knowing that our lives are in God's sovereign hands.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley",
+    "John Gill",
+    "Benson",
     "Adam Clarke"
    ],
    "differ": [],
@@ -84,23 +95,47 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "Job pleads with God to look away from him and ease up on His heavy discipline. Like a hired worker who looks forward to resting when the day's hard labor is done, man longs for a little peace before life ends. Job asks for a brief breathing spell before he reaches the end of his days.",
+   "meaning": "Job asks God to turn His searching gaze away so that he can find a moment of relief from pain. Like a hired worker who looks forward to resting when his hard day of labor is finished, Job longs for ease before he dies. He simply asks for a brief breathing space before life ends.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Adam Clarke"
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke",
+    "Geneva Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 7,
-   "end": 9,
-   "meaning": "A cut-down tree still has hope because its roots can send up fresh green shoots. Even if its trunk seems dead and rotted in the dirt, the mere scent of moisture will cause it to bud like a young sapling. Job uses the stubborn renewal of plant life to contrast how differently death treats human beings.",
+   "end": 7,
+   "meaning": "Job points out that even a tree has a kind of hope when an axe cuts it down. Fresh green sprouts can push out from the old stump and keep growing. Nature shows how plant life can revive after being brought low.",
    "meaning_sources": [
     "Matthew Henry",
+    "John Gill",
+    "Benson",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "A tree's root system may grow old in the dirt, and its main stump may seem dead and dry. Even though all outward signs of life have vanished, the root is not entirely lost. Hidden vitality remains quietly beneath the soil.",
+   "meaning_sources": [
+    "John Gill",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "As soon as the dry root senses the presence of water, it buds and produces fresh branches like a young plant. The moisture revives the stump the way fresh air revives someone who has fainted. Job uses this picture to highlight the sharp contrast between resilient trees and dying humans.",
+   "meaning_sources": [
     "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch"
+    "Adam Clarke",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -108,11 +143,11 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "When a human being dies, his earthly strength is completely gone, and he wastes away in the grave. Once he breathes his last breath, he vanishes from his place on earth. Unlike a fallen tree that sprouts again, a man does not return to live his physical life over again.",
+   "meaning": "Unlike a tree that can sprout again, a human being who dies does not return to life in this present world. Even the strongest and most powerful person loses all physical strength and breathes his last. When death arrives, a person's earthly place knows him no more.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley",
-    "https://www.studylight.org/bible/eng/kjv/job/14-10.html"
+    "John Gill",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -120,11 +155,12 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "Just as inland waters can evaporate or a flooded riverbed can completely dry up, a person's physical life drains away. The empty river channel shows how thoroughly life disappears from the body. Once those vital streams are gone, they do not refill the earthly frame.",
+   "meaning": "Job compares human death to water that drains away from an inland lake or a river that completely dries up in a drought. Once the water is gone, the riverbed lies empty and parched. In the same way, mortal life drains away and leaves an empty place on earth.",
    "meaning_sources": [
     "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Wesley"
+    "John Gill",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -132,56 +168,17 @@
   {
    "verse": 12,
    "end": 12,
-   "meaning": "A person who dies lies down in the grave and does not get up again to resume earthly life. He will not wake up from this sleep as long as the present heavens and world remain. Job looks at physical death as a complete end to life in this current age.",
+   "meaning": "When people die, they lie down in the grave as if sleeping in a bed and do not rise to their old lives. They will not wake up to resume everyday earthly tasks while this present world lasts. Traditional readers see this as pointing to the sleep of death until the final resurrection.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "https://www.studylight.org/commentaries/eng/tpc/job-14.html"
-   ],
-   "differ": [],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "Many modern scholars see this verse as a flat denial of any resurrection, arguing that Job believed the dead sleep permanently in Sheol.",
-     "sources": [
-      "Keil & Delitzsch"
-     ]
-    }
-   ]
-  },
-  {
-   "verse": 13,
-   "end": 13,
-   "meaning": "Job longs for Sheol, the place of the dead, to serve as a secret shelter from his intense suffering. He wishes God would hide him there until the season of divine anger passes by. He asks the Lord to set an appointed time on His calendar and then remember him with favor.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Geneva Notes"
-   ],
-   "differ": [],
-   "other": [
-    {
-     "label": "Catholic",
-     "view": "The Douay-Rheims Bible renders Sheol as hell, expressing Job's plea to be protected in the realm of the dead until God's wrath ends.",
-     "sources": [
-      "https://biblehub.com/job/14-13.htm"
-     ]
-    }
-   ]
-  },
-  {
-   "verse": 14,
-   "end": 14,
-   "meaning": "Job asks whether a person will live again after dying, reflecting on the hope of a coming restoration. He resolves to wait patiently through all the hard days of his earthly struggle until his great renewal arrives. He finds comfort in the hope that his present trial is not the final word.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Jamieson-Fausset-Brown"
+    "Wesley",
+    "Benson",
+    "John Gill"
    ],
    "differ": [
     {
      "tradition": "Some evangelicals",
-     "view": "Some evangelicals teach that Job lacked clear revelation about eternity, so his words here express mistaken human feelings rather than doctrinal truth.",
+     "view": "Job was speaking from extreme grief and limited knowledge of the afterlife, describing death as final without intending to teach settled doctrine.",
      "sources": [
       "https://enduringword.com/bible-commentary/job-14/",
       "https://www.studylight.org/commentary/job/14-14.html"
@@ -191,10 +188,62 @@
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "Many critical scholars understand Job's question as expecting a negative answer, expressing despair over death rather than a hope for bodily resurrection.",
+     "view": "The phrase about the heavens passing away describes the permanence of death rather than the end of the universe or a bodily resurrection.",
      "sources": [
-      "Keil & Delitzsch",
-      "https://www.studylight.org/commentary/job/14-14.html"
+      "Tyndale Study Notes"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 13,
+   "end": 13,
+   "meaning": "Job prays that God would hide him in Sheol, the place of the dead, like a treasure tucked safely away from a storm. He asks God to set a time when His anger will pass and He will remember Job with favor. This plea shows a faint hope that death will not be the final word.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley",
+    "Benson"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Traditional Latin translations used the word hell for Sheol here, understanding it as the resting place of departed souls before Christ.",
+     "sources": [
+      "https://biblehub.com/job/14-13.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 14,
+   "end": 14,
+   "meaning": "Job asks whether a man can live again after dying, knowing a person cannot return to this earthly life. He resolves to wait through his hard time of suffering until his final renewal comes. Christians have long read this as waiting with hope for the resurrection.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "John Gill",
+    "Wesley",
+    "Benson"
+   ],
+   "differ": [
+    {
+     "tradition": "Many evangelicals",
+     "view": "Job's question is an expression of hope that God will raise him to life in the world to come after his earthly struggle ends.",
+     "sources": [
+      "Matthew Henry",
+      "Adam Clarke",
+      "John Gill"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Job's question expects the answer no, expressing deep despair about any possible life after physical death.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/tpc/job-14.html",
+      "https://www.studylight.org/commentary/job/14-16.html"
      ]
     }
    ]
@@ -202,36 +251,71 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "Job envisions a day when God will summon him, and he will gladly answer the call. He trusts that the Lord will deeply yearn for the person He formed with His own hands. Even in his darkness, Job clings to the thought that the Creator will not abandon His work forever.",
+   "meaning": "Job expresses confidence that God will call out to him one day and that he will gladly answer. The Creator genuinely cares for the people He has made and will not abandon them to the dust forever. We can be encouraged that God deeply values each person He created.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "Wesley",
+    "Benson",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 16,
-   "end": 17,
-   "meaning": "In his present pain, Job feels as though God is carefully tracking every step and counting each error. He pictures his sins collected and sealed up tightly in a pouch so that none of them will be forgotten or left unpunished. Yet Job brings this heavy burden to God, longing for the day when his sins will be covered and forgiven.",
+   "end": 16,
+   "meaning": "In his present pain, Job feels as though God is tracking his steps only to catch him in sin. Yet he looks ahead to a time when God will protect his steps instead of keeping a record of his wrongs. God's ultimate desire for His children is mercy rather than constant fault-finding.",
    "meaning_sources": [
+    "Jamieson-Fausset-Brown",
     "Matthew Henry",
-    "Wesley",
-    "Geneva Notes",
-    "https://www.studylight.org/commentaries/eng/tpc/job-14.html"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
-   "verse": 18,
-   "end": 19,
-   "meaning": "The strongest parts of the natural world eventually crumble, as mountains fall and rocks slide away. Constant dripping and rushing water wear down solid stones and wash away the soil. In the same way, relentless troubles and death wash away all the earthly plans and hopes that a person builds.",
+   "verse": 17,
+   "end": 17,
+   "meaning": "Job worries that God is tying up his sins in a sealed bag to preserve them for judgment. Yet sealing away and covering over sins can also mean that God hides our guilt so it is pardoned completely. When God forgives our wrongdoing, He covers it so it can never condemn us.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley",
-    "https://www.studylight.org/commentaries/eng/tpc/job-14.html"
+    "Jamieson-Fausset-Brown",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Job is asking for legal acquittal, picturing his sins sealed in a pouch so they are hidden and forgiven forever.",
+     "sources": [
+      "Tyndale Study Notes"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 18,
+   "end": 18,
+   "meaning": "Job slides back into sadness by comparing human frailty to great mountains that crumble into dust. Even massive rocks get pushed out of place by earthquakes and storms. If even the strongest parts of creation collapse, weak humans cannot hope to stand forever on their own.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "John Gill",
+    "Benson",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 19,
+   "end": 19,
+   "meaning": "Gentle water wears away hard stones over time, and raging flash floods wash away the soil. In a similar way, constant suffering wears away human strength and destroys earthly hopes. Difficult trials can make a person feel as though their life is being eroded to nothing.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "John Gill",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -239,11 +323,12 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "God completely overpowers mortal man, and the person passes away from the earth forever. In the process of death, his face changes and loses its vitality, and God sends him away to his long home. No human being has the strength to resist the Lord's final call.",
+   "meaning": "God's power always overcomes human resistance, and every mortal eventually passes away into death. When death comes, God changes the person's pale face and sends them away from earthly life. Human beings must realize how small they are before the mighty power of God.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley",
-    "https://www.studylight.org/commentary/job/14-20.html"
+    "John Gill",
+    "Benson",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -251,11 +336,12 @@
   {
    "verse": 21,
    "end": 21,
-   "meaning": "Once a person dies and enters the grave, he is cut off from the events of this world. He does not know whether his children receive great honor or whether they fall into poverty and disgrace. The ties that kept him anxious about his family's earthly status have been severed.",
+   "meaning": "Once a person dies, he knows nothing about what happens to his family on earth. If his children gain honor or fall into poverty, the dead parent is completely unaware of it. Death cuts off all connection with the joys and sorrows of this present world.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Benson",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -263,16 +349,25 @@
   {
    "verse": 22,
    "end": 22,
-   "meaning": "In this dark picture of dying, the person is consumed only by the suffering of his own body and the grief of his own spirit. The dying man cannot focus on others because his own pain and sorrow overwhelm him. Job ends his speech by laying bare the raw, bitter reality of human misery and death.",
+   "meaning": "In severe sickness and death, a person's attention is entirely taken up by his own bodily pain and inward grief. The dying person cannot focus on others because his own suffering fills his whole mind. Job honestly describes how lonely and heavy physical torment can feel.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke",
-    "https://www.studylight.org/commentaries/eng/tpc/job-14.html"
+    "John Gill",
+    "Benson",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
   }
  ],
- "problems": [],
+ "problems": [
+  "v. 6: removed sources ['Benson']",
+  "v. 8: removed sources ['Benson', 'Adam Clarke']",
+  "v. 9: removed sources ['Benson']",
+  "v. 10: removed sources ['Benson']",
+  "v. 17: removed sources ['Benson']",
+  "v. 19: removed sources ['Benson']"
+ ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

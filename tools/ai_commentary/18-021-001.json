@@ -8,10 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Job begins his reply to Zophar and the other companions. Instead of focusing only on his own grief, he turns to examine their claims about how God runs the world.",
+   "meaning": "Job begins his reply to Zophar, turning directly to the big debate between them. Instead of focusing only on his own pain, he sets out to show that wicked people often enjoy long, comfortable lives on earth.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -19,35 +20,28 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Job asks his friends to give him their full attention. If they have no helpful words to share, simply listening with patience will be the comfort he desires from them.",
+   "meaning": "Job asks his friends to give him their full attention without interrupting. If they truly want to comfort him, simply listening carefully will be the best kindness they can offer.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley"
+    "Jamieson-Fausset-Brown",
+    "Benson"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "The ancient Greek translation turns this sentence into a negative statement, suggesting the friends offered no true comfort.",
-     "sources": [
-      "https://classic.net.bible.org/bible.php?book=Job&chapter=21"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 3,
    "end": 3,
-   "meaning": "Job asks his companions to let him speak without cutting him off. After he finishes explaining his case, they can continue mocking him if they still wish.",
+   "meaning": "Job begs his companions to bear with him patiently while he presents his case. Once he has finished laying out the facts, they are free to go back to mocking him if they wish.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "The Hebrew command to mock is singular, which may mean Job addresses Zophar alone because Zophar spoke last.",
+     "view": "Because the Hebrew verb for mocking is singular here, Job may be directing this remark specifically to Zophar rather than all three friends.",
      "sources": [
       "https://classic.net.bible.org/bible.php?book=Job&chapter=21"
      ]
@@ -57,31 +51,23 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "Job explains that his deep struggle is with God, not with mortal human beings. Because God remains silent and seems to treat him as guilty, it is natural for him to feel restless and impatient.",
+   "meaning": "Job explains that his real struggle is with God, not with human beings. He is pouring out his soul to his Maker, and because God seems silent, it is natural for him to feel deep distress and impatience.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Wesley"
+    "Benson",
+    "John Gill"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "Job may be pointing out that while human disputes can find sympathetic listeners, no one dares to show sympathy to someone who questions God.",
-     "sources": [
-      "https://classic.net.bible.org/bible.php?book=Job&chapter=21"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 5,
    "end": 5,
-   "meaning": "Job invites his friends to look directly at his shattered condition and be stunned. Placing a hand over the mouth was an ancient custom showing humble, awe-filled silence before an unsolved mystery.",
+   "meaning": "Job urges his companions to look closely at him and at the hard facts he is raising. Putting a hand over the mouth was a well-known sign of silent awe, showing they should stop talking and marvel at God's mysterious ways.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch"
+    "Adam Clarke",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -89,10 +75,10 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "Job admits that simply thinking about his sudden ruin fills him with dread. The fact that a righteous person can lose everything while evil people prosper makes his entire body shake with fear.",
+   "meaning": "Job admits that thinking about the mystery of God's providence makes him shudder with fear. It terrifies him to realize how often the wicked thrive while innocent people suffer terrible losses.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
+    "Benson",
     "Adam Clarke"
    ],
    "differ": [],
@@ -101,11 +87,11 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "Job directly challenges the idea that evil people are always cut down quickly. Daily experience shows that many wicked people live long lives, reach old age, and grow steadily in power and wealth.",
+   "meaning": "Job raises a hard question that directly challenges his friends' claims: why do many wicked people live to old age and grow in wealth and influence? The friends claimed evil people are quickly cut off, but daily life proves otherwise.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -113,7 +99,7 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "The friends had insisted that the wicked leave no family behind. Job points out that evil people often see their children and grandchildren grow up safe, healthy, and firmly established.",
+   "meaning": "Evil men often see their children and grandchildren grow up safe and established around them. This cuts Job deeply, since he has just lost all his own children while wicked parents watch their families flourish.",
    "meaning_sources": [
     "Matthew Henry",
     "Jamieson-Fausset-Brown",
@@ -125,10 +111,11 @@
   {
    "verse": 9,
    "end": 9,
-   "meaning": "Many wicked households enjoy lasting safety and are free from sudden terror. God does not seem to strike them with His rod of discipline or bring ruin upon their properties.",
+   "meaning": "Job points out that the households of wicked people often enjoy peace and safety from harm. God's rod of discipline, which often falls heavily on the righteous, seems not to touch them at all.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -136,31 +123,35 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "Job describes the thriving business and farming success of the wicked. Their cattle breed successfully, and their herds produce healthy calves without barrenness or miscarriages.",
+   "meaning": "Job notes that even their livestock multiply steadily without mishap or loss. Their cattle breed successfully, giving them steady wealth in an ancient farming culture.",
    "meaning_sources": [
-    "Jamieson-Fausset-Brown",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "Jamieson-Fausset-Brown",
+    "John Gill"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "Rabbinic tradition and modern translation notes understand the Hebrew phrasing to mean the breeding bull does not fail to do its work.",
-     "sources": [
-      "https://classic.net.bible.org/bible.php?book=Job&chapter=21"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 11,
-   "end": 12,
-   "meaning": "The children of these wicked households run outside to play like healthy young lambs in a pasture. They sing and dance happily to the music of tambourines, harps, and flutes.",
+   "end": 11,
+   "meaning": "The children of the ungodly are numerous and lively, running around outside like healthy young lambs. They play freely in good health, contradicting the friends' claim that the families of sinners are quickly destroyed.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Adam Clarke",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "These wealthy families celebrate with singing and musical instruments like tambourines, harps, and flutes. Their homes are filled with music and joy rather than the instant gloom the friends described.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -168,17 +159,17 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "These ungodly people spend their days enjoying prosperity and ease. Instead of suffering through long, painful illnesses like Job, they die quickly and peacefully.",
+   "meaning": "Wicked people frequently live out their years in comfort and ease. When death finally comes, they slip away quickly without enduring months of agony like Job is suffering.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Wesley"
+    "Benson",
+    "Ellicott"
    ],
    "differ": [],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "The Hebrew term can mean either in a moment or in peace, picturing a quiet passing with no lingering agony.",
+     "view": "The Hebrew expression can mean dying in a sudden moment or passing away in peaceful quietness, and both ideas fit the ease of their passing.",
      "sources": [
       "https://classic.net.bible.org/bible.php?book=Job&chapter=21"
      ]
@@ -188,10 +179,10 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "Despite enjoying every earthly advantage, these prospering people tell God to leave them alone. Their rebellious actions show that they have no interest in learning His commands or walking in His ways.",
+   "meaning": "In spite of enjoying God's rich gifts, these people tell God to leave them alone. Their daily actions and attitudes show that they have no interest in learning His ways or obeying His laws.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
+    "Benson",
     "Adam Clarke"
    ],
    "differ": [],
@@ -200,11 +191,11 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "The wicked proudly ask what obligation they have to worship the Almighty. They measure life only by selfish worldly advantage and see no practical profit in offering prayer to God.",
+   "meaning": "The wicked proudly ask who the Almighty is and what profit they would get from serving or praying to Him. Because they already have earthly comfort, they think religion is a waste of time and has nothing to offer them.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Benson",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -212,17 +203,17 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "Job recognizes that the wealth of the wicked is not something they created or control by their own power, since all blessings come from God. Even though sinners thrive, Job completely rejects their godless way of life and wants no part in their thinking.",
+   "meaning": "Job declares that the prosperity of evil people is not under their own control, for only God gives or withholds wealth. Even though they thrive, Job firmly rejects their lifestyle and wants nothing to do with their wicked ways.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley",
-    "Geneva Notes"
+    "Benson",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "Traditional Catholic translations read the second half of this sentence as a prayer, asking God to keep the advice of the wicked far away.",
+     "view": "The Latin tradition reads the closing phrase as a prayer asking God to keep the plans and way of life of wicked people far away.",
      "sources": [
       "https://biblehub.com/job/21-16.htm"
      ]
@@ -232,31 +223,23 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "Job asks how often the lamp of the wicked is really snuffed out as his friends claim. In actual life, God rarely seems to send immediate, overwhelming disaster upon notorious sinners.",
+   "meaning": "Job questions how often the life and joy of the wicked are really snuffed out like a lamp. He challenges the friends' bold claim, showing that God does not always send instant destruction upon sinful people in this life.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch"
+    "Benson",
+    "Ellicott"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "The word for sorrows can refer to sudden birth pangs or binding cords, picturing severe distress that rarely falls on the prosperous wicked.",
-     "sources": [
-      "https://classic.net.bible.org/bible.php?book=Job&chapter=21"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 18,
    "end": 18,
-   "meaning": "Job continues his question, asking how often the ungodly are actually blown away like straw or chaff in a gale. They often stay rooted and comfortable rather than being swept away by sudden judgment.",
+   "meaning": "Job asks how often evil men are actually swept away like dry straw or chaff in a windstorm. While scripture warns that judgment will come, in everyday experience they often stand secure for many years.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch"
+    "Benson",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -264,31 +247,22 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "The friends argued that God saves up a sinner's punishment for his children. Job replies that justice should fall upon the guilty man himself so that he personally feels the consequence of his evil.",
+   "meaning": "Job mentions the argument that God saves up a sinner's punishment for his children. Job insists that justice should fall upon the guilty person himself so that he directly feels the consequences of his wrongdoing.",
    "meaning_sources": [
-    "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch",
-    "https://biblehub.com/commentaries/pulpit/job/21.htm"
+    "Matthew Henry",
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "Translators often add the words they say at the beginning to show Job is quoting a common argument from his companions.",
-     "sources": [
-      "https://classic.net.bible.org/bible.php?book=Job&chapter=21"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 20,
    "end": 20,
-   "meaning": "Job urges that the wicked man should see his own downfall with his own eyes while he is still alive. The wrongdoer himself ought to drink the bitter cup of the Almighty's wrath.",
+   "meaning": "Job argues that the sinner himself ought to see his own ruin with his own eyes. A wrongdoer should personally drink the bitter cup of the Almighty's holy judgment rather than passing the blow to the next generation.",
    "meaning_sources": [
-    "Jamieson-Fausset-Brown",
-    "Adam Clarke",
-    "Keil & Delitzsch"
+    "Matthew Henry",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -296,11 +270,11 @@
   {
    "verse": 21,
    "end": 21,
-   "meaning": "Once a wicked person dies and his life is over, he does not care about what happens to the family he leaves behind. Punishing his descendants after he is gone does not bring correction to the sinner himself.",
+   "meaning": "Job points out that a selfish sinner does not care what happens to his household after he dies. Once his own days are finished, the struggles of his descendants bring him no personal sorrow.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Benson",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -308,10 +282,10 @@
   {
    "verse": 22,
    "end": 22,
-   "meaning": "Job asks whether any human being can pretend to instruct God in how to govern creation. God is the supreme Judge who rules over all things, including the highest rulers and heavenly beings.",
+   "meaning": "Job reminds everyone that human beings cannot give lessons to God about how to run the universe. God is the sovereign Ruler who judges even the highest beings, and His choices are far beyond human wisdom.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
+    "Benson",
     "Adam Clarke"
    ],
    "differ": [],
@@ -319,12 +293,24 @@
   },
   {
    "verse": 23,
-   "end": 24,
-   "meaning": "One person dies while still strong, robust, and completely free from worry. His body is well-nourished, and his bones remain moist and healthy right up to the end of his days.",
+   "end": 23,
+   "meaning": "One person reaches the end of life strong, peaceful, and completely free from earthly troubles. This person dies quickly without enduring long pain or hardship.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch"
+    "Benson",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 24,
+   "end": 24,
+   "meaning": "His body was well fed and healthy right up to the moment of death, with strong bones full of marrow. His earthly life appeared blessed and comfortable from start to finish.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -332,11 +318,10 @@
   {
    "verse": 25,
    "end": 25,
-   "meaning": "Another person dies after a life filled with bitter grief, having never experienced good health, wealth, or happiness. God distributes earthly circumstances in varied ways that humans cannot predict or fully explain.",
+   "meaning": "Another person spends his entire life in deep pain and poverty, never tasting the good things of this world. Human circumstances differ wildly, showing that outward ease does not prove whether someone is good or bad.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley",
-    "Keil & Delitzsch"
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -344,11 +329,11 @@
   {
    "verse": 26,
    "end": 26,
-   "meaning": "In the end, death places both the prosperous and the afflicted on the very same level. Both lie down in the dust of the grave, and worms cover them without showing any favoritism.",
+   "meaning": "In the end, death brings both the prosperous and the suffering person to the very same place. They both lie down in the dust of the earth, and worms cover them alike without any distinction.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley",
-    "Adam Clarke"
+    "Adam Clarke",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -356,11 +341,11 @@
   {
    "verse": 27,
    "end": 27,
-   "meaning": "Job tells his friends that he knows their inner thoughts and silent conclusions. He recognizes their quiet scheme to use his severe misery as proof that he must be a secret sinner.",
+   "meaning": "Job tells his friends that he sees right through their words to the hidden thoughts they harbor against him. He knows they are using their descriptions of wicked men to secretly accuse him of terrible crimes.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Wesley"
+    "Benson",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -368,11 +353,10 @@
   {
    "verse": 28,
    "end": 28,
-   "meaning": "The friends had repeatedly asked what becomes of the houses of ruthless rulers and tyrants. By pointing out that the dwellings of wicked men fall into ruins, they were hinting that the destruction of Job's house proved his guilt.",
+   "meaning": "Job exposes what they have been whispering: they point to his ruined home and ask where the prince's estate has gone. By looking at his lost household, they falsely conclude that he must have been an evil oppressor.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Geneva Notes"
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -380,11 +364,11 @@
   {
    "verse": 29,
    "end": 29,
-   "meaning": "Job tells them to ask travelers who have journeyed far and seen the wider world. Anyone with broad life experience knows that the friends' simple rule about life does not fit real facts.",
+   "meaning": "Job urges them to ask everyday travelers who have walked the roads of different lands. Anyone with broad experience in the world could tell them that real life does not match their narrow theory.",
    "meaning_sources": [
-    "Jamieson-Fausset-Brown",
-    "Adam Clarke",
-    "Wesley"
+    "Matthew Henry",
+    "Benson",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -392,24 +376,24 @@
   {
    "verse": 30,
    "end": 30,
-   "meaning": "Job states that evil people are often spared from calamity during this earthly life. Their true reckoning is kept for the final day of judgment and wrath in the world to come.",
+   "meaning": "Travelers confirm that wicked people are often spared when disasters strike in this present world. Their ultimate reckoning does not always arrive immediately, for God reserves their full judgment for a future day of wrath.",
    "meaning_sources": [
     "Matthew Henry",
-    "Geneva Notes",
     "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "Some scholars translate this verse to say the evil person is spared during disaster and safely escorted away when wrath breaks out in this life.",
+     "view": "Some scholars translate this to mean that the evil person is spared and safely escorted away during days of calamity, focusing entirely on his present earthly escape.",
      "sources": [
-      "https://classic.net.bible.org/bible.php?book=Job&chapter=21"
+      "https://classic.net.bible.org/bible.php?book=Job&chapter=21",
+      "Ellicott"
      ]
     },
     {
      "label": "Catholic",
-     "view": "Traditional Catholic commentary notes that the wicked may either be kept safe during present calamities or reserved for the last day of punishment.",
+     "view": "An older Catholic commentary notes that while some read this as God guarding the powerful person from present harm, it also points forward to his final payment when God judges him.",
      "sources": [
       "https://www.studylight.org/commentary/job/21-30.html"
      ]
@@ -419,31 +403,23 @@
   {
    "verse": 31,
    "end": 31,
-   "meaning": "While a tyrant lives in wealth and power, nobody dares to confront him to his face about his wicked deeds. Because people fear his power, no human court holds him accountable or forces him to repay what he stole.",
+   "meaning": "While a ruthless man is in power, almost nobody has the courage to call out his wrongdoing to his face. Because of his earthly wealth and influence, no human authority holds him accountable or repays him for his deeds.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Benson",
+    "John Gill"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "Both questions in this verse are rhetorical, expecting the plain answer that no one dares to challenge such a powerful wrongdoer.",
-     "sources": [
-      "https://classic.net.bible.org/bible.php?book=Job&chapter=21"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 32,
    "end": 32,
-   "meaning": "When the wicked man finally dies, he is carried to his grave with great honor and ceremony. A grand monument is built over his resting place so that his memory is watched over and honored.",
+   "meaning": "When this powerful sinner dies, he receives a grand and honorable funeral. Instead of facing open shame, he is carried to an impressive tomb where guards or monuments preserve his memory.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Benson",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -451,11 +427,11 @@
   {
    "verse": 33,
    "end": 33,
-   "meaning": "The dirt of the burial valley lies softly upon him, and huge crowds march in his funeral procession. In dying, he simply meets the universal end that countless people met before him and all will face after him.",
+   "meaning": "The soil of the grave rests gently on him, and enormous crowds walk in his funeral procession. Millions have died before him and countless others will follow, meaning death treats him no worse than anyone else.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Benson",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -463,18 +439,23 @@
   {
    "verse": 34,
    "end": 34,
-   "meaning": "Job concludes that his companions offer nothing but empty and misleading comfort. Their advice is useless because it rests on the false claim that good people always prosper and evil people always suffer in this present life.",
+   "meaning": "Job concludes that all the comfort his friends offered is totally hollow and useless. Because their claims about God's justice in this life are false, their advice can never bring true peace to a hurting heart.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Wesley"
+    "Benson",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 9: removed sources ['Wesley']"
+  "v. 3: removed sources ['Benson']",
+  "v. 20: removed sources ['Benson']",
+  "v. 25: removed sources ['Adam Clarke']",
+  "v. 28: removed sources ['Benson']",
+  "v. 30: removed sources ['Benson']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

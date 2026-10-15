@@ -8,11 +8,12 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "This is the shortest psalm in the Bible, and it calls the whole world to praise God, not just Israel. Paul quotes this verse in Romans 15:11 to show that the good news about Jesus was meant for the Gentiles (people who are not Jewish) too. The nations could only truly praise God if they would one day share in his mercy with Abraham's children. The call is given twice, which makes it even more certain that people from every nation will one day join in praising him.",
+   "meaning": "The psalmist calls every nation and all peoples across the earth to praise the LORD. Worship was never meant to stay within Israel alone, for God's glory belongs to the whole world. The apostle Paul used these words to show that God always planned to welcome the Gentiles, people who are not Jewish, to worship Him.",
    "meaning_sources": [
-    "Matthew Henry",
     "Calvin",
-    "Spurgeon (Treasury of David)"
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -20,19 +21,18 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Here is the reason to praise God: his loving devotion and his faithfulness. The word for \"great\" also means \"strong.\" His mercy is powerful enough to win over sin and to cover even great sins. His faithfulness lasts forever, so he always keeps his promises, like his promise that all nations would be blessed through Abraham's family. The psalm ends as it began, with \"Hallelujah,\" which means \"Praise the LORD.\"",
+   "meaning": "God gives all people a reason to praise Him: His loving mercy is powerful and wins the victory over our sin. His truth and faithfulness never run out and will stand forever. Because the Lord unfailingly keeps every promise He makes, people from every land can rest securely in Him.",
    "meaning_sources": [
     "Adam Clarke",
-    "Matthew Henry",
-    "Keil & Delitzsch",
+    "Benson",
+    "Geneva Notes",
     "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
   }
  ],
- "problems": [
-  "v. 1: removed sources ['Keil & Delitzsch']",
-  "v. 2: removed sources ['Spurgeon (Treasury of David)']"
- ]
+ "problems": [],
+ "version": 2,
+ "model": "google/gemini-3.8-flash"
 }

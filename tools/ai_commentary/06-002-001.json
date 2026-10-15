@@ -8,56 +8,70 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Joshua sent two spies in secret from Shittim to scout the land, especially the fortress of Jericho. God had already promised them victory, but Joshua still acted with practical wisdom and careful planning. The spies lodged at the house of a woman named Rahab, where out-of-town visitors would attract less suspicion.",
+   "meaning": "Joshua sent two scouts in secret across the Jordan to gather information about Jericho and its defenses. Taking sensible precautions did not show a lack of trust in God's promises, but showed wisdom in carrying out God's work. The scouts ended up at Rahab's house, an inn where travelers could stay without drawing too much attention. God guided their steps directly to the one person in Jericho ready to welcome them.",
    "meaning_sources": [
     "Matthew Henry",
+    "Jamieson-Fausset-Brown",
     "Keil & Delitzsch",
-    "Calvin"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 2,
-   "end": 3,
-   "meaning": "Watchmen quickly alerted the king of Jericho that Israelite spies had entered the city at nightfall. The king immediately sent word to Rahab, ordering her to hand over the strangers. Even though the Canaanites were terrified, their king tried to resist God's plan instead of repenting.",
+   "end": 2,
+   "meaning": "Jericho's guards were on high alert because Israel was camped just across the river. The scouts likely stood out by their speech or clothing, and local watchmen quickly spotted them. The king received word right away that enemy scouts had arrived in the city that night.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "Geneva Notes"
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The king sent orders directly to Rahab's house, demanding that she hand over her foreign guests. He assumed she would remain loyal to her own city and do what she was told. Even when people know God is working, they often try to rely on their own political power to resist Him.",
+   "meaning_sources": [
+    "Geneva Notes",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 4,
-   "end": 5,
-   "meaning": "Rahab had already hidden the two spies before the king's messengers arrived. She misled the officers by claiming the men had left at dusk when the gates were closing, and she urged them to give chase quickly. While her brave action protected the spies, Bible teachers note that her lie was still a sin, which God mercifully pardoned because of her genuine faith.",
+   "end": 4,
+   "meaning": "Rahab had already acted before the king's messengers arrived. Guessing that a search was coming, she hid the two men and told the messengers that the visitors had already departed. She risked her own life to protect God's people because she believed in the God of Israel.",
    "meaning_sources": [
     "Matthew Henry",
-    "Calvin",
-    "Keil & Delitzsch",
-    "Adam Clarke"
+    "Wesley",
+    "Benson"
    ],
-   "differ": [
-    {
-     "tradition": "Baptist",
-     "view": "Some Baptists note that while Rahab's lie was wrong, it is explained by her pagan background, and God would have protected the spies even without her deception.",
-     "sources": [
-      "https://www.studylight.org/commentaries/eng/ghb/joshua-2.html"
-     ]
-    }
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Rahab gave the officers false directions, telling them the strangers slipped out just before the city gates closed for the night. She urged the king's men to chase after them quickly so they would leave her house right away. Her quick thinking sent the search party away in the wrong direction and bought time for the scouts.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
+   "differ": [],
    "other": []
   },
   {
    "verse": 6,
    "end": 6,
-   "meaning": "Rahab took the two men up to her flat roof and covered them with stalks of flax that were laid out to dry in the sun. Flax was harvested in early spring and used to make linen cloth. These thick plants made an ideal hiding place where the king's officers would not spot them.",
+   "meaning": "Flat rooftops in the ancient world were useful living spaces, often used for drying crops in the sun. Rahab had laid out harvested stalks of flax on her roof to dry so the fibers could be made into linen. The thick piles of stalks made a natural hiding spot where the spies could lie unseen.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "Adam Clarke"
+    "Ellicott",
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -65,46 +79,81 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "The king's soldiers followed Rahab's false lead and rushed down the road toward the shallow river crossings of the Jordan. As soon as the pursuers marched out, the city gate was locked behind them. This shut the spies inside the city walls, but God was already directing a way for them to escape.",
+   "meaning": "The king's soldiers rushed toward the shallow places where people could cross the Jordan River, expecting to catch the scouts there. As soon as the pursuers marched out, the heavy city gates were locked tight behind them. This was meant to trap any remaining enemies inside, but it also showed the rising panic in the city.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "Wesley"
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 8,
-   "end": 9,
-   "meaning": "Before the spies lay down to sleep on the roof, Rahab went up to speak with them. She boldly stated that she knew the Lord had given the land to Israel. A terrible dread had fallen upon the whole region, fulfilling God's earlier promise that Canaan would melt with fear before His people.",
+   "end": 8,
+   "meaning": "As darkness fell and the scouts prepared to rest on the roof, Rahab came up to talk with them. The danger from the king's soldiers had passed for the moment. This quiet time gave her the opportunity to speak from the heart about what she believed.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Rahab made an astonishing statement of faith, declaring that she knew the LORD had already given Canaan to Israel. She told the spies that a deep dread had fallen over Jericho, leaving everyone paralyzed with fear. Her words showed that God's earlier promise to strike fear into Israel's enemies was coming true.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 10,
-   "end": 11,
-   "meaning": "Rahab told them that Jericho had heard how the Lord dried up the Red Sea forty years earlier and destroyed the powerful Amorite kings east of the Jordan. These miracles crushed the courage of the Canaanites, but they led Rahab to believe that the Lord is the one true God over heaven and earth. Unlike her stubborn neighbors, she surrendered to God's authority.",
+   "end": 10,
+   "meaning": "The people of Jericho had heard how the LORD dried up the Red Sea when Israel left Egypt forty years earlier. They had also heard how Israel recently wiped out the powerful Amorite kings, Sihon and Og, east of the Jordan. These mighty acts proved to the Canaanites that Israel's God possessed supreme power in battle.",
    "meaning_sources": [
-    "Matthew Henry",
     "Calvin",
-    "Keil & Delitzsch"
+    "Keil & Delitzsch",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "Hearing of God's power drained the courage of everyone in the city, making their hearts melt with terror. Rahab went further than mere terror; she confessed that the LORD is the one true God over both heaven and earth. By turning away from the idols of her people, she placed her trust in the living God.",
+   "meaning_sources": [
+    "Calvin",
+    "Geneva Notes",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 12,
+   "end": 12,
+   "meaning": "Rahab asked the spies to swear a solemn oath in the name of the LORD to protect her family. She pointed to the loyalty and kindness she had just shown them as a reason to show kindness in return. She also asked for a reliable sign that would guarantee their agreement.",
+   "meaning_sources": [
+    "Wesley",
+    "Adam Clarke",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
    "end": 13,
-   "meaning": "Rahab asked the spies to swear a sacred oath by the Lord that they would show loyal kindness to her family. Because she had risked her life to protect them, she asked for a reliable pledge that her parents, brothers, sisters, and their households would be saved from death. Her faith showed itself in her deep concern for the rescue of her loved ones.",
+   "meaning": "Rahab specifically pleaded for the lives of her father, mother, brothers, and sisters, along with their families. She understood that total destruction was coming upon Jericho and begged that her family be rescued from death. Her plea showed deep love for her relatives and a desire that they share in her salvation.",
    "meaning_sources": [
     "Matthew Henry",
-    "Calvin",
-    "Jamieson-Fausset-Brown"
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -112,45 +161,84 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "The spies pledged, 'Our lives for your lives!' They promised to treat her family with kindness and truth when the Lord delivered the land to them, provided she kept their mission secret. Even before the battle began, God's mercy made a place of safety for a foreign woman who put her trust in Him.",
+   "meaning": "The scouts pledged their own lives as a guarantee that Rahab and her family would be kept safe. They agreed to treat her with faithfulness and mercy when God delivered the city into Israel's hands. The only condition was that she must not reveal their mission or break their secret agreement.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "Calvin"
+    "Jamieson-Fausset-Brown",
+    "Calvin",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 15,
-   "end": 16,
-   "meaning": "Rahab lowered the spies out of her window with a strong rope because her house was built into the outer city wall. She instructed them to hide in the nearby mountain caves for three days until the search party gave up and returned. Her local knowledge gave the men a safe route away from danger.",
+   "end": 15,
+   "meaning": "Rahab helped the men escape by lowering them through a window with a sturdy rope. Because her house was built directly into the outer city wall, the window opened straight out to the countryside. This allowed the men to slip away safely while the city gates were locked.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch"
+    "Keil & Delitzsch",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 16,
+   "end": 16,
+   "meaning": "Rahab gave the scouts smart advice to head west into the rugged limestone hills rather than east toward the Jordan. The hills were full of caves where they could easily hide from search parties for three days. Once the pursuers gave up the search and went home, the scouts could safely journey back to their camp.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 17,
-   "end": 18,
-   "meaning": "The men gave Rahab two conditions so they would not be guilty of breaking their oath. She had to tie the bright scarlet cord in the window she used to lower them, and she had to gather all her family members inside her house. Many Christian teachers have seen this red cord as a picture of the blood of Jesus, which shelters believers from judgment just like the Passover blood in Egypt.",
+   "end": 17,
+   "meaning": "The spies explained the terms that would keep their promise binding before God. They wanted to make sure neither side misunderstood what was required for protection. If the conditions were not kept, the scouts would be completely free from their oath.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "Geneva Notes",
+    "Keil & Delitzsch",
+    "Wesley",
+    "Benson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 18,
+   "end": 18,
+   "meaning": "The scouts gave Rahab a clear sign to display: she had to tie a bright scarlet cord in her window. She also had to gather all her family members inside her house before the Israelite army arrived. The bright cord would allow Israel's soldiers to spot her home easily and leave it unharmed.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Keil & Delitzsch",
+    "Wesley",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 19,
-   "end": 20,
-   "meaning": "The spies explained that anyone who walked out of Rahab's house into the street would be responsible for their own death, leaving Israel free of guilt. Anyone who stayed inside would be fully protected, and the spies would answer for their lives. If Rahab revealed their agreement to others, the men would be completely released from their oath.",
+   "end": 19,
+   "meaning": "The scouts warned that anyone who stepped outside the door into the street would lose the promise of safety and bear the blame for their own death. But if anyone was harmed while staying inside the house, the scouts agreed that the guilt would fall entirely on Israel. Safety depended on remaining sheltered under the roof marked by the pledge.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "Geneva Notes",
+    "Wesley",
+    "Keil & Delitzsch",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 20,
+   "end": 20,
+   "meaning": "The scouts repeated that Rahab must keep their arrangement completely secret. If she told others about their mission, anyone could claim the same protection or try to ruin Israel's plans. Secrecy protected both the lives of the scouts and the safety of her family.",
+   "meaning_sources": [
+    "Geneva Notes",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -158,11 +246,11 @@
   {
    "verse": 21,
    "end": 21,
-   "meaning": "Rahab agreed to all their terms, saying, 'Let it be as you say.' She sent the spies away safely and tied the scarlet cord in her window so her home would be marked for deliverance. Her prompt obedience proved that her faith in the Lord was real and active.",
+   "meaning": "Rahab fully accepted their terms and sent the scouts on their way in peace. She then tied the scarlet cord in the window so the marker of rescue was ready. Her quick action showed her complete trust in the agreement and her readiness for God's deliverance.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "Wesley"
+    "Wesley",
+    "Benson",
+    "Scofield"
    ],
    "differ": [],
    "other": []
@@ -170,31 +258,55 @@
   {
    "verse": 22,
    "end": 22,
-   "meaning": "The spies followed Rahab's instructions and stayed hidden in the rugged mountain caves for three days. The king's soldiers searched the entire road toward the Jordan River but found nothing. God kept the men safe through Rahab's wise plan and their patient obedience.",
+   "meaning": "The scouts followed Rahab's advice and hid in the caves of the nearby hills for three days. Meanwhile, the king's soldiers searched the roads all the way to the Jordan River without finding any trace of them. After the exhausted pursuers gave up and returned to Jericho, the scouts were safe to move.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "Keil & Delitzsch",
+    "Benson"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 23,
+   "end": 23,
+   "meaning": "The two men came down from the mountains, crossed over the Jordan River, and returned safely to the camp at Shittim. They reported everything that had happened to Joshua, including their escape and Rahab's confession. Their safe return proved God's protection and guidance over the whole expedition.",
+   "meaning_sources": [
+    "Keil & Delitzsch",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 24,
    "end": 24,
-   "meaning": "The two scouts came down from the mountains, crossed back over the Jordan River, and reported everything to Joshua. They announced with confidence that the Lord had already handed the land over to them, because all the inhabitants were melting in fear. Unlike the fearful spies in Moses' day, these men returned full of faith in God's promises.",
+   "meaning": "The scouts brought back a joyful report, declaring that the LORD had already given the entire land into Israel's hands. Unlike the fearful spies forty years earlier, these men saw that the inhabitants of Canaan were melting in terror. Their faith-filled words encouraged Joshua and the whole nation to move forward boldly in God's promises.",
    "meaning_sources": [
     "Matthew Henry",
     "Calvin",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 8: removed sources ['Calvin']",
-  "v. 17: removed sources ['https://biblehub.com/commentaries/barnes/joshua/2.htm']",
-  "v. 22: removed sources ['Jamieson-Fausset-Brown']"
+  "v. 2: removed sources ['Gill']",
+  "v. 3: removed sources ['Benson']",
+  "v. 7: removed sources ['Gill']",
+  "v. 8: removed sources ['Gill']",
+  "v. 10: removed sources ['Gill']",
+  "v. 11: removed sources ['Ellicott']",
+  "v. 12: removed sources ['Gill']",
+  "v. 13: removed sources ['Gill', 'Benson']",
+  "v. 14: removed sources ['Gill']",
+  "v. 16: removed sources ['Gill', 'Benson']",
+  "v. 20: removed sources ['Wesley', 'Benson']",
+  "v. 21: removed sources ['Adam Clarke']",
+  "v. 22: removed sources ['Jamieson-Fausset-Brown', 'Gill']",
+  "v. 23: removed sources ['Calvin', 'Gill']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

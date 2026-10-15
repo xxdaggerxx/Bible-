@@ -8,12 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "True wisdom is very rare, but it is of great value. It softens a person's character, changing a harsh or proud look into one that is gentle, cheerful, and humble. It also gives insight to understand hard matters and explain God's word and work to others.",
+   "meaning": "True wisdom is rare and makes a person stand out. It gives someone the insight to explain hard questions and understand God's ways. Wisdom also changes how a person looks, softening a stern, proud face into one of gentleness and peace.",
    "meaning_sources": [
-    "Matthew Henry",
     "Wesley",
-    "Adam Clarke",
-    "Keil & Delitzsch"
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -21,33 +20,34 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "God's people are instructed to obey the governing king. This loyalty is a religious duty because an oath of allegiance has been made in the presence of God. Keeping our promises honors the order God has placed over us in this world.",
+   "meaning": "Subjects are urged to obey the lawful commands of their ruler. This duty is not just about keeping civil peace; it also honors the solemn oath made before God to submit to authority. Honoring God includes keeping the promises we make in His name.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke",
-    "Keil & Delitzsch",
-    "https://www.studylight.org/commentaries/eng/dcc/ecclesiastes-8.html"
+    "Benson",
+    "Tyndale Study Notes"
    ],
-   "differ": [
-    {
-     "tradition": "Methodist",
-     "view": "The oath means a general vow to obey all of God's laws, and obeying leaders is simply one part of that wider duty.",
-     "sources": [
-      "Wesley"
-     ]
-    }
-   ],
+   "differ": [],
    "other": []
   },
   {
    "verse": 3,
-   "end": 4,
-   "meaning": "Do not rush out from the king's presence in anger, and do not join in any evil plot or rebellion against him. A ruler holds supreme power and can punish those who cross him, so no ordinary subject can question his authority. It is dangerous to challenge absolute power.",
+   "end": 3,
+   "meaning": "A wise servant does not storm out of the king's presence in anger or take part in a rebellion. Earthly rulers hold great power and can act as they please. It is foolish to persist in an offense when the ruler has the power to punish it.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Keil & Delitzsch",
-    "https://www.studylight.org/commentaries/eng/tpc/ecclesiastes-8.html"
+    "Wesley",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "A king's royal decree carries supreme authority in his realm. Ordinary people cannot easily challenge him or ask what he is doing. Recognizing lawful power keeps citizens humble and careful in their conduct.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -55,32 +55,34 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "Obeying lawful commands keeps a person safe from harm. A wise person learns the right time and the right way to act and speak. Knowing how to handle delicate moments brings success and peace.",
+   "meaning": "Those who follow rightful orders stay out of trouble with the governing authorities. A wise person has the good sense to know the proper time and the best way to act or speak. Discretion helps avoid unnecessary conflict.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke",
-    "Keil & Delitzsch"
+    "Benson"
    ],
-   "differ": [
-    {
-     "tradition": "Methodist",
-     "view": "The commandment here refers to God's law rather than the king's order, teaching that the wise know how and when to obey the Lord.",
-     "sources": [
-      "Wesley"
-     ]
-    }
-   ],
+   "differ": [],
    "other": []
   },
   {
    "verse": 6,
-   "end": 7,
-   "meaning": "God has appointed a fitting time and manner for every purpose, but people suffer greatly because they cannot see what lies ahead. Since no one knows the future, people often miss the best moment to act and walk into trouble unawares.",
+   "end": 6,
+   "meaning": "There is a fitting time and proper method for everything that needs to be done. Yet human misery is heavy because people often fail to recognize that right time. Acting foolishly or out of turn brings unnecessary trouble upon oneself.",
    "meaning_sources": [
-    "Matthew Henry",
     "Wesley",
-    "Adam Clarke",
-    "Keil & Delitzsch"
+    "Benson",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "No human being knows the future, nor can any person tell someone else what tomorrow holds. This lack of knowledge often makes people anxious and troubled. Since our days are uncertain, we must lean entirely on God's guidance.",
+   "meaning_sources": [
+    "Wesley",
+    "John Gill",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -88,13 +90,11 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "Just as a person cannot hold back the wind or the breath of life, no one can delay the day of death. Death is a war where no soldier receives a discharge or substitute. Wickedness and human schemes cannot rescue anyone when that final hour arrives.",
+   "meaning": "No one has the power to hold back the wind or keep the breath of life in the body when death arrives. Just as soldiers cannot leave the front lines during battle, no one can escape the final struggle of death. In the end, evil schemes will never rescue the wicked from their judgment.",
    "meaning_sources": [
     "Matthew Henry",
     "Wesley",
-    "Adam Clarke",
-    "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -102,12 +102,10 @@
   {
    "verse": 9,
    "end": 9,
-   "meaning": "Rulers often abuse their authority to dominate and oppress other people. This tyrannical rule harms the innocent subjects, but it also ruins the ruler himself by bringing down God's eventual judgment.",
+   "meaning": "The Teacher carefully examined everything that happens in this earthly life. He saw that power is frequently abused when one person rules over another. Oppression harms the subjects, but it also brings destruction and judgment upon the tyrant himself.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley",
-    "Adam Clarke",
-    "Keil & Delitzsch"
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -115,17 +113,17 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "Wicked rulers who frequented sacred courts were given grand burials, while their evil deeds were quickly forgotten by the city. Meanwhile, good and faithful people were driven away and ignored. This unfairness in earthly honor is another painful picture of the world's brokenness.",
+   "meaning": "Wicked rulers who visited sacred places often receive lavish, honorable funerals when they die. In contrast, upright people who lived godly lives are sometimes quickly driven out and forgotten in the city. This topsy-turvy outcome is another example of life's painful unfairness under the sun.",
    "meaning_sources": [
+    "Keil & Delitzsch",
     "Matthew Henry",
-    "Wesley",
-    "Keil & Delitzsch"
+    "Wesley"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "Ancient Catholic readings using the Latin Vulgate saw the verse as describing hypocrites who are praised in life and hidden inside a peaceful Church.",
+     "view": "Following the Latin translation, some older Catholic teachers understood this verse as describing hypocrites who disguise their evil in the church and receive empty human praise.",
      "sources": [
       "https://www.studylight.org/commentaries/eng/tpc/ecclesiastes-8.html"
      ]
@@ -135,25 +133,33 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "When God delays carrying out the punishment for wrongdoing, people mistakenly think He does not care. They take His patience as permission to sin more boldly and harden their hearts in evil. Even so, God's justice is never forgotten; it is only waiting.",
+   "meaning": "When wrongdoers are not punished right away, other people become bold and eager to commit evil. They mistake God's patience for indifference or approval. While God delays judgment to give time for repentance, justice is never forgotten.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke",
-    "Wesley",
-    "Keil & Delitzsch"
+    "John Gill"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 12,
+   "end": 12,
+   "meaning": "A sinner may commit crime after crime and still seem to live a long, comfortable life. Despite this apparent injustice, the Teacher firmly holds that true good belongs only to those who revere God. Faith trusts that God will reward those who honor Him in their hearts.",
+   "meaning_sources": [
+    "Benson",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
    "end": 13,
-   "meaning": "A sinner may commit evil many times and still seem to live a long life, but real lasting peace belongs only to those who honor God. The wicked have no true fear of God, so their days are ultimately empty and fleeting like a passing shadow. God will surely make things right in the end.",
+   "meaning": "It will never truly go well for those who reject God. Even if their earthly lives seem long, their days are fleeting and empty like a passing shadow. Because they do not fear the Lord, their end will be ruined.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke",
     "Wesley",
-    "Keil & Delitzsch"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -161,12 +167,11 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "Life on earth often seems backwards and deeply confusing. Righteous people frequently suffer the hardships that wicked people deserve, while evil people enjoy the prosperity meant for the good. This mismatch shows how empty and fallen this present world is.",
+   "meaning": "Another puzzling frustration on earth is that good people often suffer the kind of troubles that wicked people deserve. At the same time, evil people frequently receive the rewards and blessings that righteous people should enjoy. From a purely human point of view, this seems completely unfair and futile.",
    "meaning_sources": [
     "Matthew Henry",
     "Wesley",
-    "Adam Clarke",
-    "Keil & Delitzsch"
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -174,37 +179,47 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "In light of life's confusing trials, a person should gratefully enjoy the daily blessings God gives, such as simple food, drink, and honest work. This cheerfulness is not wild sinful partying, but a quiet, thankful heart trusting in God's daily care.",
+   "meaning": "Because life has so many mysteries, the Teacher advises people to enjoy simple everyday blessings. There is nothing better under the sun than eating, drinking, and finding wholesome joy in one's honest work. This peace of mind is God's gracious gift to sustain us through our brief earthly labors.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "https://biblehub.com/commentaries/ecclesiastes/8-15.htm"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
-   "differ": [
-    {
-     "tradition": "Methodist",
-     "view": "This call to eat and drink expresses the voice of an ungodly, sensual seeker rather than godly counsel.",
-     "sources": [
-      "Wesley"
-     ]
-    }
-   ],
+   "differ": [],
    "other": []
   },
   {
    "verse": 16,
-   "end": 17,
-   "meaning": "Even if someone studies day and night without sleep, no human being can fully figure out everything God does under the sun. God's plans and providence are too deep for our limited minds. Rather than wearing ourselves out trying to solve every mystery, we are called to trust Him and submit to His will.",
+   "end": 16,
+   "meaning": "The Teacher set his heart to study wisdom and observe all the hard labor people carry out on earth. He saw people working so relentlessly that they lost sleep night and day. Yet all that restless striving cannot unlock life's deepest secrets.",
    "meaning_sources": [
-    "Matthew Henry",
     "Wesley",
-    "Adam Clarke",
-    "Keil & Delitzsch"
+    "Benson",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 17,
+   "end": 17,
+   "meaning": "No matter how hard people work, no human being can fully understand everything God does in the world. Even the wisest scholars cannot discover the full meaning of His providence. Instead of wearing ourselves out trying to solve every riddle, we are called to trust God and rest in His care.",
+   "meaning_sources": [
+    "Wesley",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
- "problems": [],
+ "problems": [
+  "v. 3: removed sources ['Clarke']",
+  "v. 5: removed sources ['Clarke']",
+  "v. 9: removed sources ['Clarke']",
+  "v. 11: removed sources ['Clarke']",
+  "v. 12: removed sources ['Clarke']",
+  "v. 17: removed sources ['Clarke']"
+ ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

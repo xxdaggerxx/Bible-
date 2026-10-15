@@ -8,11 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "After only three days of marching from Mount Sinai, the Israelites began to fret and complain about their hardships. Even though God was guiding them, they focused on their discomfort instead of His goodness. The Lord heard their complaints, became angry at their lack of trust, and sent a fire that destroyed the edges of the camp.",
+   "meaning": "After traveling just a few days from Mount Sinai, the Israelites began grumbling about their troubles. God heard their complaints, became angry, and sent a fire that burned through the outer edges of their camp. Grumbling showed a lack of trust in God right after He had promised to lead and protect them.",
    "meaning_sources": [
     "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Wesley"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -20,10 +20,11 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Terrified by the blaze, the people ran to Moses instead of praying to God directly. Moses acted as their go-between and prayed on their behalf. God heard his prayer and showed mercy by making the fire die down.",
+   "meaning": "Terrified by the blazing fire, the people ran to Moses for help instead of praying directly to God. Moses stepped in and prayed for the people, acting as a go-between, and God stopped the fire. God answered Moses' prayer to show mercy even when the people did not deserve it.",
    "meaning_sources": [
     "Matthew Henry",
-    "https://enduringword.com/bible-commentary/numbers-11/"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -31,10 +32,11 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "The people named that place Taberah, which means 'burning.' This name was meant to remind them of the Lord's holy anger against grumbling. Remembering how God answered their sin was supposed to keep them from repeating it.",
+   "meaning": "Moses named the place Taberah, which means 'burning.' The name was given to remind future generations of their sin and God's holy anger against complaining.",
    "meaning_sources": [
+    "Benson",
     "Matthew Henry",
-    "https://www.preceptaustin.org/numbers-11-commentary"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -42,35 +44,77 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "A mixed group of non-Israelite foreigners who had left Egypt with Israel began to crave meat. Their greedy discontent quickly spread to the Israelites around them. Soon the whole camp was weeping and demanding food other than what God provided.",
+   "meaning": "A mixed group of non-Israelites who had left Egypt with them began craving meat, and soon the Israelites were weeping and complaining too. Desiring other food was not wrong by itself, but letting an intense craving control them led them into open rebellion. Uncontrolled desires often spread quickly to those around us.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Calvin"
+    "John Gill",
+    "Scofield"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 5,
-   "end": 6,
-   "meaning": "The people looked back on Egypt with a selective memory, recalling plenty of fish, cucumbers, melons, and garlic. They conveniently forgot the whip of the slave drivers and the bitter work of making bricks. Now they complained that their strength was gone because they had nothing to look at each day except manna.",
+   "end": 5,
+   "meaning": "The people began remembering the delicious foods of Egypt, such as fish, cucumbers, melons, leeks, onions, and garlic. They conveniently forgot the bitter whip of slavery and only remembered the tasty meals. When people lose contentment, they often paint their past troubles in a falsely sweet light.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Calvin"
+    "John Gill",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The people complained that their strength was drying up because they had nothing to eat except manna every single day. They treated God's miraculous, free bread from heaven as boring and worthless. Ungrateful hearts can make even God's kindest gifts seem dull.",
+   "meaning_sources": [
+    "Calvin",
+    "John Gill",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 7,
-   "end": 9,
-   "meaning": "God provided manna every night when the dew fell, making it clean, fresh, and free. It looked like small, round seeds and was pleasant to the eye, like pearls. The people could grind it into flour, boil it in pots, or bake it into cakes that tasted like fine pastry cooked with oil.",
+   "end": 7,
+   "meaning": "The writer describes manna to show how foolish the people were to complain about it. It looked like small, round coriander seeds and had a clean, pearly appearance like gum resin. God gave them food that was pure, pleasant to look at, and perfectly suited for their needs.",
+   "meaning_sources": [
+    "John Gill",
+    "Benson",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some modern scholars note that manna resembles a sweet excretion produced by desert insects on tamarisk bushes, though Scripture describes its arrival and quantity as entirely supernatural.",
+     "sources": [
+      "Tyndale Study Notes"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The people could easily gather the manna, grind it in small mills, crush it, boil it, or bake it into flat cakes. It tasted rich and pleasant, like sweet pastries made with fine olive oil. God had provided food that could be prepared in many different tasty ways without any hard labor.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Calvin"
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Every night, dew settled across the desert floor, and the manna fell right along with it. This kept the bread clean and fresh from the dusty ground so the people could collect it each morning. God faithfully provided breakfast for millions of people before they even woke up.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -78,19 +122,30 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "Open wailing broke out as families wept outside the doorways of their tents. This dramatic public complaining provoked the Lord to great anger. Moses saw this rebellion against God and became deeply upset and discouraged as well.",
+   "meaning": "Moses heard weeping coming from family after family right outside the doorways of their tents. This public display made God very angry, and Moses was deeply frustrated and distressed by it as well. The crying was not quiet sadness, but an open, noisy protest against God's care.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch",
-    "Calvin"
+    "John Gill",
+    "Keil & Delitzsch"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 11,
+   "end": 11,
+   "meaning": "Moses poured out his frustration to the Lord, asking why God had brought such misery upon him. He felt as though leadership was a harsh penalty rather than a blessing. Feeling crushed by work can tempt even great leaders to question God's kindness.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
    "end": 12,
-   "meaning": "Moses poured out his distress directly to God, asking why he was saddled with such an unmanageable crowd. He asked if he was the mother or father of the nation, that he should have to carry them like nursing babies all the way to Canaan. Under the crushing pressure of leadership, he felt as though God had treated him unfairly.",
+   "meaning": "Moses asked God if he was the mother or father who gave birth to this entire nation. He felt as if God expected him to carry millions of whiny people in his arms like a nurse carries a baby all the way to Canaan. Moses knew he did not have the power or patience to parent an entire nation on his own.",
    "meaning_sources": [
     "Matthew Henry",
     "Keil & Delitzsch"
@@ -101,58 +156,115 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "Moses asked the Lord where he could possibly find enough meat in the wilderness for millions of weeping people. The crowd looked to Moses as if he were their supplier, and he felt the sting of their demands. In his frustration, he momentarily forgot that feeding Israel was God's work, not his own.",
+   "meaning": "Moses pointed out how impossible it was for him to give meat to millions of people wandering in a desert. The people kept weeping and shouting their demands directly at him. Leaders often feel helpless when people expect them to provide things that only God can supply.",
    "meaning_sources": [
-    "Matthew Henry",
     "Calvin",
-    "https://enduringword.com/bible-commentary/numbers-11/"
+    "John Gill",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 14,
-   "end": 15,
-   "meaning": "Moses admitted that the burden of managing Israel alone was far too heavy for him to bear. He was so overwhelmed by exhaustion that he begged God to end his life on the spot rather than make him watch his own ruin. Even God's greatest leaders can reach a point of deep burnout and despair.",
+   "end": 14,
+   "meaning": "Moses admitted that the load of governing and caring for the whole crowd was simply too heavy for one man. He felt completely alone under the crushing weight of their constant demands. God does not intend for any single human leader to carry the burdens of ministry alone.",
    "meaning_sources": [
     "Matthew Henry",
+    "John Gill",
     "Keil & Delitzsch"
    ],
    "differ": [],
    "other": []
   },
   {
+   "verse": 15,
+   "end": 15,
+   "meaning": "In his deep despair, Moses asked God to take his life right then and there rather than leave him to face total ruin. He believed dying quickly would be a mercy compared to watching himself fail under such an impossible task. God understands our honest cries when exhaustion pushes us to our limits.",
+   "meaning_sources": [
+    "Benson",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
    "verse": 16,
-   "end": 17,
-   "meaning": "God answered Moses with gentleness rather than anger, telling him to gather seventy respected elders to the sacred tent. The Lord promised to come down and place on them a portion of the same Holy Spirit that rested on Moses. This spiritual gift would equip them to share the heavy burden of governing the people.",
+   "end": 16,
+   "meaning": "God kindly answered Moses by telling him to choose seventy respected older men who were already recognized as wise leaders. Moses was told to bring them to the Tent of Meeting so they could stand alongside him. God did not scold Moses for feeling tired, but gave him real helpers.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Calvin"
+    "John Gill",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 17,
+   "end": 17,
+   "meaning": "The Lord promised to come down and place on the seventy elders the same Holy Spirit that rested on Moses. This spiritual power would enable them to share the heavy work of leading the people so Moses would not be crushed. True spiritual leadership requires God's Spirit, not just human skill.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Matthew Henry",
+    "Benson"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 18,
-   "end": 20,
-   "meaning": "Moses was told to command the people to wash and prepare themselves to receive meat from the Lord. This was not a reward, but a terrifying judgment for crying that they were better off in Egypt. God would give them so much meat for an entire month that they would choke on it and grow utterly sick of it.",
+   "end": 18,
+   "meaning": "God commanded the people to wash themselves and prepare for tomorrow, because He was going to give them meat. They had insulted the Lord by weeping and saying they were better off as slaves in Egypt. God was answering their request, but it was going to come as a stern lesson rather than a warm gift.",
    "meaning_sources": [
     "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Calvin"
+    "Benson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 19,
+   "end": 19,
+   "meaning": "God warned them that they would not eat meat for just a single day or a couple of weeks. He was going to send such a huge amount that it would last far longer than a normal banquet. Sometimes God gives people what they stubbornly demand so they can see their own foolishness.",
+   "meaning_sources": [
+    "John Gill",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 20,
+   "end": 20,
+   "meaning": "The meat would keep coming for an entire month until they were completely sick of it and it turned their stomachs. This punishment came because their complaints about food were really a rejection of the Lord who lived among them. Despising God's daily care is a serious sin that ruins our appetite for His blessings.",
+   "meaning_sources": [
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 21,
-   "end": 22,
-   "meaning": "Moses reacted with disbelief when he heard God promise a full month of meat for 600,000 men and their families. He began doing human math, asking if slaughtering all their herds or catching every fish in the ocean could satisfy them. Even a great man of faith can stumble into doubt when looking at human limits instead of God.",
+   "end": 21,
+   "meaning": "Moses was stunned by God's promise and began counting heads, noting there were six hundred thousand walking men beside women and children. He could not imagine how God could provide enough meat to feed millions for a whole month in the dry desert. Even faithful believers can forget God's greatness when they look only at human numbers.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Calvin"
+    "Calvin",
+    "John Gill",
+    "Benson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 22,
+   "end": 22,
+   "meaning": "Moses asked if slaughtering all their livestock or catching every fish in the ocean would be enough to feed the crowd. His mind was stuck on ordinary human solutions to a massive problem. When we focus only on natural resources, God's promises can look impossible.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -160,10 +272,11 @@
   {
    "verse": 23,
    "end": 23,
-   "meaning": "The Lord answered Moses by asking if His divine arm had grown too short or weak to act. He told Moses to wait and watch, because His spoken word would never fail to come true. God's ability to provide is never limited by natural obstacles.",
+   "meaning": "The Lord gently challenged Moses by asking whether His arm had grown too short or weak to perform wonders. He assured Moses that he would soon see His word come completely true. God's power never runs out, no matter how huge the need appears.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Adam Clarke",
+    "Benson",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -171,10 +284,10 @@
   {
    "verse": 24,
    "end": 24,
-   "meaning": "Moses accepted God's gentle rebuke and went out to tell the camp what the Lord had said. He gathered the seventy chosen leaders and placed them in front of the Tent of Meeting. Bringing them to God's presence showed the nation that their new role came from the Lord Himself.",
+   "meaning": "Moses trusted God's answer, told the people what the Lord had said, and gathered the seventy chosen elders around the Tent of Meeting. His quick obedience showed that his doubts had been cleared away. When God speaks, our duty is to listen and follow His directions.",
    "meaning_sources": [
-    "Matthew Henry",
     "Calvin",
+    "John Gill",
     "Keil & Delitzsch"
    ],
    "differ": [],
@@ -183,10 +296,11 @@
   {
    "verse": 25,
    "end": 25,
-   "meaning": "The Lord came down in the cloud, spoke with Moses, and placed the Holy Spirit on the seventy elders. As the Spirit rested on them, they spoke with inspired, elevated speech to show the people that God had chosen them. This gift was a special one-time sign to establish their leadership, rather than an ongoing office as prophets.",
+   "meaning": "The Lord came down in the cloud, spoke with Moses, and placed His Spirit upon the seventy elders. As soon as the Spirit rested on them, they spoke God's words with special power, though this miraculous speaking happened only on that day. This outward sign proved to the whole nation that God had personally chosen and empowered these men.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "Ellicott",
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -194,23 +308,34 @@
   {
    "verse": 26,
    "end": 26,
-   "meaning": "Two of the elders, Eldad and Medad, had stayed inside the camp instead of going out to the tent. Even though they were absent from the ceremony, the Holy Spirit came upon them and they began speaking for God right where they were. This demonstrated that God's Spirit is not restricted to any single building or ritual.",
+   "meaning": "Two of the chosen elders, named Eldad and Medad, had stayed inside the camp instead of walking out to the Tent. Even so, God's Spirit came upon them where they were, and they began speaking God's truth among the ordinary tents. God showed that His Spirit is not trapped in one spot, but reaches wherever He chooses.",
    "meaning_sources": [
-    "Matthew Henry",
     "Calvin",
-    "Jamieson-Fausset-Brown"
+    "Benson",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 27,
-   "end": 28,
-   "meaning": "A young man ran to tell Moses that Eldad and Medad were prophesying in the camp. Joshua, who had served as Moses' trusted assistant since his youth, urged Moses to stop them immediately. Joshua was jealous for Moses' reputation and worried that other men speaking for God might weaken his master's authority.",
+   "end": 27,
+   "meaning": "A young man saw Eldad and Medad speaking God's messages in the camp and ran to alert Moses. He thought something was out of order because these two men were prophesying away from the main gathering. People often become nervous when God works outside ordinary routines.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "Jamieson-Fausset-Brown"
+    "Adam Clarke",
+    "John Gill",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 28,
+   "end": 28,
+   "meaning": "Joshua, who had been Moses' loyal helper since his youth, spoke up and urged Moses to silence the two men. Joshua loved Moses and wanted to protect his honor as Israel's sole leader. Well-meaning loyalty can sometimes make us overly defensive and blind to God's wider work.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Calvin"
    ],
    "differ": [],
    "other": []
@@ -218,21 +343,38 @@
   {
    "verse": 29,
    "end": 29,
-   "meaning": "Moses gently rebuked Joshua for being overly protective of his honor. Instead of hoarding authority, Moses wished that all of the Lord's people were prophets and had the Spirit resting on them. True godly leaders rejoice whenever God blesses and uses other people.",
+   "meaning": "Moses asked Joshua if he was jealous on his behalf, showing that he did not care about guarding his own personal prestige. Moses warmly stated that he wished every single person among God's people was a prophet filled with the Lord's Spirit. A true leader rejoices whenever God blesses and uses other people.",
    "meaning_sources": [
     "Matthew Henry",
-    "Calvin",
-    "https://enduringword.com/bible-commentary/numbers-11/"
+    "Benson",
+    "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Pentecostal",
+     "view": "Pentecostals see Moses' desire that all God's people would have the Spirit as an early promise of Pentecost, when the Holy Spirit was given to every believer along with spiritual gifts.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/numbers-11/"
+     ]
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Reformed Christians emphasize Moses' deep personal humility here, seeing the passage primarily as God sovereignly sharing the weight of church leadership rather than a promise of continuous miraculous signs.",
+     "sources": [
+      "Calvin",
+      "https://www.desiringgod.org/articles/lord-let-me-die"
+     ]
+    }
+   ],
    "other": []
   },
   {
    "verse": 30,
    "end": 30,
-   "meaning": "With the new group of elders confirmed by the Spirit, Moses returned with them to the camp. They were now ready to take up their work of helping Moses care for Israel. Having trustworthy partners makes the work of serving God much lighter.",
+   "meaning": "After this special gathering at the Tent of Meeting, Moses and the seventy newly empowered elders went back into the camp. They were now ready to guide the people together with shared spiritual strength. God equips His servants before sending them into the hard work of daily ministry.",
    "meaning_sources": [
     "Matthew Henry",
+    "John Gill",
     "Keil & Delitzsch"
    ],
    "differ": [],
@@ -240,12 +382,24 @@
   },
   {
    "verse": 31,
+   "end": 31,
+   "meaning": "God sent a strong wind from the sea that drove vast flocks of quail across the desert directly to the camp. The birds flew low, about three feet above the ground, spreading out for miles in every direction. God showed His supreme control over nature by delivering food straight to their doorsteps.",
+   "meaning_sources": [
+    "Benson",
+    "Scofield",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 32,
    "end": 32,
-   "meaning": "God sent a powerful wind that swept in a massive flock of quail from the sea, dropping them around the camp in heaps about three feet deep for miles around. Driven by greed and fear that the meat would run out, the people stayed awake for nearly two days hoarding birds. They spread the meat out in the sun all around the camp to dry it for the future.",
+   "meaning": "The people stayed awake all that day, through the night, and all the next day wildly gathering the birds. Even the person who gathered the least ended up with huge piles of meat, which they spread out around the tents to dry. Their wild greed showed how deeply they cared about satisfying their physical cravings.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch"
+    "Benson",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -253,11 +407,11 @@
   {
    "verse": 33,
    "end": 33,
-   "meaning": "While the meat was still in their mouths, before they even finished eating, God's wrath struck the camp with a severe plague. God gave the people what they demanded, but their uncontrolled greed turned their blessing into judgment. Demanding our own desires over God's will often leads to spiritual and physical ruin.",
+   "meaning": "While the people were still chewing the first mouthfuls of meat, the Lord struck them with a deadly sickness. Their punishment fell at the very moment they thought they had satisfied their stubborn desires. Getting what we demand against God's will often brings grief instead of joy.",
    "meaning_sources": [
-    "Matthew Henry",
     "Calvin",
-    "Keil & Delitzsch"
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -265,11 +419,11 @@
   {
    "verse": 34,
    "end": 34,
-   "meaning": "The people named that burial ground Kibroth-hattaavah, which means 'graves of craving.' It received this name because they buried the men and women who had lusted after food other than God's provision. The site stood as a tragic reminder of the deadly end of selfish desire.",
+   "meaning": "The people named the campsite Kibroth-hattaavah, which means 'graves of craving.' It received that name because they buried all the people who had allowed their selfish appetites to control them. Unchecked cravings can lead people straight into spiritual and physical ruin.",
    "meaning_sources": [
     "Matthew Henry",
-    "Calvin",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -277,23 +431,26 @@
   {
    "verse": 35,
    "end": 35,
-   "meaning": "After burying their dead, the Israelites left Kibroth-hattaavah and traveled to Hazeroth. They set up camp there and remained for some time before marching forward. Even after failure and judgment, God continued to lead His people toward the land He had promised them.",
+   "meaning": "After spending about a month at the place of graves, the surviving Israelites packed up and journeyed to Hazeroth. They set up camp there for a while to rest before continuing their long journey toward the promised land. Even after severe correction, God's covenant people kept moving forward under His guidance.",
    "meaning_sources": [
+    "John Gill",
     "Keil & Delitzsch",
-    "https://www.studylight.org/commentaries/eng/dcc/numbers-11.html"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 2: removed sources ['Calvin']",
-  "v. 3: removed sources ['Calvin']",
+  "v. 8: removed sources ['Benson']",
   "v. 11: removed sources ['Calvin']",
-  "v. 14: removed sources ['Calvin']",
-  "v. 23: removed sources ['Calvin']",
-  "v. 25: removed sources ['Calvin']",
-  "v. 31: removed sources ['Calvin']"
+  "v. 12: removed sources ['Benson']",
+  "v. 15: removed sources ['Calvin']",
+  "v. 19: removed sources ['Benson']",
+  "v. 20: removed sources ['Calvin']",
+  "v. 22: removed sources ['Calvin']",
+  "v. 28: removed sources ['Benson']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

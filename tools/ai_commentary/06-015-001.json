@@ -8,11 +8,12 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Judah was the first tribe to receive its land by lot, matching the leadership role God promised to Judah through Jacob. Its territory lay in the far south of Canaan, reaching to the border of Edom and the dry desert of Zin. This large boundary showed how important Judah would be in Israel's future history.",
+   "meaning": "Judah received the first allotment of land in Canaan by sacred lot. This vast southern region reached from the border of Edom to the dry Wilderness of Zin. Judah was given the lead position among the tribes because God had promised royal leadership to this tribe.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Matthew Henry",
-    "Adam Clarke",
-    "Keil & Delitzsch"
+    "Wesley",
+    "https://www.preceptaustin.org/joshua-15-commentary"
    ],
    "differ": [],
    "other": []
@@ -20,11 +21,12 @@
   {
    "verse": 2,
    "end": 4,
-   "meaning": "Judah's southern boundary began at the south end of the Salt Sea, also known as the Dead Sea. It wound south past the Ascent of Akrabbim and Kadesh-barnea, and went out to the Mediterranean Sea by the Brook of Egypt. This line also served as the southern border for the entire Promised Land.",
+   "meaning": "Judah's southern border began at the south end of the Salt Sea (the Dead Sea) and ran westward across the desert to the Mediterranean Sea. The line passed through the scorpion-infested Ascent of Akrabbim, went south of Kadesh-barnea, and followed the Brook of Egypt. This line marked not only Judah's territory, but also the southern boundary of the entire Promised Land.",
    "meaning_sources": [
-    "Adam Clarke",
+    "Tyndale Study Notes",
     "Keil & Delitzsch",
-    "https://www.preceptaustin.org/joshua-15-commentary"
+    "Adam Clarke",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -32,11 +34,12 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "On the east, Judah's land was bordered by the full length of the Salt Sea up to where the Jordan River empties into it. The northern border began right at that northern bay of the sea.",
+   "meaning": "On the east, Judah's boundary was the entire length of the Salt Sea, ending where the Jordan River flows into it. The northern border started right at that same spot, at the northern bay where the river meets the sea. This formed a clear and natural water boundary along the eastern side of Judah's land.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Keil & Delitzsch",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -44,12 +47,12 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "The line went up into the hills past Beth-hoglah and north of Beth-arabah toward the Stone of Bohan. Bohan was a warrior from the tribe of Reuben, and his stone served as a well-known boundary mark.",
+   "meaning": "The northern line climbed from the Jordan valley past Beth-hoglah and ran north of Beth-arabah toward the hill country. It also ran by the Stone of Bohan, a landmark named after a leader from the tribe of Reuben. This boundary separated the territory of Judah from the land later given to Benjamin.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Wesley",
-    "https://biblehub.com/commentaries/joshua/15-6.htm"
+    "Adam Clarke",
+    "John Gill",
+    "Geneva Notes"
    ],
    "differ": [],
    "other": []
@@ -57,9 +60,10 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "The boundary climbed higher from the Valley of Achor, passing north toward Gilgal and past springs like En-shemesh and En-rogel. The Valley of Achor reminded Israel of Achan's sin, showing that obedience brings blessing while disobedience brings trouble.",
+   "meaning": "The boundary continued upward from the Valley of Achor toward Debir and turned north toward Gilgal, near the steep pass of Adummim. It then followed the waters of En-shemesh and ended at the spring of En-rogel, just outside Jerusalem. The Valley of Achor served as a quiet reminder of the trouble caused earlier by Achan's sin.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "John Gill",
     "Adam Clarke",
     "https://biblehub.com/joshua/15-7.htm"
    ],
@@ -69,22 +73,10 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "The border moved along the Valley of Hinnom right next to the hill where the Jebusite city of Jerusalem stood. Because the boundary ran along this ridge, Jerusalem sat right between the tribes of Judah and Benjamin. Later in Israel's history, this valley became notorious for idolatry, giving its name to the New Testament word for hell.",
+   "meaning": "The border climbed through the Valley of Hinnom, just south of the Jebusite city of Jerusalem, and went up to the ridge overlooking the Valley of Rephaim. This placed Jerusalem right on the border between the tribes of Judah and Benjamin. Later in Israel's history, the Valley of Hinnom became infamous for idol worship, while Jerusalem became the royal capital under King David.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Wesley",
-    "https://biblehub.com/commentaries/joshua/15-8.htm"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 9,
-   "end": 11,
-   "meaning": "From the ridge west of Jerusalem, the border curved through the hills to Baalah, which was also named Kiriath-jearim. It then continued west past Beth-shemesh and Ekron, finally reaching the coast of the Mediterranean Sea. These careful lines marked off Judah's northern frontier before the land was given out.",
-   "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
+    "John Gill",
     "Adam Clarke",
     "Wesley"
    ],
@@ -92,11 +84,57 @@
    "other": []
   },
   {
+   "verse": 9,
+   "end": 9,
+   "meaning": "From the ridge west of Jerusalem, the boundary line curved toward the spring of Nephtoah and the hills of Mount Ephron. It then turned toward Baalah, an important town also known as Kiriath-jearim. This town later became famous as the resting place of God's sacred chest, the ark of the covenant, for twenty years.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "John Gill",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars note that an ancient Egyptian papyrus mentions the 'wells of Merneptah' in Canaan, suggesting the name Nephtoah may refer to Pharaoh Merneptah.",
+     "sources": [
+      "Tyndale Study Notes"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "From Kiriath-jearim, the border turned westward toward Mount Seir, passing along the ridge of Chesalon. It then dropped down to Beth-shemesh and crossed over to Timnah. Beth-shemesh was located on the edge of the foothills and later became famous when the Philistines returned the ark of the Lord there.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Ellicott",
+    "Wesley",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "The boundary line continued along the northern slope of Ekron, curved past Shikkeron and Mount Baalah, and reached Jabneel. From there, it finally ended at the Mediterranean Sea. Ekron was a major Philistine city that fell inside Judah's assigned borders, though Philistines still lived in the region.",
+   "meaning_sources": [
+    "John Gill",
+    "Ellicott",
+    "Geneva Notes",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
    "verse": 12,
    "end": 12,
-   "meaning": "The western border of Judah was the Mediterranean coastline, called the Great Sea. God set these clear limits for the clans of Judah so each family knew where their home was. Having assigned boundaries taught the people to live peacefully alongside their neighbors.",
+   "meaning": "The western boundary of Judah was the Mediterranean coastline itself, known as the Great Sea. These outer borders completely encircled the land assigned to the clans of Judah. God gave the land to individual families and clans so that every household had a secure inheritance.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
     "Adam Clarke",
     "https://enduringword.com/bible-commentary/joshua-15-16-17/"
    ],
@@ -106,12 +144,12 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "Joshua gave Caleb the city of Hebron, earlier called Kiriath-arba after a famous giant ancestor, just as the Lord had promised. Even though Joshua loved his old friend Caleb, he made sure this special gift followed God's direct command. God faithfully kept the promise He made to Caleb forty-five years earlier in the wilderness.",
+   "meaning": "Just as the LORD had commanded Moses, Joshua gave Caleb his special share of land inside Judah's territory. This portion included Hebron, an ancient city originally founded by Arba, the father of the giant Anakim. Joshua was faithful to honor God's promise to his longtime friend and fellow spy.",
    "meaning_sources": [
     "Matthew Henry",
     "Calvin",
-    "Keil & Delitzsch",
-    "https://www.blueletterbible.org/Comm/mhc/Jos/Jos_015.cfm"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -119,12 +157,12 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "Caleb drove out the three Anakim chiefs—Sheshai, Ahiman, and Talmai—from the hill country of Hebron. These giants had terrified the other spies decades before, but Caleb trusted in God's power rather than his own strength. God gave him victory because he had whole-heartedly followed the Lord.",
+   "meaning": "Caleb drove out the three Anakim clan leaders—Sheshai, Ahiman, and Talmai—from the hill country of Hebron. These were the very giants that had terrified the other ten spies forty-five years earlier. Caleb's great victory was a direct reward for his wholehearted trust in God's power.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch",
-    "https://biblehub.com/commentaries/joshua/15-14.htm"
+    "John Gill",
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -132,11 +170,12 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "From Hebron, Caleb led an attack against Debir, which used to be called Kiriath-sepher, meaning the city of books or records. Debir was a strong and difficult fortress in the hills south of Hebron. Caleb wanted to clear out the remaining enemies so his tribe could live securely.",
+   "meaning": "After taking Hebron, Caleb marched against the nearby fortified town of Debir, which was once called Kiriath-sepher. That older name means 'city of books,' suggesting it may have been a center where ancient records or writings were kept. Caleb was eager to secure the full territory God had promised him.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Adam Clarke",
+    "John Gill",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -144,11 +183,11 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "Caleb challenged the warriors by promising his daughter Acsah in marriage to whoever could conquer the fortified town of Debir. This offer was meant to encourage bold leadership and faith in the younger generation of Israel. In ancient times, fathers often chose husbands for their daughters, expecting them to agree to an honorable hero.",
+   "meaning": "Caleb challenged the warriors in his army by promising his daughter Acsah in marriage to whoever could conquer Kiriath-sepher. Debir was a strong fortress, so Caleb offered a high reward to inspire courage in a younger generation of fighters. He showed boldness himself and wanted to raise up bold leaders around him.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
     "Adam Clarke",
-    "Wesley",
+    "Benson",
     "https://enduringword.com/bible-commentary/joshua-15-16-17/"
    ],
    "differ": [],
@@ -157,9 +196,9 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "Caleb's nephew Othniel accepted the challenge, captured Debir, and received Acsah as his wife. This brave victory showed the courage that would later make Othniel Israel's first judge. Starting well in youth prepared him for a lifetime of serving God's people.",
+   "meaning": "Caleb's nephew Othniel answered the call, captured the fortress, and received Acsah as his wife. This brave deed kept the family land together and proved Othniel's courage. God was preparing Othniel here for a greater task, as he later became Israel's very first judge.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
     "Jamieson-Fausset-Brown",
     "https://enduringword.com/bible-commentary/joshua-15-16-17/"
    ],
@@ -169,12 +208,12 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "When Acsah was moving to her new home, she urged Othniel to ask her father for an additional field. As she came to Caleb, she got down from her donkey in humble respect, and Caleb asked what she wanted. Her action showed both high honor for her father and bold care for her future household.",
+   "meaning": "As Acsah was going to her new home, she urged Othniel to ask her father for a field. When she got down from her donkey to make the request herself, Caleb asked what she needed. She approached her father with humility and deep respect, and Caleb was ready to listen.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
     "Wesley",
-    "Calvin"
+    "Benson",
+    "Adam Clarke",
+    "https://enduringword.com/bible-commentary/joshua-15-16-17/"
    ],
    "differ": [],
    "other": []
@@ -182,11 +221,12 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "Acsah asked her father for a gift of water springs because the land he gave her in the south was dry and parched. Caleb generously granted her request, giving her both upper and lower springs to water the surrounding fields. God's people are encouraged to bring their practical daily needs honestly and boldly before their loving Father.",
+   "meaning": "Acsah asked her father for a blessing, meaning an extra gift of land that had water. The land she had received in the Negev was dry and baked by the heat, so it needed a good water source to support life and crops. Caleb generously granted her request by giving her both the upper and lower springs.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Matthew Henry (Concise)"
+    "Tyndale Study Notes",
+    "Matthew Henry (Concise)",
+    "Wesley",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -194,10 +234,11 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "This statement closes the description of Judah's borders and Caleb's inheritance, confirming the entire region as the lot given to Judah's clans. God provided an abundant, fertile territory to fulfill His ancient promise to the tribe.",
+   "meaning": "A summary statement marks the close of the border description and introduces the list of Judah's towns. God had given the tribe of Judah a huge and fruitful inheritance for all their clans. The verses that follow list the actual cities that belonged to them within these borders.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin"
+    "Calvin",
+    "John Gill",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -205,20 +246,20 @@
   {
    "verse": 21,
    "end": 21,
-   "meaning": "The list of Judah's inheritance begins with the southernmost cities in the Negev desert along the border of Edom. These frontier towns had to be guarded faithfully by Judah to keep Israel safe from old enemies to the south.",
+   "meaning": "The list begins with the southern towns of Judah in the dry region known as the Negev, bordering Edom. This was the first of four main regions into which Judah's cities were divided. Although some of these towns were remote desert outposts, God recorded every one as part of His people's promised home.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
+    "John Gill",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 17: removed sources ['Calvin']",
-  "v. 19: removed sources ['https://studylight.org/commentary/joshua/15-16.html']",
-  "v. 20: removed sources ['Keil & Delitzsch']",
-  "v. 21: removed sources ['Adam Clarke']"
+  "v. 17: removed sources ['Wesley']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

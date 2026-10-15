@@ -8,11 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "The Lord tells Samuel to stop grieving over Saul, because God has firmly rejected him from being king over Israel. Samuel is told to fill an animal horn with oil and travel to Bethlehem, where God has chosen one of Jesse's sons to be the next ruler. God's good purposes do not end when human leaders fail.",
+   "meaning": "God tells Samuel that the time for grieving over Saul's failure is over. Saul has been firmly rejected, and Samuel must fill an animal horn with oil and travel to Bethlehem to Jesse's family. There, God has chosen a new king who will truly lead for Him.",
    "meaning_sources": [
     "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Wesley",
+    "Tyndale Study Notes",
     "https://enduringword.com/bible-commentary/1-samuel-16/"
    ],
    "differ": [],
@@ -21,12 +21,12 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Samuel worries that Saul will hear about his mission and execute him for treason. God tells him to take a heifer along and announce that he is coming to offer a sacrifice to the Lord. Offering this sacrifice was completely true, and concealing the secret anointing kept Samuel safe without telling a lie.",
+   "meaning": "Samuel worries that Saul's unstable anger will lead him to execute the prophet if he learns of a new king being chosen. The Lord gives Samuel a wise plan: take a young cow and offer a public peace offering to the Lord in Bethlehem. Samuel tells the truth about his sacrifice, while keeping the dangerous secret of the anointing quiet for his safety.",
    "meaning_sources": [
     "Adam Clarke",
-    "Keil & Delitzsch",
-    "https://enduringword.com/bible-commentary/1-samuel-16/",
-    "https://bible.org/seriespage/designation-david-king-1-samuel-161-23"
+    "Benson",
+    "Tyndale Study Notes",
+    "https://biblehub.com/q/Why_did_God_tell_Samuel_to_mislead_Saul.htm"
    ],
    "differ": [],
    "other": []
@@ -34,11 +34,11 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "God directs Samuel to invite Jesse and his family to the sacrificial feast. Once there, God promises to show Samuel exactly which son to anoint. God guides His servants step by step as they walk in obedience.",
+   "meaning": "Samuel is told to invite Jesse and his household to join in the sacred meal after the offering. God promises to guide Samuel step by step when the family gathers. Samuel is only to pour the oil over the specific son God points out.",
    "meaning_sources": [
+    "John Gill",
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch"
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -46,12 +46,12 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "Samuel obeys the Lord and arrives in the small town of Bethlehem. The city leaders tremble when they meet him, fearing that the great prophet has come to judge some secret crime or that his visit will anger King Saul.",
+   "meaning": "Samuel obeys the Lord and arrives in the quiet hill town of Bethlehem. The town elders tremble when they see him, fearing the great prophet has come to punish some secret crime or bring bad news from King Saul. They greet him anxiously to ask whether he arrives with peaceful intentions.",
    "meaning_sources": [
+    "Matthew Henry (Concise)",
     "Jamieson-Fausset-Brown",
-    "Wesley",
-    "Geneva Notes",
-    "Keil & Delitzsch"
+    "Keil & Delitzsch",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -59,12 +59,11 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "Samuel calms their fears by explaining that he comes in peace to offer a sacrifice. He tells the leaders to consecrate themselves, which meant washing their clothes and bodies and preparing their hearts to meet God in worship. Samuel also gives special care to preparing Jesse and his sons for the holy feast.",
+   "meaning": "Samuel reassures the elders that his visit brings peace and that he has come to worship God with a sacrifice. He instructs them to wash and prepare their hearts for the holy ceremony. Samuel takes special care to help Jesse and his sons get ready, inviting them to the feast that follows.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
     "Wesley",
-    "Keil & Delitzsch"
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -72,11 +71,12 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "When the sons arrive, Samuel looks at Jesse's oldest son, Eliab. Seeing his tall build and impressive looks, Samuel immediately assumes this must be the man God has chosen to be king.",
+   "meaning": "When the family gathers, Samuel notices Jesse's oldest son, Eliab. Because Eliab is tall, handsome, and dignified, Samuel assumes at once that this must be the Lord's chosen king. He makes the mistake of judging the man merely by what looks impressive to the eyes.",
    "meaning_sources": [
     "Matthew Henry",
-    "Geneva Notes",
-    "Keil & Delitzsch"
+    "Jamieson-Fausset-Brown",
+    "Benson",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -84,17 +84,18 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "The Lord corrects Samuel and tells him not to judge by Eliab's height or good looks, because God has not chosen him. Human beings can only see the outside, but God looks straight into the heart. God values inner faith, love, and obedience far more than outward charm.",
+   "meaning": "God gently corrects Samuel by telling him not to be swayed by Eliab's height or good looks, because the Lord has not chosen him. Human beings can only look at outward appearances, but God looks directly at a person's inner character, faith, and motives. True worth before God comes from what is inside a person rather than physical charm.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Matthew Henry (Concise)",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "Some scholars suggest the Hebrew text suffered a minor copying omission here, and they follow ancient Greek translations that supply the missing words to read, 'for God does not see as man sees.'",
+     "view": "Some scholars note that the ancient Hebrew text is unusually brief here, and they follow the ancient Greek translation to restore phrases about man looking at outward appearance.",
      "sources": [
       "https://classic.net.bible.org/bible.php?book=1Sa&chapter=16"
      ]
@@ -103,21 +104,10 @@
   },
   {
    "verse": 8,
-   "end": 8,
-   "meaning": "Jesse brings his second son, Abinadab, and has him walk past Samuel. Samuel listens for God's guidance and announces that the Lord has not chosen him either.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 9,
    "end": 9,
-   "meaning": "Jesse next presents his third son, Shammah. Once again, Samuel confirms that the Lord has not chosen this son.",
+   "meaning": "Jesse presents his second son, Abinadab, and then his third son, Shammah, before Samuel. In each case, God gives Samuel an inner sign that neither one is His chosen leader. Samuel faithfully speaks up and tells Jesse that the Lord has chosen neither of them.",
    "meaning_sources": [
-    "Matthew Henry",
+    "John Gill",
     "Keil & Delitzsch"
    ],
    "differ": [],
@@ -126,11 +116,11 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "Jesse presents seven of his sons before the prophet, but God passes over all of them. Samuel tells Jesse that the Lord has chosen none of these young men. God does not hand out His callings based on birth order or human expectations.",
+   "meaning": "Jesse brings four more sons forward, making a total of seven who pass before Samuel. God gives no sign of approval for any of them. Samuel must inform Jesse that the Lord has not chosen a single one of these young men.",
    "meaning_sources": [
-    "Matthew Henry",
+    "John Gill",
     "Wesley",
-    "Adam Clarke",
+    "Benson",
     "Keil & Delitzsch"
    ],
    "differ": [],
@@ -139,11 +129,11 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "Samuel asks Jesse if he has any other sons. Jesse admits that the youngest is still outside looking after the sheep, as his family had not even thought to invite him. Samuel insists that no one will sit down to eat the feast until the boy arrives.",
+   "meaning": "Samuel asks Jesse if these are all the sons he has, knowing that God's chosen king must be from this household. Jesse explains that only the youngest is left, out in the fields tending the sheep because the family thought him unimportant. Samuel insists that no one will sit down to eat the feast until the boy is brought in.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
+    "Matthew Henry (Concise)",
     "Wesley",
+    "Keil & Delitzsch",
     "https://enduringword.com/bible-commentary/1-samuel-16/"
    ],
    "differ": [],
@@ -152,11 +142,11 @@
   {
    "verse": 12,
    "end": 12,
-   "meaning": "Jesse sends for his youngest son, who comes in from the pastures. He has a healthy, reddish complexion, bright eyes, and a pleasing appearance. The Lord whispers to Samuel to stand up and anoint him, because this young shepherd is God's chosen king.",
+   "meaning": "Jesse sends for his youngest son, who comes in from the pastures healthy, ruddy, with bright eyes and a handsome look. The moment the youth stands before him, the Lord speaks to Samuel's heart and tells him to rise and anoint him. This ordinary shepherd boy is the king God has selected.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
     "Keil & Delitzsch",
+    "Tyndale Study Notes",
     "https://enduringword.com/bible-commentary/1-samuel-16/"
    ],
    "differ": [],
@@ -165,46 +155,55 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "Samuel takes the horn of oil and pours it on David in the presence of his family, marking him out for future royal service. Right away, the Holy Spirit rushes upon David with power to give him wisdom and courage from that day forward, after which Samuel returns home to Ramah.",
+   "meaning": "Samuel takes his horn of oil and anoints David in front of his brothers, marking him for God's royal service. At that moment, the Holy Spirit rushes upon David with power to prepare him for his future calling, and Samuel returns home to Ramah. David does not claim the throne right away, but waits patiently for God's timing.",
    "meaning_sources": [
-    "Matthew Henry",
+    "John Gill",
     "Wesley",
-    "Adam Clarke",
-    "Keil & Delitzsch"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 14,
-   "end": 14,
-   "meaning": "The special enabling presence of the Lord's Spirit leaves Saul, and God allows a troubling spirit to torment him with deep gloom, fear, and bursts of rage. When a person turns away from God, they lose His peaceful guidance and become open to misery.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Adam Clarke"
+    "Tyndale Study Notes"
    ],
    "differ": [
     {
      "tradition": "Reformed and Presbyterian",
-     "view": "Saul was never truly born again, so the Spirit's departure was not a loss of salvation, but the removal of God's temporary gifts and power for ruling.",
+     "view": "The Spirit came upon David not only to equip him for his royal duties, but also to bring true spiritual salvation to his heart.",
      "sources": [
       "https://learn.ligonier.org/devotionals/spiritual-transformations"
      ]
     },
     {
      "tradition": "Many evangelicals",
-     "view": "In the Old Testament the Holy Spirit came upon leaders for specific tasks and could depart, unlike the permanent indwelling that believers receive today.",
+     "view": "The Spirit coming upon David in the Old Testament was an empowering for royal leadership and service, rather than the permanent indwelling given to all believers after Pentecost.",
      "sources": [
-      "https://www.gotquestions.org/lose-the-Holy-Spirit.html",
-      "https://bible.org/question/why-did-spirit-god-make-saul-lay-naked-samuel"
+      "https://bible.org/question/why-did-spirit-god-make-saul-lay-naked-samuel",
+      "https://www.gotquestions.org/lose-the-Holy-Spirit.html"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 14,
+   "end": 14,
+   "meaning": "Because of Saul's repeated disobedience, the Holy Spirit withdraws the royal gifts of wisdom and courage that once helped him lead. In their place, a troubling spirit permitted by the Lord afflicts Saul with deep dread and dark moods. When leaders turn away from God, they lose His blessing and open themselves to misery.",
+   "meaning_sources": [
+    "Matthew Henry (Concise)",
+    "Wesley",
+    "Geneva Notes",
+    "Benson",
+    "Tyndale Study Notes"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Saul was never truly saved or inwardly renewed, so the departure of the Spirit shows only that God removed the special gifts of leadership He had granted him for his role as king.",
+     "sources": [
+      "https://learn.ligonier.org/devotionals/spiritual-transformations"
      ]
     }
    ],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "The phrase translated 'evil spirit' can simply mean a harmful, injurious spirit of depression or emotional breakdown that God sent as a punishment, rather than a demon.",
+     "view": "The phrase translated 'evil spirit' can simply mean an injurious or harmful spirit that caused mental distress, rather than an evil demon.",
      "sources": [
       "https://classic.net.bible.org/bible.php?book=1Sa&chapter=16"
      ]
@@ -214,10 +213,12 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "Saul's royal servants notice the sudden change in his behavior and speak honestly to him. They tell him plainly that his deep torment is coming from a troubling spirit permitted by God.",
+   "meaning": "Saul's royal attendants notice the painful changes in their master's behavior and moods. They recognize that his dark spells are not just an ordinary sickness, but a torment allowed by God as a judgment. They speak honestly to the king about the spiritual trouble that has fallen upon him.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Benson",
+    "Keil & Delitzsch",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -225,11 +226,12 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "The servants suggest that Saul order them to find a skilled harp player. They explain that playing peaceful music will calm the king's troubled emotions and restore his peace of mind when the distress comes over him.",
+   "meaning": "The servants suggest finding someone who can skillfully play the lyre or harp before the king. They believe the soothing sounds of music will calm Saul's troubled spirit and give him relief whenever his dark fits come. Even in ancient times, people recognized that good music can help ease emotional distress.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
     "Wesley",
-    "Keil & Delitzsch"
+    "Keil & Delitzsch",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -237,9 +239,10 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "Saul accepts their advice and commands his staff to look for a gifted musician. He tells them to bring the player to court without delay.",
+   "meaning": "Saul agrees with the advice of his attendants and welcomes their plan. He commands them to search out a gifted player and bring him to the court without delay. In his deep distress, the king is willing to try anything that might give him peace of mind.",
    "meaning_sources": [
     "Matthew Henry",
+    "John Gill",
     "Keil & Delitzsch"
    ],
    "differ": [],
@@ -248,11 +251,12 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "One of the servants speaks up and recommends David, the son of Jesse from Bethlehem. He describes David not only as a talented harpist, but also as a brave and sensible man, handsome, and clearly blessed with the Lord's presence.",
+   "meaning": "A young attendant reports that he knows one of Jesse's sons from Bethlehem who plays the lyre very well. He praises the young man as brave, sensible in speech, handsome, and clearly blessed with the Lord's presence. God's quiet providence is already at work to bring David into the royal palace.",
    "meaning_sources": [
-    "Matthew Henry",
+    "John Gill",
     "Wesley",
-    "Keil & Delitzsch"
+    "Keil & Delitzsch",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -260,10 +264,10 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "Saul sends royal messengers to Jesse with a direct command to send his son David, who is out watching the flock. Even after being anointed, David had humbly returned to his ordinary chores in the fields.",
+   "meaning": "Saul sends royal messengers to Bethlehem with an order for Jesse to send David, who is still out caring for the sheep. Even after being anointed as future king, David has returned humbly to his ordinary daily work. When the king calls, David is ready to serve.",
    "meaning_sources": [
     "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch",
+    "John Gill",
     "https://enduringword.com/bible-commentary/1-samuel-16/"
    ],
    "differ": [],
@@ -272,12 +276,12 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "Jesse prepares a respectful gift for the king according to the customs of the time. He loads a donkey with bread, a skin of wine, and a young goat, and sends them to Saul with David.",
+   "meaning": "Jesse packs a customary gift of bread, a skin of wine, and a young goat onto a donkey to show respect to the king. In that culture, coming before a ruler without a gift was considered disrespectful. Jesse sends these gifts along with David as an act of loyal honor.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
     "Wesley",
-    "Keil & Delitzsch"
+    "Benson",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -285,12 +289,12 @@
   {
    "verse": 21,
    "end": 21,
-   "meaning": "David arrives at court and enters the king's presence to serve him. Saul likes the young man very much and gives him the trusted post of armor-bearer, placing him close to the throne.",
+   "meaning": "David arrives at court and enters Saul's personal service. The king takes a great liking to the young man and appoints him as one of his armor-bearers, a position of trust and honor. This gives David valuable firsthand experience in royal court life and military affairs.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
     "Wesley",
-    "Keil & Delitzsch"
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -298,10 +302,11 @@
   {
    "verse": 22,
    "end": 22,
-   "meaning": "Saul sends another message to Jesse, asking permission for David to remain permanently in the royal court. Saul explains that he is deeply pleased with David and wants him nearby.",
+   "meaning": "Saul is so pleased with David that he sends a message back to Jesse asking permission to keep him at court permanently. Jesse agrees to let his son remain with the king. God continues to give David favor in the eyes of those around him.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Keil & Delitzsch",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -309,19 +314,21 @@
   {
    "verse": 23,
    "end": 23,
-   "meaning": "Whenever the troubling spirit comes upon Saul, David takes his harp and plays songs of praise. The sweet music calms Saul's mind, bringing him great relief, and the dark spirit leaves him for a time.",
+   "meaning": "Whenever the dark torment from God overtakes Saul, David picks up his lyre and plays before him. The music calms Saul's mind, bringing relief, and the tormenting spirit departs from him for a time. In this way, God's future king acts as a peacemaker and comforter to the troubled ruler.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Matthew Henry (Concise)",
     "Jamieson-Fausset-Brown",
-    "Wesley",
-    "Keil & Delitzsch"
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 14: removed sources ['Keil & Delitzsch']"
+  "v. 8: removed sources ['Benson']",
+  "v. 13: removed sources ['Benson']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

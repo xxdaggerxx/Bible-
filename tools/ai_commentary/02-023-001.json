@@ -8,11 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "God commands His people never to spread false rumors or tell lies about other people. An honest person must not team up with an evil person by giving dishonest testimony in a legal case. The person who listens to and repeats a slanderous story causes just as much harm as the one who made it up.",
+   "meaning": "God commands his people never to pass along rumors or tell lies about others. Siding with a dishonest person to give false testimony in court ruins lives and perverts truth. Repeating a rumor makes a person just as guilty as the one who started it.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Wesley",
     "Adam Clarke",
-    "https://enduringword.com/bible-commentary/exodus-23/"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -20,77 +20,7 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "God warns against going along with the majority when they are doing something wrong. When testifying in court, a person must never twist the truth just to please the crowd or agree with powerful leaders. Standing alone for what is right is always better than following a crowd into sin.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "https://enduringword.com/bible-commentary/exodus-23/"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 3,
-   "end": 3,
-   "meaning": "Courts must be guided by truth and fairness rather than pity. A judge or witness must not favor a poor man in his lawsuit if he is actually in the wrong. Justice must be based on facts and God's law, not on a person's social standing.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "https://enduringword.com/bible-commentary/exodus-23/"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 4,
-   "end": 5,
-   "meaning": "If an Israelite finds an enemy's lost ox or donkey wandering away, he is required to take it back safely. If he sees an enemy's donkey collapsed under a heavy load, he must stop and help get the animal on its feet. God commands His people to show practical mercy and kindness even to people who hate them.",
-   "meaning_sources": [
-    "Calvin",
-    "Matthew Henry",
-    "https://enduringword.com/bible-commentary/exodus-23/"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 6,
-   "end": 6,
-   "meaning": "While judges must not favor the poor wrongly, they must never deny them fair treatment either. A person's poverty should never be an excuse to cheat them out of an honest decision. God protects the vulnerable by demanding equal justice for all.",
-   "meaning_sources": [
-    "Calvin",
-    "Matthew Henry",
-    "https://enduringword.com/bible-commentary/exodus-23/"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 7,
-   "end": 7,
-   "meaning": "God commands His people to stay far away from dishonest schemes and untrue charges. Courts must never put an innocent or upright person to death through false testimony. God reminds human judges that He sees everything and will never clear the guilty.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Calvin"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 8,
-   "end": 8,
-   "meaning": "Judges and leaders must never accept a bribe. Secret gifts corrupt the mind, blinding people who would otherwise see clearly and twisting the words of honest men. Refusing bribes protects the fairness of the legal system and honors God.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "https://enduringword.com/bible-commentary/exodus-23/"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 9,
-   "end": 9,
-   "meaning": "The Israelites are forbidden to mistreat or take advantage of foreigners living among them. They knew firsthand the pain, fear, and loneliness of being treated badly in Egypt. That experience was meant to give them tender hearts and fair practices toward outsiders.",
+   "meaning": "People must not join a crowd when the crowd is doing wrong. In a courtroom or in daily life, peer pressure can never make an evil choice good. God calls us to stand for what is right even when we have to stand alone.",
    "meaning_sources": [
     "Matthew Henry",
     "Wesley",
@@ -100,13 +30,96 @@
    "other": []
   },
   {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Judges and witnesses must not bend the truth just to help a poor person win a lawsuit. While God cares deeply for the needy, a court case must be decided on actual facts, not on mere pity. True justice treats every person with equal fairness.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Benson",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Anyone who found an enemy's stray ox or donkey was required to return it safely to its owner. Having a personal grudge or legal fight was no excuse for letting another person suffer loss. God commands active goodness even toward those who dislike us.",
+   "meaning_sources": [
+    "Calvin",
+    "Adam Clarke",
+    "Benson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "If an enemy's donkey collapsed under a heavy load, an Israelite was forbidden to ignore it. He had to stop and help his enemy lift the animal back onto its feet. Helping in this way showed mercy to the beast and opened a door toward peace.",
+   "meaning_sources": [
+    "Benson",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Judges were strictly forbidden from denying justice to poor people in their lawsuits. A poor man might lack wealth, power, and friends, but his case still deserved an honest hearing. God protects the rights of those who cannot defend themselves.",
+   "meaning_sources": [
+    "John Gill",
+    "Benson",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "God warns everyone to stay far away from false accusations and dishonest schemes. Condemning an innocent person to death through a corrupt court is murder, and God himself will judge the wicked who do it. His holy character demands absolute honesty in judgment.",
+   "meaning_sources": [
+    "Calvin",
+    "Ellicott",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "Judges must never accept bribes or gifts from people involved in a dispute. Taking money blinds the eyes of wise people and corrupts honest decisions. Justice cannot survive when leaders can be bought.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Benson",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Israel was forbidden from mistreating foreign residents who lived among them. The people knew from their own painful history what it felt like to be oppressed outsiders in Egypt. Remembering past suffering should make us tender toward strangers.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
    "verse": 10,
    "end": 11,
-   "meaning": "The people were to plant and harvest their fields, vineyards, and olive groves for six years, but let the land rest during the seventh year. Whatever grew on its own in that year was left for the poor to eat, and wild animals could eat what remained. This law taught the people to depend on God's provision and reminded them that He owned the land.",
+   "meaning": "Israel was to farm the land for six years, but every seventh year the fields, vineyards, and olive groves were to lie fallow. The food that grew by itself during that year belonged to the poor, and wild animals could eat what was left. This taught the people to trust God for their daily bread and to care for those in need.",
    "meaning_sources": [
+    "Jamieson-Fausset-Brown",
     "Matthew Henry",
-    "Calvin",
-    "Jamieson-Fausset-Brown"
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -114,11 +127,11 @@
   {
    "verse": 12,
    "end": 12,
-   "meaning": "God repeats the rule that work must stop on the seventh day of each week. This regular day of rest gave physical relief and renewed strength to working animals, family members, and servants. God cares about the bodily well-being of all living creatures under our care.",
+   "meaning": "The weekly Sabbath—a day set apart for rest—was given so that servants, foreign workers, and farm animals could catch their breath and be refreshed. Even during busy planting or harvest seasons, regular rest remained necessary. God shows mercy by caring for the physical strength of all his creatures.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "https://enduringword.com/bible-commentary/exodus-23/"
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -126,11 +139,11 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "The Lord tells His people to pay careful attention to every instruction He has given. They were not even to speak the names of pagan gods or use them in oaths. Complete devotion to the true God leaves no room for honoring idols in speech or thought.",
+   "meaning": "God told his people to pay close attention to everything he commanded and never mention the names of pagan gods. Israel was not to swear by idols, pray to them, or speak of them with respect. Wiping out the memory of false gods helped protect the nation from turning away from the Lord.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "Wesley"
+    "Wesley",
+    "Geneva Notes",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -138,11 +151,11 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "God set apart three annual religious festivals for the nation to celebrate before Him. These national gatherings gave the people regular seasons to stop work and rejoice together in God's goodness. They strengthened the unity of the twelve tribes and kept true worship alive.",
+   "meaning": "God established three major annual religious festivals for Israel to celebrate before him. These set times brought the whole community together in thanksgiving and worship. Regular times of worship help keep God's people united in faith.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -150,10 +163,10 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "The first festival was the Feast of Unleavened Bread, held in the spring month of Abib to recall the escape from Egyptian slavery. For seven days the people ate bread made without yeast, just as their ancestors did on the night of the exodus. Every worshiper was expected to bring an offering rather than appear before the Lord empty-handed.",
+   "meaning": "The first festival was the Feast of Unleavened Bread, celebrated for seven days in the spring month of Abib. It remembered the day God delivered Israel out of Egypt so quickly that their dough had no time to rise. Worshippers were not to appear empty-handed, but were to bring gifts of thanks.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -161,10 +174,10 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "The second festival was the Feast of Harvest, celebrating the first crops gathered from the spring planting. The third was the Feast of Ingathering at the end of the agricultural year, when all the grain, fruit, and olives had been stored. These gatherings were joyous times to thank God for the food He faithfully provided.",
+   "meaning": "The Feast of Harvest took place in late spring, offering God the firstfruits—the very first portion gathered—from the grain crop. The Feast of Ingathering took place in the fall after the grapes and other fruit were collected. Both feasts reminded the people that every harvest is a gift from God's hand.",
    "meaning_sources": [
-    "Keil & Delitzsch",
-    "Matthew Henry"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -172,11 +185,11 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "Three times every year, all the men of Israel were to gather at the Lord's chosen place of worship. This regular pilgrimage renewed their covenant loyalty to God as their King and heavenly Protector. Even while the men were away, God watched over their homes and defended their borders.",
+   "meaning": "All Israelite men were required to travel three times a year to appear before the Lord at his sanctuary. Gathering together kept the nation focused on the one true God and kept them from setting up local pagan shrines. Meeting regularly with God's people strengthens our shared commitment to him.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch"
+    "Tyndale Study Notes",
+    "John Gill",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -184,9 +197,10 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "God commands that the blood of His festival sacrifices must never be offered alongside bread containing yeast. In addition, the choice fat of the festival sacrifice could not be left out overnight until the morning. The best parts of the offering belonged solely to God and had to be treated with great respect.",
+   "meaning": "The blood of the Passover sacrifice was never to be offered alongside bread containing yeast, and the animal fat could not be left until morning. Yeast symbolized decay and sin, so holy offerings had to remain completely pure. Burning the fat immediately gave God the richest and best part of the gift.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Adam Clarke",
+    "John Gill",
     "https://enduringword.com/bible-commentary/exodus-23/"
    ],
    "differ": [],
@@ -195,50 +209,23 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "Worshipers were to bring the very first and best produce of their soil to the house of the Lord as a gift of thanksgiving. God also told them never to boil a young goat in its mother's milk. Giving the first portion to God showed that the people trusted Him to provide for the rest of their needs.",
+   "meaning": "Israel was to bring the earliest ripe produce of their fields straight to the house of the Lord as an act of gratitude. God also commanded them not to boil a young goat in its mother's milk, likely outlawing a superstitious pagan ritual. Giving our best to God first shows that we trust him with all that follows.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "https://biblehub.com/exodus/23-19.htm"
+    "Ellicott",
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
    ],
-   "differ": [
-    {
-     "tradition": "Lutheran",
-     "view": "This rule forbids killing or cooking a young goat before it has been weaned from its mother's milk.",
-     "sources": [
-      "Keil & Delitzsch",
-      "https://biblehub.com/commentaries/exodus/23-19.htm"
-     ]
-    },
-    {
-     "tradition": "Reformed and Presbyterian",
-     "view": "This rule forbids cooking an animal in its own mother's milk because doing so is an unnatural cruelty that defiles sacred sacrifices and common meals.",
-     "sources": [
-      "Calvin",
-      "https://www.studylight.org/commentary/exodus/23-19.html"
-     ]
-    }
-   ],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "Many scholars view this rule as a ban on a specific pagan fertility ritual in which a kid was boiled in milk and sprinkled on crops to make the land productive.",
-     "sources": [
-      "Adam Clarke",
-      "https://enduringword.com/bible-commentary/exodus-23/",
-      "https://www.studylight.org/commentary/exodus/23-19.html"
-     ]
-    }
-   ]
+   "differ": [],
+   "other": []
   },
   {
    "verse": 20,
    "end": 20,
-   "meaning": "God promises to send an angel ahead of Israel to protect them on their travels through the wilderness. This divine guide would lead the people safely into the land that God had already prepared for them. Christian teachers have long understood this angel to be Christ Himself watching over His people before His birth on earth.",
+   "meaning": "God promised to send an angel ahead of Israel to protect them on their travels and bring them into the land prepared for them. This heavenly messenger was the Angel of the Lord, revealing God's own direct presence with his people. God faithfully leads and guards those who walk in his path.",
    "meaning_sources": [
     "Matthew Henry",
     "Adam Clarke",
-    "https://enduringword.com/bible-commentary/exodus-23/"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -246,11 +233,10 @@
   {
    "verse": 21,
    "end": 21,
-   "meaning": "The people were told to listen carefully to this angel and never rebel against him. Because God's own Name and nature resided in him, he held full divine authority to judge their deeds. Disobeying this messenger was the same as defying God Himself.",
+   "meaning": "The people were told to obey this angel's voice and not rebel against him. Because God's own Name and authority lived in him, he had the power to judge or pardon sin. Disobeying this divine messenger was the same as rebelling against God himself.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "Wesley"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -258,11 +244,11 @@
   {
    "verse": 22,
    "end": 22,
-   "meaning": "God promised that if the people obeyed the angel's voice and kept His commandments, He would stand with them completely. He would treat Israel's enemies as His own personal foes. Their safety and victory depended on their willingness to trust and follow God.",
+   "meaning": "If Israel listened closely to the angel's voice and kept God's commands, God promised to fight against their enemies. He would defend them from hostile nations and give them victory. God's mighty protection rests on trusting obedience to his word.",
    "meaning_sources": [
     "Matthew Henry",
     "Calvin",
-    "https://enduringword.com/bible-commentary/exodus-23/"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -270,11 +256,11 @@
   {
    "verse": 23,
    "end": 23,
-   "meaning": "God's angel would lead the Israelites straight into the land held by the pagan nations of Canaan. Because of those nations' persistent evil, God promised to wipe them out before Israel. The Israelites were to know that their coming victory was God's doing, not their own.",
+   "meaning": "God's angel would lead the nation into the land held by the Canaanites and other pagan tribes, and God would destroy them. These nations had practiced great wickedness for generations, and their judgment had now arrived. Israel was assured that God would clear the way before them.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Tyndale Study Notes",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -282,11 +268,11 @@
   {
    "verse": 24,
    "end": 24,
-   "meaning": "Israel was forbidden to bow to Canaanite idols, serve them, or copy the wicked religious practices of the land. Instead, they had to tear down the pagan shrines and smash their sacred stone pillars to bits. God's people were to make a clean break from every form of false worship.",
+   "meaning": "Israel was strictly forbidden from worshipping the gods of Canaan, copying their evil customs, or bowing before their idols. Instead, they were commanded to tear down the pagan altars and smash their sacred stone pillars to pieces. True loyalty to God requires completely turning away from false worship.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "Keil & Delitzsch"
+    "Geneva Notes",
+    "Tyndale Study Notes",
+    "Calvin"
    ],
    "differ": [],
    "other": []
@@ -294,18 +280,17 @@
   {
    "verse": 25,
    "end": 25,
-   "meaning": "If Israel served the Lord faithfully, He promised to bless their daily food and water so that simple provisions would sustain them. He also promised to remove severe illnesses from their midst. God pledged to provide for both their physical needs and their bodily health.",
+   "meaning": "If the Israelites worshipped the Lord alone, he promised to bless their daily bread and water and take sickness away from them. Even plain food and simple drink become life-giving when God's blessing rests upon them. True well-being comes from walking faithfully with God.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
+    "Wesley",
     "Adam Clarke",
-    "https://biblehub.com/study/exodus/23-25.htm"
+    "Ellicott"
    ],
    "differ": [],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "Some critical scholars suggest that verses 23 through the middle of verse 25 were added by later editors rather than being part of the original passage.",
+     "view": "Some modern scholars propose that verses 23 through 25 may be a later addition to the original text.",
      "sources": [
       "https://biblehub.com/commentaries/exodus/23-25.htm"
      ]
@@ -315,10 +300,10 @@
   {
    "verse": 26,
    "end": 26,
-   "meaning": "God promised that no woman or farm animal in the land would miscarry or be unable to bear young. He also assured His people that they would live out the full number of their years without their lives being cut short. Obedience to God would result in flourishing life across the entire community.",
+   "meaning": "God promised that women and livestock would not miscarry or remain barren, and he would grant his people full lifespans. Canaanite religions used pagan rituals to chase fertility, but God showed that life and children come from him alone. God delights in filling the homes of his people with life.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -326,11 +311,11 @@
   {
    "verse": 27,
    "end": 27,
-   "meaning": "The Lord promised to send a deep dread ahead of Israel that would throw enemy armies into wild panic. When opposing forces tried to stand against Israel, that fear would cause them to turn around and flee. God won the battles by taking away the courage of the enemy.",
+   "meaning": "God promised to send his terror ahead of Israel, throwing their opponents into deep panic and confusion. News of what God had already done in Egypt would cause enemy armies to lose heart and run away. God easily scatters forces that seem impossible for his people to defeat.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "Keil & Delitzsch"
+    "John Gill",
+    "Geneva Notes",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -338,12 +323,10 @@
   {
    "verse": 28,
    "end": 28,
-   "meaning": "God promised to send the hornet ahead of His people to drive the Canaanite nations out of their path. Some readers see this as literal swarms of stinging insects, while others see it as a picture of sharp, stinging terror that drove the enemies away. God can use even the smallest means to defeat powerful armies.",
+   "meaning": "God declared that he would send the hornet ahead of Israel to drive out the Canaanite tribes. Whether this meant literal swarms of stinging insects or sharp stings of terror, God had simple means to drive out powerful armies. No enemy can stand when the Lord moves against them.",
    "meaning_sources": [
-    "Adam Clarke",
     "Calvin",
-    "Keil & Delitzsch",
-    "https://biblehub.com/commentaries/exodus/23-28.htm"
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -351,10 +334,11 @@
   {
    "verse": 29,
    "end": 30,
-   "meaning": "God explained that He would not drive out all the inhabitants in a single year. If the land emptied out too quickly, fields would turn wild and dangerous beasts would multiply against the small population of Israelites. Therefore, God drove out the nations step by step as Israel grew large enough to occupy the territory.",
+   "meaning": "God explained that he would not drive out all the inhabitants in a single year. If the territory emptied too quickly, the land would become overgrown and dangerous wild beasts would overrun the towns. God drives out obstacles little by little as his people grow strong enough to manage the blessing.",
    "meaning_sources": [
-    "Matthew Henry",
-    "https://biblehub.com/commentaries/exodus/23-28.htm"
+    "Jamieson-Fausset-Brown",
+    "Benson",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -362,49 +346,36 @@
   {
    "verse": 31,
    "end": 31,
-   "meaning": "God laid out the full boundaries of the promised land, reaching from the Red Sea to the Mediterranean and from the southern desert to the Euphrates River. He promised to hand the native inhabitants over so that Israel could drive them out. This expansive promise reached its fullest earthly realization during the reigns of King David and King Solomon.",
+   "meaning": "God outlined the future borders of Israel's land, reaching from the Red Sea to the Mediterranean and from the southern desert to the Euphrates River. He promised to place the inhabitants into Israel's hands so the people could take possession. This large promise was fully realized centuries later during the reigns of David and Solomon.",
    "meaning_sources": [
     "Adam Clarke",
-    "Calvin",
-    "Keil & Delitzsch"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 32,
-   "end": 32,
-   "meaning": "The Israelites were strictly forbidden from making treaties or peace pacts with the pagan peoples or their gods. Forming alliances with idolaters would pull God's people away from the truth. The Lord demanded uncompromised loyalty from His followers.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Keil & Delitzsch"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 33,
    "end": 33,
-   "meaning": "Pagan idolaters were not permitted to remain living within the land, because their presence would lead Israel into sin. Serving foreign gods would become a deadly trap for God's chosen people. To stay faithful to God, they needed to keep away from corrupting influences.",
+   "meaning": "Israel was forbidden to make any peace treaties with the Canaanite nations or their false gods. If those idolaters remained in the land, their corrupt ways would trap the Israelites into sinning against the Lord. Staying clear of corrupt influences protects God's people from falling into spiritual ruin.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "https://biblehub.com/commentaries/exodus/23-28.htm"
+    "Benson",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 3: removed sources ['Calvin']",
-  "v. 7: removed sources ['Adam Clarke']",
+  "v. 5: removed sources ['Calvin']",
   "v. 15: removed sources ['Adam Clarke']",
   "v. 16: removed sources ['Adam Clarke']",
-  "v. 18: removed sources ['Keil & Delitzsch']",
-  "v. 21: removed sources ['Calvin']",
-  "v. 26: removed sources ['Calvin']",
-  "v. 29: removed sources ['Keil & Delitzsch']"
+  "v. 21: removed sources ['Benson']",
+  "v. 26: removed sources ['Benson']",
+  "v. 28: removed sources ['Benson']",
+  "v. 31: removed sources ['Benson']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

@@ -8,11 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "True happiness belongs to everyone who honors the Lord with deep respect and obeys His commands. This promise is not limited to the rich or powerful, but is open to anyone of any background who walks in God's ways. Genuine faith in God always shapes daily life, because a heart that loves Him naturally leads to feet that follow Him.",
+   "meaning": "True happiness belongs to everyone who reverences the Lord and obeys His commands. This blessing is open to anyone, regardless of their background, wealth, or status. Genuine respect for God is not just a feeling, but a daily life lived in His ways.",
    "meaning_sources": [
     "Matthew Henry",
-    "Calvin",
-    "Spurgeon (Treasury of David)",
+    "John Gill",
+    "Geneva Notes",
     "https://enduringword.com/bible-commentary/psalm-128/"
    ],
    "differ": [],
@@ -21,11 +21,13 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "God promises that those who honor Him will enjoy the rewards of their daily, honest work. Instead of enemies stealing their harvest or trouble ruining their toil, they will have the health to work and peacefully eat what they earn. While the world often praises wealth without effort, God honors faithful labor and makes it a source of quiet contentment.",
+   "meaning": "The person who honors God will get to enjoy the results of hard work instead of losing them to enemies or hardship. God does not take away the need for daily labor, but He blesses honest effort so it brings real satisfaction and security. It is a great gift to eat in peace from what your own hands have earned.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "Geneva Notes"
+    "Benson",
+    "Ellicott",
+    "Jamieson-Fausset-Brown",
+    "https://enduringword.com/bible-commentary/psalm-128/"
    ],
    "differ": [],
    "other": []
@@ -33,10 +35,13 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "A faithful home is described through two thriving, fruitful plants. The wife is compared to a fruitful vine inside the house, bringing warmth, comfort, and children into the family life. The children gather around the dinner table like fresh olive shoots, growing strong and full of promise for the future.",
+   "meaning": "Home life is pictured as rich and thriving, with a wife compared to a fruitful vine and children compared to young olive shoots. Just as vines bring sweetness and olive trees produce valuable oil, a healthy family brings lasting joy, vitality, and promise around the table. These plants were prized in ancient Israel for bringing richness and celebration to daily life.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke"
+    "Tyndale Study Notes",
+    "John Gill",
+    "Adam Clarke",
+    "Wesley",
+    "https://enduringword.com/bible-commentary/psalm-128/"
    ],
    "differ": [],
    "other": []
@@ -44,10 +49,10 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "The writer calls the reader to pause and notice the charming picture of home life just described. God delights to give this kind of domestic peace and favor to those who live in holy reverence toward Him. While not every believer marries or has a large family, this shows the kind of gentle, everyday goodness God provides for households that trust Him.",
+   "meaning": "The song pauses to call special attention to the picture of family life just described. It reminds the reader that this kind of quiet, steady flourishing is how God loves to bless those who fear Him. While not an absolute promise for every single life, it reveals God's good design for human happiness.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
+    "Ellicott",
     "https://enduringword.com/bible-commentary/psalm-128/"
    ],
    "differ": [],
@@ -56,11 +61,13 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "The psalm shifts into a prayer that God will send His blessing straight from His dwelling place in Zion. True worshippers do not care only about their own private households, but also long for the city of God and His people to flourish. A family's joy is only complete when the church and the community are also walking in strength and good health.",
+   "meaning": "The psalm shifts into a prayer asking the Lord to send His blessing straight from His presence in Zion. A godly person does not care only about a comfortable home, but also desires the spiritual health and good of God's whole community. Our private blessings are closely tied to the well-being of the wider people of God.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
+    "Benson",
+    "John Gill",
+    "Adam Clarke",
     "Geneva Notes",
+    "Ellicott",
     "https://enduringword.com/bible-commentary/psalm-128/"
    ],
    "differ": [],
@@ -69,21 +76,19 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "The blessing reaches its peak with the gift of a long life, allowing the believer to see grandchildren grow up in safety. The song ends with a prayer for peace and wholeness over the entire nation. God's blessings in the home are meant to flow outward into peace for the whole family of faith.",
+   "meaning": "The blessing crowns a faithful life with the joy of seeing grandchildren grow up. It closes with a warm prayer for lasting peace and wholeness over all of Israel. True piety looks beyond personal comfort and prays for future generations to live together in peace.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "Keil & Delitzsch"
+    "Benson",
+    "Ellicott",
+    "Jamieson-Fausset-Brown",
+    "https://enduringword.com/bible-commentary/psalm-128/"
    ],
    "differ": [],
    "other": []
   }
  ],
- "problems": [
-  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 6: removed sources ['Spurgeon (Treasury of David)']"
- ],
+ "problems": [],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

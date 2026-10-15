@@ -7,44 +7,71 @@
  "notes": [
   {
    "verse": 1,
-   "end": 2,
-   "meaning": "God gave these instructions to both Moses the ruler and Aaron the high priest. Aaron and the priests were responsible for teaching the people the difference between what was clean and unclean. By telling Israel which land animals they could eat, God taught them to obey Him in daily life and kept them distinct from the surrounding nations.",
+   "end": 1,
+   "meaning": "The Lord gave these dietary rules to Moses and Aaron together. Moses was the civil leader and lawgiver, while Aaron was the high priest who instructed the people in sacred duties. Both leaders were needed to teach the community how to tell the difference between clean and unclean things.",
    "meaning_sources": [
     "Matthew Henry",
+    "Jamieson-Fausset-Brown",
     "Wesley",
-    "Jamieson-Fausset-Brown"
+    "Benson",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
   },
   {
-   "verse": 3,
+   "verse": 2,
    "end": 3,
-   "meaning": "To be clean for food, an animal had to meet two clear tests: it had to have a completely divided hoof and it had to chew the cud. Chewing the cud means bringing up swallowed food to chew it a second time. If an animal did not have both features, it could not be eaten.",
+   "meaning": "God began the food laws by telling Israel which land animals were permitted for food. An animal was clean only if it met two specific requirements: it had to chew the cud and have hooves completely split into two claws. These rules reminded the Israelites that they were God's special, chosen people, called to live differently from the nations around them.",
    "meaning_sources": [
     "Matthew Henry",
+    "Jamieson-Fausset-Brown",
     "Wesley",
-    "Calvin"
+    "Calvin",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "Traditional Catholic notes teach that chewing the cud represents meditating on God's law, while the split hoof represents discerning between good and evil.",
+     "view": "Traditional Catholic commentary treats chewing the cud as a symbol of meditating on God's law, and the divided hoof as learning to divide good from evil.",
      "sources": [
       "https://www.ccel.org/c/challoner/douayrheims/Leviticus/11.html"
+     ]
+    },
+    {
+     "label": "Modern scholarship",
+     "view": "Some modern scholars suggest that clean animals were those that fit the normal order of creation, while creatures that seemed to blur boundaries between categories were considered abnormal and unclean.",
+     "sources": [
+      "Tyndale Study Notes",
+      "https://www.studylight.org/commentary/leviticus/11-4.html"
      ]
     }
    ]
   },
   {
    "verse": 4,
-   "end": 6,
-   "meaning": "Animals that had only one of the two marks were still unclean. Camels, rock badgers, and rabbits chew their food again or appear to do so, but they do not have fully divided hoofs. God showed His people that partial obedience or having only half the needed signs was not enough.",
+   "end": 4,
+   "meaning": "An animal was forbidden if it had only one of the two required signs. The camel chews the cud, but the underside of its foot has a soft, undivided pad rather than a fully split hoof. Because it lacked a completely divided hoof, God declared it unclean and unfit for Israel to eat.",
    "meaning_sources": [
-    "Matthew Henry",
+    "John Gill",
+    "Benson",
+    "Keil & Delitzsch",
     "Calvin",
-    "Keil & Delitzsch"
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 6,
+   "meaning": "The rock badger and the rabbit were also banned from the dinner table because their feet do not have divided hooves. While they appear to chew the cud because of their constantly moving jaws, they are not true cud-chewers in modern scientific terms. Moses used everyday observational language to describe what people saw rather than technical anatomy.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Ellicott",
+    "https://biblehub.com/leviticus/11-6.htm",
+    "https://www.gotquestions.org/rabbits-chew-cud.html"
    ],
    "differ": [],
    "other": []
@@ -52,10 +79,13 @@
   {
    "verse": 7,
    "end": 8,
-   "meaning": "The pig has a divided hoof, but because it does not chew the cud, it was completely unclean for Israel. God strictly forbade them to eat pork or even touch the dead body of a pig. This rule kept them from the unwholesome foods and pagan worship habits of their neighbors.",
+   "meaning": "The pig has a fully split hoof, but it was strictly forbidden because it does not chew the cud. God commanded the Israelites not to eat pork or handle the dead bodies of any of these forbidden animals. Touching a dead carcass made an Israelite ceremonially unclean and reminded the people to avoid defilement.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Adam Clarke",
+    "Keil & Delitzsch",
+    "Geneva Notes",
+    "https://bible.org/seriespage/8-clean-and-unclean-part-i-leviticus-11"
    ],
    "differ": [],
    "other": []
@@ -63,11 +93,12 @@
   {
    "verse": 9,
    "end": 9,
-   "meaning": "Water creatures were clean to eat only if they had both fins and scales, whether they lived in the seas or in fresh streams. This simple rule provided the people with healthy food while keeping the law easy to understand.",
+   "meaning": "God provided a simple guideline for identifying clean water creatures in both fresh and salt water. To be eaten, any swimming creature had to possess both fins and scales. Fish with these two features were viewed as healthy and wholesome food for God's covenant people.",
    "meaning_sources": [
     "Matthew Henry",
     "Wesley",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -75,11 +106,13 @@
   {
    "verse": 10,
    "end": 12,
-   "meaning": "Any water creature without fins and scales was declared detestable. This included creatures like eels and shellfish, which the Israelites were forbidden to eat or touch when dead. Calling these creatures an abomination trained God's people to keep a strong distaste for whatever God ruled out.",
+   "meaning": "Any water creature lacking either fins or scales was declared detestable. This rule ruled out shellfish like crabs and oysters, as well as creatures like eels and catfish. The command is repeated several times so Israel would strongly reject these foods and remain separated from pagan customs.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Jamieson-Fausset-Brown"
+    "John Gill",
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes",
+    "https://www.blueletterbible.org/comm/guzik_david/study-guide/leviticus/leviticus-11.cfm",
+    "https://biblehub.com/leviticus/11-11.htm"
    ],
    "differ": [],
    "other": []
@@ -87,42 +120,52 @@
   {
    "verse": 13,
    "end": 14,
-   "meaning": "God gave a specific list of birds that were detestable and never to be eaten. The list begins with large birds of prey like eagles, vultures, and kites. Because these birds feed on dead bodies and live by bloodshed, they were unfitting food for God's holy people.",
+   "meaning": "Instead of giving physical signs for clean birds, God gave a specific list of birds that were banned. These birds were birds of prey and scavengers, including eagles, vultures, and falcons. Eating birds that fed on blood and rotting meat was unacceptable for a holy people dedicated to the living God.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Jamieson-Fausset-Brown"
+    "John Gill",
+    "Adam Clarke",
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes",
+    "https://www.blueletterbible.org/comm/guzik_david/study-guide/leviticus/leviticus-11.cfm"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "Some scholars suggest that birds of prey were declared unclean primarily because they ingest blood and undrained meat from carrion, which the law strictly forbade Israelites to consume.",
-     "sources": [
-      "https://www.studylight.org/commentary/leviticus/11-4.html"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 15,
    "end": 16,
-   "meaning": "The prohibition extended to every kind of raven, as well as ostriches, owls, and hawks. These birds are known for eating decaying meat, hunting violently, or crying out in lonely desert ruins. God warned His people away from animals associated with darkness, violence, and decay.",
+   "meaning": "The list of forbidden flying creatures continues with the raven family, the ostrich, and several kinds of hawks and owls. These creatures were known for eating carrion or living in barren wilderness wastelands. Since clean birds were not listed, ordinary birds like doves and pigeons were understood to be clean and allowed.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Adam Clarke"
+    "Adam Clarke",
+    "John Gill",
+    "Keil & Delitzsch",
+    "Ellicott",
+    "https://biblehub.com/q/Leviticus_11_2_Clean_vs_unclean_animals.htm"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 17,
-   "end": 19,
-   "meaning": "God also banned water birds like pelicans and cormorants, various species of owls, storks, herons, hoopoes, and bats. Many of these feed on impure marsh creatures, and the bat flies only in darkness. Any bird not on this forbidden list was permitted as clean food.",
+   "end": 18,
+   "meaning": "God also prohibited various types of owls along with water predators like the cormorant and the osprey. These birds are night hunters or diving fishers that feed on unclean animals and decaying material. God kept His people from creatures that lived in dark places or thrived on decay.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
+    "Ellicott",
+    "Adam Clarke",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 19,
+   "end": 19,
+   "meaning": "The list of forbidden winged creatures closes with water birds such as the stork and heron, as well as the hoopoe and the bat. Although the bat is a flying mammal rather than a bird, ancient people grouped all flying creatures together. Because the bat is active in the dark and does not fit the normal bird pattern, it was declared unclean.",
+   "meaning_sources": [
+    "Benson",
+    "Ellicott",
+    "Tyndale Study Notes",
+    "https://biblehub.com/leviticus/11-19.htm"
    ],
    "differ": [],
    "other": []
@@ -130,11 +173,12 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "Flying insects that crawl along the ground on four or more legs were forbidden as detestable. Having wings to fly while creeping in the dust made them unfitting for Israel's table. This taught the people to avoid a lifestyle dragged down by worldly habits.",
+   "meaning": "Winged swarming creatures that crawl on the ground were detestable to the Israelites. The phrase 'walking on all fours' describes the creeping movement of insects close to the dirt, similar to four-footed beasts. Israel was not permitted to use common crawling bugs as everyday food.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
-    "Keil & Delitzsch"
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke",
+    "Keil & Delitzsch",
+    "https://biblehub.com/leviticus/11-21.htm"
    ],
    "differ": [],
    "other": []
@@ -142,11 +186,13 @@
   {
    "verse": 21,
    "end": 22,
-   "meaning": "God made an exception for flying insects that have large, jointed legs for hopping off the ground. Various kinds of locusts, crickets, and grasshoppers were permitted as clean food. These insects provided clean nourishment in the desert and were later eaten by John the Baptist.",
+   "meaning": "God made an exception for winged insects that have long, jointed back legs designed for leaping off the ground. Insects belonging to the locust and grasshopper family were clean and could be eaten. In the ancient desert world, these hopping insects provided an abundant and nutritious source of food.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Keil & Delitzsch"
+    "Adam Clarke",
+    "Tyndale Study Notes",
+    "John Gill",
+    "https://biblehub.com/leviticus/11-21.htm"
    ],
    "differ": [],
    "other": []
@@ -154,10 +200,12 @@
   {
    "verse": 23,
    "end": 23,
-   "meaning": "All other flying, creeping insects were detestable and could not be eaten. God clearly marked the boundary so the people would not guess or invent their own rules about what was pure.",
+   "meaning": "Every other kind of winged, crawling insect was strictly forbidden as food. Unless a flying insect had the distinct leaping legs described in the previous verse, it was considered detestable. God placed a clear line between the allowed jumping locusts and all other crawling insects.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley"
+    "Wesley",
+    "Benson",
+    "Ellicott",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -165,19 +213,29 @@
   {
    "verse": 24,
    "end": 24,
-   "meaning": "Touching the dead body of any unclean creature made an Israelite ceremonially unclean until evening. Ceremonial uncleanness was a temporary state that kept someone away from the tabernacle and fellowship with others. The limit lasting only until sunset reminded them that God always provides a way to restore fellowship.",
+   "meaning": "Touching the dead body of any unclean creature made a person ceremonially defiled until evening. This was not a moral sin, but an outward condition of uncleanness that temporarily kept the person from the tabernacle. The sunset marked the start of a new day in Israel, ending the time of separation.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
+    "John Gill",
+    "Tyndale Study Notes",
     "https://biblehub.com/q/Leviticus_11_27_Clean_vs_unclean_animals.htm"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Popular modern teaching",
+     "view": "Some modern teachers view the rule of being unclean until evening primarily as a public health quarantine that prevented the spread of germs from decaying carcasses.",
+     "sources": [
+      "https://www.studylight.org/commentary/leviticus/11-4.html",
+      "https://www.blueletterbible.org/comm/guzik_david/study-guide/leviticus/leviticus-11.cfm"
+     ]
+    }
+   ]
   }
  ],
  "problems": [
-  "v. 7: removed sources ['Calvin']",
-  "v. 17: removed sources ['Wesley']"
+  "v. 17: removed sources ['Wesley', 'Benson']",
+  "v. 24: removed sources ['Benson']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

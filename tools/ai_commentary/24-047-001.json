@@ -8,11 +8,12 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "The Lord gave Jeremiah a message against the Philistines before an Egyptian Pharaoh attacked their city of Gaza. God revealed this warning while the Philistines still felt safe and prosperous, showing that human peace cannot prevent divine judgment. The Egyptian attack would only be the beginning of their troubles, pointing forward to a much larger destruction.",
+   "meaning": "God gave Jeremiah a message of judgment against the ancient Philistines, who were longtime enemies of Israel. This message came before an Egyptian Pharaoh attacked their city of Gaza, showing that God warned of their ruin while they still felt secure. Pharaoh's strike was only a small prelude to the far greater disaster that was on its way.",
    "meaning_sources": [
-    "Matthew Henry",
     "Calvin",
-    "Jamieson-Fausset-Brown"
+    "John Gill",
+    "Matthew Henry",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -20,12 +21,12 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "The Lord compares the coming Babylonian army to a river overflowing its banks and sweeping down from the north like a massive flood. This unstoppable force will drown the land, destroying its wealth, crops, and cities along with everyone living in them. Faced with such complete ruin, the people will have no heart to fight and will only howl in terror.",
+   "meaning": "The Lord compares the coming Babylonian army to a river flooding over its banks and sweeping across the country. Coming from the north, this invading force would cover cities, farmlands, and homes completely. The devastation would be so sudden and deep that everyone living in the land would wail in terror.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Adam Clarke",
     "Jamieson-Fausset-Brown",
-    "Calvin",
-    "Adam Clarke"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -33,11 +34,12 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "The deafening noise of charging warhorses and rattling chariot wheels will strike total panic into the people. The terror will be so overwhelming that parents will flee for their lives without even looking back to help their own children. Their hands will hang limp and useless because all strength and courage have drained away.",
+   "meaning": "The thundering sound of charging horses and rattling war chariots strikes paralyzing fear into the people. In the rush to save their own lives, parents will flee in panic without turning back to help their children. Their hands will hang limp and useless because all courage and strength have vanished.",
    "meaning_sources": [
-    "Jamieson-Fausset-Brown",
     "Calvin",
-    "Adam Clarke"
+    "Ellicott",
+    "Geneva Notes",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -45,12 +47,12 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "The set day of judgment has arrived to bring an end to the Philistine nation. The neighboring merchant cities of Tyre and Sidon will lose every ally who might have helped them resist the invaders. The Lord Himself is destroying the remnant of the Philistines, whose ancestors originally came from the island region of Caphtor.",
+   "meaning": "The Lord set a specific time to bring an end to the Philistines, who had originally migrated from the island of Caphtor, known today as Crete. Their fall would also cut off help from the neighboring northern cities of Tyre and Sidon, leaving them without any allies. No human alliance can hold together when God determines that the day of reckoning has arrived.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
     "Adam Clarke",
-    "Calvin"
+    "Benson",
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -58,11 +60,12 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "The people of Gaza and Ashkelon shave their heads and cut their skin in extreme grief, following pagan customs of mourning. Their low coastal plains will be wiped out, leaving the surviving cities silent and desolate. Jeremiah asks how long they will continue gashing themselves over a disaster they cannot avoid or undo.",
+   "meaning": "The survivors in Gaza and Ashkelon show overwhelming sorrow through ancient mourning rituals, shaving their heads and cutting their bodies in grief. Ashkelon is silenced, completely crushed and left speechless by the disaster. The question asks how long this agonizing mourning will go on, showing that their sorrows will not soon pass away.",
    "meaning_sources": [
-    "Jamieson-Fausset-Brown",
     "Adam Clarke",
-    "Calvin"
+    "Calvin",
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -70,11 +73,12 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "A desperate cry goes out to the sword of the Lord, begging it to stop its slaughter and go back into its scabbard to rest. This plea expresses deep sorrow over the agony and horrors of war, longing for peace. The invading army is spoken of as God's own sword carrying out His judgment.",
+   "meaning": "A dramatic cry rings out, pleading with God's sword of judgment to stop fighting and return to its sheath. This plea begs for the destruction, killing, and misery of war to finally be quiet. It captures the deep longing of people caught in wartime for bloodshed to cease.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
-    "Calvin"
+    "Ellicott",
+    "John Gill",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -82,17 +86,18 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "The sword cannot stop because the Lord Himself has commanded it to march forward. God gave it a direct assignment against the city of Ashkelon and the entire Philistine seacoast, so no human plea can turn it back. When the Lord sets His judgment in motion against sin, it will not rest until its work is finished.",
+   "meaning": "The sword cannot rest because the Lord Himself gave it orders to carry out His justice along the Mediterranean coastland. God specifically assigned this mission against cities like Ashkelon, so no human plea can stop it until His purpose is finished. The passage reminds readers that the Lord oversees all history and holds every nation accountable.",
    "meaning_sources": [
-    "Matthew Henry",
     "Adam Clarke",
     "Calvin",
-    "Jamieson-Fausset-Brown"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

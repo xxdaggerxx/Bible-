@@ -8,31 +8,23 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "The psalmist asks why God feels so far away during painful moments. When hard times hit, the Lord can seem to hide His face or stand back like a quiet spectator. God's people are not wrong to feel this sorrow, and this honest question brings their hurt directly to Him in prayer.",
+   "meaning": "The writer cries out because God seems absent when trouble strikes. God is never truly far away, but when He delays His help, His people can feel abandoned. The psalmist brings these painful feelings straight to the Lord in honest prayer.",
    "meaning_sources": [
     "Matthew Henry",
-    "Calvin",
-    "Spurgeon (Treasury of David)"
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Catholic and Orthodox",
-     "view": "In the ancient Greek and Latin translations used in Catholic and Orthodox Bibles, Psalms 9 and 10 are joined together as one single psalm.",
-     "sources": [
-      "Matthew Henry",
-      "Adam Clarke",
-      "Keil & Delitzsch"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 2,
    "end": 2,
-   "meaning": "A proud, wicked person uses his power to hunt down and abuse the poor. The psalmist asks God to turn those very traps back onto the schemers who made them. It is right and just for bullies to get caught in their own cruel plots.",
+   "meaning": "Proud people chase down the poor and helpless with cruel force. The psalmist asks God to turn their evil traps back onto their own heads. God's justice often causes evil plans to catch the very people who made them.",
    "meaning_sources": [
-    "Matthew Henry"
+    "Matthew Henry",
+    "Adam Clarke",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -40,64 +32,7 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "The wicked man openly brags about his greedy cravings and sinful success. Instead of honoring God, he praises other selfish people and despises the Lord. He values money and selfish desire far more than God's approval.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Geneva Notes"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 4,
-   "end": 4,
-   "meaning": "Deep pride keeps the wicked man from seeking God or asking Him for help. He is too stubborn to bend his knee, and his daily plans leave no room for God at all. He lives in practice as if the Lord does not exist or has no say over his life.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 5,
-   "end": 5,
-   "meaning": "The wicked man seems to succeed in all his ways, which makes him reckless and overconfident. Because God does not punish him right away, he treats God's laws as distant rules that do not matter to him. He sneers at his enemies, wrongly believing no one can ever bring him down.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch",
-    "Adam Clarke"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 6,
-   "end": 6,
-   "meaning": "In his heart, the wicked man boasts that nothing can ever shake his comfort or bring him ruin. His continuous success tricks him into thinking his good fortune will last forever. Such false security blinds him to the fact that all human pride will come to an end.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 7,
-   "end": 7,
-   "meaning": "The mouth of the wicked is filled with curses, lies, and threats. Beneath his words hide harmful schemes ready to cause misery and trouble for others. What comes out of his mouth simply shows the deep malice living in his heart.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Wesley"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 8,
-   "end": 8,
-   "meaning": "The oppressor acts like a bandit hiding near village roads to ambush innocent travelers. He watches quietly for helpless victims who cannot defend themselves. He hides his actions not out of shame, but so his violent traps will work without warning.",
+   "meaning": "The wicked person openly brags about getting whatever evil things he desires. Instead of honoring God, he praises greedy people who take what is not theirs, while despising the Lord. Living for selfish desire always leads to turning away from God.",
    "meaning_sources": [
     "Matthew Henry",
     "Wesley",
@@ -107,31 +42,69 @@
    "other": []
   },
   {
+   "verse": 4,
+   "end": 4,
+   "meaning": "A proud person holds his head high and refuses to seek God or ask for His help. He plans his whole life as if God does not exist at all. Pride blinds people to their constant need for their Maker.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Benson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The wicked person seems to succeed in everything he does, which makes him reckless. Because God's judgments seem distant and unseen, he never worries about them and laughs at anyone who opposes him. Worldly success can lull sinners into a false sense of safety.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Benson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The sinner assures his own heart that his good fortune will never end. He convinces himself that trouble will never touch him or his family. Those who feel most secure in their sins are often closest to ruin.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Benson",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The speech of the ungodly person is packed with lies, curses, and hurtful words. Even when his words sound polite, cruelty and harm are hiding just under his tongue. What comes out of a person's mouth reveals what is really inside the heart.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The wicked person acts like a bandit lurking along roads near quiet villages. He hides in secret corners, waiting to attack and kill innocent travelers who have no protection. Evil loves secrecy because it fears exposure and accountability.",
+   "meaning_sources": [
+    "Wesley",
+    "Adam Clarke",
+    "Benson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
    "verse": 9,
    "end": 9,
-   "meaning": "He is compared to a hungry lion crouching in the thick brush, waiting to leap on its prey. He also acts like a hunter spreading a net to drag away the poor. These word pictures show just how cruel and calculating his attacks on godly people are.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Keil & Delitzsch"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 10,
-   "end": 10,
-   "meaning": "The predator crouches down low to hide his strength until the moment is right. Then he strikes, and the helpless victim is crushed beneath his power. Even when such wicked people act quiet or humble, their only goal is to ruin the weak.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Wesley"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 11,
-   "end": 11,
-   "meaning": "The wicked man reassures himself by claiming God has forgotten and will never notice what he does. Because the Lord does not strike immediately, the sinner foolishly thinks heaven is blind to his crimes. He misreads God's patience as permission to keep doing evil.",
+   "meaning": "Here the oppressor is compared to a stalking lion and a hunter setting traps. He hunts down the poor and drags them away like helpless prey caught in a net. Sin turns human beings into predators who feed on the vulnerable.",
    "meaning_sources": [
     "Matthew Henry",
     "Jamieson-Fausset-Brown"
@@ -140,13 +113,37 @@
    "other": []
   },
   {
-   "verse": 12,
-   "end": 12,
-   "meaning": "The psalmist calls on the Lord to rise up and show His mighty power. He pleads with God not to forget the humble, hurting people who are being mistreated. Real faith boldly asks God to step into human history when all earthly help fails.",
+   "verse": 10,
+   "end": 10,
+   "meaning": "The predator crouches low to hide his strength until he suddenly pounces. His victims are overwhelmed and crushed by his violent power. The helpless often suffer under the sheer force of ruthless oppressors.",
+   "meaning_sources": [
+    "Wesley",
+    "Jamieson-Fausset-Brown",
+    "Benson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "The wicked man excuses his violence by telling himself that God is blind or indifferent. Because God does not strike him down immediately, he assumes the Lord will never call him to account. Mistaking God's patience for blindness is a deadly error.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch",
-    "Adam Clarke"
+    "Jamieson-Fausset-Brown",
+    "Benson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "The psalmist urgently calls on God to take action and raise His powerful hand. He pleads with the Lord not to overlook the humble sufferers who have no other defender. Believers can boldly invite God to intervene when the vulnerable are wronged.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -154,10 +151,10 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "The psalmist asks why evil men are allowed to despise God and boast that they will never be judged. The sinner tells himself that God will never call him to give an account for what he has done. Yet God's delay is simply His patience giving room before the day of judgment arrives.",
+   "meaning": "The writer wonders why the wicked person dares to insult God by thinking he will never be punished. The oppressor treats God's patience as proof that no judgment is coming. God allows this delay for a time, but a day of reckoning will surely arrive.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke"
+    "Geneva Notes"
    ],
    "differ": [],
    "other": []
@@ -165,11 +162,11 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "God truly sees all the pain, grief, and mischief that bullies cause, and He takes note of it to repay them with His own hand. Helpless people, like orphans who have no human protector, can safely entrust their lives to Him. The Lord has always been a faithful father and helper to the defenseless.",
+   "meaning": "In reality, God sees every bit of cruelty and sorrow that innocent people endure. He records it all and will use His own hand to punish evil and bring relief. Those who have no family or protector can safely hand their lives over to Him.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley",
-    "Adam Clarke"
+    "Adam Clarke",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -177,11 +174,11 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "The prayer asks God to break the arm of the wicked, which means taking away their power to harm others. It calls on the Lord to search out all their evil deeds until every wrong is judged and stopped. When God removes a tyrant's strength, the oppressed are finally set free.",
+   "meaning": "The arm represents power, so asking God to break it means stripping the violent man of his ability to do harm. The prayer asks God to search out all hidden evil until it is completely removed from the land. When God judges, He deals thoroughly with every wrong.",
    "meaning_sources": [
     "Matthew Henry",
     "Wesley",
-    "Adam Clarke"
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -189,11 +186,11 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "The Lord rules as the eternal King forever, outlasting every earthly empire and ruler. Just as He cleared wicked nations out of the Promised Land in past times, He will clear all oppressors from the earth. Believers can take comfort knowing God's royal throne will never fall.",
+   "meaning": "The Lord remains the eternal King over the whole earth, no matter how strong human rulers seem. Just as He drove wicked nations out of the Promised Land, He will sweep away all oppressors in the end. God's people find peace knowing that His throne can never be shaken.",
    "meaning_sources": [
     "Matthew Henry",
     "Wesley",
-    "Adam Clarke"
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -201,10 +198,12 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "The Lord hears even the quiet desires and unexpressed sighs of humble hearts. He first prepares their hearts to pray and gives them strength, and then He leans down to listen. God never turns away the sincere cries of those who lean on Him.",
+   "meaning": "The Lord hears the deep longings of the afflicted even before they find the words to speak. He first gives strength and faith to their hearts to pray, and then He leans down to listen. Every true cry for help begins with God working inside our hearts.",
    "meaning_sources": [
     "Matthew Henry",
-    "Adam Clarke"
+    "Wesley",
+    "Adam Clarke",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -212,26 +211,21 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "God will defend the fatherless and crushed victims, giving them full justice. When He steps forward, mortal bullies made of earthly dust will no longer be able to terrorize anyone. Human oppressors are weak and temporary compared to the living God of heaven.",
+   "meaning": "God steps in to bring justice to orphans and the downtrodden. When the true King gives His verdict, proud mortal men made from dust will never be able to terrify anyone again. Earthly bullies are frail creatures who must ultimately bow to the Lord of heaven.",
    "meaning_sources": [
     "Matthew Henry",
-    "Keil & Delitzsch",
-    "Wesley"
+    "Wesley",
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 9: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 10: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 11: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 13: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 17: removed sources ['Spurgeon (Treasury of David)']"
+  "v. 9: removed sources ['Benson']",
+  "v. 13: removed sources ['Benson']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

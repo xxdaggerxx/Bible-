@@ -8,11 +8,12 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Believers who put their trust in the Lord are compared to Mount Zion, the hill in Jerusalem where the temple stood. Just as that holy mountain cannot be shaken or moved, those who rely on God stand firm and secure. Their faith rests on God's unchanging promises rather than their own power. We can face life's storms with calm assurance because God keeps those who depend on Him.",
+   "meaning": "God's people find complete security by placing their confidence in the Lord instead of their own strength. Mount Zion stood firm as a rocky hill, but it was even stronger because of God's holy promise. Just like that mountain cannot be shaken by storms, believers who lean on God will never be permanently overthrown.",
    "meaning_sources": [
     "Matthew Henry",
+    "Benson",
     "Spurgeon (Treasury of David)",
-    "https://enduringword.com/bible-commentary/psalm-125/"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -20,16 +21,17 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Hills and ridges encircle Jerusalem, acting as natural barriers to shelter and defend the city. In the same way, the Lord Himself surrounds His people on every side to protect them from harm. This divine guard is not temporary, but continues now and into eternity. Believers can rest in peace knowing that nothing can reach them unless God permits it.",
+   "meaning": "Jerusalem was nestled among higher hills that offered natural protection against harsh winds and attacking enemies. In the same way, the Lord Himself surrounds His people on every side to protect them from harm. This shelter is not temporary, but guards them through every danger into eternity.",
    "meaning_sources": [
-    "Matthew Henry",
-    "https://enduringword.com/bible-commentary/psalm-125/"
+    "Adam Clarke",
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "Augustine interpreted the mountains surrounding Jerusalem as a figure of the holy Scriptures, through which God provides guidance and protection to believers.",
+     "view": "Augustine saw the mountains surrounding Jerusalem as a picture of the holy Scriptures, which provide divine help and protection to believers.",
      "sources": [
       "https://www.newadvent.org/fathers/1801125.htm"
      ]
@@ -39,16 +41,18 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "God promises that oppressive rulers will not hold permanent power over the land given to His people. Wicked leaders may trouble God's people for a season, but God will not allow that heavy burden to remain indefinitely. He limits the trial so that the righteous are not driven by despair to commit evil themselves. God carefully measures our trials so they do not crush our faith.",
+   "meaning": "God may allow wicked rulers or hard times to test His people for a season, but He will not let evil keep permanent control over them. He knows how much pressure people can handle before they lose heart and turn to sinful shortcuts to rescue themselves. Therefore, God steps in and ends the oppression before His followers are pushed into doing wrong.",
    "meaning_sources": [
+    "Matthew Henry",
+    "Benson",
     "Jamieson-Fausset-Brown",
-    "Matthew Henry"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "Many modern scholars interpret the scepter of wickedness as foreign imperial rule, such as Persian or Samaritan domination over Judea during the rebuilding after the exile.",
+     "view": "Many scholars understand the scepter of wickedness as the heavy rule of foreign conquerors, such as Persian-backed leaders during the time of Nehemiah.",
      "sources": [
       "https://classic.net.bible.org/bible.php/d/xml/bible.php?book=Psa&chapter=125",
       "https://biblehub.com/commentaries/psalms/125-3.htm"
@@ -59,10 +63,12 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "The psalmist prays for the Lord to pour out His kindness on people who are sincere and devoted to Him. Being upright in heart means having genuine faith and honesty before God, rather than merely putting on an outward show. This prayer reminds believers that God delights to support those whose lives are aligned with His truth.",
+   "meaning": "The psalmist asks God to pour out His kindness on those whose hearts are genuinely devoted to Him. These upright people are not perfect, but their lives are made clean by God's grace and they remain loyal during hard trials. Believers can confidently pray for God to bless everyone who seeks to walk faithfully before Him.",
    "meaning_sources": [
-    "Matthew Henry",
-    "https://biblehub.com/commentaries/pulpit/psalms/125.htm"
+    "Adam Clarke",
+    "Benson",
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -70,20 +76,26 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "Those who abandon the straight path of obedience to follow dishonest, crooked ways will face the same judgment as open evildoers. The Lord will lead away hypocrites and pretenders, removing them from among His flock. The psalm concludes with a warm blessing of lasting peace upon all who belong to God's true family.",
+   "meaning": "People who leave the straight path of God's commands to follow deceitful shortcuts will share the exact same end as open evildoers. God will lead away these unfaithful hypocrites to judgment, purifying His congregation. The song closes with a blessing asking God to grant quiet rest and safety to His true people.",
    "meaning_sources": [
-    "Jamieson-Fausset-Brown",
-    "Matthew Henry"
+    "Matthew Henry",
+    "Benson",
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine understood the final blessing of peace as pointing directly to Christ, urging believers never to break the unity of the church.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801125.htm"
+     ]
+    }
+   ]
   }
  ],
- "problems": [
-  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
-  "v. 5: removed sources ['Spurgeon (Treasury of David)']"
- ],
+ "problems": [],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }
