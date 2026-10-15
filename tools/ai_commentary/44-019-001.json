@@ -8,12 +8,12 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Paul traveled along the inland roads through the high country of Asia Minor and arrived at Ephesus, keeping his earlier promise to return. Meanwhile, Apollos was preaching in Corinth, building on the foundation Paul had laid there. When Paul reached Ephesus, he met a small group of disciples whose knowledge of the Christian faith was still incomplete.",
+   "meaning": "Paul traveled along the inland roads of the region and arrived in the major port city of Ephesus, keeping a earlier promise to return. Apollos had already departed to minister in Corinth across the sea. In Ephesus, Paul came across a small group of religious followers who were known as disciples.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
+    "Ellicott",
     "Jamieson-Fausset-Brown",
-    "Barnes",
-    "Robertson"
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -21,25 +21,40 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Paul noticed that something was missing in their spiritual life, so he asked if they had received the Holy Spirit when they believed. They replied that they had not even heard that the Holy Spirit was given. While they knew about God's Spirit from the Old Scriptures, they did not know that the Spirit had now been poured out on believers since Jesus rose and ascended.",
+   "meaning": "Paul noticed that something was missing in the spiritual life of these disciples and asked whether they had received the Holy Spirit. They answered that they had never even heard that the Holy Spirit had been given. They likely knew about the Spirit from the Old Testament, but they did not know that God's promised Spirit had already been poured out at Pentecost.",
    "meaning_sources": [
+    "John Gill",
+    "Ellicott",
     "Matthew Henry",
-    "Barnes",
-    "Adam Clarke",
-    "Robertson"
+    "Barnes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Every true believer receives the Holy Spirit at conversion, so these events reflect the unique historical spread of the gospel rather than a regular two-step experience.",
+     "sources": [
+      "Calvin"
+     ]
+    },
+    {
+     "tradition": "Many evangelicals",
+     "view": "These men were not yet born-again Christians because anyone who belongs to Christ already has the Holy Spirit dwelling inside them.",
+     "sources": [
+      "Scofield"
+     ]
+    }
+   ],
    "other": []
   },
   {
    "verse": 3,
    "end": 3,
-   "meaning": "Surprised by their reply, Paul asked what baptism they had received, since Christian baptism includes the name of the Holy Spirit. They answered that they had only received the baptism of John the Baptist. This showed that they had accepted John's call to turn from sin, but had not yet moved into the full life of the church.",
+   "meaning": "Paul asked what baptism they had received, since Christian baptism includes the name of the Father, Son, and Holy Spirit. The men replied that they had only received John the Baptist's baptism. This showed Paul that their instruction stopped before the full Christian message had reached them.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Ellicott",
+    "Wesley",
     "Barnes",
-    "Robertson",
-    "Geneva Notes"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -47,12 +62,12 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "Paul explained that John's baptism was focused on repentance, which means feeling true sorrow for sin and turning back to God. John had always told his hearers that his job was to prepare the way, and that they must put their trust in the One coming after him, who is Jesus. John was the messenger pointing forward, but Jesus is the Savior who actually gives new life.",
+   "meaning": "Paul explained that John's baptism was meant to prepare people by calling them to turn away from sin and point them forward. John told everyone to put their trust in the greater One coming after him. That promised Savior was Jesus, whose arrival fulfilled everything John announced.",
    "meaning_sources": [
     "Matthew Henry",
+    "Wesley",
     "Jamieson-Fausset-Brown",
-    "Barnes",
-    "Robertson"
+    "Barnes"
    ],
    "differ": [],
    "other": []
@@ -60,12 +75,12 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "After hearing Paul's explanation, these men gladly placed their faith in Jesus and were baptized into His name. This was not a needless repetition of baptism, but their very first Christian baptism, since John's ceremony had only pointed ahead to the Savior. By doing this, they publicly joined themselves to Christ and His kingdom.",
+   "meaning": "Once the men understood the full truth about Jesus, they were baptized in the name of the Lord Jesus. This brought them into the full fellowship and life of the Christian church. This is the only place in the New Testament where people who had received John's baptism were baptized again.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
     "Adam Clarke",
-    "Robertson"
+    "Tyndale Study Notes",
+    "Robertson",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -73,11 +88,12 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "Paul placed his hands on them in prayer, and the Holy Spirit came upon them with powerful, visible results. They began speaking in languages they had never learned and prophesying, which means speaking out God's truth with special boldness and insight. These gifts showed everyone that the same gospel that started in Jerusalem was now firmly established in Ephesus.",
+   "meaning": "Paul placed his hands on them in prayer, and the Holy Spirit came upon them with power. They began speaking in languages they had never learned and proclaiming God's message with inspired speech. This visible sign confirmed that these believers were now fully included in the body of Christ, just like the believers at Pentecost.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Adam Clarke",
-    "Robertson"
+    "Tyndale Study Notes",
+    "John Gill",
+    "Robertson",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -85,9 +101,11 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "This whole group was made up of about twelve men. Though they had started out with very limited knowledge, God brought them into the full truth and used them as an early core for the church in Ephesus.",
+   "meaning": "The entire group consisted of about twelve men. They became the first core group of believers in the growing church at Ephesus.",
    "meaning_sources": [
-    "Matthew Henry"
+    "John Gill",
+    "Barnes",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -95,12 +113,12 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "Paul followed his usual custom by going first to the Jewish synagogue, where he spoke boldly for three months. He reasoned with the people and tried to persuade them using the Scriptures, explaining how Jesus brings the kingdom of God, which is God's rightful rule over human hearts. The leaders listened to him far longer than people had in many other cities.",
+   "meaning": "Paul went into the local Jewish synagogue and preached with boldness every Sabbath for three months. He reasoned with the people and tried to persuade them that Jesus had inaugurated God's promised rule. The listeners in Ephesus tolerated his message far longer than synagogues in other cities had.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Robertson",
-    "Calvin"
+    "Calvin",
+    "Ellicott",
+    "Adam Clarke",
+    "Barnes"
    ],
    "differ": [],
    "other": []
@@ -108,12 +126,11 @@
   {
    "verse": 9,
    "end": 9,
-   "meaning": "Some listeners in the synagogue became stubborn, refused to believe, and openly spoke evil of 'the Way,' which was an early name for the Christian faith. Seeing their hardened opposition, Paul withdrew from the synagogue and took the believers with him. He began holding daily discussions and teaching in the public lecture hall of a man named Tyrannus.",
+   "meaning": "Eventually, some of the listeners became stubborn, refused to believe, and openly insulted the Christian way of life in front of the crowd. Paul decided to withdraw the believers from the synagogue so they would not be pulled away. He rented or borrowed the lecture hall of a teacher named Tyrannus and taught there every day.",
    "meaning_sources": [
     "Matthew Henry",
+    "Wesley",
     "Barnes",
-    "Robertson",
-    "Calvin",
     "Geneva Notes"
    ],
    "differ": [],
@@ -122,38 +139,25 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "Paul continued teaching in this lecture hall every day for two full years. Because Ephesus was a major center for trade and travel, many visitors heard the gospel and carried it to neighboring towns and villages. As a result, almost everyone living in the province of Asia, both Jews and Greeks, heard the message about the Lord Jesus.",
+   "meaning": "Paul kept up this daily teaching routine for two full years in the hall. Because Ephesus was a major trade center, travelers carried the message to the surrounding towns. As a result, both Jews and Greeks throughout the entire Roman province of Asia heard the gospel.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Robertson",
-    "Calvin"
+    "Tyndale Study Notes",
+    "Adam Clarke",
+    "Calvin",
+    "Barnes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 11,
-   "end": 11,
-   "meaning": "God chose to perform extraordinary miracles through Paul during this time in Ephesus. These signs went beyond the ordinary course of nature to capture the attention of a city deeply tangled in pagan magic and superstition.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke",
-    "Robertson"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 12,
    "end": 12,
-   "meaning": "People even carried cloths, such as work aprons and sweat-rags Paul used while laboring at his craft, and placed them on the sick. When these cloths touched the sick, physical diseases were healed and evil spirits left them. The cloths themselves had no magical power, but God graciously met people's simple faith to show that the healing came from Him alone.",
+   "meaning": "God performed unusual and astonishing miracles through Paul while he ministered in Ephesus. People carried away work aprons and face cloths that Paul had used, and when these touched the sick, illnesses were healed and evil spirits were driven out. The power came entirely from God, who met people in their simple faith to show that Christ was greater than any local magic.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke",
-    "Robertson"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "John Gill",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -161,12 +165,12 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "Some traveling Jewish exorcists, who made their living going from town to town trying to drive out demons with spoken charms, attempted to use the name of Jesus. Seeing the power in Paul's ministry, they commanded a demon to leave by saying they bound it by the Jesus whom Paul preached. They treated the Savior's holy name like a lucky spell rather than placing personal faith in Him.",
+   "meaning": "Some wandering Jewish exorcists made their living by going from town to town trying to cast out demons with spoken charms. Seeing Paul's success, they tried using the name of Jesus like a magic spell. They commanded the evil spirits to leave by the authority of Jesus whom Paul preached.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes",
-    "Adam Clarke",
-    "Robertson"
+    "Wesley",
+    "Robertson",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -174,12 +178,12 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "Among those doing this were the seven sons of Sceva, a Jewish chief priest. These young men had turned away from the sacred work of their family to wander about as superstitious fortune-tellers and conjurers for money.",
+   "meaning": "Seven sons of a Jewish chief priest named Sceva were among those attempting this practice. Sceva likely claimed a high priestly title to give himself and his sons more prestige in their magical trade.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
+    "Ellicott",
     "Adam Clarke",
-    "Robertson"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -187,12 +191,11 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "The evil spirit spoke back through the possessed man, saying that it knew Jesus and recognized Paul, but had no idea who these men were. The demon knew the true authority of Christ and respected Paul as His servant, but it had no fear of pretenders who possessed no real relationship with God.",
+   "meaning": "The evil spirit inside the possessed man spoke back and refused to obey them. The demon acknowledged that it recognized Jesus' authority and was well aware of Paul, but demanded to know who these men thought they were. The spirit knew they were impostors who had no real faith or authority in Christ.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
     "Adam Clarke",
-    "Robertson"
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -200,12 +203,12 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "The man possessed by the evil spirit attacked the brothers with fierce, unnatural strength. He sprang upon them, overpowered all of them, and beat them so violently that they ran out into the street bleeding and with their clothes torn off.",
+   "meaning": "The man controlled by the demon sprang violently on the brothers with terrifying strength. He battered them, tore off their clothes, and overpowered them so completely that all seven fled out of the house naked and bleeding. This shocking defeat proved that Satan's power cannot be broken by mere formulas without true faith.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
+    "Calvin",
     "Adam Clarke",
-    "Robertson"
+    "Ellicott",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -213,12 +216,12 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "News of this terrifying event quickly spread to all the Jews and Greeks living across Ephesus. A deep, reverent fear fell upon the whole city, because everyone realized that the name of Jesus was holy and could not be treated lightly. Because of this defeat of false exorcists, the name of the Lord Jesus was held in the highest honor.",
+   "meaning": "Word of what happened to Sceva's sons quickly spread among all the Jews and Greeks living in Ephesus. A deep and holy reverence fell over the whole city. People realized that Jesus was not a charm to be trifled with, and his name was held in the highest honor.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke",
-    "Robertson"
+    "Benson",
+    "Calvin",
+    "John Gill",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -226,12 +229,12 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "Many people who had already believed were deeply stirred in their consciences and came forward to confess their sins. They openly revealed the dark, sinful practices and superstitious habits they had secretly kept from their past life.",
+   "meaning": "Many people who had already accepted faith in Christ came forward to openly confess wrong things they had kept hidden. Seeing the reality and danger of demonic power drove them to clean out all secret ties to the occult. True repentance led them to bring their private sins into the light.",
    "meaning_sources": [
+    "Wesley",
+    "Robertson",
     "Matthew Henry",
-    "Barnes",
-    "Calvin",
-    "Robertson"
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -239,13 +242,12 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "Many people who had practiced sorcery brought their scrolls of magic formulas and burned them together in front of the whole public. When the value of the books was added up, the total came to fifty thousand silver coins, representing a huge fortune of many thousands of days of wages. By burning them rather than selling them, they broke completely with their old life and protected others from being led into sin.",
+   "meaning": "A large number of people who practiced sorcery gathered up their costly spell books and burned them in public. When the value of the destroyed scrolls was added up, it came to fifty thousand silver coins, equal to thousands of days of wages. Burning the books proved they were truly done with their old way of life and refused to let anyone else be harmed by them.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke",
-    "Robertson",
-    "Calvin"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Wesley",
+    "Barnes"
    ],
    "differ": [],
    "other": []
@@ -253,13 +255,12 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "In this powerful way, the word of the Lord continued to spread and win great victories in Ephesus. The gospel proved strong enough to overcome deep-seated superstitions, demonic opposition, and the greed of sinful businesses, genuinely transforming people's everyday lives.",
+   "meaning": "Through these striking events, the message of the Lord grew steadily in influence and won great victories over darkness. The gospel proved itself far stronger than the deep-rooted superstitions and magic of the city.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke",
-    "Robertson",
-    "Calvin"
+    "Tyndale Study Notes",
+    "Calvin",
+    "John Gill",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -267,13 +268,14 @@
  ],
  "problems": [
   "v. 2: dropped differ point (Pentecostal): no checkable source",
-  "v. 2: dropped differ point (Baptist): no checkable source",
-  "v. 2: dropped differ point (Reformed and Presbyterian): no checkable source",
-  "v. 2: dropped other point (Modern scholarship): no checkable source",
-  "v. 2: removed sources ['AG Position Paper', 'AG Enrichment Journal', 'Precept Austin', 'Constable', 'Ligonier', 'NET Bible notes']",
-  "v. 6: removed sources ['Calvin']",
-  "v. 7: removed sources ['Adam Clarke', 'Gill']",
-  "v. 12: removed sources ['Ellicott']"
+  "v. 2: removed sources ['enrichmentjournal.ag.org', 'ag.org', 'learn.ligonier.org/devotionals/when-spirit-baptism', 'preceptaustin.org/acts-19-commentary']",
+  "v. 6: dropped differ point (Pentecostal): no checkable source",
+  "v. 6: dropped differ point (Many evangelicals): no checkable source",
+  "v. 6: removed sources ['enrichmentjournal.ag.org', 'ag.org', 'learn.ligonier.org/devotionals/when-spirit-baptism', 'preceptaustin.org/acts-19-commentary']",
+  "v. 11: dropped other point (Popular modern teaching): no checkable source",
+  "v. 11: removed sources ['enduringword.com/bible-commentary/acts-19/']",
+  "v. 15: removed sources ['enduringword.com/bible-commentary/acts-19/']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

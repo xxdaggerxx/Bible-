@@ -8,12 +8,12 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "News traveled fast. Believers all over Judea heard that Gentiles (people who were not Jewish) had welcomed God's word, the good news about Jesus. This was a big surprise. Many Jewish believers had assumed Gentiles would not be open to the gospel.",
+   "meaning": "News spread quickly throughout Judea that non-Jewish people had accepted God's message. This was startling to many Jewish believers because Gentiles had long been viewed as outsiders to God's covenant promises. The apostles and local believers were eager to learn how this sudden change had taken place.",
    "meaning_sources": [
     "Matthew Henry",
+    "Jamieson-Fausset-Brown",
     "Barnes",
-    "Robertson",
-    "https://enduringword.com/bible-commentary/acts-11/"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -21,25 +21,34 @@
   {
    "verse": 2,
    "end": 3,
-   "meaning": "When Peter got back to Jerusalem, some Jewish believers who held tightly to circumcision and the Jewish law challenged him. They were upset that he went into a Gentile's home and ate with Gentiles. Jewish custom saw that as making a person unclean. Several commentators point out that the church felt free to question Peter. So they did not see him as a ruler who was above correction.",
+   "meaning": "When Peter returned to Jerusalem, Jewish believers sharply challenged his conduct. Their complaint was not about his preaching, but that he had entered a Gentile home and shared a meal with uncircumcised men, which broke traditional Jewish rules of separation. They were alarmed that he seemed to set aside centuries of sacred custom.",
    "meaning_sources": [
     "Matthew Henry",
     "Barnes",
-    "Adam Clarke",
-    "Calvin",
-    "Robertson"
+    "Tyndale Study Notes",
+    "John Gill"
    ],
    "differ": [],
-   "other": []
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "The Catholic Church teaches that Peter held supreme authority as the visible head of the universal church, even while answering questions from fellow believers.",
+     "sources": [
+      "Barnes",
+      "Adam Clarke"
+     ]
+    }
+   ]
   },
   {
    "verse": 4,
    "end": 4,
-   "meaning": "Peter did not get angry or pull rank. He simply told them what had happened, step by step. Telling the plain facts calmly is often the best way to clear up a misunderstanding.",
+   "meaning": "Peter did not take offense or pull rank as an apostle, but calmly shared the entire story in order. He knew that an honest, step-by-step account of what had happened was the best way to clear away misunderstanding. By explaining every event as it occurred, he showed that he was simply following God's lead.",
    "meaning_sources": [
     "Matthew Henry",
+    "Wesley",
     "Barnes",
-    "Wesley"
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -47,11 +56,12 @@
   {
    "verse": 5,
    "end": 6,
-   "meaning": "Peter retells the vision he had while praying in Joppa. He adds that the sheet came \"right down to me\" and that he studied it closely. This shows the vision was meant for him in particular. Peter later understood that it was really about people, not only about food.",
+   "meaning": "Peter explained that while praying in the coastal town of Joppa, God gave him a vision that paused his normal physical senses. He saw a large sheet lowered straight from heaven by its four corners, coming right down to him. When he looked inside, he saw all kinds of animals, wild beasts, reptiles, and birds.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Robertson",
-    "https://enduringword.com/bible-commentary/acts-11/"
+    "Wesley",
+    "Barnes",
+    "John Gill",
+    "Robertson"
    ],
    "differ": [],
    "other": []
@@ -59,9 +69,10 @@
   {
    "verse": 7,
    "end": 8,
-   "meaning": "A voice told Peter to kill and eat. Peter refused, because he had never eaten food the Law of Moses called unclean. By telling this, Peter shows his critics that he had felt exactly as they did.",
+   "meaning": "A heavenly voice told Peter to stand up, kill, and eat. Peter refused immediately, explaining that he had strictly kept Jewish food laws his entire life and had never let anything unclean touch his lips. Even when hungry, he was determined to remain faithful to what he had always believed God required.",
    "meaning_sources": [
-    "Matthew Henry"
+    "John Gill",
+    "Robertson"
    ],
    "differ": [],
    "other": []
@@ -69,22 +80,35 @@
   {
    "verse": 9,
    "end": 10,
-   "meaning": "God said not to call anything impure that He had made clean. God had changed the situation, so Peter could not be blamed for changing his mind. The vision came three times and then went back up into heaven. Both details showed it truly came from God.",
+   "meaning": "The voice answered from heaven a second time, telling Peter not to call unclean what God Himself has made clean. This exchange was repeated three times so Peter could have no doubt about the message. After that, the entire sheet with all the creatures was pulled back up into heaven.",
    "meaning_sources": [
-    "Matthew Henry"
+    "John Gill",
+    "Robertson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 11,
-   "end": 12,
-   "meaning": "At that very moment, men sent by Cornelius arrived. The Spirit told Peter to go with them without holding back. Some Bible copies read \"making no distinction\" between Jew and Gentile. Peter took six Jewish brothers along as witnesses, and they were standing there to back up his story.",
+   "end": 11,
+   "meaning": "At that very moment, three messengers arrived at the house where Peter was staying, having been sent from Caesarea. The exact timing showed that the vision was not a random dream, but God's way of preparing Peter for these unexpected visitors.",
    "meaning_sources": [
     "Matthew Henry",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "The Holy Spirit told Peter to go with the messengers without doubting or making any difference between Jews and Gentiles. Wisely anticipating that questions would be asked later, Peter took six Jewish Christian brothers along with him as companions and eyewitnesses. Together, all seven entered the Gentile home.",
+   "meaning_sources": [
     "Adam Clarke",
     "Robertson",
-    "https://biblehub.com/commentaries/pulpit/acts/11.htm"
+    "Tyndale Study Notes",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -92,12 +116,12 @@
   {
    "verse": 13,
    "end": 14,
-   "meaning": "Cornelius had seen an angel who told him to send for Peter. Peter would bring a message by which Cornelius and his whole household would be saved. So even a man who worshiped God still needed to hear about Jesus. The gospel is the means God uses to bring people to salvation.",
+   "meaning": "Cornelius told them that an angel had stood in his house and ordered him to send to Joppa for Peter. The angel explained that Peter would bring the message of the gospel, through which Cornelius and his entire family would be saved. Salvation means being rescued from the guilt and penalty of sin to receive eternal life with God.",
    "meaning_sources": [
-    "Matthew Henry",
     "Wesley",
-    "Robertson",
-    "Adam Clarke"
+    "Barnes",
+    "John Gill",
+    "Robertson"
    ],
    "differ": [],
    "other": []
@@ -105,11 +129,12 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "While Peter was still speaking, the Holy Spirit came on the Gentiles, just as He had come on the first believers at Pentecost. This settled the question. Peter rested his case on what God did, not on what he himself said. It was God's stamp of approval.",
+   "meaning": "Right as Peter began his message, the Holy Spirit came down on these Gentile listeners with the very same power experienced by the Jewish disciples on Pentecost. God did not wait for a ritual or human approval before giving His Spirit. This visible gift showed beyond doubt that God fully accepted them.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Robertson",
-    "https://enduringword.com/bible-commentary/acts-11/"
+    "Barnes",
+    "Ellicott",
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -117,11 +142,10 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "Peter remembered Jesus' promise: John baptized with water, but you will be baptized with the Holy Spirit. The Spirit is Christ's own gift. A minister can give the outward sign of water, but only Christ gives the inner work of the Spirit. Peter now saw that this promise was for all who believe, both Jews and Gentiles.",
+   "meaning": "Seeing this happen reminded Peter of what Jesus had promised before His ascension, that while John baptized with water, His followers would be baptized with the Holy Spirit. Peter realized that this promise was not meant only for Jews, but for anyone who believes. The spiritual cleansing given by Christ is what truly counts.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
     "Adam Clarke",
+    "Ellicott",
     "Robertson"
    ],
    "differ": [],
@@ -130,12 +154,12 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "God gave the Gentiles the same gift He gave the Jewish believers. He gave it because they believed, not because they were circumcised. So how could Peter refuse to baptize people God had already filled with His Spirit? Getting in the way of that would mean standing against God himself.",
+   "meaning": "Peter reasoned that since God gave these Gentiles the exact same gift He gave the apostles when they believed in Jesus, no human being had the right to stand in God's way. He was merely God's instrument, not the judge of who could receive grace. Welcoming them in baptism and fellowship was simply obeying what God had already done.",
    "meaning_sources": [
     "Matthew Henry",
     "Wesley",
-    "Adam Clarke",
-    "Barnes"
+    "Barnes",
+    "Calvin"
    ],
    "differ": [],
    "other": []
@@ -143,12 +167,13 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "The critics went quiet and began praising God. They saw that God had given Gentiles \"repentance unto life.\" Repentance means turning from sin to God, and it leads to new and eternal life. Repentance is God's gift: He changes a hard heart into a soft one.",
+   "meaning": "Hearing Peter's evidence silenced the critics and moved them to praise God. They celebrated the amazing news that God had granted Gentiles repentance unto life, which means turning from sin and false beliefs to receive everlasting life. God's clear working had overcome their long-held prejudices.",
    "meaning_sources": [
     "Matthew Henry",
-    "Calvin",
     "Wesley",
-    "Geneva Notes"
+    "Barnes",
+    "Calvin",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -156,12 +181,12 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "The story goes back to the believers who fled Jerusalem after Stephen was killed. They took the gospel to Phoenicia, Cyprus and Antioch. God used persecution meant to hurt the church to spread the good news. At first they spoke only to Jews, because they did not yet understand that Gentiles were included.",
+   "meaning": "The story now turns back to the believers who had fled Jerusalem during the wave of persecution that began after Stephen was killed. As they traveled north along the coast to Phoenicia, across to Cyprus, and over to Antioch, they shared the good news, but only with other Jews. They still did not realize that the gospel was intended for everyone.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes",
-    "Calvin",
-    "Geneva Notes"
+    "Jamieson-Fausset-Brown",
+    "Benson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -169,14 +194,12 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "Some believers from Cyprus and Cyrene began telling Greeks, meaning non-Jews, about the Lord Jesus. This was something new and bold. Ordinary believers, not apostles, were the ones who took this step. Jesus himself was the center of their message.",
+   "meaning": "A few of these scattered believers, originally from the island of Cyprus and the African city of Cyrene, took a bold new step when they reached Antioch. They began preaching the good news about the Lord Jesus directly to Greek Gentiles. This marked the very first open mission to non-Jewish people.",
    "meaning_sources": [
-    "Barnes",
-    "Adam Clarke",
-    "Robertson",
-    "Jamieson-Fausset-Brown",
     "Wesley",
-    "Matthew Henry"
+    "Jamieson-Fausset-Brown",
+    "Robertson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -184,13 +207,12 @@
   {
    "verse": 21,
    "end": 21,
-   "meaning": "\"The hand of the Lord\" means God's power working through them and opening people's hearts. Many believed and turned to the Lord. Real faith changes how a person lives, and that change comes from God, not from the preacher's skill.",
+   "meaning": "The hand of the Lord was with these preachers, meaning God's divine power worked directly through their message. Because God empowered their words, a large number of people believed the gospel and turned from their old idolatry to serve the true Lord. Human preaching only changes lives when God's power accompanies it.",
    "meaning_sources": [
     "Matthew Henry",
     "Wesley",
     "Barnes",
-    "Calvin",
-    "Adam Clarke"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -198,13 +220,12 @@
   {
    "verse": 22,
    "end": 22,
-   "meaning": "The church in Jerusalem heard the news and sent Barnabas to Antioch. He came from Cyprus himself and was known as a \"son of encouragement,\" so he was a wise choice. He went to look into the new work and to help it grow.",
+   "meaning": "When reports of this great revival reached the church in Jerusalem, the leaders chose Barnabas to travel to Antioch to see what was happening. Barnabas was an ideal messenger because he was known for his generous spirit and had family roots in Cyprus like several of the preachers. Jerusalem wanted to support and guide this new work rather than shut it down.",
    "meaning_sources": [
     "Jamieson-Fausset-Brown",
     "Barnes",
-    "Matthew Henry",
-    "Robertson",
-    "Geneva Notes"
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -212,46 +233,23 @@
   {
    "verse": 23,
    "end": 23,
-   "meaning": "Barnabas saw clear signs of God's grace (His free, undeserved kindness) in the new believers, and he was glad. He did not stir up arguments about circumcision. Instead he urged them all to stay close to the Lord with a firm, settled heart. New faith needs steady encouragement to last.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin",
-    "Robertson"
-   ],
-   "differ": [
-    {
-     "tradition": "Methodist",
-     "view": "God gives the grace, but believers must use it and keep holding on. Someone who stops clinging to the Lord can fall from grace and lose salvation.",
-     "sources": [
-      "Adam Clarke"
-     ]
-    }
-   ],
-   "other": []
-  },
-  {
-   "verse": 24,
-   "end": 24,
-   "meaning": "Luke explains why Barnabas acted this way. He was a good, kind and big-hearted man, full of the Holy Spirit and of faith. He rose above narrow prejudice, and many more people came to the Lord.",
+   "meaning": "When Barnabas arrived and saw the clear evidence of God's grace in the transformed lives of the converts, he was overjoyed. Living up to his name as an encourager, he urged everyone to remain steadfast and cling to the Lord with all their heart. He knew that genuine faith needs steady resolve when trials come.",
    "meaning_sources": [
     "Jamieson-Fausset-Brown",
-    "Matthew Henry",
+    "Calvin",
     "Barnes",
-    "Robertson"
+    "Ellicott"
    ],
    "differ": [],
    "other": []
   },
   {
-   "verse": 25,
-   "end": 26,
-   "meaning": "Barnabas went to Tarsus and searched for Saul. He brought him to Antioch, even though Saul might outshine him. For a whole year they taught the church and many others. In Antioch the believers were first called \"Christians,\" meaning followers of Christ, the Anointed One. Who first used the name is not certain, but believers came to wear it with honor.",
+   "verse": 24,
+   "end": 24,
+   "meaning": "Barnabas was a good man, guided by the Holy Spirit and filled with strong faith in God. Because he was humble and lacked jealousy, his ministry bore rich fruit, and even more people were brought to faith in the Lord. His gracious character helped the young church flourish.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "Robertson",
     "Jamieson-Fausset-Brown",
+    "Calvin",
     "Barnes",
     "Adam Clarke"
    ],
@@ -259,15 +257,40 @@
    "other": []
   },
   {
+   "verse": 25,
+   "end": 26,
+   "meaning": "Realizing the work was too big for one person, Barnabas traveled to Tarsus to find Saul and bring him back to Antioch. For an entire year, the two men gathered with the church and taught large crowds of new believers. It was here in Antioch that the disciples were first called Christians, a name pointing out that their lives were centered on Christ.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Barnes",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
    "verse": 27,
-   "end": 28,
-   "meaning": "Prophets came from Jerusalem. These were people the Spirit inspired to teach and sometimes to tell what would happen. One of them, Agabus, said by the Spirit that a great famine would hit \"the whole world,\" meaning the Roman Empire. This was not a guess but a message from God. It came true under Emperor Claudius, and historians of the time record it.",
+   "end": 27,
+   "meaning": "During that productive year, some Christian prophets traveled down from the mother church in Jerusalem to Antioch. These were teachers gifted by the Holy Spirit to strengthen believers and, at special times, reveal what was coming in the future. Their arrival showed the close bond between the two churches.",
    "meaning_sources": [
     "Jamieson-Fausset-Brown",
     "Barnes",
-    "Calvin",
-    "Matthew Henry",
-    "Wesley"
+    "Adam Clarke",
+    "Robertson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 28,
+   "end": 28,
+   "meaning": "One of these prophets, named Agabus, was prompted by the Holy Spirit to stand up and announce that a widespread famine would strike the Roman world. Luke points out that this severe food shortage happened just as predicted during the reign of Emperor Claudius. God gave the church advance warning so they could get ready.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Barnes",
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -275,21 +298,23 @@
   {
    "verse": 29,
    "end": 30,
-   "meaning": "The believers in Antioch decided that each would give what they could to help the believers in Judea. They gave freely, out of love and thankfulness to the people who had brought them the gospel. They did what they planned. They sent the gift to the church elders (leaders) through Barnabas and Saul.",
+   "meaning": "The believers in Antioch decided to gather financial relief for the Christians in Judea, with each person giving according to their means. They sent their gift to the church elders in Jerusalem by Barnabas and Saul. This generous support gave living proof that Gentile and Jewish believers were truly united in one loving spiritual family.",
    "meaning_sources": [
-    "Calvin",
     "Matthew Henry",
-    "Barnes",
-    "Jamieson-Fausset-Brown",
-    "https://enduringword.com/bible-commentary/acts-11/"
+    "Wesley",
+    "Calvin",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 4: removed sources ['Geneva Notes']",
-  "v. 7: removed sources ['Barnes']",
-  "v. 13: removed sources ['Calvin']"
- ]
+  "v. 7: removed sources ['Adam Clarke']",
+  "v. 9: removed sources ['Adam Clarke']",
+  "v. 11: removed sources ['Barnes']",
+  "v. 16: removed sources ['Wesley']"
+ ],
+ "version": 2,
+ "model": "google/gemini-3.8-flash"
 }

@@ -8,11 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Jesus turned from debating the religious leaders to speak directly to the listening crowd and His disciples. He warned them plainly about the teachers who claimed to guide them. It was His final public message in the temple courts before His death.",
+   "meaning": "Jesus turned to speak to the crowds and to His followers. The religious leaders had just failed to trap Him with questions, so He now openly warned the people about their teachers.",
    "meaning_sources": [
-    "Matthew Henry",
-    "https://enduringword.com/bible-commentary/matthew-23/",
-    "https://www.preceptaustin.org/matthew-23-commentary"
+    "Ellicott",
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -20,12 +20,11 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Moses was Israel's great lawgiver, and sitting in his seat meant having the official duty to read and explain God's law. Jewish teachers usually sat down while expounding the Scriptures to the people. Jesus acknowledged that their office as teachers had a lawful place in the community.",
+   "meaning": "The teachers of the law and Pharisees held the official role of explaining God's law. Sitting in Moses' seat meant they had the recognized authority to read and teach the Scriptures to the nation.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
     "Barnes",
-    "Calvin"
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -33,11 +32,11 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "The people were to obey the law of Moses whenever these teachers correctly read and explained it. However, the crowds were warned not to copy their daily lives. The leaders spoke the right words from Scripture, but they did not live out what they taught.",
+   "meaning": "Jesus told the people to respect the law of Moses whenever these teachers correctly read and explained it. However, they were not to copy how the leaders lived, because the leaders did not practice what they preached.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "Geneva Notes"
+    "Jamieson-Fausset-Brown",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -45,12 +44,11 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "These leaders placed heavy religious rules on the people, demanding strict obedience to costly rituals and traditions. Yet they showed no pity and would not lift a finger to make the load lighter. They acted like harsh taskmasters rather than helpful shepherds.",
+   "meaning": "The religious leaders piled heavy rules and human traditions onto the people, demanding strict obedience. Yet they offered no help or mercy to anyone struggling under that weight.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
+    "Adam Clarke",
     "Barnes",
-    "Robertson"
+    "Matthew Henry"
    ],
    "differ": [],
    "other": []
@@ -58,24 +56,34 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "Everything these teachers did was aimed at getting attention and praise from other people. God had commanded His people to wear scripture boxes called phylacteries and fringes on their clothes as reminders of His commands. These men made theirs extra large just to look more holy than everyone else.",
+   "meaning": "Everything the leaders did was designed to win public praise and look holy to other people. They wore extra-wide prayer boxes containing Scripture passages and lengthened the tassels on their clothes to draw attention to their religious habits.",
    "meaning_sources": [
-    "Matthew Henry (Concise)",
-    "Barnes",
-    "Adam Clarke",
-    "https://enduringword.com/bible-commentary/matthew-23/"
+    "Jamieson-Fausset-Brown",
+    "Matthew Henry",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 6,
-   "end": 7,
-   "meaning": "The scribes and Pharisees craved the highest seats at dinner parties and the front benches in the synagogues facing the crowd. They loved being greeted with deep respect in crowded marketplaces and being addressed as Rabbi, which means great teacher. Their primary desire was human applause and social importance.",
+   "end": 6,
+   "meaning": "These leaders loved being treated as important guests at big dinners. In the synagogues, they sought out the front seats that faced the congregation so everyone would notice them.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
     "Barnes",
+    "Ellicott",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "They enjoyed receiving respectful public greetings in crowded markets. They also loved being addressed with the title Rabbi, which honored them as great and learned masters of the law.",
+   "meaning_sources": [
+    "Barnes",
+    "John Gill",
     "Robertson"
    ],
    "differ": [],
@@ -83,67 +91,83 @@
   },
   {
    "verse": 8,
-   "end": 10,
-   "meaning": "Jesus told His followers never to seek prideful religious titles like Rabbi, Father, or Instructor. Believers are all brothers and sisters on equal ground under one heavenly Father and one Master, Jesus Christ. No human teacher should ever take the place of God or rule over the faith of others.",
+   "end": 8,
+   "meaning": "Jesus told His followers not to seek honorable titles like Rabbi for themselves. The Messiah is their only true Teacher, and all believers stand on equal ground as brothers and sisters.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
+    "Adam Clarke",
     "Barnes",
-    "Calvin"
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Followers of Jesus must not give any human leader the absolute spiritual authority that belongs only to God. Believers have one true Father in heaven who rules over their lives and consciences.",
+   "meaning_sources": [
+    "Barnes",
+    "Calvin",
+    "Wesley"
    ],
    "differ": [
     {
      "tradition": "Reformed and Presbyterian",
-     "view": "Calling earthly relatives father is lawful, but the title must never be given to any person in a way that steals or shadows the supreme spiritual honor belonging to God.",
+     "view": "God alone possesses supreme fatherly authority over the soul, though earthly fathers may still be given rightful honor without raising ministers to Christ's place.",
      "sources": [
-      "Calvin",
-      "https://www.studylight.org/commentary/matthew/23-9.html"
-     ]
-    },
-    {
-     "tradition": "Methodist",
-     "view": "Jesus was speaking against the official title of Father used for the second-ranking ruler of the Jewish council, showing that no human may act as a second supreme head over the church.",
-     "sources": [
-      "Adam Clarke",
-      "https://www.studylight.org/commentary/matthew/23-9.html"
+      "Calvin"
      ]
     },
     {
      "tradition": "Baptist",
-     "view": "Natural fathers and spiritual mentors can be spoken of with love, but believers must refuse any title that claims ruling authority over a person's conscience.",
+     "view": "Believers must reject any title that claims lordly power over the conscience, while natural parents and spiritual guides may still be loved and respected.",
      "sources": [
-      "https://www.studylight.org/commentary/matthew/23-9.html"
-     ]
-    },
-    {
-     "tradition": "Some evangelicals",
-     "view": "Jesus gave a direct command against using religious titles, so believers should avoid calling any minister or priest Father or Master.",
-     "sources": [
-      "https://www.studylight.org/commentary/matthew/23-9.html",
-      "Barnes"
+      "John Gill"
      ]
     }
    ],
    "other": [
     {
      "label": "Catholic",
-     "view": "Jesus was forbidding the prideful misuse of fatherhood that ignores God, not the affectionate title itself, since priests serve under God as spiritual fathers to their flock.",
+     "view": "This command condemns using titles with prideful independence from God, while calling priests spiritual fathers reflects their pastoral care under God's fatherhood.",
      "sources": [
-      "https://www.catholic.com/qa/how-can-we-explain-calling-priests-father-when-jesus-said-not-to",
-      "https://www.catholic.com/video/why-do-catholics-call-priests-father-if-the-bible-says-call-no-man-father"
+      "https://www.catholic.com/qa/how-can-we-explain-calling-priests-father-when-jesus-said-not-to"
      ]
     }
    ]
   },
   {
-   "verse": 11,
-   "end": 12,
-   "meaning": "True greatness in God's kingdom is measured by humble service to others, not by status or rule. Those who try to push themselves up will be brought low by God. Those who lower themselves in sincere humility will be lifted up by Him.",
+   "verse": 10,
+   "end": 10,
+   "meaning": "Jesus repeated that His disciples should not be called masters or directors of other people's faith. Only Christ has the right to lead, guide, and instruct His church.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
+    "Adam Clarke",
+    "Calvin",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "In God's kingdom, true greatness is not measured by rank or having people wait on you. The greatest person among the disciples is the one who willingly serves everyone else.",
+   "meaning_sources": [
     "Barnes",
+    "Jamieson-Fausset-Brown",
     "https://enduringword.com/bible-commentary/matthew-23/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "God will bring down anyone who tries to lift themselves up in pride. At the same time, He will honor and lift up the person who chooses a humble and lowly place.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Barnes",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -151,12 +175,11 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "Jesus called the leaders hypocrites, a word originally used for actors playing a part on a stage. By teaching false traditions and opposing Jesus, they slammed the door to God's kingdom in people's faces. They refused to enter God's kingdom through repentance themselves, and they blocked others who wanted to come in.",
+   "meaning": "Jesus declared sorrow and judgment on the religious leaders for their hypocrisy, which means acting a part while hearts remain far from God. By rejecting Jesus and teaching human rules, they refused to enter God's kingdom and kept others from entering as well.",
    "meaning_sources": [
+    "Jamieson-Fausset-Brown",
     "Matthew Henry",
-    "Barnes",
-    "Robertson",
-    "https://www.gotquestions.org/seven-woes.html"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -164,21 +187,21 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "The scribes took unfair advantage of vulnerable widows, cheating them out of their homes and property. Then they said long prayers in public to look upright and holy. Because they used religious acts to hide cruelty and greed, their punishment will be far worse.",
+   "meaning": "The leaders took advantage of vulnerable widows, using religion to get hold of their property. To cover up this greed, they offered lengthy public prayers, which only ensured a harsher judgment for their deceit.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "Adam Clarke",
-    "Calvin"
+    "Jamieson-Fausset-Brown",
+    "John Gill"
    ],
    "differ": [],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "This verse is not found in the earliest Greek manuscripts of Matthew and was likely copied in by later scribes from parallel passages in Mark and Luke.",
+     "view": "Many scholars note this verse is absent from the oldest Greek manuscripts and was likely added here from parallel passages in Mark and Luke.",
      "sources": [
-      "https://enduringword.com/bible-commentary/matthew-23/",
-      "https://www.studylight.org/commentary/matthew/23-13.html"
+      "Scofield",
+      "Tyndale Study Notes",
+      "https://enduringword.com/bible-commentary/matthew-23/"
      ]
     }
    ]
@@ -186,51 +209,92 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "These leaders traveled across land and sea, working tirelessly to win a single convert to their sect. But instead of teaching their new followers to love God, they trained them in rigid rules and hypocrisy. As a result, the new converts became twice as hardened and bitter against the truth as their teachers were.",
+   "meaning": "The Pharisees traveled far and wide to convert a single person to their religious sect. Yet once they gained that convert, they taught him their own legalistic habits, making him twice as hardened in sin as they were.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
     "Adam Clarke",
-    "https://enduringword.com/bible-commentary/matthew-23/"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 16,
-   "end": 17,
-   "meaning": "The leaders created foolish rules to dodge the true meaning of an oath. They taught that swearing by the temple was not binding, but swearing by the gold in the temple forced a person to keep his word. Jesus called them blind fools because the sacred temple gives the gold its holy meaning, not the other way around.",
+   "end": 16,
+   "meaning": "Jesus called these teachers blind guides because they created foolish loopholes for keeping promises. They claimed that swearing by the temple was not binding, but swearing by the gold in the temple forced a person to keep the oath.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "Adam Clarke",
-    "https://www.gotquestions.org/seven-woes.html"
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 17,
+   "end": 17,
+   "meaning": "Jesus exposed their foolish thinking by asking whether the gold was greater than the temple. The gold had no special holiness on its own, but was made sacred only because it belonged to God's house.",
+   "meaning_sources": [
+    "Barnes",
+    "Geneva Notes",
+    "John Gill"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 18,
-   "end": 19,
-   "meaning": "They made the same corrupt claim about the altar, saying an oath by the altar meant nothing, while an oath by the gift on it was binding. Jesus exposed their upside-down thinking by showing that the altar makes the gift sacred. Their hair-splitting rules placed money and gifts above the worship of God.",
+   "end": 18,
+   "meaning": "The scribes also made up rules about the altar of sacrifice. They taught that swearing by the altar meant nothing, but swearing by the gift on the altar created an unbreakable promise.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Barnes",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 19,
+   "end": 19,
+   "meaning": "Jesus pointed out that an offering on the altar has no holiness by itself. It is the altar dedicated to God that makes the gift holy and acceptable.",
+   "meaning_sources": [
     "Barnes",
     "Jamieson-Fausset-Brown",
-    "Calvin"
+    "John Gill"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 20,
-   "end": 22,
-   "meaning": "Jesus explained that every oath ultimately reaches God Himself. Swearing by the altar includes everything offered on it, and swearing by the temple includes God who lives there. Swearing by heaven touches God's throne and the Lord who sits upon it, making all dishonest excuses worthless.",
+   "end": 20,
+   "meaning": "Swearing an oath by the altar includes everything placed upon it. Anyone making such a pledge is appealing to the holy place of sacrifice and to God Himself.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke",
+    "John Gill",
     "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 21,
+   "end": 21,
+   "meaning": "When a person swears by the temple, that oath cannot be treated lightly. It directly involves God, who chose the temple as His dwelling place among His people.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Barnes",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 22,
+   "end": 22,
+   "meaning": "Anyone who swears by heaven is really swearing by God's throne. Every oath ultimately appeals to the living God who sits on that throne and judges truthfulness.",
+   "meaning_sources": [
+    "Barnes",
+    "Geneva Notes"
    ],
    "differ": [],
    "other": []
@@ -238,12 +302,11 @@
   {
    "verse": 23,
    "end": 23,
-   "meaning": "The scribes carefully counted out one-tenth of their tiniest garden herbs, such as mint, dill, and cumin, to give as a tithe. Yet they completely ignored what matters most to God: fairness, mercy, and loyal faithfulness. Jesus said doing the small duties was fine, but they should never have pushed aside God's great commands.",
+   "meaning": "The leaders were remarkably careful to give a tithe, or tenth part, of even tiny garden herbs like mint, dill, and cumin. Yet they ignored far more important commands of God, such as doing justice, showing mercy, and remaining faithful.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
     "Jamieson-Fausset-Brown",
-    "Calvin"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -251,11 +314,10 @@
   {
    "verse": 24,
    "end": 24,
-   "meaning": "Jesus used a humorous word-picture of a person pouring wine through a cloth to strain out a tiny unclean bug. These teachers worried endlessly about tiny ceremonial flaws while calmly gulping down a huge, unclean camel. They panicked over the smallest rules but easily committed massive sins.",
+   "meaning": "Jesus used wordplay to show how backward their priorities were. They carefully strained their drink through cloth so they would not swallow a tiny unclean gnat, yet they swallowed an entire unclean camel without noticing.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Adam Clarke",
     "Jamieson-Fausset-Brown",
-    "Barnes",
     "Robertson"
    ],
    "differ": [],
@@ -263,38 +325,83 @@
   },
   {
    "verse": 25,
-   "end": 26,
-   "meaning": "The Pharisees were like someone who scrubs only the outside of a drinking cup while leaving the inside full of rot. Their outward lives looked respectable, but inside they were driven by greed and selfish desires. Jesus told them to clean the inside of the heart first, and then their outward behavior would be genuinely clean too.",
+   "end": 25,
+   "meaning": "The Pharisees washed the outside of dishes very thoroughly according to ceremonial rules. Inside, however, their lives and tables were filled with wealth stolen from others and spent on selfish pleasures.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "Calvin",
-    "https://enduringword.com/bible-commentary/matthew-23/"
+    "Jamieson-Fausset-Brown",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 26,
+   "end": 26,
+   "meaning": "Jesus told them to start by cleaning the inside of the cup. When a person's heart and desires are made pure and honest, their outward actions will naturally become truly clean as well.",
+   "meaning_sources": [
+    "Barnes",
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 27,
-   "end": 28,
-   "meaning": "Tombs were coated with white lime so travelers could clearly spot them and avoid becoming ceremonially unclean by touching them. From the road they looked bright and clean, but inside they held decaying bones and corruption. In the exact same way, these hypocrites appeared upright to the crowds while their hearts were filled with deceit and wickedness.",
+   "end": 27,
+   "meaning": "Tombs were coated with white lime each spring so travelers could clearly see them and avoid touching them. They looked bright and clean on the outside, but inside they held decaying bones and corruption.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "Adam Clarke",
-    "Robertson"
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 28,
+   "end": 28,
+   "meaning": "In the very same way, these leaders appeared deeply religious and moral to everyone watching them. Beneath the surface, their hearts were packed with pretending and open disregard for God's law.",
+   "meaning_sources": [
+    "Ellicott",
+    "John Gill"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 29,
-   "end": 31,
-   "meaning": "The leaders built fine monuments for ancient prophets and claimed they never would have helped kill those holy men of old. Yet while honoring dead prophets, they plotted to destroy the living prophet sent to them by God. By calling those ancient killers their fathers, they revealed that they shared the very same murderous spirit.",
+   "end": 29,
+   "meaning": "The scribes and Pharisees spent money building tombs and decorating monuments for God's ancient prophets. They wanted everyone to think they deeply honored those holy men of old.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Barnes",
+    "John Gill",
+    "Robertson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 30,
+   "end": 30,
+   "meaning": "They claimed that if they had lived centuries earlier, they would never have joined their ancestors in killing God's messengers. They believed they were far too righteous to commit such terrible sins.",
+   "meaning_sources": [
+    "Barnes",
     "Calvin",
-    "Barnes"
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 31,
+   "end": 31,
+   "meaning": "By speaking of those murderers as their fathers, they acknowledged their family heritage. More than that, their hatred toward Jesus proved they shared the very same murderous spirit as their ancestors.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Barnes",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -302,12 +409,10 @@
   {
    "verse": 32,
    "end": 32,
-   "meaning": "Jesus told the leaders to go ahead and finish what their ancestors had started. This was not permission to sin, but a sorrowful statement of what they were determined to do. By rejecting and killing the Messiah, they would top off the full measure of the nation's guilt.",
+   "meaning": "Jesus told them to go ahead and finish what their ancestors had started. He knew they were about to complete the nation's rebellion by plotting His own death.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
     "Calvin",
-    "Robertson"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -315,11 +420,10 @@
   {
    "verse": 33,
    "end": 33,
-   "meaning": "Jesus used fierce words, calling them snakes and a brood of vipers, because their hearts were filled with deadly poison. He stripped away their flattering masks and warned them of coming ruin. Without true sorrow and turning away from sin, they could never escape the judgment of hell.",
+   "meaning": "Jesus called them a family of poisonous snakes, echoing the sharp warning John the Baptist had given years earlier. Because they clung so stubbornly to their sins, they could not escape God's final judgment in hell.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin",
+    "Adam Clarke",
+    "Jamieson-Fausset-Brown",
     "Wesley"
    ],
    "differ": [],
@@ -328,12 +432,11 @@
   {
    "verse": 34,
    "end": 34,
-   "meaning": "Jesus announced that He would send apostles and teachers with God's message, speaking with the authority of God Himself. Yet He knew how cruelly the leaders would treat His messengers. They would murder some, nail others to crosses, beat them in synagogues, and hunt them from town to town.",
+   "meaning": "Jesus announced that He would send them Christian apostles, teachers, and messengers of the gospel. Instead of welcoming them, these leaders would beat them in synagogues, chase them from city to city, and kill them.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
+    "Adam Clarke",
     "Barnes",
-    "Calvin"
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -341,11 +444,10 @@
   {
    "verse": 35,
    "end": 35,
-   "meaning": "Because they walked in the footsteps of every persecutor in history, the accumulated guilt of innocent blood fell upon them. This history of murder stretched from righteous Abel in Genesis to Zechariah who was stoned in the temple courtyard in Chronicles. By finishing the pattern of their ancestors, they made that long debt of guilt their own.",
+   "meaning": "Because this generation repeated and completed all the sins of the past, it would face the judgment due for every righteous person murdered in Old Testament history. That line of martyrs stretched from Abel in Genesis all the way to Zechariah at the end of the Hebrew Scriptures.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "Calvin"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -353,12 +455,11 @@
   {
    "verse": 36,
    "end": 36,
-   "meaning": "Jesus solemnly warned that the severe punishment for all this bloodshed would strike that very generation. God's long-suffering patience was reaching its final limit with their rebellion. This warning came to pass about forty years later when Jerusalem and its temple were completely destroyed.",
+   "meaning": "Jesus solemnly promised that this awful judgment would fall upon the people then living. This warning came to pass when the Romans destroyed Jerusalem and its temple about forty years later.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
     "Barnes",
-    "https://www.preceptaustin.org/matthew-23-commentary"
+    "John Gill",
+    "Scofield"
    ],
    "differ": [],
    "other": []
@@ -366,25 +467,23 @@
   {
    "verse": 37,
    "end": 37,
-   "meaning": "Jesus cried out in deep grief over Jerusalem, the city that killed God's prophets and stoned His messengers. He compared His care to a mother hen sheltering her chicks under her warm wings from danger. He had constantly offered them safety and love, but the leaders stubbornly refused to come.",
+   "meaning": "Jesus cried out over Jerusalem with deep sorrow, mourning how the city had killed God's prophets through the ages. He had longed to shelter her people with the tender care of a mother hen protecting her chicks, but they refused His love.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Adam Clarke",
-    "Robertson"
+    "Matthew Henry",
+    "Tyndale Study Notes"
    ],
    "differ": [
     {
      "tradition": "Reformed and Presbyterian",
-     "view": "Jesus was speaking of God's outward call through preaching, which leaves people without excuse, while His inner saving power is given only to the elect.",
+     "view": "This refers to Christ's outward call through preaching, which sinful people freely refuse, while those God purposed to save are drawn irresistibly by His Spirit.",
      "sources": [
-      "Calvin",
-      "https://ccel.org/ccel/calvin/calcom33.ii.xiii.html"
+      "Calvin"
      ]
     },
     {
      "tradition": "Baptist",
-     "view": "Jesus' lament shows that sinners bring their own ruin upon themselves because they resist the Lord's real and tender desire to save them.",
+     "view": "Christ genuinely yearned to gather the people across history, showing that sinners alone bear the blame when they perish through their own willful unbelief.",
      "sources": [
       "https://www.spurgeon.org/resource-library/sermons/i-would-but-ye-would-not/"
      ]
@@ -393,9 +492,8 @@
    "other": [
     {
      "label": "Catholic",
-     "view": "Jesus truly desired to gather all the people, showing that human beings possess real free will and can resist God's offer of saving grace.",
+     "view": "Christ as God truly willed to gather all of Jerusalem, showing that human free will has the power to resist divine grace.",
      "sources": [
-      "https://www.catholic.com/magazine/print-edition/predestined-for-freedom",
       "https://www.catholic.com/magazine/online-edition/gods-resistible-grace"
      ]
     }
@@ -404,12 +502,11 @@
   {
    "verse": 38,
    "end": 38,
-   "meaning": "The great temple in Jerusalem was once honored as God's house, but Jesus now called it their house. Because they rejected their Messiah, God's presence was leaving the sanctuary behind. Forsaken by the Lord, the grand building was handed over to ruin and destruction.",
+   "meaning": "Jesus declared that their temple was now abandoned and left empty. Because God was departing from it, the sacred building was handed over to ruin.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Barnes",
-    "Adam Clarke"
+    "Tyndale Study Notes",
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -417,11 +514,10 @@
   {
    "verse": 39,
    "end": 39,
-   "meaning": "With these words Jesus brought His public preaching to an end and walked out of the temple. The Jewish leaders would not see Him again as a gentle teacher offering mercy. The next time they face Him, every eye will recognize Him as the exalted Messiah sent in the name of the Lord.",
+   "meaning": "Jesus announced that the nation would not see Him again until they were ready to welcome Him as the blessed Messiah sent by the Lord. This looked forward to a future day when Israel would turn to Him in repentance and faith.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Barnes",
+    "Tyndale Study Notes",
     "Wesley"
    ],
    "differ": [],
@@ -429,10 +525,13 @@
   }
  ],
  "problems": [
-  "v. 3: removed sources ['Calvin']",
-  "v. 14: removed sources ['Robertson']",
-  "v. 29: removed sources ['Jamieson-Fausset-Brown']",
+  "v. 18: removed sources ['Adam Clarke']",
+  "v. 20: removed sources ['Barnes']",
+  "v. 22: removed sources ['Wesley']",
+  "v. 28: removed sources ['Barnes']",
+  "v. 32: removed sources ['Jamieson-Fausset-Brown']",
   "v. 35: removed sources ['Jamieson-Fausset-Brown']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

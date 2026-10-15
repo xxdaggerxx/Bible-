@@ -7,19 +7,17 @@
  "notes": [
   {
    "verse": 1,
-   "end": 4,
-   "meaning": "Luke begins his Gospel by explaining why and how he wrote it. Many people had already tried to write down reports of what Jesus said and did, drawing on the testimony of early eyewitnesses and authorized preachers. Luke carefully investigated all these facts from the beginning so that Theophilus could be completely sure of the Christian truths he had been taught.",
+   "end": 1,
+   "meaning": "Luke begins by noting that several other writers had already tried to write down the story of Jesus. These accounts described the events that had come to pass, fulfilling what God had promised in the Old Testament.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "Jamieson-Fausset-Brown",
-    "Barnes"
+    "Tyndale Study Notes",
+    "Matthew Henry"
    ],
    "differ": [],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "Scholars often classify this opening preface as matching the standard style of ancient Greco-Roman histories, though they debate how much of the later narrative is strict history rather than creative storytelling.",
+     "view": "Many modern scholars view this opening as a typical Greco-Roman historical preface that blends historical facts with creative storytelling.",
      "sources": [
       "https://www.bibleodyssey.org/articles/was-luke-a-historian/"
      ]
@@ -27,12 +25,48 @@
    ]
   },
   {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The information about Jesus was passed down by the original eyewitnesses and those who preached the gospel. Luke was not an eyewitness himself, but he received the truth from the apostles and others who were with Jesus from the start.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke",
+    "https://enduringword.com/bible-commentary/luke-1/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Luke decided to write his own careful, well-arranged history after thoroughly checking every detail from the start. He addressed the book to Theophilus, a respected man who likely helped pay for the project or needed a clear record.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Barnes",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Luke wrote so that Theophilus would have complete confidence in the teachings he had already received. Hearing the gospel is good, but having a trustworthy written record helps settle any doubts and gives firm grounding.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "John Gill",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
    "verse": 5,
    "end": 5,
-   "meaning": "Luke anchors his story in real history during the reign of King Herod over Judea. Zechariah was an ordinary Jewish priest belonging to the division of Abijah, and his wife Elizabeth was also descended from the priestly line of Aaron. This gave both of them an honorable heritage among God's people.",
+   "meaning": "The story moves to the historical reign of Herod the Great in Judea. A Jewish priest named Zechariah served in the priestly group of Abijah, and his wife Elizabeth was also from the family line of Aaron.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
+    "Tyndale Study Notes",
+    "Benson",
     "Adam Clarke"
    ],
    "differ": [],
@@ -41,11 +75,11 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "Both Zechariah and Elizabeth were genuinely righteous in God's eyes, not just outwardly religious. They lived blameless lives by faithfully following all the Lord's moral commands and religious worship rules. This does not mean they were completely sinless, but that their sincere lives were guided by wholehearted obedience to God.",
+   "meaning": "Both Zechariah and Elizabeth were devoted followers of God who lived pure and obedient lives. Being called blameless did not mean they were sinless, but that they faithfully followed God's laws and commands with an honest heart.",
    "meaning_sources": [
-    "Calvin",
-    "Matthew Henry",
-    "Wesley"
+    "Matthew Henry (Concise)",
+    "Adam Clarke",
+    "Calvin"
    ],
    "differ": [],
    "other": []
@@ -53,35 +87,69 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "Despite their upright lives, the couple had no children because Elizabeth was barren, and now both were very old. In that culture, being childless was a heavy burden and carried social shame. Their situation mirrored older Bible couples like Abraham and Sarah, setting the stage for God to show his supernatural power.",
+   "meaning": "The couple had no children because Elizabeth was unable to have a baby, and both had grown old. In that culture, childlessness brought great social sorrow and shame, yet God was preparing to show His supernatural power.",
    "meaning_sources": [
-    "Calvin",
-    "Adam Clarke",
-    "https://enduringword.com/bible-commentary/luke-1/"
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 8,
-   "end": 10,
-   "meaning": "While Zechariah's group was serving at the temple, lots were cast to decide who would carry out each priestly task. Zechariah was chosen to go inside the holy place and burn incense on the altar, a rare privilege that usually happened only once in a lifetime. Outside in the temple courtyards, a large crowd of worshippers prayed silently, their prayers rising to God just as the smoke of the incense ascended.",
+   "end": 8,
+   "meaning": "Zechariah's division took its regular turn to serve God in the temple for a week. Priests carried out their sacred tasks before the Lord with reverence and careful attention to God's law.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Priests drew lots to decide who received each special temple duty, and the lot chose Zechariah to burn incense in the sanctuary. Because there were thousands of priests, this high honour was a rare privilege that usually came only once in a lifetime.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
     "Jamieson-Fausset-Brown",
-    "https://enduringword.com/bible-commentary/luke-1/"
+    "Robertson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "Outside the inner building, a large crowd of worshippers gathered to pray while the incense was being offered. The smoke of the incense going up to heaven was a picture of the people's prayers rising to God.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Matthew Henry (Concise)",
+    "Wesley"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 11,
-   "end": 12,
-   "meaning": "While Zechariah was inside at the incense altar, an angel of the Lord suddenly appeared standing to its right side. Seeing this shining heavenly messenger shocked Zechariah and filled him with deep dread and fear. Even godly people feel humbled and terrified when confronted with the majesty of heaven.",
+   "end": 11,
+   "meaning": "While Zechariah was inside, an angel of the Lord suddenly appeared on the right side of the incense altar. Seeing a heavenly messenger was a powerful sign that God was breaking hundreds of years of silence.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Adam Clarke",
+    "Jamieson-Fausset-Brown",
+    "Benson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "When Zechariah saw the angel, he was deeply startled and overcome with terror. Coming face to face with God's heavenly glory often brings deep fear and awe to mortal human beings.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
     "Calvin",
-    "Jamieson-Fausset-Brown"
+    "Wesley"
    ],
    "differ": [],
    "other": []
@@ -89,10 +157,10 @@
   {
    "verse": 13,
    "end": 13,
-   "meaning": "The angel immediately told Zechariah not to be afraid because God had heard his prayer. His elderly wife Elizabeth would give birth to a son, and he was instructed to name the baby John, which means the Lord is gracious. God was answering long-held personal hopes as well as prayers for the salvation of his people.",
+   "meaning": "The angel told Zechariah not to be afraid because God had heard his prayer. He announced that Elizabeth would give birth to a son, and that they must name the boy John, which means God has shown favor.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Wesley",
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
     "Adam Clarke"
    ],
    "differ": [],
@@ -101,11 +169,11 @@
   {
    "verse": 14,
    "end": 14,
-   "meaning": "This child would bring great personal joy and gladness to Zechariah and Elizabeth. His birth would also cause many others to rejoice because of the widespread spiritual blessing he would bring. The arrival of a true servant of God brings joy far beyond his immediate household.",
+   "meaning": "This child would bring immense joy and gladness to his parents, and many others would celebrate his birth. People would rejoice because this baby was chosen to bring the good news of God's coming salvation.",
    "meaning_sources": [
     "Matthew Henry",
     "Calvin",
-    "Adam Clarke"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -113,31 +181,23 @@
   {
    "verse": 15,
    "end": 15,
-   "meaning": "The boy would be truly great in God's eyes and set apart for a sacred calling. Like someone under a lifelong vow of separation, he was to abstain entirely from wine and fermented drink. Instead of being guided by earthly pleasures, he would be filled with the Holy Spirit from his earliest life.",
+   "meaning": "John would be great in the Lord's eyes and would live a life set apart for God, never drinking wine or strong drink. Instead of being influenced by alcohol, he would be filled with the Holy Spirit even before he was born.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "Jamieson-Fausset-Brown"
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
+    "Robertson"
    ],
    "differ": [
     {
      "tradition": "Anglican",
-     "view": "Anglicans cite this verse to show that even tiny infants are capable of receiving the Holy Spirit, which supports bringing them into the church through infant baptism.",
+     "view": "Anglicans point to this verse to show that infants are capable of receiving God's grace and the Holy Spirit, supporting the practice of baptizing babies into the church.",
      "sources": [
       "https://www.monergism.com/thethreshold/articles/onsite/exposition113.html"
      ]
     },
     {
-     "tradition": "Lutheran",
-     "view": "Lutherans see the unborn John's work by the Spirit as evidence that God can create saving faith in infants through his Word.",
-     "sources": [
-      "https://in.lcms.org/a-leaping-baby-the-visitation/",
-      "https://www.1517.org/articles/baptism-now-saves-but-who-and-when"
-     ]
-    },
-    {
      "tradition": "Baptist",
-     "view": "Baptists understand this verse to affirm that the unborn child is a distinct human person, rather than using it to justify infant baptism.",
+     "view": "Baptists understand the Spirit's filling here as God's special prophetic calling on an unborn person rather than an argument for infant baptism.",
      "sources": [
       "https://www.desiringgod.org/messages/the-baby-in-my-womb-leaped-for-joy"
      ]
@@ -147,12 +207,24 @@
   },
   {
    "verse": 16,
-   "end": 17,
-   "meaning": "John's mission would lead many people in Israel to repent and turn back to the Lord their God. He would serve as the forerunner before the Messiah, carrying the bold courage and spiritual power of the ancient prophet Elijah. His preaching would mend broken family relationships and guide stubborn sinners to the true wisdom of the righteous, getting people ready to welcome the Lord.",
+   "end": 16,
+   "meaning": "John's ministry would lead many people in Israel to turn away from their sins and return to the Lord their God. His preaching would awaken hearts and call God's wandering people to true repentance.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Barnes",
     "Calvin",
-    "Barnes"
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 17,
+   "end": 17,
+   "meaning": "John would go ahead of the Lord with the same boldness, power, and courage that the ancient prophet Elijah had. He would heal family relationships and guide disobedient people back to godly wisdom, getting them ready to welcome the Lord.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Wesley",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -160,10 +232,10 @@
   {
    "verse": 18,
    "end": 18,
-   "meaning": "Zechariah questioned the angel, asking how he could ever be sure this would happen. He pointed out that he was an old man and Elizabeth was also advanced in years, treating the promise as if it were impossible. By looking at human limits instead of God's power, his response showed a real lack of faith.",
+   "meaning": "Zechariah questioned the angel, asking how he could be sure of this promise since he and his wife were very old. Instead of trusting God's word, he looked at his physical limitations and asked for proof.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
+    "Tyndale Study Notes",
+    "Wesley",
     "Barnes"
    ],
    "differ": [],
@@ -172,11 +244,11 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "The angel identified himself as Gabriel, an honored attendant who stands right in the presence of God. He had been directly sent by the Almighty to deliver this message of wonderful good news. Questioning the promise meant doubting the truthfulness of God himself, who had sent the messenger.",
+   "meaning": "The angel identified himself as Gabriel, who stands in the direct presence of God and carries His messages. He told Zechariah that he was sent directly by God to bring this joyful news of salvation.",
    "meaning_sources": [
-    "Calvin",
-    "Matthew Henry",
-    "Adam Clarke"
+    "Tyndale Study Notes",
+    "Barnes",
+    "Calvin"
    ],
    "differ": [],
    "other": []
@@ -184,10 +256,10 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "Because Zechariah did not believe the angel's words, Gabriel told him he would be completely silent and unable to speak until everything happened. This muteness served as a firm rebuke for his doubt, but it was also a reassuring sign that God's word would certainly come true in its own time. God's promises will be fulfilled even when our faith wavers.",
+   "meaning": "Because Zechariah did not believe the angel's message, he was struck mute until the promise came true. This loss of speech served as both a discipline for his doubt and a sign that God's word would surely happen.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
+    "Tyndale Study Notes",
+    "Adam Clarke",
     "Barnes"
    ],
    "differ": [],
@@ -195,12 +267,24 @@
   },
   {
    "verse": 21,
-   "end": 22,
-   "meaning": "Outside, the worshippers were waiting for Zechariah to come and give the standard priestly blessing, and they wondered why he stayed inside so long. When he finally stepped out, he was completely unable to speak and had to make hand motions to the crowd. From his signs and speechless condition, the people understood that he had seen a supernatural vision in the sanctuary.",
+   "end": 21,
+   "meaning": "Outside the temple building, the crowd waited for Zechariah to come out and give them the traditional priestly blessing. They began to wonder why he was taking so much longer than usual in the holy place.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "Adam Clarke"
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 22,
+   "end": 22,
+   "meaning": "When Zechariah finally stepped outside, he was completely unable to speak to the waiting crowd. By his silent gestures and motions, the people realized he had seen a supernatural vision in the sanctuary.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Adam Clarke",
+    "Barnes"
    ],
    "differ": [],
    "other": []
@@ -208,41 +292,65 @@
   {
    "verse": 23,
    "end": 23,
-   "meaning": "Even though he had lost his voice, Zechariah faithfully stayed at the temple until his week of priestly duty was finished. When his scheduled service was ended, he returned home to his family. He did not let his physical condition or his private shock keep him from completing his service to God.",
+   "meaning": "Even though Zechariah could not speak, he stayed at the temple and faithfully finished his full week of priestly duties. Once his assigned days of service were done, he returned to his home.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
-    "Adam Clarke"
+    "Barnes",
+    "Adam Clarke",
+    "John Gill"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 24,
-   "end": 25,
-   "meaning": "Soon after Zechariah came home, Elizabeth conceived a child just as God had promised, and she stayed in seclusion for five months. She openly praised the Lord for his goodness, knowing he had shown her special mercy by removing the social shame of barrenness. She quietly devoted this time to thanking God before showing her blessing to the public.",
+   "end": 24,
+   "meaning": "Shortly after Zechariah returned home, Elizabeth became pregnant just as the angel had foretold. She chose to stay in quiet seclusion for five months, taking time to reflect and give thanks to God.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Calvin",
+    "Tyndale Study Notes",
+    "Wesley",
     "Barnes"
    ],
    "differ": [],
    "other": []
   },
   {
-   "verse": 26,
-   "end": 27,
-   "meaning": "Six months into Elizabeth's pregnancy, God sent the angel Gabriel to Nazareth, an ordinary town in the northern district of Galilee. He was sent to Mary, a young virgin who was pledged to be married to Joseph, a descendant of King David. Under Jewish custom, this engagement was a legally binding covenant that committed the couple to marriage before they lived together as husband and wife.",
+   "verse": 25,
+   "end": 25,
+   "meaning": "Elizabeth praised the Lord for His kindness in giving her a child in her old age. In Israelite society, being unable to bear children was seen as a public disgrace, but God took away her shame.",
    "meaning_sources": [
-    "Calvin",
+    "Tyndale Study Notes",
+    "Barnes",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 26,
+   "end": 26,
+   "meaning": "In the sixth month of Elizabeth's pregnancy, God sent the angel Gabriel on another mission, this time to the region of Galilee. He went to Nazareth, a small and quiet village far away from the religious center of Jerusalem.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
+    "Benson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 27,
+   "end": 27,
+   "meaning": "Gabriel was sent to a young virgin named Mary, who was legally pledged to marry a man named Joseph from the royal line of King David. In Jewish culture, this betrothal was a binding agreement that came before the wedding and living together.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
     "Wesley",
-    "https://enduringword.com/bible-commentary/luke-1/"
+    "John Gill"
    ],
    "differ": [],
    "other": [
     {
      "label": "Catholic",
-     "view": "Catholics read Mary's virginity here alongside verse 34 as indicating that she had taken a vow of perpetual virginity, remaining a virgin throughout her entire life.",
+     "view": "Catholic tradition reads Mary's virginity and betrothal alongside her later question in verse 34 as evidence that she had taken a vow of lifelong virginity.",
      "sources": [
       "https://www.catholic.com/audio/scw/biblical-evidence-for-marys-perpetual-virginity-2"
      ]
@@ -250,6 +358,10 @@
    ]
   }
  ],
- "problems": [],
+ "problems": [
+  "v. 7: removed sources ['Barnes']",
+  "v. 8: removed sources ['Wesley']"
+ ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

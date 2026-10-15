@@ -8,12 +8,11 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Paul and his friends experienced great emotional pain as they tore themselves away from the weeping elders of Ephesus. They set sail on a favorable wind, stopping each night at the islands of Cos and Rhodes before landing at Patara on the mainland of Asia Minor. Luke names these stops to show how God smoothly guided their journey from port to port.",
+   "meaning": "Paul and his travel companions had to tear themselves away from the weeping church leaders at Miletus. They boarded a small ship and sailed south to the island of Cos, then to Rhodes, and finally to Patara on the mainland. Luke recorded these stops carefully to show both the pain of parting and Paul's steady drive to finish his mission.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Robertson",
-    "Calvin"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -21,11 +20,11 @@
   {
    "verse": 2,
    "end": 2,
-   "meaning": "Their small coastal vessel could not safely cross the open sea, so at Patara they searched for and found a large merchant ship bound for Phoenicia. They quickly boarded this ship to begin the four-hundred-mile journey across the Mediterranean. God provided the right ship at the exact right time to keep Paul on schedule.",
+   "meaning": "At Patara, the travelers searched for and found a large merchant ship that was ready to cross the open Mediterranean Sea to Phoenicia. Their smaller coastal boat could not make such a long, deep-water voyage safely, so they transferred to this larger ship.",
    "meaning_sources": [
-    "Barnes",
+    "Tyndale Study Notes",
     "Robertson",
-    "https://enduringword.com/bible-commentary/acts-21/"
+    "Barnes"
    ],
    "differ": [],
    "other": []
@@ -33,11 +32,11 @@
   {
    "verse": 3,
    "end": 3,
-   "meaning": "The ship sailed south of Cyprus, leaving the island on the left, and headed for the region of Syria. They docked at the ancient harbor of Tyre because the merchant ship needed to unload its heavy cargo. This necessary stop gave Paul a full week to meet with local believers.",
+   "meaning": "As they sailed, the island of Cyprus came into view on their left side, but they stayed on course toward Syria without stopping. They landed at the ancient port city of Tyre, where the ship had to unload a large cargo. This unloading took seven days, which gave Paul time to visit believers there.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Robertson"
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -45,28 +44,29 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "Paul hunted through the busy city until he found the small group of Christian believers and spent seven days with them. Through the Holy Spirit, these believers saw the suffering that awaited Paul in Jerusalem and urged him not to go. Paul understood the Spirit was revealing the coming danger to prepare him, not forbidding him to obey God's call.",
+   "meaning": "Paul searched the busy city until he found the local Christians and stayed with them for a full week. Through the Holy Spirit, these believers learned of the severe dangers waiting for Paul in Jerusalem, and out of deep love, they begged him not to go. God revealed the coming trials to prepare Paul, while the advice to avoid Jerusalem came from their own human concern.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes",
-    "Adam Clarke",
-    "Calvin"
+    "John Gill",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [
     {
      "tradition": "Some evangelicals",
-     "view": "The Holy Spirit gave Paul a direct command not to go to Jerusalem, so continuing his journey was an act of willful disobedience.",
+     "view": "The Holy Spirit directly commanded Paul not to enter Jerusalem, so going anyway was an act of willful disobedience that brought God's chastisement.",
      "sources": [
+      "Scofield",
       "https://www.studylight.org/commentaries/eng/gab/acts-21.html"
      ]
     },
     {
      "tradition": "Many evangelicals",
-     "view": "The Holy Spirit only revealed the coming dangers to prepare Paul, while the urge to turn back came from the believers' human love for him.",
+     "view": "The Holy Spirit warned Paul of coming afflictions to test and strengthen his resolve, while the advice to avoid Jerusalem was purely human concern from his friends.",
      "sources": [
       "Barnes",
-      "Adam Clarke",
-      "https://enduringword.com/bible-commentary/acts-21/"
+      "Wesley",
+      "John Gill"
      ]
     }
    ],
@@ -74,13 +74,24 @@
   },
   {
    "verse": 5,
-   "end": 6,
-   "meaning": "When the week ended, the entire church family, including women and children, walked Paul and his group all the way to the water's edge. Together they knelt on the beach and prayed, placing their lives and future into God's caring hands. After warm, loving goodbyes, Paul's group boarded the ship while the families returned to their homes.",
+   "end": 5,
+   "meaning": "When their time was up, the entire local church, including husbands, wives, and children, walked with Paul and his group all the way to the beach. Before saying goodbye, everyone knelt down together on the open shore to pray. Their prayer showed the deep love and unity that bound Christian families together.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes",
-    "Calvin",
-    "Robertson"
+    "John Gill",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "After exchanging loving goodbyes, Paul and his companions climbed aboard the ship. The local church members then turned back and returned to their own homes in Tyre.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Robertson",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -88,11 +99,11 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "The sea voyage ended at Ptolemais, an ancient coastal city about thirty miles south of Tyre. Paul took time to visit the believers who lived there and spent one day encouraging them. Even during quick travel stops, Paul never missed a chance to show love to the family of God.",
+   "meaning": "The sea voyage ended when the ship pulled into the port of Ptolemais, an ancient town known in the Old Testament as Acco. Paul and his team went ashore to greet the Christian believers living there and spent a day encouraging them.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Robertson"
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
+    "Barnes"
    ],
    "differ": [],
    "other": []
@@ -100,7 +111,136 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "Traveling by land the next day, the company arrived in Caesarea and stayed at the home of Philip the evangelist. Philip had been one of the original seven deacons chosen to care for the poor in Jerusalem, but he had grown into a traveling missionary who preached the good news. About twenty-five years after Stephen's death, Paul was now warmly welcomed by Philip into his own home.",
+   "meaning": "The next day, they traveled down the coast to Caesarea, the main Roman government center in Judea. There they stayed at the home of Philip the evangelist, one of the seven men chosen years earlier to help the poor in Jerusalem.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Wesley",
+    "Barnes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Philip had four unmarried daughters who had the gift of prophecy, speaking God's messages to the people. Their ministry was a clear sign that God was fulfilling His promise to pour out His Spirit on both men and women in the church.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Geneva Notes",
+    "Barnes",
+    "Calvin"
+   ],
+   "differ": [
+    {
+     "tradition": "Pentecostal",
+     "view": "Philip's daughters show that the Holy Spirit calls and equips women for public speaking and leadership ministries in the church without gender limitations.",
+     "sources": [
+      "http://pneumareview.com/philips-daughters/",
+      "https://www.samstorms.org/all-articles/post/prophecy-in-real-life--acts-21:1-16--27-36-"
+     ]
+    },
+    {
+     "tradition": "Baptist",
+     "view": "The gift of prophecy given to these women involved sharing occasional Spirit-inspired revelations, which is distinct from serving in the authoritative pastoral teaching office over the congregation.",
+     "sources": [
+      "John Gill",
+      "https://ca.thegospelcoalition.org/columns/ad-fontes/daughters-philip-agabus-gift-prophecy/"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "While Paul and his team spent several days in Caesarea, a Christian prophet named Agabus arrived from Judea. Years earlier, Agabus had accurately predicted a widespread famine, and now God sent him with a fresh message about Paul's future.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Matthew Henry",
+    "Barnes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "Agabus walked over, took Paul's belt, and tied up his own hands and feet with it. He announced that the Holy Spirit said the Jewish leaders in Jerusalem would bind the belt's owner this way and hand him over to the Romans. Like the prophets of the Old Testament, Agabus acted out a living picture to make God's warning clear.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "John Gill",
+    "Jamieson-Fausset-Brown",
+    "Barnes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "When they heard this prophecy, both the local Christians and Paul's travel companions, including Luke, began weeping and begging Paul not to go to Jerusalem. They loved him deeply and could not bear the thought of him walking straight into chains and danger.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Ellicott",
+    "Barnes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
+   "end": 13,
+   "meaning": "Paul told them that their weeping was breaking his heart, even though it could not shake his resolve. He declared that he was ready not only to be chained, but even to die in Jerusalem for the name of the Lord Jesus. His love for his friends was tender, but his duty to his Savior came first.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 14,
+   "end": 14,
+   "meaning": "Seeing that Paul could not be turned away from his goal, his friends stopped arguing and gave the matter into God's hands. They said, 'The Lord's will be done,' trusting God's wisdom just as Jesus did when He prayed before going to the cross.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Barnes",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 15,
+   "end": 15,
+   "meaning": "After their stay in Caesarea, the group packed up their luggage and began the uphill road toward Jerusalem. Their baggage likely included the money collected from Gentile churches to help poor Jewish believers in the city.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Wesley",
+    "Barnes",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 16,
+   "end": 16,
+   "meaning": "Some believers from Caesarea went along with them to make sure they had safe lodging. They brought Paul to stay at the home of Mnason, an early disciple from Cyprus who owned a house in Jerusalem.",
+   "meaning_sources": [
+    "Wesley",
+    "Barnes",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 17,
+   "end": 17,
+   "meaning": "When Paul and his companions reached Jerusalem, the ordinary church members welcomed them with open arms and great joy. These believers were glad to see Paul return safely from his long missionary journey.",
    "meaning_sources": [
     "Matthew Henry",
     "Jamieson-Fausset-Brown",
@@ -110,120 +250,12 @@
    "other": []
   },
   {
-   "verse": 9,
-   "end": 9,
-   "meaning": "Philip had four unmarried daughters who were blessed by the Holy Spirit with the gift of prophecy. This fulfilled the ancient promise from Joel that God would pour out His Spirit on both sons and daughters to speak His truth. Their godly household was an orderly, shining example of Christian dedication.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin"
-   ],
-   "differ": [
-    {
-     "tradition": "Pentecostal",
-     "view": "These daughters show that the Holy Spirit calls and empowers women to minister and speak God's word openly in church life.",
-     "sources": [
-      "http://pneumareview.com/philips-daughters/",
-      "https://www.samstorms.org/all-articles/post/prophecy-in-real-life--acts-21:1-16--27-36-"
-     ]
-    },
-    {
-     "tradition": "Reformed and Presbyterian",
-     "view": "The spontaneous gift of prophecy given to these women did not grant them the formal church governing office of elder or pastor, which Scripture reserves for men.",
-     "sources": [
-      "Calvin",
-      "https://ca.thegospelcoalition.org/columns/ad-fontes/daughters-philip-agabus-gift-prophecy/"
-     ]
-    }
-   ],
-   "other": []
-  },
-  {
-   "verse": 10,
-   "end": 11,
-   "meaning": "While they stayed in Caesarea, a prophet named Agabus arrived from Judea and delivered a dramatic visual message like the Old Testament prophets of old. He took Paul's cloth belt, tied up his own hands and feet, and declared that the Holy Spirit said the Jews in Jerusalem would bind the owner of the belt and turn him over to the Gentiles. This message vividly confirmed the exact trials waiting for Paul.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke",
-    "Calvin"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 12,
-   "end": 12,
-   "meaning": "Hearing this frightening prophecy, both Paul's traveling partners—including Luke—and the local Christians broke down in tears and begged him to avoid Jerusalem. Their plea came from deep love and a desire to protect an apostle who was so valuable to the church. They could not bear the thought of him walking straight into prison and death.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin",
-    "Robertson"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 13,
-   "end": 13,
-   "meaning": "Paul asked why they were breaking his heart with their tears, since he cared deeply for their feelings but could not turn away from his mission. He announced that he was ready not only to be chained in Jerusalem, but even to die there for the honor of Jesus. His loyalty to his Master was stronger than his desire for personal safety.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 14,
-   "end": 14,
-   "meaning": "When it became clear that Paul would not change his mind, his friends stopped arguing and said, 'The Lord's will be done.' They recognized that God was directing Paul's steps, even if it led to intense suffering. True faith learns to rest quietly in God's wise and holy plan.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin",
-    "Robertson"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 15,
-   "end": 16,
-   "meaning": "The group packed up their baggage, which likely included the collection of relief money for poor Christians, and began the climb toward Jerusalem. Some believers from Caesarea went along and introduced them to Mnason, a man from Cyprus who had followed Christ from the earliest days of the church and opened his home to host them. Resting with an experienced, mature Christian brought great comfort before the coming storm.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke",
-    "Robertson"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 17,
-   "end": 17,
-   "meaning": "Upon reaching Jerusalem, the local Christians welcomed Paul and his travel companions with warm joy. Before any official business began, ordinary church members greeted them as dear brothers in the faith. It was a comforting reception after such a long, dangerous journey.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Jamieson-Fausset-Brown",
-    "Robertson"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
    "verse": 18,
    "end": 18,
-   "meaning": "The next day Paul and his team went to meet with James, the brother of Jesus and leader of the Jerusalem church, along with all the local elders. This was a formal gathering of church leadership, and notably, the other original apostles were away doing missionary work elsewhere. Paul came with great respect to give an account of his ministry.",
+   "meaning": "The next day, Paul and his travel group went to visit James, the brother of Jesus, who served as the leading pastor of the Jerusalem church. All the elders of the church were gathered with James to receive Paul's official report.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin",
-    "Robertson"
+    "Tyndale Study Notes",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -231,10 +263,9 @@
   {
    "verse": 19,
    "end": 19,
-   "meaning": "Paul greeted the leaders warmly and recounted point by point everything God had done among the non-Jewish nations through his preaching. He carefully gave all the credit and praise to God, viewing himself merely as a servant. Hearing about lives transformed by the gospel brought deep encouragement to the elders.",
+   "meaning": "Paul greeted the leaders warmly and explained step by step everything God had accomplished among the Gentiles through his work. He gave all the credit to God's grace instead of boasting about his own efforts.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes",
     "Calvin",
     "Robertson"
    ],
@@ -244,109 +275,9 @@
   {
    "verse": 20,
    "end": 20,
-   "meaning": "The elders praised God for the salvation of the Gentiles, but then explained a growing problem inside the Jerusalem church. Tens of thousands of Jewish people had believed in Jesus, yet they remained deeply devoted to keeping the ceremonial laws of Moses. These believers still viewed the ancient Jewish customs as sacred and binding for Jewish people.",
+   "meaning": "The leaders praised God when they heard the good news, but they also pointed out a serious tension in the city. Thousands of Jewish people had put their faith in Jesus, and every one of them was still strictly dedicated to keeping the law of Moses.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Robertson"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 21,
-   "end": 21,
-   "meaning": "The elders warned Paul that Jewish believers had heard rumors that he told Jewish Christians living in foreign lands to abandon Moses, stop circumcising their sons, and drop Jewish customs. While Paul taught that keeping ceremonies could never save anyone, he had never commanded Jewish believers to abandon their national heritage. Still, false gossip had poisoned the minds of many believers against him.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 22,
-   "end": 22,
-   "meaning": "The elders asked what should be done, knowing a massive crowd of Jewish Christians would inevitably gather once news of Paul's arrival got out. Without a plan to clear up the confusion, suspicions would turn into an angry confrontation. The church leaders wanted to protect peace and unity among believers.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Robertson"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 23,
-   "end": 24,
-   "meaning": "The leaders advised Paul to join four Jewish Christians who were completing a special religious promise to God, known as a Nazirite vow. They asked Paul to go through the temple cleansing rituals with them and pay the costs for their animal sacrifices so they could shave their heads. This public act would prove to everyone that Paul was not an enemy of Jewish law and that the rumors were false.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke",
-    "Calvin"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 25,
-   "end": 25,
-   "meaning": "The elders made sure to remind Paul that non-Jewish believers were not bound by these Jewish ceremonies at all. The church had already settled this in an earlier ruling, requiring Gentile Christians only to avoid idol food, blood, strangled meat, and sexual sin. This preserved full spiritual freedom for non-Jewish Christians while allowing Jewish believers to keep their heritage.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin",
-    "Robertson"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 26,
-   "end": 26,
-   "meaning": "Paul accepted their advice, joined the four men, and began the purification rites the very next day. He entered the temple courts to inform the priests when the week of dedication would end and the final offerings would be made. Paul was willing to bend on harmless customs in order to win people and maintain peace among brothers.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke",
-    "Calvin"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 27,
-   "end": 27,
-   "meaning": "Just as the seven days of the vow were almost finished, some non-Christian Jews from the province of Asia recognized Paul in the temple. These old enemies from Ephesus quickly stirred up the crowd into a wild mob and grabbed Paul. Their burning hatred blinded them to the fact that Paul was actually honoring the temple by worshipping there.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin",
-    "Robertson"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 28,
-   "end": 28,
-   "meaning": "The men shouted for help from fellow Israelites, accusing Paul of teaching against the Jewish people, the law of Moses, and the holy temple everywhere he went. Worst of all, they claimed he had brought non-Jewish Greeks past the outer court barrier, which carried a penalty of death under temple rules. These wild accusations were complete lies designed to start a riot.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin",
-    "Robertson"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 29,
-   "end": 29,
-   "meaning": "Luke explains that these accusers had earlier seen Trophimus, a Gentile Christian from Ephesus, walking with Paul in the streets of Jerusalem. Because they saw them together in town, they jumped to the conclusion that Paul had brought him into the inner temple courts. A careless assumption turned into a deadly, false charge.",
-   "meaning_sources": [
+    "Tyndale Study Notes",
     "Matthew Henry",
     "Barnes"
    ],
@@ -354,14 +285,135 @@
    "other": []
   },
   {
+   "verse": 21,
+   "end": 21,
+   "meaning": "The elders warned Paul that these Jewish believers had heard troubling rumors about him. They were told that Paul taught Jewish Christians living abroad to abandon Moses, stop circumcising their sons, and drop their ancient customs.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Barnes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 22,
+   "end": 22,
+   "meaning": "The leaders asked what should be done to keep the peace, since people would quickly discover that Paul had arrived in town. A large crowd of suspicious believers would inevitably assemble to see how Paul lived.",
+   "meaning_sources": [
+    "Wesley",
+    "Robertson",
+    "Barnes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 23,
+   "end": 23,
+   "meaning": "The leaders suggested a practical plan to clear Paul's name. They pointed out four Christian men in their congregation who had taken a Nazirite vow, which was a special Jewish promise of temporary devotion to God.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 24,
+   "end": 24,
+   "meaning": "The elders advised Paul to join these four men in their purification rituals and pay for the animal sacrifices required to end their vows. By sponsoring their shaved heads and sacrifices, Paul would publicly show that the rumors were false and that he still respected Jewish traditions.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "John Gill",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 25,
+   "end": 25,
+   "meaning": "The leaders made sure to state that this plan did not apply to Gentile believers. The earlier Jerusalem council had already established that Gentiles did not have to follow Jewish rituals, requiring only that they avoid food offered to idols, eating blood, strangled meat, and sexual sin.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Matthew Henry",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 26,
+   "end": 26,
+   "meaning": "Paul agreed and went to the temple the next day with the four men to start the cleansing rites. He gave formal notice to the priests showing when the seven days of their vows would end and when each man's offering would be made.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "John Gill",
+    "Robertson"
+   ],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Paul made a serious error in judgment by following human advice and conforming to an outmoded ceremonial system, which looked like compromise rather than godly sincerity.",
+     "sources": [
+      "Wesley"
+     ]
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Paul acted out of loving charity and Christian freedom, lawfully accommodating the weakness of Jewish believers without compromising salvation by grace alone.",
+     "sources": [
+      "Calvin",
+      "Geneva Notes"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 27,
+   "end": 27,
+   "meaning": "Just as the seven days of purification were almost finished, some unbelieving Jews from the province of Asia spotted Paul inside the temple courts. Because of their deep hatred for him from his preaching in Ephesus, they stirred up the entire crowd and grabbed him.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Jamieson-Fausset-Brown",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 28,
+   "end": 28,
+   "meaning": "The men yelled for help, claiming that Paul spent his life teaching against the Jewish people, the law of Moses, and the temple itself. To inflame the mob even more, they shouted that he had brought Gentile Greeks past the barrier into the inner temple, making the holy place unclean.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Barnes",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 29,
+   "end": 29,
+   "meaning": "These men had previously seen Trophimus, a Gentile Christian from Ephesus, walking with Paul through the streets of Jerusalem. They falsely guessed that because Trophimus was with Paul in the city, Paul must have sneaked him inside the temple.",
+   "meaning_sources": [
+    "Tyndale Study Notes",
+    "Barnes",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
    "verse": 30,
    "end": 30,
-   "meaning": "The false accusation threw the entire city into chaos, and people came running together from every direction. The mob grabbed Paul and dragged him out of the inner temple area, and the temple guards slammed the heavy gates shut behind them. They wanted to protect the sacred building from being stained with murder while planning to kill Paul outside.",
+   "meaning": "The false rumor threw the whole city into a panic, and people came running together from every direction. The mob grabbed Paul, dragged him out of the inner courts, and the temple guards immediately slammed the gates shut to keep the holy ground clean from violence.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke",
-    "Calvin"
+    "Tyndale Study Notes",
+    "John Gill",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -369,12 +421,12 @@
   {
    "verse": 31,
    "end": 31,
-   "meaning": "As the bloodthirsty mob was trying to beat Paul to death, urgent news reached the Roman commander stationed in the fortress overlooking the temple area that all Jerusalem was rioting. The Roman garrison watched closely during major feasts because large crowds easily turned into uprisings. God used the Roman military to interrupt the murder of His servant.",
+   "meaning": "While the angry mob was beating Paul to death, word reached the Roman commander at the nearby Antonia fortress that the whole city was rioting. The Romans kept a strong military guard right beside the temple during festivals to stop sudden uprisings.",
    "meaning_sources": [
+    "Tyndale Study Notes",
     "Matthew Henry",
-    "Barnes",
-    "Calvin",
-    "Robertson"
+    "Wesley",
+    "Benson"
    ],
    "differ": [],
    "other": []
@@ -382,12 +434,11 @@
   {
    "verse": 32,
    "end": 32,
-   "meaning": "The commander immediately gathered hundreds of soldiers and centurions and ran down the fortress stairs straight into the middle of the riot. When the rioters saw the armed soldiers charging toward them, they instantly stopped beating Paul. The fear of Roman military punishment accomplished what the fear of God should have done.",
+   "meaning": "The commander quickly gathered officers and hundreds of armed soldiers and ran down the stairs into the courtyard. As soon as the mob saw the Roman troops rushing in, they stopped beating Paul.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Calvin",
-    "Robertson"
+    "Tyndale Study Notes",
+    "Robertson",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -395,11 +446,11 @@
   {
    "verse": 33,
    "end": 33,
-   "meaning": "The commander stepped in, placed Paul under official arrest, and ordered him secured between two soldiers with two iron chains. He assumed Paul was a dangerous criminal and questioned the crowd to find out who he was and what crime he had committed. In this moment, the prophecy spoken by Agabus with Paul's belt came completely true.",
+   "meaning": "The commander stepped in, arrested Paul, and ordered him shackled to two soldiers with heavy iron chains. He then began questioning the crowd to find out who Paul was and what crime he had done.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Tyndale Study Notes",
     "Barnes",
-    "Adam Clarke"
+    "Jamieson-Fausset-Brown"
    ],
    "differ": [],
    "other": []
@@ -407,10 +458,9 @@
   {
    "verse": 34,
    "end": 34,
-   "meaning": "The crowd was in such an uproar that people were screaming completely different stories at the top of their lungs. Because the commander could not uncover any clear facts amid the deafening noise, he commanded that Paul be marched into the Roman army barracks. An out-of-control mob rarely knows the truth about the person it hates.",
+   "meaning": "Different people in the crowd shouted completely conflicting stories, making it impossible for the commander to learn the truth. Because the wild noise was out of control, he ordered his soldiers to march Paul into the fortress barracks.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes",
     "Calvin",
     "Robertson"
    ],
@@ -419,13 +469,24 @@
   },
   {
    "verse": 35,
-   "end": 36,
-   "meaning": "When they reached the stone stairs leading up into the fortress, the soldiers had to lift Paul onto their shoulders to keep him safe from the violent mob pushing in. The angry crowd surged behind them, shouting, 'Away with him!' which meant they wanted him put to death. Jesus had faced the very same hateful chant from a Jerusalem crowd years before.",
+   "end": 35,
+   "meaning": "When the soldiers reached the stairs leading into the fortress, the crowd surged forward so violently that the troops had to lift Paul up and carry him on their shoulders.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
+    "Robertson",
     "Barnes",
-    "Robertson"
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 36,
+   "end": 36,
+   "meaning": "The bloodthirsty mob followed close behind, screaming, 'Away with him!' They shouted the very same words a Jerusalem crowd had cried out years earlier to demand the execution of Jesus.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Robertson",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -433,12 +494,11 @@
   {
    "verse": 37,
    "end": 37,
-   "meaning": "Just before stepping through the fortress doors, Paul politely asked the commander in Greek if he might say something to him. The commander was stunned to hear the prisoner speak cultured, polished Greek instead of rough local slang. This respectful approach immediately grabbed the officer's attention and changed his opinion of Paul.",
+   "meaning": "Just as the soldiers were about to carry Paul through the doors of the barracks, Paul politely asked the commander in Greek if he might speak. The commander was shocked to hear fluent, educated Greek from a man he assumed was an uneducated rioter.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke",
-    "Robertson"
+    "Robertson",
+    "Ellicott",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -446,11 +506,11 @@
   {
    "verse": 38,
    "end": 38,
-   "meaning": "The commander asked if Paul was the notorious Egyptian rebel who had recently led four thousand armed assassins into the desert to overthrow the city. Roman troops had broken up that uprising, but the rebel leader had slipped away, and the officer thought the fugitive had returned. Rumor and mistaken identity had nearly cost Paul his life.",
+   "meaning": "The commander asked if Paul was the notorious Egyptian rebel who had recently led four thousand armed terrorists into the wilderness. That rebel had claimed to be a prophet who would overthrow the city walls, but his followers were defeated while he escaped.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke"
+    "Tyndale Study Notes",
+    "Wesley",
+    "Barnes"
    ],
    "differ": [],
    "other": []
@@ -458,10 +518,9 @@
   {
    "verse": 39,
    "end": 39,
-   "meaning": "Paul answered that he was not an Egyptian outlaw, but a Jew born in Tarsus, an important and famous city in Cilicia. Because he was an educated, respectable citizen, he begged the officer for permission to address the angry crowd below. Even while bruised and bleeding, Paul's first thought was to preach the gospel to those who hated him.",
+   "meaning": "Paul answered that he was not that rebel, but a Jew from Tarsus in Cilicia, a famous and distinguished city in the empire. He then respectfully begged the commander for permission to turn around and speak to the people.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
+    "Tyndale Study Notes",
     "Adam Clarke",
     "Robertson"
    ],
@@ -471,25 +530,25 @@
   {
    "verse": 40,
    "end": 40,
-   "meaning": "With the officer's permission, Paul stood high on the fortress stairs and waved his hand to quiet the crowd. The screaming mob fell completely silent, and Paul began speaking to them in their native Aramaic tongue, often called Hebrew. Hearing their sacred mother language opened their ears to listen to his defense.",
+   "meaning": "When the commander gave him leave, Paul stood on the stone steps, raised his chained hands, and signaled for the crowd to be quiet. A great hush fell across the mob, and Paul began speaking to them in Aramaic, their everyday Jewish language.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke",
-    "Robertson"
+    "Tyndale Study Notes",
+    "Ellicott",
+    "Robertson",
+    "John Gill"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 8: removed sources ['Calvin']",
+  "v. 5: removed sources ['Benson']",
   "v. 13: removed sources ['Calvin']",
-  "v. 20: removed sources ['Calvin']",
-  "v. 21: removed sources ['Calvin']",
-  "v. 29: removed sources ['Adam Clarke', 'Calvin']",
-  "v. 33: removed sources ['Calvin']",
-  "v. 38: removed sources ['Calvin']"
+  "v. 18: removed sources ['Benson']",
+  "v. 21: removed sources ['Benson']",
+  "v. 23: removed sources ['Geneva Notes']",
+  "v. 38: removed sources ['Benson']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

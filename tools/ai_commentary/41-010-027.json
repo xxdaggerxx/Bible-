@@ -8,22 +8,31 @@
   {
    "verse": 27,
    "end": 27,
-   "meaning": "Jesus answers the disciples' question about who can be saved. On our own, no human has the strength or goodness to enter God's kingdom. But God's grace can change human hearts and do what people cannot do for themselves.",
+   "meaning": "Jesus looks directly at His astonished followers and explains that saving oneself is impossible for human beings. No person can earn salvation or break free from worldly ties by human willpower alone. God, however, has the power to change human hearts and do what people cannot do for themselves.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes"
+    "John Gill",
+    "Barnes",
+    "Tyndale Study Notes"
    ],
-   "differ": [],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Salvation is entirely an act of God's sovereign grace, which overcomes human inability and cannot be resisted by those He chooses.",
+     "sources": [
+      "John Gill",
+      "Tyndale Study Notes"
+     ]
+    }
+   ],
    "other": []
   },
   {
    "verse": 28,
    "end": 28,
-   "meaning": "Peter points out that he and the other disciples walked away from their homes and jobs to follow Jesus. He wanted to know what would become of them after giving up so much. Jesus does not scold Peter, but uses the question to encourage them all.",
+   "meaning": "Peter speaks up to remind Jesus that the disciples walked away from their homes, work, and possessions to follow Him. Unlike the rich ruler who refused to part with his wealth, they really had left everything behind. Peter wonders what this sacrifice will mean for them in the end.",
    "meaning_sources": [
     "Matthew Henry",
-    "Wesley",
-    "Robertson"
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -31,11 +40,11 @@
   {
    "verse": 29,
    "end": 30,
-   "meaning": "Jesus promises that anyone who leaves family or land for Him will be richly rewarded in this life and forever. This does not mean getting a hundred literal mothers, but gaining the love and support of God's wider spiritual family. Even so, these earthly blessings will also come with hard times and persecution.",
+   "meaning": "Jesus promises that no one who gives up family or property for His sake and the good news of the gospel will ever be left empty-handed. In this present life, they gain a vast new family of brothers, sisters, and mothers in the church community, along with shelter and support, though these come alongside persecutions. In the world to come, they will receive eternal life, which means living forever in God's presence.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "Adam Clarke"
+    "Wesley",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -43,10 +52,11 @@
   {
    "verse": 31,
    "end": 31,
-   "meaning": "Jesus warns that earthly rank does not match rank in the kingdom of God. Those who seem most important or honored in this world may end up last, while humble people who are overlooked will be honored. Disciples must never follow Christ just to bargain for high status.",
+   "meaning": "Jesus gives a warning that God's kingdom completely reverses human ideas of importance. Those who enjoy honor and wealth in this world may find themselves last in God's sight, while humble believers who were overlooked will be placed first. It reminds disciples never to boast about what they have given up.",
    "meaning_sources": [
     "Matthew Henry",
-    "Robertson"
+    "Barnes",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -54,11 +64,11 @@
   {
    "verse": 32,
    "end": 32,
-   "meaning": "Jesus walked boldly ahead of His disciples on the road up to Jerusalem. The disciples were amazed and frightened because they knew the leaders in the city wanted to kill Him. To prepare them, Jesus pulled the twelve apostles aside to explain what was coming.",
+   "meaning": "As the group heads up the steep road toward Jerusalem, Jesus walks boldly in front of everyone. His courage and resolve amaze the disciples, while the larger crowd following behind is filled with dread because they know religious leaders want Him dead. Jesus pulls the twelve apostles aside once more to tell them what will soon happen to Him.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Barnes"
+    "Barnes",
+    "Wesley",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -66,41 +76,46 @@
   {
    "verse": 33,
    "end": 34,
-   "meaning": "Jesus spells out exactly how He will suffer and die. He explains that Jewish leaders will hand Him over to the Romans, who will mock, whip, and kill Him. Even with these dark details, He ends with the promise that He will rise from the dead on the third day.",
+   "meaning": "Jesus lays out His coming suffering in exact detail for the third time. He tells the Twelve that the Jewish leaders will condemn Him to death and hand Him over to the Roman authorities. The Romans will mock Him, spit on Him, whip Him, and kill Him, but three days later He will rise from the dead.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
-   "other": [
-    {
-     "label": "Modern scholarship",
-     "view": "Some modern scholars argue that Jesus could not have foretold these events in such exact detail, claiming the church added these specifics after the crucifixion took place.",
-     "sources": [
-      "https://www.studylight.org/commentaries/eng/dcc/mark-10.html"
-     ]
-    }
-   ]
+   "other": []
   },
   {
    "verse": 35,
    "end": 35,
-   "meaning": "James and John come to Jesus with a selfish request. They ask Him to promise to give them whatever they want before they even say what it is. They were still expecting Jesus to set up an earthly royal court.",
+   "meaning": "James and John, the sons of Zebedee, approach Jesus with an open-ended request. They ask Him to promise ahead of time to grant whatever favor they are about to bring up. They act like eager children trying to get a blank check from their teacher.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "Robertson",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 36,
+   "end": 36,
+   "meaning": "Jesus does not make a blind promise to the brothers. Instead, He gently asks them to name their request aloud so their motives can be brought into the open.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "John Gill"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 37,
    "end": 37,
-   "meaning": "When Jesus asks what they want, the brothers ask to sit at His right and left hands in His glory. In a royal palace, those were the seats of highest honor and power. They were seeking personal greatness right after Jesus had just predicted His suffering and death.",
+   "meaning": "The two brothers ask to sit at Jesus' right and left sides when He takes His glorious throne. These were the positions of highest rank and power in a royal court. They still pictured the Messiah setting up an earthly political kingdom with top government posts for them.",
    "meaning_sources": [
     "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Adam Clarke"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -108,11 +123,11 @@
   {
    "verse": 38,
    "end": 38,
-   "meaning": "Jesus tells James and John that they do not understand what they are asking for. He asks if they can drink His cup and share in His baptism, using these pictures to describe deep inward sorrow and outward suffering. The path to glory in God's kingdom leads through suffering, not worldly honor.",
+   "meaning": "Jesus tells them that they do not understand what they are asking. The path to His glory goes through deep suffering, which He pictures as drinking a cup of pain and undergoing a baptism of intense sorrow and death.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown",
-    "Wesley"
+    "Wesley",
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -120,10 +135,11 @@
   {
    "verse": 39,
    "end": 39,
-   "meaning": "James and John quickly answer that they can, not realizing how heavy the burden will be. Jesus gently tells them that they really will share in His sufferings. James would later be killed for his faith, and John would face long years of persecution and exile.",
+   "meaning": "James and John quickly insist they are able to handle that suffering, not realizing their own human weakness. Jesus tells them they will indeed share in His cup and baptism. James would later be put to death for his faith, and John would face exile and harsh persecution.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -131,11 +147,11 @@
   {
    "verse": 40,
    "end": 40,
-   "meaning": "Jesus explains that the places of highest honor are not handed out through personal favoritism. Those seats belong to the ones for whom the Father has prepared them. Followers of Christ must focus on being faithful in trials rather than grasping for special rewards.",
+   "meaning": "Jesus explains that the places of highest honor are not His to hand out as personal favors. Those special positions have already been assigned by God the Father to the people for whom He prepared them.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Wesley"
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -143,10 +159,11 @@
   {
    "verse": 41,
    "end": 41,
-   "meaning": "When the other ten disciples hear about the request, they become angry with James and John. Their anger showed that they were just as concerned about position and rank as the two brothers were. None of them had yet grasped the humble nature of Jesus' kingdom.",
+   "meaning": "When the other ten disciples discover what James and John had asked, they become very angry with them. Their frustration grew out of their own ambition, because they also wanted those top spots of honor for themselves.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -154,11 +171,11 @@
   {
    "verse": 42,
    "end": 42,
-   "meaning": "Jesus gathers all twelve disciples together to correct their thinking about power. In the surrounding nations, rulers love to push people around and show off their authority over others. Worldly power is often used to control people rather than care for them.",
+   "meaning": "Jesus gathers all twelve together to address the tension and explain how His kingdom works. In pagan nations, rulers show their greatness by dominating and bossing people around. Jesus warns His followers that they must not copy that worldly style of leadership.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Geneva Notes",
     "Jamieson-Fausset-Brown",
-    "Geneva Notes"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -166,10 +183,11 @@
   {
    "verse": 43,
    "end": 44,
-   "meaning": "Jesus tells His followers that leadership among them must be completely different from the world's ways. Anyone who wants to be truly great must choose to be a helper to everyone else. The person who desires first place must be willing to act like a humble servant of all.",
+   "meaning": "Jesus completely flips the world's definition of greatness upside down. Anyone who wants to become important in His community must be a willing helper to others, and whoever wants the first place must act like a servant to all.",
    "meaning_sources": [
     "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -177,23 +195,24 @@
   {
    "verse": 45,
    "end": 45,
-   "meaning": "Jesus points to His own mission as the ultimate example of humble service. He did not come to earth to be waited on, but to serve others and give His life as a ransom, which is a price paid to free captives from sin. His death in our place provides both our salvation and our pattern for living.",
+   "meaning": "Jesus points to His own life as the ultimate example of true greatness. He did not come to earth to be waited on, but to spend Himself serving others and to give His life as a ransom—a price paid to purchase freedom for captives—to deliver many from sin and death.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Jamieson-Fausset-Brown"
+    "Jamieson-Fausset-Brown",
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [
     {
      "tradition": "Reformed and Presbyterian",
-     "view": "Christ gave His life as an effective ransom specifically for the elect whom God chose to save.",
+     "view": "Christ gave His life as an effectual ransom specifically intended to purchase and secure salvation for the elect.",
      "sources": [
-      "Matthew Henry",
-      "https://www.desiringgod.org/messages/the-son-of-man-came-to-serve"
+      "John Gill",
+      "Tyndale Study Notes"
      ]
     },
     {
      "tradition": "Methodist",
-     "view": "Christ offered His life as a ransom sufficient for all human souls who needed redemption.",
+     "view": "Christ gave His life as a ransom on behalf of all humanity, making salvation freely available to anyone who believes.",
      "sources": [
       "Wesley"
      ]
@@ -204,22 +223,34 @@
   {
    "verse": 46,
    "end": 46,
-   "meaning": "As Jesus and a large crowd left Jericho, a blind beggar named Bartimaeus was sitting beside the road. Because he could not see, he had no way to earn a living except by asking travelers for help. He was in a helpless condition right along the path where Jesus was passing by.",
+   "meaning": "Jesus and His followers reach the oasis city of Jericho and soon set out with a large crowd of festival travelers. A blind beggar named Bartimaeus sits along the edge of the road, relying on the generosity of passing pilgrims to survive.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "Robertson"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 47,
-   "end": 48,
-   "meaning": "When Bartimaeus hears that Jesus is near, he shouts out, calling Him the Son of David and begging for mercy. The crowd tells him to be quiet, but he only yells louder. He recognizes Jesus as the promised Messiah and refuses to let anyone keep him away.",
+   "end": 47,
+   "meaning": "As soon as Bartimaeus hears that Jesus from Nazareth is nearby, he begins calling out loudly. He calls Jesus the 'Son of David,' which is a royal title for the promised Messiah, showing his faith that Jesus has the power and mercy to help him.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes"
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 48,
+   "end": 48,
+   "meaning": "Many people in the crowd tell the beggar to be quiet, treating him as an annoying disturbance. Instead of staying silent, Bartimaeus shouts all the more desperately for the Son of David to show him mercy.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -227,10 +258,11 @@
   {
    "verse": 49,
    "end": 49,
-   "meaning": "Hearing the blind man's cry, Jesus stops in His tracks and tells the crowd to call him over. The people then encourage Bartimaeus to cheer up and get to his feet because the Master wants him. Jesus never treats the cry of a needy person as an unwanted interruption.",
+   "meaning": "Jesus stops walking and commands the crowd to bring the man forward. The people immediately cheer the blind man up, telling him to take heart and get to his feet because the Master is asking for him.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -238,11 +270,11 @@
   {
    "verse": 50,
    "end": 50,
-   "meaning": "Bartimaeus immediately throws off his outer coat, leaps up, and comes to Jesus. He casts his garment aside so nothing will trip him or slow him down as he hurries forward. His quick response shows his eager faith and complete expectation of receiving help.",
+   "meaning": "Filled with joy and hope, Bartimaeus throws off his heavy outer cloak so nothing can trip him up. He leaps to his feet and hurries through the crowd straight to Jesus.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke"
+    "Wesley",
+    "Adam Clarke",
+    "Robertson"
    ],
    "differ": [],
    "other": []
@@ -250,10 +282,11 @@
   {
    "verse": 51,
    "end": 51,
-   "meaning": "Jesus asks Bartimaeus what he wants Him to do, giving the beggar a chance to speak from his heart. The blind man calls Jesus his Master and asks for his eyesight to be restored. Unlike the disciples who asked for high positions, this man simply asks for mercy and light.",
+   "meaning": "Jesus asks the blind man what he wants Him to do, giving him room to voice his personal need. Bartimaeus addresses Jesus as 'Rabboni,' a word of deep respect meaning 'my Master,' and simply asks to be given his sight back.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Robertson"
+    "Robertson",
+    "Ellicott",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -261,21 +294,25 @@
   {
    "verse": 52,
    "end": 52,
-   "meaning": "Jesus tells Bartimaeus that his faith has healed him, and the man receives his sight at once. Instead of simply going home, Bartimaeus follows Jesus down the road toward Jerusalem. When Christ opens our spiritual eyes, our natural response is to follow Him wherever He leads.",
+   "meaning": "Jesus grants the request at once, telling the man that his faith has healed him and made him whole. Bartimaeus immediately receives his sight and chooses to follow Jesus on the road toward Jerusalem as a thankful disciple.",
    "meaning_sources": [
-    "Matthew Henry",
     "Calvin",
-    "Barnes"
+    "John Gill",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 43: removed sources ['Geneva Notes']",
-  "v. 45: removed sources ['Adam Clarke']",
-  "v. 47: removed sources ['Adam Clarke']",
-  "v. 51: removed sources ['Barnes']"
+  "v. 27: dropped differ point (Methodist): no checkable source",
+  "v. 27: removed sources ['Wesley', 'Benson']",
+  "v. 28: removed sources ['Barnes']",
+  "v. 33: dropped other point (Modern scholarship): no checkable source",
+  "v. 33: removed sources ['studylight.org/commentaries/eng/dcc/mark-10.html']",
+  "v. 45: removed sources ['Benson']",
+  "v. 47: removed sources ['Calvin']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }

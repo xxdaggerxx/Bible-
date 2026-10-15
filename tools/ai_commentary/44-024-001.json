@@ -8,19 +8,31 @@
   {
    "verse": 1,
    "end": 1,
-   "meaning": "Five days after Paul arrives in Caesarea, High Priest Ananias and several Jewish elders travel down from Jerusalem. They bring a Roman lawyer named Tertullus to lay formal legal charges before Governor Felix. The Jewish leaders hire a professional speaker because they want to use Roman court rules to make sure Paul is condemned.",
+   "meaning": "Ananias the high priest travelled down to Caesarea with several Jewish elders and a hired lawyer named Tertullus. They came to formally accuse Paul before Felix, the Roman governor. Their quick journey and use of a trained Roman advocate showed how determined they were to win a conviction.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes",
-    "Adam Clarke"
+    "Jamieson-Fausset-Brown",
+    "https://enduringword.com/bible-commentary/acts-24/"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 2,
+   "end": 2,
+   "meaning": "Tertullus began his speech with lavish praise, thanking Felix for bringing peace and making reforms for the Jewish people. This opening flattery was a standard courtroom tactic meant to win the governor's goodwill. In reality, Felix was known for cruelty and greed rather than true peacemaking.",
+   "meaning_sources": [
+    "Barnes",
+    "Jamieson-Fausset-Brown",
+    "https://enduringword.com/bible-commentary/acts-24/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
    "end": 3,
-   "meaning": "Tertullus begins his speech by praising Governor Felix with heavy flattery. He thanks Felix for bringing lasting peace and great reforms to the Jewish people everywhere. In reality, Felix was known for being harsh and corrupt, but Roman lawyers often praised judges to win their favor.",
+   "meaning": "Tertullus claimed that the Jewish people everywhere welcomed Felix's rule with deep gratitude. This statement was exaggerated praise designed to please a corrupt ruler. While Felix had put down some robber bands, his harsh rule actually created bitter resentment among the people.",
    "meaning_sources": [
     "Matthew Henry",
     "Barnes",
@@ -32,11 +44,11 @@
   {
    "verse": 4,
    "end": 4,
-   "meaning": "Tertullus politely asks Felix to listen for just a short moment so he does not burden the busy governor. He acts humble and respectful to keep Felix in a good mood. His polite words are meant to hide how weak his actual charges against Paul really are.",
+   "meaning": "The lawyer promised to be brief so that he would not waste the governor's time, asking Felix to listen with patience. He continued to praise the governor's kindness to keep his attention. This polite request prepared the court for the formal charges against Paul.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "Robertson"
+    "Adam Clarke",
+    "Ellicott"
    ],
    "differ": [],
    "other": []
@@ -44,11 +56,11 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "Tertullus accuses Paul of being a human plague who stirs up riots among Jews across the whole empire. He also calls Paul a leader of the Nazarenes, which was a scornful name for followers of Jesus. He frames Paul as a dangerous political rebel to get the Roman government to step in.",
+   "meaning": "Tertullus described Paul as a dangerous plague who stirred up riots among Jews across the Roman empire. He also called him a ringleader of the Nazarenes, which was a scornful name for followers of Jesus from Nazareth. By accusing Paul of causing public unrest, the prosecution tried to make him look like a political rebel against Rome.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Adam Clarke"
+    "Jamieson-Fausset-Brown",
+    "Tyndale Study Notes",
+    "https://enduringword.com/bible-commentary/acts-24/"
    ],
    "differ": [],
    "other": []
@@ -56,11 +68,11 @@
   {
    "verse": 6,
    "end": 6,
-   "meaning": "Tertullus claims that Paul tried to desecrate the holy temple, which caused the Jewish leaders to arrest him. He insists they only wanted to put Paul on trial under their own religious law. In truth, an angry crowd had dragged Paul out of the temple and was trying to beat him to death.",
+   "meaning": "Tertullus charged Paul with trying to desecrate the holy temple, which led the Jewish leaders to seize him. This accusation softened the earlier rumor that Paul had actually brought a Gentile inside, which was false. The lawyer claimed they had simply arrested Paul to judge him fairly under Jewish law.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
-    "Calvin"
+    "Ellicott",
+    "https://bible.org/seriespage/acts-24"
    ],
    "differ": [],
    "other": []
@@ -68,19 +80,20 @@
   {
    "verse": 7,
    "end": 7,
-   "meaning": "Tertullus complains that Commander Lysias arrived with soldiers and took Paul away from them by force. He tries to make Lysias look like an unjust intruder who blocked their legal court. In reality, Lysias had rescued Paul from being murdered without a trial.",
+   "meaning": "Tertullus complained that Commander Lysias arrived with soldiers and forcefully took Paul from their hands. The lawyer presented this rescue as an unlawful interference with Jewish justice. In truth, Lysias had stepped in to rescue Paul from being beaten to death by an angry mob.",
    "meaning_sources": [
+    "John Gill",
     "Matthew Henry",
-    "Adam Clarke"
+    "Barnes"
    ],
    "differ": [],
    "other": [
     {
      "label": "Modern scholarship",
-     "view": "Most modern scholars point out that this verse is absent from the oldest and best Greek manuscripts, suggesting it was added by a later copyist.",
+     "view": "Modern scholars note that verse 7 is absent from the oldest Greek manuscripts and was likely added by later scribes to fill out the story.",
      "sources": [
-      "https://classic.net.bible.org/passage.php?passage=Act+24%3A7",
-      "https://bible.org/seriespage/acts-24"
+      "Robertson",
+      "https://classic.net.bible.org/passage.php?passage=Act+24%3A7"
      ]
     }
    ]
@@ -88,10 +101,10 @@
   {
    "verse": 8,
    "end": 8,
-   "meaning": "Tertullus tells Felix that by questioning Paul directly, the governor can see that all the charges are true. The prosecution offers no outside witnesses or hard proof. They simply hope Paul will say something under questioning that condemns himself.",
+   "meaning": "Tertullus told Felix that he could learn the truth of all these accusations by examining Paul himself. The lawyer offered no outside witnesses, hoping that the interrogation would trap Paul into confessing. Under Roman legal procedure, a careful examination of the accused was required before a judge gave a verdict.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
+    "Adam Clarke",
     "https://enduringword.com/bible-commentary/acts-24/"
    ],
    "differ": [],
@@ -100,10 +113,11 @@
   {
    "verse": 9,
    "end": 9,
-   "meaning": "The Jewish leaders present in the courtroom agree with Tertullus and claim his speech is entirely true. By backing up these claims, they take full responsibility for the false accusations. People often join in wicked lies when they let hatred guide their actions.",
+   "meaning": "The Jewish leaders who had come from Jerusalem spoke up, agreeing that all of Tertullus's accusations were true. They backed their lawyer's claims even though they brought no solid evidence to support them. Their united testimony was intended to pressure the governor into condemning Paul.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes"
+    "Barnes",
+    "John Gill"
    ],
    "differ": [],
    "other": []
@@ -111,11 +125,11 @@
   {
    "verse": 10,
    "end": 10,
-   "meaning": "Felix motions for Paul to speak, and Paul begins his defense with calm confidence. Paul avoids fake flattery, but politely notes that Felix has governed the province for several years and understands Jewish matters well. Knowing his judge is experienced gives Paul hope for a fair hearing.",
+   "meaning": "Paul began his defense with respectful confidence after Felix nodded for him to speak. He noted that Felix had governed the province for several years and understood Jewish customs well. Unlike his accusers, Paul avoided empty flattery and welcomed a fair hearing based on the facts.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Wesley",
     "Barnes",
-    "Wesley"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -123,29 +137,19 @@
   {
    "verse": 11,
    "end": 11,
-   "meaning": "Paul points out that it has only been twelve days since he arrived in Jerusalem to worship God. That short time could easily be checked by witnesses. It left him no time to build a political movement or plan an uprising.",
+   "meaning": "Paul pointed out that only twelve days had passed since he arrived in Jerusalem to worship God. That short period left him no time to organize a rebellion or spread unrest. Felix could easily check this timeline by questioning reliable witnesses.",
    "meaning_sources": [
-    "Matthew Henry",
-    "Barnes"
+    "Barnes",
+    "Adam Clarke",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   },
   {
    "verse": 12,
-   "end": 13,
-   "meaning": "Paul states that no one ever saw him arguing in the temple or stirring up a crowd in the synagogues or city streets. He directly challenges his accusers to bring actual proof for any of their claims. False charges quickly fall apart when there is no real evidence to support them.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 14,
-   "end": 14,
-   "meaning": "Paul admits that he follows the Way, which his accusers call a breakaway sect, but insists he worships the same God his ancestors served. He explains that his Christian faith is rooted in the Scriptures, because he believes everything written in the Jewish Law and Prophets. True faith in Christ fulfills God's ancient promises rather than destroying them.",
+   "end": 12,
+   "meaning": "Paul stated that his accusers never found him arguing with anyone in the temple or stirring up crowds in the synagogues or city streets. He had conducted himself quietly and peacefully throughout his entire stay. His actual conduct completely contradicted the charge that he was an agitator.",
    "meaning_sources": [
     "Matthew Henry",
     "Barnes",
@@ -155,13 +159,36 @@
    "other": []
   },
   {
+   "verse": 13,
+   "end": 13,
+   "meaning": "Paul challenged his opponents to produce proof for any of the serious charges they had made against him. They had brought heavy accusations of rebellion, but they could not show a single piece of evidence. Without verified facts, their case had no legal ground.",
+   "meaning_sources": [
+    "Barnes",
+    "Robertson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 14,
+   "end": 14,
+   "meaning": "Paul openly admitted that he worshiped the God of his ancestors according to the Way, which his opponents called a sect. He insisted that this faith remained completely faithful to the Law of Moses and the writings of the Prophets. He did not view Christianity as a departure from the faith, but as the true fulfillment of God's ancient promises.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
    "verse": 15,
    "end": 15,
-   "meaning": "Paul explains that he shares the hope held by most Jews that God will raise the dead to life again. This future resurrection will include both the righteous, who are saved by God, and the wicked, who rejected Him. Because all people will rise, everyone must one day stand before God for final judgment.",
+   "meaning": "Paul declared that he shared the Jewish hope that God will raise both the righteous and the unrighteous from the dead. This resurrection was taught in Scripture and accepted by the Pharisees, though denied by the Sadducees. The certainty of a future judgment for all people gave Paul firm confidence in God's righteousness.",
    "meaning_sources": [
     "Matthew Henry",
     "Barnes",
-    "Adam Clarke"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -169,7 +196,7 @@
   {
    "verse": 16,
    "end": 16,
-   "meaning": "Because Paul lives with the coming resurrection in mind, he works constantly to keep a clear conscience before God and people. A clear conscience means obeying God's commands and dealing honestly with others so that nothing brings guilt or blame. Knowing that God sees everything inspires believers to live upright lives.",
+   "meaning": "Because Paul lived in light of the coming resurrection, he made it his constant aim to keep a clear conscience before God and other people. He refused to commit deliberate sin and sought to act with integrity in all his relationships. A living hope in the future should always move believers toward a holy life.",
    "meaning_sources": [
     "Matthew Henry",
     "Barnes",
@@ -181,9 +208,44 @@
   {
    "verse": 17,
    "end": 17,
-   "meaning": "Paul explains that after several years away, he came to Jerusalem to bring alms, which were charitable gifts of money for the poor, as well as religious offerings. He returned to bless his people and honor God, not to stir up trouble. His real actions proved his deep love and respect for his nation.",
+   "meaning": "Paul explained that he had returned to Jerusalem after several years away on an errand of mercy. He came to deliver financial gifts collected from Gentile churches to help poor Jewish believers, and to present worship offerings. Such generous and peaceful actions showed his love for his people rather than an intent to cause harm.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Barnes",
+    "Tyndale Study Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 18,
+   "end": 18,
+   "meaning": "Paul explained that when his opponents found him in the temple, he was completing a ceremonial purification vow. He was entirely alone with a few companions and was not leading a crowd or making noise. The trouble started only when hostile Jews from the province of Asia attacked him without cause.",
+   "meaning_sources": [
+    "John Gill",
+    "Robertson",
+    "Ellicott"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 19,
+   "end": 19,
+   "meaning": "Paul emphasized that the Asian Jews who had actually seen him in the temple ought to be present in court to state their charges. Their absence showed that they were unwilling to face legal cross-examination. Under Roman law, accusers were required to appear in person and provide direct testimony.",
+   "meaning_sources": [
+    "Barnes",
+    "Robertson",
+    "https://enduringword.com/bible-commentary/acts-24/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 20,
+   "end": 20,
+   "meaning": "Since the original witnesses were missing, Paul challenged the council members present to name any crime they had found in him during his hearing before the Sanhedrin. He was confident of his innocence and invited them to show where he had broken any law. Their inability to point out a crime proved their charges were baseless.",
+   "meaning_sources": [
     "Barnes",
     "Adam Clarke"
    ],
@@ -191,25 +253,13 @@
    "other": []
   },
   {
-   "verse": 18,
-   "end": 19,
-   "meaning": "Paul reminds Felix that when his enemies found him in the temple, he was ritually pure and quiet, without any mob or disturbance. He points out that the Asian Jews who actually caused the riot ought to be in court to testify if they had real evidence against him. In Roman justice, charges could not stand without the actual eyewitnesses present.",
-   "meaning_sources": [
-    "Matthew Henry",
-    "Barnes",
-    "Jamieson-Fausset-Brown"
-   ],
-   "differ": [],
-   "other": []
-  },
-  {
-   "verse": 20,
+   "verse": 21,
    "end": 21,
-   "meaning": "Paul challenges the leaders standing before Felix to state any crime they found in him during his hearing before their council. The only thing he had done was cry out that he was on trial for believing in the resurrection of the dead. That statement was not a crime, but a core belief of Jewish Scripture.",
+   "meaning": "Paul noted that the only disputed thing he said before the council was his public shout about the resurrection of the dead. That statement expressed a central Jewish belief, not a crime under Roman or Jewish law. It was his faith in this biblical truth, and in Christ's resurrection, that had really triggered the conflict.",
    "meaning_sources": [
     "Matthew Henry",
     "Barnes",
-    "Calvin"
+    "https://enduringword.com/bible-commentary/acts-24/"
    ],
    "differ": [],
    "other": []
@@ -217,11 +267,11 @@
   {
    "verse": 22,
    "end": 22,
-   "meaning": "Felix already knows quite a bit about the Christian movement, called the Way, and sees that Paul has committed no crime. Instead of releasing him, Felix puts off the decision by claiming he must wait until Commander Lysias comes down to Caesarea. Delaying justice was an easy way for an unjust ruler to avoid offending the Jewish leaders.",
+   "meaning": "Felix adjourned the hearing, saying he would decide the case when Commander Lysias came down to Caesarea. The governor was already well informed about the Way and recognized that Paul was innocent of any revolt. Rather than releasing Paul and displeasing the Jewish leaders, Felix delayed giving a verdict.",
    "meaning_sources": [
-    "Matthew Henry",
     "Jamieson-Fausset-Brown",
-    "Barnes"
+    "Barnes",
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -229,11 +279,11 @@
   {
    "verse": 23,
    "end": 23,
-   "meaning": "Felix places Paul in the custody of a centurion but orders that he be granted generous personal freedom. He instructs the guard not to stop Paul's friends from visiting him and bringing him food and supplies. This relaxed confinement showed that Felix knew Paul was not a violent criminal.",
+   "meaning": "Felix placed Paul under the custody of a centurion but granted him considerable freedom, allowing his friends to visit and provide for his needs. This relaxed confinement reflected the governor's recognition that Paul was a Roman citizen and not a dangerous criminal. Friends like Luke and Philip were able to care for Paul freely during this time.",
    "meaning_sources": [
     "Matthew Henry",
-    "Barnes",
-    "Jamieson-Fausset-Brown"
+    "Wesley",
+    "Robertson"
    ],
    "differ": [],
    "other": []
@@ -241,11 +291,11 @@
   {
    "verse": 24,
    "end": 24,
-   "meaning": "A few days later, Felix returns with his wife Drusilla, who was a Jewish princess, and calls for Paul to hear him talk about faith in Christ Jesus. Drusilla had deserted her previous husband to marry Felix, and both were curious about this new teaching. Paul treats the meeting as an opportunity to share the gospel with rulers.",
+   "meaning": "A few days later, Felix returned with his Jewish wife Drusilla and called for Paul to explain faith in Christ Jesus. Drusilla was the daughter of King Herod Agrippa I and had left her former husband to marry Felix. Paul used this private audience to speak boldly about the doctrine of Christ.",
    "meaning_sources": [
-    "Matthew Henry",
+    "Wesley",
     "Barnes",
-    "Adam Clarke"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
@@ -253,24 +303,23 @@
   {
    "verse": 25,
    "end": 25,
-   "meaning": "Paul speaks boldly about living right, controlling one's desires, and facing God's future judgment, which terrifies Felix. Felix cuts the meeting short and sends Paul away, promising to call for him when a convenient time comes. Putting off repentance when God's truth hits home is a dangerous trap.",
+   "meaning": "As Paul spoke about righteousness, self-control, and the coming judgment, Felix was terrified by his own guilt. Unable to bear the conviction, he dismissed Paul and promised to call for him at a more convenient time. Putting off God's call to repentance is a dangerous habit that leaves the soul unchanged.",
    "meaning_sources": [
     "Matthew Henry",
     "Barnes",
-    "Adam Clarke"
+    "Tyndale Study Notes"
    ],
    "differ": [
     {
      "tradition": "Methodist",
-     "view": "Methodists stress that Felix missed a real opportunity for salvation, warning that putting off conviction hardens the heart so that a convenient season never arrives.",
+     "view": "Methodists emphasize that Felix was given a genuine opportunity to respond to God's convicting grace, but he lost it by choosing to delay repentance.",
      "sources": [
-      "Wesley",
-      "https://biblehub.com/commentaries/wes/acts/24.htm"
+      "Wesley"
      ]
     },
     {
      "tradition": "Baptist",
-     "view": "Calvinistic Baptists teach that the Spirit's restraining grace awakened Felix's conscience and caused natural fear of judgment, but without saving grace his heart remained unchanged.",
+     "view": "Calvinistic Baptists understand Felix's fear as restraining grace that pricked his conscience temporarily without changing his unregenerate heart.",
      "sources": [
       "https://www.studylight.org/commentary/acts/24-25.html"
      ]
@@ -279,10 +328,9 @@
    "other": [
     {
      "label": "Catholic",
-     "view": "The traditional Catholic reading translates self-control here as chastity, seeing Paul's message as a direct rebuke of the unlawful marriage between Felix and Drusilla.",
+     "view": "Catholic translations often translate self-control as chastity, seeing Paul as addressing the unlawful marriage of Felix and Drusilla directly.",
      "sources": [
-      "https://biblehub.com/acts/24-25.htm",
-      "Adam Clarke"
+      "https://biblehub.com/acts/24-25.htm"
      ]
     }
    ]
@@ -290,10 +338,10 @@
   {
    "verse": 26,
    "end": 26,
-   "meaning": "Felix sends for Paul often to talk with him, hoping Paul or his friends will pay a bribe for his release. Paul refuses to buy his freedom, choosing prison over corruption. Felix's love of money blinds him to the spiritual message he heard.",
+   "meaning": "Felix sent for Paul often to talk with him, but his real motive was the hope of receiving a bribe for his release. Hearing about the relief funds Paul had brought to Jerusalem likely made the greedy governor think Paul had access to money. Paul refused to purchase his freedom through corruption.",
    "meaning_sources": [
-    "Matthew Henry",
     "Barnes",
+    "Calvin",
     "Adam Clarke"
    ],
    "differ": [],
@@ -302,20 +350,21 @@
   {
    "verse": 27,
    "end": 27,
-   "meaning": "Two full years pass while Paul remains held in Caesarea, until Porcius Festus arrives as the new governor. Felix is recalled to Rome, and to stay on good terms with the angry Jewish leaders, he leaves Paul locked up. Corrupt leaders often sacrifice innocent people just to protect their own reputations.",
+   "meaning": "Paul remained in custody for two full years until Porcius Festus succeeded Felix as governor. Felix wanted to please the Jewish leaders so they would not file complaints against him in Rome, so he left Paul bound. God used this long confinement to keep Paul safe while his mission continued to bear fruit.",
    "meaning_sources": [
     "Matthew Henry",
     "Barnes",
-    "Jamieson-Fausset-Brown"
+    "Tyndale Study Notes"
    ],
    "differ": [],
    "other": []
   }
  ],
  "problems": [
-  "v. 7: removed sources ['Calvin']",
-  "v. 11: removed sources ['Wesley']",
-  "v. 12: removed sources ['Wesley']"
+  "v. 13: removed sources ['Ellicott']",
+  "v. 20: removed sources ['Calvin']",
+  "v. 25: removed sources ['Benson']"
  ],
+ "version": 2,
  "model": "google/gemini-3.8-flash"
 }
