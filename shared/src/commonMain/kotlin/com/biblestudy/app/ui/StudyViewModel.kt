@@ -300,25 +300,47 @@ class StudyViewModel(val host: Host) : ViewModel() {
     private var onlineFailed = false
     private var lastOnlineWarning = 0L
 
+    /** Why chapters of online Bibles couldn't be downloaded, by "code book chapter", shown where the chapter would be. */
+    private val onlineProblems = mutableStateMapOf<String, String>()
+
     private val onlineEvents = object : BibleRepository.OnlineEvents {
         override fun arrived(code: String, book: Int, chapter: Int) {
-            viewModelScope.launch(Dispatchers.Main) { onlineArrivals++ }
+            viewModelScope.launch(Dispatchers.Main) { onlineProblems.remove("$code $book $chapter"); onlineArrivals++ }
         }
         override fun failed(code: String, book: Int, chapter: Int, error: Exception) {
             viewModelScope.launch(Dispatchers.Main) {
                 onlineFailed = true
+                val why = com.biblestudy.app.data.OnlineBible.problem(code, error)
+                onlineProblems["$code $book $chapter"] = why
+                // Read in a panel, the page says so; elsewhere (a verse card, a pop-over) a message does.
+                if (panels.any { it.version == code && it.book == book && it.chapter == chapter }) return@launch
                 val now = nowMillis()
                 if (now - lastOnlineWarning < 30_000) return@launch
                 lastOnlineWarning = now
-                val where = "$code ${bible.book(book).name} $chapter"
-                message = when {
-                    error is com.biblestudy.app.data.YouVersion.HttpException -> "Couldn't load $where: ${error.message}."
-                    error.message?.startsWith("No YouVersion key") == true -> error.message
-                    else -> "$where isn't on this tablet yet and there's no internet. It will show when you're back online."
-                }
+                message = "Couldn't load $code ${bible.book(book).name} $chapter. $why"
             }
         }
     }
+
+    /**
+     * What to show in place of an online Bible's chapter that has no text: why it couldn't be
+     * downloaded, that this Bible doesn't have it, or null while it's still coming.
+     */
+    fun onlineProblem(code: String, book: Int, chapter: Int): String? {
+        onlineProblems["$code $book $chapter"]?.let { return it }
+        val o = text(code).online ?: return null
+        return if (o.isSaved(book, chapter)) "The $code doesn't have ${bible.book(book).name}${if (book in o.books) " $chapter" else ""}." else null
+    }
+
+    /** Tries an online chapter again (the page's *Try again*). */
+    fun retryOnlineChapter(code: String, book: Int, chapter: Int) {
+        onlineProblems.remove("$code $book $chapter")
+        onlineArrivals++
+    }
+
+    /** The Bible on the tablet suggested when an online one can't be read: the last one read, else the BSB. */
+    var lastOfflineVersion by mutableStateOf(prefs.getString("lastOfflineVersion", null)?.takeIf { c -> BibleRepository.ALL.any { it.code == c && it.online == 0 } } ?: BibleRepository.BSB.code)
+        private set
 
     init {
         com.biblestudy.app.data.YouVersion.key = prefs.getString("youversionKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.AppConfig.youVersionKey
@@ -333,7 +355,7 @@ class StudyViewModel(val host: Host) : ViewModel() {
     /** Tries again the online chapters that couldn't be fetched: the pages waiting for them are laid out again. */
     fun retryOnline() {
         cardFetches.clear()
-        if (onlineFailed) { onlineFailed = false; onlineArrivals++ }
+        if (onlineFailed) { onlineFailed = false; onlineProblems.clear(); onlineArrivals++ }
     }
 
     /** Online chapters verse cards have asked for this session (see [cardVerses]). */
@@ -818,7 +840,7 @@ class StudyViewModel(val host: Host) : ViewModel() {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putInt("textSize", textSize.percent); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("versePanel", verseInPanel); putBoolean("verseCommentary2", verseCommentary); putBoolean("glance", showGlance); putString("lastBibleVersion", lastBibleVersion); putBoolean("hardWords", hardWords); putBoolean("aidNames", aidNames); putBoolean("aidCustoms", aidCustoms); putBoolean("aidSymbols", aidSymbols); putBoolean("aidChrist", aidChrist)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putInt("textSize", textSize.percent); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("versePanel", verseInPanel); putBoolean("verseCommentary2", verseCommentary); putBoolean("glance", showGlance); putString("lastBibleVersion", lastBibleVersion); putString("lastOfflineVersion", lastOfflineVersion); putBoolean("hardWords", hardWords); putBoolean("aidNames", aidNames); putBoolean("aidCustoms", aidCustoms); putBoolean("aidSymbols", aidSymbols); putBoolean("aidChrist", aidChrist)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             marginWidths.forEach { (k, v) -> putFloat(k, v) }
@@ -994,6 +1016,7 @@ class StudyViewModel(val host: Host) : ViewModel() {
         p.pendingVerse = p.topVerse
         p.version = validVersion(code)
         if (!Sketch.isSketch(p.book)) lastBibleVersion = p.version
+        if (!isOnline(p.version)) lastOfflineVersion = p.version
     }
 
     /** The version last chosen for a Bible panel: what a sketch page on its own uses for verse cards. */

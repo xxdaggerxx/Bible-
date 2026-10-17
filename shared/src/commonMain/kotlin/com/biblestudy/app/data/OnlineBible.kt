@@ -226,6 +226,30 @@ class OnlineBible(val code: String, val id: Int, private val db: SqlDb) {
         fun fileOf(context: AppContext, id: Int) = (context.filesDir / "bibles").mkdirs() / "yv-$id.db"
 
         /**
+         * Why a chapter of the online Bible [code] couldn't be downloaded, in plain words, from the
+         * [error] [fetch] threw: no internet, a slow connection, no key or one not accepted, the
+         * service busy or failing.
+         */
+        fun problem(code: String, error: Throwable): String {
+            val service = when (code) { "ESV" -> "Crossway (the ESV)"; "NLT" -> "Tyndale (the NLT)"; else -> "YouVersion" }
+            val msg = error.message.orEmpty()
+            val kind = error::class.simpleName.orEmpty()
+            return when {
+                msg.startsWith("No ") && "key" in msg -> "There's no key for the $code. Add one in Settings → Bibles."
+                error is YouVersion.HttpException && (error.status == 401 || error.status == 403) ->
+                    "$service didn't accept the key for the $code. Check it in Settings → Bibles."
+                error is YouVersion.HttpException && error.status == 404 -> "$service doesn't have this chapter of the $code."
+                error is YouVersion.HttpException -> "$service had a problem (error ${error.status}). Try again later."
+                "busy" in msg -> "$service is busy just now. Try again in a minute."
+                "didn't send" in msg -> "$service didn't send this chapter. Try again in a minute, or check the NLT key in Settings → Bibles."
+                "Timeout" in kind || "timed out" in msg.lowercase() || "timeout" in msg.lowercase() ->
+                    "$service took too long to answer. The connection may be slow; try again."
+                error !is IOException -> "$service sent something the app couldn't read. Try again later."
+                else -> "There's no internet connection. The $code downloads each chapter the first time it's read."
+            }
+        }
+
+        /**
          * Makes the (empty) database for online Bible [info], with every book listed with the KJV's
          * chapter count so navigation works the same, and the tables for word tags, words of Jesus
          * and paragraphs ready. Returns its version entry.

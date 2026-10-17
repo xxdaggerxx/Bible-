@@ -3723,6 +3723,73 @@ class FeatureTest {
     }
 
     @Test
+    fun anOnlineChapterThatCantLoadSaysWhyAndOffersABibleOnTheTablet() {
+        // BIB-12 (2.12.1): a chapter of an online Bible that can't be downloaded says why, in
+        // plain words, where the chapter would be, with Try again and the offline Bible to read instead.
+        val p = com.biblestudy.app.data.OnlineBible
+        assertTrue("internet" in p.problem("NIV", java.net.UnknownHostException("api.youversion.com")))
+        assertTrue("too long" in p.problem("NIV", java.net.SocketTimeoutException("timeout")))
+        assertTrue("didn't accept the key" in p.problem("ESV", com.biblestudy.app.data.YouVersion.HttpException(401, "x")))
+        assertTrue("Crossway" in p.problem("ESV", com.biblestudy.app.data.YouVersion.HttpException(403, "x")))
+        assertTrue("no key" in p.problem("NLT", java.io.IOException("No NLT key. Add one in Settings \u2192 Bibles.")))
+        assertTrue("busy" in p.problem("NIV", java.io.IOException("YouVersion is busy; try again in a minute")))
+        assertTrue("error 500" in p.problem("NIV", com.biblestudy.app.data.YouVersion.HttpException(500, "x")))
+        assertTrue("couldn't read" in p.problem("NIV", IllegalStateException("bad json")))
+
+        val esvJohn3 = javaClass.getResource("/youversion/esv-JHN.3.json")!!.readText()
+        val realHttp = com.biblestudy.app.data.Esv.http
+        val realKey = com.biblestudy.app.data.Esv.key
+        val realYv = com.biblestudy.app.data.YouVersion.http
+        com.biblestudy.app.data.Esv.key = "test"
+        com.biblestudy.app.data.YouVersion.http = { _ -> throw java.io.IOException("offline") }
+        val online = java.util.concurrent.atomic.AtomicBoolean(true)
+        com.biblestudy.app.data.Esv.http = { url ->
+            when {
+                !online.get() -> throw java.net.UnknownHostException("api.esv.org")
+                "q=43003001" in url -> 200 to esvJohn3
+                else -> 401 to "{}"
+            }
+        }
+        try {
+            compose.runOnUiThread { vm.loadOnlineBibles() }
+            waitFor(10_000) { vm.onlineBibles?.any { it.code == "ESV" } == true }
+            compose.runOnUiThread { vm.addOnlineBible(vm.onlineBibles!!.single { it.code == "ESV" }) }
+            waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "ESV" } }
+            // No internet: the page says so and offers the Bible on the tablet read last (else the BSB).
+            val offline = vm.lastOfflineVersion
+            assertFalse(vm.isOnline(offline))
+            online.set(false)
+            compose.runOnUiThread { vm.setVersion(0, "ESV"); vm.goTo(0, 43, 3, 1, remember = false) }
+            waitFor(20_000) { compose.onAllNodesWithText("no internet", substring = true).fetchSemanticsNodes().isNotEmpty() }
+            compose.onNodeWithText("Couldn't show John 3 in the ESV").assertExists()
+            compose.onNodeWithText("Read in the $offline").assertExists()
+            snap("163b-online-failed")
+            // Back online, Try again brings the chapter and the notice goes.
+            online.set(true)
+            compose.onNodeWithText("Try again").performClick()
+            waitFor(20_000) { vm.text("ESV").online!!.isSaved(43, 3) }
+            waitFor(10_000) { compose.onAllNodesWithTag("onlineNotice").fetchSemanticsNodes().isEmpty() }
+            // A key Crossway doesn't accept says so; the button switches the panel to the Bible on the tablet.
+            compose.runOnUiThread { vm.goTo(0, 43, 5, 1, remember = false) }
+            waitFor(20_000) { compose.onAllNodesWithText("didn't accept the key", substring = true).fetchSemanticsNodes().isNotEmpty() }
+            // (The empty pages are short, so the panel may show John 4, which also failed, at the top.)
+            val chapter = vm.panels[0].chapter
+            compose.onNodeWithText("Couldn't show John $chapter in the ESV").assertExists()
+            compose.onNodeWithText("Read in the $offline").performClick()
+            compose.waitForIdle()
+            assertEquals(offline, vm.panels[0].version)
+            assertEquals(chapter, vm.panels[0].chapter)
+            assertTrue(vm.text(offline).chapter(43, chapter).isNotEmpty())
+        } finally {
+            com.biblestudy.app.data.Esv.http = realHttp
+            com.biblestudy.app.data.Esv.key = realKey
+            com.biblestudy.app.data.YouVersion.http = realYv
+            compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.removeBible("ESV") }
+            compose.waitForIdle()
+        }
+    }
+
+    @Test
     fun theNltComesFromTyndale() {
         // BIB-12: the NLT from Tyndale's API, read and kept like every other online Bible.
         val john3 = javaClass.getResource("/youversion/nlt-JHN.3.html")!!.readText()

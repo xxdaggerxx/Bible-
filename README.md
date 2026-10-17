@@ -1,4 +1,4 @@
-# Ink & Word — version 2.12.0
+# Ink & Word — version 2.12.1
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet, and since version 2.0 on Android phones too, drawing with a finger. Since version 2.10.3 it also runs on Windows, Mac and Linux computers.
 
@@ -75,6 +75,11 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 2.12.1
+
+- **An online Bible that can't load says why.** When a chapter of the ESV, NLT or a YouVersion Bible can't be downloaded, the page shows, where the chapter would be, what went wrong in plain words: no internet, a slow connection, no key or a key the publisher didn't accept, the service busy or failing, or a chapter that Bible doesn't have. Under it, *Read in the BSB* (or the Bible on the tablet you read last) switches the panel to a Bible that needs no internet, on the same chapter, and *Try again* asks once more. While a chapter is coming, the page says *Loading…* instead of staying blank. Failures elsewhere (a verse card, a pop-over) still show a short message, now with the same reason.
+- Known gaps: verse cards and pop-overs still show *Loading…* for a verse that can't come, with no button; a server that sends a broken page is reported as "sent something the app couldn't read".
 
 ## New in version 2.12.0
 

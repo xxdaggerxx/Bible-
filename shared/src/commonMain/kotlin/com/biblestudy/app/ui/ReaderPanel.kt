@@ -25,6 +25,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -443,6 +444,11 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             if (geo == null) {
                 CircularProgressIndicator(Modifier.align(Alignment.Center).testTag("loading"))
             }
+            // An online Bible's chapter with no text (BIB-12): loading, or why it couldn't come and what to do.
+            val shown = ctl.layouts[ctl.layoutKey(panel.version, panel.book, panel.chapter)]
+            if (shown != null && shown.textLength == 0 && vm.isOnline(panel.version) && vm.sketchOf(panel.book) == null) {
+                OnlineChapterNotice(vm, index, Modifier.align(Alignment.Center))
+            }
             // Narrow portrait: tabs at the edges slide a margin in over the page (MRG-14).
             if (geo != null && ctl.drawerMode) {
                 val scope = rememberCoroutineScope()
@@ -482,6 +488,47 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             val sel = vm.selection
             if (sel != null && ctl.pages().any { sel.isOn(it.layout) } && (vm.activePanel == index || vm.panels.size == 1)) {
                 SelectionBar(vm, ctl, Modifier.align(Alignment.TopCenter).padding(top = 8.dp, start = 8.dp, end = 8.dp))
+            }
+        }
+    }
+}
+
+/**
+ * In place of an online Bible's chapter that has no text (BIB-12): "Loading…" while it comes;
+ * else why it couldn't (no internet, the key, the service busy…), with *Try again* and a button
+ * to read the chapter in a Bible on the tablet instead.
+ */
+@Composable
+private fun OnlineChapterNotice(vm: StudyViewModel, index: Int, modifier: Modifier) {
+    val panel = vm.panels[index]
+    val name = "${vm.bible.book(panel.book).name} ${panel.chapter}"
+    val problem = vm.onlineProblem(panel.version, panel.book, panel.chapter)
+    Surface(
+        modifier.padding(24.dp).widthIn(max = 420.dp).testTag("onlineNotice"),
+        shape = MaterialTheme.shapes.medium,
+        tonalElevation = 3.dp,
+        shadowElevation = 2.dp,
+    ) {
+        Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            if (problem == null) {
+                Text("Loading $name in the ${panel.version}\u2026", style = MaterialTheme.typography.bodyLarge)
+                return@Column
+            }
+            Text("Couldn't show $name in the ${panel.version}", style = MaterialTheme.typography.titleMedium)
+            Text(problem, style = MaterialTheme.typography.bodyMedium)
+            val offline = vm.lastOfflineVersion
+            Text(
+                "The $offline is on this tablet and needs no internet.",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                FilledTonalButton(onClick = {
+                    val (b, c) = panel.book to panel.chapter
+                    vm.setVersion(index, offline)
+                    vm.goTo(index, b, c, 1, remember = false) // the same chapter, not the verse above the short page
+                }) { Text("Read in the $offline") }
+                TextButton(onClick = { vm.retryOnlineChapter(panel.version, panel.book, panel.chapter) }) { Text("Try again") }
             }
         }
     }
