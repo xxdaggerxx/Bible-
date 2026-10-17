@@ -329,7 +329,8 @@ class StudyViewModel(val host: Host) : ViewModel() {
     fun onlineProblem(code: String, book: Int, chapter: Int): String? {
         onlineProblems["$code $book $chapter"]?.let { return it }
         val o = text(code).online ?: return null
-        return if (o.isSaved(book, chapter)) "The $code doesn't have ${bible.book(book).name}${if (book in o.books) " $chapter" else ""}." else null
+        val empty = o.isSaved(book, chapter) && text(code).savedVersesBetween(VerseId.of(book, chapter, 0), VerseId.of(book, chapter, 999), 1).isEmpty()
+        return if (empty) "The $code doesn't have ${bible.book(book).name}${if (book in o.books) " $chapter" else ""}." else null
     }
 
     /** Tries an online chapter again (the page's *Try again*). */

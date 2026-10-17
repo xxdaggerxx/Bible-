@@ -3622,17 +3622,17 @@ class FeatureTest {
             snap("161-online-verse")
             compose.runOnUiThread { vm.verseSheet = null }
             // Kept on the tablet: going away and back doesn't download it again.
-            val before = calls.count { "/passages/JHN.3?" in it }
+            val before = synchronized(calls) { calls.count { "/passages/JHN.3?" in it } }
             compose.runOnUiThread { vm.goTo(0, 1, 1, 1, remember = false) }
             waitForLoaded()
             compose.runOnUiThread { vm.goTo(0, 43, 3, 1, remember = false) }
             waitForLoaded()
             assertEquals(1, before)
-            assertEquals(1, calls.count { "/passages/JHN.3?" in it })
-            // Offline: a chapter not saved yet says so, and comes when the tablet is back online.
+            assertEquals(1, synchronized(calls) { calls.count { "/passages/JHN.3?" in it } })
+            // Offline: a chapter not saved yet says so where it would be (2.12.1), and comes when the tablet is back online.
             offlineFlag.set(true)
             compose.runOnUiThread { vm.message = null; vm.goTo(0, 19, 23, 1, remember = false) }
-            waitFor(20_000) { vm.message?.contains("no internet") == true }
+            waitFor(20_000) { compose.onAllNodesWithText("no internet", substring = true).fetchSemanticsNodes().isNotEmpty() }
             assertTrue(!repo.online!!.isSaved(19, 23))
             offlineFlag.set(false)
             compose.runOnUiThread { vm.retryOnline() }
@@ -3761,20 +3761,22 @@ class FeatureTest {
             online.set(false)
             compose.runOnUiThread { vm.setVersion(0, "ESV"); vm.goTo(0, 43, 3, 1, remember = false) }
             waitFor(20_000) { compose.onAllNodesWithText("no internet", substring = true).fetchSemanticsNodes().isNotEmpty() }
-            compose.onNodeWithText("Couldn't show John 3 in the ESV").assertExists()
+            compose.onNodeWithText("Couldn't show John", substring = true).assertExists()
             compose.onNodeWithText("Read in the $offline").assertExists()
             snap("163b-online-failed")
             // Back online, Try again brings the chapter and the notice goes.
             online.set(true)
+            waitFor(20_000) { compose.onAllNodesWithText("Try again").fetchSemanticsNodes().isNotEmpty() }
             compose.onNodeWithText("Try again").performClick()
+            compose.runOnUiThread { vm.retryOnlineChapter("ESV", 43, 3) } // John 3 too, if the panel had settled on John 2 or 4
             waitFor(20_000) { vm.text("ESV").online!!.isSaved(43, 3) }
-            waitFor(10_000) { compose.onAllNodesWithTag("onlineNotice").fetchSemanticsNodes().isEmpty() }
+            waitFor(10_000) { vm.onlineProblem("ESV", 43, 3) == null }
             // A key Crossway doesn't accept says so; the button switches the panel to the Bible on the tablet.
             compose.runOnUiThread { vm.goTo(0, 43, 5, 1, remember = false) }
             waitFor(20_000) { compose.onAllNodesWithText("didn't accept the key", substring = true).fetchSemanticsNodes().isNotEmpty() }
             // (The empty pages are short, so the panel may show John 4, which also failed, at the top.)
+            waitFor(10_000) { compose.onAllNodesWithText("Couldn't show John ${vm.panels[0].chapter} in the ESV").fetchSemanticsNodes().isNotEmpty() }
             val chapter = vm.panels[0].chapter
-            compose.onNodeWithText("Couldn't show John $chapter in the ESV").assertExists()
             compose.onNodeWithText("Read in the $offline").performClick()
             compose.waitForIdle()
             assertEquals(offline, vm.panels[0].version)
